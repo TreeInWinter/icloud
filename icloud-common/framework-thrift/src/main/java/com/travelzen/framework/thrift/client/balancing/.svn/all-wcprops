@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/yr/!svn/ver/101092/projects/wenjin/trunk/workspace/wjthriftclient/src/main/java/com/yunrang/wj/thriftclient
+END
+LoadBalancingChannel.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/yr/!svn/ver/100875/projects/wenjin/trunk/workspace/wjthriftclient/src/main/java/com/yunrang/wj/thriftclient/LoadBalancingChannel.java
+END
+Connection.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/yr/!svn/ver/92724/projects/wenjin/trunk/workspace/wjthriftclient/src/main/java/com/yunrang/wj/thriftclient/Connection.java
+END
+Client.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/yr/!svn/ver/90569/projects/wenjin/trunk/workspace/wjthriftclient/src/main/java/com/yunrang/wj/thriftclient/Client.java
+END
+ThriftInvocation.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/yr/!svn/ver/92724/projects/wenjin/trunk/workspace/wjthriftclient/src/main/java/com/yunrang/wj/thriftclient/ThriftInvocation.java
+END
+ThriftConnection.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/yr/!svn/ver/97604/projects/wenjin/trunk/workspace/wjthriftclient/src/main/java/com/yunrang/wj/thriftclient/ThriftConnection.java
+END
+WjThriftClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/yr/!svn/ver/98689/projects/wenjin/trunk/workspace/wjthriftclient/src/main/java/com/yunrang/wj/thriftclient/WjThriftClient.java
+END
+PooledClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/yr/!svn/ver/101092/projects/wenjin/trunk/workspace/wjthriftclient/src/main/java/com/yunrang/wj/thriftclient/PooledClient.java
+END
+ClientProxy.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/yr/!svn/ver/99682/projects/wenjin/trunk/workspace/wjthriftclient/src/main/java/com/yunrang/wj/thriftclient/ClientProxy.java
+END

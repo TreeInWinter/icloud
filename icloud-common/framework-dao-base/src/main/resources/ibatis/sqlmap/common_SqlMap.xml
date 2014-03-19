@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+  <sqlMap namespace="common" >
+    <sql id="common.Example_Where_Clause" >
+      <iterate property="oredCriteria" conjunction="or" prepend="where" removeFirstPrepend="iterate" >
+        <isEqual property="oredCriteria[].valid" compareValue="true" >
+          (
+          <iterate prepend="and" property="oredCriteria[].criteriaWithoutValue" conjunction="and" >
+            <![CDATA[ $oredCriteria[].criteriaWithoutValue[]$ ]]>
+          </iterate>
+          <iterate prepend="and" property="oredCriteria[].criteriaWithSingleValue" conjunction="and" >
+            <![CDATA[ $oredCriteria[].criteriaWithSingleValue[].condition$ #oredCriteria[].criteriaWithSingleValue[].value# ]]>
+          </iterate>
+          <iterate prepend="and" property="oredCriteria[].criteriaWithListValue" conjunction="and" >
+            <![CDATA[ $oredCriteria[].criteriaWithListValue[].condition$ ]]>
+            <iterate property="oredCriteria[].criteriaWithListValue[].values" open="(" close=")" conjunction="," >
+              <![CDATA[ #oredCriteria[].criteriaWithListValue[].values[]# ]]>
+            </iterate>
+          </iterate>
+          <iterate prepend="and" property="oredCriteria[].criteriaWithBetweenValue" conjunction="and" >
+            <![CDATA[
+            $oredCriteria[].criteriaWithBetweenValue[].condition$
+            #oredCriteria[].criteriaWithBetweenValue[].values[0]# and
+            #oredCriteria[].criteriaWithBetweenValue[].values[1]#
+            ]]>
+          </iterate>
+          )
+        </isEqual>
+      </iterate>
+    </sql>
+    <sql id="common.Postgres_Pagination_Limit" >
+      <dynamic >
+        <isNotNull property="pgOffset" >
+          <isNotNull property="pgLength" >
+            <![CDATA[ offset #pgOffset# limit #pgLength# ]]>
+          </isNotNull>
+        </isNotNull>
+      </dynamic>
+    </sql>
+    <sql id="common.DynamicSql" >
+      <![CDATA[ $value$ ]]>
+    </sql>
+  </sqlMap>

@@ -1,0 +1,14 @@
+
+http://docs.guava-libraries.googlecode.com/git-history/v10.0.1/javadoc/com/google/common/base/Preconditions.html
+
+
+Simple static methods to be called at the start of your own methods to verify correct arguments and state. This allows constructs such as
+
+     if (count <= 0) {
+       throw new IllegalArgumentException("must be positive: " + count);
+     }
+to be replaced with the more compact
+     checkArgument(count > 0, "must be positive: %s", count);
+
+
+

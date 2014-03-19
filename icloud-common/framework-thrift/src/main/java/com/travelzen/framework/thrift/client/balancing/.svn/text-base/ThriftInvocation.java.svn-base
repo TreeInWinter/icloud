@@ -1,0 +1,5 @@
+package com.yunrang.wj.thriftclient;
+
+interface ThriftInvocation {
+    public Object doBusiness(Invocation invocation) throws Throwable;
+}

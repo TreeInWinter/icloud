@@ -1,0 +1,61 @@
+package com.yunrang.wj.common.net.http.entity;
+
+import com.yunrang.wj.common.log.LogUtils;
+
+
+/**
+ * 
+ * @author jianyesun
+ *
+ */
+public class HttpClientConfig {
+	
+	private String IP;
+
+	private int port;
+	
+	private String target; 
+
+	public String getIP() {
+		return IP;
+	}
+
+	/**
+	 * 
+	 */
+	public HttpClientConfig() {
+	}
+
+	public void setIP(String ip) {
+		IP = ip;
+	}
+
+	public int getPort() {
+		return port;
+	}
+
+	public void setPort(int port) {
+		this.port = port;
+	}
+
+	public String getTarget() {
+		return target;
+	}
+
+	public void setTarget(String target) {
+		this.target = target;
+	}
+	
+	public void print(){			
+		
+		LogUtils.log(HttpClientConfig.class, " ip= "+ IP,
+				LogUtils.DEBUG);
+		
+		LogUtils.log(HttpClientConfig.class, " port= "+ port,
+				LogUtils.DEBUG);
+		
+		LogUtils.log(HttpClientConfig.class, " target= "+ target,
+				LogUtils.DEBUG);
+	}
+}
+

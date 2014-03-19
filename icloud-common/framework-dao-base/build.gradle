@@ -1,0 +1,12 @@
+dependencies {
+	compile project(':icloud-common:framework')
+	compile project(':icloud-common:framework-mongo-support')
+
+	compile libraries.c3p0
+	compile libraries.commons_dbcp
+	compile libraries.mchange_commons_java
+
+	compile libraries.postgresql
+	compile libraries.spring_orm
+	compile libraries.spring_security_core
+}

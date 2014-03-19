@@ -1,0 +1,5 @@
+dependencies {
+	compile project(':icloud-common:framework-core')
+
+	compile libraries.mongo_java_driver
+}

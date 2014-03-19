@@ -1,0 +1,14 @@
+dependencies {
+	compile project(':icloud-common:framework-core')
+
+	compile libraries.commons_io
+	compile (libraries.hadoop_core) {
+		transitive = false
+	}
+	compile (libraries.hbase) {
+		transitive = false
+	}
+	compile libraries.commons_cli
+	compile libraries.sstable
+	compile libraries.thrift
+}

@@ -1,0 +1,6 @@
+package com.yunrang.wj.thriftclient;
+
+public interface Client<T> {
+    public T proxy() throws Exception;
+    public boolean isHealthy();
+}

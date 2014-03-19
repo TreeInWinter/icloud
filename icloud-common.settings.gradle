@@ -1,0 +1,20 @@
+include 'icloud-common:algorithm:datastructure'
+include 'icloud-common:framework-spiderbrowser'
+include 'icloud-common:framework-mongo-support'
+include 'icloud-common:framework-core'
+
+include 'icloud-common:framework-timewindow'
+include 'icloud-common:framework-hadoop'
+include 'icloud-common:framework-redis'
+include 'icloud-common:framework-gson'
+include 'icloud-common:framework-http'
+
+include 'icloud-common:framework-thrift'
+include 'icloud-common:framework-thrift-standardserver'
+
+include 'icloud-common:framework'
+include 'icloud-common:framework-search'
+include 'icloud-common:framework-dao-base'
+
+include 'icloud-common:framework-logger'
+include 'icloud-common:framework-zookeeper-support'

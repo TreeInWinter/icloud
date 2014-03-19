@@ -1,0 +1,1 @@
+axen的是一个Java编写的开源的XPath库。这是适应多种不同的对象模型，包括DOM，XOM，dom4j和JDOM。也可以作为适配器，转换Java字节代码或XML的Java bean为xml，从而使您可以使用XPath查询这些树了

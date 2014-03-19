@@ -1,0 +1,15 @@
+在日常应用中，我们一般都会碰到两种情况，转成单一实体对象和转换成对象列表或者其他结构。
+先来看第一种：
+比如json字符串为：[{"name":"name0","age":0}]
+代码:
+Person person = gson.fromJson(str, Person.class);
+提供两个参数，分别是json字符串以及需要转换对象的类型。
+第二种，转换成列表类型：
+
+
+List<Person> ps = gson.fromJson(str, new TypeToken<List<Person>>(){}.getType());
+for(int i = 0; i < ps.size() ; i++)
+{
+     Person p = ps.get(i);
+     System.out.println(p.toString());
+}

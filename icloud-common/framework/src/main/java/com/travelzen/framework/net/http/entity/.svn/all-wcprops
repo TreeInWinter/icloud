@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/yr/!svn/ver/102687/projects/wenjin/trunk/workspace/wjcommon/src/main/java/com/yunrang/wj/common/net/http/entity
+END
+Context.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/yr/!svn/ver/77877/projects/wenjin/trunk/workspace/wjcommon/src/main/java/com/yunrang/wj/common/net/http/entity/Context.java
+END
+HttpServerConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/yr/!svn/ver/102687/projects/wenjin/trunk/workspace/wjcommon/src/main/java/com/yunrang/wj/common/net/http/entity/HttpServerConfig.java
+END
+HttpClientConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/yr/!svn/ver/77877/projects/wenjin/trunk/workspace/wjcommon/src/main/java/com/yunrang/wj/common/net/http/entity/HttpClientConfig.java
+END
+Response.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/yr/!svn/ver/77877/projects/wenjin/trunk/workspace/wjcommon/src/main/java/com/yunrang/wj/common/net/http/entity/Response.java
+END

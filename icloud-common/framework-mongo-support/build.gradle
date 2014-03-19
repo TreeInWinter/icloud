@@ -1,0 +1,17 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+
+group = 'com.travelzen'
+version = "1.0-SNAPSHOT"
+
+
+jar {
+ baseName =  'framework-mongo-support'
+}
+dependencies {
+	testCompile libraries.junit
+
+    compile libraries.joda_time
+	compile libraries.morphia_validation
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/aop   http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+	<aop:aspectj-autoproxy />
+	<bean id="transactionalRetryFaultToleranceAspect" class="com.travelzen.framework.aop.TransactionalRetryFaultToleranceAspect">
+		<property name="retryTemplate" ref="retryTemplate"/>
+	</bean>
+	<bean id="retryTemplate" class="org.springframework.batch.retry.support.RetryTemplate">
+		<property name="retryPolicy" ref="retryPolicy"/>
+	</bean>
+	<bean id="retryPolicy" class="org.springframework.batch.retry.policy.ExceptionClassifierRetryPolicy">
+		<property name="policyMap">
+			<map>
+				<entry key="java.lang.Exception" value-ref="maxAttemptRetryPolicy"/>
+			</map>
+		</property>
+	</bean>
+	<bean id="maxAttemptRetryPolicy" class="org.springframework.batch.retry.policy.SimpleRetryPolicy">
+		<property name="maxAttempts" value="3"/>
+	</bean>
+</beans>

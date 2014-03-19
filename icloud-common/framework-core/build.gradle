@@ -1,0 +1,33 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+group = 'com.travelzen'
+version = '1.0-SNAPSHOT'
+//version = '1.0'
+
+jar {
+	baseName =  'framework-core'
+}
+
+dependencies {
+	testCompile libraries.junit
+	compile libraries.commons_lang3
+
+	compile libraries.guava
+
+	compile libraries.joda_time
+
+	compile libraries.jcl_over_slf4j
+	compile libraries.logback
+	compile libraries.gson
+	compile libraries.javatuples
+	compile libraries.commons_collections
+	compile (libraries.op4j) {
+		exclude group:'org.antlr', module:'antlr-runtime'
+	}
+}
+idea.module.iml{
+    whenMerged { module ->
+        module.dependencies*.exported = true
+    }
+}

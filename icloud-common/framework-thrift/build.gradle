@@ -1,0 +1,3 @@
+dependencies {
+	compile project(':icloud-common:framework-logger')
+}

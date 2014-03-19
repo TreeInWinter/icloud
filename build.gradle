@@ -1,0 +1,138 @@
+apply from: 'libraries.gradle'
+group = 'com.travelzen'
+version = '1.0'
+
+allprojects {
+    buildDir = 'target'
+
+    apply plugin: 'java'
+    apply plugin: 'eclipse-wtp'
+    apply plugin: 'idea'
+    apply plugin: 'maven'
+
+    sourceCompatibility = '1.7'
+    targetCompatibility = '1.7'
+
+    repositories {
+        maven { url 'http://192.168.160.187:8081/nexus/content/groups/public' }
+        maven { url 'https://maven.alfresco.com/nexus/content/groups/public' }
+        mavenCentral()
+    }
+
+    eclipse {
+        classpath {
+            downloadSources=true
+        }
+    }
+
+    configurations {
+        provided {
+            // todo : need to make sure these are non-exported
+            description = 'Non-exported compile-time dependencies.'
+        }
+        configurations {
+            all*.exclude group: 'commons-logging', module: 'commons-logging'
+        }
+    }
+    sourceSets.main.compileClasspath += configurations.provided
+    eclipse.classpath.plusConfigurations += configurations.provided
+    dependencies {
+        testCompile libraries.junit
+    }
+    sourceSets.main.resources {
+        if (project.hasProperty('profile')) {
+            srcDir 'src/main/resources-' + project.profile
+            srcDir 'src/test/resources-' + project.profile
+        }
+    }
+
+    tasks.withType(Compile) { options.encoding = 'UTF-8' }
+
+    eclipseProject.doLast {
+        if (!new File("$projectDir/src").exists() && !new File("$projectDir/gen-java").exists()) {
+            ant.delete dir: '.settings'
+            ant.delete file: '.project'
+            ant.delete file: '.classpath'
+        }
+    }
+
+    task 'create-dirs' << {
+        sourceSets*.java.srcDirs*.each { it.mkdirs() }
+        sourceSets*.resources.srcDirs*.each { it.mkdirs() }
+    }
+
+	task listJars << {
+		configurations.compile.each { File file -> println file.name }
+	}
+
+    task zip(type: Zip) {
+        from ('script') { into('bin') }
+        from ('src/main/resources') { into('conf') }
+        if (project.hasProperty('profile'))
+            from ('src/main/resources-' + project.profile) { into('conf') }
+        into('lib') {
+            from ('lib')
+            from (jar.outputs.files)
+            from (configurations.compile)
+        }
+    }
+    zip.doFirst {
+        if (new File("$projectDir/script").exists()) {
+            classpath = new File("$projectDir/script/.classpath")
+            if (!classpath.exists()) classpath.createNewFile()
+            cp = 'CLASSPATH='
+            for(file in new File("$projectDir/lib").listFiles()) cp += '../lib/' + file.name + ';'
+            for(file in configurations.compile) cp += '../lib/' + file.name + ';'
+            for(file in jar.outputs.files) cp += '../lib/' + file.name + ';'
+            classpath.text = cp.substring(0, cp.length() - 1)
+        }
+    }
+
+    task sourcesJar(type: Jar, dependsOn:classes) {
+        classifier = 'sources'
+        from sourceSets.main.allSource
+    }
+
+    task javadocJar(type: Jar, dependsOn:javadoc) {
+        classifier = 'javadoc'
+        from javadoc.destinationDir
+    }
+
+    artifacts {
+        archives sourcesJar
+        archives javadocJar
+    }
+
+    // 编译groovy代码时采用 MacRoman
+    tasks.withType(GroovyCompile) {
+        groovyOptions.encoding = 'MacRoman'
+    }
+
+    // 编译JAVADOC文件时采用 UTF-8
+    tasks.withType(Javadoc) {
+        options.encoding = 'UTF-8'
+    }
+
+    // 编译JAVA文件时采用 UTF-8
+    tasks.withType(Compile) {
+        options.encoding = 'UTF-8'
+    }
+
+/*
+    uploadArchives {
+        repositories {
+            mavenDeployer {
+                repository(url: 'http://192.168.160.187:8081/nexus/content/repositories/releases') {
+                    authentication(userName: mavenUser, password: mavenPassword)
+                }
+                snapshotRepository(url: 'http://192.168.160.187:8081/nexus/content/repositories/snapshots') {
+                    authentication(userName: mavenUser, password: mavenPassword)
+                }
+            }
+        }
+    }
+
+*/	
+
+    [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+}

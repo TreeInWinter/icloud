@@ -1,0 +1,6 @@
+dependencies {
+	compile project (":icloud-common:framework-thrift")
+
+	compile libraries.jna
+	compile libraries.snakeyaml
+}

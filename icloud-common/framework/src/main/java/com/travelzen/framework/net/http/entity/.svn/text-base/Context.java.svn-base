@@ -1,0 +1,73 @@
+package com.yunrang.wj.common.net.http.entity;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.yunrang.wj.common.log.LogUtils;
+
+
+/**
+ * 
+ * @author jianyesun
+ *
+ */
+public class Context {
+	
+	private String name;
+	
+	private String contextpath;
+	
+	private String contexthandler;
+	
+	private Map<String,Response> responselist = new HashMap<String,Response>();
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getContextpath() {
+		return contextpath;
+	}
+
+	public void setContextpath(String contextpath) {
+		this.contextpath = contextpath;
+	}
+
+	public String getContexthandler() {
+		return contexthandler;
+	}
+
+	public void setContexthandler(String contexthandler) {
+		this.contexthandler = contexthandler;
+	}
+
+	public Map<String, Response> getResponselist() {
+		return responselist;
+	}
+	
+	public Response getResponse(String command) {
+		return responselist.get(command);	
+	}
+
+	public void setResponse(String command, Response response) {
+		this.responselist.put(command, response);
+	}
+	
+	public void print(){
+		LogUtils.log(Context.class, " name= "+name ,
+				LogUtils.DEBUG);
+		LogUtils.log(Context.class, " contextpath= "+contextpath ,
+				LogUtils.DEBUG);
+		LogUtils.log(Context.class, " contexthandler= "+contexthandler ,
+				LogUtils.DEBUG);
+		for(Response response : responselist.values()){
+			response.print();
+		}
+	}
+
+}
+

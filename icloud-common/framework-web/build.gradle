@@ -1,0 +1,10 @@
+apply plugin: 'war'
+
+dependencies {
+	compile libraries.freemarker
+
+	compile libraries.spring_webmvc
+
+//	compile libraries.spring_security_config
+//	compile libraries.spring_security_web
+}

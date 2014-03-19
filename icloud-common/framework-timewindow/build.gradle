@@ -1,0 +1,10 @@
+dependencies {
+	compile project(':icloud-common:algorithm:datastructure')
+	compile project(':icloud-common:framework-core')
+
+	compile libraries.collections_generic
+	compile libraries.ehcache
+	compile libraries.jactor
+	compile libraries.javatuples
+	compile libraries.op4j
+}

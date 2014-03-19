@@ -1,0 +1,57 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+
+group = 'com.travelzen'
+version = "1.0-SNAPSHOT"
+
+
+jar {
+	baseName =  'framework'
+}
+
+dependencies {
+	compile project(':icloud-common:framework-core')
+
+	compile libraries.spring_test
+	compile libraries.httpclient
+
+	compile libraries.aspectj
+	compile libraries.aspectj_rt
+	compile libraries.cglib_nodep
+	compile libraries.commons_beanutils
+	compile libraries.commons_httpclient
+	compile libraries.commons_io
+	compile libraries.commons_net
+	compile libraries.commons_compress
+	compile (libraries.curator) {
+		exclude group:'log4j'
+		exclude group:'org.slf4j'
+	}
+	compile libraries.ehcache
+	compile libraries.freemarker
+	compile libraries.hibernate_validator
+	compile libraries.ibatis
+	compile libraries.jdom
+	compile libraries.jetty_util
+	compile libraries.jmagick
+	compile libraries.mail
+//	compile libraries.perf4j
+	compile libraries.servlet_api
+	compile libraries.validation
+
+	compile (libraries.spring_batch_core) {
+		exclude module:'xstream'
+	}
+	compile libraries.spring_webmvc
+
+	compile libraries.thrift
+	compile libraries.commons_pool
+	compile libraries.commons_configuration
+	compile fileTree(dir: 'lib', include: '*.jar')
+	compile libraries.poi
+	compile libraries.poi_ooxml
+	compile libraries.poi_scratchpad
+	compile libraries.fastjson
+	
+}

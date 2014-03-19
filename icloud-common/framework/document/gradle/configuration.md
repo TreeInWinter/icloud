@@ -1,0 +1,1 @@
+http://gradle.org/docs/current/dsl/org.gradle.api.artifacts.ConfigurationContainer.html

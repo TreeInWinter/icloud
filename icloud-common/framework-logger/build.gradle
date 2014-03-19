@@ -1,0 +1,5 @@
+dependencies {
+	compile project(':icloud-common:framework-dao-base')
+	compile project(':icloud-common:framework-gson')
+	compile 'org.codehaus.groovy:groovy-all:2.2.1'
+}

@@ -1,0 +1,45 @@
+/**
+ * CScorer.java
+ *
+ * Copyright 2007 easou, Inc. All Rights Reserved.
+ *
+ * created by jay 2010-5-13
+ */
+package org.apache.lucene.search;
+
+import com.easou.search.server.util.Mp3Group;
+import com.easou.search.server.util.Mp3Util;
+
+public abstract class CScorer {
+
+    protected SortField[] fields;
+
+    SortField[] getSortField() {
+        return fields;
+    }
+
+    protected float correctLuceneScorerWhileCollect(float score) {
+        return score;
+    }
+
+    /**
+     * 通过各个字段值计算业务分
+     * @param 要进行比较的字段值
+     * @return 业务分
+     */
+    protected abstract float calculateBusinessScorer(Comparable[] values);
+
+    /**
+     * 通过相关度得分和业务分计算总分
+     * @param 相关度的最高得分
+     * @param 相关度得分
+     * @param 业务逻辑得分
+     * @return 总分
+     */
+    protected abstract float calculateTotalScorer(float maxScore,
+            float luceneScore, float businessScore);
+    
+    protected String calculateBusinessScorer2(Comparable[] values) {
+    	return null;
+    }
+}

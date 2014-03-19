@@ -1,0 +1,44 @@
+package com.yunrang.wj.thriftclient;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+import com.yunrang.wj.common.log.LogUtils;
+import com.yunrang.wj.common.log.logger.ILogger;
+
+
+
+public class LoadBalancingChannel<T> implements Client<T> {
+    private final ILogger log = LogUtils.buildLogger(LoadBalancingChannel.class);
+
+    private List<Client<T>> underlying;
+    private Random rand = new Random();
+
+    public LoadBalancingChannel(List<Client<T>> clients) {
+        underlying = new ArrayList<Client<T>>(clients);
+    }
+
+    public T proxy() throws Exception{
+        List<Client<T>> healthyClients = new ArrayList<Client<T>>();
+        for(Client<T> client : underlying) {
+            if(client.isHealthy())
+                healthyClients.add(client);
+        }
+        if(healthyClients.size() == 0)
+            throw new ClientUnavailableException();
+
+        int index = rand.nextInt(healthyClients.size());
+        Client<T> client = healthyClients.get(index);
+//      log.debug("use client: {}", client.toString());
+        return client.proxy();
+    }
+
+    public boolean isHealthy() {
+        for(Client<T> client : underlying) {
+            if (client.isHealthy())
+                return true;
+        }
+        return false;
+    }
+}

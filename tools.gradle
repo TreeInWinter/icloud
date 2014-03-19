@@ -1,0 +1,16 @@
+// gradle -b tools.gradle initweb -Dproject=[projectName] -Dsecurity=true/false
+task initweb(type: Copy) { description = 'init a web project'
+	from 'tz-common/framework-web'
+	into System.properties.project
+	include 'src/**', 'build.gradle'
+	if (System.properties.security != 'true')
+		exclude 'src/main/java/com/travelzen/web', 'src/main/resources/spring/applicationContext-security*.xml'
+	doLast {
+		if (System.properties.security == 'true') {
+			build = new File(System.properties.project + '/build.gradle')
+			build.text = build.text.replace('/', '')
+			webxml = new File(System.properties.project + '/src/main/webapp/WEB-INF/web.xml')
+			webxml.text = webxml.text.replace('<!--', '').replace('-->', '')
+		}
+	}
+}

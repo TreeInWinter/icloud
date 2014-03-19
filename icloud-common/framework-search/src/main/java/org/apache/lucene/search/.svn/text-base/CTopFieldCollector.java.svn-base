@@ -1,0 +1,255 @@
+/**
+ * CSTopFieldDocCollector.javas
+ *
+ * Copyright 2007 easou, Inc. All Rights Reserved.
+ *
+ * created by jay 2007-9-11
+ */
+package org.apache.lucene.search;
+
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
+import org.apache.lucene.index.IndexReader;
+import org.apache.lucene.util.PriorityQueue;
+
+import com.easou.search.server.util.Mp3Group;
+import com.easou.search.server.util.Mp3Util;
+
+public abstract class CTopFieldCollector extends Collector {
+
+	/*
+	 * Implements a TopFieldCollector over multiple SortField criteria, without
+	 * tracking document scores and maxScore.
+	 */
+	private static class MultiComparatorScoringCollector extends
+			CTopFieldCollector {
+
+		// private List<FieldDoc> docs = new ArrayList<FieldDoc>();
+
+		Scorer scorer;
+
+		//IndexReader reader = null;
+
+		final CFieldComparator[] comparators; // 各个字段的比较器，对应SortField的各个类型
+
+		// Comparable[] values; // 保存字段值的临时数组
+
+		private MultiComparatorScoringCollector(CScorer cs, int numHits,
+				boolean fillFields) throws IOException {
+			super(numHits, fillFields);
+			this.cscorer = cs;
+			comparators = new CFieldComparator[cscorer.getSortField().length];
+			initComparators(cscorer.getSortField());
+			// values = new Comparable[comparators.length];
+			this.maxScore = 0f;
+		}
+
+		private void initComparators(SortField[] fields) {
+			for (int i = 0; i < fields.length; i++) {
+				SortField field = fields[i];
+				switch (field.getType()) {
+				case SortField.DOUBLE:
+					comparators[i] = new CFieldComparator.DoubleComparator(
+							field.getField());
+					break;
+				case SortField.LONG:
+					comparators[i] = new CFieldComparator.LongComparator(field
+							.getField());
+					break;
+				case SortField.FLOAT:
+					comparators[i] = new CFieldComparator.FloatComparator(field
+							.getField());
+					break;
+				case SortField.INT:
+					comparators[i] = new CFieldComparator.IntComparator(field
+							.getField());
+					break;
+				default:
+					comparators[i] = new CFieldComparator.StringComparator(
+							field.getField());
+				}
+			}
+		}
+
+		@Override
+		public void collect(int doc) throws IOException {
+			float score = cscorer.correctLuceneScorerWhileCollect(scorer
+					.score());
+			if (score > 0) {
+				if (score > this.maxScore) {
+					this.maxScore = score;
+				}
+				++totalHits;
+				Comparable[] values = new Comparable[comparators.length];
+				for (int i = 0; i < comparators.length; i++) {
+					values[i] = comparators[i].value(doc);
+				}
+				CFieldDoc fDoc = new CFieldDoc(doc + docBase, scorer.score());
+				fDoc.luceneScore = fDoc.score;
+				fDoc.businessScore = cscorer.calculateBusinessScorer(values);
+//				fDoc.descritopin = cscorer.calculateBusinessScorer2(values);
+				docs.add(fDoc);
+			}
+		}
+
+	   
+		@Override
+		public void setNextReader(IndexReader reader, int docBase)
+				throws IOException {
+			this.docBase = docBase;
+			for (int i = 0; i < comparators.length; i++) {
+				comparators[i].setNextReader(reader);
+			}
+		}
+
+		@Override
+		public void setScorer(Scorer scorer) throws IOException {
+			this.scorer = scorer;
+		}
+	}
+
+	private static final ScoreDoc[] EMPTY_SCOREDOCS = new ScoreDoc[0];
+
+	// boolean queueFull;
+
+	/*
+	 * Stores the maximum score value encountered, needed for normalizing. If
+	 * document scores are not tracked, this value is initialized to NaN.
+	 */
+	float maxScore = Float.NaN;
+
+	int docBase;
+
+	protected int totalHits;
+
+	protected CScorer cscorer;
+
+	// protected Filter filter;
+
+	protected PriorityQueue<CFieldDoc> pq;
+
+	// protected HashMap<Integer, CFieldDoc> docs = new HashMap<Integer,
+	// CFieldDoc>();
+	protected List<CFieldDoc> docs = new LinkedList<CFieldDoc>();
+
+	CFieldDoc pqTop;
+
+	private CTopFieldCollector(int numHits, boolean fillFields) {
+		pq = new CHitQueue(numHits, true);
+		pqTop = pq.top();
+	}
+
+	public static CTopFieldCollector create(CScorer cscorer, int numHits,
+			boolean fillFields) throws IOException {
+		SortField[] fields = cscorer.getSortField();
+		if (fields.length == 0) {
+			throw new IllegalArgumentException(
+					"Sort must contain at least one field");
+		}
+		return new MultiComparatorScoringCollector(cscorer, numHits, true);
+	}
+
+	public int getTotalHits() {
+		return totalHits;
+	}
+
+	/** Returns the top docs that were collected by this collector. */
+	public final TopDocs topDocs() {
+		// In case pq was populated with sentinel values, there might be less
+		// results than pq.size(). Therefore return all results until either
+		// pq.size() or totalHits.
+		for (Iterator<CFieldDoc> iter = docs.iterator(); iter.hasNext();) {
+			CFieldDoc fDoc = iter.next();
+			// System.out.println(fDoc.businessScore);
+			/*
+			 * if(fDoc.businessScore == 0){ continue; }
+			 */
+			// ++totalHits;
+			fDoc.score = cscorer.calculateTotalScorer(maxScore,
+					fDoc.luceneScore, fDoc.businessScore);
+			if (fDoc.score <= pqTop.score) {
+				// 如果小于pq中最小值，不入pq
+				continue;
+			}
+			// ++totalHits;
+			// pqTop.doc = fDoc.doc + docBase;
+			// fDoc.score = score;
+			pqTop.doc = fDoc.doc;
+			pqTop.score = fDoc.score;
+			pqTop.luceneScore = fDoc.luceneScore;
+			pqTop.businessScore = fDoc.businessScore;
+			
+			//description
+//			pqTop.descritopin = fDoc.descritopin;
+			pqTop = pq.updateTop();
+		}
+		return topDocs(0, totalHits < pq.size() ? totalHits : pq.size());
+	}
+
+	/*
+	 * Only the following callback methods need to be overridden since
+	 * topDocs(int, int) calls them to return the results.
+	 */
+
+	protected void populateResults(ScoreDoc[] results, int howMany) {
+		for (int i = howMany - 1; i >= 0; i--) {
+			results[i] = pq.pop();
+		}
+	}
+
+	protected TopDocs newTopDocs(ScoreDoc[] results, int start) {
+
+		if (results == null) {
+			results = EMPTY_SCOREDOCS;
+
+			maxScore = Float.NaN;
+		}
+
+		// If this is a maxScoring tracking collector and there were no results,
+		return new TopFieldDocs(totalHits, results, cscorer.getSortField(),
+				maxScore);
+	}
+
+	@Override
+	public boolean acceptsDocsOutOfOrder() {
+		return true;
+	}
+
+	public final TopDocs topDocs(int start, int howMany) {
+
+		// In case pq was populated with sentinel values, there might be less
+		// results than pq.size(). Therefore return all results until either
+		// pq.size() or totalHits.
+		int size = totalHits < pq.size() ? totalHits : pq.size();
+
+		// Don't bother to throw an exception, just return an empty TopDocs in
+		// case
+		// the parameters are invalid or out of range.
+		if (start < 0 || start >= size || howMany <= 0) {
+			return newTopDocs(null, start);
+		}
+
+		// We know that start < pqsize, so just fix howMany.
+		howMany = Math.min(size - start, howMany);
+		ScoreDoc[] results = new ScoreDoc[howMany];
+
+		// pq's pop() returns the 'least' element in the queue, therefore need
+		// to discard the first ones, until we reach the requested range.
+		// Note that this loop will usually not be executed, since the common
+		// usage
+		// should be that the caller asks for the last howMany results. However
+		// it's
+		// needed here for completeness.
+		for (int i = pq.size() - start - howMany; i > 0; i--) {
+			pq.pop();
+		}
+
+		// Get the requested results from pq.
+		populateResults(results, howMany);
+
+		return newTopDocs(results, start);
+	}
+}

@@ -1,0 +1,185 @@
+简单的数据库配置
+    设想我们有一个简单的数据库配置信息存储在XML文件中：
+01	<?xmlversion="1.0"encoding="UTF-8"?>
+02	<!-- const.xml -->
+03	<config>
+04	    <database>
+05	        <url>127.0.0.1</url>
+06	        <port>1521</port>
+07	        <login>admin</login>
+08	        <password>pass</password>
+09	    </database>
+10	</config>
+
+    为了拿到url和port我们用如下的代码：
+1	XMLConfiguration config =new XMLConfiguration("const.xml");
+2	// 127.0.0.1
+3	config.getString("database.url");
+4	// 1521
+5	config.getString("database.port");
+
+    XMLConfiguration是一个Apache Commons类，他可以从指定的配置文件中加载内容，并且提供一个很好的以指定的点的方式得到存储的值。例如例子中的表达式database.port映射到xml文件中的 config/database/port节点的值“1521”。当然还有很多方式获取数据。这里有一些基本的用法：
+1	getBoolean
+2	getByte
+3	getDouble
+4	getFloat
+5	getInt
+6	getInteger
+7	getList
+8	getLong
+9	getStringArray
+    你可通过查看Apache Commons的JavaDoc查看更多的使用方式。
+
+将如上配置扩展一步
+    设想，过了一会我们想配置多个数据库，我们可以在配置文件中这样写：
+01	<?xmlversion="1.0"encoding="UTF-8"?>
+02	<!-- const.xml -->
+03	<config>
+04	    <databases>
+05	        <database>
+06	            <name>dev</name>
+07	            <url>127.0.0.1</url>
+08	            <port>1521</port>
+09	            <login>admin</login>
+10	            <password>pass</password>
+11	        </database>
+12	        <database>
+13	            <name>production</name>
+14	            <url>192.23.44.100</url>
+15	            <port>1521</port>
+16	            <login>admin</login>
+17	            <password>not-so-easy-pass</password>
+18	        </database>
+19	    </databases>
+20	</config>
+    现在我们要访问url数据我们可以这样：
+1	XMLConfiguration config =new XMLConfiguration("const.xml");
+2	  
+3	// 127.0.0.1
+4	config.getString("databases.database(0).url");
+5	  
+6	// 192.23.44.100
+7	config.getString("databases.database(1).url");
+    你可以看到这次多了参数，0代表第一个，1代表第二个。
+
+XPath表达式
+    定点的访问方式没问题，但是只是在一些简单的情况下，对于复杂的真实的状况来讲，我们可能需要使用XPath表达式语言。这里的主要优点是，即便你使用了XML的高级查询，程序看起来仍然比较简洁易懂。
+1	XMLConfiguration config =new XMLConfiguration("const.xml");
+2	config.setExpressionEngine(new XPathExpressionEngine());
+3	  
+4	// 127.0.0.1
+5	config.getString("databases/database[name = 'dev']/url");      
+6	  
+7	// 192.23.44.100
+8	config.getString("databases/database[name = 'production']/url");
+    这里是上面两个XPath表达式查询的一个解释：
+
+访问环境变量
+    在Apache Commons Configuration的帮助下你可以轻松的访问到系统的环境变量。下面是访问系统中ENV_TYPE变量的方法：
+1	EnvironmentConfiguration config =new EnvironmentConfiguration();
+2	config.getString("ENV_TYPE");
+    假设变量ENV_TYPE已经设置好了，想看上面的程序是否运行正确，你可以在控制台运行如下脚本：
+1	echo %ENV_TYPE%        # for Windows
+2	# or...
+3	echo $ENV_TYPE         # for Linux/Mac OS
+你将会看到ENV_TYPE的值。
+
+联合配置
+    让我们总结一下我们了解的东西，下面的getDbUrl方法做如下事情：
+    ·检查系统环境变量中叫做ENV_TYPE的值。
+    ·如果值是dev或者produtcion就返回相应的数据库url
+    ·如果变量没有配置就抛出异常。
+01	public String getDbUrl() throws ConfigurationException {
+02	    EnvironmentConfiguration envConfig =new EnvironmentConfiguration();
+03	    String env = envConfig.getString("ENV_TYPE");
+04	    if("dev".equals(env) ||"production".equals(env)) {
+05	        XMLConfiguration xmlConfig =new XMLConfiguration("const.xml");
+06	        xmlConfig.setExpressionEngine(new XPathExpressionEngine());
+07	        String xpath ="databases/database[name = '"+ env +"']/url";
+08	        return xmlConfig.getString(xpath);
+09	    }else{
+10	        String msg ="ENV_TYPE environment variable is "+
+11	                     "not properly set";
+12	        throw new IllegalStateException(msg);
+13	    }
+14	}
+
+集中你的配置
+    对每个不同的需要配置的对象创建多个配置比较烦。假如我们想添加其他的基于XML的配置，我们会怎么搞？我们需要创建另一个XMLConfiguration对象，这会给管理带来很多麻烦。一个解决办法是把配置文件信息集中到一个单个XML文件中。下面是一个例子:
+1	<?xmlversion="1.0"encoding="UTF-8"?>
+2	<!-- config.xml -->
+3	<configuration>
+4	  <env/>
+5	  <xmlfileName="const.xml"/>
+6	</configuration>
+    你需要使用DefaultConfigurationBuilder类，最终版本的getDbUrl方法看起来像这样：
+01	public String getDbUrl()throws ConfigurationException {
+02	    DefaultConfigurationBuilder builder =
+03	        new DefaultConfigurationBuilder("config.xml");
+04	    boolean load =true;
+05	    CombinedConfiguration config = builder.getConfiguration(load);
+06	    config.setExpressionEngine(new XPathExpressionEngine());
+07	    String env = config.getString("ENV_TYPE");
+08	    if("dev".equals(env) ||"production".equals(env)) {
+09	        String xpath ="databases/database[name = '"+ env +"']/url";
+10	        return config.getString(xpath);
+11	    }else{
+12	        String msg ="ENV_TYPE environment variable is "+
+13	                     "not properly set";
+14	        throw new IllegalStateException(msg);
+15	    }
+16	}
+
+自动重新加载
+    Apache Commons Configuration有很多非常酷的特性。其中一个就是当基于文件的配置变化的时候自动加载，因为我们可以设置加载策略。框架会轮询配置文件，当文件的内容发生改变时，配置对象也会刷新。你可以用程序控制：
+1	XMLConfiguration config =new XMLConfiguration("const.xml");
+2	ReloadingStrategy strategy =new FileChangedReloadingStrategy();
+3	strategy.setRefreshDelay(5000);
+4	config.setReloadingStrategy(strategy);
+    或者把他写到主配置文件中：
+1	<?xmlversion="1.0"encoding="UTF-8"?>
+2	<!-- config.xml -->
+3	<configuration>
+4	  <env/>
+5	  <xmlfileName="const.xml">
+6	    <reloadingStrategyrefreshDelay="5000"
+7	      config-class="org.apache.commons.configuration.reloading.FileChangedReloadingStrategy"/>
+8	  </xml>
+9	</configuration>
+    每五秒框架都检查一下配置文件有没有改变。
+
+最后
+    我个人用来管理需要配置的代码的时候的选择是使用Apache Commons。我希望这篇文章可以让你相信这个框架可以提供一个非常有用的接口用来访问你的静态数据。最后需要说的一点，这篇文章的内容只是这个框架的功能的一部分。此框架一些其他的有趣的功能是：
+    ·从不同的数据源装载配置信息，例如properties文件、ini文件、数据库等等。
+    ·给配置对象增加新的属性，并把它回存到文件中。
+    ·监听配置对象改变的事件。（这点可以让你在配置发生改变的时候及时作出处理）
+
+    ·自动解析配置文件的实际路径（不管你是把它放在程序文件夹下还是一个jar中。）
+    
+    
+    
+    
+    
+    
+    
+    I'am using Configuration 1.6.
+
+I hava a xml file, like
+
+<property>
+    <name>sql</name>
+    <value><![CDATA[select a, b from c]]></value>
+</property>
+
+I wish to get "select a, b from c" as a whole string, but i get "select a" and "b from c" as List instead.
+
+	
+
+Change the property of PropertiesConfiguration object like this:
+
+AbstractConfiguration.setDelimiterParsingDisabled(true)
+
+Setting the delimiter to 0 will disable value splitting completely.
+
+That should work.
+    

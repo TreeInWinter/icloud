@@ -1,0 +1,20 @@
+每个节点向其他节点广播自己的version， 
+
+每个节点知道特定version的数据在哪个节点上
+
+
+creative类型的AdsItem每个节点上都有完整数据，
+
+keyword类型的AdsItem 根据dht来分布
+
+
+一个master node， 负责build AdsItem， 然后分发到各个slave node，
+
+每个node 能够接受 getAdsItemByAdsId的请求， 并他通过dht来找到数据实际所在的节点， 然后发RPC请求，直接读回数据
+
+以单个JVM的内存限制为指标，计算需要多少个节点
+
+
+
+
+

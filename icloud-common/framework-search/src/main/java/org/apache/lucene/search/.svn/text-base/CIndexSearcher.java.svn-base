@@ -1,0 +1,34 @@
+/**
+ * CIndexSearcher.java
+ *
+ * Copyright 2007 easou, Inc. All Rights Reserved.
+ *
+ * created by jay 2007-6-15
+ */
+package org.apache.lucene.search;
+
+import java.io.IOException;
+
+import org.apache.lucene.index.CorruptIndexException;
+import org.apache.lucene.index.IndexReader;
+import org.apache.lucene.store.Directory;
+
+public class CIndexSearcher extends IndexSearcher {
+
+    public CIndexSearcher(Directory path) throws CorruptIndexException,
+            IOException {
+        super(path);
+    }
+    
+    public CIndexSearcher(IndexReader reader){
+    	super(reader);
+    }
+
+    public TopFieldDocs search(Query query, Filter filter, int nDocs,
+            CScorer cscorer) throws IOException {
+        CTopFieldCollector collector = CTopFieldCollector.create(cscorer,
+                nDocs, false);
+        search(createWeight(query), filter, collector);
+        return (TopFieldDocs) collector.topDocs();
+    }
+}

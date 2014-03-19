@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx		http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/context	http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- load properties -->
+	<context:property-placeholder location="classpath:properties/mongo-database.properties"   ignore-unresolvable="true"/>
+
+	<bean id="mongoOptions" class="com.travelzen.mongo.TZMongoClientOptionsBuilder"
+			p:connectionsPerHost="200"
+			p:maxWaitTime="60000"/>
+
+	<!-- 自定义morphia，在初始化时扫描mongo entities 并且加上索引 -->
+	<bean id="datastoreFactory" class="com.travelzen.mongo.morphia.DataStoreFactory" init-method="init">
+		<property name="packagePaths">
+			<list>
+				<value>com.travelzen.tops.member.entity</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="datastore" factory-bean="datastoreFactory" factory-method="createDatastore">
+		<constructor-arg ref="mongoOptions" />
+		<constructor-arg value="${mongodb.host}" />
+		<constructor-arg value="${mongodb.port}" />
+		<constructor-arg value="${mongodb.dbName}" />
+		<constructor-arg value="${mongodb.username}" />
+		<constructor-arg value="${mongodb.password}" />
+	</bean>
+
+	<!-- beans -->
+	<context:component-scan base-package="com.travelzen.tops.member" />
+</beans>

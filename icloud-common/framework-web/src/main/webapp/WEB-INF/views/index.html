@@ -1,0 +1,7 @@
+<#include "ftl/base.html">
+<@base>
+	<#if Session["SPRING_SECURITY_CONTEXT"]??>
+		<a>Hello, ${Session["SPRING_SECURITY_CONTEXT"].authentication.name}</a>
+		<a href="${rc.contextPath}/j_spring_security_logout">登出</a>
+	</#if>
+</@base>

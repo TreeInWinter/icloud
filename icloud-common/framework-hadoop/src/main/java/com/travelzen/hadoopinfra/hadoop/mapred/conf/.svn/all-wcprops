@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/yr/!svn/ver/80411/projects/wenjin/trunk/workspace/wjhadoopinfra/src/main/java/com/yunrang/hadoopinfra/hadoop/mapred/conf
+END
+MultiInputMapRedConf.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/yr/!svn/ver/77877/projects/wenjin/trunk/workspace/wjhadoopinfra/src/main/java/com/yunrang/hadoopinfra/hadoop/mapred/conf/MultiInputMapRedConf.java
+END
+MapRedConf.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/yr/!svn/ver/80411/projects/wenjin/trunk/workspace/wjhadoopinfra/src/main/java/com/yunrang/hadoopinfra/hadoop/mapred/conf/MapRedConf.java
+END
+HBaseMapRedConf.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/yr/!svn/ver/77877/projects/wenjin/trunk/workspace/wjhadoopinfra/src/main/java/com/yunrang/hadoopinfra/hadoop/mapred/conf/HBaseMapRedConf.java
+END

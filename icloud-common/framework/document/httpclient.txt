@@ -1,0 +1,3 @@
+default impl is in:
+
+ org.apache.http.impl.client.DefaultRequestDirector

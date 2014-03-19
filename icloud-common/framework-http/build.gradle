@@ -1,0 +1,16 @@
+dependencies {
+	compile project(':icloud-common:framework-core')
+	compile project(':icloud-common:framework-spiderbrowser')
+
+	compile libraries.commons_configuration
+	compile libraries.commons_httpclient
+	compile libraries.commons_io
+	compile libraries.dnsjava
+	compile libraries.freemarker
+	compile libraries.httpclient
+	compile libraries.httpmime
+	compile libraries.icu4j
+	compile libraries.jchardet
+	compile libraries.jetty_servlet
+	compile libraries.spring_webmvc
+}

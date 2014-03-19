@@ -1,0 +1,50 @@
+package com.yunrang.wj.thriftclient;
+
+import java.lang.reflect.*;
+
+class ClientProxy {
+    public static <T> T apply(Class<? extends T> cls, final ThriftInvocation thriftInvocation) throws Throwable {
+        InvocationHandler handler = new InvocationHandler() {
+            public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+                Invocation<T> invocation = new Invocation<T>(method, args);
+                return thriftInvocation.doBusiness(invocation);
+            }
+        };
+		return (T) Proxy.newProxyInstance(cls.getClassLoader(),cls.getInterfaces(), handler);
+	}
+}
+
+class Invocation<T> {
+	
+    private Method method;
+    private Object[] args;
+
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Invocation(Method method, Object[] args) {
+        name = method.getName();
+        this.method = method;
+        this.args = args;
+    }
+
+    public Object doInvoke(T obj) throws Throwable {
+        try {
+            return method.invoke(obj, args);
+        } catch (InvocationTargetException e) {
+            throw e.getTargetException();
+        } catch (UndeclaredThrowableException e) {
+            throw e.getUndeclaredThrowable();
+        } catch (Throwable th) {           
+            throw th;
+        }
+    }
+
+}
