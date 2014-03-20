@@ -1,0 +1,8 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+
+dependencies {
+	compile project(':icloud-common:framework')
+
+}

@@ -1,0 +1,20 @@
+
+version = "1.0-SNAPSHOT"
+group = 'com.travelzen'
+
+jar {
+	baseName =  "framework-redis"
+  }
+
+archivesBaseName="framework-redis"
+
+dependencies {
+	compile project(':icloud-common:framework-core')
+	
+	testCompile libraries.spring_test
+
+	compile libraries.commons_configuration
+	compile libraries.commons_pool
+	compile libraries.spring_data_redis
+	compile libraries.cglib_nodep
+}

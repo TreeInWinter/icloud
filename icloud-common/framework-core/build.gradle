@@ -10,6 +10,7 @@ jar {
 }
 
 dependencies {
+	compile project(':icloud-common:framework-config')
 	testCompile libraries.junit
 	compile libraries.commons_lang3
 

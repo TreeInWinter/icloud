@@ -8,7 +8,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.travelzen.framework.core.dict.DataDict;
+import com.travelzen.framework.dict.DataDict;
 import com.travelzen.framework.security.RSAKeyPair;
 import com.travelzen.framework.security.RSAUtil;
 

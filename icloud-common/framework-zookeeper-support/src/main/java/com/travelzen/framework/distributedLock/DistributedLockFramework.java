@@ -26,9 +26,9 @@ import com.netflix.curator.retry.ExponentialBackoffRetry;
 import com.netflix.curator.retry.RetryNTimes;
 import com.travelzen.framework.config.PropertiesUtil;
 import com.travelzen.framework.core.common.ReturnCode;
-import com.travelzen.framework.core.dict.DataDict;
 import com.travelzen.framework.core.exception.BizException;
 import com.travelzen.framework.core.util.StringUtil;
+import com.travelzen.framework.dict.DataDict;
 import com.travelzen.search.util.LogFileReader;
 
 public class DistributedLockFramework {

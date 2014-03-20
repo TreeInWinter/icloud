@@ -21,9 +21,9 @@ import com.netflix.curator.framework.state.ConnectionState;
 import com.netflix.curator.framework.state.ConnectionStateListener;
 import com.netflix.curator.retry.ExponentialBackoffRetry;
 import com.travelzen.framework.config.PropertiesUtil;
-import com.travelzen.framework.core.dict.DataDict;
 import com.travelzen.framework.core.util.RPIDLogger;
 import com.travelzen.framework.core.util.StringUtil;
+import com.travelzen.framework.dict.DataDict;
 
 /**
  * 对curator做的标准化定制。该类实现了单例模式，保证一个进程只有一个zookeeper连接。

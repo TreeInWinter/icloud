@@ -23,7 +23,7 @@ import javax.crypto.Cipher;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.lang3.StringUtils;
 
-import com.travelzen.framework.core.dict.DataDict;
+import com.travelzen.framework.dict.DataDict;
 
 /**
  * @author shuiren

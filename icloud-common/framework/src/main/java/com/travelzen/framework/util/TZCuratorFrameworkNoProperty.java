@@ -21,9 +21,9 @@ import com.netflix.curator.framework.state.ConnectionState;
 import com.netflix.curator.framework.state.ConnectionStateListener;
 import com.netflix.curator.retry.ExponentialBackoffRetry;
 import com.travelzen.framework.config.PropertiesUtil;
-import com.travelzen.framework.core.dict.DataDict;
 import com.travelzen.framework.core.util.RPIDLogger;
 import com.travelzen.framework.core.util.StringUtil;
+import com.travelzen.framework.dict.DataDict;
 
 /**
  * 对curator做的标准化定制。该类实现了单例模式，保证一个进程只有一个zookeeper连接。
@@ -259,8 +259,8 @@ public class TZCuratorFrameworkNoProperty {
 		}
 		getCuratorFramework().create().creatingParentsIfNeeded().withMode(CreateMode.EPHEMERAL)
 				.forPath(rpcNodePath, rpcUrl.getBytes(DataDict.CHARACTER_SET_ENCODING_UTF8));
-		logger.info("注册rpc地址:" + rpcUrl + "到zookeepre路径:" + rpcNodePath + "成功");
-		System.out.println("注册rpc地址:" + rpcUrl + "到zookeepre路径:" + rpcNodePath + "成功");
+		logger.info("注册rpc地址:" + rpcUrl + "到zookeeper路径:" + rpcNodePath + "成功");
+		System.out.println("注册rpc地址:" + rpcUrl + "到zookeeper路径:" + rpcNodePath + "成功");
 	}
 
 	/**
@@ -307,7 +307,7 @@ public class TZCuratorFrameworkNoProperty {
 		}
 		getCuratorFramework().create().creatingParentsIfNeeded().withMode(CreateMode.EPHEMERAL)
 				.forPath(monitorNodePath, monitorUrl.getBytes(DataDict.CHARACTER_SET_ENCODING_UTF8));
-		logger.info("注册monitor地址:" + monitorUrl + "到zookeepre路径:" + monitorNodePath + "成功");
+		logger.info("注册monitor地址:" + monitorUrl + "到zookeeper路径:" + monitorNodePath + "成功");
 	}
 
 }

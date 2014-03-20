@@ -21,8 +21,8 @@ import com.netflix.curator.framework.CuratorFramework;
 import com.netflix.curator.framework.api.CuratorWatcher;
 import com.netflix.curator.framework.state.ConnectionState;
 import com.netflix.curator.framework.state.ConnectionStateListener;
-import com.travelzen.framework.core.dict.DataDict;
 import com.travelzen.framework.core.util.StringUtil;
+import com.travelzen.framework.dict.DataDict;
 import com.travelzen.framework.util.TZCuratorFrameworkNoProperty;
 
 public class HAPropertiesUtil {
