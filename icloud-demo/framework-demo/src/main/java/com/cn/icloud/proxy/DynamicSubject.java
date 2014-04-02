@@ -11,13 +11,13 @@ public class DynamicSubject implements InvocationHandler {
 	}
 
 	@Override
-	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+	public Object invoke(Object proxy, Method method, Object[] args)
+			throws Throwable {
 		// TODO Auto-generated method stub
 		System.out.println("before calling " + method);
 		method.invoke(obj, args);
 		System.out.println("after calling " + method);
 		return null;
-
 	}
 
 }
