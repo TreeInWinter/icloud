@@ -1,5 +1,6 @@
 Server*/
 .gradle/
+.gradle
 .groovy/
 .metadata/
 .settings/

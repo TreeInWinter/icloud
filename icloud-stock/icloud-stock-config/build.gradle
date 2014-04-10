@@ -1,0 +1,12 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+group = 'com.icloud.stock'
+version = "1.0-SNAPSHOT"
+
+jar {
+ baseName =  'icloud-stock-config'
+}
+dependencies {
+  compile project(':icloud-common:framework-logger')
+}

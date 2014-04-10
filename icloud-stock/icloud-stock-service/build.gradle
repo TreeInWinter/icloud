@@ -1,0 +1,17 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+group = 'com.icloud.stock'
+version = "1.0-SNAPSHOT"
+
+jar {
+ baseName =  'icloud-stock-service'
+}
+
+dependencies {
+	compile project(':icloud-stock:icloud-stock-dao')
+    compile project(':icloud-stock:icloud-stock-config')
+	compile libraries.xstream
+
+	compile libraries.httpclient
+}

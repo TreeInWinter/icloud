@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <included>
 
-	<property name="LOG_DIR" value="/data/log/tops/" />
+	<property name="LOG_DIR" value="/data/log/icloud/" />
 	<property resource="properties/logback-variables.properties" />
 
 	<!-- 文件输出日志(DEBUG) -->
