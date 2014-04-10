@@ -20,7 +20,7 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="/home/jiangningcui/.gradle/caches/artifacts-26/filestore/org.slf4j/jcl-over-slf4j/1.7.5/source/92082dc61252ea28d770c32c969ce809949526fc/jcl-over-slf4j-1.7.5-sources.jar" kind="lib" path="/home/jiangningcui/.gradle/caches/artifacts-26/filestore/org.slf4j/jcl-over-slf4j/1.7.5/jar/cd5970bd13fa85f7bed41ca606d6daf7cbf1365/jcl-over-slf4j-1.7.5.jar" exported="true">
+	<classpathentry sourcepath="/home/jiangningcui/.gradle/caches/artifacts-26/filestore/org.slf4j/jcl-over-slf4j/1.5.8/source/cf690456d5e91fc2632a243ca53ea7a3ab56fa77/jcl-over-slf4j-1.5.8-sources.jar" kind="lib" path="/home/jiangningcui/.gradle/caches/artifacts-26/filestore/org.slf4j/jcl-over-slf4j/1.5.8/jar/ab78d75b7ae41770779502cc81ee4bf9c8fac6aa/jcl-over-slf4j-1.5.8.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
 		</attributes>

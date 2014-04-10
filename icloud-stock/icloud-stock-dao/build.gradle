@@ -8,9 +8,9 @@ jar {
  baseName =  'icloud-stock-dao'
 }
 dependencies {
-    compile project(':icloud-common:framework')	
+    compile project(':icloud-common:framework')
 	compile project(':icloud-stock:icloud-stock-config')
-	
+
 	compile libraries.httpclient
 	compile libraries.hibernate_core
 	compile libraries.hibernate_annotation

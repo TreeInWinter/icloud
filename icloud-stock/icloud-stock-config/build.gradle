@@ -8,5 +8,5 @@ jar {
  baseName =  'icloud-stock-config'
 }
 dependencies {
-  compile project(':icloud-common:framework-logger')
+//  compile project(':icloud-common:framework-logger')
 }

@@ -7,19 +7,7 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER" exported="true"/>
 	<classpathentry kind="src" path="/framework-dao-base" exported="true"/>
 	<classpathentry kind="src" path="/framework-gson" exported="true"/>
-	<classpathentry sourcepath="/home/jiangningcui/.gradle/caches/artifacts-26/filestore/org.codehaus.groovy/groovy-all/2.2.1/source/5d4c06bea2b086d18d19d1f2a3e8f18acbfe0e9e/groovy-all-2.2.1-sources.jar" kind="lib" path="/home/jiangningcui/.gradle/caches/artifacts-26/filestore/org.codehaus.groovy/groovy-all/2.2.1/jar/7ae565d50d24167c4e5d74b96f4126d4c56f16f/groovy-all-2.2.1.jar" exported="true">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry sourcepath="/home/jiangningcui/.gradle/caches/artifacts-26/filestore/junit/junit/4.11/source/28e0ad201304e4a4abf999ca0570b7cffc352c3c/junit-4.11-sources.jar" kind="lib" path="/home/jiangningcui/.gradle/caches/artifacts-26/filestore/junit/junit/4.11/jar/4e031bb61df09069aeb2bffb4019e7a5034a4ee0/junit-4.11.jar" exported="true">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry sourcepath="/home/jiangningcui/.gradle/caches/artifacts-26/filestore/org.hamcrest/hamcrest-core/1.3/source/1dc37250fbc78e23a65a67fbbaf71d2e9cbc3c0b/hamcrest-core-1.3-sources.jar" kind="lib" path="/home/jiangningcui/.gradle/caches/artifacts-26/filestore/org.hamcrest/hamcrest-core/1.3/jar/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar" exported="true">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry sourcepath="/home/jiangningcui/.gradle/caches/artifacts-26/filestore/org.codehaus.groovy/groovy-all/2.2.1/source/5d4c06bea2b086d18d19d1f2a3e8f18acbfe0e9e/groovy-all-2.2.1-sources.jar" kind="lib" path="/home/jiangningcui/.gradle/caches/artifacts-26/filestore/org.codehaus.groovy/groovy-all/2.2.1/jar/7ae565d50d24167c4e5d74b96f4126d4c56f16f/groovy-all-2.2.1.jar" exported="true"/>
+	<classpathentry sourcepath="/home/jiangningcui/.gradle/caches/artifacts-26/filestore/junit/junit/4.11/source/28e0ad201304e4a4abf999ca0570b7cffc352c3c/junit-4.11-sources.jar" kind="lib" path="/home/jiangningcui/.gradle/caches/artifacts-26/filestore/junit/junit/4.11/jar/4e031bb61df09069aeb2bffb4019e7a5034a4ee0/junit-4.11.jar" exported="true"/>
+	<classpathentry sourcepath="/home/jiangningcui/.gradle/caches/artifacts-26/filestore/org.hamcrest/hamcrest-core/1.3/source/1dc37250fbc78e23a65a67fbbaf71d2e9cbc3c0b/hamcrest-core-1.3-sources.jar" kind="lib" path="/home/jiangningcui/.gradle/caches/artifacts-26/filestore/org.hamcrest/hamcrest-core/1.3/jar/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar" exported="true"/>
 </classpath>
