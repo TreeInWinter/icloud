@@ -5,6 +5,7 @@ Server*/
 .metadata/
 .settings/
 .classpath
+*.bin
 .project
 bin/
 target/
