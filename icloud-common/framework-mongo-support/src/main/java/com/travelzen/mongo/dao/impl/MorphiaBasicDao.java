@@ -101,7 +101,7 @@ public abstract class MorphiaBasicDao<E extends MorphiaEntity<I>, I> implements 
 	}
 
 	protected Key<E> createKey(I id) {
-		return new Key<>(this.getEntityClass(), id);
+		return new Key<E>(this.getEntityClass(), id);
 	}
 
 	protected E getByProperty(String property, Object value) {
@@ -138,9 +138,9 @@ public abstract class MorphiaBasicDao<E extends MorphiaEntity<I>, I> implements 
 		if (ids == null || ids.size() == 0) {
 			return null;
 		}
-		List<Key<E>> keys = new ArrayList<>();
+		List<Key<E>> keys = new ArrayList<Key<E>>();
 		for (I id : ids) {
-			keys.add(new Key<>(getEntityClass(), id));
+			keys.add(new Key<E>(getEntityClass(), id));
 		}
 		return datastore.getByKeys(keys);
 	}
@@ -150,7 +150,7 @@ public abstract class MorphiaBasicDao<E extends MorphiaEntity<I>, I> implements 
 		DBObject qry = new BasicDBObject(Mapper.ID_KEY, new BasicDBObject("$in", ids));
 		DBObject retrieve = new BasicDBObject(property, true);
 		DBCursor cursor = this.getDatastore().getCollection(getEntityClass()).find(qry, retrieve);
-		Map<I, Object> result = new HashMap<>();
+		Map<I, Object> result = new HashMap<I, Object>();
 		while (cursor.hasNext()) {
 			DBObject dbo = cursor.next();
 			Object key = dbo.get(Mapper.ID_KEY);
@@ -193,7 +193,7 @@ public abstract class MorphiaBasicDao<E extends MorphiaEntity<I>, I> implements 
 		DBObject group = getDatastore().getCollection(getEntityClass()).group(keys, cond, initial, reduce);
 
 		BasicDBList dbList = (BasicDBList) group;
-		Map<Object, Integer> result = new HashMap<>();
+		Map<Object, Integer> result = new HashMap<Object, Integer>();
 		for (Object e : dbList) {
 			DBObject dbo = (DBObject) e;
 			result.put(dbo.get(groupBy), Double.valueOf(dbo.get("count").toString()).intValue());

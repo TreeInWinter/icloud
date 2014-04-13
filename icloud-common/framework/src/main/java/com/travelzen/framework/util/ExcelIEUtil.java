@@ -53,7 +53,7 @@ public class ExcelIEUtil {
 	public static File exportExcel(Map<String, String> fields, List<?> data, String fullName, int fileSize) {
 		try {
 			Object fObj = data.get(0);
-			Map<String, Field> fieldMap = new HashMap<>();
+			Map<String, Field> fieldMap = new HashMap<String, Field>();
 			getFieldMap(fObj.getClass(), fieldMap);
 
 			// 拆分后的数据构成一个列表
@@ -64,7 +64,7 @@ public class ExcelIEUtil {
 			}
 
 			// 拆分后的文件名列表
-			List<String> fileName = new ArrayList<>();
+			List<String> fileName = new ArrayList<String>();
 			if (list.size() == 1) {
 				fileName.add(fullName);
 			} else {
@@ -120,7 +120,7 @@ public class ExcelIEUtil {
 			if (fileName.size() == 1) {
 				return new File(fileName.get(0));
 			} else {
-				List<File> files = new ArrayList<> ();
+				List<File> files = new ArrayList<File> ();
 				for (String fn : fileName) {
 					files.add(new File(fn));
 				}
@@ -145,7 +145,7 @@ public class ExcelIEUtil {
 	public static byte[] exportBytes(Map<String, String> fields, List<?> data) {
 		try {
 			Object fObj = data.get(0);
-			Map<String, Field> fieldMap = new HashMap<>();
+			Map<String, Field> fieldMap = new HashMap<String, Field>();
 			getFieldMap(fObj.getClass(), fieldMap);
 
 			// 设置每个文件内容
@@ -187,7 +187,7 @@ public class ExcelIEUtil {
 	}
 
 	public static <T extends Object> List<T> importFromInputStream(Class<T> clz, InputStream input) throws Exception {
-		Map<String, Field> fields = new HashMap<>();
+		Map<String, Field> fields = new HashMap<String, Field>();
 		getFieldMap(clz, fields);
 		Workbook workbook = new HSSFWorkbook(input);
 		Sheet sheet = workbook.getSheetAt(0);
@@ -196,7 +196,7 @@ public class ExcelIEUtil {
 			return null;
 		}
 		Row row0 = sheet.getRow(0);
-		List<Field> fieldList = new ArrayList<>();
+		List<Field> fieldList = new ArrayList<Field>();
 		int i = 0;
 		Cell cell0 = null;
 		while ((cell0 = row0.getCell(i ++)) != null && StringUtils.isNotBlank(cell0.getStringCellValue())) {
@@ -208,7 +208,7 @@ public class ExcelIEUtil {
 		if (rowI == null) {
 			logger.error("data should start at the 3rd row");
 		}
-		List<T> list = new LinkedList<>();
+		List<T> list = new LinkedList<T>();
 		while (rowI != null) {
 			T obj = clz.newInstance();
 			int k = 0;

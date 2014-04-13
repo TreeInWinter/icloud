@@ -25,9 +25,10 @@ import org.slf4j.LoggerFactory;
 
 public class ReflectionUtils {
 
-	private static final Logger LGR = LoggerFactory.getLogger(ReflectionUtils.class);
+	private static final Logger LGR = LoggerFactory
+			.getLogger(ReflectionUtils.class);
 
-	private static Map<Class<?>, Map<String, Field>> mutableFieldsCache = new HashMap<>();
+	private static Map<Class<?>, Map<String, Field>> mutableFieldsCache = new HashMap<Class<?>, Map<String, Field>>();
 
 	public static Map<String, Field> getMutableFields(Class<?> target) {
 		Map<String, Field> result = mutableFieldsCache.get(target);
@@ -70,8 +71,11 @@ public class ReflectionUtils {
 				}
 				fld.set(to, fromValue);
 			}
-		} catch (SecurityException | IllegalArgumentException
-				| IllegalAccessException e) {
+		} catch (SecurityException e) {
+			throw new RuntimeException(e);
+		} catch (IllegalArgumentException e) {
+			throw new RuntimeException(e);
+		} catch (IllegalAccessException e) {
 			throw new RuntimeException(e);
 		}
 	}
@@ -83,7 +87,7 @@ public class ReflectionUtils {
 		try {
 			Map<String, Field> fromFields = getMutableFields(from.getClass());
 			Map<String, Field> toFields = getMutableFields(to.getClass());
-			List<Field> fields = new ArrayList<>(fromFields.values());
+			List<Field> fields = new ArrayList<Field>(fromFields.values());
 			fields.retainAll(toFields.values());
 			for (Field f : fields) {
 				Object fromValue = f.get(from);
@@ -92,8 +96,11 @@ public class ReflectionUtils {
 				}
 				f.set(to, fromValue);
 			}
-		} catch (SecurityException | IllegalArgumentException
-				| IllegalAccessException e) {
+		} catch (SecurityException e) {
+			throw new RuntimeException(e);
+		} catch (IllegalArgumentException e) {
+			throw new RuntimeException(e);
+		} catch (IllegalAccessException e) {
 			throw new RuntimeException(e);
 		}
 	}
@@ -104,7 +111,7 @@ public class ReflectionUtils {
 	public static Type[] getParameterTypes(Field fld) {
 		Type gt = fld.getGenericType();
 		if (!(gt instanceof ParameterizedType)) {
-			return new Type[]{};
+			return new Type[] {};
 		}
 		ParameterizedType pt = (ParameterizedType) gt;
 		return pt.getActualTypeArguments();
@@ -118,13 +125,14 @@ public class ReflectionUtils {
 		}
 	}
 
-	public static Set<Class<?>> getFromDirectory(final File directory, final String packageName)
-			throws ClassNotFoundException {
+	public static Set<Class<?>> getFromDirectory(final File directory,
+			final String packageName) throws ClassNotFoundException {
 		Set<Class<?>> classes = new HashSet<Class<?>>();
 		if (directory.exists()) {
 			for (String file : directory.list()) {
 				if (file.endsWith(".class")) {
-					String name = packageName + '.' + stripFilenameExtension(file);
+					String name = packageName + '.'
+							+ stripFilenameExtension(file);
 					Class<?> clazz = Class.forName(name);
 					classes.add(clazz);
 				}
@@ -153,8 +161,10 @@ public class ReflectionUtils {
 						filePath = filePath.replaceAll("%23", "#");
 
 					if (filePath != null) {
-						if ((filePath.indexOf("!") > 0) & (filePath.indexOf(".jar") > 0)) {
-							String jarPath = filePath.substring(0, filePath.indexOf("!")).substring(
+						if ((filePath.indexOf("!") > 0)
+								& (filePath.indexOf(".jar") > 0)) {
+							String jarPath = filePath.substring(0,
+									filePath.indexOf("!")).substring(
 									filePath.indexOf(":") + 1);
 							// WINDOWS HACK
 							if (jarPath.indexOf(":") >= 0) {
@@ -162,19 +172,22 @@ public class ReflectionUtils {
 							}
 							classes.addAll(getFromJARFile(jarPath, path));
 						} else {
-							classes.addAll(getFromDirectory(new File(filePath), packageName));
+							classes.addAll(getFromDirectory(new File(filePath),
+									packageName));
 						}
 					}
 				}
 			}
 			return classes;
 		} catch (Exception e) {
-			LGR.error("get classes fron package[" + packageName + "] failed.", e);
+			LGR.error("get classes fron package[" + packageName + "] failed.",
+					e);
 			return null;
 		}
 	}
 
-	public static Set<Class<?>> getFromJARFile(final String jar, final String packageName) throws IOException,
+	public static Set<Class<?>> getFromJARFile(final String jar,
+			final String packageName) throws IOException,
 			FileNotFoundException, ClassNotFoundException {
 		Set<Class<?>> classes = new HashSet<Class<?>>();
 		JarInputStream jarFile = new JarInputStream(new FileInputStream(jar));
@@ -190,8 +203,7 @@ public class ReflectionUtils {
 					}
 				}
 			}
-		}
-		while (jarEntry != null);
+		} while (jarEntry != null);
 		jarFile.close();
 		return classes;
 	}

@@ -37,7 +37,7 @@ public class RequestArrayResolver extends BaseMethodArgumentResolver {
 				componentType = parameter.getParameterType().getComponentType();
 			Collection<Object> coll = (Collection<Object>) binder.getTarget();
 			Enumeration<String> enums = servletRequest.getParameterNames();
-			Set<String> prefixNames = new HashSet<>();
+			Set<String> prefixNames = new HashSet<String>();
 			while (enums.hasMoreElements()) {
 				String prefixName = getPrefixName(enums.nextElement());
 				if (prefixNames.contains(prefixName))

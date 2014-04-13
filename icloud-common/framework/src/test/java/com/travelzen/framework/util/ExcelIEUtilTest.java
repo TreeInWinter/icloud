@@ -22,7 +22,7 @@ public class ExcelIEUtilTest {
 		fields.put("height", "身高");
 		fields.put("birthday", "出生日期");
 		fields.put("schoolName", "学校名称");
-		List<Student> students = new ArrayList<>();
+		List<Student> students = new ArrayList<Student>();
 		String[] schools = new String[] {"上海交通大学", "北京大学", "香港中文大学"};
 		String[] namess = new String[] {"小明", "阿毛", "大黄"};
 		Integer[] heights = new Integer[] {175, 165, 180};

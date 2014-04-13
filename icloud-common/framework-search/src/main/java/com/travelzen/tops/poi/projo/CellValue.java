@@ -24,7 +24,7 @@ public class CellValue {
 
 	public void setCell(Cell cell) {
 		if (type == integerValue) {
-			cell.setCellValue((double) object);
+			cell.setCellValue((Double) object);
 			if (style != null) {
 				cell.setCellStyle(style);
 			}

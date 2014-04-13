@@ -3,7 +3,7 @@ package com.travelzen.framework.logger.ri;
 
 public class RequestIdentityHolder {
 
-	private static ThreadLocal<String> holder = new ThreadLocal<>();
+	private static ThreadLocal<String> holder = new ThreadLocal<String>();
 
 	public static String get() {
 		return holder.get();

@@ -14,7 +14,7 @@ public class RequestIdentityLogger implements Logger {
 
 	private Logger logger;
 
-	private static Map<String, RequestIdentityLogger> LOGGER_CACHE = new ConcurrentHashMap<>();
+	private static Map<String, RequestIdentityLogger> LOGGER_CACHE = new ConcurrentHashMap<String, RequestIdentityLogger>();
 
 	public static Logger getLogger(Class<?> clz) {
 		String key = clz.getName();

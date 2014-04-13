@@ -20,14 +20,14 @@ public enum IssuePageState {
 	}
 
 	public static List<String> getRelatedWaitingForIssueState() {
-		List<String> list = new ArrayList<>();
+		List<String> list = new ArrayList<String>();
 		list.add(FlightOrderItemState.waiting_for_issue.name());
 		list.add(EndorseFlightOrderItemState.waiting_for_process.name());
 		return list;
 	}
 
 	public static List<String> getRelatedInternationalIssuingState() {
-		List<String> list = new ArrayList<>();
+		List<String> list = new ArrayList<String>();
 		list.add(FlightOrderItemState.issuing.name());
 		list.add(FlightOrderItemState.suspend.name());
 		list.add(EndorseFlightOrderItemState.processing.name());
@@ -36,7 +36,7 @@ public enum IssuePageState {
 	}
 
 	public static List<String> getRelatedInternationalIssueState() {
-		List<String> list = new ArrayList<>();
+		List<String> list = new ArrayList<String>();
 		list.add(FlightOrderItemState.issuing.name());
 		list.add(FlightOrderItemState.suspend.name());
 		list.add(FlightOrderItemState.waiting_for_issue.name());
@@ -47,7 +47,7 @@ public enum IssuePageState {
 	}
 
 	public static List<String> getRelatedDomesticIssueState() {
-		List<String> list = new ArrayList<>();
+		List<String> list = new ArrayList<String>();
 		list.add(FlightOrderItemState.waiting_for_issue.name());
 		list.add(FlightOrderItemState.issuing.name());
 		list.add(FlightOrderItemState.platform_issuing.name());

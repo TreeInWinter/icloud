@@ -29,7 +29,7 @@ public class RequestMapResolver extends BaseMethodArgumentResolver {
 		if (Map.class.isAssignableFrom(binder.getTarget().getClass())) { // bind map
 			Map<Object, Object> map = (Map<Object, Object>) binder.getTarget();
 			Enumeration<String> enums = servletRequest.getParameterNames();
-			Set<String> prefixNames = new HashSet<>();
+			Set<String> prefixNames = new HashSet<String>();
 			while (enums.hasMoreElements()) {
 				String prefixName = getPrefixName(enums.nextElement());
 				if (prefixNames.contains(prefixName))

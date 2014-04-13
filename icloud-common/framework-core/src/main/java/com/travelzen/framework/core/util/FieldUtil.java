@@ -29,7 +29,7 @@ public class FieldUtil {
 
 	@SuppressWarnings("unchecked")
 	public static <T, P> List<P> asFieldList(T[] ts, String name) {
-		List<P> l = new ArrayList<>();
+		List<P> l = new ArrayList<P>();
 		for (T t : ts)
 			try {
 				Field field = t.getClass().getDeclaredField(name);
@@ -64,7 +64,7 @@ public class FieldUtil {
 	}
 
 	public static <T, P> Set<P> asFieldSet(T[] ts, String name) {
-		Set<P> s = new LinkedHashSet<>();
+		Set<P> s = new LinkedHashSet<P>();
 		List<P> l = asFieldList(ts, name);
 		s.addAll(l);
 		return s;
@@ -124,7 +124,7 @@ public class FieldUtil {
 
 	@SuppressWarnings("unchecked")
 	public static <K, V> Map<K, List<V>> coll2Map4List(Collection<V> coll, String name) {
-		Map<K, List<V>> map = new HashMap<>();
+		Map<K, List<V>> map = new HashMap<K, List<V>>();
 		for (V v : coll)
 			try {
 				Field field = v.getClass().getDeclaredField(name);

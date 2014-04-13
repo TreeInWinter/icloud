@@ -11,7 +11,7 @@ public class CollectionUtilsTest {
 
 	@Test
 	public void test() {
-		Set<String> authorizedTicketOfficeNoSet = new HashSet<>();
+		Set<String> authorizedTicketOfficeNoSet = new HashSet<String>();
     	authorizedTicketOfficeNoSet.add("ab");
     	authorizedTicketOfficeNoSet.add("cd");
     	CollectionUtils.transform(authorizedTicketOfficeNoSet, new Transformer(){
