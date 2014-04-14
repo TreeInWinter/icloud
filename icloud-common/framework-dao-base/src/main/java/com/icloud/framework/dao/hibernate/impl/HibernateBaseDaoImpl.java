@@ -22,6 +22,7 @@ public class HibernateBaseDaoImpl<T> extends HibernateDaoSupport implements
 		this.domainClass = GenericsUtils.getSuperClassGenricType(getClass());
 	}
 
+	@Override
 	public Class<T> getDomainClass() {
 		return this.domainClass;
 	}
@@ -32,17 +33,17 @@ public class HibernateBaseDaoImpl<T> extends HibernateDaoSupport implements
 	}
 
 	@Override
-	public void update(Object t) {
+	public void update(T t) {
 		getHibernateTemplate().update(t);
 	}
 
 	@Override
-	public void save(Object t) {
+	public void save(T t) {
 		getHibernateTemplate().save(t);
 	}
 
 	@Override
-	public void delete(Object t) {
+	public void delete(T t) {
 		getHibernateTemplate().delete(t);
 	}
 

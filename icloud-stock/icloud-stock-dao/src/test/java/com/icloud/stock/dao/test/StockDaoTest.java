@@ -36,8 +36,9 @@ public class StockDaoTest {
 			System.out.println(stock.getStockCode() + stock.getStockName());
 			stock.setStockCode("44444");
 			stockDao.update(stock);
-
 			Stock stock2 = stockDao.getById(stock.getId());
+
+			// System.out.println(stock2.getId());
 			System.out.println(stock2.getStockCode() + stock2.getStockName());
 		}
 	}

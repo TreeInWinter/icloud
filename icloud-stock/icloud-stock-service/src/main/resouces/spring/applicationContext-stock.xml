@@ -10,7 +10,9 @@
 
 	<import
 		resource="classpath*:/spring/applicationContext-stock-dao-component-scan.xml" />
-	<import resource="classpath*:/spring/applicationContext-stock-dao" />
+	<import resource="classpath*:/spring/applicationContext-stock-dao.xml" />
+	<import
+		resource="classpath*:/spring/applicationContext-stock-service-component-scan.xml" />
 	<import
 		resource="classpath*:/spring/applicationContext-stock-service-transaction.xml" />
 </beans>
