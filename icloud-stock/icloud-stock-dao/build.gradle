@@ -13,4 +13,5 @@ dependencies {
 
 	compile libraries.httpclient
 	compile libraries.mysql_connector
+	compile libraries.javassist
 }

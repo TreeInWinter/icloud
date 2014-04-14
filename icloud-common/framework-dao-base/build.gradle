@@ -9,6 +9,7 @@ dependencies {
 	compile libraries.postgresql
 	compile libraries.spring_orm
 	compile libraries.spring_security_core
+
 	compile (libraries.hibernate_core) {
 	    exclude group:'log4j'
 		exclude group:'org.slf4j'
@@ -21,4 +22,5 @@ dependencies {
 	    exclude group:'log4j'
 		exclude group:'org.slf4j'
 	}
+
 }
