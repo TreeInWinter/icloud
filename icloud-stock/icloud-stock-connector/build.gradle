@@ -9,9 +9,9 @@ jar {
 }
 
 dependencies {
-    compile project(':icloud-common:framework')
+  compile project(':icloud-common:framework')
 	compile project(':icloud-stock:icloud-stock-service')
-    compile project(':icloud-stock:icloud-stock-config')
+  compile project(':icloud-stock:icloud-stock-config')
 	compile libraries.commons_lang
 	compile libraries.xstream
 
