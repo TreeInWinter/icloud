@@ -3,6 +3,7 @@ package com.icloud.framework.dao.hibernate.impl;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.eclipse.jetty.util.log.Log;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -26,7 +27,7 @@ public class HibernateBaseDaoImpl<T> extends HibernateDaoSupport implements
 	}
 
 	@Override
-	public T load(String id) {
+	public T getById(Integer id) {
 		return (T) getHibernateTemplate().load(domainClass, id);
 	}
 
@@ -46,7 +47,7 @@ public class HibernateBaseDaoImpl<T> extends HibernateDaoSupport implements
 	}
 
 	@Override
-	public List getList() {
+	public List findAll() {
 		// TODO Auto-generated method stub
 		return (getHibernateTemplate().find("from " + domainClass.getName()
 				+ " x"));
@@ -54,19 +55,20 @@ public class HibernateBaseDaoImpl<T> extends HibernateDaoSupport implements
 	}
 
 	@Override
-	public void deleteById(String id) {
+	public void deleteById(Integer id) {
 		// TODO Auto-generated method stub
-		Object obj = load(id);
+		Object obj = getById(id);
 		getHibernateTemplate().delete(obj);
 	}
 
 	@Override
-	public int count() {
+	public long count() {
 		// TODO Auto-generated method stub
 		List list = getHibernateTemplate().find(
 				"select count(*) from " + domainClass.getName() + " x");
-		Integer count = (Integer) list.get(0);
-		return count.intValue();
+
+		Long count = (Long) list.get(0);
+		return count.longValue();
 
 	}
 
@@ -86,10 +88,5 @@ public class HibernateBaseDaoImpl<T> extends HibernateDaoSupport implements
 		});
 
 	}
-
-	// @Autowired
-	// public void setSessionFactory0(SessionFactory sessionFactory) {
-	// super.setSessionFactory(sessionFactory);
-	// }
 
 }

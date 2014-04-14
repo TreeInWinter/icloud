@@ -5,7 +5,7 @@ import java.util.List;
 public interface IHibernateBaseDao<T> {
 	Class<T> getDomainClass();
 
-	public T load(String id);
+	public T getById(Integer id);
 
 	public void update(T t);
 
@@ -13,11 +13,11 @@ public interface IHibernateBaseDao<T> {
 
 	public void delete(T t);
 
-	public List<T> getList();
+	public List<T> findAll();
 
-	public void deleteById(String id);
+	public void deleteById(Integer id);
 
-	public int count();
+	public long count();
 
 	public void deteleteAll();
 }
