@@ -1,11 +1,13 @@
 package com.icloud.framework.hibernate.util;
 
+import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
+import java.lang.reflect.TypeVariable;
 
 /**
  * 泛型参数辅助类
- * 
+ *
  * @author Jiangning.cui
  */
 @SuppressWarnings("unchecked")
@@ -19,7 +21,7 @@ public class GenericsUtils {
 
 	/**
 	 * 通过反射，获得定义Class时声明的父类的范型参数的类型。 如没有找到符合要求的范型参数，则递归向上直到Object。
-	 * 
+	 *
 	 * @param clazz
 	 *            要进行查询的类
 	 * @param index

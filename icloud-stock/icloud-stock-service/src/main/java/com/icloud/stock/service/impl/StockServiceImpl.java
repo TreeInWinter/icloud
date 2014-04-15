@@ -31,7 +31,8 @@ public class StockServiceImpl extends BaseService<Stock> implements
 		if (list != null) {
 			int i = 0;
 			for (Stock stock : list) {
-				this.stockDao.save(stock);
+				// this.stockDao.save(stock);
+				this.save(stock);
 				System.out.println("ok...." + stock.getId());
 				i++;
 				if (i > 1) {

@@ -1,0 +1,59 @@
+package com.icloud.stock.connector.handler;
+
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.util.StopWatch;
+
+import com.icloud.stock.connector.parser.Parser;
+import com.icloud.stock.connector.parser.ParserFactory;
+import com.icloud.stock.connector.parser.StockParseFactory;
+import com.travelzen.framework.net.http.TZHttpClient;
+
+public abstract class StockHandler<T> implements BaseHandler<T> {
+	private final static Logger LOGGER = LoggerFactory
+			.getLogger(StockHandler.class);
+	private static ParserFactory factory = new StockParseFactory();
+	private Class<T> domainClass;
+	private String url;
+	private Map<String, String> params;
+
+	private StockHandler() {
+		/**
+		 * 获得泛型参数类型
+		 */
+		Type genType = getClass().getGenericSuperclass();
+		Type[] params = ((ParameterizedType) genType).getActualTypeArguments();
+		domainClass = (Class) params[0];
+	}
+
+	public StockHandler(String url, Map<String, String> params)
+			throws NoSuchFieldException, SecurityException,
+			NoSuchMethodException {
+		this();
+		this.url = url;
+		this.params = params;
+	}
+
+	public abstract void apply();
+
+	public T getHttpData() {
+		StopWatch stopwatch = new StopWatch(domainClass.getName());
+		stopwatch.start("调用http接口");
+		Map<String, String> params = new HashMap<String, String>();
+		TZHttpClient client = new TZHttpClient(url, params);
+		// client.sendGetRequest();
+		String str = client.sendPostRequest();
+		stopwatch.stop();
+		stopwatch.start("解析数据");
+		Parser<T> parser = (Parser<T>) factory.getParser(domainClass);
+		T result = parser.parse(str, null);
+		stopwatch.stop();
+		LOGGER.info("{}:{}", stopwatch.getLastTaskName(), stopwatch.toString());
+		return result;
+	}
+}
