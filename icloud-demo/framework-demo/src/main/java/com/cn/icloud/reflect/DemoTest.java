@@ -15,6 +15,7 @@ public class DemoTest {
 		for (Field field : fields) {
 			System.out.println(field.getName());
 			ReflectionUtils.makeAccessible(field);
+			ReflectionUtils.setField(field, deom, "3333");
 			String value = (String) ReflectionUtils.getField(field, deom);
 			System.out.println(value);
 		}

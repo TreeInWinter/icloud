@@ -1,5 +1,7 @@
 package com.icloud.stock.service.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -23,4 +25,20 @@ public class StockServiceImpl extends BaseService<Stock> implements
 		return stockDao;
 	}
 
+	@Override
+	public void saveAll(List<Stock> list) {
+		// TODO Auto-generated method stub
+		if (list != null) {
+			int i = 0;
+			for (Stock stock : list) {
+				this.stockDao.save(stock);
+				System.out.println("ok...." + stock.getId());
+				i++;
+				if (i > 1) {
+					int j = 0;
+					j = 3 / j;
+				}
+			}
+		}
+	}
 }
