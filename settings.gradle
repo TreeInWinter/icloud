@@ -1,3 +1,4 @@
 apply from: 'icloud-common.settings.gradle'
 apply from: 'icloud-demo.settings.gradle'
 apply from: 'icloud-stock.settings.gradle'
+apply from: 'icloud-front.settings.gradle'
