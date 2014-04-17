@@ -39,6 +39,12 @@ public abstract class StockHandler<T> implements BaseHandler<T> {
 		this.params = params;
 	}
 
+	public StockHandler(String url) {
+		this();
+		this.url = url;
+		this.params = new HashMap<String, String>();
+	}
+
 	public abstract void apply();
 
 	public T getHttpData() {
