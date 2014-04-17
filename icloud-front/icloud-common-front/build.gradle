@@ -1,7 +1,7 @@
 dependencies {
 	compile project(':icloud-common:framework-redis')
 	
-        compile libraries.jackson_mapper_asl
+  compile libraries.jackson_mapper_asl
 	compile libraries.json_lib
 	compile libraries.pinyin4j
 }
