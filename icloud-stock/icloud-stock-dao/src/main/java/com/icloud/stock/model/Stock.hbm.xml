@@ -1,18 +1,33 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 2014-4-13 23:33:37 by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated 2014-4-17 23:54:09 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-	<class name="com.icloud.stock.model.Stock" table="stock" catalog="icloud">
-		<id name="id" type="java.lang.Integer">
-			<column name="id" />
-			<generator class="identity" />
-		</id>
-		<property name="stockName" type="string" lazy="false">
-			<column name="stock_name" length="100" />
-		</property>
-		<property name="stockCode" type="string" lazy="false">
-			<column name="stock_code" length="100" not-null="true" />
-		</property>
-	</class>
+    <class name="com.icloud.stock.model.Stock" table="stock" catalog="icloud">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="stockName" type="string">
+            <column name="stock_name" length="100" />
+        </property>
+        <property name="stockCode" type="string">
+            <column name="stock_code" length="100" not-null="true" />
+        </property>
+        <property name="createTime" type="timestamp">
+            <column name="create_time" length="19" />
+        </property>
+        <property name="updateTime" type="timestamp">
+            <column name="update_time" length="19" />
+        </property>
+        <property name="stockLocation" type="string">
+            <column name="stock_location" length="20" />
+        </property>
+        <property name="stockType" type="string">
+            <column name="stock_type" length="200" />
+        </property>
+        <property name="descrition" type="string">
+            <column name="descrition" length="500" />
+        </property>
+    </class>
 </hibernate-mapping>

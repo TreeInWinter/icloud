@@ -1,4 +1,4 @@
-package com.travelzen.tops.poi.projo;
+package com.travelzen.tops.poi.pojo;
 
 import java.util.Map;
 import java.util.Map.Entry;

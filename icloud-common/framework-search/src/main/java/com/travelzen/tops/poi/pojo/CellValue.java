@@ -1,4 +1,4 @@
-package com.travelzen.tops.poi.projo;
+package com.travelzen.tops.poi.pojo;
 
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.ss.usermodel.Cell;

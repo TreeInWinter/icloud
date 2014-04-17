@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-4-17 23:54:09 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.icloud.stock.model.StockDateHistory" table="stock_date_history" catalog="icloud">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="stockCode" type="string">
+            <column name="stock_code" length="100" />
+        </property>
+        <property name="stockId" type="java.lang.Integer">
+            <column name="stock_id" />
+        </property>
+        <property name="createTime" type="date">
+            <column name="create_time" length="10" />
+        </property>
+        <property name="openPrice" type="java.lang.Double">
+            <column name="open_price" precision="22" scale="0" />
+        </property>
+        <property name="highPrice" type="java.lang.Double">
+            <column name="high_price" precision="22" scale="0" />
+        </property>
+        <property name="lowPrice" type="java.lang.Double">
+            <column name="low_price" precision="22" scale="0" />
+        </property>
+        <property name="closePrice" type="java.lang.Double">
+            <column name="close_price" precision="22" scale="0" />
+        </property>
+        <property name="volume" type="java.lang.Integer">
+            <column name="volume">
+                <comment>&#179;&#201;&#189;&#187;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="adjPrice" type="java.lang.Double">
+            <column name="adj_price" precision="22" scale="0">
+                <comment>&#190;&#249;&#188;&#219;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>
