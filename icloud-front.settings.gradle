@@ -1,1 +1,3 @@
 include 'icloud-front:icloud-common-front'
+include 'icloud-front:icloud-stock-front'
+

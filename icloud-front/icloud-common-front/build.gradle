@@ -1,7 +1,12 @@
 dependencies {
+    compile project(':icloud-common:framework')
 	compile project(':icloud-common:framework-redis')
-	
-  compile libraries.jackson_mapper_asl
+
+	compile libraries.freemarker
+	compile libraries.commons_fileupload
+	compile libraries.jackson_mapper_asl
 	compile libraries.json_lib
+	compile libraries.gson
 	compile libraries.pinyin4j
+
 }

@@ -2,7 +2,6 @@
 <project-modules id="moduleCoreId" project-version="2.0">
 	<wb-module deploy-name="framework-redis">
 		<wb-resource deploy-path="/" source-path="src/main/resources"/>
-		<wb-resource deploy-path="/" source-path="src/main/resources-dev"/>
 		<wb-resource deploy-path="/" source-path="src/main/java"/>
 	</wb-module>
 </project-modules>

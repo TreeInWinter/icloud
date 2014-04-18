@@ -1,5 +1,4 @@
 include 'icloud-stock:icloud-stock-config'
 include 'icloud-stock:icloud-stock-dao'
 include 'icloud-stock:icloud-stock-service'
-include 'icloud-stock:icloud-stock-front'
 include 'icloud-stock:icloud-stock-connector'
