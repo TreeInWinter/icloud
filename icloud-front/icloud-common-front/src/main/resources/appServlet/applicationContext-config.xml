@@ -34,10 +34,23 @@
 	<!-- 配置静态文件路径 -->
 	<mvc:resources mapping="/resources/**" location="/resources/" />
 	<!-- 配置国际化资源文件 -->
+	<!-- 国际化设置 -->
 	<bean id="messageSource"
 		class="org.springframework.context.support.ResourceBundleMessageSource">
-		<property name="basename" value="messages" />
+		<property name="basenames">
+			<list>
+				<value>i18n/messages</value>
+			</list>
+		</property>
 	</bean>
+
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+		<property name="defaultLocale" value="zh_CN" />
+		<property name="cookieName" value="CookieLocaleResolver" />
+		<property name="cookieMaxAge" value="2147483647" />
+	</bean>
+
 	<!-- 设置freeMarker配置文件路径 -->
 	<bean id="freemarkerConfiguration"
 		class="org.springframework.beans.factory.config.PropertiesFactoryBean">

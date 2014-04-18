@@ -1,20 +1,14 @@
-package com.travelzen.springmvc.action;
+package com.icloud.action;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-/**
- * 如何返回view
- *
- */
 
 @Controller
-public class ViewController {
+public class WelcomeController {
 	@RequestMapping("/index")
 	// @ResponseBody
 	public String helloWorld() {
-		System.out.println("say hello,world");
+		// System.out.println("say hello,world");
 		// return "success";
 		return "index";
 	}

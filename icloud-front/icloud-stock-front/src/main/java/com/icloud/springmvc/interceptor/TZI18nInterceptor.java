@@ -1,4 +1,4 @@
-package com.travelzen.springmvc.interceptor;
+package com.icloud.springmvc.interceptor;
 
 import java.util.Locale;
 

@@ -6,9 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class WebEnv {
-
 	private static final Logger LOG = LoggerFactory.getLogger(WebEnv.class);
-
 	private static Properties pptConf = null;
 
 	static {
@@ -17,9 +15,10 @@ public class WebEnv {
 			// load default properties
 			path = "properties/web-env-default.properties";
 			pptConf = new Properties();
-			pptConf.load(WebEnv.class.getClassLoader().getResourceAsStream(path));
+			pptConf.load(WebEnv.class.getClassLoader()
+					.getResourceAsStream(path));
 		} catch (Exception e) {
-			LOG.error("load properties(" + path + ") failed." ,e);
+			LOG.error("load properties(" + path + ") failed.", e);
 		}
 
 		// load properties in current project
