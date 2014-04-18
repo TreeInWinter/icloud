@@ -11,13 +11,11 @@ public class StockMetaInfoHandler extends StockHandler<StockMetaInfo> {
 			throws NoSuchFieldException, SecurityException,
 			NoSuchMethodException {
 		super(url, params);
-		// TODO Auto-generated constructor stub
 	}
 
 	public StockMetaInfoHandler(String url) throws NoSuchFieldException,
 			SecurityException, NoSuchMethodException {
 		super(url);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -25,5 +23,6 @@ public class StockMetaInfoHandler extends StockHandler<StockMetaInfo> {
 		// TODO Auto-generated method stub
 
 	}
+
 
 }

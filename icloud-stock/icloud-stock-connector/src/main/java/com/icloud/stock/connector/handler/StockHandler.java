@@ -15,14 +15,18 @@ import com.icloud.stock.connector.parser.StockParseFactory;
 import com.travelzen.framework.net.http.TZHttpClient;
 
 public abstract class StockHandler<T> implements BaseHandler<T> {
-	private final static Logger LOGGER = LoggerFactory
+	protected final static Logger LOGGER = LoggerFactory
 			.getLogger(StockHandler.class);
-	private static ParserFactory factory = new StockParseFactory();
-	private Class<T> domainClass;
-	private String url;
-	private Map<String, String> params;
+	protected static ParserFactory factory = new StockParseFactory();
+	protected Class<T> domainClass;
+	protected String url;
+	protected Map<String, String> params;
 
-	private StockHandler() {
+	protected StockHandler() {
+		init();
+	}
+
+	protected void init() {
 		/**
 		 * 获得泛型参数类型
 		 */

@@ -117,4 +117,15 @@ public class StockDateHistory implements java.io.Serializable {
 		this.adjPrice = adjPrice;
 	}
 
+	@Override
+	public String toString() {
+		return "StockDateHistory [id=" + id + ", stockCode=" + stockCode
+				+ ", stockId=" + stockId + ", createTime=" + createTime
+				+ ", openPrice=" + openPrice + ", highPrice=" + highPrice
+				+ ", lowPrice=" + lowPrice + ", closePrice=" + closePrice
+				+ ", volume=" + volume + ", adjPrice=" + adjPrice + "]";
+	}
+
+
+
 }

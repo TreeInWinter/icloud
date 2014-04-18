@@ -3,12 +3,12 @@ package com.travelzen.framework.file;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Iterator;
-
 
 public class TextFileIterator implements Iterator<String> {
 	// stream being read from
-
 	BufferedReader in;
 	// return value of next call to next()
 	String nextline;
@@ -21,6 +21,15 @@ public class TextFileIterator implements Iterator<String> {
 			e.printStackTrace();
 		}
 
+	}
+
+	public TextFileIterator(InputStream inputStream) {
+		try {
+			in = new BufferedReader(new InputStreamReader(inputStream));
+			nextline = in.readLine();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
