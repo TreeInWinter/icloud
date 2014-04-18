@@ -20,17 +20,20 @@
 	<sc:http pattern="/facade/**" security="none" />
 	<sc:http pattern="/error/**" security="none" />
 	<sc:http pattern="/locationUtil/**" security="none" />
-	<sc:http pattern="/order/hotel/updateFileSentLog" security="none" />
-	<sc:http pattern="/order/flight/domestic/aliPayIssue" security="none" />
-	<sc:http pattern="/order/flight/domestic/finishOuterIssue"
-		security="none" />
-	<sc:http pattern="/order/flight/domestic/chinapnrpayResult"
-		security="none" />
-	<sc:http pattern="/recvBaitourMessage" security="none" />
-	<sc:http pattern="/recvQunarNotification" security="none" />
-	<sc:http pattern="/order/flight/platformRefundCompleted"
-		security="none" />
-	<sc:http pattern="/order/jumpToAccuracyReport" security="none" />
-	<sc:http pattern="/order/exportAccuracyReport" security="none" />
+
+	<sc:http entry-point-ref="loginEntryPoint">
+		<sc:logout logout-url="/signOut" success-handler-ref="topsLogoutSuccessHandler" />
+		<sc:access-denied-handler ref="topsAccessDeniedHandler" />
+		<sc:request-cache ref="nullRequestCache" />
+		<sc:remember-me key="topsmembertoken" services-ref="topsRememberMeService" />
+		<!-- <sc:custom-filter ref="redisSessionFilter" before="FIRST"/> -->
+		<sc:custom-filter ref="captchaGeneratingFilter"
+			after="CONCURRENT_SESSION_FILTER" />
+		<sc:custom-filter ref="topsSecurityFilter" before="FILTER_SECURITY_INTERCEPTOR" />
+		<sc:custom-filter ref="formLoginFiter" position="FORM_LOGIN_FILTER" />
+		<sc:custom-filter ref="authResultPrintingFilter"
+			after="FORM_LOGIN_FILTER" />
+		<sc:custom-filter ref="loginStatusFilter" after="ANONYMOUS_FILTER" />
+	</sc:http>
 
 </beans>
