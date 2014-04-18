@@ -7,6 +7,7 @@
  */
 package com.travelzen.framework.net.http;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -96,19 +97,45 @@ public class TZHttpClient {
 		List<NameValuePair> lvParamsList = new ArrayList<NameValuePair>();
 		if (null != this.params) {
 			for (Entry<String, String> entry : this.params.entrySet()) {
-				NameValuePair tmNameValuePair = new BasicNameValuePair(entry.getKey(), entry.getValue());
+				NameValuePair tmNameValuePair = new BasicNameValuePair(
+						entry.getKey(), entry.getValue());
 				lvParamsList.add(tmNameValuePair);
 			}
 		}
 		String lvResponseString = null;
 		try {
-			lvHttpPost.setEntity(new UrlEncodedFormEntity(lvParamsList, HTTP.UTF_8));
+			lvHttpPost.setEntity(new UrlEncodedFormEntity(lvParamsList,
+					HTTP.UTF_8));
 			HttpResponse response = lvClient.execute(lvHttpPost);
-			lvResponseString = EntityUtils.toString(response.getEntity(), "UTF-8");
+			lvResponseString = EntityUtils.toString(response.getEntity(),
+					"UTF-8");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return lvResponseString;
+	}
+
+	public InputStream downCVSFile() {
+		HttpClient lvClient = new DefaultHttpClient();
+		HttpPost lvHttpPost = new HttpPost(this.url);
+		List<NameValuePair> lvParamsList = new ArrayList<NameValuePair>();
+		if (null != this.params) {
+			for (Entry<String, String> entry : this.params.entrySet()) {
+				NameValuePair tmNameValuePair = new BasicNameValuePair(
+						entry.getKey(), entry.getValue());
+				lvParamsList.add(tmNameValuePair);
+			}
+		}
+		try {
+			lvHttpPost.setEntity(new UrlEncodedFormEntity(lvParamsList,
+					HTTP.UTF_8));
+			HttpResponse response = lvClient.execute(lvHttpPost);
+			InputStream content = response.getEntity().getContent();
+			return content;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 }
