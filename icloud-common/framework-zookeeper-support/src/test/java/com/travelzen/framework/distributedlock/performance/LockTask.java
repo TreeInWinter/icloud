@@ -1,7 +1,7 @@
 package com.travelzen.framework.distributedlock.performance;
 
-import com.travelzen.framework.distributedLock.DistributedLock;
-import com.travelzen.framework.distributedLock.DistributedLockFramework;
+import com.icloud.framework.distributedLock.DistributedLock;
+import com.icloud.framework.distributedLock.DistributedLockFramework;
 
 public class LockTask extends Thread {
 	private String name;

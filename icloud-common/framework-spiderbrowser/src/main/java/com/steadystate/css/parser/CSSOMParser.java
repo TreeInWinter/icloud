@@ -30,12 +30,34 @@
  
 package com.steadystate.css.parser;
 
-import java.io.*;
-import java.util.*;
-import org.w3c.dom.css.*;
-import org.w3c.css.sac.*;
-import org.w3c.css.sac.helpers.ParserFactory;
-import com.steadystate.css.dom.*;
+import java.io.IOException;
+import java.util.Properties;
+import java.util.Stack;
+
+import org.w3c.css.sac.CSSException;
+import org.w3c.css.sac.DocumentHandler;
+import org.w3c.css.sac.InputSource;
+import org.w3c.css.sac.LexicalUnit;
+import org.w3c.css.sac.Parser;
+import org.w3c.css.sac.SACMediaList;
+import org.w3c.css.sac.SelectorList;
+import org.w3c.dom.css.CSSRule;
+import org.w3c.dom.css.CSSStyleDeclaration;
+import org.w3c.dom.css.CSSStyleSheet;
+import org.w3c.dom.css.CSSValue;
+
+import com.steadystate.css.dom.CSSFontFaceRuleImpl;
+import com.steadystate.css.dom.CSSImportRuleImpl;
+import com.steadystate.css.dom.CSSMediaRuleImpl;
+import com.steadystate.css.dom.CSSPageRuleImpl;
+import com.steadystate.css.dom.CSSRuleListImpl;
+import com.steadystate.css.dom.CSSStyleDeclarationImpl;
+import com.steadystate.css.dom.CSSStyleRuleImpl;
+import com.steadystate.css.dom.CSSStyleSheetImpl;
+import com.steadystate.css.dom.CSSUnknownRuleImpl;
+import com.steadystate.css.dom.CSSValueImpl;
+import com.steadystate.css.dom.MediaListImpl;
+import com.steadystate.css.dom.Property;
 
 /** 
  *

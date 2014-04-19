@@ -30,7 +30,18 @@
 
 package com.steadystate.css.parser.selectors;
 
-import org.w3c.css.sac.*;
+import org.w3c.css.sac.CSSException;
+import org.w3c.css.sac.CharacterDataSelector;
+import org.w3c.css.sac.Condition;
+import org.w3c.css.sac.ConditionalSelector;
+import org.w3c.css.sac.DescendantSelector;
+import org.w3c.css.sac.ElementSelector;
+import org.w3c.css.sac.NegativeSelector;
+import org.w3c.css.sac.ProcessingInstructionSelector;
+import org.w3c.css.sac.Selector;
+import org.w3c.css.sac.SelectorFactory;
+import org.w3c.css.sac.SiblingSelector;
+import org.w3c.css.sac.SimpleSelector;
 
 public class SelectorFactoryImpl implements SelectorFactory {
 

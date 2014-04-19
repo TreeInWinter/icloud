@@ -23,10 +23,7 @@
  */
 package org.lobobrowser.html.domimpl;
 
-import java.io.UnsupportedEncodingException;
-
 import org.lobobrowser.html.FormInput;
-import org.w3c.dom.html2.HTMLFormElement;
 import org.w3c.dom.html2.HTMLTextAreaElement;
 
 public class HTMLTextAreaElementImpl extends HTMLBaseInputElement implements

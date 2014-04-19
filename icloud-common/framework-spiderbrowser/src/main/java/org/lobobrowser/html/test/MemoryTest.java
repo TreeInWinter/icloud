@@ -1,23 +1,33 @@
 package org.lobobrowser.html.test;
 
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.EventQueue;
+import java.awt.Insets;
+import java.awt.Point;
+import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.logging.Logger;
 
-import org.lobobrowser.html.*;
-import org.lobobrowser.html.domimpl.*;
-import org.lobobrowser.html.gui.*;
+import javax.swing.JFrame;
+
+import org.lobobrowser.html.HtmlRendererContext;
+import org.lobobrowser.html.UserAgentContext;
+import org.lobobrowser.html.domimpl.NodeImpl;
+import org.lobobrowser.html.gui.HtmlPanel;
 import org.lobobrowser.html.parser.DocumentBuilderImpl;
 import org.lobobrowser.html.parser.InputSourceImpl;
-import org.lobobrowser.html.renderer.*;
+import org.lobobrowser.html.renderer.DelayedPair;
+import org.lobobrowser.html.renderer.FrameContext;
+import org.lobobrowser.html.renderer.RBlock;
+import org.lobobrowser.html.renderer.RenderableContainer;
+import org.lobobrowser.html.renderer.RenderableSpot;
 import org.lobobrowser.util.io.IORoutines;
 import org.w3c.dom.Document;
-
-import java.util.logging.*;
-import java.io.*;
-import javax.swing.*;
-import java.awt.*;
 
 /**
  * Checks for memory leaks.

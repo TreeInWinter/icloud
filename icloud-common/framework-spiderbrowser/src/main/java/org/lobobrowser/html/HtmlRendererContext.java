@@ -24,7 +24,9 @@
 package org.lobobrowser.html;
 
 import java.net.URL;
-import org.w3c.dom.html2.*;
+
+import org.w3c.dom.html2.HTMLCollection;
+import org.w3c.dom.html2.HTMLLinkElement;
 
 /**
  * The <code>HtmlRendererContext</code> interface must be implemented 

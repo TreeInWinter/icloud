@@ -1,7 +1,5 @@
 package com.nicolatesser.datastructure_algorithms.datastructures.graph.adjacency_list;
 
-import static org.junit.Assert.*;
-
 import java.util.List;
 
 import junit.framework.Assert;

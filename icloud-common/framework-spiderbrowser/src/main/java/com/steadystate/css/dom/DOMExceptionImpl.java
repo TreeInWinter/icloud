@@ -30,8 +30,10 @@
 
 package com.steadystate.css.dom;
 
-import java.util.*;
-import org.w3c.dom.*;
+import java.util.Locale;
+import java.util.ResourceBundle;
+
+import org.w3c.dom.DOMException;
 
 /** 
  *

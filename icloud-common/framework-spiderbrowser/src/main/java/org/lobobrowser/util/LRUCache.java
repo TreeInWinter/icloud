@@ -20,7 +20,9 @@
 */
 package org.lobobrowser.util;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeSet;
 
 /**
  * A cache with least-recently-used policy.

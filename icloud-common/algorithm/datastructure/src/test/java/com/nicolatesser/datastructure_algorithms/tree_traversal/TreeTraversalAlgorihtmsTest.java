@@ -1,7 +1,5 @@
 package com.nicolatesser.datastructure_algorithms.tree_traversal;
 
-import static org.junit.Assert.*;
-
 import java.util.Vector;
 
 import org.junit.Before;

@@ -3,8 +3,8 @@ package com.icloud.front.common.security;
 import org.springframework.security.authentication.encoding.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
+import com.icloud.framework.core.util.TZUtil;
 import com.icloud.front.common.utils.StringEncoder;
-import com.travelzen.framework.core.util.TZUtil;
 
 @Component("icloudPasswordEncoder")
 public class ICloudPasswordEncoder implements PasswordEncoder {

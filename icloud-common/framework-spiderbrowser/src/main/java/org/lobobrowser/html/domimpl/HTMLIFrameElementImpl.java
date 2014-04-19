@@ -1,6 +1,6 @@
 package org.lobobrowser.html.domimpl;
 
-import org.lobobrowser.html.*;
+import org.lobobrowser.html.BrowserFrame;
 import org.lobobrowser.html.constant.BrowserConfConstant;
 import org.w3c.dom.Document;
 import org.w3c.dom.html2.HTMLIFrameElement;

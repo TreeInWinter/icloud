@@ -20,7 +20,12 @@
 */
 package org.lobobrowser.html.domimpl;
 
-import org.lobobrowser.html.style.*;
+import org.lobobrowser.html.style.BaseFontRenderState;
+import org.lobobrowser.html.style.ColorRenderState;
+import org.lobobrowser.html.style.FontNameRenderState;
+import org.lobobrowser.html.style.FontSizeRenderState;
+import org.lobobrowser.html.style.HtmlValues;
+import org.lobobrowser.html.style.RenderState;
 import org.lobobrowser.util.gui.ColorFactory;
 import org.w3c.dom.html2.HTMLBaseFontElement;
 

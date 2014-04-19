@@ -26,7 +26,8 @@ package org.lobobrowser.html.test;
 import java.awt.Component;
 import java.net.URL;
 
-import org.lobobrowser.html.*;
+import org.lobobrowser.html.BrowserFrame;
+import org.lobobrowser.html.HtmlRendererContext;
 import org.lobobrowser.html.gui.HtmlPanel;
 import org.w3c.dom.Document;
 

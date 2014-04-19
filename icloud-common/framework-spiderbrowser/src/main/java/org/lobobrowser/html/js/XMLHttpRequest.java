@@ -1,10 +1,17 @@
 package org.lobobrowser.html.js;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import org.lobobrowser.html.HttpRequest;
+import org.lobobrowser.html.ReadyStateChangeListener;
+import org.lobobrowser.html.UserAgentContext;
+import org.lobobrowser.js.AbstractScriptableDelegate;
+import org.lobobrowser.js.JavaScript;
+import org.mozilla.javascript.Context;
+import org.mozilla.javascript.Function;
+import org.mozilla.javascript.Scriptable;
 import org.w3c.dom.Document;
-import org.lobobrowser.html.*;
-import org.lobobrowser.js.*;
-import org.mozilla.javascript.*;
-import java.util.logging.*;
 
 public class XMLHttpRequest extends AbstractScriptableDelegate {
 	private static final Logger logger = Logger.getLogger(XMLHttpRequest.class.getName());

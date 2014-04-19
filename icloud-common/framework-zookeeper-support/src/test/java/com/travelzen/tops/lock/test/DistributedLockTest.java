@@ -1,7 +1,7 @@
 package com.travelzen.tops.lock.test;
 
-import com.travelzen.framework.distributedLock.DistributedLock;
-import com.travelzen.framework.distributedLock.DistributedLockFramework;
+import com.icloud.framework.distributedLock.DistributedLock;
+import com.icloud.framework.distributedLock.DistributedLockFramework;
 
 public class DistributedLockTest {
 	public void testLockResource() throws Exception {

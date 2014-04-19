@@ -30,7 +30,7 @@
 
 package com.steadystate.css.parser;
 
-import java.util.*;
+import java.util.ListResourceBundle;
 
 public class ExceptionResource extends ListResourceBundle {
 

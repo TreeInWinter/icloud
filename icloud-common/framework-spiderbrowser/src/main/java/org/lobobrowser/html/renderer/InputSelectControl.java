@@ -1,13 +1,17 @@
 package org.lobobrowser.html.renderer;
 
 
-import javax.swing.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
 
-import org.lobobrowser.html.domimpl.*;
+import javax.swing.JComboBox;
+
+import org.lobobrowser.html.domimpl.HTMLBaseInputElement;
+import org.lobobrowser.html.domimpl.HTMLElementImpl;
+import org.lobobrowser.html.domimpl.NodeFilter;
 import org.lobobrowser.util.gui.WrapperLayout;
 import org.w3c.dom.Node;
-import org.w3c.dom.html2.*;
+import org.w3c.dom.html2.HTMLOptionElement;
 
 class InputSelectControl extends BaseInputControl {
 	private static final OptionFilter OPTION_FILTER = new OptionFilter();

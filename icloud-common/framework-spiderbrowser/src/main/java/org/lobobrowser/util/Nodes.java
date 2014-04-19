@@ -1,6 +1,6 @@
 package org.lobobrowser.util;
 
-import org.w3c.dom.*;
+import org.w3c.dom.Node;
 
 public class Nodes {
 	public static Node getCommonAncestor(Node node1, Node node2) {

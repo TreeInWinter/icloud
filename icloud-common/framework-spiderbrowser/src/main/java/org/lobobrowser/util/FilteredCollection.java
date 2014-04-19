@@ -23,7 +23,10 @@
  */
 package org.lobobrowser.util;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class FilteredCollection implements Collection {
 	private final ObjectFilter filter;

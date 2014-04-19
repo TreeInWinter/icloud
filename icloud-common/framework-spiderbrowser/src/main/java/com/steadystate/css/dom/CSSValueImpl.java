@@ -30,13 +30,20 @@
 
 package com.steadystate.css.dom;
 
-import java.io.IOException;
 import java.io.Serializable;
 import java.io.StringReader;
-import java.util.*;
-import org.w3c.css.sac.*;
-import org.w3c.dom.*;
-import org.w3c.dom.css.*;
+import java.util.Vector;
+
+import org.w3c.css.sac.InputSource;
+import org.w3c.css.sac.LexicalUnit;
+import org.w3c.dom.DOMException;
+import org.w3c.dom.css.CSSPrimitiveValue;
+import org.w3c.dom.css.CSSValue;
+import org.w3c.dom.css.CSSValueList;
+import org.w3c.dom.css.Counter;
+import org.w3c.dom.css.RGBColor;
+import org.w3c.dom.css.Rect;
+
 import com.steadystate.css.parser.CSSOMParser;
 import com.steadystate.css.parser.LexicalUnitImpl;
 

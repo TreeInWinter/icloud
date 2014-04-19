@@ -10,12 +10,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.icloud.stock.model.Stock;
 import com.icloud.stock.model.constant.StockConstants.StockLocation;
 import com.icloud.stock.service.IStockService;
-import com.travelzen.framework.file.TextFile;
+import com.icloud.framework.file.TextFile;
 
 /**
- * 
+ *
  * @author jiangningcui
- * 
+ *
  */
 public class StockInfoImporter {
 	private ApplicationContext app;

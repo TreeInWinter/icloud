@@ -20,12 +20,15 @@
  */
 package org.lobobrowser.js;
 
-import org.lobobrowser.html.domimpl.HTMLDocumentImpl;
-import org.mozilla.javascript.*;
-
-import java.lang.reflect.*;
+import java.lang.reflect.Method;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import org.mozilla.javascript.EvaluatorException;
+import org.mozilla.javascript.Function;
+import org.mozilla.javascript.Scriptable;
+import org.mozilla.javascript.ScriptableObject;
+import org.mozilla.javascript.WrappedException;
 
 public class JavaObjectWrapper extends ScriptableObject {
 	private static final Logger logger = Logger

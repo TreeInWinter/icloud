@@ -6,8 +6,8 @@ import java.util.Date;
 
 import com.icloud.stock.connector.parser.Parser;
 import com.icloud.stock.model.StockDateHistory;
-import com.travelzen.framework.file.TextFile;
-import com.travelzen.framework.util.DateUtils;
+import com.icloud.framework.file.TextFile;
+import com.icloud.framework.util.DateUtils;
 
 public class StockDateHistoryPaser implements
 		Parser<ArrayList<StockDateHistory>> {

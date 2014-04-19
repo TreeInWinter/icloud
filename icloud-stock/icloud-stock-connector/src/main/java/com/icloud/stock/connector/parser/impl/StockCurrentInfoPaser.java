@@ -6,7 +6,7 @@ import org.apache.commons.httpclient.util.DateUtil;
 
 import com.icloud.stock.connector.model.StockCurrentInfo;
 import com.icloud.stock.connector.parser.Parser;
-import com.travelzen.framework.util.DateUtils;
+import com.icloud.framework.util.DateUtils;
 
 public class StockCurrentInfoPaser implements Parser<StockCurrentInfo> {
 

@@ -23,7 +23,10 @@
  */
 package org.lobobrowser.html.style;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.w3c.dom.DOMException;
 import org.w3c.dom.css.CSS2Properties;

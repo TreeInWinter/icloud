@@ -23,10 +23,12 @@
  */
 package org.lobobrowser.html.domimpl;
 
-import org.lobobrowser.js.*;
+import java.util.Collection;
+import java.util.Iterator;
+
+import org.lobobrowser.js.AbstractScriptableDelegate;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import java.util.*;
 
 class FilteredNodeListImpl extends AbstractScriptableDelegate implements NodeList {
 	private final Collection sourceNodeList;

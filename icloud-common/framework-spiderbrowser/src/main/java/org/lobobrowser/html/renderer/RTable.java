@@ -23,12 +23,17 @@
  */
 package org.lobobrowser.html.renderer;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Insets;
 import java.awt.event.MouseEvent;
 import java.util.Iterator;
 
-import org.lobobrowser.html.*;
-import org.lobobrowser.html.domimpl.*;
+import org.lobobrowser.html.HtmlRendererContext;
+import org.lobobrowser.html.UserAgentContext;
+import org.lobobrowser.html.domimpl.HTMLTableElementImpl;
+import org.lobobrowser.html.domimpl.ModelNode;
 
 class RTable extends BaseElementRenderable {
 	private final TableMatrix tableMatrix;

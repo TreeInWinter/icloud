@@ -30,8 +30,15 @@
 
 package com.steadystate.css.parser;
 
-import java.io.*;
-import org.w3c.css.sac.*;
+import java.io.FileReader;
+import java.io.Reader;
+
+import org.w3c.css.sac.CSSException;
+import org.w3c.css.sac.InputSource;
+import org.w3c.css.sac.LexicalUnit;
+import org.w3c.css.sac.Parser;
+import org.w3c.css.sac.SACMediaList;
+import org.w3c.css.sac.SelectorList;
 import org.w3c.css.sac.helpers.ParserFactory;
 
 /** 

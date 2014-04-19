@@ -23,9 +23,11 @@
  */
 package org.lobobrowser.html.domimpl;
 
-import java.util.*;
-import org.w3c.dom.html2.*;
-import org.w3c.dom.*;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.w3c.dom.DOMException;
+import org.w3c.dom.html2.HTMLElement;
 
 class ElementFactory {
 	private final Map builders = new HashMap();

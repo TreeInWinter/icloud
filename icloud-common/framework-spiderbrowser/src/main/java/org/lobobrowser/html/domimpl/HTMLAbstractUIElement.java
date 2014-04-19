@@ -1,11 +1,16 @@
 package org.lobobrowser.html.domimpl;
 
-import org.lobobrowser.html.*;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.lobobrowser.html.UserAgentContext;
 import org.lobobrowser.html.js.Executor;
-import org.lobobrowser.js.*;
-import org.mozilla.javascript.*;
-import org.w3c.dom.*;
-import java.util.*;
+import org.lobobrowser.js.JavaScript;
+import org.mozilla.javascript.Context;
+import org.mozilla.javascript.EcmaError;
+import org.mozilla.javascript.Function;
+import org.mozilla.javascript.Scriptable;
+import org.w3c.dom.Document;
 
 /**
  * Implements common functionality of most elements.

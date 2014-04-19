@@ -23,23 +23,33 @@
  */
 package org.lobobrowser.html.test;
 
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.swing.JOptionPane;
 
-import org.lobobrowser.html.*;
-import org.lobobrowser.html.domimpl.*;
+import org.lobobrowser.html.BrowserFrame;
+import org.lobobrowser.html.FormInput;
+import org.lobobrowser.html.HtmlObject;
+import org.lobobrowser.html.HtmlParserContext;
+import org.lobobrowser.html.HtmlRendererContext;
+import org.lobobrowser.html.UserAgentContext;
+import org.lobobrowser.html.domimpl.FrameNode;
+import org.lobobrowser.html.domimpl.HTMLDocumentImpl;
 import org.lobobrowser.html.gui.HtmlPanel;
 import org.lobobrowser.html.parser.DocumentBuilderImpl;
 import org.lobobrowser.html.parser.InputSourceImpl;
-import org.lobobrowser.util.io.*;
-import org.w3c.dom.html2.*;
-
-import java.util.logging.*;
+import org.lobobrowser.util.io.RecordedInputStream;
+import org.w3c.dom.html2.HTMLCollection;
+import org.w3c.dom.html2.HTMLElement;
+import org.w3c.dom.html2.HTMLLinkElement;
 
 /**
  * The <code>SimpleHtmlRendererContext</code> class implements

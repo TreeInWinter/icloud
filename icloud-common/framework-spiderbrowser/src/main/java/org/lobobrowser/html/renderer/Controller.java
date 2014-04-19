@@ -1,6 +1,6 @@
 package org.lobobrowser.html.renderer;
 
-import org.lobobrowser.html.domimpl.*;
+import org.lobobrowser.html.domimpl.ModelNode;
 
 /**
  * A controller that takes care of renderer events.

@@ -31,6 +31,7 @@
 package com.steadystate.css.dom;
 
 import java.io.Serializable;
+
 import org.w3c.dom.css.CSSValue;
 
 /** 

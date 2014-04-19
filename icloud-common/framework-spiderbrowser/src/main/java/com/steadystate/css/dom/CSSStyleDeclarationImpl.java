@@ -31,11 +31,15 @@
 package com.steadystate.css.dom;
 import java.io.Serializable;
 import java.io.StringReader;
-import java.util.*;
-import org.w3c.css.sac.*;
-import org.w3c.dom.*;
-import org.w3c.dom.css.*;
-import com.steadystate.css.parser.*;
+import java.util.Vector;
+
+import org.w3c.css.sac.InputSource;
+import org.w3c.dom.DOMException;
+import org.w3c.dom.css.CSSRule;
+import org.w3c.dom.css.CSSStyleDeclaration;
+import org.w3c.dom.css.CSSValue;
+
+import com.steadystate.css.parser.CSSOMParser;
 
 /**
  * @author David Schweinsberg

@@ -23,8 +23,14 @@
  */
 package org.lobobrowser.util;
 
-import java.util.*;
-import java.lang.ref.*;
+import java.lang.ref.Reference;
+import java.lang.ref.ReferenceQueue;
+import java.lang.ref.WeakReference;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 
 public class WeakValueHashMap implements Map {
 	private final Map map = new HashMap();

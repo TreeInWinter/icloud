@@ -1,7 +1,5 @@
 package com.nicolatesser.datastructure_algorithms.datastructures.tree.linked_structure;
 
-import static org.junit.Assert.*;
-
 import java.util.List;
 import java.util.Vector;
 

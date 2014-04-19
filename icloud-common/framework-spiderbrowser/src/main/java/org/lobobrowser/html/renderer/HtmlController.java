@@ -1,10 +1,16 @@
 package org.lobobrowser.html.renderer;
 
-import org.lobobrowser.html.*;
-import org.lobobrowser.html.domimpl.*;
-import org.lobobrowser.html.js.*;
-import org.mozilla.javascript.*;
-import java.util.logging.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import org.lobobrowser.html.FormInput;
+import org.lobobrowser.html.domimpl.HTMLAbstractUIElement;
+import org.lobobrowser.html.domimpl.HTMLButtonElementImpl;
+import org.lobobrowser.html.domimpl.HTMLInputElementImpl;
+import org.lobobrowser.html.domimpl.HTMLLinkElementImpl;
+import org.lobobrowser.html.domimpl.ModelNode;
+import org.lobobrowser.html.js.Executor;
+import org.mozilla.javascript.Function;
 
 class HtmlController implements Controller {
 	private static final Logger logger = Logger.getLogger(HtmlController.class.getName());

@@ -3,13 +3,10 @@ package com.icloud.framework.dao.hibernate.impl;
 import java.sql.SQLException;
 import java.util.List;
 
-import org.eclipse.jetty.util.log.Log;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.springframework.orm.hibernate3.HibernateCallback;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import com.icloud.framework.dao.hibernate.IHibernateBaseDao;
 import com.icloud.framework.hibernate.util.GenericsUtils;

@@ -20,7 +20,7 @@
 */
 package org.lobobrowser.util.gui;
 
-import java.awt.*;
+import java.awt.Frame;
 
 public class GUITasks {
 	public static Frame getTopFrame() {

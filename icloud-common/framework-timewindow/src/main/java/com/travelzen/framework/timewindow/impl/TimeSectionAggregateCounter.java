@@ -13,7 +13,7 @@ import com.google.common.base.Throwables;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import com.travelzen.framework.core.util.TZUtil;
+import com.icloud.framework.core.util.TZUtil;
 import com.travelzen.framework.timewindow.ITimeWindow;
 import com.travelzen.framework.timewindow.actor.String2LongCounterActor;
 import com.travelzen.framework.timewindow.request.RequestType;

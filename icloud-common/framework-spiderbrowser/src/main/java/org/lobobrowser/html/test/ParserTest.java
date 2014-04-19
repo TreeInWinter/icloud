@@ -1,14 +1,17 @@
 package org.lobobrowser.html.test;
 
 import java.awt.BorderLayout;
-import java.awt.Component;
 import java.awt.Container;
 import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.net.*;
-import java.io.*;
-import java.util.logging.*;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -20,11 +23,11 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JTree;
 
-
-import org.lobobrowser.html.*;
-import org.lobobrowser.html.parser.*;
-import org.lobobrowser.util.io.*;
-import org.w3c.dom.*;
+import org.lobobrowser.html.HtmlParserContext;
+import org.lobobrowser.html.parser.DocumentBuilderImpl;
+import org.lobobrowser.html.parser.InputSourceImpl;
+import org.lobobrowser.util.io.IORoutines;
+import org.w3c.dom.Document;
 
 /**
  * Parser-only test frame.

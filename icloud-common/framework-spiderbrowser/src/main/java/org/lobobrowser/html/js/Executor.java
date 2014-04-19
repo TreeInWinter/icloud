@@ -20,12 +20,16 @@
 */
 package org.lobobrowser.html.js;
 
-import org.lobobrowser.html.*;
-import org.lobobrowser.html.domimpl.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import org.lobobrowser.html.UserAgentContext;
+import org.lobobrowser.html.domimpl.NodeImpl;
 import org.lobobrowser.js.JavaScript;
-import org.mozilla.javascript.*;
+import org.mozilla.javascript.Context;
+import org.mozilla.javascript.Function;
+import org.mozilla.javascript.Scriptable;
 import org.w3c.dom.Document;
-import java.util.logging.*;
 
 public class Executor {
 	private static final Logger logger = Logger.getLogger(Executor.class.getName());

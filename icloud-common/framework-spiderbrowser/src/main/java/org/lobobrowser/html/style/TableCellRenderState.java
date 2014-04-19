@@ -3,10 +3,13 @@ package org.lobobrowser.html.style;
 import java.awt.Color;
 import java.awt.Insets;
 
-import org.lobobrowser.html.domimpl.*;
+import org.lobobrowser.html.domimpl.HTMLElementImpl;
+import org.lobobrowser.html.domimpl.HTMLTableCellElementImpl;
+import org.lobobrowser.html.domimpl.HTMLTableRowElementImpl;
 import org.lobobrowser.util.gui.ColorFactory;
 import org.w3c.dom.css.CSS2Properties;
-import org.w3c.dom.html2.*;
+import org.w3c.dom.html2.HTMLElement;
+import org.w3c.dom.html2.HTMLTableElement;
 
 public class TableCellRenderState extends DisplayRenderState {
 	public TableCellRenderState(RenderState prevRenderState, HTMLElementImpl element) {

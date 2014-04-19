@@ -1,10 +1,13 @@
 package org.lobobrowser.html.test;
 
-import java.awt.*;
-import javax.swing.*;
+import java.awt.Component;
+import java.awt.FlowLayout;
+
+import javax.swing.JComponent;
+import javax.swing.JLabel;
 
 import org.lobobrowser.html.HtmlObject;
-import org.w3c.dom.html2.*;
+import org.w3c.dom.html2.HTMLElement;
 
 /**
  * Simple implementation of {@link org.lobobrowser.html.HtmlObject}.

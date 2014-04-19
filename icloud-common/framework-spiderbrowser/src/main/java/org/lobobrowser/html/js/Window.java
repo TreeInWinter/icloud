@@ -23,22 +23,38 @@
  */
 package org.lobobrowser.html.js;
 
-import java.util.*;
-import java.lang.ref.*;
-import javax.swing.Timer;
-import java.awt.event.*;
-import java.util.logging.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.lang.ref.Reference;
+import java.lang.ref.WeakReference;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.WeakHashMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-import org.lobobrowser.html.*;
-import org.lobobrowser.html.domimpl.*;
-import org.lobobrowser.js.*;
+import javax.swing.Timer;
+
+import org.lobobrowser.html.HtmlRendererContext;
+import org.lobobrowser.html.UserAgentContext;
+import org.lobobrowser.html.domimpl.HTMLDocumentImpl;
+import org.lobobrowser.html.domimpl.HTMLIFrameElementImpl;
+import org.lobobrowser.html.domimpl.HTMLImageElementImpl;
+import org.lobobrowser.html.domimpl.HTMLScriptElementImpl;
+import org.lobobrowser.js.AbstractScriptableDelegate;
+import org.lobobrowser.js.JavaClassWrapper;
+import org.lobobrowser.js.JavaClassWrapperFactory;
+import org.lobobrowser.js.JavaInstantiator;
+import org.lobobrowser.js.JavaObjectWrapper;
+import org.lobobrowser.js.JavaScript;
 import org.lobobrowser.util.ID;
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Function;
 import org.mozilla.javascript.Scriptable;
 import org.mozilla.javascript.ScriptableObject;
 import org.w3c.dom.Document;
-import org.w3c.dom.html2.*;
+import org.w3c.dom.html2.HTMLCollection;
 
 public class Window extends AbstractScriptableDelegate {
 	private static final Logger logger = Logger.getLogger(Window.class.getName());

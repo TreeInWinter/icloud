@@ -13,7 +13,7 @@ import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
-import com.travelzen.framework.redis.client.SpringRedisClient;
+import com.icloud.framework.redis.test.client.SpringRedisClient;
 
 public class SpringRedisClientTest {
 	@Test

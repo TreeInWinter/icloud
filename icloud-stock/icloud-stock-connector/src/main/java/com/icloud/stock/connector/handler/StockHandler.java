@@ -12,7 +12,7 @@ import org.springframework.util.StopWatch;
 import com.icloud.stock.connector.parser.Parser;
 import com.icloud.stock.connector.parser.ParserFactory;
 import com.icloud.stock.connector.parser.StockParseFactory;
-import com.travelzen.framework.net.http.TZHttpClient;
+import com.icloud.framework.net.http.TZHttpClient;
 
 public abstract class StockHandler<T> implements BaseHandler<T> {
 	protected final static Logger LOGGER = LoggerFactory

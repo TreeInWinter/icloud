@@ -1,7 +1,8 @@
 package org.lobobrowser.html.test;
 
 import java.security.Policy;
-import java.util.logging.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.lobobrowser.html.HttpRequest;
 import org.lobobrowser.html.UserAgentContext;

@@ -1,11 +1,7 @@
 package com.nicolatesser.datastructure.btree_traversal;
 
-import java.util.List;
-
 import com.nicolatesser.datastructure.btree.BPosition;
 import com.nicolatesser.datastructure.btree.BTree;
-import com.nicolatesser.datastructure.tree.Position;
-import com.nicolatesser.datastructure.tree.Tree;
 
 
 public class BTreeTraversalAlgorihtms {

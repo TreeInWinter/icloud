@@ -1,6 +1,5 @@
 package com.nicolatesser.datastructure.graph.adjacency_list;
 
-import java.util.Iterator;
 import java.util.List;
 import java.util.Vector;
 

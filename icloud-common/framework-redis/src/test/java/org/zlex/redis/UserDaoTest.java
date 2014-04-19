@@ -1,12 +1,14 @@
 package org.zlex.redis;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.travelzen.framework.redis.dao.SpringRedisDao;
+import com.icloud.framework.redis.test.dao.SpringRedisDao;
 
 public class UserDaoTest {
 	private ApplicationContext app;

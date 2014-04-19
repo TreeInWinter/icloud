@@ -12,8 +12,8 @@
 
 package org.w3c.dom.css;
 
-import org.w3c.dom.views.AbstractView;
 import org.w3c.dom.Element;
+import org.w3c.dom.views.AbstractView;
 
 /**
  *  This interface represents a CSS view. The <code>getComputedStyle</code> 

@@ -1,11 +1,8 @@
 package com.nicolatesser.sorting;
 
-import org.junit.Test;
+import junit.framework.TestCase;
 
 import com.nicolatesser.datastructure.sorting.SimpleSortingAlgorithms;
-
-import junit.framework.Assert;
-import junit.framework.TestCase;
 
 public class SimpleSortingAlgorithmsTest extends TestCase {
 

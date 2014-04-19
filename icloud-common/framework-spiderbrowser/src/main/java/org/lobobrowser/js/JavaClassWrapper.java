@@ -20,9 +20,11 @@
 */
 package org.lobobrowser.js;
 
-import java.util.*;
-import java.lang.reflect.*;
-import org.mozilla.javascript.*;
+import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.mozilla.javascript.Function;
 
 public class JavaClassWrapper {
 	private final Class javaClass;

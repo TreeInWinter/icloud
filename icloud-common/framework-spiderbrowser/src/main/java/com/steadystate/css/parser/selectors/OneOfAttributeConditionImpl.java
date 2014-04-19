@@ -31,7 +31,9 @@
 package com.steadystate.css.parser.selectors;
 
 import java.io.Serializable;
-import org.w3c.css.sac.*;
+
+import org.w3c.css.sac.AttributeCondition;
+import org.w3c.css.sac.Condition;
 
 public class OneOfAttributeConditionImpl implements AttributeCondition, Serializable {
 

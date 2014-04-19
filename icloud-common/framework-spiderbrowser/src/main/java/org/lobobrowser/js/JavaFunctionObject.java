@@ -20,12 +20,19 @@
 */
 package org.lobobrowser.js;
 
-import org.mozilla.javascript.*;
-import java.lang.reflect.*;
-import java.util.logging.*;
-import java.util.*;
-import org.lobobrowser.util.*;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import org.lobobrowser.util.Objects;
+import org.mozilla.javascript.Context;
+import org.mozilla.javascript.EvaluatorException;
+import org.mozilla.javascript.Function;
+import org.mozilla.javascript.Scriptable;
+import org.mozilla.javascript.ScriptableObject;
+import org.mozilla.javascript.WrappedException;
 
 public class JavaFunctionObject extends ScriptableObject implements Function {
 	private static final Logger logger = Logger.getLogger(JavaFunctionObject.class.getName());

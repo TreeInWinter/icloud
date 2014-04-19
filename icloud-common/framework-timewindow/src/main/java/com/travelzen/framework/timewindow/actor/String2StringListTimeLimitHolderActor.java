@@ -21,7 +21,7 @@ import com.google.common.base.Throwables;
 import com.google.common.collect.Lists;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.travelzen.framework.core.util.TZUtil;
+import com.icloud.framework.core.util.TZUtil;
 import com.travelzen.framework.timewindow.TimeWindowConstant;
 import com.travelzen.framework.timewindow.frame.String2ListFrame;
 import com.travelzen.framework.timewindow.request.String2StringListRequest;

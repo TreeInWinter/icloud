@@ -30,11 +30,12 @@
 
 package com.steadystate.css.dom;
 
-import java.io.IOException;
 import java.io.Serializable;
-import java.io.StringReader;
-import org.w3c.dom.*;
-import org.w3c.dom.css.*;
+
+import org.w3c.dom.DOMException;
+import org.w3c.dom.css.CSSRule;
+import org.w3c.dom.css.CSSStyleSheet;
+import org.w3c.dom.css.CSSUnknownRule;
 
 /*
  *

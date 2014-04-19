@@ -4,9 +4,10 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Graphics;
-import org.lobobrowser.html.*;
+
+import org.lobobrowser.html.BrowserFrame;
 import org.lobobrowser.html.style.HtmlValues;
-import org.w3c.dom.html2.*;
+import org.w3c.dom.html2.HTMLElement;
 
 class BrowserFrameUIControl implements UIControl {
 	//private final BrowserFrame browserFrame;

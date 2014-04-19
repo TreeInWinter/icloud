@@ -32,7 +32,9 @@ package com.steadystate.css.dom;
 
 import java.io.Serializable;
 import java.util.Vector;
-import org.w3c.dom.css.*;
+
+import org.w3c.dom.css.CSSRule;
+import org.w3c.dom.css.CSSRuleList;
 
 public class CSSRuleListImpl implements CSSRuleList, Serializable {
     

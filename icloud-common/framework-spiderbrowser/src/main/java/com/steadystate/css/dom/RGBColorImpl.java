@@ -31,8 +31,10 @@
 package com.steadystate.css.dom;
 
 import java.io.Serializable;
-import org.w3c.css.sac.*;
-import org.w3c.dom.css.*;
+
+import org.w3c.css.sac.LexicalUnit;
+import org.w3c.dom.css.CSSPrimitiveValue;
+import org.w3c.dom.css.RGBColor;
 
 public class RGBColorImpl implements RGBColor, Serializable {
 

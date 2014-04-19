@@ -1,6 +1,5 @@
 package org.lobobrowser.html.renderer;
 
-import java.awt.Graphics;
 
 abstract class BaseRenderable implements Renderable {
 	private int ordinal = 0;

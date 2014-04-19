@@ -21,7 +21,7 @@
 
 package org.lobobrowser.html.style;
 
-import org.lobobrowser.html.domimpl.*;
+import org.lobobrowser.html.domimpl.HTMLElementImpl;
 
 /**
  * Render state for elements that are displayed as blocks by default.

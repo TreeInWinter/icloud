@@ -22,23 +22,33 @@
  */
 package org.lobobrowser.html.domimpl;
 
-import org.lobobrowser.html.FormInput;
-import org.lobobrowser.html.parser.HtmlParser;
-import org.lobobrowser.html.style.*;
-import org.lobobrowser.util.*;
-import org.w3c.css.sac.InputSource;
-import org.w3c.dom.*;
-import org.w3c.dom.css.CSSStyleDeclaration;
-import org.w3c.dom.html2.*;
-import com.steadystate.css.parser.CSSOMParser;
-
-import java.io.*;
+import java.io.Reader;
+import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.StringTokenizer;
-import java.util.logging.*;
+import java.util.logging.Level;
+
+import org.lobobrowser.html.FormInput;
+import org.lobobrowser.html.parser.HtmlParser;
+import org.lobobrowser.html.style.CSS2PropertiesContext;
+import org.lobobrowser.html.style.CSS2PropertiesImpl;
+import org.lobobrowser.html.style.HtmlValues;
+import org.lobobrowser.html.style.RenderState;
+import org.lobobrowser.html.style.StyleSheetAggregator;
+import org.lobobrowser.html.style.StyleSheetRenderState;
+import org.lobobrowser.util.Strings;
+import org.w3c.css.sac.InputSource;
+import org.w3c.dom.Comment;
+import org.w3c.dom.DOMException;
+import org.w3c.dom.Node;
+import org.w3c.dom.Text;
+import org.w3c.dom.css.CSSStyleDeclaration;
+import org.w3c.dom.html2.HTMLElement;
+
+import com.steadystate.css.parser.CSSOMParser;
 
 public class HTMLElementImpl extends ElementImpl implements HTMLElement, CSS2PropertiesContext {	
 	private final boolean noStyleSheet;

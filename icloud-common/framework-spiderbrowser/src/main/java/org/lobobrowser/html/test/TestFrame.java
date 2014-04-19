@@ -23,16 +23,31 @@
  */
 package org.lobobrowser.html.test;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-import javax.swing.event.*;
+import java.awt.BorderLayout;
+import java.awt.Component;
+import java.awt.Container;
+import java.awt.HeadlessException;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.net.URL;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-import java.net.*;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTabbedPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.JTree;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
-import org.lobobrowser.html.gui.*;
-
-import java.util.logging.*;
+import org.lobobrowser.html.gui.HtmlPanel;
+import org.lobobrowser.html.gui.SelectionChangeEvent;
+import org.lobobrowser.html.gui.SelectionChangeListener;
 
 /**
  * A Swing frame that can be used to test the

@@ -23,9 +23,12 @@
  */
 package org.lobobrowser.html.domimpl;
 
-import org.lobobrowser.js.*;
-import org.w3c.dom.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+
+import org.lobobrowser.js.AbstractScriptableDelegate;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 public class NodeListImpl extends AbstractScriptableDelegate implements NodeList {
 	private final ArrayList nodeList = new ArrayList(); 

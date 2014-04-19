@@ -30,7 +30,14 @@
 
 package com.steadystate.css.parser;
 
-import org.w3c.css.sac.*;
+import org.w3c.css.sac.CSSException;
+import org.w3c.css.sac.CSSParseException;
+import org.w3c.css.sac.DocumentHandler;
+import org.w3c.css.sac.ErrorHandler;
+import org.w3c.css.sac.InputSource;
+import org.w3c.css.sac.LexicalUnit;
+import org.w3c.css.sac.SACMediaList;
+import org.w3c.css.sac.SelectorList;
 
 public class HandlerBase implements DocumentHandler, ErrorHandler {
 

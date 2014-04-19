@@ -22,7 +22,9 @@
  * Created on Apr 16, 2005
  */
 package org.lobobrowser.html.style;
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.FontMetrics;
 
 /**
  * @author J. H. S.

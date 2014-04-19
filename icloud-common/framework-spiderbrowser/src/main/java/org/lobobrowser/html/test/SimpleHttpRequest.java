@@ -34,12 +34,16 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.EventObject;
 import java.util.Map;
-import java.util.logging.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 
-import org.lobobrowser.html.*;
-import org.lobobrowser.util.*;
+import org.lobobrowser.html.HttpRequest;
+import org.lobobrowser.html.ReadyStateChangeListener;
+import org.lobobrowser.html.UserAgentContext;
+import org.lobobrowser.util.EventDispatch;
+import org.lobobrowser.util.GenericEventListener;
 import org.lobobrowser.util.io.IORoutines;
 import org.w3c.dom.Document;
 

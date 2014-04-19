@@ -1,9 +1,6 @@
 package com.nicolatesser.datastructure.btree.linked_structure;
 
-import java.util.List;
-
 import com.nicolatesser.datastructure.btree.BPosition;
-import com.nicolatesser.datastructure.tree.Position;
 
 public class BNode implements BPosition {
 

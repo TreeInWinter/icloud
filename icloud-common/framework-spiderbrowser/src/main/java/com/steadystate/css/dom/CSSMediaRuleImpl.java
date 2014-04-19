@@ -33,11 +33,17 @@ package com.steadystate.css.dom;
 import java.io.IOException;
 import java.io.Serializable;
 import java.io.StringReader;
-import org.w3c.dom.*;
-import org.w3c.dom.stylesheets.*;
-import org.w3c.dom.css.*;
-import org.w3c.css.sac.*;
-import com.steadystate.css.parser.*;
+
+import org.w3c.css.sac.CSSException;
+import org.w3c.css.sac.InputSource;
+import org.w3c.dom.DOMException;
+import org.w3c.dom.css.CSSMediaRule;
+import org.w3c.dom.css.CSSRule;
+import org.w3c.dom.css.CSSRuleList;
+import org.w3c.dom.css.CSSStyleSheet;
+import org.w3c.dom.stylesheets.MediaList;
+
+import com.steadystate.css.parser.CSSOMParser;
 
 /**
  *

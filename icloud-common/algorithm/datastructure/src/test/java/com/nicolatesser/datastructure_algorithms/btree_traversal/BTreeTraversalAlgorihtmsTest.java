@@ -1,9 +1,5 @@
 package com.nicolatesser.datastructure_algorithms.btree_traversal;
 
-import static org.junit.Assert.*;
-
-import java.util.Vector;
-
 import junit.framework.Assert;
 
 import org.junit.Before;
@@ -15,8 +11,6 @@ import com.nicolatesser.datastructure.btree.BTree;
 import com.nicolatesser.datastructure.btree.linked_structure.BNode;
 import com.nicolatesser.datastructure.btree.linked_structure.LinkedStructureBTree;
 import com.nicolatesser.datastructure.btree_traversal.BTreeTraversalAlgorihtms;
-import com.nicolatesser.datastructure.tree.Tree;
-import com.nicolatesser.datastructure.tree.linked_structure.Node;
 
 public class BTreeTraversalAlgorihtmsTest {
 	

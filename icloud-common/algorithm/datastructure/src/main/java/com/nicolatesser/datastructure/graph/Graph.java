@@ -2,7 +2,6 @@
 
 package com.nicolatesser.datastructure.graph;
 
-import java.util.Iterator;
 import java.util.List;
 
 /**

@@ -31,8 +31,10 @@
 package com.steadystate.css.parser;
 
 import java.io.Serializable;
-import java.util.*;
-import org.w3c.css.sac.*;
+import java.util.Vector;
+
+import org.w3c.css.sac.Selector;
+import org.w3c.css.sac.SelectorList;
 
 public class SelectorListImpl implements SelectorList, Serializable {
 

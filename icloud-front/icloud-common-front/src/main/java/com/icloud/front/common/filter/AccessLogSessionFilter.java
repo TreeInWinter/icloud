@@ -14,8 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 
-import com.travelzen.framework.logger.ri.RequestIdentityHolder;
-import com.travelzen.framework.logger.ri.RequestIdentityLogger;
+import com.icloud.framework.logger.ri.RequestIdentityHolder;
+import com.icloud.framework.logger.ri.RequestIdentityLogger;
 
 public class AccessLogSessionFilter implements Filter {
 	private static final Logger logger = RequestIdentityLogger

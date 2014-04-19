@@ -22,7 +22,9 @@
  * Created on May 21, 2005
  */
 package org.lobobrowser.html.renderer;
-import java.awt.*;
+import java.awt.Color;
+import java.awt.FontMetrics;
+import java.awt.Graphics;
 
 import org.lobobrowser.html.domimpl.ModelNode;
 import org.lobobrowser.html.style.RenderState;

@@ -1,10 +1,10 @@
 package com.nicolatesser.datastructure_algorithms.datastructures.dictionary;
 
+import junit.framework.Assert;
+
 import org.junit.Test;
 
 import com.nicolatesser.datastructure.dictionary.ArrayHashTable;
-
-import junit.framework.Assert;
 
 
 public class ArrayHashTableTest {

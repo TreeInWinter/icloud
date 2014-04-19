@@ -26,8 +26,8 @@ package org.lobobrowser.html.domimpl;
 import org.lobobrowser.html.style.CSSUtilities;
 import org.w3c.css.sac.InputSource;
 import org.w3c.dom.UserDataHandler;
-import org.w3c.dom.css.CSSStyleSheet;
 import org.w3c.dom.html2.HTMLStyleElement;
+
 import com.steadystate.css.parser.CSSOMParser;
 
 public class HTMLStyleElementImpl extends HTMLElementImpl implements

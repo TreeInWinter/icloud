@@ -1,9 +1,6 @@
 package com.nicolatesser.datastructure.dictionary;
 
 import java.util.List;
-import java.util.Collection;
-import java.util.Map;
-import java.util.Set;
 import java.util.Vector;
 
 public class ArrayHashTable {

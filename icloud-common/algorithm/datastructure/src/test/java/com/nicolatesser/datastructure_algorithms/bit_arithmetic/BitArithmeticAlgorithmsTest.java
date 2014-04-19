@@ -1,6 +1,5 @@
 package com.nicolatesser.datastructure_algorithms.bit_arithmetic;
 
-import static org.junit.Assert.*;
 import junit.framework.Assert;
 
 import org.junit.Test;

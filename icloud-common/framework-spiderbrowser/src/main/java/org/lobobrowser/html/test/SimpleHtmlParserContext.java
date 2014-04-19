@@ -21,9 +21,11 @@
 
 package org.lobobrowser.html.test;
 
-import org.lobobrowser.html.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-import java.util.logging.*;
+import org.lobobrowser.html.HtmlParserContext;
+import org.lobobrowser.html.UserAgentContext;
 
 /**
  * The <code>SimpleHtmlParserContext</code> is a simple implementation

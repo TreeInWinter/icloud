@@ -31,10 +31,11 @@
 package com.steadystate.css.dom;
 
 import java.io.Serializable;
-import java.util.*;
-import org.w3c.dom.*;
-import org.w3c.dom.stylesheets.*;
-import org.w3c.css.sac.*;
+import java.util.Vector;
+
+import org.w3c.css.sac.SACMediaList;
+import org.w3c.dom.DOMException;
+import org.w3c.dom.stylesheets.MediaList;
 
 /**
  *

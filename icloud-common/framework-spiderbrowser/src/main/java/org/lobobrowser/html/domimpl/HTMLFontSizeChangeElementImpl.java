@@ -20,7 +20,8 @@
 */
 package org.lobobrowser.html.domimpl;
 
-import org.lobobrowser.html.style.*;
+import org.lobobrowser.html.style.FontSizeRenderState;
+import org.lobobrowser.html.style.RenderState;
 
 /**
  * This element is used for SMALL and BIG.

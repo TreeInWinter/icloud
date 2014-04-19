@@ -28,10 +28,11 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Insets;
 import java.util.Iterator;
-import javax.swing.*;
 
-import org.lobobrowser.html.domimpl.*;
-import org.lobobrowser.html.*;
+import org.lobobrowser.html.UserAgentContext;
+import org.lobobrowser.html.domimpl.ModelNode;
+import org.lobobrowser.html.domimpl.NodeImpl;
+import org.lobobrowser.html.domimpl.UINode;
 import org.lobobrowser.html.style.RenderState;
 
 /**

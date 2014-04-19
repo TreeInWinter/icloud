@@ -17,7 +17,7 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Throwables;
 import com.google.common.collect.Lists;
-import com.travelzen.framework.core.util.TZUtil;
+import com.icloud.framework.core.util.TZUtil;
 import com.travelzen.framework.timewindow.TimeWindowConstant;
 import com.travelzen.framework.timewindow.frame.EhcacheFrame;
 import com.travelzen.framework.timewindow.request.String2StringRequest;

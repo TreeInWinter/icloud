@@ -1,10 +1,7 @@
 package com.travelzen.curator;
 
-import java.util.concurrent.TimeUnit;
-
 import com.netflix.curator.framework.CuratorFramework;
 import com.netflix.curator.framework.CuratorFrameworkFactory;
-import com.netflix.curator.framework.recipes.locks.InterProcessLock;
 import com.netflix.curator.framework.recipes.locks.InterProcessMutex;
 import com.netflix.curator.framework.recipes.locks.InterProcessReadWriteLock;
 import com.netflix.curator.retry.RetryNTimes;

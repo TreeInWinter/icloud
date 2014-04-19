@@ -30,9 +30,17 @@
  
 package com.steadystate.css.parser;
 
-import java.io.*;
-import org.w3c.css.sac.*;
-import org.w3c.dom.css.*;
+import java.io.FileReader;
+import java.io.Reader;
+
+import org.w3c.css.sac.InputSource;
+import org.w3c.dom.css.CSSPrimitiveValue;
+import org.w3c.dom.css.CSSRule;
+import org.w3c.dom.css.CSSRuleList;
+import org.w3c.dom.css.CSSStyleDeclaration;
+import org.w3c.dom.css.CSSStyleRule;
+import org.w3c.dom.css.CSSStyleSheet;
+import org.w3c.dom.css.CSSValue;
 
 /** 
  *

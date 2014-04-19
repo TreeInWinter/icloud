@@ -30,8 +30,10 @@
 
 package com.steadystate.css.parser.selectors;
 
-import org.w3c.css.sac.*;
 import java.io.Serializable;
+
+import org.w3c.css.sac.ElementSelector;
+import org.w3c.css.sac.Selector;
 
 public class PseudoElementSelectorImpl implements ElementSelector, Serializable {
 

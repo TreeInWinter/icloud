@@ -6,8 +6,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.travelzen.framework.distributedLock.DistributedLock;
-import com.travelzen.framework.threadpool.TaskThreadPool;
+import com.icloud.framework.distributedLock.DistributedLock;
+import com.icloud.framework.threadpool.TaskThreadPool;
 
 public class MainTask {
 	public static Map<String, Integer> map = new ConcurrentHashMap<String, Integer>();

@@ -23,10 +23,10 @@
  */
 package org.lobobrowser.html.domimpl;
 
-import java.util.*;
+import java.util.ArrayList;
 
 import org.lobobrowser.html.constant.BrowserConfConstant;
-import org.lobobrowser.html.js.*;
+import org.lobobrowser.html.js.Executor;
 import org.mozilla.javascript.Function;
 import org.w3c.dom.html2.HTMLImageElement;
 

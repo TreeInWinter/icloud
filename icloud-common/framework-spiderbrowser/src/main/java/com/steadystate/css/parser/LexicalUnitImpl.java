@@ -31,7 +31,8 @@
 package com.steadystate.css.parser;
 
 import java.io.Serializable;
-import org.w3c.css.sac.*;
+
+import org.w3c.css.sac.LexicalUnit;
 
 /** 
  *

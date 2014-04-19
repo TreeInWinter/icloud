@@ -11,7 +11,7 @@ import com.icloud.stock.connector.handler.StockHandler;
 import com.icloud.stock.connector.parser.Parser;
 import com.icloud.stock.model.StockDateHistory;
 import com.icloud.stock.model.constant.StockConstants.StockLocation;
-import com.travelzen.framework.net.http.TZHttpClient;
+import com.icloud.framework.net.http.TZHttpClient;
 
 public class DownLoadCVSHandler extends
 		StockHandler<ArrayList<StockDateHistory>> {

@@ -23,7 +23,7 @@
  */
 package org.lobobrowser.util;
 
-import java.util.*;
+import java.util.Iterator;
 
 /**
  * @author J. H. S.

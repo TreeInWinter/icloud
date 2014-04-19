@@ -30,8 +30,9 @@
 
 package com.steadystate.css.parser;
 
-import java.util.*;
-import org.w3c.css.sac.*;
+import java.util.Vector;
+
+import org.w3c.css.sac.SACMediaList;
 
 public class SACMediaListImpl implements SACMediaList {
 

@@ -24,9 +24,11 @@
 package org.lobobrowser.html.test;
 
 import javax.swing.event.TreeModelListener;
-import javax.swing.tree.*;
+import javax.swing.tree.TreeModel;
+import javax.swing.tree.TreePath;
 
-import org.w3c.dom.*;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 class NodeTreeModel implements TreeModel {
 	private final Node rootNode;

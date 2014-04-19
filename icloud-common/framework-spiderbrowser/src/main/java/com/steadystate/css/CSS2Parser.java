@@ -28,10 +28,25 @@
  * $Id: CSS2Parser.java,v 1.4 2006/05/22 03:18:37 xamjadmin Exp $
  */
 package com.steadystate.css;
-import java.io.*;
-import org.w3c.dom.*;
-import org.w3c.dom.css.*;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+
 import org.w3c.css.sac.InputSource;
+import org.w3c.dom.Node;
+import org.w3c.dom.css.CSSCharsetRule;
+import org.w3c.dom.css.CSSFontFaceRule;
+import org.w3c.dom.css.CSSImportRule;
+import org.w3c.dom.css.CSSMediaRule;
+import org.w3c.dom.css.CSSPageRule;
+import org.w3c.dom.css.CSSRuleList;
+import org.w3c.dom.css.CSSStyleDeclaration;
+import org.w3c.dom.css.CSSStyleRule;
+import org.w3c.dom.css.CSSStyleSheet;
+import org.w3c.dom.css.CSSUnknownRule;
+import org.w3c.dom.css.CSSValue;
+
 import com.steadystate.css.parser.CSSOMParser;
  
 /**

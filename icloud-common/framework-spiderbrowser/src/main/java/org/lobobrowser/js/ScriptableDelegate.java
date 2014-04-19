@@ -20,7 +20,7 @@
 */
 package org.lobobrowser.js;
 
-import org.mozilla.javascript.*;
+import org.mozilla.javascript.Scriptable;
 
 /**
  * Java classes used in Javascript should implement this

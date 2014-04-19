@@ -20,7 +20,10 @@
 */
 package org.lobobrowser.js;
 
-import org.mozilla.javascript.*;
+import org.mozilla.javascript.Context;
+import org.mozilla.javascript.Function;
+import org.mozilla.javascript.Scriptable;
+import org.mozilla.javascript.ScriptableObject;
 
 public class JavaConstructorObject extends ScriptableObject implements Function {
 	private final JavaClassWrapper classWrapper;

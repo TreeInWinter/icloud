@@ -23,10 +23,12 @@
  */
 package org.lobobrowser.html.domimpl;
 
-import org.lobobrowser.js.*;
+import java.util.Iterator;
+import java.util.Map;
+
+import org.lobobrowser.js.AbstractScriptableDelegate;
 import org.w3c.dom.Node;
 import org.w3c.dom.html2.HTMLCollection;
-import java.util.*;
 
 class FilteredHTMLCollectionImpl extends AbstractScriptableDelegate implements HTMLCollection {
 	private final Map sourceMap;
