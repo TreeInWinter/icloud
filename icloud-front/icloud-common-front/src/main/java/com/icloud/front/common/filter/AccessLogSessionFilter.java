@@ -1,10 +1,6 @@
 package com.icloud.front.common.filter;
 
 import java.io.IOException;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Map.Entry;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -14,16 +10,12 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.context.WebApplicationContext;
-import org.springframework.web.context.support.WebApplicationContextUtils;
 
 public class AccessLogSessionFilter implements Filter {
-
-	private static final Logger LGR = LoggerFactory
+	private static final Logger logger = LoggerFactory
 			.getLogger(AccessLogSessionFilter.class);
 
 	@SuppressWarnings({ "unchecked", "unused" })
@@ -32,9 +24,9 @@ public class AccessLogSessionFilter implements Filter {
 			FilterChain chain) throws IOException, ServletException {
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpServletResponse res = (HttpServletResponse) response;
-		System.out.println("LogRedisSessionFilter11111 start");
+		logger.info("LogRedisSessionFilter11111 start");
 		chain.doFilter(request, response);
-		System.out.println("LogRedisSessionFilter11111 end");
+		logger.info("LogRedisSessionFilter11111 end");
 	}
 
 	@Override

@@ -1,0 +1,12 @@
+dependencies {
+        compile project(':icloud-common:framework')
+	compile project(':icloud-common:framework-redis')
+
+	compile libraries.spring_security_config
+	compile libraries.spring_security_web
+        compile libraries.spring_security_core
+
+        compile libraries.kaptcha
+
+
+}

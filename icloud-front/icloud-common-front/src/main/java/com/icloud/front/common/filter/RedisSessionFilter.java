@@ -23,7 +23,7 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 
 public class RedisSessionFilter implements Filter {
 
-	private static final Logger LGR = LoggerFactory
+	private static final Logger logger = LoggerFactory
 			.getLogger(RedisSessionFilter.class);
 
 	@SuppressWarnings({ "unchecked", "unused" })
@@ -32,9 +32,9 @@ public class RedisSessionFilter implements Filter {
 			FilterChain chain) throws IOException, ServletException {
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpServletResponse res = (HttpServletResponse) response;
-		System.out.println("RedisSessionFilter start");
+		logger.info("RedisSessionFilter start");
 		chain.doFilter(request, response);
-		System.out.println("RedisSessionFilter end");
+		logger.info("RedisSessionFilter end");
 	}
 
 	@Override

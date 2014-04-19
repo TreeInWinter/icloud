@@ -17,23 +17,48 @@
 	<sc:http pattern="/" security="none" />
 	<sc:http pattern="/index.jsp" security="none" />
 	<sc:http pattern="/resources/**" security="none" />
-	<sc:http pattern="/facade/**" security="none" />
-	<sc:http pattern="/error/**" security="none" />
-	<sc:http pattern="/locationUtil/**" security="none" />
+	<!-- <sc:custom-filter ref="redisSessionFilter" before="FIRST"/> -->
 
 	<sc:http entry-point-ref="loginEntryPoint">
-		<sc:logout logout-url="/signOut" success-handler-ref="topsLogoutSuccessHandler" />
-		<sc:access-denied-handler ref="topsAccessDeniedHandler" />
+		<sc:logout logout-url="/signOut" success-handler-ref="icloudLogoutSuccessHandler" />
 		<sc:request-cache ref="nullRequestCache" />
-		<sc:remember-me key="topsmembertoken" services-ref="topsRememberMeService" />
-		<!-- <sc:custom-filter ref="redisSessionFilter" before="FIRST"/> -->
-		<sc:custom-filter ref="captchaGeneratingFilter"
-			after="CONCURRENT_SESSION_FILTER" />
-		<sc:custom-filter ref="topsSecurityFilter" before="FILTER_SECURITY_INTERCEPTOR" />
-		<sc:custom-filter ref="formLoginFiter" position="FORM_LOGIN_FILTER" />
-		<sc:custom-filter ref="authResultPrintingFilter"
-			after="FORM_LOGIN_FILTER" />
+		<sc:remember-me key="icloudmembertoken" services-ref="icloudRememberMeService" />
 		<sc:custom-filter ref="loginStatusFilter" after="ANONYMOUS_FILTER" />
 	</sc:http>
+
+	<sc:authentication-manager alias="icloudAuthenticationManager">
+		<sc:authentication-provider ref="icloudAuthenticationProvider" />
+	</sc:authentication-manager>
+
+	<bean id="icloudAuthenticationProvider"
+		class="org.springframework.security.authentication.dao.DaoAuthenticationProvider"
+		p:passwordEncoder-ref="icloudPasswordEncoder"
+		p:userDetailsService-ref="icloudUserDetailsService"
+		p:postAuthenticationChecks-ref="icloudPostAnthentication"
+		p:hideUserNotFoundExceptions="false">
+	</bean>
+
+	<bean id="nullRequestCache"
+		class="org.springframework.security.web.savedrequest.NullRequestCache" />
+
+	<bean id="icloudLogoutSuccessHandler"
+		class="com.icloud.front.common.security.handler.ICloudLogoutSuccessHandler"></bean>
+
+	<bean id="icloudRememberMeService"
+		class="com.icloud.front.common.security.service.ICloudRememberMeService">
+		<constructor-arg ref="icloudUserDetailsService"></constructor-arg>
+		<property name="parameter" value="tops_remember_me" />
+	</bean>
+
+	<bean id="icloudUserDetailsService"
+		class="com.icloud.front.common.security.service.ICloudUserDetailsService" />
+
+	<bean id="loginStatusFilter"
+		class="com.icloud.front.common.security.filter.LoginStatusFilter"
+		p:loginUrl="/facade/signin" />
+
+	<bean id="loginEntryPoint"
+		class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint"
+		p:loginFormUrl="/facade/signin" />
 
 </beans>
