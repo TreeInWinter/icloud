@@ -1,8 +1,7 @@
-<html>
-<body>
-<h2>Hello World!dasfdasfa</h2>
+<#import "/common/htmlBase.ftl" as hb/>
 
-<a href="/form/getForm">freemarker+mvc test</a>
-<p>${host}</p>
-</body>
-</html>
+<@hb.htmlBase title = "数据" jsFiles = [] cssFiles = [] localCssFiles = [] emedObjects = [] ssl=[] isMain=false>
+  <#escape x as x?html>
+  	welcome to me;
+  </#escape>
+</@hb.htmlBase>
