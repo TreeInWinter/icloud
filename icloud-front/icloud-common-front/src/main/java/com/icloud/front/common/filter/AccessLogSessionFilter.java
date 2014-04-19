@@ -1,6 +1,7 @@
 package com.icloud.front.common.filter;
 
 import java.io.IOException;
+import java.util.Random;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -12,10 +13,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import com.travelzen.framework.logger.ri.RequestIdentityHolder;
+import com.travelzen.framework.logger.ri.RequestIdentityLogger;
 
 public class AccessLogSessionFilter implements Filter {
-	private static final Logger logger = LoggerFactory
+	private static final Logger logger = RequestIdentityLogger
 			.getLogger(AccessLogSessionFilter.class);
 
 	@SuppressWarnings({ "unchecked", "unused" })
@@ -24,9 +27,28 @@ public class AccessLogSessionFilter implements Filter {
 			FilterChain chain) throws IOException, ServletException {
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpServletResponse res = (HttpServletResponse) response;
-		logger.info("LogRedisSessionFilter11111 start");
+		logger.debug("AccessLogSessionFilter start");
+		String reqId = genReqId();
+		RequestIdentityHolder.set("username = " + reqId);
+		// String username = null;
+		// TopsUserDetails tud = TopsSecurityUtils.getUserFromSession();
+		// if (tud != null) {
+		// username = tud.getUsername();
+		// } else {
+		// username = FrontUtils.getIpAddr(req);
+		// }
+		// String reqId = username + '-' + genReqId();
+		// RequestIdentityHolder.set(reqId);
+		res.setHeader("Tops-Request-Identity", reqId);
 		chain.doFilter(request, response);
-		logger.info("LogRedisSessionFilter11111 end");
+		logger.debug("AccessLogSessionFilter end ");
+		RequestIdentityHolder.remove();
+	}
+
+	private static Random RDM = new Random();
+
+	protected String genReqId() {
+		return String.format("%08x", RDM.nextInt());
 	}
 
 	@Override

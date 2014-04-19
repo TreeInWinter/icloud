@@ -71,6 +71,10 @@
 				<entry key="getCurrentUrl">
 					<bean class="com.icloud.front.common.freemarker.CurrentUrlGetter"></bean>
 				</entry>
+				<entry key="getStaticResourceVersion">
+					<bean
+						class="com.icloud.front.common.freemarker.StaticResourceVersionGetter"></bean>
+				</entry>
 			</map>
 		</property>
 	</bean>

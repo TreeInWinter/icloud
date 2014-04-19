@@ -1,10 +1,6 @@
 package com.icloud.front.common.filter;
 
 import java.io.IOException;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Map.Entry;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -14,16 +10,13 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.web.context.WebApplicationContext;
-import org.springframework.web.context.support.WebApplicationContextUtils;
+
+import com.travelzen.framework.logger.ri.RequestIdentityLogger;
 
 public class RedisSessionFilter implements Filter {
-
-	private static final Logger logger = LoggerFactory
+	private static final Logger logger = RequestIdentityLogger
 			.getLogger(RedisSessionFilter.class);
 
 	@SuppressWarnings({ "unchecked", "unused" })
@@ -32,9 +25,9 @@ public class RedisSessionFilter implements Filter {
 			FilterChain chain) throws IOException, ServletException {
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpServletResponse res = (HttpServletResponse) response;
-		logger.info("RedisSessionFilter start");
+		logger.debug("RedisSessionFilter start");
 		chain.doFilter(request, response);
-		logger.info("RedisSessionFilter end");
+		logger.debug("RedisSessionFilter end");
 	}
 
 	@Override

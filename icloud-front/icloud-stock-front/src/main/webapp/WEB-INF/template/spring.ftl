@@ -244,7 +244,7 @@
 -->
 <#macro formMultiSelect path options attributes="">
     <@bind path/>
-    <select multiple="multiple" id="${status.expression}" name="${status.expression}" ${attributes}>
+    <select  multiple="multiple" id="${status.expression}" name="${status.expression}" ${attributes}>
         <#list options?keys as value>
         <#assign isSelected = contains(status.value?default([""]), value)>
         <option value="${value?html}"<#if isSelected> selected="selected"</#if>>${options[value]?html}</option>
