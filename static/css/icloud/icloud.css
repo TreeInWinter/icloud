@@ -44,7 +44,7 @@ body{
 .main-links li{
     position:relative;
     float:left;
-    background:url(../images/icloud/style/i4.png) 0 50% no-repeat;
+    background:url(../../images/icloud/style/i4.png) 0 50% no-repeat;
     padding:7px 10px;
 	margin-right:2px;
     z-index:2;
@@ -68,7 +68,7 @@ body{
     width:110px;
     height:46px;
     display:block;
-    background:url(../images/icloud/landing_logo.png) no-repeat;
+    background:url(../../images/icloud/landing_logo.png) no-repeat;
 }
 .logo h1{
     display:none;
@@ -160,7 +160,7 @@ body{
     right: 5px;
     width:7px;
     height:4px;
-    background:url(../images/icloud/style/i3.png) no-repeat; 
+    background:url(../../images/icloud/style/i3.png) no-repeat; 
 }
 /** hyper-link */
 .hyper-link{
@@ -210,6 +210,30 @@ body{
     text-decoration:none;
     background-color:#F2F2F2;
     color:#e52c48;
+}
+
+/** back to top **/
+.backToTop{
+	position:fixed;
+	right: 0;
+	bottom: 60px;
+	background-image: url(../../images/icloud/style/backtotop.png) !important;
+	background-position: center 8px !important;
+	background-repeat: no-repeat;
+	color: #777;
+	width: 80px;
+	text-align: center;
+	padding-bottom: 5px;
+	padding-top: 25px;
+	font-size: 14px;
+	cursor: pointer;
+	height: auto;
+}
+
+.backToTop:hover{
+	background-color:#c6c6c6;
+	color: #777;
+	text-decoration: none;
 }
 
 /** util */
