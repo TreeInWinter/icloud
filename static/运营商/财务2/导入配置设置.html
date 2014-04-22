@@ -1,0 +1,846 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>运营商 财务 对账管理 导入配置设置</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.gray.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.reset.css" rel="stylesheet" />
+    <link href="../../static/css/finance.css" rel="stylesheet" type="text/css"/>
+    <script src="../../static/js/jquery.min.js" type="text/javascript"></script>
+    <script src="../../static/js/kendo.web.js" type="text/javascript"></script>
+    <script src="../../static/js/global.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../static/js/public.js"></script>
+
+<!--    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript">
+$(function(){
+    new Collpase({
+        limitHeight:85,
+        container:'.xyzc_div' 
+    }).init();
+}) 
+    </script>-->	
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<!-- @CLB@ -->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body>
+    <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">&nbsp;</a>
+                <span>&nbsp;</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent">
+               
+               <div class="topFixedToolsBar">
+                    <!--<div style="float:left;border-right:1px solid #ffffff">
+                         <a href="#" style="display:inline-block;line-height:33px;font-size: 14px;font-weight: bold;border-right: 1px solid #CDCECE;padding: 0 8px;">返回</a>
+                    </div>-->
+                    <div class="fixedMenu" style="width:auto; font-size:12PX; margin-left:0;">
+                        <a href="导入配置设置.html" class="currentPitchOn">导入配置设置</a>
+                        <a href="出票供应商审核.html">出票供应商审核</a>
+                        <a href="出票采购商审核.html">出票采购商审核</a>
+                        <a href="退票供应商审核.html">退票供应商审核</a>
+                        <a href="退票采购商审核.html">退票采购商审核</a>
+                    </div>
+                   <div class="fixedButton">
+                        <a class="button_secondary adaptiveButton small ac-newConfiguration" href="javascript:;">
+                            <span class="left"></span>
+                            <span class="center center_1">新增配置</span>
+                            <span class="right"></span>
+                        </a>
+                    </div>
+              </div>
+              <div class="refer">
+                   <table cellpadding="0" cellspacing="0" class="refer_list">
+                        <colgroup>
+                             <col width="60px"/>
+                             <col width="160px"/>
+                             <col width="70px"/>
+                             <col width="145px"/>
+                             <col width="70px"/>
+                             <col width="145px"/>
+                             <col width="65px"/>
+                             <col width="180px"/>
+                             <col width="90px"/>
+                        </colgroup>
+                        <tr>
+                            <td>票类</td>
+                            <td>
+                                <select>
+                                      <option>BSP</option>
+                                      <option>B2B</option>
+                                      <option>GRS</option>
+                                      <option>合作方线下结算</option>
+                                </select>
+                            </td>
+                            <td>操作类型</td>
+                            <td>
+                                <select>
+                                      <option>全部</option>
+                                      <option selected="">退票</option>
+                                      <option>出票</option>
+                                </select>
+                            </td>
+                            <td>业务类型</td>
+                            <td>
+                                 <select>
+                                      <option>全部</option>
+                                      <option selected="">国内机票</option>
+                                      <option>国际机票</option>
+                                </select>
+                            </td>
+                            <td>OFFICE号</td>
+                            <td>
+                                <select>
+                                      <option>SHA225</option>
+                                </select>
+                            </td>
+                            <td rowspan="3">
+                                <a href="javascript:;" class="button_important adaptiveButton medium">
+                                    <span class="left"></span>
+                                    <span class="center" style="padding:0 20px;">查 询</span>
+                                    <span class="right"></span>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>航空公司</td>
+                            <td>
+                                <select disabled="disabled" class="referDisabled">
+                                      <option>东方航空公司</option>
+                                </select>
+                            </td>
+                            <td>合作方名称</td>
+                            <td>
+                                <select disabled="disabled" class="referDisabled">
+                                      <option>百拓</option>
+                                </select>
+                            </td>
+                            <td>数据直通车</td>
+                            <td>
+                                <select>
+                                      <option>是</option>
+                                      <option>否</option>
+                                </select>
+                            </td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                   </table>                   
+              </div>
+ 
+              <!--<div class="qx tabHead">
+                  <div class="xuanze">
+                      <button class="btns btn-ac-blue">审核</button>
+                      <button class="btns btn-ac-blue">自动匹配</button>
+                      <button class="btns btn-ac-blue">导出Excel</button>
+                  </div>
+                  <div class="qx_right">
+                      <button class="btns btn-ac-blue">导出Excel</button>
+                      <button class="btns btn-ac-blue">模版导入</button>
+                      <button class="btns btn-ac-blue">导入说明【模版下载】</button>
+                  </div>
+              </div>-->
+            
+              <table cellpadding="0" cellspacing="0" class="tgrid">
+                      <thead>
+                         <tr>
+                             <th class="line_left" style="text-align:center; width:90px;">操作</th>
+                             <th>业务类型</th>
+                             <th>OFFICE号</th>
+                             <th>数据直通车</th>
+                             <th>操作类型</th>
+                             <th>起始票号</th>
+                             <th>终止票号</th>
+                             <th>票面价</th>
+                             <th>代理费</th>
+                             <th>机建税</th>
+                             <th>燃油税</th>
+                             <th>退票费</th>
+                             <th class="line_right">实际金额</th>
+                         </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>
+                                  <a href="#" class="ac-modifyAllocation">修改</a> 
+                                  <a href="#">删除</a>
+                              </td>
+                              <td><em class="blue">国内机票</em></td>
+                              <td>SHA225</td>
+                              <td>是</td>
+                              <td>出票</td>
+                              <td>1</td>
+                              <td>2</td>
+                              <td>3</td>
+                              <td>4</td>
+                              <td>5</td>
+                              <td>6</td>
+                              <td>0</td>
+                              <td>0</td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  <a href="#">修改</a> 
+                                  <a href="#">删除</a>
+                              </td>
+                              <td><em class="blue">国内机票</em></td>
+                              <td>SHA225</td>
+                              <td>是</td>
+                              <td>出票</td>
+                              <td>1</td>
+                              <td>2</td>
+                              <td>3</td>
+                              <td>4</td>
+                              <td>5</td>
+                              <td>6</td>
+                              <td>0</td>
+                              <td>0</td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  <a href="#">修改</a> 
+                                  <a href="#">删除</a>
+                              </td>
+                              <td><em class="blue">国内机票</em></td>
+                              <td>SHA225</td>
+                              <td>是</td>
+                              <td>出票</td>
+                              <td>1</td>
+                              <td>2</td>
+                              <td>3</td>
+                              <td>4</td>
+                              <td>5</td>
+                              <td>6</td>
+                              <td>0</td>
+                              <td>0</td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  <a href="#">修改</a> 
+                                  <a href="#">删除</a>
+                              </td>
+                              <td><em class="blue">国内机票</em></td>
+                              <td>SHA225</td>
+                              <td>是</td>
+                              <td>出票</td>
+                              <td>1</td>
+                              <td>2</td>
+                              <td>3</td>
+                              <td>4</td>
+                              <td>5</td>
+                              <td>6</td>
+                              <td>0</td>
+                              <td>0</td>
+                          </tr>
+                      </tbody>                      
+              </table>
+           
+              <div class="grid-table-pagination page">
+                  <span class="grid-table-count">
+                      共 <em>132</em> 条记录
+                  </span>
+                  <span>
+                      <a href="#" class="prev">&nbsp;</a>
+                  </span>
+                  <span class="links">
+                      <a href="#">1</a>
+                      <a href="#">2</a>
+                      <a href="#" class="current">3</a>
+                      <a href="#">4</a>
+                      <a href="#">5</a>
+                      <a href="javascript:;">...</a>
+                      <a href="#">50</a>
+                  </span>
+                  <span>
+                      <a href="#" class="next">&nbsp;</a>
+                  </span>
+              </div>
+                          
+        </div>
+    </div>
+    
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+
+<script type="text/x-kendo-template" id="ac-modifyAllocation-template"> 
+	<div class="modifyAllocation">
+		   <div class="businessTypeDiv">
+			 <table class="businessType">
+				   <colgroup>
+						 <col width="85px"/>
+						 <col width="330px"/>
+				   </colgroup>
+				   <tr>
+					   <td>业务类型：</td>
+					   <td>BSP</td>
+				   </tr>
+				   <tr>
+					   <td>OFFICE号：</td>
+					   <td>SHA225</td>
+				   </tr>
+				   <tr>
+					   <td>数据直通车：</td>
+					   <td>是</td>
+				   </tr>
+			 </table>
+		  </div>      
+		  <table class="operateType">
+			   <colgroup>
+					 <col width="75"/>
+					 <col width="150"/>
+					 <col width="57"/>
+					 <col width="128"/>
+			   </colgroup>
+			   <tr>
+				   <td><b>操作类型：</b></td>
+				   <td>
+					   <select>
+							<option>出票</option>
+							<option>退票</option>
+					   </select>
+				   </td>
+				   <td></td>
+				   <td></td>
+			   </tr>
+			   <tr>
+				   <td><b>起始票号：</b></td>
+				   <td>
+					   <input type="text" />
+				   </td>
+				   <td><b>代理费：</b></td>
+				   <td><input type="text" /></td>
+			   </tr>
+			   <tr>
+				   <td><b>终止票号：</b></td>
+				   <td>
+					   <input type="text" />
+				   </td>
+				   <td><b>机建税：</b></td>
+				   <td><input type="text" /></td>
+			   </tr>
+			   <tr>
+				   <td><b>实际金额：</b></td>
+				   <td>
+					   <input type="text" />
+				   </td>
+				   <td><b>燃油税：</b></td>
+				   <td><input type="text" /></td>
+			   </tr>
+			   <tr>
+				   <td><b>票面价：</b></td>
+				   <td>
+					   <input type="text" />
+				   </td>
+				   <td><b>退票费：</b></td>
+				   <td><input type="text" /></td>
+			   </tr>
+			   <tr>
+				   <td> </td>
+				   <td> </td>
+				   <td colspan="2" class="conFigAtType_btn">
+					   <a href="javascript:;" class="button_important adaptiveButton medium">
+							<span class="left"></span>
+							<span class="center" style="padding:0 20px;">提 交</span>
+							<span class="right"></span>
+					  </a>
+					  <a href="javascript:;" class="button_unimportant adaptiveButton medium">
+							<span class="left"></span>
+							<span class="center callOff" style="padding:0 20px;">取 消</span>
+							<span class="right"></span>
+					 </a>
+				   </td>
+			   </tr>
+		  </table>
+	</div>
+</script>  
+
+<script type="text/x-kendo-template" id="ac-newConfiguration-template"> 
+    <div class="newConfiguration">
+               <div class="ticketType">
+                      <b>票类：</b>
+                      <label><input type="radio" name="ticketype" checked="" />BSP</label>
+                      <label><input type="radio" name="ticketype" />B2B</label>
+                      <label><input type="radio" name="ticketype" />CRS</label>
+                      <label><input type="radio" name="ticketype" />合作方线下结算</label>
+               </div>
+               <div class="bsp"> <!--bsp start-->
+                       <div class="businessTypeDiv">
+                         <table class="businessType">
+                               <colgroup>
+                                     <col width="85px"/>
+                                     <col width="330px"/>
+                               </colgroup>
+                               <tr>
+                                   <td>业务类型：</td>
+                                   <td>
+                                       <select>
+                                            <option>全部</option>
+                                            <option selected="">国内机票</option>
+                                            <option>国际机票</option>
+                                       </select>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td>OFFICE号：</td>
+                                   <td>
+                                       <select>
+                                            <option>SHA225</option>
+                                       </select>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td>数据直通车：</td>
+                                   <td>
+                                       <select>
+                                            <option>是</option>
+                                            <option>否</option>
+                                       </select>
+                                   </td>
+                               </tr>
+                         </table>
+                      </div>      
+                      <table class="operateType">
+                           <colgroup>
+                                 <col width="75"/>
+                                 <col width="150"/>
+                                 <col width="57"/>
+                                 <col width="128"/>
+                           </colgroup>
+                           <tr>
+                               <td><b>操作类型：</b></td>
+                               <td>
+                                   <select>
+                                        <option>出票</option>
+                                        <option>退票</option>
+                                   </select>
+                               </td>
+                               <td></td>
+                               <td></td>
+                           </tr>
+                           <tr>
+                               <td><b>起始票号：</b></td>
+                               <td>
+                                   <input type="text" />
+                               </td>
+                               <td><b>代理费：</b></td>
+                               <td><input type="text" /></td>
+                           </tr>
+                           <tr>
+                               <td><b>终止票号：</b></td>
+                               <td>
+                                   <input type="text" />
+                               </td>
+                               <td><b>机建税：</b></td>
+                               <td><input type="text" /></td>
+                           </tr>
+                           <tr>
+                               <td><b>实际金额：</b></td>
+                               <td>
+                                   <input type="text" />
+                               </td>
+                               <td><b>燃油税：</b></td>
+                               <td><input type="text" /></td>
+                           </tr>
+                           <tr>
+                               <td><b>票面价：</b></td>
+                               <td>
+                                   <input type="text" />
+                               </td>
+                               <td><b>退票费：</b></td>
+                               <td><input type="text" /></td>
+                           </tr>
+                           <tr>
+                               <td> </td>
+                               <td> </td>
+                               <td colspan="2" class="conFigAtType_btn">
+                                   <a href="javascript:;" class="button_important adaptiveButton medium">
+                                        <span class="left"></span>
+                                        <span class="center" style="padding:0 20px;">提 交</span>
+                                        <span class="right"></span>
+                                  </a>
+                                  <a href="javascript:;" class="button_unimportant adaptiveButton medium">
+                                        <span class="left"></span>
+                                        <span class="center callOff" style="padding:0 20px;">取 消</span>
+                                        <span class="right"></span>
+                                 </a>
+                               </td>
+                           </tr>
+                      </table>
+                  </div><!--bsp end-->
+                  
+                  <div class="b2b" style="display:none;"> <!--b2b start-->
+                       <div class="businessTypeDiv">
+                         <table class="businessType">
+                               <colgroup>
+                                     <col width="85px"/>
+                                     <col width="330px"/>
+                               </colgroup>                               
+                               <tr>
+                                   <td>航空公司：</td>
+                                   <td>
+                                       <select>
+                                            <option>东方航空公司</option>
+                                       </select>
+                                   </td>
+                               </tr>
+                         </table>
+                      </div>      
+                      <table class="operateType">
+                           <colgroup>
+                                 <col width="75"/>
+                                 <col width="150"/>
+                                 <col width="57"/>
+                                 <col width="128"/>
+                           </colgroup>
+                           <tr>
+                               <td><b>操作类型：</b></td>
+                               <td>
+                                   <select>
+                                        <option>出票</option>
+                                        <option>退票</option>
+                                   </select>
+                               </td>
+                               <td></td>
+                               <td></td>
+                           </tr>
+                           <tr>
+                               <td><b>起始票号：</b></td>
+                               <td>
+                                   <input type="text" />
+                               </td>
+                               <td><b>代理费：</b></td>
+                               <td><input type="text" /></td>
+                           </tr>
+                           <tr>
+                               <td><b>终止票号：</b></td>
+                               <td>
+                                   <input type="text" />
+                               </td>
+                               <td><b>机建税：</b></td>
+                               <td><input type="text" /></td>
+                           </tr>
+                           <tr>
+                               <td><b>实际金额：</b></td>
+                               <td>
+                                   <input type="text" />
+                               </td>
+                               <td><b>燃油税：</b></td>
+                               <td><input type="text" /></td>
+                           </tr>
+                           <tr>
+                               <td><b>票面价：</b></td>
+                               <td>
+                                   <input type="text" />
+                               </td>
+                               <td><b>退票费：</b></td>
+                               <td><input type="text" /></td>
+                           </tr>
+                           <tr>
+                               <td> </td>
+                               <td> </td>
+                               <td colspan="2" class="conFigAtType_btn">
+                                   <a href="javascript:;" class="button_important adaptiveButton medium">
+                                        <span class="left"></span>
+                                        <span class="center" style="padding:0 20px;">提 交</span>
+                                        <span class="right"></span>
+                                  </a>
+                                  <a href="javascript:;" class="button_unimportant adaptiveButton medium">
+                                        <span class="left"></span>
+                                        <span class="center callOff" style="padding:0 20px;">取 消</span>
+                                        <span class="right"></span>
+                                 </a>
+                               </td>
+                           </tr>
+                      </table>
+                  </div> <!--b2b end-->
+                  
+                  <div class="crs" style="display:none;"> <!--crs start-->
+                       <div class="businessTypeDiv">
+                         <table class="businessType">
+                               <colgroup>
+                                     <col width="85px"/>
+                                     <col width="330px"/>
+                               </colgroup>                               
+                               <tr>
+                                   <td>航空公司：</td>
+                                   <td>
+                                       <select>
+                                            <option>东方航空公司</option>
+                                       </select>
+                                   </td>
+                               </tr>
+                         </table>
+                      </div>      
+                      <table class="operateType">
+                           <colgroup>
+                                 <col width="75"/>
+                                 <col width="150"/>
+                                 <col width="57"/>
+                                 <col width="128"/>
+                           </colgroup>
+                           <tr>
+                               <td><b>操作类型：</b></td>
+                               <td>
+                                   <select>
+                                        <option>出票</option>
+                                        <option>退票</option>
+                                   </select>
+                               </td>
+                               <td></td>
+                               <td></td>
+                           </tr>
+                           <tr>
+                               <td><b>起始票号：</b></td>
+                               <td>
+                                   <input type="text" />
+                               </td>
+                               <td><b>代理费：</b></td>
+                               <td><input type="text" /></td>
+                           </tr>
+                           <tr>
+                               <td><b>终止票号：</b></td>
+                               <td>
+                                   <input type="text" />
+                               </td>
+                               <td><b>机建税：</b></td>
+                               <td><input type="text" /></td>
+                           </tr>
+                           <tr>
+                               <td><b>实际金额：</b></td>
+                               <td>
+                                   <input type="text" />
+                               </td>
+                               <td><b>燃油税：</b></td>
+                               <td><input type="text" /></td>
+                           </tr>
+                           <tr>
+                               <td><b>票面价：</b></td>
+                               <td>
+                                   <input type="text" />
+                               </td>
+                               <td><b>退票费：</b></td>
+                               <td><input type="text" /></td>
+                           </tr>
+                           <tr>
+                               <td> </td>
+                               <td> </td>
+                               <td colspan="2" class="conFigAtType_btn">
+                                   <a href="javascript:;" class="button_important adaptiveButton medium">
+                                        <span class="left"></span>
+                                        <span class="center" style="padding:0 20px;">提 交</span>
+                                        <span class="right"></span>
+                                  </a>
+                                  <a href="javascript:;" class="button_unimportant adaptiveButton medium">
+                                        <span class="left"></span>
+                                        <span class="center callOff" style="padding:0 20px;">取 消</span>
+                                        <span class="right"></span>
+                                 </a>
+                               </td>
+                           </tr>
+                      </table>
+                  </div> <!--crs end-->
+                  
+                  <div class="partner" style="display:none;"> <!--partner start-->
+                       <div class="businessTypeDiv">
+                         <table class="businessType">
+                               <colgroup>
+                                     <col width="85px"/>
+                                     <col width="330px"/>
+                               </colgroup>                               
+                               <tr>
+                                   <td>合作方名称：</td>
+                                   <td>
+                                       <select>
+                                            <option>百拓</option>
+                                       </select>
+                                   </td>
+                               </tr>
+                         </table>
+                      </div>      
+                      <table class="operateType">
+                           <colgroup>
+                                 <col width="75"/>
+                                 <col width="150"/>
+                                 <col width="57"/>
+                                 <col width="128"/>
+                           </colgroup>
+                           <tr>
+                               <td><b>操作类型：</b></td>
+                               <td>
+                                   <select>
+                                        <option>出票</option>
+                                        <option>退票</option>
+                                   </select>
+                               </td>
+                               <td></td>
+                               <td></td>
+                           </tr>
+                           <tr>
+                               <td><b>起始票号：</b></td>
+                               <td>
+                                   <input type="text" />
+                               </td>
+                               <td><b>代理费：</b></td>
+                               <td><input type="text" /></td>
+                           </tr>
+                           <tr>
+                               <td><b>终止票号：</b></td>
+                               <td>
+                                   <input type="text" />
+                               </td>
+                               <td><b>机建税：</b></td>
+                               <td><input type="text" /></td>
+                           </tr>
+                           <tr>
+                               <td><b>实际金额：</b></td>
+                               <td>
+                                   <input type="text" />
+                               </td>
+                               <td><b>燃油税：</b></td>
+                               <td><input type="text" /></td>
+                           </tr>
+                           <tr>
+                               <td><b>票面价：</b></td>
+                               <td>
+                                   <input type="text" />
+                               </td>
+                               <td><b>退票费：</b></td>
+                               <td><input type="text" /></td>
+                           </tr>
+                           <tr>
+                               <td> </td>
+                               <td> </td>
+                               <td colspan="2" class="conFigAtType_btn">
+                                   <a href="javascript:;" class="button_important adaptiveButton medium">
+                                        <span class="left"></span>
+                                        <span class="center" style="padding:0 20px;">提 交</span>
+                                        <span class="right"></span>
+                                  </a>
+                                  <a href="javascript:;" class="button_unimportant adaptiveButton medium">
+                                        <span class="left"></span>
+                                        <span class="center callOff" style="padding:0 20px;">取 消</span>
+                                        <span class="right"></span>
+                                 </a>
+                               </td>
+                           </tr>
+                      </table>
+                  </div> <!--partner end-->
+       </div>
+</script>  
+
+
+
+  
+  </body>
+</html>
+
+
+
+<script type="text/javascript">
+ function changeAuditTab(){
+     $(".ticketType").find("input[type='radio']").each(function (index) {
+        $(this).click(function () {
+            //console.log(index);
+            switch (index) {
+                case 0:
+                    $(".bsp").show();
+                    $(".b2b").hide();
+                    $(".crs").hide();
+					$(".partner").hide();
+                    break;
+                case 1:
+                    $(".bsp").hide();
+                    $(".b2b").show();
+                    $(".crs").hide();
+					$(".partner").hide();
+                    break;
+                case 2:
+                    $(".bsp").hide();
+                    $(".b2b").hide();
+                    $(".crs").show();
+					$(".partner").hide();
+                    break;
+				case 3:
+                    $(".bsp").hide();
+                    $(".b2b").hide();
+                    $(".crs").hide();
+					$(".partner").show();
+                    break;	
+                default:
+                    break;
+            }
+        });
+    });
+ }
+
+	 var nextStep_win = new PopWindow(".ac-modifyAllocation",{
+		   title:"修改配置",
+		   width:470,
+		   template:"#ac-modifyAllocation-template",
+		   open:function(){
+			   changeAuditTab();
+		   }
+	}).init();
+	 
+	  var nextStep_win = new PopWindow(".ac-newConfiguration",{
+		   title:"新增配置",
+		   width:470,
+		   template:"#ac-newConfiguration-template",
+		   open:function(){
+			   changeAuditTab();
+		   }
+	}).init();
+ 
+</script>
+
+
+
+
+

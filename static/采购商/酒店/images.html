@@ -1,0 +1,73 @@
+
+<div class="allImg clearfix">
+       <div class="bigImg">
+               <a href="javascript:void(0);" class="leftArrow" id="prev">
+              		<div></div>
+              </a>
+              <div id="slideshow" class="pics">
+                    <img src="/static/images/banner/smallimg1.jpg" alt="A"/>
+                    <img src="/static/images/banner/smallimg2.jpg" alt="课桌型会议室"/>
+                    <img src="/static/images/banner/smallimg3.jpg" alt="1"/>
+                    <img src="/static/images/banner/smallimg4.jpg" alt="2"/>
+                    <img src="/static/images/banner/smallimg5.jpg" alt="3"/>
+                    <img src="/static/images/banner/smallimg1.jpg" alt="4"/>
+                    <img src="/static/images/banner/smallimg1.jpg" alt="a"/>
+                    <img src="/static/images/banner/smallimg2.jpg" alt="课桌型会议室"/>
+                    <img src="/static/images/banner/smallimg3.jpg" alt="1"/>
+                    <img src="/static/images/banner/smallimg4.jpg" alt="2"/>
+                    <img src="/static/images/banner/smallimg5.jpg" alt="3"/>
+                    <img src="/static/images/banner/smallimg1.jpg" alt="4"/>
+                    <img src="/static/images/banner/smallimg1.jpg" alt="a"/>
+                    <img src="/static/images/banner/smallimg2.jpg" alt="课桌型会议室"/>
+                    <img src="/static/images/banner/smallimg3.jpg" alt="1"/> 
+              </div>
+              <a href="javascript:void(0);"  class="rightArrow" id="next"> 
+                  <div> </div>
+              </a> 
+              <span id="scrollText"></span>
+         </div>
+        <a href="javascript:void(0);"  class="arrowUpblock" id="up">
+		   <div><i class="arrowUp"></i>
+		 </div></a>
+		  <a href="javascript:void(0);" class="arrowDownblock" id="down">
+		   <div><i class="arrowDown"></i>
+		 </div></a>
+         <!--<div class="smallImg">
+              <h3>上海宝华国际酒店</h3>
+              <div class="rankContent">
+              <span class="hotel-stars" style="vertical-align:sub;margin-right:5px"><i class="hotel_stars05"></i></span><em>[ 五星/豪华 ]</em>
+              </div>
+              <div class="minutelyAddress"><em>地址：</em><i>上海市虹口区西江湾路718号....</i></div>
+        </div>
+        <em class="imgTitle">全部酒店图片</em>-->        
+        <!--<div class="riseBook">
+             <em>￥</em>
+             <b>6200</b>
+             <i>起</i>
+             <button type="button" class="commonBtn lightRedBtn">立即预订<strong></strong></button>
+        </div>-->
+        
+    </div>
+    
+<!--弹窗结束-->
+
+<script>
+$(function() {
+		   
+    $('#slideshow').before('<div id="nav_wrapper"><ul id="nav">').cycle({
+        fx:     'scrollHorz',
+        speed:  'fast',
+        timeout: 0,
+		prev : "#prev,#up",
+		next: "#next,#down",
+        pager:  '#nav',
+        pagerAnchorBuilder: function(idx, slide) {
+            return '<li><a href="#"><img src="' + slide.src + '" width="80" height="60" /></a></li>';
+        },
+		after:function(){
+			$("#scrollText").html(this.alt);	
+		}
+    });
+});
+</script>
+

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>酒店 酒店维护 价格计划</title>
+    <meta content="text/html" charset="utf-8">
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/b2b.css">
+    <link rel="stylesheet" href="/static/css/kendo.common.css">
+    <link rel="stylesheet" href="/static/css/kendo.gray.css">
+    <link href="/static/css/kendo.reset.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/hotel.css">
+    <style type="text/css">
+        .btn_pricePlanEdit{background:url('../../static/images/pricePlanEditButton.gif') no-repeat;width:17px;height:24px;border:0;vertical-align:middle;cursor:pointer}
+        .roomStyleName{height:40px;}
+        .roomStyleNameFixed{background:#F6F6F6;border-bottom:1px solid #BBD6E4;height:40px;line-height:40px;padding-left:20px;position:absolute;left:0;width:960px}
+        .priceName{height:34px;}
+        .priceNameFixed{height:34px;border-top:1px solid #ffffff;line-height:34px;width:940px;background:#E6F2F8;position:absolute;left:0;padding:0 20px}
+        .priceNameInfo{float:left}
+        .priceNameHandlingButtonContainer{float:right}
+        .priceListItem td{padding:5px 8px;border-left:1px solid #cccccc;width:88px}
+
+        .priceListItemTableHead{position:absolute;text-align:center;width:88px;background:#ffffff;z-index:1;padding:5px;border-right:1px solid #cccccc;left:0}
+        .inactive .button_5{color:#4E4E4E}
+        .inactive .button_5:hover{background:#CDCDCD}
+        .inactive .priceNameFixed{background:#E3E3E3;color:#4E4E4E}
+        .inactive td{color:#4E4E4E}
+        
+        .specialDay{color:#FF3B00}
+        .priceListItemInfoToolTipContainer{width:237px;border:2px solid #AAAAAA;color:#555555}
+        .priceListItemInfoToolTipContainer li{text-align:left;line-height:1.5}
+        .priceListItemInfoToolTipContainer_period li{list-style:disc inside none;margin:0 0 4px}
+        .pliittch{background:#F5F4F4;font-weight:bold;vertical-align:top;}
+
+        /*tooltip style reset*/
+        .k-tooltip{border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;padding:0}
+        .k-widget.k-tooltip{border:none;background:#ffffff;color:inherit}
+
+        div.k-window-content{padding:0;overflow:hidden}
+        iframe.k-content-frame{width:100%;height:100%}
+
+    </style>
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+<!-- @CLB@ -->
+</head>
+<body>
+<div class="main">
+    <div class="actions block">
+        <div class="col col-l sep-r">
+            <button class="btns btn-return">返回</button>
+        </div>
+        <div class="col col-l" style="padding-left:10px;">
+            <a class="item" href="#">酒店信息</a>
+            <a class="item" href="#">供应商信息</a>
+            <a class="item" href="#">房型</a>
+            <a href="#" class="item highlight">价格计划</a>
+        </div>
+        <div class="col col-r sep-l">
+            <a class="button_4_3" href="#" style="color:#ffffff;margin-top:4px;">提交</a>
+            <a class="button_4_3" href="#" style="color:#ffffff;margin-top:4px">关闭</a>
+        </div>
+    </div>
+    <div class="panel" style="height:21px">
+        <div class="panelTitle">签约信息</div>
+        <div style="float:left;">
+            <span class="head" style="margin-left:75px">城市：<span style="color:#1C64A7">上海</span></span>
+            <span class="head" style="margin-left:75px">酒店名称：<span style="color:#1C64A7">----</span></span>
+            <span class="head" style="margin-left:75px"><span class="important">*</span>签约经理</span>
+            <select>
+                <option value="签约经理列表">签约经理列表</option>
+                <option value="李小路" selected="">李小路</option>
+            </select>
+            <span class="head" style="margin-left:75px">状态：<span style="color:#1C64A7">草稿</span></span>
+        </div>
+        <div style="float:right;margin-right:17px">
+            <a class="button_3_3" href="javascipt:;">保存</a>
+        </div>
+    </div>
+    <div class="panel" style="height:10px">
+        <div class="panelTitle" style="border: 0;margin-top:-5px">
+            价格计划
+        </div>
+        <div style="margin-top:-4px">
+            <select name="" id="">
+                <option value="">全部房型</option>
+            </select>
+            共 <span style="color:#0FA9DD">5</span> 个房型
+        </div>
+    </div>
+
+    <div class="panel" style="padding:0;width:980px">
+        <div style="overflow-x: auto;overflow-y: hidden">
+            <div class="roomStyleName">
+                <div class="roomStyleNameFixed">
+                    <span style="font-weight:bold">房型名称：商务标准房</span>
+                    <span style="border-left:2px solid #cccccc;margin:0 10px">&nbsp;</span>
+                    <span style="font-weight:bold">不可加床</span>
+                    <div style="position:absolute;right:10px;top:0;">
+                        <span style="color:#0FA9DD">4</span> / 20 个价格计划
+                        <a class="button_5" href="javascript:;">编辑价格计划</a>
+                        <input type="button" class="btn_pricePlanEdit">
+                        <div style="position:absolute;top:40px;left:110px;background:#ffffff;padding:10px;border:1px solid #cccccc;border-radius:5px;width:95px;line-height:1;z-index:1">
+                            <a class="button_5 copyPricePlan" href="javascript:;">复制</a>
+                            <a class="button_5 pastePricePlan" href="javascript:;">粘贴</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="priceName">
+                <div class="priceNameFixed">
+                    <div class="priceNameInfo">
+                        <span class="head">价格名称：</span>含早特惠
+                        <span style="padding-left:70px">5个时段价格</span>
+                        <span class="head" style="padding-left:25px">状态：</span>上线
+                    </div>
+                    <div class="priceNameHandlingButtonContainer">
+                        <a class="button_5 detailData" href="javascript:;">详情</a>
+                        <a class="button_5" href="javascript:;">编辑</a>
+                        <a class="button_5" href="javascript:;">挂起</a>
+                        <a class="button_5" href="javascript:;">删除</a>
+                    </div>
+                </div>
+            </div>
+            <div class="priceListItem">
+                <div class="priceListItemTableHead">
+                    <p>时段名称</p>
+                    价格
+                </div>
+                <table style="margin-left:98px">
+                    <tr>
+                        <td class="priceListItemToolTip">
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周末</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>旺季周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>旺季周末</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>特价</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="priceName">
+                <div class="priceNameFixed">
+                    <div class="priceNameInfo">
+                        <span class="head">价格名称：</span>含早特惠
+                        <span style="padding-left:70px">5个时段价格</span>
+                        <span class="head" style="padding-left:25px">状态：</span>上线
+                    </div>
+                    <div class="priceNameHandlingButtonContainer">
+                        <a class="button_5" href="javascript:;">详情</a>
+                        <a class="button_5" href="javascript:;">编辑</a>
+                        <a class="button_5" href="javascript:;">挂起</a>
+                        <a class="button_5" href="javascript:;">删除</a>
+                    </div>
+                </div>
+            </div>
+            <div class="priceListItem">
+                <div class="priceListItemTableHead">
+                    <p>时段名称</p>
+                    价格
+                </div>
+                <table style="margin-left:98px">
+                    <tr>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周末</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>旺季周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>旺季周末</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>特价</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="priceName">
+                <div class="priceNameFixed">
+                    <div class="priceNameInfo">
+                        <span class="head">价格名称：</span>含早特惠
+                        <span style="padding-left:70px">5个时段价格</span>
+                        <span class="head" style="padding-left:25px">状态：</span>上线
+                    </div>
+                    <div class="priceNameHandlingButtonContainer">
+                        <a class="button_5" href="javascript:;">详情</a>
+                        <a class="button_5" href="javascript:;">编辑</a>
+                        <a class="button_5" href="javascript:;">挂起</a>
+                        <a class="button_5" href="javascript:;">删除</a>
+                    </div>
+                </div>
+            </div>
+            <div class="priceListItem">
+                <div class="priceListItemTableHead">
+                    <p>时段名称</p>
+                    价格
+                </div>
+                <table style="margin-left:98px">
+                    <tr>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周末</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>旺季周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>旺季周末</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>特价</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="priceName inactive">
+                <div class="priceNameFixed">
+                    <div class="priceNameInfo">
+                        <span class="head">价格名称：</span>含早特惠
+                        <span style="padding-left:70px">5个时段价格</span>
+                        <span class="head" style="padding-left:25px">状态：</span>上线
+                    </div>
+                    <div class="priceNameHandlingButtonContainer">
+                        <a class="button_5" href="javascript:;">详情</a>
+                        <a class="button_5" href="javascript:;">编辑</a>
+                        <a class="button_5" href="javascript:;">挂起</a>
+                        <a class="button_5" href="javascript:;">删除</a>
+                    </div>
+                </div>
+            </div>
+            <div class="priceListItem inactive">
+                <div class="priceListItemTableHead">
+                    <p>时段名称</p>
+                    价格
+                </div>
+                <table style="margin-left:98px">
+                    <tr>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周末</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>旺季周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>旺季周末</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>特价</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                        <td>
+                            <p>平日周中</p>
+                            <b>400</b>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel" style="padding:0;width:980px">
+        <div style="overflow-x: auto;overflow-y: hidden">
+            <div class="roomStyleName">
+                <div class="roomStyleNameFixed">
+                    <span style="font-weight:bold">房型名称：商务标准房</span>
+                    <span style="border-left:2px solid #cccccc;margin:0 10px">&nbsp;</span>
+                    <span style="font-weight:bold">不可加床</span>
+                    <div style="position:absolute;right:10px;top:0;">
+                        <span style="color:#0FA9DD">0</span> / 20 个价格计划
+                        <a class="button_5" href="javascript:;">编辑价格计划</a>
+                        <input type="button" class="btn_pricePlanEdit">
+                        <div style="position:absolute;top:40px;left:110px;background:#ffffff;padding:10px;border:1px solid #cccccc;border-radius:5px;width:95px;line-height:1;z-index:1">
+                            <a class="button_5" href="javascript:;">复制</a>
+                            <a class="button_5" href="javascript:;">粘贴</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel" style="padding:0;width:980px">
+        <div style="overflow-x: auto;overflow-y: hidden">
+            <div class="roomStyleName">
+                <div class="roomStyleNameFixed">
+                    <span style="font-weight:bold">房型名称：商务标准房</span>
+                    <span style="border-left:2px solid #cccccc;margin:0 10px">&nbsp;</span>
+                    <span style="font-weight:bold">不可加床</span>
+                    <div style="position:absolute;right:10px;top:0;">
+                        <span style="color:#0FA9DD">0</span> / 20 个价格计划
+                        <a class="button_5" href="javascript:;">编辑价格计划</a>
+                        <input type="button" class="btn_pricePlanEdit">
+                        <div style="position:absolute;top:40px;left:110px;background:#ffffff;padding:10px;border:1px solid #cccccc;border-radius:5px;width:95px;line-height:1;z-index:1">
+                            <a class="button_5" href="javascript:;">复制</a>
+                            <a class="button_5" href="javascript:;">粘贴</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel">
+        <div class="panelTitle" style="border: 0">
+            操作日志
+        </div>
+        <div class="panelContent clearfix">
+            <table class="operation_records">
+                <thead>
+                <tr>
+                    <td style="width:130px">日期</td>
+                    <td style="width:100px">操作人员</td>
+                    <td style="width:300px">操作项目</td>
+                    <td style="width:300px">操作内容</td>
+                    <td style="width:100px">操作类型</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>20130606 14:55</td>
+                    <td>liuwei</td>
+                    <td>增加行政商务套房</td>
+                    <td>增加行政商务套房</td>
+                    <td>新增</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="window"></div>
+    <div id="window1" style="padding:18px">
+        <span style="color:#000000">粘贴价格计划成功，是否现在就去编辑房型价格计划？</span>
+        <div style="border-top:1px dashed #cccccc;padding-top: 2px;margin-top:3px">
+            *学则不用编辑，粘贴后的价格计划将会立即生效。
+        </div>
+        <div style="text-align:right;padding-top:10px">
+            <a href="javascript:;" class="button_1_2">现在编辑</a>
+            <a href="javascript:;" class="button_2_2 close">不用编辑</a>
+        </div>
+    </div>
+    <div id="window2" style="padding:18px">
+        <span style="color:#000000">是否覆盖此房型原有的价格计划？</span>
+        <div style="text-align:right;padding-top:10px">
+            <a href="javascript:;" class="button_1_2">确&nbsp;&nbsp;&nbsp;&nbsp;定</a>
+            <a href="javascript:;" class="button_2_2 close">取&nbsp;&nbsp;&nbsp;&nbsp;消</a>
+        </div>
+    </div>
+</div>
+<script id="priceListItemInfoTemplate" type="text/x-kendo-template">
+    <div class="priceListItemInfoToolTipContainer">
+        <table>
+            <tr>
+                <td class="pliittch" style="width:75px">时段</td>
+                <td>
+                    <ul class="priceListItemInfoToolTipContainer_period">
+                        <li>20130930~20131007</li>
+                        <li>一 二 三 四 五 <span class="specialDay">六</span> <span class="specialDay">日</span></li>
+                        <li>20130930~20131007</li>
+                        <li>一 二 三 四 五 <span class="specialDay">六</span> <span class="specialDay">日</span></li>
+                        <li>20130930~20131007</li>
+                        <li>一 二 三 四 五 <span class="specialDay">六</span> <span class="specialDay">日</span></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="pliittch">包含服务</td>
+                <td>
+                    <ul>
+                        <li>自助早餐 x1</li>
+                        <li>宽带</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="pliittch">酒店规定</td>
+                <td>
+                    <ul>
+                        <li>入住时间：14:00以后<br/>退房时间：12:00以前<br/>保留时间：无</li>
+                        <li>入住前1天的12点之前变更或取消，不收取任何费用；</li>
+                        <li>入住前1天的12点之后变更或取消，酒店将扣除首晚房费。</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="pliittch">礼包备注</td>
+                <td>
+                    <ul>
+                        <li>无</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+</script>
+
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/kendo.web.js"></script>
+<script type="text/javascript" src="/static/js/scrollFix.js"></script>
+<script type="text/javascript" src="/static/js/hotel.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        var priceListItemInfoToolTipTemplate=kendo.template($("#priceListItemInfoTemplate").html());
+        $(".priceListItemToolTip").kendoTooltip({
+            content:priceListItemInfoToolTipTemplate,
+            position:"bottom left"
+        })
+        $(".detailData").click(function(){
+            var w=$("#window").kendoWindow({
+                animation:false,
+                iframe:true,
+                modal:true,
+                width:764,
+                height:620,
+                title:"详情",
+                content:{url:"价格计划_详情.html"}
+            }).data("kendoWindow");
+            w.center();
+        });
+        $(".copyPricePlan").click(function(){
+            var w=$("#window2").kendoWindow({
+                animation:false,
+                iframe:true,
+                modal:true,
+                width:469,
+                height:124,
+                title:"是否编辑房型价格计划？"
+            }).data("kendoWindow");
+            w.center();
+        });
+        $(".pastePricePlan").click(function(){
+            var w=$("#window1").kendoWindow({
+                animation:false,
+                iframe:true,
+                modal:true,
+                width:469,
+                height:124,
+                title:"是否覆盖房型价格计划？"
+            }).data("kendoWindow");
+            w.center();
+        });
+    })
+</script>
+
+</body>
+</html>

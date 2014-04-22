@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			form {
+				margin: 0;
+			}
+			textarea {
+				display: block;
+			}
+		</style>
+		<link rel="stylesheet" href="/static/js/themes/default/default.css" />
+		<script charset="utf-8" src="/static/js/kindeditor.js"></script>
+		<script charset="utf-8" src="/static/js/lang/zh_CN.js"></script>
+		<script>
+			var editor;
+            KindEditor.ready(function(K) {
+                K.create('textarea[name="content"]', {
+                    autoHeightMode : true,
+                    uploadJson : "/upload_json.php",
+                    afterCreate : function() {
+                        this.loadPlugin('autoheight');
+                    }
+                });
+            });
+
+		</script>
+	</head>
+	<body>
+		<form>
+            <textarea name="content" style="width:800px;height:200px;"></textarea>
+		</form>
+	</body>
+</html>
+

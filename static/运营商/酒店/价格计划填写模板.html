@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>酒店 酒店维护 价格计划模版填写</title>
+    <meta content="text/html" charset="utf-8">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/b2b.css">
+    <link rel="stylesheet" href="/css/kendo.common.css">
+    <link rel="stylesheet" href="/css/kendo.gray.css">
+    <link href="/css/kendo.reset.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/hotel.css">
+    <style type="text/css">
+        .tabsBarContainer{background:#F6F6F6;border-bottom:1px solid #10A9DD;height:40px;position:relative;}
+        .tabsBar{margin-left:34px;overflow:hidden;width:802px;position:relative;height:40px;top:1px}
+        .tabsBarList{position:absolute;width:3000px;}
+        .tabsBarLeftButton,.tabsBarRightButton{display:inline-block;height:39px;line-height:39px;padding:0 5px;font-size:20px;position:absolute;top:0;color:#000000}
+        .tabsBarLeftButton{left:0;}
+        .tabsBarRightButton{right:0}
+        .tabsBarLeftButton.active,.tabsBarRightButton.active{color:#1F80BE;}
+        .tabsBarAddButton{position:absolute;display:inline-block;top:6px;right:80px;height:25px;line-height:25px;padding:0 7px;background:#AFF4EE;border:1px solid #65DDD3;border-radius:3px;color:#017167}
+        .tabsBarNumPanel{position:absolute;line-height:40px;right:40px;top:0}
+        .tabsBar a{width:130px;height:38px;line-height:37px;text-align:center;display:inline-block;border:1px solid #BEE0E6;border-width:1px 1px 0;background:#E9FCFE;position:relative;top:-2px;margin-right:2px;font-size:12px}
+        .tabsBar a.current,.tabsBar a:hover{height:35px;line-height:35px;border-top:4px solid #10A9DD;border-left:1px solid #10A9DD;border-right:1px solid #10A9DD;border-bottom:1px solid #ffffff;top:0}
+
+        .deleteButton{padding:3px 20px;background:none;color:#0066cc;border-radius:3px}
+        .deleteButton:hover{background:#D8F4FB;}
+
+        .subtitle{padding:5px 40px;font-weight:bold}
+
+        .period_prices_list{position:absolute;width:3000px;left:70px}
+        .period_prices_head,.period_prices_listItem {float:left}
+        .period_prices_head{width:70px;text-align:center;border-right:1px solid #cccccc;position:relative;background:#ffffff;z-index:1}
+        .period_prices_head li{vertical-align:top}
+        .period_prices_listItem {width:180px;border-right:1px solid #cccccc;padding:0 10px;}
+        .pph1,.pph2,.pph3{height:30px;padding:5px 0 0}
+        .pph4{height:165px;padding:5px 0 0}
+        .pph4 li{margin:0 0 6px}
+        .pph5{height:280px;padding:5px 0 0}
+        .pph6{height:110px;padding:5px 0 0}
+        .pph7{height:50px;padding:5px 0 0;line-height:2}
+        .pph8{height:60px;padding:5px 0 10px;line-height:2.8}
+        .pph9{height:115px;padding:10px 0 0;}
+        .tbc{border:1px dashed #cccccc}
+        .currentNO{color:#0FA9DD}
+
+        .effective_period_listItem{width:168px;height:40px;background:#ECF7FB;border:1px solid #A2CFDE;position:relative;margin:3px auto;padding:6px}
+
+        .effective_period_leftButton{display:inline-block;position:absolute;background:url("../../static/images/pricePlanArrow.png") -1px -1px;width:18px;height:32px;top:0;left:0}
+        .effective_period_rightButton{display:inline-block;position:absolute;background:url("../../static/images/pricePlanArrow.png") -28px -39px;width:18px;height:32px;top:0;right:0}
+        .effective_period_leftButton.active{background-position:-1px -39px}
+        .effective_period_rightButton.active{background-position:-28px -1px}
+        .booking_time_picker_item{
+            cursor:pointer;
+        }
+        .booking_time_picker_item:hover{
+            background: #F66E19;
+            color: #ffffff;
+        }
+        .tbl_booking_time td,.tbl_booking_time th{
+            border:1px solid #e0e0e0;
+            background: #ffffff;
+        }
+        .tbl_booking_time th{
+            font-weight: bold;
+            background: #F3F3F3;
+            vertical-align: middle;
+            text-align: center;
+        }
+    </style>
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<!-- @CLB@ -->
+</head>
+<body>
+<div class="main">
+    <div class="actions block">
+        <div class="col col-l sep-r">
+            <button class="btns btn-return">返回</button>
+        </div>
+        <div class="col col-l" style="padding-left:10px;">
+            价格计划-商务标准房
+        </div>
+        <div class="col col-r sep-l">
+            <a class="button_4_3" href="#" style="color:#ffffff;margin-top:4px">关闭</a>
+        </div>
+    </div>
+    <div class="panel" style="background:#f4f4f4;padding:0;width:auto">
+        <div class="tabsBarContainer">
+            <a href="#" class="tabsBarLeftButton">◀</a>
+            <div class="tabsBar">
+                <div class="tabsBarList">
+                    <a class="current" href="#">含早特惠</a><a href="#">提前三天预定</a><a href="#">提前三天预定</a><a href="#">提前三天预定</a><a href="#">提前三天预定</a><a href="#">提前三天预定</a><a href="#">提前三天预定</a><a href="#">提前三天预定</a><a href="#">提前三天预定</a>
+                </div>
+            </div>
+            <a href="#" class="tabsBarAddButton" style="">╋ 添加</a>
+            <div class="tabsBarNumPanel">
+                <span style="color:#0FA9DD">6</span> / <span>12</span>
+            </div>
+            <a href="#"  class="tabsBarRightButton active" style="">▶</a>
+        </div>
+
+        <div style="padding:10px 40px;background:#ffffff">
+            <table>
+                <tr>
+                    <td style="width:60px;padding:5px 0"><span class="head">价格名称</span></td>
+                    <td style="width:810px">
+                        <input type="text" value="含早特惠" disabled="disabled">
+                        <a class="deleteButton btn_delePricePlan" href="#" style="float:right;">删 除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top;padding:5px 0"><span class="head">价格说明/礼包备注</span></td>
+                    <td><textarea name="" id="" style="width:100%;height:60px"></textarea></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="subtitle">预定条件</div>
+
+        <div style="padding:10px 40px;background:#ffffff">
+            <table>
+                <colgroup>
+                    <col width="60">
+                    <col width="120">
+                    <col width="280">
+                </colgroup>
+                <tr>
+                    <td style="padding:5px 0"><span class="head">预定要求</span></td>
+                    <td><label><input type="radio" name="" id=""/>普通预订</label></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><label><input type="radio" name="" id=""/>提前n天预订</label></td>
+                    <td style="vertical-align: middle">最少提前 <input type="text" style="width: 50px;height:20px;"> 天 /
+                        <input type="text" name="" id="" class="booking_time" style="width: 50px;height:20px;"/> 时
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><label><input type="radio" name="" id=""/>连住n晚起</label></td>
+                    <td style="vertical-align: middle">最少入住 <input type="text" style="width: 50px;height:20px;"> 天</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><label><input type="radio" name="" id=""/>提前且连住n晚起</label></td>
+                    <td style="vertical-align: middle">最少提前 <input type="text" style="width: 50px;height:20px;"> 天 /
+                        <input type="text" name="" id="" class="booking_time" style="width: 50px;height:20px;"/> 时
+                    </td>
+                    <td style="vertical-align: middle">最多入住 <input type="text" style="width: 50px;height:20px;"> 天</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="subtitle" style="position: relative">
+            时段/价格
+            <div style="position:absolute;margin-right:10px;top:5px;right:0;font-weight:normal">
+                <span style="color:#0FA9DD" data-bind="text:Effective_period.length">5</span> / 12
+                <a href="#" class="deleteButton" data-bind="click:addep">添加时段/价格</a>
+            </div>
+        </div>
+
+        <div id="period_prices_container" style="position:relative;">
+            <div style="margin:0 30px;background:#ffffff;border:1px solid #cccccc;overflow:hidden;position:relative">
+                <div class="period_prices_head">
+                    <ul>
+                        <li class="pph1"><span class="head">操作</span></li>
+                        <li class="pph2"><span class="head">时段名称</span></li>
+                        <li class="pph3"><span class="head">时段价格</span></li>
+                        <li class="pph4" data-bind="style:{height:Effective_period_height}"><span class="head">有效时段</span></li>
+                        <li class="pph5"><span class="head">包含服务</span></li>
+                        <li class="pph6"><span class="head">已有规定</span></li>
+                        <li class="pph7"><span class="head">增加规定</span></li>
+                        <li class="pph8"><span class="head">增加条款</span></li>
+                    </ul>
+                </div>
+                <div class="period_prices_list" data-template="period_prices_listItem_template" data-bind="source:Effective_period"></div>
+                <div class="clear"></div>
+            </div>
+            <a href="javascript:;" class="effective_period_leftButton"></a>
+            <a href="javascript:;" class="effective_period_rightButton"></a>
+        </div>
+        <div style="height:60px">
+            <a href="javascript:;" class="button_1_2" style="float:right;margin-right:30px">保&nbsp;存</a>
+        </div>
+    </div>
+</div>
+
+<div class="panel">
+    <div class="panelTitle" style="border: 0">
+        操作日志
+    </div>
+    <div class="panelContent clearfix">
+        <table class="operation_records">
+            <thead>
+            <tr>
+                <td style="width:130px">日期</td>
+                <td style="width:100px">操作人员</td>
+                <td style="width:300px">操作项目</td>
+                <td style="width:300px">操作内容</td>
+                <td style="width:100px">操作类型</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>20130606 14:55</td>
+                <td>liuwei</td>
+                <td>增加行政商务套房</td>
+                <td>增加行政商务套房</td>
+                <td>新增</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div id="window"></div>
+
+<div id="window1" style="padding:15px 30px">
+    您是否要删除价格计划？
+    <div style="border-top:1px dashed #cccccc;padding-top: 2px">
+        *如果删除房型中的最后一条价格，此房型将不会出现在酒店搜索结果中。
+    </div>
+    <div style="text-align:right;padding-top:10px">
+        <a href="javascript:;" class="button_1_2">保&nbsp;存</a>
+        <a href="javascript:;" class="button_2_2 close">取&nbsp;消</a>
+    </div>
+</div>
+
+<div id="window2" style="padding:15px">
+    已修改的价格计划还没有保存，您是否要关闭编辑价格计划？
+    <div style="text-align:right;padding-top:10px">
+        <a href="javascript:;" class="button_1_2">放弃保存</a>
+        <a href="javascript:;" class="button_2_2 close">取&nbsp;消</a>
+    </div>
+</div>
+
+<script type="text/html" id="booking_time_Template">
+    <table class="tbl_booking_time">
+        <tr>
+            <th rowspan="2">上午</th>
+            <td class="booking_time_picker_item">1:00</td>
+            <td class="booking_time_picker_item">2:00</td>
+            <td class="booking_time_picker_item">3:00</td>
+            <td class="booking_time_picker_item">4:00</td>
+            <td class="booking_time_picker_item">5:00</td>
+            <td class="booking_time_picker_item">6:00</td>
+        </tr>
+        <tr>
+            <td class="booking_time_picker_item">7:00</td>
+            <td class="booking_time_picker_item">8:00</td>
+            <td class="booking_time_picker_item">9:00</td>
+            <td class="booking_time_picker_item">10:00</td>
+            <td class="booking_time_picker_item">11:00</td>
+            <td class="booking_time_picker_item">12:00</td>
+        </tr>
+        <tr>
+            <th rowspan="2">下午</th>
+            <td class="booking_time_picker_item">13:00</td>
+            <td class="booking_time_picker_item">14:00</td>
+            <td class="booking_time_picker_item">15:00</td>
+            <td class="booking_time_picker_item">16:00</td>
+            <td class="booking_time_picker_item">17:00</td>
+            <td class="booking_time_picker_item">18:00</td>
+        </tr>
+        <tr>
+            <td class="booking_time_picker_item">19:00</td>
+            <td class="booking_time_picker_item">20:00</td>
+            <td class="booking_time_picker_item">21:00</td>
+            <td class="booking_time_picker_item">22:00</td>
+            <td class="booking_time_picker_item">23:00</td>
+            <td class="booking_time_picker_item">23:59</td>
+        </tr>
+    </table>
+</script>
+
+
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/kendo.web.js"></script>
+<script type="text/javascript" src="/static/js/scrollFix.js"></script>
+<script type="text/javascript" src="/static/js/hotel.js"></script>
+<script type="text/javascript" src="/static/js/global.js"></script>
+
+<script id="period_prices_listItem_template" type="text/x-kendo-template">
+    <div class="period_prices_listItem">
+        <ul>
+            <li class="pph1"><a class="deleteButton" href="javascript:;" data-bind="click:delete">删 除</a></li>
+            <li class="pph2"><input type="text" placeholder="平日周中"></li>
+            <li class="pph3"><input type="text" style="font-weight:bold;width:71px"> <span style="font-weight:bold"> CNY</span></li>
+            <li class="pph4 tbc" style="border-width:0 0 1px 0" data-bind="style:{height:Effective_period_height}">
+                <ul>
+                    <li>
+                        <span class="currentNO" data-bind="text:epn.length">3</span> / 20
+                    </li>
+                    <li>
+                        开始 <input class="datePicker startDate" data-bind="value:selectDate.startDate" type="text">
+                    </li>
+                    <li>
+                        结束 <input class="datePicker endDate second" data-bind="value:selectDate.endDate" type="text">
+                    </li>
+                    <li>
+                        <label style="float:left;padding:0 3px"><input type="checkbox" data-bind="checked:selectDay.Mon"><br/>一</label>
+                        <label style="float:left;padding:0 3px"><input type="checkbox" data-bind="checked:selectDay.Tue"><br/>二</label>
+                        <label style="float:left;padding:0 3px"><input type="checkbox" data-bind="checked:selectDay.Wed"><br/>三</label>
+                        <label style="float:left;padding:0 3px"><input type="checkbox" data-bind="checked:selectDay.Thur"><br/>四</label>
+                        <label style="float:left;padding:0 3px"><input type="checkbox" data-bind="checked:selectDay.Fri"><br/>五</label>
+                        <label style="float:left;padding:0 3px"><input type="checkbox" data-bind="checked:selectDay.Sat"><br/><span class="important">六</span></label>
+                        <label style="float:left;padding:0 3px"><input type="checkbox" data-bind="checked:selectDay.Sun"><br/><span class="important">日</span></label>
+                    </li>
+                    <li style="clear:both">
+                        <a href="javascript:;" class="button_4_5" style="margin:5px 0" data-bind="{click:add,visible:epn.length<20}">添加有效时段</a>
+                        <div data-template="effective_period_list_template" data-bind="source:epn"></div>
+                    </li>
+                </ul>
+            </li>
+            <li class="pph5">
+                <ul style="padding-bottom:10px;">
+                    <li>
+                        <select name="" id="">
+                            <option value="">无早</option>
+                            <option value="">含早</option>
+                            <option value="">含单早</option>
+                            <option value="">含双早</option>
+                        </select>
+                        <select name="" id="" style="margin-left:10px">
+                            <option value="">-</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                        </select>
+                    </li>
+                    <li><label><input type="radio">自助早餐</label></li>
+                    <li><label><input type="radio">自助早餐</label></li>
+                    <li>
+                        <label><input type="radio">自助早餐</label><br/>
+                        <input disabled="disabled" type="text" value="0">
+                    </li>
+                </ul>
+                <ul class="tbc" style="border-width:1px 0;padding:10px 0">
+                    <li style="margin-bottom:6px">
+                        <label><input type="checkbox">儿童早餐</label>
+                        <select name="" id="" disabled="disabled" style="margin-left:10px">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label><input type="checkbox">晚餐</label>
+                        <select name="" id="" disabled="disabled" style="margin-left:34px">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                        </select>
+                    </li>
+                    <li><label><input type="checkbox" data-group="jiachuang#= data.parent().length #" class="single" name="" id="">加床</label></li>
+                    <li><label><input type="checkbox" data-group="jiachuang#= data.parent().length #" class="single" name="" id="">加床含早</label></li>
+                    <li><label><input type="checkbox">宽带</label></li>
+                    <li><label><input type="checkbox">司陪房</label></li>
+                    <li><label><input type="checkbox">机场接送</label></li>
+                </ul>
+            </li>
+            <li class="pph6">
+                <label><input type="checkbox" style="float:left;"><div style="float:left;">入住时间 14:00以后<br/>退房时间 12:00以前<br/>保留时间 无</div></label>
+                <div class="clear" style="height:7px !important;"></div>
+                <label><input type="checkbox" style="float:left;"><div style="float:left;width:130px;">入住前1天的12点之前变更或取消，不收取任何费用；</div></label>
+            </li>
+            <li class="pph7">
+                入住时间 <select name="" id=""><option value="">请选择</option></select><br/>
+                退房时间 <select name="" id=""><option value="">请选择</option></select><br/>
+            </li>
+            <li class="pph8">
+                入住前<input type="text" style="width:40px"> 天 <input type="text" style="width:40px"> 点<br/>
+                <select name="" id="">
+                    <option value="">请选择</option>
+                </select>
+                <a class="button_4_4" href="javascript">添 加</a>
+            </li>
+        </ul>
+    </div>
+</script>
+
+<script id="effective_period_list_template" type="text/x-kendo-template">
+    <div class="effective_period_listItem">
+        <span data-bind="text:startDate"></span> - <span data-bind="text:endDate"></span><br/>
+        <span data-bind="visible:Mon">一</span>
+        <span data-bind="visible:Tue">二</span>
+        <span data-bind="visible:Wed">三</span>
+        <span data-bind="visible:Thur">四</span>
+        <span data-bind="visible:Fri">五</span>
+        <span data-bind="visible:Sat">六</span>
+        <span data-bind="visible:Sun">日</span>
+        <div style="position:absolute;right:5px;top:5px">
+            <a href="javascript:;" data-bind="click:delete"><img src="../../static/images/deleteButton1.gif" alt=""></a>
+        </div>
+    </div>
+</script>
+
+<script type="text/javascript">
+    $(function(){
+        checkboxSingleAndAll();
+        function ep(periodPrices)
+        {
+//            this.periodName=periodPrices.periodName;
+//            this.periodPrice=periodPrices.periodPrice;
+
+            this.epn=new kendo.data.ObservableArray([]);
+            this.selectDate=new kendo.data.ObservableObject({"startDate":"","endDate":""});
+            this.selectDay=new kendo.data.ObservableObject({"Mon":false,"Tue":false,"Wed":false,"Thur":false,"Fri":false,"Sat":false,"Sun":false})
+//            for(var i=0;i<num;i++)
+//            {
+//                this.epn.push(i);
+//            }
+            this.add=function(){
+                var that=this;
+                if(this.selectDate.startDate=="" || this.selectDate.endDate=="")
+                {
+                    alert("请填写完整的开始与结束日期")
+                    return false;
+                }
+                if(this.selectDay.Mon=="" && this.selectDay.Tue=="" && this.selectDay.Wed=="" && this.selectDay.Thur=="" && this.selectDay.Fri=="" && this.selectDay.Sat=="" && this.selectDay.Sun=="")
+                {
+                    alert("请至少选择一天");
+                    return false;
+                }
+                this.epn.push({
+                    startDate:this.selectDate.startDate,
+                    endDate:this.selectDate.endDate,
+                    Mon:this.selectDay.Mon,
+                    Tue:this.selectDay.Tue,
+                    Wed:this.selectDay.Wed,
+                    Thur:this.selectDay.Thur,
+                    Fri:this.selectDay.Fri,
+                    Sat:this.selectDay.Sat,
+                    Sun:this.selectDay.Sun,
+                    delete:function(e){
+//                        console.log(e.data);
+//                        console.log(this.parent());
+                        var epns=this.parent();
+                        epns.splice(epns.indexOf(this),1);
+                        if(that==viewModel.Effective_period_max_item);
+                        {
+                            //viewModel.Effective_period_max=epns.length;
+                            for(var i=0;i<viewModel.Effective_period.length;i++)
+                            {
+                                if(viewModel.Effective_period[i].epn.length>epns.length)
+                                {
+                                    viewModel.Effective_period_max_item=viewModel.Effective_period[i];
+                                }
+                            }
+                            viewModel.set("Effective_period_max",viewModel.Effective_period_max_item.epn.length);
+                        }
+                    }
+                });
+                //console.log(this.selectDate.get("startDate"));
+                if(this.epn.length>viewModel.Effective_period_max)
+                {
+                    viewModel.set("Effective_period_max",this.epn.length);
+                    viewModel.Effective_period_max_item=this;
+                }
+            }.bind(this);
+            this.delete=function(){
+                var p=this.parent();
+                p.splice(p.indexOf(this),1);
+                viewModel.Effective_period_max_item=viewModel.Effective_period[0];
+                var epm=viewModel.Effective_period[0].epn.length;
+                for(var i=1;i<viewModel.Effective_period.length;i++)
+                {
+                    if(viewModel.Effective_period[i].epn.length>epm)
+                    {
+                        epm=viewModel.Effective_period[i].epn.length;
+                        viewModel.Effective_period_max_item=viewModel.Effective_period[i];
+                    }
+                }
+                viewModel.set("Effective_period_max",viewModel.Effective_period_max_item.epn.length);
+            }
+        }
+
+        viewModel= kendo.observable({
+            Effective_period_height:"165px",
+            Effective_period_max:0,
+            Effective_period_max_item:null,
+            Effective_period:[],
+            addep:function(){
+                viewModel.Effective_period.push(new ep());
+            }
+        });
+        viewModel.bind("change",function(e){
+            if(e.field=="Effective_period_max"){
+                viewModel.set("Effective_period_height",viewModel.Effective_period_max*58+165+"px");
+            }
+            //console.log(e.field);
+            if(e.field=="Effective_period"){
+                if(viewModel.Effective_period.length<5)
+                {
+                    $(".effective_period_leftButton").removeClass("active");
+                }
+                else
+                {
+                    $(".effective_period_leftButton").addClass("active");
+                }
+            }
+        });
+        kendo.bind($("body"), viewModel);
+
+
+
+        $(".effective_period_leftButton").css("top",(document.documentElement.clientHeight-$(".period_prices_head").offset().top)/2+$("body").scrollTop());
+        $(".effective_period_rightButton").css("top",(document.documentElement.clientHeight-$(".period_prices_head").offset().top)/2+$("body").scrollTop());
+
+        $(window).scroll(function(){
+            if($("body").scrollTop()>$(".period_prices_head").offset().top)
+            {
+                var h=$("body").scrollTop()-$(".period_prices_head").offset().top+document.documentElement.clientHeight/2>$(".period_prices_head").height()?$(".period_prices_head").height():$("body").scrollTop()-$(".period_prices_head").offset().top+document.documentElement.clientHeight/2;
+                $(".effective_period_leftButton").css("top",h);
+                $(".effective_period_rightButton").css("top",h);
+            }
+            else
+            {
+                $(".effective_period_leftButton").css("top",(document.documentElement.clientHeight-$(".period_prices_head").offset().top)/2+$("body").scrollTop());
+                $(".effective_period_rightButton").css("top",(document.documentElement.clientHeight-$(".period_prices_head").offset().top)/2+$("body").scrollTop());
+            }
+
+        })
+        $(".effective_period_leftButton").click(function(){
+            if($(this).hasClass("active"))
+            {
+                var ppli=$(".period_prices_listItem")
+                var ppl=$(".period_prices_list");
+                if(849-ppl.position().left<(ppli.length-1)*201)
+                {
+                    $(".period_prices_list").animate({"left":"-=201"},function(){
+                        if(ppl.position().left<0)
+                        {
+                            $(".effective_period_rightButton").addClass("active");
+                        }
+                        else
+                        {
+                            $(".effective_period_rightButton").removeClass("active");
+                        }
+                    });
+                }
+
+            }
+        });
+        $(".effective_period_rightButton").click(function(){
+            if($(this).hasClass("active"))
+            {
+                var ppl=$(".period_prices_list");
+                if(ppl.position().left<0)
+                {
+                    $(".period_prices_list").animate({"left":"+=201"},function(){
+                        if(ppl.position().left<0)
+                        {
+                            $(".effective_period_rightButton").addClass("active");
+                        }
+                        else
+                        {
+                            $(".effective_period_rightButton").removeClass("active");
+                        }
+                    });
+                }
+            }
+        });
+
+        $(".btn_delePricePlan").click(function(){
+            $("#window1").kendoWindow({
+                animation:false,
+                iframe:true,
+                modal:true,
+                width:460,
+                height:125,
+                title:"删除价格计划？"
+            });
+            $("#window1").data("kendoWindow").center();
+        })
+        $(".closePricePlan").click(function(){
+            $("#window2").kendoWindow({
+                animation:false,
+                iframe:true,
+                modal:true,
+                width:460,
+                height:125,
+                title:"关闭编辑价格计划？"
+            });
+            $("#window2").data("kendoWindow").center();
+        })
+
+        var current_booking_time_el=null;
+
+        var booking_time_fl=new FloatLayer({
+            trigger:".booking_time",
+            template:"#booking_time_Template",
+            open:function(){
+                current_booking_time_el=this;
+            }
+        })
+        $(".booking_time_picker_item").click(function(){
+            $(booking_time_fl.input).val($(this).text());
+            booking_time_fl.close();
+        })
+    });
+</script>
+</body>
+</html>
+

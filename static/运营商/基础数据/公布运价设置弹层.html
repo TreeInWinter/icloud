@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>基础数据 公布运价 公布运价设置弹层</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.gray.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/cabinseat.css" rel="stylesheet" type="text/css"/>
+    <script src="../../static/js/jquery.min.js" type="text/javascript"></script>
+    <script src="../../static/js/kendo.web.js" type="text/javascript"></script>
+    <style type="text/css">
+        body {background-color: #ffffff; color:#333;}
+    </style>
+    
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<!-- @CLB@ -->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body>
+
+    <div class="base_code">
+        <table>
+            <tbody>
+                <tr>
+                    <th><em>*</em>航空公司：</th>
+                    <td><input style="width:165px;" type="text" name=""/></td>
+                    <th><em>*</em>航程</th>
+                    <td><input style="width:165px;" type="text" name=""/></td>
+                </tr>
+                <tr>
+                    <th><em>*</em>舱位级别：</th>
+                    <td>
+                        <select style="width:165px;" data-role="dropdownlist" name="">
+                            <option value="头等舱" selected="">头等舱</option>
+                            <option value="公务舱">公务舱</option>
+                            <option value="经济舱">经济舱</option>
+                            <option value="其他">其他</option>
+                        </select>
+                    </td>                        
+                    <th><em>*</em>舱位等级：</th>
+                    <td>
+                        <select style="width:165px;" data-role="dropdownlist" name="">
+                            <option value="豪华头等舱">豪华头等舱</option>
+                            <option value="标准头等舱" selected="">标准头等舱</option>
+                            <option value="超值头等舱">超值头等舱</option>
+                            <option value="空中头等舱">空中头等舱</option>
+                            <option value="暂时头等舱">暂时头等舱</option>
+                            <option value="里程兑换舱">里程兑换舱</option>
+                            <option value="豪华公务舱">豪华公务舱</option>
+                            <option value="标准公务舱">标准公务舱</option>
+                            <option value="超值公务舱">超值公务舱</option>
+                            <option value="悦享公务舱">悦享公务舱</option>
+                            <option value="豪华经济舱">豪华经济舱</option>
+                            <option value="标准经济舱">标准经济舱</option>
+                            <option value="超值经济舱">超值经济舱</option>
+                            <option value="超值经济特价舱">超值经济特价舱</option>
+                            <option value="折扣经济舱">折扣经济舱</option>
+                            <option value="提够">提够</option>
+                            <option value="特价舱">特价舱</option>
+                            <option value="往返舱">往返舱</option>
+                            <option value="中转舱">中转舱</option>
+                            <option value="团队舱">团队舱</option>
+                        </select>
+
+                    </td>
+                </tr>
+                <tr>
+                    <th><em>*</em>舱位代码：</th>
+                    <td><input style="width:165px;" type="text" name=""/></td>
+                    <th><em>*</em>价格来源：</th>
+                    <td>
+                        <select style="width:165px;" data-role="dropdownlist" name="">
+                            <option value="FD">FD</option>
+                            <option value="NFD">NFD</option>
+                            <option value="PAT">PAT</option>
+                            <option value="PAT*IN">PAT*IN</option>
+                            <option value="PAT*CH">PAT*CH</option>
+                            <option value="订单定义">订单定义</option>
+                            <option value="自定义" selected="">自定义</option>
+                        </select>
+                    </td>                        
+                </tr>
+                <tr>
+                    <th><em>*</em>价格代码：</th>
+                    <td><input style="width:165px;" type="text" name=""/></td>
+                    <th><em>*</em>来源OFFICE：</th>
+                    <td><input style="width:165px;" type="text" name=""/></td>
+                </tr>
+                <tr>
+                    <th>剩余座位：</th>
+                    <td><input style="width:165px;" type="text" name=""/></td>
+                    <th>单程价格：</th>
+                    <td><input style="width:165px;" type="text" name=""/></td>
+                </tr>
+                <tr>
+                    <th>开始出票日期：</th>
+                    <td><input style="width:165px;" type="text" class="datepicker" name=""/></td>
+                    <th>往返价格：</th>
+                    <td><input style="width:165px;" type="text" name=""/></td>
+                </tr>
+                <tr>
+                    <th>出票截止日期：</th>
+                    <td><input style="width:165px;" type="text" class="datepicker orange" name=""/></td>
+                    <th>实际折扣：</th>
+                    <td><input style="width:165px;" type="text" name=""/></td>
+                </tr>
+                <tr>
+                    <th>乘机日期：</th>
+                    <td><input style="width:165px;" type="text" name="" class="datepicker"/></td>
+                    <th><em>*</em>是否允许销售：</th>
+                    <td>
+                        <select style="width:165px;" data-role="dropdownlist" name="">
+                            <option value="yes">是</option>
+                            <option value="no">否</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>更新时间：</th>
+                    <td><input style="width:165px;" type="text" name=""/></td>
+                    <th>缓存时效：</th>
+                    <td><input style="width:165px;" type="text" name="" value="24H"/></td>
+                </tr>
+                <tr>
+                    <th>价格描述：</th>
+                    <td colspan="3"><textarea style="width:430px;height:45px;">输入文本……</textarea> </td>
+                </tr>
+            </tbody>
+        </table>
+
+       <div class="bottom_btn" style="margin-right:8px;">
+          <a href="#" class="bottom_btn_a">提 交</a>
+          <a href="#" class="bottom_btn_a_1">取 消</a>
+       </div>
+
+    </div>
+
+</body>
+</html>

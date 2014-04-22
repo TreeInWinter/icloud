@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>政策 国内政策 添加退改签规则</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../static/css/common.css" rel="stylesheet" />
+	<link href="../../static/css/kendo.common.css" rel="stylesheet" />
+	<link href="../../static/css/kendo.gray.css" rel="stylesheet" />
+	<link href="../../static/css/b2b.css" rel="stylesheet" />
+    <link href="/static/css/kendo.reset.css" rel="stylesheet" />
+    <link href="../../static/css/ordinary.css" rel="stylesheet"  type="text/css"/>
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/public.js"></script>
+    
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<!-- @CLB@ -->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body>
+    <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">&nbsp;</a>
+                <span>&nbsp;</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent"> <!--mainContent开始-->
+        
+          <div class="tjxg_top">
+               <h2>返回</h2>
+               <p>添加退改签规则</p>
+               <!--<div class="lkfb">
+                   <label><input type="checkbox"/> 立刻发布</label>
+               </div>-->
+               <div class="tyxj_a">
+                 <a href="#" class="tyxj_a_1">关&nbsp;闭</a>
+                 <a href="#" class="tyxj_a_1">清&nbsp;除</a>
+                 <a href="#" class="tyxj_a_2">保&nbsp;存</a>
+                 <a href="#" class="tyxj_a_2">保存并继续</a>
+               </div>
+          </div>
+       <div class="middlecontent"> <!--middlecontent开始-->
+         <div class="ruleType">
+              <b>规则类型:</b>
+              <label><input type="radio" name="ticket" checked="" />退改签</label>
+              <label><input type="radio" name="ticket"/>废票</label>
+         </div>
+         <div class="mudong clearfix">
+            <p class="mudong_p"><em>航空公司：</em>  
+               <select>
+                     <option>全部</option>
+                     <option>3U 川航</option>
+                     <option selected="">MU 东航</option>
+                     <option>CZ 南航</option>
+                     <option>MF 厦航</option>
+                     <option>……</option>
+               </select>
+            </p>
+            <label style="margin-left:20px;"> <input type="checkbox" /> 适用于低开价格</label>
+         </div>
+         <div style="clear:both;"></div>
+         <div class="danwang clearfix">
+             <p class="danwang_p"> <span class="hclx_1">行程类型：</span> <label><input type="checkbox"/> 单程</label>
+                                                                         <label><input type="checkbox"/> 往返（全退）</label>
+             </p>
+             <p class="danwang_p"> <span class="hclx_1">乘客类型：</span> <label><input type="checkbox"/> 成人</label>
+                                                                         <label><input type="checkbox"/> 儿童</label>
+             </p>       
+         </div>
+         <div style="clear:both;"></div>
+         
+         <div class="sun">
+             <div class="suit"> <b>适用日期：</b>
+                  <em>乘机日&nbsp;</em>
+                  <input class="cjrq_input_1" type="text" value="2013-06-01" /> 
+                  <span class="cjrq_zhi">至</span> 
+                  <input class="cjrq_input_2" type="text" value="2013-06-01" />         
+             </div>
+             <div class="suit" style="margin-left:50px;">
+                   <label> <input type="checkbox"/> &nbsp;退票日&nbsp;</label>
+                  <input class="cjrq_input_1" type="text" value="2013-06-01" /> 
+                  <span class="cjrq_zhi">至</span> 
+                  <input class="cjrq_input_2" type="text" value="2013-06-01" />         
+             </div>
+         </div>
+         
+         <div class="cjrq_tj" style="margin-top:10px;">
+              <div class="cjrq_top">
+                 <b>OFFICE号：</b> 
+                 <select style="width:108px; height:22px; margin-top:7px;">
+                     <option>SHA255</option>
+                 </select>
+                 <!--<a href="#" class="cjrq_a">添加</a>-->
+                 <a href="javascript:;" class="button_unimportant adaptiveButton small" style="margin-bottom:5px;">
+                    <span class="left"></span>
+                    <span class="center" style="padding:0 10px;">添加</span>
+                    <span class="right"></span>
+                 </a>
+              </div>              
+              <div class="date_span_1">
+                  <span><em>SHA255</em> <i>x</i> </span>
+                  <span><em>SHA255</em> <i>x</i> </span>
+              </div>
+         </div>
+         <div style="clear:both;"></div>
+         
+         <div class="sekuai" style="border-bottom:0; margin-top:15px;">
+            <p class="cangwei"><span class="cangwei_span">适用舱位：</span> <span class="juse">&nbsp;</span> 
+                               <span class="xuan_1"><a href="#">全选</a></span> 
+                               <span class="huise_1">&nbsp;</span> 
+                               <span class="xuan_1"><a href="#">反选</a></span>
+            </p>
+            <ul class="sekuai_ul">
+               <li> <span>C</span> <label>[150]</label> </li>
+               <li> <span>F</span> <label>[150]</label> </li>
+               <li class="sekuai_ul_li"> <span>P</span> <label>[150]</label> </li>
+               <li> <span>A</span> <label>[120]</label> </li>
+               <li> <span>J</span> <label>[120]</label> </li>
+               <li> <span>I</span> <label>[30]</label> </li>
+               <li class="sekuai_ul_li"> <span>Y</span> <label>[100]</label> </li>
+               <li> <span>T</span> <label>[90]</label> </li>
+               <li class="sekuai_ul_li"> <span>H</span> <label>[80]</label> </li>
+               <li class="sekuai_ul_li"> <span>M</span> <label>[75]</label> </li>
+               <li> <span>G</span> <label>[70]</label> </li>
+               <li> <span>S</span> <label>[65]</label> </li>
+               <li> <span>L</span> <label>[60]</label> </li>
+               <li> <span>Q</span> <label>[55]</label> </li>
+               <li> <span>E</span> <label>[50]</label> </li>
+               <li> <span>V</span> <label>[45]</label> </li>
+               <li class="sekuai_ul_li"> <span>R</span> <label>[40]</label> </li>
+               <li> <span>K</span> <label>[35]</label> </li>
+            </ul>
+         </div>
+         
+         <div class="leg">
+              <div class="top_radio">
+                  <label> <input type="radio" name="leg" checked="" /> 适用航段</label>
+                  <label> <input type="radio" name="leg" /> 出发到达机场设置</label>
+              </div>
+              <div class="leg_textarea">
+                   <textarea>SHA-PEK/SHA-PEK</textarea>              
+              </div>
+            
+            <div class="leave" style="display:none;">  
+              <div class="leg_div">
+                   <p class="pzlx_cp_p1"> 
+                              <b>出发机场：</b> 
+                               <label><input type="radio" checked="checked" name="radio_2"/> 所有</label>
+                               <label><input type="radio" name="radio_2"/> 包含</label>
+                               <label><input type="radio" name="radio_2"/> 排除</label>
+                   </p>
+                   <div>
+                      <p class="cfjc_textarea"> <textarea style="margin-left:75px;">全国所有机场...</textarea></p>
+                   </div>
+               </div>
+               <div class="leg_div" style="height:100px;">
+                     <p class="pzlx_cp_p1"> 
+                               <b>到达机场：</b> 
+                               <label><input type="radio" checked="checked" name="radio_3"/> 所有</label>
+                               <label><input type="radio" name="radio_3"/> 包含</label>
+                               <label><input type="radio" name="radio_3"/> 排除</label>
+                     </p>
+                     <p class="cfjc_textarea"> <textarea style="margin-left:75px;">全国所有机场...</textarea></p>
+                </div>
+                <div class="remove" style="margin-left:20px;">
+                     <b style="width:75px;">排除航段：</b>
+                     <textarea>SHA-PEK/SHA-PEK</textarea>
+                </div>  
+              </div>       
+         </div>         
+         
+         <div style="clear:both;"></div>
+         <p class="xian">&nbsp;  </p>
+         
+        <h2 class="h2">退票条件</h2>
+        <div class="way">
+            <b>退票方式：</b> 
+            <select>
+                <option>不得退票</option>
+                <option>全额退票</option>
+                <option selected="">有条件退票</option>
+            </select>
+            <b>计算基准：</b> 
+            <select>
+                <option selected="">票面价</option>
+                <option>舱位公布价</option>
+                <option>Y舱价</option>
+            </select>
+            <label> <input type="checkbox" /> 自动退票</label>
+        </div>
+        
+        <div class="method">
+           <div class="top_method">
+               <b>退票计算方法：</b>
+               <a href="javascript:;" class="button_unimportant adaptiveButton small">
+                    <span class="left"></span>
+                    <span class="center center_1">添加计算区间</span>
+                    <span class="right"></span>
+               </a>
+           </div>
+           <table cellpadding="0" cellspacing="0" class="off-site">
+              <tr>
+                 <td class="off_1">离站时间</td>
+                 <td class="off_2">
+                    <select> 
+                        <option>小时</option>
+                        <option>天</option>
+                        <option selected="">不限</option>
+                    </select>
+                 </td>
+                 <td class="off_3">至</td>
+                 <td class="off_2">
+                    <select>
+                         <option>小时</option>
+                        <option selected="">天</option>
+                        <option>不限</option>
+                    </select>
+                    <input type="text" value="7" />
+                 </td>
+                 <td class="off_4">收取</td>
+                 <td class="off_2">
+                    <select>
+                         <option selected="">百分比</option>
+                         <option>全额</option>
+                    </select>
+                    <input type="text" value="30" />
+                 </td>
+                 <td class="off_5">
+                    <a href="#">删除</a>
+                 </td>
+              </tr>
+              <tr>
+                 <td class="off_1">离站时间</td>
+                 <td class="off_2">
+                    <select> 
+                        <option>小时</option>
+                        <option selected="">天</option>
+                        <option>不限</option>
+                    </select>
+                    <input type="text" value="7" />
+                 </td>
+                 <td class="off_3">至</td>
+                 <td class="off_2">
+                    <select>
+                         <option selected="">小时</option>
+                        <option>天</option>
+                        <option>不限</option>
+                    </select>
+                    <input type="text" value="2" />
+                 </td>
+                 <td class="off_4">收取</td>
+                 <td class="off_2">
+                    <select>
+                         <option selected="">百分比</option>
+                         <option>全额</option>
+                    </select>
+                    <input type="text" value="80" />
+                 </td>
+                 <td class="off_5">
+                    <a href="#">删除</a>
+                 </td>
+              </tr>
+              <tr>
+                 <td class="off_1">离站时间</td>
+                 <td class="off_2">
+                    <select> 
+                        <option selected="">小时</option>
+                        <option>天</option>
+                        <option>不限</option>
+                    </select>
+                    <input type="text" value="2" />
+                 </td>
+                 <td class="off_3">至</td>
+                 <td class="off_2">
+                    <select>
+                         <option>小时</option>
+                        <option>天</option>
+                        <option selected="">不限</option>
+                    </select>
+                 </td>
+                 <td class="off_4">收取</td>
+                 <td class="off_2">
+                    <select>
+                         <option>百分比</option>
+                         <option>全额</option>
+                         <option selected="">不得退票</option>
+                    </select>
+                 </td>
+                 <td class="off_5">
+                    <a href="#">删除</a>
+                 </td>
+              </tr>              
+           </table>
+        </div>
+        
+        <div class="lowest">
+               <b>最低退票费：</b>
+               <input type="text" />
+               <em>元</em>
+        </div>
+        
+        <div class="explain">
+               <b>退票说明：</b>
+               <textarea> </textarea>
+        </div>
+        
+        <p class="xian">&nbsp;  </p>
+        
+        <h2 class="h2">废票条件</h2>
+        <div class="way">
+            <b>废票方式：</b> 
+            <select>
+                <option>免费废票</option>
+                <option>不得废票</option>
+                <option selected="">有条件废票</option>
+            </select>
+            <b>废票费用：</b> 
+            <input class="way_input" type="text" />
+            <em>元</em>
+            <label> <input type="checkbox" /> 当日到次日12点前的票不得废票</label>
+        </div>
+        <div class="explain">
+               <b>废票说明：</b>
+               <textarea> </textarea>
+        </div>
+        
+        <p class="xian">&nbsp;  </p>
+        
+        <h2 class="h2">更改条件</h2>
+        <div class="way">
+            <b>更改方式：</b> 
+            <select>
+                <option>不得更改</option>
+                <option selected="">有条件更改</option>
+            </select>
+        </div>
+        <div class="explain">
+               <b>更改说明：</b>
+               <textarea> </textarea>
+        </div>
+        
+        <p class="xian">&nbsp;  </p>
+        
+        <h2 class="h2">签转条件</h2>
+        <div class="way">
+            <b>签转方式：</b> 
+            <select>
+                <option>允许签转</option>
+                <option>允许自愿签转</option>
+                <option>不得签转</option>
+                <option>不得自愿签转</option>
+                <option selected="">有条件签转</option>
+            </select>
+        </div>
+        <div class="explain">
+               <b>签转说明：</b>
+               <textarea> </textarea>
+        </div>
+        
+        <p class="xian">&nbsp;  </p>
+        
+        <div class="explain">
+               <b>公开备注：</b>
+               <textarea> </textarea>
+        </div>
+        <div class="explain" style="padding-bottom:40px;">
+               <b>内部备注：</b>
+               <textarea> </textarea>
+        </div>
+        
+       <!--  <div class="tishi_bottom">
+            <span>&nbsp;</span>
+            <p>提示：点击“保存”完成发布（或提交审核），点击“保存并继续”完成发布（或提交审核），保留在当前页面，页面内容不清除，点击清除恢复空白页面。</p>
+         </div>-->
+         
+      </div> <!--middlecontent结束-->
+      </div><!--mainContent结束-->
+
+    </div>
+
+	<script type="text/javascript">
+	$(function(){
+		$("input[name='leg']").each(function(index){
+			
+			$(this).click(function(){
+				console.log(index);
+				if(index == 0){
+					$(".leg_textarea").show();
+					$(".leave").hide();
+				}else{
+					$(".leg_textarea").hide();
+					$(".leave").show();
+				}
+			});
+		});
+	});
+	</script>
+	
+	
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+</body>
+</html>

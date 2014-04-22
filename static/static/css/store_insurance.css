@@ -1,0 +1,120 @@
+
+
+
+/* insurance */
+.insuranceTitle{
+	clear:both;
+	border-bottom:1px solid #e1e1e1;
+}
+.insuranceTitle h2{
+	font-size:26px;
+	font-family:"黑体";
+	color:#f1634c;
+	font-weight:bold;
+	border-bottom:1px solid #f1634c;
+	width:65px;
+	padding-bottom:3px;
+}
+.insuranceType { 
+   overflow: hidden;
+   /* height:auto; */ 
+   padding:0; 
+   border:1px solid #e1e1e1; 
+   background: #f1f1f1;
+   margin:10px 0; 
+   color:#404040;
+}
+.insuranceType .logo-part {
+	float:left;
+	/* display:inline-block; */
+	background: #f1f1f1;
+	width:140px;
+	height:71px;
+	/* border-right: 1px solid #e1e1e1; */
+	padding:35px 10px 0 10px;
+	text-align:center;
+}
+.insuranceType .tkrs {
+	background:url(../images/insurance_logo.png) no-repeat 0 0;
+	width:126px;
+	height:37px; 
+	display:inline-block;
+	vertical-align:middle;
+}
+.insuranceType .zgtp {
+	background:url(../images/insurance_logo.png) no-repeat 0 -44px;
+	width:125px;
+	height:36px; 
+	display:inline-block;
+	vertical-align:middle;
+}
+.insuranceType .tpybx {
+	background:url(../images/insurance_logo.png) no-repeat 0 -86px;
+	width:125px;
+	height:35px; 
+	display:inline-block;
+	vertical-align:middle;
+}
+.insuranceType .zgpa {
+	background:url(../images/insurance_logo.png) no-repeat 0 -129px;
+	width:98px;
+	height:41px; 
+	display:inline-block;
+	vertical-align:middle;
+}
+.insuranceType .content-part {
+	background-color: #fcfcfc;
+	border-left: 1px solid #e1e1e1;
+	float: left;
+	padding: 16px 16px 0 33px;
+
+}
+.content-part:hover,.content-part:active{
+	background:#fff6f0;
+	cursor:pointer;
+}
+.content-part table{
+}
+.content-part td{
+	padding-bottom:10px
+}
+.content-part td .type-tit{
+	font-size:16px;
+	color:#404040;
+	font-weight:bold;
+	width:160px;
+	display:inline-block;
+}
+.content-part td .inland{
+	background:#caeee2;
+	border:1px solid #b6dbcf;
+	padding:5px 6px
+}
+.content-part td .abroad{
+	background:#fce4b2;
+	border:1px solid #e6cd99;
+	padding:5px 6px
+}
+.content-part td i{
+	color:#ff6500;
+}
+.content-part td strong{
+	font-size:20px;
+	color:#ff6500;
+	font-weight:bold;
+}
+.adaptiveButton .center_insure{padding:0 10px;}
+.effectiveDateOfInsuranceContainer,.applicantInfo,.insurantInfo{padding:10px}
+.applicantInfo input[type=text],.insurantInfo input[type=text]{height:21px;width:144px}
+.newInsurantInfoContainer{border-top: 1px dashed #cccccc;margin-top: 10px;padding-top: 10px}
+.btn_addApplicantInfo,.btn_delApplicantInfo{padding-left: 13px;background:url("../images/store/ico_plus.gif") no-repeat left center;text-decoration: underline;float:right;color: #636363}
+.btn_delApplicantInfo{background:url("../images/store/ico_minus.gif") left center no-repeat;}
+.toolTip_info{padding-right: 18px;background:url("../images/store/ico_info.gif") right center no-repeat;margin-left: 20px;cursor: pointer}
+.beneficiaryContainer{font-size: 14px;padding-bottom: 10px}
+.insuranceICO_taikang{background:url("../images/store/ico_insurance.jpg") 0 0 no-repeat;padding-left:18px}
+.insuranceICO_taiping{background:url("../images/store/ico_insurance.jpg") 0 -20px no-repeat;padding-left:18px}
+.insuranceICO_taipingyang{background:url("../images/store/ico_insurance.jpg") 0 -40px no-repeat;padding-left:18px}
+.insuranceICO_pingan{background:url("../images/store/ico_insurance.jpg") 0 -60px no-repeat;padding-left:18px}
+.applicantInfo .tbl_comm td,.insurantInfo .tbl_comm td{padding:10px 5px}
+#ac{width:958px;background-color: #ffffff;margin-bottom: 0}
+.k-callout-n{display: none}

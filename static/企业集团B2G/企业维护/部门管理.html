@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 B2G 部门管理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/b2g.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.b2g.css" />
+
+    <link rel="stylesheet" href="../../static/css/b2g_management.css" media="all" />
+
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/b2g/common.js"></script>
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+    <!--[if lte IE 9]>
+    <script src="/static/js/html5.js"></script>
+    <![endif]-->
+    <script>
+$(function(){
+
+    $("#ajax-loader-table").scrollPagination({
+        'contentPage': '/php/data_row.php', 
+        'contentData': {username:"test",page:1,page_size:10}, 
+        'scrollTarget': $(window),
+        'heightOffset': 10, // it gonna request when scroll is 10 pixels before the page ends
+        'beforeLoad': function(){ // before load function, you can display a preloader div
+            $('#scroll_Loading').show();	
+        },
+        'afterLoad': function(data) {
+            console.log(data.size());
+
+            var i = 0;
+            $('#scroll_Loading').hide();
+
+            $(data).fadeInWithDelay();
+
+            if ($(data).size() == 0){ 
+                $('#nomoreresults').fadeIn();
+                $('#ajax-loader-table').stopScrollPagination();
+            }
+        }
+
+    });
+
+    $('.block-header').fixedBar();
+    $('.block-query').fixedBar({
+        offsetTop:60
+    });
+    $('.table-header').fixedBar({
+        offsetTop:128
+    });
+    $('.col-tree').fixedBar({
+        createShadow:false,
+        offsetTop:60
+    });
+
+    new PopWindow('.ac-remind',{
+        title:'提醒',
+        template:'#ac-remind-template',
+        width:500
+    }).init();
+
+    new PopWindow('.ac-close',{
+        title:'关闭',
+        template:'#ac-close-template',
+        open:function(){
+            // 获取当前的tr
+            console.log(this.target.closest('tr'));
+            var name = this.target.closest('tr').children('td').eq(1).text();
+            this.data({
+                name:name
+            });
+        },
+        width:500
+    }).init();
+
+    new PopWindow('.ac-edit',{
+        title:'编辑',
+        template:'#ac-edit-template',
+        open:function(){
+            // 获取当前的tr
+            console.log(this.target.closest('tr'));
+            var name = this.target.closest('tr').children('td').eq(1).text();
+            this.data({
+                department:name
+            });
+
+            $('.contact-search').kendoAutoComplete({
+                filter: "contains",
+                dataSource:{
+                    transport: {
+                        read: {
+                            dataType:'json',
+                            url: "/php/address.php"
+                        }
+                    }
+                },
+                placeholder:'姓名/电话/邮箱',
+                dataTextField:'name',
+                select:function(e){
+                    // var dataItem = this.dataItem(e.item.index());
+                    // var id = dataItem.id;
+                    // if($('li[rel='+id+']').length>0){
+                    //     treeview.expand('.k-item');
+                    //     treeview.select('li[rel='+id+']');
+                    //     selectedHandler(id,dataItem.name);
+                    // }
+                },
+                template:'<span class="address-name">#= name#</span><span class="address-phone">#= phone#</span><span class="address-email">#= email#</span>',
+                height:150
+            });
+        },
+        width:580
+    }).init();
+
+
+    new PopWindow('.ac-new',{
+        title:'新增部门',
+        template:'#ac-new-template',
+        width:580
+    }).init();
+
+
+
+
+    function selectedHandler(id,text){
+        alert(id+text+'已被选中，修改selectedHandler函数进行查询');  
+    }
+
+
+    $('#filterText').kendoAutoComplete({
+        filter: "contains",
+        dataSource:{
+            transport: {
+                read: {
+                    dataType:'json',
+                    url: "/php/department.php",
+                }
+            }
+        },
+        dataTextField:'name',
+        select:function(e){
+            var dataItem = this.dataItem(e.item.index());
+            var id = dataItem.id;
+            if($('li[rel='+id+']').length>0){
+                treeview.expand('.k-item');
+                treeview.select('li[rel='+id+']');
+                selectedHandler(id,dataItem.name);
+            }
+        },
+        template:'<span class="department-belongs">#= belongs#</span><span class="department-name">#= name#</span>'
+    });
+
+}) 
+    </script>
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="top-line"></div>
+    <header class="main-header">
+        <div class="header-content">
+            <a class="logo" href="/">天地行 B2G</a>
+            <nav class="main-nav">
+                <ul class="clearfix">
+                    <li class="first active"><a herf="#">行程预订</a></li>
+                    <li><a herf="#">行程管理</a></li>
+                    <li><a herf="#">数据服务</a></li>
+                    <li><a herf="#">创业维护</a></li>
+                    <li><a herf="#">系统设置</a></li>
+                </ul> 
+            </nav>
+        </div>
+    </header>
+    <div class="header-bar clearfix">
+        <div class="header-bar-content block-client">
+            <div class="block-clientBar">
+                <span>客户</span>
+                <select id="" style="width:160px;margin-left:5px;" data-role="dropdownlist" name="">
+                    <option value="">不夜城</option>
+                </select>
+                <span class="barBtns">
+                    <a href="javascript:void(0);" class="btn-color2 btn-color" >企业组织</a>&nbsp;<a href="javascript:void(0);" class="btn-color1 btn-color">企业成本中心</a>&nbsp;<a href="javascript:void(0);" class="btn-color1 btn-color">差旅政策</a>&nbsp;<a href="javascript:void(0);" class="btn-color1 btn-color">其他设置</a>
+                </span>
+            </div>
+        </div>
+    </div>
+    <section class="main-body clearfix">
+        <div class="main-body-content">
+            <div class="block block2">
+                <div class="block-header clearfix">
+                    <span class="links">
+                        <a href="#">
+                            <i class="icon icon1"></i>
+                            导入部门数据
+                        </a>
+                        <a href="#" class="ac-new">
+                            <i class="icon icon2"></i>
+                            新增部门
+                        </a>
+                    </span>
+                </div>
+                <div class="block-body tab-body clearfix">
+                    <div>
+                        <div class="block block-query block-query-department">
+                            <table>
+                                <colgroup>
+                                    <col width="130">
+                                    <col width="120">
+                                    <col width="90">
+                                    <col width="120">
+                                    <col width="90">
+                                    <col width="120">
+                                    <col width="340">
+                                </colgroup>
+                                
+                                <tr>
+                                    <th>成本中心名称：</th>
+                                    <td><input id="" type="text" name=""></td>
+                                    <th>审批人：</th>
+                                    <td><input id="" type="text" name=""></td>
+                                    <th>状态：</th>
+                                    <td>
+                                        <select id="" style="width:100px;" data-role="dropdownlist" name="">
+                                            <option value="">正常</option>
+                                        </select>
+                                    </td>
+                                    <td><label>
+                                        <input id="" type="checkbox" name="">无部门审批人
+                                    </label></td>
+                                    <td>
+                                        <button class="btns btn-c3">查 询</button>
+                                        <span>共<s class="text1">320</s>条信息</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="block block-result">
+                             <table class="table-header tbl_department_mangermeng_header">
+                                 <colgroup>
+                                     <col width="10">
+                                     <col width="180">
+                                     <col width="250">
+                                     <col width="180">
+                                     <col width="120">
+                                     <col width="150">
+                                     <col width="180">
+                                     <col>
+                                 </colgroup>
+                                 
+                                 <thead>
+                                  <tr>
+                                        <th>&nbsp;</th>
+                                        <th>成本中心编号</th>
+                                        <th>成本中心名称</th>
+                                        <th>审批人</th>
+                                        <th>状态</th>
+                                        <th>操作人</th>
+                                        <th>操作日期</th>
+                                        <th align="center">操作</th>
+                                  </tr>
+                                 </thead>
+                             </table>
+                            <table id="ajax-loader-table" style="width:100%">
+                                 <colgroup>
+                                     <col width="10">
+                                     <col width="180">
+                                     <col width="250">
+                                     <col width="180">
+                                     <col width="120">
+                                     <col width="150">
+                                     <col width="180">
+                                     <col>
+                                 </colgroup><tbody>
+                                 <tr>
+                                     <td>&nbsp;</td>
+                                     <td>10001</td>
+                                     <td>北京分公司</td>
+                                     <td>唐笑笑</td>
+                                     <td>正常</td>
+                                     <td>唐笑笑</td>
+                                     <td>2013-12-13</td>
+                                     <td>
+                                         <span><a href="" class="ac-edit text2">编辑</a></span>
+                                         <span><a href="" class="ac-remind text2">关闭</a></span>
+                                     </td>
+                                 </tr>
+                                 <tr class="del">
+                                     <td>&nbsp;</td>
+                                     <td>10001</td>
+                                     <td>北京分公司</td>
+                                     <td>唐笑笑</td>
+                                     <td>正常</td>
+                                     <td>唐笑笑</td>
+                                     <td>2013-12-13</td>
+                                     <td>
+                                         <span><a href="" class="ac-edit text2">编辑</a></span>
+                                         <span><a href="" class="ac-close text2">关闭</a></span>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td>&nbsp;</td>
+                                     <td>10001</td>
+                                     <td>北京分公司</td>
+                                     <td>唐笑笑</td>
+                                     <td>正常</td>
+                                     <td>唐笑笑</td>
+                                     <td>2013-12-13</td>
+                                     <td>
+                                         <span><a href="" class="ac-edit text2">编辑</a></span>
+                                         <span><a href="" class="ac-close text2">关闭</a></span>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td>&nbsp;</td>
+                                     <td>10001</td>
+                                     <td>北京分公司</td>
+                                     <td>唐笑笑</td>
+                                     <td>正常</td>
+                                     <td>唐笑笑</td>
+                                     <td>2013-12-13</td>
+                                     <td>
+                                         <span><a href="" class="ac-edit text2">编辑</a></span>
+                                         <span><a href="" class="ac-close text2">关闭</a></span>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td>&nbsp;</td>
+                                     <td>10001</td>
+                                     <td>北京分公司</td>
+                                     <td>唐笑笑</td>
+                                     <td>正常</td>
+                                     <td>唐笑笑</td>
+                                     <td>2013-12-13</td>
+                                     <td>
+                                         <span><a href="" class="ac-edit text2">编辑</a></span>
+                                         <span><a href="" class="ac-close text2">关闭</a></span>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td>&nbsp;</td>
+                                     <td>10001</td>
+                                     <td>北京分公司</td>
+                                     <td>唐笑笑</td>
+                                     <td>正常</td>
+                                     <td>唐笑笑</td>
+                                     <td>2013-12-13</td>
+                                     <td>
+                                         <span><a href="" class="ac-edit text2">编辑</a></span>
+                                         <span><a href="" class="ac-close text2">关闭</a></span>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td>&nbsp;</td>
+                                     <td>10001</td>
+                                     <td>北京分公司</td>
+                                     <td>唐笑笑</td>
+                                     <td>正常</td>
+                                     <td>唐笑笑</td>
+                                     <td>2013-12-13</td>
+                                     <td>
+                                         <span><a href="" class="ac-edit text2">编辑</a></span>
+                                         <span><a href="" class="ac-close text2">关闭</a></span>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td>&nbsp;</td>
+                                     <td>10001</td>
+                                     <td>北京分公司</td>
+                                     <td>唐笑笑</td>
+                                     <td>正常</td>
+                                     <td>唐笑笑</td>
+                                     <td>2013-12-13</td>
+                                     <td>
+                                         <span><a href="" class="ac-edit text2">编辑</a></span>
+                                         <span><a href="" class="ac-close text2">关闭</a></span>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td>&nbsp;</td>
+                                     <td>10001</td>
+                                     <td>北京分公司</td>
+                                     <td>唐笑笑</td>
+                                     <td>正常</td>
+                                     <td>唐笑笑</td>
+                                     <td>2013-12-13</td>
+                                     <td>
+                                         <span><a href="" class="ac-edit text2">编辑</a></span>
+                                         <span><a href="" class="ac-close text2">关闭</a></span>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td>&nbsp;</td>
+                                     <td>10001</td>
+                                     <td>北京分公司</td>
+                                     <td>唐笑笑</td>
+                                     <td>正常</td>
+                                     <td>唐笑笑</td>
+                                     <td>2013-12-13</td>
+                                     <td>
+                                         <span><a href="" class="ac-edit text2">编辑</a></span>
+                                         <span><a href="" class="ac-close text2">关闭</a></span>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td>&nbsp;</td>
+                                     <td>10001</td>
+                                     <td>北京分公司</td>
+                                     <td>唐笑笑</td>
+                                     <td>正常</td>
+                                     <td>唐笑笑</td>
+                                     <td>2013-12-13</td>
+                                     <td>
+                                         <span><a href="" class="ac-edit text2">编辑</a></span>
+                                         <span><a href="" class="ac-close text2">关闭</a></span>
+                                     </td>
+                                 </tr>
+                                 </tbody>
+                             </table>
+                <div style="display:none;" id="scroll_Loading" class="smallLoading"><em></em> <b>数据正在加载中……</b></div>
+                <div style="display:none;" id="nomoreresults" class="smallLoading"> <b>没有数据了</b></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <p class="copyright">Copyright &copy; 2013 天地行 All Rights Reserved.     沪ICP备08101503号</p>
+    </footer>
+</div>
+
+<script type="text/x-kendo-template" id="ac-new-template">
+    <table class="tbl_newDepartment">
+        <tr>
+            <th><strong>成本中心名称：</strong></th>
+            <td><input id="" style="width:380px;" type="text" name=""></td>
+        </tr>
+        <tr>
+            <th><strong>审批人：</strong></th>
+            <td><input id="" style="width:380px;" type="text" name=""></td>
+        </tr>
+        <tr>
+            <th style="vertical-align:top"><strong>关联组织：</strong></th>
+            <td>
+                <!--<div class="row treeview-white" style="margin:0">-->
+                    <!--<ul id="treeview2" data-role="treeview">-->
+                        <!--<li data-expanded="true">-->
+                            <!--苏宁公司-->
+                            <!--<ul>-->
+                                <!--<li data-expanded="true">-->
+                                    <!--北京分部-->
+                                    <!--<ul>-->
+                                        <!--<li>总裁部-->
+                                            <!--<ul>-->
+                                                <!--<li>业务部</li>-->
+                                                <!--<li>行政部</li>-->
+                                                <!--<li rel="1112">采购部</li>-->
+                                            <!--</ul>-->
+                                        <!--</li>-->
+                                    <!--</ul>-->
+                                <!--</li>-->
+
+                                <!--<li>-->
+                                    <!--南京分部-->
+                                    <!--<ul>-->
+                                        <!--<li rel="1412">-->
+                                            <!--采购部-->
+                                            <!--<ul>-->
+                                                <!--<li>家电部</li>-->
+                                            <!--</ul>-->
+                                        <!--</li>-->
+                                    <!--</ul>-->
+                                <!--</li>-->
+                                <!--<li>业务部</li>-->
+                            <!--</ul>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <div class="row treeview-white" style="margin:0">
+
+                </div>
+            </td>
+        </tr>
+    </table>
+
+<div class="row row-btns">
+    <a href="javascript:;" class="btns btn-s2 btn-c1">确 定</a>
+    <a href="javascript:;" class="btns btn-s2 btn-c5">取 消</a>
+</div>
+</script>
+
+<script type="text/x-kendo-template" id="ac-edit-template">
+    <div class="row">
+        <table class="cv-table" style="margin-bottom:40px;">
+            <tr>
+                <th>部门名称：</th>
+                <td><input style="width:408px;" type="text" name=""></td>
+            </tr>
+            <tr>
+                <th>上级部门名称：</th>
+                <td>#= data.department #</td>
+            </tr>
+            <tr>
+                <th>部门审批人：</th>
+                <td><input style="width:408px;" class="contact-search" type="text" name=""></td>
+            </tr>
+        </table>
+    </div>
+    <div class="row row-btns">
+        <a href="javascript:;" class="btns btn-s2 btn-c1">确 定</a>
+        <a href="javascript:;" class="btns btn-s2 btn-c5">取 消</a>
+    </div>
+</script>
+
+<script type="text/x-kendo-template" id="ac-remind-template">
+    <div class="row row-icontext">
+        <i class="icon icon3" style="vertical-align:top"></i>
+        <p>对不起，无法关闭该部门<br>
+            <span style="font-size:12px;">1.请删除或者转调该部门的员工</span><br>
+            <span style="font-size:12px;">2.该部门现与成本中心：财务部 关联，请取消关联</span>
+        </p>
+    </div>
+    <div class="row row-btns">
+        <a href="javascript:;" class="btns btn-s2 btn-c1">确 定</a>
+        <a href="javascript:;" class="btns btn-s2 btn-c5">取 消</a>
+    </div>
+</script>
+
+<script type="text/x-kendo-template" id="ac-close-template">
+    <div class="row row-icontext" style="line-height:40px;">
+        <i class="icon icon3" style="vertical-align:top;"></i>
+<p>
+
+    确认要关闭该成本中心吗？
+</p>
+    </div>
+    <div class="row row-btns">
+        <a href="javascript:;" class="btns btn-s2 btn-c1">确 定</a>
+        <a href="javascript:;" class="btns btn-s2 btn-c5">取 消</a>
+    </div>
+</script>
+
+<script type="text/javascript">
+    $(function(){
+        var tv=$(".treeview-white").kendoTreeView({
+            checkboxes:{checkChildren:true},
+            dataSource:[
+                {text:"苏宁公司",items:[
+                    {text:"北京分部",items:[
+                        {text:"总裁部",items:[
+                            {text:"业务部"},
+                            {text:"行政部"},
+                            {text:"采购部"}
+                        ]}
+                    ]},
+                    {text:"南京分部",items:[
+                        {text:"采购部",items:[
+                            {text:"家电部"}
+                        ]},
+                        {text:"业务部"}
+                    ]}
+                ]}
+            ]
+        }).data("kendoTreeView");
+        tv.expand(".k-item");
+    })
+</script>
+
+</body>
+</html>
+

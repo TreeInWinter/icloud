@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 B2G 企业维护 审批设置</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/b2g.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.b2g.css" />
+    <link rel="stylesheet" href="../../static/css/b2g_management.css" media="all" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/b2g/common.js"></script>
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+    <!--[if lte IE 9]>
+    <script src="/static/js/html5.js"></script>
+    <![endif]-->
+    
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="top-line"></div>
+    <header class="main-header">
+        <div class="header-content">
+            <a class="logo" href="/">天地行 B2G</a>
+            <nav class="main-nav">
+                <ul class="clearfix">
+                    <li class="first active"><a herf="#">行程预订</a></li>
+                    <li><a herf="#">行程管理</a></li>
+                    <li><a herf="#">数据服务</a></li>
+                    <li><a herf="#">创业维护</a></li>
+                    <li><a herf="#">系统设置</a></li>
+                </ul> 
+            </nav>
+        </div>
+    </header>
+
+    <div class="header-bar clearfix">
+        <div class="header-bar-content block-client">
+            <div class="block-clientBar">
+                <span>客户</span>
+                <select id="" style="width:160px;margin-left:5px;" data-role="dropdownlist" name="">
+                    <option value="">不夜城</option>
+                </select>
+                <span class="barBtns">
+                    <a href="javascript:void(0);" class="btn-color1 btn-color" >企业组织</a>&nbsp;<a href="javascript:void(0);" class="btn-color1 btn-color">企业成本中心</a>&nbsp;<a href="javascript:void(0);" class="btn-color1 btn-color">差旅政策</a>&nbsp;<a href="javascript:void(0);" class="btn-color2 btn-color">其他设置</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <section class="main-body clearfix">
+        <div class="main-body-content">
+            <div class="block block2"> <!--otherSet start-->
+                 <div class="block-header clearfix">
+                    <span class="tab-header">
+                        <a href="#" class="active">审批设置</a>
+                        <a href="#" style="background:none;border:0;">消息通知设置</a>
+                    </span>
+                </div>
+                 <div class="sectModel"> <!--sectModel 开始-->
+                        <div class="tripApproval">
+                              <label><input type="checkbox" /> <b>因公</b> &nbsp; <em>出行需审批</em></label>
+                         </div>
+                         <div class="approvalCont clearfix">
+                              <div class="apprPeople">
+                                 <label class="currentStatus"><input type="radio" checked="" name="set" /> <em>按员工设置审批人</em></label>
+                                 <label><input type="radio" name="set" /> <em>部门和成本中心设置审批人</em></label>
+                              </div>
+                              <div class="apprPeoContent clearfix"> <!--apprPeoContent start-->
+                                   <div class="staffCont sectChange">
+                                        <em style="color:#f94f46;">*</em>
+                                        <em>设置审批级别：</em>
+                                        <select style="width:140px;" data-role="dropdownlist">
+                                            <option>2级审批</option>
+                                        </select>
+                                   </div>
+                                   <div class="centerCont sectChange" style="display:none;">
+                                         <div>
+                                                <em style="color:#f94f46;">*</em>
+                                                <em>设置终审部门：</em>
+                                                <span class="selSection"><em></em>请选择终审部门</span>
+                                         </div>
+                                         <div class="sectionFlow">
+                                              <strong class="connectLine"></strong>
+                                              <em style="color:#f94f46;">*</em>
+                                              <em>成本中心审批：</em>
+                                              <span class="moreSection">财务部， 技术部，研发部 &nbsp; <em>暂无成本中心</em></span>
+                                         </div>
+                                         <div class="sectionFlow">
+                                              <strong class="connectLine"></strong>
+                                              <div style="float:left;">
+                                                      <em style="color:#f94f46;">*</em>
+                                                      <em>终审群组设置：</em>
+                                                      <div style="color:#f94f46;">同级多人审批</div>
+                                              </div>
+                                              <label class="groupCont">
+                                                     <div style="margin-bottom:10px;">
+                                                          <label class="groupSet"><em>潘小美</em> <i></i></label>
+                                                          <label class="groupSet"><em>潘小美</em> <i></i></label>
+                                                          <label class="groupSet"><em>潘小美</em> <i></i></label>
+                                                          <label class="groupSet"><em>潘小美</em> <i></i></label>
+                                                          <label class="groupSet"><em>潘小美</em> <i></i></label>
+                                                          <label class="groupSet"><em>潘小美</em> <i></i></label>
+                                                          <label class="groupSet"><em>潘小美</em> <i></i></label>
+                                                          <label class="groupSet"><em>潘小美</em> <i></i></label>
+                                                          <label class="groupSet"><em>潘小美</em> <i></i></label>
+                                                          <label class="groupSet"><em>潘小美</em> <i></i></label>
+                                                          <span class="examine" style="margin-bottom:8px;"><em></em>请选择审批人</span> 
+                                                     </div>
+                                                     <label><input type="checkbox" />无需终审审批人审批，仅以邮件或短信通知</label>
+                                              </label>
+                                         </div>
+                                   </div>
+                              </div> <!--apprPeoContent end-->                              
+                         </div>   
+                 </div>   <!--sectModel 结束-->    
+                 
+                 <div class="sectModel"> <!--sectModel 开始-->
+                        <div class="tripApproval">
+                              <label><input type="checkbox" /> <b>因私</b> &nbsp; <em>出行需审批</em></label>
+                         </div>
+                         <div class="approvalCont clearfix">
+                              <div class="onBusiness">
+                                 <label class="currentModel"><input type="radio" checked="" name="people" /> <em>按员工设置审批人</em></label>
+                                 <label><input type="radio" name="people" /> <em>部门和成本中心设置审批人</em></label>
+                              </div>
+                              <div class="apprPeoContent insiCont clearfix"> <!--apprPeoContent start-->
+                                   <div class="staffCont changeCont">
+                                        <em style="color:#f94f46;">*</em>
+                                        <em>设置审批级别：</em>
+                                        <select style="width:140px;" data-role="dropdownlist">
+                                            <option>2级审批</option>
+                                        </select>
+                                   </div>
+                                   <div class="centerCont changeCont" style="display:none;">
+                                         <div>
+                                                <em style="color:#f94f46;">*</em>
+                                                <em>设置终审部门：</em>
+                                                <span class="selSection"><em></em>请选择终审部门</span>
+                                         </div>
+                                         <div class="sectionFlow">
+                                              <strong class="connectLine"></strong>
+                                              <em style="color:#f94f46;">*</em>
+                                              <em>成本中心审批：</em>
+                                              <span class="moreSection">财务部， 技术部，研发部 &nbsp; <em>暂无成本中心</em></span>
+                                         </div>
+                                         <div class="sectionFlow">
+                                              <strong class="connectLine"></strong>
+                                              <div style="float:left;">
+                                                      <em style="color:#f94f46;">*</em>
+                                                      <em>终审群组设置：</em>
+                                                      <div style="color:#f94f46;">同级多人审批</div>
+                                              </div>
+                                              <label class="groupCont">
+                                                     <div style="margin-bottom:10px;">
+                                                          <label class="groupSet"><em>潘小美</em> <i></i></label>
+                                                          <label class="groupSet"><em>潘小美</em> <i></i></label>
+                                                          <label class="groupSet"><em>潘小美</em> <i></i></label>
+                                                          <label class="groupSet"><em>潘小美</em> <i></i></label>
+                                                          <label class="groupSet"><em>潘小美</em> <i></i></label>
+                                                          <label class="groupSet"><em>潘小美</em> <i></i></label>
+                                                          <label class="groupSet"><em>潘小美</em> <i></i></label>
+                                                          <label class="groupSet"><em>潘小美</em> <i></i></label>
+                                                          <label class="groupSet"><em>潘小美</em> <i></i></label>
+                                                          <label class="groupSet"><em>潘小美</em> <i></i></label>
+                                                          <span class="examine" style="margin-bottom:8px;"><em></em>请选择审批人</span> 
+                                                     </div>
+                                                     <label><input type="checkbox" />无需终审审批人审批，仅以邮件或短信通知</label>
+                                              </label>
+                                         </div>
+                                   </div>
+                              </div> <!--apprPeoContent end-->                              
+                         </div>   
+                 </div>   <!--sectModel 结束-->  
+                 
+            </div> <!--otherSet end-->
+            
+   <div class="row-btns" style="margin:25px 0 40px 0;">
+        <a href="javascript:;" class="btns btn-s2 btn-c1">保 存</a>
+        <a href="javascript:;" class="btns btn-s2 btn-c5">取 消</a>
+    </div>
+           
+        </div>
+    </section>
+    <footer class="main-footer">
+        <p class="copyright">Copyright &copy; 2013 天地行 All Rights Reserved.     沪ICP备08101503号</p>
+    </footer>
+</div>
+
+<div id="ac-section-template" style="display:none;">
+    <div class="row treeview-header">
+        <strong>部门名称：</strong>
+        <input id="" style="width:300px; vertical-align:middle;" type="text" name="" value="请输入部门名称">
+    </div>
+    <div class="row treeview-header">
+        <strong>组织架构树：</strong>
+    </div>
+
+        <div class="row treeview-white">
+        <ul id="treeview">
+            <li data-expanded="true">
+               <label><input type="checkbox" name="dept"/>苏宁公司</label>
+                <ul>
+                    <li data-expanded="true">
+                       <label><input type="checkbox" name="dept"/>北京分部</label>
+                        <ul>
+                            <li> <label><input type="checkbox" name="dept"/>总裁部</label>
+                                <ul>
+                                    <li><label><input type="checkbox" name="dept"/>业务部</label></li>
+                                    <li><label><input type="checkbox" name="dept"/>行政部</label></li>
+                                    <li><label><input type="checkbox" name="dept"/>采购部</label></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" name="dept"/>南京分部 </label>
+                        <ul>
+                            <li>
+                               <label><input type="checkbox" name="dept"/>采购部 </label>
+                                <ul>
+                                    <li><label><input type="checkbox" name="dept"/>家电部</label></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><label><input type="checkbox" name="dept"/>业务部</label></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="row row-btns">
+        <a href="javascript:;" class="btns btn-s2 btn-c1">确 定</a>
+        <a href="javascript:;" class="btns btn-s2 btn-c5">取 消</a>
+    </div>
+</div>
+
+<div id="ac-examine-template" style="display:none;">
+    <div class="row treeview-header">
+        <strong>审批人姓名：</strong>
+        <input id="" style="width:300px; vertical-align:middle;" type="text" name="" value="姓名 / 电话 / 邮箱">
+    </div>
+    <div class="row row-btns" style="margin:20px 0;">
+        <a href="javascript:;" class="btns btn-s2 btn-c1">确 定</a>
+        <a href="javascript:;" class="btns btn-s2 btn-c5">取 消</a>
+    </div>
+</div>
+
+<script id="personBoxTemplate" type="text/html" >
+	  <div class="personalBox">
+		   <div class="personalBox-left">
+			  <p>姓名：<em>王小二</em></p>
+			  <p>部门：<em>技术部</em></p>
+			  <p>身份证号码：<em>32083919880902788</em></p>
+			  <p>移动电话：<em>13918786997</em></p>
+		   </div>
+		   <div class="personalBox-right">
+				 <div class="picarea">
+				   <span class="boyPic"></span>
+				 </div>
+		   </div>
+	  </div>
+</script> 
+
+<script>
+
+    $(function(){
+		
+		    new PopWindow('.selSection',{
+				title:'请选择终审部门',
+				width:500
+			},"#ac-section-template").init();
+			
+			new PopWindow('.examine',{
+				title:'请选择审批人',
+				width:500
+			},"#ac-examine-template").init();
+			
+			var layer = FloatLayer({
+                trigger: $('.groupSet'),
+				type:"hover",
+                offsetY:32,
+				offsetX:0,
+                template:'#personBoxTemplate'
+            });		
+		
+
+
+        /* 因公因私 切换 */
+		
+		$(".apprPeople label").each(function(index){
+            $(this).click(function(){
+                $(".apprPeoContent .sectChange").hide();
+                $(".apprPeoContent .sectChange:eq(" + index + ")").show();
+                $(".apprPeople label").removeClass("currentStatus");
+                $(this).addClass("currentStatus");
+            });
+        });
+		
+		$(".onBusiness label").each(function(index){
+            $(this).click(function(){
+                $(".insiCont .changeCont").hide();
+                $(".insiCont .changeCont:eq(" + index + ")").show();
+                $(".onBusiness label").removeClass("currentModel");
+                $(this).addClass("currentModel");
+            });
+
+        });
+
+        /* 因公因私切换结束 */
+
+        $("#treeview").kendoTreeView({
+            change:function(e){
+                /*
+                console.log("Change", this.select());
+                console.log(this.parent(this.select()));
+                */
+            }
+
+        });
+
+        $("body").delegate(".treeview-white input[type=checkbox]","click.singleMode",function(){
+            var that = $(this);
+            var checked = that.prop("checked");
+            var li_items = that.closest("li").parents("li");
+
+            if(checked){
+                $.each(li_items,function(){
+                    $(">div input[type=checkbox]",this).prop("checked",false).attr("disabled",true);
+                });
+                /* 选中 */
+                that.closest("li").find("ul input[type=checkbox]").prop("checked",false).attr("disabled",true);
+            }else{
+                $.each(li_items,function(){
+                    $(">div input[type=checkbox]",this).attr("disabled",false);
+                });
+                that.closest("li").find("ul input[type=checkbox]").attr("disabled",false);
+
+                if($(".treeview-white input:checked").length){
+                    $(".treeview-white input[type=checkbox]:eq(0)").attr("disabled",true);
+                }
+            }
+        });
+		
+	});
+</script>
+
+</body>
+</html>
+

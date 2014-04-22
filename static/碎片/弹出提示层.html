@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta content="text/html" charset="utf-8">
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../static/css/b2b.css">
+</head>
+<body>
+
+<script type="text/html" id="promptTemplate">
+    <div class="true" style="width:250px">
+        <p>操作完成，已成功提交！</p>
+    </div>
+</script>
+
+<script type="text/javascript">
+    $.prompt=function(options){
+        var opts={autoClose:true,delay:3000,width:200,height:120,bgColor:"#000",bgOpacity:0.1,content:"",offsetX:0,offsetY:0,closeSpeed:500,openSpeed:500,effect:"fade",openEvent:$.noop,closeEvent:$.noop};
+        $.extend(opts,options);
+        var pt=$("#promptWindow");
+        function init(){
+            if(!pt.length)
+            {
+                $("body").append("<div id='promptWindow'><div id='promptWindow_bg'></div><div id='promptWindow_content'></div></div>");
+                pt=$("#promptWindow");
+                pt.css({width:opts.width+"px",height:opts.height+"px",display:"none",position:"absolute"});
+                $("#promptWindow_bg").css({background:opts.bgColor,opacity:opts.bgOpacity,width:"100%",height:"100%",zIndex:1000,filter:"alpha(opacity="+opts.bgOpacity*10+")"});
+            }
+            $("#promptWindow_content").html(opts.content).css({width:"100%",height:"100%",position:"absolute",top:0,left:0,zIndex:1001});
+        }
+
+
+        init();
+
+
+        return {
+            open:function(){
+                switch(opts.effect)
+                {
+                    case "fade":$("#promptWindow").fadeIn(opts.openSpeed,opts.openEvent);break;
+                    case "slide":$("#promptWindow").slideDown(opts.openSpeed,opts.openEvent);break;
+                    default :$("#promptWindow").show(opts.openSpeed,opts.openEvent);break;
+                }
+
+                if(opts.autoClose)
+                {
+                    setTimeout(this.close,opts.delay);
+                }
+                return this;
+            },
+            setOptions:function(options){
+                $("#promptWindow").css(options);
+                return this;
+            },
+            close:function(){
+                switch(opts.effect)
+                {
+                    case "fade":$("#promptWindow").fadeOut(opts.openSpeed,opts.openEvent);break;
+                    case "slide":$("#promptWindow").slideUp(opts.openSpeed,opts.openEvent);break;
+                    default :$("#promptWindow").hide(opts.openSpeed,opts.openEvent);break;
+                }
+                return this;
+            },
+            setContent:function(content){
+                $("#promptWindow").html(content);
+                return this;
+            },
+            center:function(){
+                $("#promptWindow").css("top",((document.documentElement.clientHeight/2)-($("#promptWindow").height()/2)+(document.body.scrollTop || document.documentElement.scrollTop)+opts.offsetY));
+                $("#promptWindow").css("left",((document.body.scrollWidth/2)-($("#promptWindow").width()/2)+opts.offsetX));
+                return this;
+            },
+            setOpacity:function(opacity){
+                $("#promptWindow_bg").css({opacity:opacity,filter:"alpha(opacity="+opacity*10+")"});
+                return this;
+            },
+            setBgColor:function(bgColor){
+                $("#promptWindow_bg").css({backgroundColor:bgColor});
+                return this;
+            }
+        }
+    }
+    var promptW=$.prompt({content:$("#promptTemplate").html(),bgOpacity:0,autoClose:false});
+    promptW.center();
+    promptW.open();
+    //setTimeout(function(){promptW.setOptions({height:80}).setOpacity(0.8)},2000)
+</script>
+</body>
+</html>

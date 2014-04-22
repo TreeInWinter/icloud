@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>登陆</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="/static/css/phase1/b2b_common.css" rel="stylesheet" />
+	<link href="/static/css/phase1/login.css" rel="stylesheet" />
+	<link href="/static/css/coin-slider-styles.css" rel="stylesheet" />
+	
+	
+    </head>
+    <body>
+	<div id="container">
+	    <div class="login_header">
+			<h1></h1>
+			<div class="nav">
+				<ul>
+					<li><a class="current" href="javascript:void(0);">网站首页</a><span class="gray">/</span></li>
+					<li><a href="javascript:void(0);">关于天地行</a><span class="gray">/</span></li>
+					<li><a href="javascript:void(0);">服务中心</a><span class="gray">/</span></li>
+					<li><a href="javascript:void(0);">联系我们</a></li>
+				</ul>
+			</div>
+	    </div>
+	    <div class="clear"></div>
+		
+		<div class="banner" >
+			<div class="slides"  id="coin-slider">
+					<a  href="javascript:void(0);"><img src="/images/banner/banner1.jpg"><span></span></a>
+					<a  href="javascript:void(0);"><img src="/images/banner/banner2.jpg"><span></span></a>
+					<a  href="javascript:void(0);"><img src="/images/banner/banner3.jpg"><span></span></a>
+					<a  href="javascript:void(0);"><img src="/images/banner/banner4.jpg"><span></span></a>
+					<a  href="javascript:void(0);"><img src="/images/banner/banner5.jpg"><span></span></a>
+			</div>
+		</div>
+		
+		
+		<div class="login">
+			<form name="loginForm" action="国内机票搜索页.html" method="get">
+			<div class="account">用户名：
+				<input type="text" class="accountinput" id="txtUserName" name="txtUserName">
+			</div>
+			<div class="password">密&nbsp;&nbsp;码：
+				<input type="password" class="passinput" id="txtPw" name="txtPw">
+			</div>
+			<div class="password">验证码：
+				<input type="text" class="yzminput" id="textfield2" name="textfield2">
+				
+			</div>
+			<div class="remember">
+				<input type="checkbox" id="checkbox" name="checkbox">
+				<label for="checkbox">记住密码</label>
+				
+			</div>
+			<div class="login-btn">
+				<input type="image" style="border-width:0px;padding-right:10px"  src="/images/login/loginbtn.png" id="Submit2" name="Submit2">
+				<a href="javascript:void(0);"><img alt="" src="/images/login/cgregbtn.png"></a>
+			</div>
+			</form>
+		</div>
+		<div class="clear"></div>
+		
+		
+		
+		<div class="cooperation">
+			<div class="cooperation_a">
+				<a title="真旅网" target="_blank" href="http://www.travelzen.com.cn/" class="last">
+					<img width="108" height="47" src="http://img.cache.10106266.com.cn/public/coop/ca1.png"></a>
+			</div>
+			<div class="cooperation_b">
+				<a title="中国东方航空" target="_blank" href="http://www.ceair.com/">
+					<img width="132" height="41" src="http://img.cache.10106266.com.cn/public/coop/cb1.png"></a>
+				<a title="中国国际航空" target="_blank" href="http://www.airchina.com.cn/">
+					<img width="132" height="41" src="http://img.cache.10106266.com.cn/public/coop/cb2.png"></a>
+				<a title="中国南方航空" target="_blank" href="http://www.csair.com/">
+					<img width="132" height="41" src="http://img.cache.10106266.com.cn/public/coop/cb3.png"></a>
+				<a title="上海航空" target="_blank" href="http://www.shanghai-air.com/">
+					<img width="132" height="41" src="http://img.cache.10106266.com.cn/public/coop/cb4.png"></a>
+				<a class="last" title="东方票务" target="_blank" href="http://www.ticket2010.com/">
+					<img width="132" height="41" src="http://img.cache.10106266.com.cn/public/coop/cb5.png"></a>
+			</div>
+		</div>
+		
+		<div class="clear"></div>
+		
+		
+		<div class="bottom">
+			<div class="copyright">
+			<p style="float:left; vertical-align:middle;"><span class="red2">建议使用IE7以上浏览器，1024*768以上分辨率</span><br>Copyright &copy; 2012 天地行  All Rights Reserved. 沪ICP备08101503号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+			<p style="float:right;">
+			<select onchange="javascript:window.open(this.options[this.selectedIndex].value)" id="select" name="select">
+				<option selected="selected">合作伙伴</option>
+				<option value="http://www.chinapnr.com/">汇付天下</option>
+				<option value="http://www.alipay.com/">支付宝</option>
+				<option value="http://www.pingan.com/">中国平安</option>
+				<option value="http://www.cpic.com.cn/cpic/index.shtml">太平洋保险</option>
+				<option value="https://www.tenpay.com/">财付通</option>
+			</select>&nbsp; &nbsp; 
+			
+			<select onchange="javascript:window.open(this.options[this.selectedIndex].value)" id="select2" name="select2">
+				<option selected="selected">友情链接</option>
+				<option value="http://www.travelzen.com">真旅网</option>
+				<option value="http://www.10106266.com">不夜城旅行网</option>
+			</select>
+			</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+		
+	</div>
+		
+		
+	<script src="/static/js/jquery.min.js"></script>
+	<script  src="/static/js/coin-slider.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#coin-slider').coinslider({ width: 618, height: 245,navigation: false,delay: 2000 });
+		});
+	</script>
+
+    </body>
+</html>

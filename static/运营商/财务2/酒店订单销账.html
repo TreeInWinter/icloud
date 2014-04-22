@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>运营商 财务 酒店订单销账</title>
+<meta charset="utf-8" />
+<link href="/static/css/kendo.common.css" rel="stylesheet" />
+<link href="/static/css/common.css" rel="stylesheet" />
+<link href="/static/css/b2b.css" rel="stylesheet" />
+<link href="/static/css/kendo.reset.css" rel="stylesheet" />
+
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/kendo.web.js"></script>
+<script type="text/javascript" src="/static/js/global.js"></script>
+
+<!--[if IE]> 
+        <link rel="stylesheet" href="/static/css/ie.css" /> 
+        <script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+        <![endif]-->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+<!-- @CLB@ -->
+</head>
+<body> 
+<div id="extHeader">
+    <div></div>
+</div>
+
+<div id="container">
+    <div class="header">
+        <h1></h1>
+        <div>
+            <span>你好,${name}</span>
+            <a href="javascript:void(0);">退出</a>
+        </div>
+        <ul id="top_menu">
+            <li><a href="javascript:void(0);">国内机票</a></li>
+            <li><a href="javascript:void(0);">国际机票</a></li>
+            <li><a href="javascript:void(0);">酒店</a></li>
+            <li><a href="javascript:void(0);">票证中心</a></li>
+            <li><a href="javascript:void(0);">财务管理</a></li>
+            <li><a href="javascript:void(0);">客户管理</a></li>
+            <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+        </ul>
+        <ol class="sub_menu">
+            <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+            <li><a href="javascript:void(0);">公司信息</a></li>
+            <li><a href="javascript:void(0);">组织架构</a></li>
+            <li><a href="javascript:void(0);">角色维护</a></li>
+            <li><a href="javascript:void(0);">基础数据</a></li>
+        </ol>
+        <div id="message">
+            <a href="javascript:void(0);">消息</a>
+            <span>New</span>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="sub_menu_bar"></div>
+    <div id="mainContent">
+        <div class="actions block">
+            <div class="col col-l">
+                <a class="item" href="#">收银处理</a> 
+                <a class="item" href="#">收银复核</a> 
+                <a class="item" href="#">收银员汇总</a> 
+                <a class="item highlight" href="#">酒店订单销账</a> 
+            </div>
+            <div class="col col-r sep-l">
+                <a href="javascript:;" class="button_secondary adaptiveButton small">
+                    <span class="left"></span>
+                    <span class="center">导入匹配</span>
+                    <span class="right"></span>
+                </a>
+            </div>
+        </div>
+
+        <div class="block1 block block-query clearfix">
+            <div class="col col-l" style="width:860px;padding-top:5px;">
+                <table>
+                    <colgroup>
+                        <col width="80">
+                        <col width="120">
+                        <col width="80">
+                        <col width="120">
+                        <col width="80">
+                        <col width="120">
+                        <col width="80">
+                        <col width="120">
+                    </colgroup>
+                    <tr>
+                        <th>订单号</th>
+                        <td><input id="" type="text" name=""></td>
+                        <th>酒店名称</th>
+                        <td><input id="" type="text" name=""></td>
+                        <th>客户名称</th> 
+                        <td><input id="" type="text" name=""></td>
+                        <th>销账状态</th>
+                        <td>
+                            <select id="" name="" data-role="dropdownlist" style="width:120px;">
+                                <option value="全部">全部</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>离店日期</th>
+                        <td colspan=3>
+                            <input class="datepicker" style="width:100px" id="" type="text" name="">
+                            至
+                            <input class="datepicker" style="width:100px" id="" type="text" name="">
+                        </td>
+                        <th>出账日期</th>
+                        <td colspan=3>
+                            <input class="datepicker" style="width:100px" id="" type="text" name="">
+                            至
+                            <input class="datepicker" style="width:100px" id="" type="text" name="">
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col col-r">
+                <button class="btns button_2_1">查 询</button>
+            </div>
+        </div>
+        <div class="block2 block block-query-result">
+            <div class="block-header clearfix">
+                <span style="float:left">
+                    <button class="btns btn-ac-blue">销账</button> 
+                </span>
+                <span style="float:right">
+                    <button class="btns btn-ac-blue">导出Excel</button> 
+                </span>
+            </div>
+            <table>
+                <colgroup>
+                    <col width="30">
+                    <col width="60">
+                    <col width="80">
+                    <col width="160">
+                    <col width="160">
+                    <col width="100">
+                    <col width="100">
+                    <col width="100">
+                    <col width="100">
+                    <col width="100">
+                    <col width="140">
+                    <col width="100">
+                    <col width="60">
+                    <col width="60">
+                    <col width="60">
+                    <col width="100">
+                </colgroup>
+                
+                <tr>
+                    <th>
+                   <input id="" type="checkbox" name="">
+                    </th>
+                    <th>操作</th>
+                    <th>销账状态</th>
+                    <th>订单号</th>
+                    <th>原订单号</th>
+                    <th>收款金额</th>
+                    <th>出账金额</th>
+                    <th>离店时间</th>
+                    <th>出账时间</th>
+                    <th>客户名称</th>
+                    <th>酒店名称</th>
+                    <th>入住人</th>
+                    <th>房型</th>
+                    <th>房间数</th>
+                    <th>间夜数</th>
+                    <th>操作员</th>
+                </tr>
+            </table>
+<script type="text/javascript">
+$(function(){
+    new GridTable('.block2 table',{
+        resizable: true,
+        scrollable:true,
+        dataSource: [{
+            c1:'030312103112260001',
+            c2:'JY4FF',
+            c3:"11,321.00",
+            c4:"CZ3211",
+            c5:"5%+100",
+            c6:"张三",
+            c7:"成人",
+            c8:"2013-12-12 20:00",
+            c9:'zhangzz'
+        },{
+            c1:'030312103112260001',
+            c2:'JY4FF',
+            c3:"11,321.00",
+            c4:"CZ3211",
+            c5:"5%+100",
+            c6:"张三",
+            c7:"成人",
+            c8:"2013-12-12 20:00",
+            c9:'zhangzz'
+        }], 
+        rowTemplate: kendo.template($("#block2-grid-row-template").html())
+    }).init(); 
+    kendo.init('body');
+});
+</script>
+
+<script type="text/x-kendo-template" id="block2-grid-row-template">
+<tr>
+<td>
+<input id="" type="checkbox" name="">
+</td>
+<td><a href="javascript:;">销账</a></td>
+<td>未销账</td>
+<td>030312103112260001</td>
+<td>030312103112260001</td>
+<td>1150.00</td>
+<td>1150.00</td>
+<td>2013-09-17</td>
+<td>2013-09-17</td>
+<td>不夜城</td>
+<td>不夜城大酒店</td>
+<td>李晓明</td>
+<td>双床</td>
+<td>1</td>
+<td>1</td>
+<td>李晓明</td>
+</tr>
+</script>
+
+
+        </div>
+
+
+
+    </div>
+
+</div>
+
+<div id="extFooter">
+    <div>
+        <p>
+        <a href="javascript:void(0);">关于我们</a>&nbsp;|
+        <a href="javascript:void(0);">微博</a>&nbsp;|
+        <a href="javascript:void(0);">服务条款</a>&nbsp;|
+        <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+        </p>
+        <p>客户服务热线:400-720-6666</p>
+    </div>
+</div>
+</body>
+</html>

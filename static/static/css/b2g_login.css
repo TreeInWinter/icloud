@@ -1,0 +1,98 @@
+.intro-cols,.login-wrapper{
+    width:1200px;
+    margin:0 auto;
+}
+
+.login-wrapper{
+    position:relative;
+    height:400px;
+    background:url(../images/b2g/banner.jpg) 50% 0 no-repeat;
+}
+
+
+.login-panel{
+    color:#fff;
+    background:rgba(0,11,23,.45);
+    background:rgb(0,11,23)\9;
+    position:absolute;
+    top:50px;
+    right:130px;
+    width:288px;
+    height:300px;
+}
+.login-panel ul{
+    padding-top:40px;
+}
+.login-panel li{
+    margin-left:20px;
+    margin-bottom:14px;
+}
+
+.input-wrap input{
+    height:34px;
+    line-height:34px\9;
+    vertical-align:middle;
+    width:234px;
+    font-size:14px;
+    padding:0 7px;
+}
+.btn-s3{
+    display:inline-block;
+    width:250px;
+    text-align:center;
+    line-height:36px;
+    vertical-align:middle;
+    font-size:16px;
+}
+.forget-password a{
+    color:#fff; 
+}
+.forget-password{
+    text-align:right;
+    padding-right:20px;
+    padding-top:8px;
+    margin-bottom:-5px;
+}
+.intro-cols{
+    background-color:#fff;
+}
+.intro-cols .more{
+    text-align:right;
+    margin-top:10px;
+}
+.intro-cols .more a{
+    color:#000;
+}
+.intro-cols .more a:hover{
+    color:#007ac2;
+    text-decoration:none;
+}
+.intro-cols .icon{
+    height:35px;
+    width:35px;
+    vertical-align:middle;
+    margin-right:10px;
+}
+.intro-cols h3{
+    font-size:24px;
+    color:#111;
+    margin-bottom:15px;
+}
+.intro-cols .col{
+    width:275px;
+    padding:25px;
+    color:#666;
+    font-size:13px;
+}
+.intro-cols .col1{
+    margin-left:110px;
+}
+.ic1{
+    background:url(../images/b2g/ic1.png) no-repeat;
+}
+.ic2{
+    background:url(../images/b2g/ic2.png) no-repeat;
+}
+.ic3{
+    background:url(../images/b2g/ic3.png) no-repeat;
+}

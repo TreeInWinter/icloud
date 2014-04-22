@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>机票 国际机票 平台建单</title>
+        <meta charset="utf-8" />
+        <link href="/static/css/common.css" rel="stylesheet" />
+        <link href="/static/css/kendo.common.css" rel="stylesheet" />
+        <link href="/static/css/kendo.gray.css" rel="stylesheet" />
+        <link href="/static/css/b2b.css" rel="stylesheet" />
+        <link href="/static/css/kendo.reset.css" rel="stylesheet" />
+        <link href="/static/css/pnr.css" rel="stylesheet">
+
+
+        <script type="text/javascript" src="/static/js/swfup/swfupload.js"></script>
+        <script type="text/javascript" src="/static/js/swfup/swfupload.queue.js"></script>
+        <script type="text/javascript" src="/static/js/swfup/handlers.js"></script>
+        <script type="text/javascript" src="/static/js/swfup/fileprogress_yysfl.js"></script>
+
+
+        <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/static/js/kendo.web.js"></script>
+        <script type="text/javascript" src="/static/js/plugins/jquery.fixedBar.js"></script>
+        <script type="text/javascript" src="/static/js/global.js"></script>
+        <script type="text/javascript" src="/static/js/flight.js"></script>
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+    <!-- @CLB@ --></head><body>  <div id="extHeader">
+    <div></div>
+</div>
+
+<div id="container">
+    <div class="header">
+        <h1></h1>
+        <div>
+            <span>你好,${name}</span>
+            <a href="javascript:void(0);">退出</a>
+        </div>
+        <ul id="top_menu">
+            <li><a href="javascript:void(0);">国内机票</a></li>
+            <li><a href="javascript:void(0);">国际机票</a></li>
+            <li><a href="javascript:void(0);">酒店</a></li>
+            <li><a href="javascript:void(0);">票证中心</a></li>
+            <li><a href="javascript:void(0);">财务管理</a></li>
+            <li><a href="javascript:void(0);">客户管理</a></li>
+            <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+        </ul>
+        <ol class="sub_menu">
+            <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+            <li><a href="javascript:void(0);">公司信息</a></li>
+            <li><a href="javascript:void(0);">组织架构</a></li>
+            <li><a href="javascript:void(0);">角色维护</a></li>
+            <li><a href="javascript:void(0);">基础数据</a></li>
+        </ol>
+        <div id="message">
+            <a href="javascript:void(0);">消息</a>
+            <span>New</span>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="sub_menu_bar"></div>
+    <div id="mainContent">
+        <div id="page-importpnr"><div class="actions block">
+                <div class="col col-r sep-l">
+                    <button class="btns btn-blue">白屏预订</button>
+                </div>
+                <span class="page-title">
+                    黑屏创建订单
+                </span>
+            </div>
+            <div class="block block1">
+                <!-- search_form -->
+                <ul class="flat-list">
+                    <li>
+                    <label class="vertical-head">客户名称</label>
+                    <input type="text" style="width:120px" />
+                    <button class="btns btn-search">查询</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="block block2">
+                <div class="gj">
+                    <table class="cv-table">
+                        <colgroup>
+                            <col width="120">
+                            <col width="800">
+                        </colgroup>
+                        
+                        <tr>
+                        <th><span class="chooseType">请选择乘客类型：</span></th>
+                        <td>
+                            <label><input data-role="ctype" data-group="a" data-index="1" type="radio" checked name="travelerType" />成人</label>
+                            <label><input data-role="ctype" data-group="a" data-index="2" type="radio" name="travelerType" />儿童</label>
+                            <label><input data-role="ctype" data-group="a" data-index="3" type="radio" name="travelerType" />学生</label>
+                            <label><input data-role="ctype" data-group="a" data-index="4" type="radio" name="travelerType" />团队</label>
+                            <label><input data-role="ctype" data-group="a" data-index="5" type="radio" name="travelerType" />其他类型</label>
+                            <span data-role="ctype-item" data-index="5" data-group="a" style="display:none;">
+                            <select name="other_type" data-role="dropdownlist" style="width:80px;">
+                                <option value="0">青年</option>
+                                <option value="1">老人</option>
+                                <option value="2">移民</option>
+                                <option value="3">海员</option>
+                                <option value="4">劳务</option>
+                            </select>
+                            </span>
+                        </td>
+                        </tr>
+                        <tr style="display:none;" data-role="ctype-item" data-group="a" data-index="2">
+                            <th>成人票号：</th>
+                            <td><input id="" style="width:180px;" type="text" name=""></td>
+                        </tr>
+                        <tr style="display:none;" data-role="ctype-item" data-group="a" data-index="3 5">
+                        <th>上传附件：</th>
+                            <td>
+                                <a href="javascript:;" class="upload-button"><span id="UploaderPlaceholder_1"></span></a>
+                                <span allowSize="5120MB" allowFile="*.jpg;*.jpeg;*.png;*.iso" class="Uploader fl-uploader">该乘客类型需传证明文件，支持上传多个<b class="fl-uploader-error">上传文件失败，请重新上传（失败原因<i class='fl-error'>&#12288;
+        <div class="fl-uploader-wrap message_ct">
+            <div class="arrow arrow_north"></div>
+            <div class="message_text fl-uploader-errfiles"></div>
+        </div></i>）</b></span>
+
+                            <p class="fl-upholder" id="UploaderProgress_1"></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <div class="row">
+                        <form action="#">
+                            <ul class="flat-list">
+                                <li class="row-title">PNR编码方式创建</li>
+                                <li>
+                                <input class="input-pnrcode" value="HYGNKR">
+                                </li>
+                                <li>
+                                <button class="btns btn-orange-n">创建订单</button> 
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                    <div class="row row2 clearfix">
+                        <form action="#">
+                            <h3 class="row-title">黑屏粘贴方式创建</h3>
+                            <div class="col1 col">
+                                <textarea name="" class="pnr-console">
+温馨提示:
+
+1. 请用您的Eterm系统提取PNR内容。
+
+2. 执行指令QTE:/航空公司，将其全部内容复制，保证准确，并粘贴到左边黑色输入框内。
+
+3. 请确保导入的PNR中所含的航段是通过正常途径获得，任何通过非法手段获取低舱位的PNR，若导致产生ADM单，将由采购商承担。
+
+4. 您需要注意的是：复制的内容必须从RT编码开始复制到QTE:/航空公司(如：QTE:/MU)，结果的所有内容。
+
+
+授权指令：RMK TJ AUTH OFFICE
+
+例如:RMK TJ AUTH SHA988
+                                </textarea>
+                                <button class="btns btn-orange-n">创建订单</button> 
+                            </div>
+                            <div>
+                                <div class="row">
+                                    <dl>
+                                        <dt>注意事项</dt>
+                                        <dd>  1.请确认您的PNR信息不包含共享航班，由于共享航班问题产生的纠纷本平台概不负责。请确保导入旅客API信息准确无误。
+                                        </dd>
+                                        <dd>
+                                        2.请勿在订票系统无任何可销售的低舱位或航班超售的情况下，通过违规手段获取航空公司的低舱位，如因此产生的所有损失和赔偿，由采购方承担。平台不承担任何责任。
+                                        </dd>
+                                        <dd>
+                                        3.仅适用Eterm编码，PNR支持HK、RR、TK、KK状态。
+                                        </dd>
+                                    </dl>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/x-kendo-template" id="salepoint-window">
+            <div>
+                <h1>
+                    建单营业点 
+                </h1> 
+            </div>
+        </script>
+
+
+</div>        </div>
+
+                </div>
+
+                <div id="extFooter">
+                    <div>
+                        <p>
+                        <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                        <a href="javascript:void(0);">微博</a>&nbsp;|
+                        <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                        <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+                        </p>
+                        <p>客户服务热线:400-720-6666</p>
+                    </div>
+                </div>
+<script type="text/javascript">
+function createSwfUpload(index,allowSize, allowFile){
+    var upload = window.swfu = new SWFUpload({
+	// Backend Settings
+	upload_url: "/php/upload.php",
+	post_params: {"name" : "testname"},
+	// File Upload Settings
+	file_size_limit : "50000MB",
+	//file_types : "*.*;",
+	//file_size_limit : allowSize ,
+	file_types : allowFile ,
+	file_types_description : "Choose Files",
+	file_upload_limit : "0",
+	file_queue_limit : "0",
+	// Event Handler Settings (all my handlers are in the Handler.js file)
+	file_dialog_start_handler : fileDialogStart,
+	file_queued_handler : fileQueued,
+	file_queue_error_handler : fileQueueError,
+	file_dialog_complete_handler : fileDialogComplete,
+	upload_start_handler : uploadStart,
+	upload_progress_handler : uploadProgress,
+	upload_error_handler : uploadError,
+	upload_success_handler : uploadSuccess,
+	upload_complete_handler : uploadComplete,
+	// Button Settingsimg/fee
+	button_placeholder_id : "UploaderPlaceholder_" + index,
+
+	button_text : '<span class="text">上  传</span>',
+	button_text_style : ".text{text-align:center;font-family:Simsun}",
+	button_text_top_padding: 4,
+
+	button_width: 71,
+	button_height: 25,
+	button_window_mode:"TRANSPARENT",
+	button_cursor: SWFUpload.CURSOR.HAND,
+	// Flash Settings
+	flash_url : "/static/flash/swfupload.swf",
+	custom_settings : {
+		progressTarget : "UploaderProgress_" + index,
+		cancelButtonId : "UploaderCancelBtn_" + index,
+		callback : function(file,serverData){
+            var tmp = $.parseJSON(serverData);
+		}
+	},
+
+	// Debug Settings
+	debug: false
+    });
+
+    return upload;
+}
+
+var uploads = [];
+
+$(function(){
+    $.role_ctype();
+        $(".Uploader").each(function(index){	
+            uploads.push(createSwfUpload(index + 1,$(this).attr("allowSize"),$(this).attr("allowFile")));
+        });
+
+        $('body').on('click','.fl-complete .progressCancel',function(){
+            $(this).closest('.progressWrapper').remove();
+        });
+
+});
+            </script>
+        </body></html>

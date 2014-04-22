@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>组织架构 组织架构和员工管理 批量调动员工 弹层</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.common.css" rel="stylesheet" />
+    <link href="../../static/css/kendo.gray.css" rel="stylesheet" />
+    <link href="../../static/css/kendo.reset.css" rel="stylesheet" />
+    <link href="../../static/css/tianjiabumentishi.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+<!-- @CLB@ --></head>
+
+
+<body>
+<div class="pldd">
+   <div class="bjdqbm_top">
+     <span>批量调动员工</span> 
+     <a href="#"> × </a>  
+   </div>
+   
+   <div class="plddyg">
+          <p class="plddyg_p">
+              <span>*</span>
+              <label>调动至：</label>
+          </p>
+          
+          <div class="ddbm">
+            <ul id="treeView">
+                        <li>不夜城集团
+                            <ul>
+                                <li>不夜城国旅
+                                    <ul>
+                                        <li>国内机票部
+                                            <ul>
+                                                <li>退票部
+                                                    <ul>
+                                                        <li>退票部一组</li>
+                                                        <li>退票部二组</li>
+                                                    </ul>
+                                                </li>
+                                                <li>出票部</li>
+                                            </ul>
+                                        </li>
+                                        <li>国际机票部</li>
+                                        <li>酒店部</li>
+                                        <li>财务部</li>
+                                    </ul>
+                                </li>
+                                <li>北京爱特博</li>
+                                <li>广州长荣</li>
+                            </ul>
+                        </li>
+                    </ul>
+          </div>
+    </div>
+    
+    <div class="buttonbianji">
+      <a class="tianjiaqueding_btn" href="#">确定 </a>
+      <a class="tianjiaquxiao_btn" href="#"> 取消</a>    
+    </div>
+
+
+</div>
+
+</body>
+</html>
+
+<script>
+    $(function() {
+        $("#treeView").kendoTreeView();
+    })
+</script>

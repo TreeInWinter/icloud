@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>验证测试</title>
+<link rel="stylesheet" href="../static/css/kendo.common.css" />
+<link rel="stylesheet" href="../static/css/kendo.gray.css" />
+<link rel="stylesheet" href="../static/css/common.css" />
+    <link rel="stylesheet" href="/static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+
+<link rel="stylesheet" href="../static/css/b2b.css" />
+<link rel="stylesheet" href="../static/css/kendo.reset.css" />
+<script type="text/javascript" src="../static/js/jquery.min.js"></script>
+<script src="/static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="/static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+
+<script type="text/javascript" src="../static/js/kendo.web.js"></script>
+<script type="text/javascript" src="../static/js/global.js"></script>
+<style type="text/css">
+
+    .example {border:1px solid #04ac00;margin:10px;padding:10px;}
+    a {display:block;width:20px;height:20px;border:1px solid blue;}
+    h3 {font-size:20px;}
+    h3,h4 {margin:10px 0;}
+</style>
+</head>
+<body>
+    <div>
+        .............<button type="button" style="width:100px;height:30px" name="v">验证</button>
+        <input type="button" name="win" value="弹出一个模态窗口" onclick="javascript:modelWindow();"/>
+    </div>
+
+    <form name="form1" action="post" novalidate onsubmit="return submitForm(this);">
+        <input type="submit" name="submit" value="提交表单"/>
+        <div id="form1" >
+            <div style="height:50px"></div>
+            <div class="example" style="position:relative;">
+                <h3>验证隐藏输入框 required</h3>
+                <input type="hidden" name="a1" required data-k-msg-position="right" data-k-msg-css="{top:10,left:20}"/>
+
+                <label>aaaaaa<label>
+                <select name="sheng" style="width:88px;" data-role="dropdownlist" required data-k-msg-position="right" data-k-msg-css="{top:10,left:20}">
+                    <option value="">请选择</option>
+                    <option value="sha">上海市</option>
+                    <option value="zj">浙江省</option>
+                    <option value="anhui">安徽省</option>
+                </select>
+
+            </div>
+            <div class="example">
+                <h3>验证只读输入框 required</h3>
+                <input type="text" name="a2"  readonly required/>
+            </div>
+            <div class="example">
+                <h4>自定义验证规则 custom1</h4>
+                <span>b1</span><input type="text" custom1 name="b1"/>
+            </div>
+            <div class="example">
+                <h3>多个 规则叠加 custom1 required  </h3>
+                <h4>多个验证规则</h4>
+                <span>b2</span><input type="text"  custom1 required name="b2" k-msg-css="{left:20}"/>
+            </div>
+
+            <div class="example">
+                <h3>定义显示错误的位置 与输入框等宽</h3>
+                <div>
+                    <span>c1</span><input type="text" k-msg-position="bottom" k-msg-css="{equalInput:true}" required name="c1"/>
+                </div>
+                <h3>定义显示错误的位置 right </h3>
+                <div>
+                    <span>c2</span><input type="text" k-msg-position="right" class="datepicker" required name="c2"/>
+                    <span>c4</span><input type="text" k-msg-position="right" class="datepicker" required name="c4"/>
+                </div>
+
+                <h3>定义显示错误的位置 以及偏移量</h3>
+                <div>
+                    <span>c3</span><input type="text" required k-msg-position="bottom" k-msg-css="{top:10,width:100}" name="c3"/>
+                </div>
+                <h3>定义错误的层级</h3>
+                <div>
+                    <span>c5</span><input type="text" required k-msg-position="bottom" k-msg-css="{top:10,zIndex:30000}" name="c5"/>
+                </div>
+            </div>
+            <div class="example">
+                <h3>自定义验证函数 at_least_one (至少选择一个)</h3>
+                <input type="checkbox" name="e1" at_least_one k-msg-position="bottom" k-msg-css="{top:20,left:20,width:100}" />成人
+                <input type="checkbox" name="e1" at_least_one k-msg-position="bottom" k-msg-css="{top:20,left:20,width:100}"/>学生
+            </div>
+            <div class="example" style="position:relative;">
+                <h3>自定义偏移量 百分比</h3>
+                <input type="checkbox" name="e2" at_least_one k-msg-position="bottom" k-msg-css="{top:'10%',left:'10%',width:100}" />审核
+                <input type="checkbox" name="e2" at_least_one k-msg-position="bottom" k-msg-css="{top:'10%',left:'10%',width:100}"/>已付款
+            </div>
+            <!--
+            <div class="example">
+                <div style="position:relative;">
+                    <div style="position:absolute;width:300px;height:100px;border:1px solid black;left:300px;top:50px;">
+                        <h3>浮层中</h3>
+                        <input type="text" name="d1[0].name" custom1 required k-msg-position="bottom"/>
+                    </div>
+                </div>
+            </div>
+            -->
+
+            <div class="example">
+                <h3>自定义 range</h3>
+                <input type="text"  name="range" range="{min:3,max:10}"  />
+            </div>
+            <div class="example">
+                <h3>验证Email</h3>
+                <input type="email" name="Email" required email class="k-textbox" />
+            </div>
+            <div class="example">
+                <h3>验证 电话号码</h3>
+                <input type="text"  name="tel" required pattern="\d{13}" />
+            </div>
+            <div class="example">
+                <h3>验证 数字范围</h3>
+                <input type="number" id="num2" class="k-textbox" min="3" max="10" name="num2" value="1" required/>
+            </div>
+            <div class="example">
+                <!--
+                <h3>另一种数字 方式</h3>
+                <input type="text" required data-role="numerictextbox"/>
+                -->
+            </div>
+
+
+            <!--<a name="test"></a>-->
+
+            <div class="example">
+                <h3>验证 textarea</h3>
+                <textarea type="text" required pattern="[\s\S]{1,10}"></textarea>
+            </div>
+
+            <div class="example">
+                <input type="text" required data-role="numerictextbox"/>
+            </div>
+        </div>
+    </form>
+
+    <script>
+var validator;
+
+
+        function modelWindow(){
+
+            var win = new PopWindow("#notexts",{
+                title:"测试窗口",
+                width:500,
+                content:"aaa"
+            }).init();
+
+            win.center().open();
+
+        };
+        $(function(){
+
+            $( ".datepicker" ).datepicker({
+                numberOfMonths:[1,2],
+                showButtonPanel :true,
+                onSelect:function(dateText,inst){
+                    console.log(inst.input);
+                    console.log(dateText);
+                    //inst.input.blur();
+                    return true;
+                }
+            });
+
+            kendo.init('body');
+            validator = $("#form1").kendoValidator({
+                messages : {
+                    required: "{0} is required",
+                    pattern: "{0} is not valid",
+                    min: "{0} should be greater than or equal to {1}",
+                    max: "{0} should be smaller than or equal to {1}",
+                    step: "{0} is not valid",
+                    email: "{0} is not valid email",
+                    url: "{0} is not valid URL",
+                    date: "{0} is not valid date",
+                    custom1 : "自定义1,必须为 1.3 - 1.5",
+                    at_least_one: function(input,validator){
+                        console.log(validator);
+                        return "至少选择一个";
+                    },
+                    range : function(input){
+                        var j = eval("(" + $(input).attr("range") + ")");
+                        return "最小"  + j.min + "  最大 " + j.max;
+                    }
+                },
+                rules : {
+                    range:function(input){
+                        var j = eval("(" + $(input).attr("range") + ")");
+                        if(parseInt(input.val()) > j.min && parseInt(input.val()) < j.max){
+                            return true;
+                        }else{
+                            return false;
+                        }
+
+                    },
+                    at_least_one:function(input){
+                        console.log(input);
+                        var flag = false;
+                        $("input[name=" + $(input).attr("name") + "]").each(function(){
+                            console.log($(this).prop("checked"));
+                            if($(this).prop("checked")){
+                                flag = true;
+                            }
+                        });
+                        console.log("at_least_one=" + flag);
+                        return flag ;
+
+                    },
+                    custom1:function(input){
+                        var v = parseFloat(input.val());
+                        if(v >= 1.3 && v <= 1.5 ){
+                            return true;
+                        }
+                        return false;
+                    }
+                },
+                stopOnFirstInvalid:false,
+                errorMsgWidthEqualInput:false
+            
+            }).data("kendoValidator");
+
+            $("button").click(function() {
+                if (validator.validate()) {
+                    console.log('验证通过')
+                } else {
+                    console.log('验证不通过');
+                }
+            });
+        });
+
+        function submitForm(f){
+            if (validator.validate()) {
+                console.log("验证不通过");
+                return ;
+            }else{
+                console.log("验证通过");
+            }
+
+            console.log("提交咯");
+            return false;
+        }
+
+    </script>
+
+</body>
+</html>

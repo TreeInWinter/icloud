@@ -1,0 +1,24 @@
+.flat-list li{
+    *display:inline;
+}
+
+.flat-list li .instr{
+    *float:left;
+}
+
+.row2774 .button_2_1{
+    *position:relative;
+}
+.block-calc .flat-list li{
+    *float:left;
+}
+.block-calc .flat-list{
+    *overflow:hidden;
+    *zoom:1;
+}
+.actions .adaptiveButton{
+    *margin-top:5px;
+}
+
+/* add annuounce */
+.uploading .k-upload-button span {position:relative;left:-6px;top:3px;}

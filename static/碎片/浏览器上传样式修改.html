@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="/static/css/store_ucenter.css">
+  <script src="/static/js/jquery.min.js"></script>
+  <script src="/static/js/global.js"></script>
+</head>
+<body>
+ <p>
+        <input id="input1" type="file" name="">
+ </p>
+
+ <p>
+        <input id="input2" type="file" name="">
+ </p>
+
+ <p>
+        <input id="input3" type="file" name="">
+ </p>
+
+ <script>
+    $('#input1').fileInput(); 
+    $('#input2').fileInput({
+        browseButton:'<b>select file</b>'
+    }); 
+    $('#input3').fileInput({
+        browseButton:false
+    }); 
+ </script>
+</body>
+</html>

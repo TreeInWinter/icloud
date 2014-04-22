@@ -1,0 +1,38 @@
+/* some helper class */
+s,u{
+    text-decoration:none;
+}
+b{
+    font-weight:normal;
+}
+.hidden{
+  display:none;
+}
+.btn{
+    cursor:pointer;
+    border:none;
+    background:none;
+    background-repeat:no-repeat;
+    font-family:inherit;
+}
+.btn:focus{
+    outline:none;
+}
+.icon{
+    display:inline-block;
+    background-repeat:no-repeat;
+}
+.hide-text{
+    overflow:hidden;
+    text-indent:100%;
+    white-space:nowrap;
+}
+.col{
+    float:left;
+}
+.clearfix:before,
+.clearfix:after { content: ""; display: table; }
+
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+/*EOF*/

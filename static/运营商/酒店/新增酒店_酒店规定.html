@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html" charset="utf-8">
+    <title>酒店 酒店维护 新增酒店 酒店规定</title>
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/b2b.css">
+    <link rel="stylesheet" href="/static/css/hotel.css">
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+<!-- @CLB@ --></head>
+<body style="background:#ffffff">
+    <table>
+        <tr>
+            <td style="width:83px;vertical-align:top"><span class="important">*</span><span class="head">宾客类型：</span></td>
+            <td>
+                <ul>
+                    <li style="position:relative;height:100px;border-bottom:1px dashed #cccccc;margin-bottom:10px">
+                        <label>
+                            <input type="checkbox">中宾
+                        </label>
+                        <div style="position:absolute;margin-left:60px;top:0;left:0">
+                            <table>
+                                <tr>
+                                    <td style="width:70px;text-align:right;vertical-align:top;padding-top:0">备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注：</td>
+                                    <td style="vertical-align:top;padding-top:0"><textarea name="" id="" style="width:463px;height:41px"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:right">入住证件：</td>
+                                    <td>内地客人携带大陆地区有效身份证</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li style="position:relative;height:100px;border-bottom:1px dashed #cccccc;margin-bottom:10px">
+                        <label>
+                            <input type="checkbox">港澳台
+                        </label>
+                        <div style="position:absolute;margin-left:60px;top:0;left:0">
+                            <table>
+                                <tr>
+                                    <td style="width:70px;text-align:right;vertical-align:top;padding-top:0">备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注：</td>
+                                    <td style="vertical-align:top;padding-top:0"><textarea name="" id="" style="width:463px;height:41px"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:right">入住证件：</td>
+                                    <td>港澳客人携带回乡证，台湾客人携带台胞证</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li style="position:relative;height:100px;margin-bottom:10px">
+                        <label>
+                            <input type="checkbox">外宾
+                        </label>
+                        <div style="position:absolute;margin-left:60px;top:0;left:0">
+                            <table>
+                                <tr>
+                                    <td style="width:70px;text-align:right;vertical-align:top;padding-top:0">备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注：</td>
+                                    <td style="vertical-align:top;padding-top:0"><textarea name="" id="" style="width:463px;height:41px"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:right">入住证件：</td>
+                                    <td>外宾携带有效护照</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><span class="head">儿童标准：</span></td>
+            <td>
+                <label>
+                    <input type="checkbox">年龄
+                </label>
+                <select>
+                    <option value="请选择" selected="">请选择</option>
+                    <option value="16岁以下">16岁以下</option>
+                    <option value="15岁以下">15岁以下</option>
+                    <option value="14岁以下">14岁以下</option>
+                    <option value="13岁以下">13岁以下</option>
+                    <option value="12岁以下">12岁以下</option>
+                    <option value="11岁以下">11岁以下</option>
+                    <option value="10岁以下">10岁以下</option>
+                    <option value="9岁以下">9岁以下</option>
+                    <option value="8岁以下">8岁以下</option>
+                    <option value="7岁以下">7岁以下</option>
+                    <option value="6岁以下">6岁以下</option>
+                </select>
+                <label>
+                    <input type="checkbox">身高
+                </label>
+                <select>
+                    <option value="请选择" selected="">请选择</option>
+                    <option value="160公分以下">160公分以下</option>
+                    <option value="150公分以下">150公分以下</option>
+                    <option value="140公分以下">140公分以下</option>
+                    <option value="130公分以下">130公分以下</option>
+                    <option value="120公分以下">120公分以下</option>
+                    <option value="110公分以下">110公分以下</option>
+                    <option value="100公分以下">100公分以下</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><span class="head">宠物：</span></td>
+            <td>
+                <label><input name="pet" type="radio">不可带宠物</label>
+                <label><input name="pet" type="radio">可带宠物</label>
+            </td>
+        </tr>
+        <tr>
+            <td><span class="important">*</span><span class="head">入住时间：</span></td>
+            <td>
+                <select>
+                    <option value="请选择" selected="">请选择</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                </select>
+                <span class="important">*</span><span class="head">退房时间：</span>
+                <select>
+                    <option value="请选择" selected="">请选择</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                </select>
+                <span class="important">*</span><span class="head">保留时间：</span>
+                <select>
+                    <option value="请选择" selected="">请选择</option>
+                    <option value="19:00">19:00</option>
+                    <option value="20:00">20:00</option>
+                    <option value="21:00">21:00</option>
+                    <option value="22:00">22:00</option>
+                    <option value="23:00">23:00</option>
+                    <option value="23:30">23:30</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><span class="important">*</span><span class="head">变更/取消：</span></td>
+            <td>
+                <div>
+                    入住前<input type="text">天<input type="text">点/
+                    <select>
+                        <option value="请选择">请选择</option>
+                        <option value="全部房费" selected="">全部房费</option>
+                        <option value="全部房费的一半">全部房费的一半</option>
+                        <option value="首晚房费">首晚房费</option>
+                    </select>
+                    <a href="javascript:;" class="otherbutton">添加</a>
+                </div>
+                <div>
+                    入住前1天12点之前更改或取消，不收取任何费用；入住前1天的12点之后变更或取消，酒店将扣除首晚房费。
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td><span></span></td>
+            <td>
+                <label>
+                    <input type="checkbox">默认政策条款
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td><span></span></td>
+            <td>
+                <p>未入住且事前未申请取消，将不会获得退款；</p>
+                <p>已入住提前退房，请电话或邮件与客服联系，客服将尽快与酒店确认并为您办理</p>
+            </td>
+        </tr>
+        <tr>
+            <td><span></span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><span></span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><span></span></td>
+            <td></td>
+        </tr>
+
+    </table>
+    <div style="text-align:right">
+        <a href="javascript:;" class="button_1_2">保&nbsp;存</a>
+        <a href="javascript:;" class="button_2_2 close">取&nbsp;消</a>
+    </div>
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("a.close").click(function(){
+                window.parent.$("span.k-i-close").trigger("click")
+            })
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 国内-首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.store.css" />
+    <link rel="stylesheet" href="/static/css/toolkit.css"/>
+    <link rel="stylesheet" href="/static/css/store_v2/store.css"/>
+    
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+    
+      <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="customerCenterContainer off">
+    <div class="customerCenterButton">
+        <div>用户中心</div>
+    </div>
+    <div class="customerCenterItemsContainer">
+        <div class="customerCenterItemsPanel">
+            <i></i>
+            <ul>
+                <li class="cc_orderManagerment"><div>订单管理</div></li>
+                <li class="cc_e-wallet"><div>电子钱包</div></li>
+                <li class="cc_statisticalReport"><div>统计报表</div></li>
+                <li class="cc_customerService"><div>客户服务</div></li>
+                <li class="cc_notice"><div>公告</div></li>
+                <li class="cc_message"><div>消息</div></li>
+                <li class="cc_onlineService"><div>在线客服</div></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="headBG">
+    <header class="main-header">
+        <a class="logo" href="/"><h1>天地行</h1></a>
+        <nav class="main-nav">
+            <ul class="clearfix">
+                <li class="active"><a herf="#">国内机票</a></li>
+                <li><a herf="#">国际机票</a></li>
+                <li><a herf="#">保险</a></li>
+                <li><a herf="#">酒店</a></li>
+                <li><a herf="#">机 + 酒</a></li>
+                <li><a herf="#">旅游</a></li>
+                <li><a herf="#">订单<i class="orderNum">10</i> </a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+<div class="internalSearchingBG clearfix">
+    <div class="annPrompt">
+        <a href="#" style="top: 0px;">免费机票大作战 第一波甜蜜来袭2！</a>
+        <a href="#" style="top: 0px;">免费机票大作战 第一波甜蜜来袭3！</a>
+        <a href="#" style="top: 0px;">免费机票大作战 第一波甜蜜来袭4！</a>
+        <a href="#" style="top: 0px;">免费机票大作战 第一波甜蜜来袭1！</a>
+    </div>
+    <script>
+        $(function(){
+            var slideMsgEve=setInterval(slideMessage,3000);
+            $(".annPrompt").hover(function(){
+                        clearInterval(slideMsgEve);
+                    },
+                    function(){
+                        slideMsgEve=setInterval(slideMessage,3000);
+                    }
+            );
+
+            function slideMessage()
+            {
+                $(".annPrompt a").animate({"top":"-22px"},"1000")
+                setTimeout(function(){
+                    $(".annPrompt").append($(".annPrompt a:first").remove());
+                    $(".annPrompt a").css({"top":"0"});
+                },1200);
+            }
+        })
+    </script>
+</div>
+<div class="main-wrapper">
+        <section class="querytab querytab-domestic">
+            <div class="querytab-wrapper col clearfix">
+            <aside class="querytab-controller">
+            <ul>
+                <li><b data-role="ctype" data-index="1" data-group="qtab" class="current"> 机票预定</b></li>
+                <li><b data-role="ctype" data-index="2" data-group="qtab">PNR导入</b></li>
+                <li><a href="#"><b>询价单</b></a></li>
+            </ul>
+            </aside>
+            <div class="querytab-content col">
+                <div class="querytab-flight" data-role="ctype-item" data-index="1" data-group="qtab">
+                        <ul>
+                            <li class="trip_type gap">
+                            <strong>航程类型</strong>
+                            <label><input type="radio" data-role="ctype" data-group="trip_type" data-index="c1" name="flight_type" checked/><span>单程</span></label>
+                            <label><input type="radio" class="isDouble" data-role="ctype" data-group="trip_type" data-index="c1" name="flight_type" /><span>往返</span></label>
+                            </li>
+                            <li class="round_trip clearfix">
+                            <div  class="single_trip" data-role="ctype-item" data-index="c1" data-group="trip_type">
+                            <b class="xchange">换</b>
+                            <table>
+                                <colgroup>
+                                    <col class="col1">
+                                    <col class="col2">
+                                    </colgroup>
+                                <tr>
+                                    <td>
+                                    <label><span class="text">出发城市</span><input style="width:145px;" class="city_ac" type="text" name="" /></label>
+                                    </td>
+                                    <td>
+                                    <label><span class="text">出发日期</span><input style="width:145px;" placeholder="yyyy-mm-dd" type="text" name="" class="datepicker" /></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    <label><span class="text">到达城市</span><input style="width:145px;" class="city_ac" type="text" name="" /></label>
+                                    </td>
+                                    <td>
+                                    <label class="return_date disabled"><span class="text">返程日期</span><input type="text" disabled name="" placeholder="yyyy-mm-dd" style="width:145px;" class="datepicker" /></label>
+                                    </td>
+                                </tr>
+                            </table>
+                            </div>
+
+                            <h4 class="underline-title"><span><i class="icon icon-arrows"></i>高级搜索</span></h4>
+                            <table class="advanced_search clearfix">
+                                <colgroup>
+                                    <col class="col1">
+                                    <col class="col2">
+                                    </colgroup>
+                                <tr>
+                                    <td>
+                                    <label><span class="text">舱位等级</span><select data-role="dropdownlist" style="width:145px;">
+                                            <option selected="" value="经济舱">经济舱</option>
+                                            <option value="超级经济舱">超级经济舱</option>
+                                            <option value="商务舱">商务舱</option>
+                                            <option value="头等舱">头等舱</option>
+                                        </select>
+                                    </label>
+                                    </td>
+                                        <td>
+                                    <label><span class="text">航空公司</span><input style="width:145px;" data-role="combobox" data-filter="contains" data-suggest="true" placeholder="编号/中文" data-text-field="text" data-value-field="value"  data-source='[{ text: "南航", value: "8U" }, { text: "国航", value: "BK" }]' class="sel_airlines" />
+
+                                        </label>
+
+                                </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    <label><span class="text">起飞时间</span><select data-role="dropdownlist" style="width:145px;">
+                                            <option>00:00-02:00</option>
+                                            <option>00:20-04:00</option>
+                                            <option>00:40-06:00</option>
+                                        </select>
+                                    </label>
+                                    </td>
+                                    <td>
+                                    <label class="sail_type"><input type="radio" checked="" name="type" />全部</label>
+                                    <label class="sail_type"><input type="radio" name="type"/>直飞</label>
+                                    <label class="sail_type"><input type="radio" name="type"/>中转</label>
+                                    </td>
+                                </tr>
+                            </table>
+                            </li>
+                        </ul>
+
+                            <div class="btn_area">
+                                <button type="button" class="btn btn-c1 btn-s1">搜  索</button>
+                            </div>
+                </div>
+
+                <div class="querytab-pnr" data-role="ctype-item" data-index="2" data-group="qtab" style="display:none;">
+                    <ul class="black_booking">
+                        <li class="passenger gap">
+                        <span class="subline">乘客类型</span>
+                        <label><input type="radio" name="passenger_type" data-role="ctype" data-group="passenger_type" checked /><span>成人</span></label>
+                        <label><input type="radio" name="passenger_type" data-role="ctype" data-group="passenger_type" data-index="c1" /><span>儿童</span></label>
+                        <label><input type="radio" name="passenger_type" data-role="ctype" data-group="passenger_type" /><span>团队</span></label>
+                        </li>
+
+                        <li class="passenger gap" data-role="ctype-item" data-group="passenger_type" data-index="c1" style="display:none;">
+                        <span class="subline">儿童情况</span>
+                            <label><input type="radio" data-role="ctype" data-index="1" data-group="chd_detail" name="withType" checked value="PNR"/><span>成人PNR</span></label>
+                            <label><input type="radio" data-role="ctype" data-index="2" data-group="chd_detail" name="withType" value="orderCode"/><span>成人订单号</span></label>
+                            <label data-role="ctype-item" data-index="1" data-group="chd_detail">请输入成人PNR: <input type="text" id="withTypePnr" style="width:80px"/></label>
+                            <label data-role="ctype-item" data-index="2" data-group="chd_detail" style="display:none;">请输入成人订单号: <input type="text" id="withTypeOrderCode" style="width:106px"/></label>
+                            </li>
+
+                        <li class="ways clearfix">
+                        <div class="col">
+                        <p class="way-console">
+                            <span class="subline">导入PNR</span>
+                            <input type="text" placeholder="请输入6位PNR编码" class="input-pnr">
+                            <span class="invalid-text">PNR和黑屏必须填写一个</span>
+                        </p>
+                        <textarea class="black-paste">
+使用方法:
+1. 请使用您的Eterm系统提取PNR内容。
+2. 再执行PAT:A指令,将全部内容复制,并粘贴到黑色输入框内。
+3. 团队从RT:N/编码开始复制到PAT:A结果的所有内容。
+4. 根据航空公司出票要求,PNR内容中必须备注手机号码。
+5. 注意:复制的内容建议从RT编码开始复制到PAT:A结果的所有内容。儿童PNR编码,请走儿 童订单专用通道。
+</textarea>
+                        <div class="btn_area">
+                              <button type="button" class="btn btn-c1 btn-s1">创建订单</button>
+                        </div>
+                        </div>
+                    <div class="col pnr-notes">
+                        <strong class="text2">注意事项：</strong>
+<ol>
+    <li class="text3">重要更新提示：各航司预留编码取消输入CT项，按照OSI项格式输入联系方式。<br> 指令：OSI 航空公司代码 CTCT您的手机号码（一个PNR只允许出现一个OSI项。<br>   例如：OSI MU CTCT138*****888</li>
+    <li>支持成人单程、往返程、联程、缺口程及团队PNR编码导入。</li>
+    <li>该PNR姓名组正确。</li>
+    <li>航段组正确、舱位状况正确。</li>
+    <li class="text3">每个乘客均有真实的SSR FOID 项输入。</li>
+    <li>该PNR不能包含票价组项，如FC/FN/FP。</li>
+    <li>JD航空，一个PNR只允许一位乘机人。</li>
+</ol>
+                    </div>
+
+
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="querytab-sheet"></div>
+            </div>
+            </div>
+        </section>
+
+<script type="text/x-kendo-template" id="city_popup">
+<div id="gn-tabstrip" class="tcy_tabstrip">
+<span class="tcy_title">
+    热门城市/国家（支持中文名/拼音/英文名/三字码）
+</span>
+<ul>
+<li id="hot_city" class="k-state-active">热门</li>
+# for (var i=0; i<data.group.length; i++ ) { #
+<li>#= data.group[i] #</li>
+# } #
+</ul>
+<div id="hot_city_tab">
+<ul class="tcy_list clearfix">
+
+# for(var j=0;j<hotcitylist.length;j++){ #
+# var citylist_item = hotcitylist[j] #
+<li class="item" title="#= citylist_item.code #" data-code="#= citylist_item.code #">#= citylist_item.name #</li>
+# } #
+</ul>
+</div>
+
+# for(var i=0;i<data.citylist.length;i++){ #
+# var citylist_item = data.citylist[i] #
+<div class="city_tab">
+<ul class="tcy_list clearfix">
+  # for(var k=0;k<data.group[i].length;k++){ #
+    <li class="tcy_list_sep">#= data.group[i].split('')[k] #</li>
+    # for(var j=0;j<citylist_item.value.length;j++){ #
+        # var citylist_value_item = citylist_item.value[j]; #
+        # if(citylist_value_item.py.slice(0,1) == data.group[i].split('')[k]) {#
+            <li class="item" title="#= citylist_value_item.code #" data-code="#= citylist_value_item.code #">#= citylist_value_item.name #</li>
+        # } #
+    # } #
+  # } #
+</ul>
+</div>
+
+# } #
+</div>
+</script>
+
+
+
+<script>
+
+
+$(function(){
+    $.role_ctype({
+        changeClass:'current'
+    });
+
+    $('.input-pnr').on('blur',function(){
+        $(this).addClass('invalid');
+        $('.invalid-text').show();
+    });
+
+    $('.black-paste').on('focus',function(){
+        $('.uploader-wrapper').hide();
+    });
+
+    $('.querytab').on('click','.uploadComplete .progressCancel',function(){
+         $(this).closest('.progressWrapper').remove();
+    });
+
+    $('.querytab').on('click','.progressCancel',function(){
+         if($('.querytab .progressWrapper').length<1){
+                $('.uploader-wrapper').hide();
+         }
+    });
+
+
+    $('body').on('click','.fl-complete .progressCancel',function(){
+        $(this).closest('.progressWrapper').remove();
+    });
+
+    $('.top_title input').on('change',function(){
+        var li = $(this).closest('li');
+        li.addClass('selected');
+        li.siblings().removeClass('selected');
+    });
+
+    $('.ac-add-line').bind('click',function(){
+        var container = $('.muti_trip tbody');
+        var html = kendo.template($('#ac-add-line-template').html())({});
+        if(container.find('tr').length>5) return
+        container.append(html);
+        // kendo.init(container);
+        // container.find('[type=file]').eq(-1).kendoUpload(uploadsettings)
+        reorder();
+        createCityAc(container.find('tr').last().find('.city_ac'));
+    });
+
+    $('body').delegate('.ac-remove-line','click',function(){
+        var t = $(this);
+        if (t.closest('table').find('tr').length <= 2){
+            //return alert('只剩一条了');
+            return;
+        }
+        t.closest('tr').remove();
+        reorder();
+    });
+
+    function reorder(){
+        $('.index_num').each(function(i){
+            var t = $(this);
+            t.text(i+1);
+        });
+    }
+
+    function createCityAc(ele){
+        CityAutocomplete({
+            template: "#city_popup",
+            input: ele,
+            width: 200,
+            // autocomplete:{
+            //     dataSource:{
+            //         transport:{
+            //             read:{
+
+            //             }
+            //         }
+            //     },
+            //     placeholder:'三字吗/城市'
+            // },
+            // 以@分割热门非热门，以;分割条目，以|分割三字码拼音和中文
+            url:'/static/js/data.txt',
+            group: ["热门","GHJ", "ABCDEF", "KLMN", "PQSTW", "XYZ"]
+        });
+    }
+
+    createCityAc(".city_ac");
+
+    kendo.init('body');
+
+    $('.trip_type [type=radio]').on('change',function(){
+        var that = $(this);
+        if(that.hasClass('isDouble') && that.is(':checked')){
+            $('.return_date').removeClass('disabled');
+            $('.return_date input').prop('disabled',false);
+        }else{
+            $('.return_date').addClass('disabled');
+            $('.return_date input').prop('disabled',true);
+        }
+    });
+
+});
+
+</script>
+
+    
+<section class="main-body clearfix"> <!--body start-->
+      
+   <section class="home_flight">
+       <div class="firstModuleContent clearfix"> <!--firstModuleContent start-->
+             <div class="salePriceFlight">
+                  <div class="salePriceTitle clearfix">
+                       <h3>特价国内机票</h3>
+                       <ul class="airWay">
+                           <li class="current">单程</li>
+                           <li>往返</li>
+                       </ul>
+                       <a href="javascript:void(0);" class="more">
+                            更多&nbsp;>>
+                       </a>
+                  </div>
+                  <div class="flightPice">
+                        <ul class="flightInfoList">
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">呼和浩特&nbsp;<i class="connector">—</i>&nbsp;西双版纳</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">10-06</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">北京&nbsp;<i class="connector">—</i>&nbsp;纽约</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">10-06</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">北京&nbsp;<i class="connector">—</i>&nbsp;纽约</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">10-06</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">北京&nbsp;<i class="connector">—</i>&nbsp;纽约</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">10-06</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">北京&nbsp;<i class="connector">—</i>&nbsp;纽约</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">10-06</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">北京&nbsp;<i class="connector">—</i>&nbsp;纽约</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">10-06</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">北京&nbsp;<i class="connector">—</i>&nbsp;纽约</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">10-06</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">北京&nbsp;<i class="connector">—</i>&nbsp;纽约</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">10-06</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">北京&nbsp;<i class="connector">—</i>&nbsp;纽约</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">10-06</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">北京&nbsp;<i class="connector">—</i>&nbsp;纽约</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">10-06</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">北京&nbsp;<i class="connector">—</i>&nbsp;纽约</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">10-06</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">北京&nbsp;<i class="connector">—</i>&nbsp;纽约</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">10-06</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">北京&nbsp;<i class="connector">—</i>&nbsp;纽约</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">10-06</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">北京&nbsp;<i class="connector">—</i>&nbsp;纽约</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">10-06</div>
+                                </a>
+                            </li>
+                            <li class="soldOutLi">
+                                 <a href="javascript:void(0);">
+                                    <h4 class="place">北京&nbsp;<i class="connector">—</i>&nbsp;纽约</h4>
+                                    <h4 class="priceNumber noColor"><em>￥</em>522</h4>
+                                    <div class="dateTime">10-06</div>
+                                    <div class="soldOut"><b>售  罄</b></div>
+                                 </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">北京&nbsp;<i class="connector">—</i>&nbsp;纽约</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">10-06</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">北京&nbsp;<i class="connector">—</i>&nbsp;纽约</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">10-06</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">北京&nbsp;<i class="connector">—</i>&nbsp;纽约</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">10-06</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">北京&nbsp;<i class="connector">—</i>&nbsp;纽约</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">10-06</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">北京&nbsp;<i class="connector">—</i>&nbsp;纽约</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">10-06</div>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="flightInfoList" style="display:none;">
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">呼和浩特&nbsp;<i class="goBackPic"></i>&nbsp;西双版纳</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">04.09&nbsp;<i class="dateGoBackPic"></i>&nbsp;04.12</div>
+                                </a>                                    
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">上海&nbsp;<i class="goBackPic"></i>&nbsp;昆明</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">04.09&nbsp;<i class="dateGoBackPic"></i>&nbsp;04.12</div>
+                                </a>                                    
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">上海&nbsp;<i class="goBackPic"></i>&nbsp;昆明</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">04.09&nbsp;<i class="dateGoBackPic"></i>&nbsp;04.12</div>
+                                </a>                                    
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">上海&nbsp;<i class="goBackPic"></i>&nbsp;昆明</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">04.09&nbsp;<i class="dateGoBackPic"></i>&nbsp;04.12</div>
+                                </a>                                    
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">上海&nbsp;<i class="goBackPic"></i>&nbsp;昆明</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">04.09&nbsp;<i class="dateGoBackPic"></i>&nbsp;04.12</div>
+                                </a>                                    
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">上海&nbsp;<i class="goBackPic"></i>&nbsp;昆明</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">04.09&nbsp;<i class="dateGoBackPic"></i>&nbsp;04.12</div>
+                                </a>                                    
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">上海&nbsp;<i class="goBackPic"></i>&nbsp;昆明</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">04.09&nbsp;<i class="dateGoBackPic"></i>&nbsp;04.12</div>
+                                </a>                                    
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">上海&nbsp;<i class="goBackPic"></i>&nbsp;昆明</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">04.09&nbsp;<i class="dateGoBackPic"></i>&nbsp;04.12</div>
+                                </a>                                    
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">上海&nbsp;<i class="goBackPic"></i>&nbsp;昆明</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">04.09&nbsp;<i class="dateGoBackPic"></i>&nbsp;04.12</div>
+                                </a>                                    
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">上海&nbsp;<i class="goBackPic"></i>&nbsp;昆明</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">04.09&nbsp;<i class="dateGoBackPic"></i>&nbsp;04.12</div>
+                                </a>                                    
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">上海&nbsp;<i class="goBackPic"></i>&nbsp;昆明</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">04.09&nbsp;<i class="dateGoBackPic"></i>&nbsp;04.12</div>
+                                </a>                                    
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">上海&nbsp;<i class="goBackPic"></i>&nbsp;昆明</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">04.09&nbsp;<i class="dateGoBackPic"></i>&nbsp;04.12</div>
+                                </a>                                    
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">上海&nbsp;<i class="goBackPic"></i>&nbsp;昆明</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">04.09&nbsp;<i class="dateGoBackPic"></i>&nbsp;04.12</div>
+                                </a>                                    
+                            </li>
+                            <li class="soldOutLi">
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">上海&nbsp;<i class="goBackPic"></i>&nbsp;昆明</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">04.09&nbsp;<i class="dateGoBackPic"></i>&nbsp;04.12</div>
+                                    <div class="soldOut"><b>售  罄</b></div>
+                                </a>                                    
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">上海&nbsp;<i class="goBackPic"></i>&nbsp;昆明</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">04.09&nbsp;<i class="dateGoBackPic"></i>&nbsp;04.12</div>
+                                </a>                                    
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">上海&nbsp;<i class="goBackPic"></i>&nbsp;昆明</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">04.09&nbsp;<i class="dateGoBackPic"></i>&nbsp;04.12</div>
+                                </a>                                    
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">上海&nbsp;<i class="goBackPic"></i>&nbsp;昆明</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">04.09&nbsp;<i class="dateGoBackPic"></i>&nbsp;04.12</div>
+                                </a>                                    
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">上海&nbsp;<i class="goBackPic"></i>&nbsp;昆明</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">04.09&nbsp;<i class="dateGoBackPic"></i>&nbsp;04.12</div>
+                                </a>                                    
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">上海&nbsp;<i class="goBackPic"></i>&nbsp;昆明</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">04.09&nbsp;<i class="dateGoBackPic"></i>&nbsp;04.12</div>
+                                </a>                                    
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <h4 class="place">上海&nbsp;<i class="goBackPic"></i>&nbsp;昆明</h4>
+                                    <h4 class="priceNumber"><em>￥</em>522</h4>
+                                    <div class="dateTime">04.09&nbsp;<i class="dateGoBackPic"></i>&nbsp;04.12</div>
+                                </a>                                    
+                            </li>
+                        </ul>
+                  </div>
+             </div>
+             <div class="serviceCommitment">  <!--right start-->
+                  <div style="background:#fff;">
+                          <h3 class="serviceTitle">服务承诺</h3>
+                          <ul class="commitmentContent clearfix">
+                              <li>
+                                  <figure>
+                                       <a href="javascript:void(0);"><img src="../../static/images/store/service_03.png"/></a>
+                                       <p>航协认证</p>
+                                  	   <div class="fadinShallowOut"></div>
+                                  </figure>
+                              </li>
+                              <li>                      
+                                  <figure>
+                                       <a href="javascript:void(0);"><img src="../../static/images/store/service_05.png"/></a>
+                                       <p>低价保障</p>
+                                  	   <div class="fadinShallowOut"></div>
+                                  </figure>
+                              </li>
+                              <li>                      
+                                  <figure>
+                                       <a href="javascript:void(0);"><img src="../../static/images/store/service_07.png"/></a>
+                                       <p>安全支付</p>
+                                  	   <div class="fadinShallowOut"></div>
+                                  </figure>
+                              </li>
+                              <li>                      
+                                  <figure>
+                                       <a href="javascript:void(0);"><img src="../../static/images/store/service_12.png"/></a>
+                                       <p>出票保证</p>
+                                  	   <div class="fadinShallowOut"></div>
+                                  </figure>
+                              </li>
+                              <li>                      
+                                  <figure>
+                                       <a href="javascript:void(0);"><img src="../../static/images/store/service_13.png"/></a>
+                                       <p>极速退款</p>
+                                  	   <div class="fadinShallowOut"></div>
+                                  </figure>
+                              </li>
+                              <li>                      
+                                  <figure>
+                                       <a href="javascript:void(0);"><img src="../../static/images/store/service_14.png"/></a>
+                                       <p>金牌服务</p>
+                                  	   <div class="fadinShallowOut"></div>
+                                  </figure>
+                              </li>
+                          </ul>
+                  </div>
+                  <h3 class="serviceTitle">官方微信</h3>
+                  <ul class="WeChat clearfix">
+                      <li><img src="../../static/images/store/indexTwoDimensionCode.jpg"/></li>
+                      <li><img src="../../static/images/store/appStore.jpg" title="即将上线，敬请期待" /></li>
+                  </ul>
+             </div> <!--right end-->
+       </div>  <!--firstModuleContent start--> 
+   </section>
+   
+   <section class="home_flight">
+       <div class="commonModule">
+           <ul class="showPic clearfix">
+               <li>
+                   <div>
+                        <a href="javascript:void(0);" style="width:580px;">
+                            <img src="../../static/images/store/indexPic_03.png" style="width:580px; height:220px;" />
+                            <i class="bgShade"></i>
+                        </a>
+                   </div>
+                   <div class="bottomPic">
+                        <a href="javascript:void(0);"><img src="../../static/images/store/indexPic_10.png" /><i class="bgShade"></i></a>
+                        <a href="javascript:void(0);"><img src="../../static/images/store/indexPic_12.png" /><i class="bgShade"></i></a>
+                   </div>
+               </li>
+               <li class="rigtPic">
+                   <div>
+                       <a href="javascript:void(0);">
+                            <img src="../../static/images/store/indexPic_05.png" style="width:373px; height:120px;" />
+                            <i class="bgShade"></i>
+                       </a>
+                   </div>
+                   <div>
+                       <a href="javascript:void(0);">
+                           <img src="../../static/images/store/indexPic_08.png" style="width:373px; height:220px;" />
+                           <i class="bgShade"></i>
+                       </a>
+                   </div>
+               </li>
+           </ul> 
+       </div>
+   </section>
+
+   <section class="home_flight">
+       <div class="commonModule">
+           <h3 class="titleFont">航空公司推荐</h3>
+           <ul class="aiRcompanyRecommend clearfix">
+               <li>
+                   <i class="logo_HO"></i>
+                   <em>吉祥航空</em>
+               </li>
+               <li>
+                   <i class="logo_GS"></i>
+                   <em>天津航空</em>
+               </li>
+               <li>
+                   <i class="logo_PN"></i>
+                   <em>西部航空</em>
+               </li>
+               <li>
+                   <i class="logo_8L"></i>
+                   <em>祥鹏航空</em>
+               </li>
+               <li>
+                   <i class="logo_CZ"></i>
+                   <em>南方航空</em>
+               </li>
+               <li>
+                   <i class="logo_MU"></i>
+                   <em>东方航空</em>
+               </li>
+               <li>
+                   <i class="logo_HU"></i>
+                   <em>海南航空</em>
+               </li>
+               <li>
+                   <i class="logo_VD"></i>
+                   <em>深圳航空</em>
+               </li>
+               <li>
+                   <i class="logo_3U"></i>
+                   <em>四川航空</em>
+               </li>
+               <li>
+                   <i class="logo_9C"></i>
+                   <em>春秋航空</em>
+               </li>
+               <li>
+                   <i class="logo_SC"></i>
+                   <em>山东航空</em>
+               </li>
+               <li>
+                   <i class="logo_BK"></i>
+                   <em>奥凯航空</em>
+               </li>
+               <li>
+                   <i class="logo_EU"></i>
+                   <em>成都航空</em>
+               </li><li>
+                   <i class="logo_CA"></i>
+                   <em>中国国航</em>
+               </li>
+           </ul>
+       </div>
+   </section>
+<script>
+    $(function(){
+        $(".airWay li").each(function(index){
+            $(this).click(function(){
+                $(".salePriceFlight .flightInfoList").hide();
+                $(".salePriceFlight .flightInfoList:eq(" + index + ")").show();
+                $(".airWay li").removeClass("current");
+                $(this).addClass("current");
+            });
+        });
+		
+		
+		$(".commitmentContent li").mouseenter(function(){
+			$(".fadinShallowOut",this).animate({opacity:0.4},40).animate({opacity:0},40);
+		});
+		
+		
+    });
+</script>
+
+</section>
+
+
+ <!--body end-->
+<footer class="main-footer">
+    <div class="footerContainer">
+        <div class="xssl bottomQuickNav">
+            <i class="ico"></i>
+            <h3>新手上路</h3>
+            <ul>
+                <li><a href="#">用户手册</a></li>
+                <li><a href="#">QQ客服</a></li>
+                <li><a href="#">常见问题</a></li>
+            </ul>
+        </div>
+        <div class="zffs bottomQuickNav">
+            <i class="ico"></i>
+            <h3>支付方式</h3>
+            <ul>
+                <li><a href="#">支付宝支付</a></li>
+                <li><a href="#">汇付支付</a></li>
+                <li><a href="#">财付通支付</a></li>
+            </ul>
+        </div>
+        <div class="sjfw bottomQuickNav">
+            <i class="ico"></i>
+            <h3>商家服务</h3>
+            <ul>
+                <li><a href="#">客服电话</a></li>
+                <li><a href="#">航司电话</a></li>
+                <li><a href="#">出票时间</a></li>
+            </ul>
+        </div>
+        <div class="gywm bottomQuickNav">
+            <i class="ico"></i>
+            <h3>关于我们</h3>
+            <ul>
+                <li><a href="#">天地行介绍</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+        <div class="kfrx bottomQuickNav last">
+            <i class="ico"></i>
+            <h4>
+                客服热线<br/>
+                <h2>400-720-6666</h2>
+            </h4>
+        </div>
+        <center class="copyright clearfix">
+            Copyright &copy; 2014 天地行 All Rights Reserved.     沪ICP备08101503号
+        </center>
+    </div>
+</footer>
+<div class="partnerContainer">
+    合作伙伴：
+    <i class="travelsky partnerIcon"></i>
+    <i class="elong partnerIcon"></i>
+    <i class="qunar partnerIcon"></i>
+    <i class="ctrip partnerIcon"></i>
+    <i class="gta partnerIcon"></i>
+</div>
+</div>
+
+<script>
+    $(function(){
+        $(".airWay li").each(function(index){
+            $(this).click(function(){
+                $(".salePriceFlight .flightInfoList").hide();
+                $(".salePriceFlight .flightInfoList:eq(" + index + ")").show();
+                $(".airWay li").removeClass("current");
+                $(this).addClass("current");
+            });
+
+        });
+        $(".customerCenterButton").hover(
+                function(){
+                    $(this).animate(
+                            {width:"100%"},
+                            200,
+                            function(){$(".customerCenterContainer").addClass("expanded");}
+                    )},
+                function(){
+                    if($(".customerCenterContainer").hasClass("off")){
+                        $(this).animate(
+                                {width:"90px"},
+                                200,
+                                function(){
+                                    $(".customerCenterContainer").removeClass("expanded");
+                                }
+                        )
+                    }
+                }
+        )
+        $(".customerCenterButton").click(function(){
+            if(!$(".customerCenterContainer").hasClass("off"))
+            {
+                $(".customerCenterContainer").addClass("off");
+                $(".customerCenterItemsPanel").hide();
+                $(this).animate({width:"90px"},200,function(){$(".customerCenterContainer").removeClass("expanded");})
+                return false;
+            }
+            $(".customerCenterButton").animate({width:"100%"},"fast");
+            $(".customerCenterItemsPanel").slideDown("fast");
+            $(".customerCenterContainer").removeClass("off");
+
+        })
+    });
+</script>
+
+</body>
+</html>
+

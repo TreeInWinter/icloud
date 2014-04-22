@@ -1,0 +1,855 @@
+.querytab-content{
+    float: left;
+    display:block;
+    background-color:#f4f4f4;
+    color:#333;
+}
+.querytab{
+	width:980px;
+	margin:0 auto;
+	position:relative;
+}
+.querytab li{
+    list-style: none;
+}
+.querytab ul{
+    padding:0;
+    margin:0;
+}
+.querytab-controller{
+    position:absolute;
+    left:0;
+    width:100px;
+    color:#ccc;
+    background-color: #283559;
+    height:100%;
+}
+.querytab-controller a,.querytab-controller a:hover{
+	color:#ccc;
+}
+.querytab-controller ul{
+    margin-top:25px;
+}
+.querytab-wrapper{
+    top: -370px;
+    position: absolute;
+    padding-left:100px;
+    font-family:'Microsoft Yahei';
+    font-size:10px;
+    box-shadow:0 0 10px 0px #aaa;
+}
+.querytab h4{
+    margin:15px 0;
+}
+.querytab b{
+    cursor:pointer;
+}
+.querytab .k-dropdown-wrap{
+    border-color:#ccc;
+}
+.querytab-controller b{
+    display:block;
+    cursor:pointer;
+    padding:10px 0 10px 18px;
+}
+.querytab-controller b:hover{
+	color:#fff;
+}
+.querytab-controller{
+    font-size:1.6em;
+}
+.querytab-controller .current{
+    color:#fff;
+    background-color:#e03716;
+}
+.querytab-flight{
+    padding:25px;
+    font-size:1.4em;
+}
+.querytab-flight strong{
+    font-weight: 500;
+}
+.querytab input[type=text]{
+    width: 140px;
+    background-color:#fff;
+    border: 1px solid #ccc;
+    height:28px;
+    font-size:14px;
+    padding:0;
+    text-indent:5px;
+    font-family:arial 'Microsoft Yahei';
+}
+.querytab input[type=text]:focus{
+    border-color:#7bcee8;
+    color:#333;
+    outline:none;
+}
+
+.querytab input[type=radio]{
+    margin-right:3px;
+}
+.querytab .datepicker{
+	width:144px;
+}
+.querytab .k-widget{
+    border:none;
+}
+.querytab .sel_airlines{
+    border:0 !important;
+}
+.querytab .k-select{
+    border:none;
+}
+.querytab .k-input{
+    height:25px;
+    padding-top:3px;
+}
+.querytab .tel {
+    background: url(../../images/store/i6.png) no-repeat 0 50%; 
+    padding-left:24px;
+    color:#ff6500;
+}
+.querytab .text1{
+    color:#666;
+    top: 3px;
+    font-size:12px;
+    position:absolute;
+    right:0;
+}
+.advanced_search .col1{
+    width: 260px;
+}
+.advanced_search .sail_type{
+    margin-right:20px;
+}
+.round_trip .text{
+    margin-right:10px;
+}
+.advanced_search td{
+    padding-bottom:12px;
+}
+.btn-c1{
+    background-color:#fc6c26;
+    color:#fff;
+}
+.btn-s1{
+    width:120px;
+    height:36px;
+    font-size:18px;
+}
+
+.row-add-line{
+    background-color:#f8f8f8;
+    border:1px dashed #c9c9c9;
+    text-align:center;
+    height:28px;
+    line-height:28px;
+    margin-right: 33px;
+}
+.row-add-line:hover{
+    border-color:#23a8e8;
+    background-color:#e5f5fd;
+}
+.muti_add{
+    display: block;
+    color:#1ba1e2;
+}
+.trip_type{
+    margin-right: 36px;
+    position:relative;
+    margin-bottom:20px;
+}
+.trip_type strong{
+    margin-right:15px;
+}
+.trip_type label{
+    margin-right:15px;
+}
+.icon-plus{
+    margin-right:5px;
+    width:13px;
+    height:13px;
+    background: url(../../images/store/querytab.png) -31px 0 no-repeat;
+}
+.querytab a{
+    text-decoration:none;
+}
+.querytab .k-i-arrow-s{
+    background: url(../../images/store/querytab.png) -48px 5px no-repeat;
+}
+.ac-remove-line{
+    text-indent:200%;
+    width:14px;
+    height:14px;
+    display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+    background: url(../../images/store/querytab.png) 0 0 no-repeat;
+}
+.ac-remove-line:hover{
+    background-position:-14px 0;
+}
+.btn_area{text-align:right;}
+.index_num{
+    font: bold 16px arial;
+    color:#ee330e;
+}
+.muti_trip table{
+    table-layout:fixed;
+}
+.muti_trip .col1{width: 25px;}
+.muti_trip .col2{width: 75px;}
+.muti_trip .col3{width:200px;}
+.muti_trip .col4{width: 75px;}
+.muti_trip .col5{width:200px;}
+.muti_trip .col6{width: 75px;}
+.muti_trip .col7{width:170px;}
+.muti_trip .col8{width:20px;}
+.muti_trip td,.single_trip td{
+    padding-bottom:12px;
+}
+.single_trip .col1{width: 260px;}
+.single_trip .col2{width: 215px;}
+.single_trip table{
+    table-layout:fixed;
+}
+.single_trip{
+    position:relative;
+}
+.icon-arrows{
+    position:absolute;
+    width:9px;
+    height:5px;
+    background: url(../../images/store/querytab.png) -64px 0 no-repeat;
+    left:50%;
+    top:21px;
+    margin-left:-5px;
+}
+.underline-title span{
+    position:relative;
+    border-bottom:2px solid #e03716;
+    line-height:20px;
+}
+.return_date.disabled{
+    color:#999;
+}
+.return_date.disabled input{
+    opacity:.6;
+}
+
+.xchange{
+    top: 15px;
+    left: 218px;
+    color:#fff;
+    text-indent: 10px;
+    line-height: 45px;
+    width:27px;
+    height:47px;
+    position:absolute;
+    background:url(../../images/store/xchange_type.png) no-repeat;
+}
+
+/*pnr 导入*/
+
+
+/* tips 验证样式 */
+.message_ct {position:relative ;min-width:100px;background-color: #fdfef4;border: 1px solid #ffb596;padding:5px;}
+.message_ct .arrow {background:url(../../images/store/messge_direct2.png) no-repeat 0 0;width:9px;height:9px;position:absolute;}
+.message_ct .message_text {color:#636363;}
+.message_ct .arrow_west {top:50%;left:-7px;margin-top:-4px;}
+.message_ct .arrow_north {top:-5px;left:50%;margin-left:-4px;background-position:0 -20px;height:5px;}
+.message_ct .arrow_east {top:50%;right:-7px;margin-top:-4px;background-position:0 -10px;}
+.message_ct .arrow_south {bottom:-5px;left:50%;background-position:0 -26px;height:5px;}
+
+.uploader-wrapper{
+	display: none;
+	width: 375px;
+	z-index: 3;
+	background-color: #f4f4f4;
+	right:0;
+	top:0;
+	height:100%;
+	position:absolute;
+}
+.uploader-inner{
+    padding-top: 95px;
+}
+.querytab-pnr{
+    padding:25px;
+    font-size:1.4em;
+}
+.querytab-pnr input.input-pnr{
+	border:1px solid #7bcee8;
+	width:410px;
+}
+.passenger label{
+	margin-right:10px;
+}
+.subline{
+	padding-right: 5px;
+	font-weight: 500;
+}
+.querytab-pnr .input-pnr.invalid{
+    border-color:#ff4e00;
+}
+.way-console .invalid-text{
+    padding: 0 5px;
+    line-height: 28px;
+    top: 1px;
+    right: 1px;
+    position: absolute;
+    display:none;
+    background-color:#feefe9;
+    color:#ff4e00;
+}
+.pnr-notes{
+	line-height: 22px;
+	font-size: 12px;
+	width: 330px;
+	padding: 14px 0 0 40px;
+	color:#949494;
+}
+.pnr-notes .text2{
+	left: -20px;
+	position: relative;
+	color:#343434;
+}
+.upload-button {
+    vertical-align: middle;
+    display: inline-block;
+    height: 28px;
+    width: 55px;
+    border:1px solid #b0dffd;
+    background:#e0f3ff no-repeat;
+}
+
+.text3{
+	color:#b16923;
+	font-size:12px;
+}
+.black-paste{
+	margin: 10px 0  0 26px;
+	padding:10px 20px;
+	width:410px;
+	height:210px;
+	resize:none;
+	background-color:#141010;
+	color:#6c6b6b;
+	line-height:24px;
+}
+.black-paste:focus{
+	color:lime;
+}
+.way-console{
+	padding-bottom:10px;
+	border-bottom:1px dashed #ccc;
+	position:relative;
+}
+.ways{
+	position: relative;
+	margin-top:10px;
+}
+.ways .btn_area{
+	position:absolute;
+	left: 615px;
+	bottom: 3px;
+}
+.pnr-notes li{
+	list-style-type: decimal;
+}
+/** override style of swfuploader*/
+.progressBarInProgressWrapper{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.inProgress .progressBarInProgressWrapper{
+    top: -1px;
+    left: -1px;
+    border: solid 1px #76cce8;
+}
+
+.progressWrapper {
+	width: 170px;
+	overflow: hidden;
+    float:left;
+    line-height:23px;
+    padding-right:10px;
+    padding-bottom:5px;
+}
+
+.progressContainer {
+	height: 23px;
+	position: relative;
+	border: solid 1px #aaa;
+	background-color: #fff;
+	/* overflow: hidden; */
+    color:#666;
+}
+
+.progressContainer:hover{
+    border-color:#76cce8;
+}
+/* Message */
+.black_booking .message {
+	margin: 1em 0;
+	padding: 10px 20px;
+	border: solid 1px #FFDD99;
+	background-color: #FFFFCC;
+	overflow: hidden;
+}
+/* Error */
+.black_booking .red {
+	border: solid 1px #B50000;
+	background-color: #FFEBEB;
+}
+
+/* Current */
+.black_booking .green {
+	border: solid 1px #DDF0DD;
+	background-color: #EBFFEB;
+}
+
+/* Complete */
+.black_booking .blue {
+	background-color: #fff;
+}
+
+.progressName {
+	z-index: 1;
+	font-size: 12px;
+	width: 140px;
+    
+	position: relative;
+	padding-left:5px;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+    float:left;
+}
+
+.progressBarInProgress,
+.progressBarComplete,
+.progressBarError {
+	font-size: 0;
+	width: 0%;
+	height: 100%;
+}
+
+.progressBarInProgress{
+	background-color: #bcedfd;
+}
+.progressBarComplete {
+	background-color: #bcedfd;
+}
+
+.progressBarError {
+	width: 100%;
+	background-color: red;
+	visibility: hidden;
+}
+
+.progressBarStatus {
+    display:none;
+	width: 60px;
+    overflow:hidden;
+	text-align: left;
+	white-space: nowrap;
+    float:left;
+}
+
+a.progressCancel {
+	z-index: 1;
+	position: relative;
+	font-size: 0;
+	display: block;
+	height: 23px;
+	width: 20px;
+	background: url(../../images/store/querytab.png)  6px -13px no-repeat;
+	float: right;
+}
+.progressContainer:hover .progressCancel{
+	background-position: -8px -13px;
+}
+
+
+
+/* -- SWFUpload Object Styles ------------------------------- */
+.swfupload {
+	vertical-align: middle;
+}
+
+.fl-upholder{
+}
+.fl-uploader{
+    font-size: 12px;
+    position:relative;
+    color:#999;
+}
+.fl-uploader-error{
+    margin-bottom: 10px;
+    position:absolute;
+    top:63px;
+    left:0;
+    display:none;
+    background-color: #f4f4f4;
+    font-weight:normal;
+    width: 305px;
+    color: #ff4e00;
+}
+.fl-uploader-wrap{
+    display:none;
+    position:absolute;
+    left:-8px;
+    top:22px;
+    z-index: 2;
+}
+.fl-error{
+    font-style: normal;
+    cursor:pointer;
+    padding:2px 5px;
+    background: url(../../images/store/icon_warn2.png) 50% 50% no-repeat;
+    position:relative;
+}
+.fl-error:hover .fl-uploader-wrap{
+    display:block;
+}
+.fl-uploader-errfiles{
+    width:225px;
+    color:#333;
+    line-height:20px;
+}
+.black_booking .message_ct .arrow_north{
+    left:20px;
+}
+
+
+
+/*国内机票*/
+.querytab-domestic .pnr-notes{
+	margin-top:-50px;
+}
+.text3{
+	color:#b16923;
+}
+
+/*酒店*/
+.querytab-hotel-content{
+	padding: 20px 40px 20px 30px;
+}
+.querytab-hotel-content .text1{
+	top: 20px;
+	right: 40px;
+}
+.querytab-hotel-content th{
+	padding:7px 0;
+	font-size:1.4em;
+}
+.querytab-hotel-content td{
+	padding:7px 0;
+}
+.querytab-hotel-content h4{
+	font-size:1.6em;
+}
+.querytab-hotel-content h3{
+	color: #636363;
+	font-size:1.8em;
+}
+.querytab-hotel input[type=text]{
+	width:150px;
+}
+.querytab-hotel .col1,.querytab-hotel .col3{
+	width:75px
+}
+.querytab-hotel .col2{
+	width:170px;
+}
+.querytab-hotel .col4{
+}
+.querytab-hotel .tel{
+	font-size:14px;
+}
+.querytab-hotel-content ul{
+	margin:20px 0 10px 0;
+}
+
+
+.querytab-hotel .querytab-controller b{
+	padding-top:15px;
+	padding-bottom:15px;
+}
+
+
+
+/* 日历样式 */
+.datepicker {height:22px;background:url(../../images/store/i8.png) no-repeat 97% center #ffffff;} 
+.datepicker.dpShort{background:none}
+.ui-datepicker {background:#ef633d none;font-size:12px;padding:5px;}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+    border:0;
+    border-top-right-radius:0;
+    border-top-left-radius:0;
+    border-bottom-left-radius:0;
+    border-bottom-right-radius:0;
+}
+
+.ui-datepicker-daywrapper{
+    font-weight:normal;
+    /*text-indent:-50px;*/
+    display:inline-block;
+    /*width:0px;*/
+    *position:relative;
+    *top:-4px;
+    margin-left: -60px;
+    width: 60px;
+    text-align: left;
+}
+.ui-datepicker .ui-datepicker-buttonpane{
+    margin:0;
+}
+.ui-datepicker-calendar thead{
+    color:#999;
+    background-color:#f1f1f1;
+}
+#ui-datepicker-div{
+    box-shadow:0px 2px 10px #777;
+}
+#ui-datepicker-div .ui-datepicker-calendar{
+    width:100%;
+    margin:0 !important;
+}
+.ui-datepicker-calendar td{
+    border:none;
+}
+.ui-datepicker-calendar td span{
+    text-align:center;
+    display:block;
+    line-height:28px;
+    height:28px;
+    width:28px;
+    margin:0 auto;
+    padding:0;
+}
+.ui-datepicker-calendar td a{
+    margin:0 auto;
+    display:block;
+    text-align:center;
+    line-height:28px;
+    height:28px;
+    width:28px;
+    padding:0;
+}
+.ui-datepicker-calendar-wrap{
+    border-right:1px solid #d2d2d2;
+    height:200px;
+    background:url(../../images/store/month.jpg) no-repeat 50% 0;
+}
+
+.ui-datepicker-calendar-wrap-m0{
+    background-position:50% 0px;
+}
+.ui-datepicker-calendar-wrap-m1{
+    background-position:50% -200px;
+}
+.ui-datepicker-calendar-wrap-m2{
+    background-position:50% -400px;
+}
+.ui-datepicker-calendar-wrap-m3{
+    background-position:50% -600px;
+}
+.ui-datepicker-calendar-wrap-m4{
+    background-position:50% -800px;
+}
+.ui-datepicker-calendar-wrap-m5{
+    background-position:50% -1000px;
+}
+.ui-datepicker-calendar-wrap-m6{
+    background-position:50% -1200px;
+}
+.ui-datepicker-calendar-wrap-m7{
+    background-position:50% -1400px;
+}
+.ui-datepicker-calendar-wrap-m8{
+    background-position:50% -1600px;
+}
+.ui-datepicker-calendar-wrap-m9{
+    background-position:50% -1800px;
+}
+.ui-datepicker-calendar-wrap-m10{
+    background-position:50% -2000px;
+}
+.ui-datepicker-calendar-wrap-m11{
+    background-position:50% -2200px;
+}
+
+/* 日历头 */
+.ui-widget-header {
+    background: #ef633d;
+    border:none;
+    border-radius:0;
+}
+
+.ui-datepicker td {
+    padding:0px;
+}
+
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+    width:40%;
+}
+/* 前后按钮 */
+.ui-datepicker-week-end{
+    color:#ff6500;
+}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next{
+    cursor:pointer;
+    background:none;
+    border:0;
+    padding:0;
+    opacity:1 !important;
+    outline: 0;
+}
+.ui-widget-header .ui-icon{
+    margin:0 auto;
+    display:block;
+    height:11px;
+    width:6px;
+    background: url(../../images/store/s1.png) no-repeat;
+}
+.ui-state-disabled.ui-datepicker-prev .ui-icon{
+    background-position:0 0 !important;
+}
+.ui-state-disabled.ui-datepicker-next .ui-icon{
+    background-position:-6px 0px !important;
+}
+.ui-datepicker-prev-hover .ui-icon{
+    background-position:0 -11px;
+    margin-left:-7px !important;
+    margin-top:-7px !important;
+}
+.ui-datepicker-next .ui-icon{
+    background-position:-6px 0;
+}
+.ui-datepicker-next-hover .ui-icon{
+    background-position:-6px -11px;
+    margin-left:-9px !important;
+    margin-top:-7px !important;
+}
+.ui-datepicker-calendar-wrap {
+    background-color:#fff;
+    margin:0;
+}
+.ui-datepicker-calendar-wrap td {
+    color:#5c5c5c;
+    padding: 0px !important ;
+}
+.ui-datepicker-calendar-wrap .ui-datepicker-calendar,.ui-datepicker-multi .ui-datepicker-group table {
+    margin: 0 auto;
+    text-align:center;
+    border-collapse: collapse ; 
+    width:220px;
+}
+.ui-datepicker-title{
+    color:#fff;
+}
+.ui-datepicker-multi .ui-datepicker-group-first .ui-datepicker-calendar {
+    margin-right:10px !important;
+}
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-calendar {
+    margin-left:10px !important; 
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: none;
+    border:none;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    background:none;
+    background-color:#f66e19;
+    color:#ffffff;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: none;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    background:none;
+    color:#ffffff;
+}
+.ui-datepicker-calendar .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+    background: none; 
+    font-weight: normal;
+}
+.ui-datepicker-calendar .ui-state-hover{
+    height:26px;
+    line-height:26px;
+    width:26px;
+    border:1px solid #ccc;
+}
+.ui-datepicker-calendar .ui-state-highlight{
+    border:0;
+}
+.ui-datepicker-buttonpane{
+    display:none;
+}
+
+.fastival {
+    height:26px;
+    width:28px;
+    text-indent:-1000em;
+    display:block;
+    border:none;
+    cursor:pointer;
+    background-image:url(../../images/store/s2.png) !important;
+    background-repeat:no-repeat;
+}
+.ui-state-hover .fastival{
+    margin-top:-1px;
+    margin-left:-1px;
+    border:none;
+}
+.today { background-position : 50% 0px !important; }
+.yuandan { background-position : 50% -30px !important;}
+.chuxi { background-position : 50% -60px !important;}
+.chunjie { background-position : 50% -90px !important;}
+.yuanxiao { background-position : 50% -120px !important;}
+.qingming { background-position : 50% -150px !important;}
+.wuyi { background-position : 50% -180px !important;}
+.duanwu { background-position : 50% -210px !important;}
+.zhongqiu { background-position : 50% -240px !important;}
+.guoqing { background-position : 50% -270px !important;}
+
+.ui-state-highlight .today{
+    background-color:#ff6500;
+}
+
+.ui-datepicker-time-wrap {
+    position:relative;
+    padding: 5px 0;
+}
+
+.ui-datepicker-time-i {
+    width:120px;
+    margin: 0px auto;
+}
+
+.ui-datepicker-time-i input[type=text] {
+    text-align:center;
+}
+
+.ui-datepicker-time {
+    border:1px solid #aaaaaa;
+    background:#fff;
+    position:absolute;
+    width:220px;
+}
+
+.ui-datepicker-time-wrap td {text-align:center;}
+.ui-datepicker-time-wrap td a {text-align:center;}
+.ui-datepicker-time-wrap td a:hover {
+    background-color:#f66e19;
+    color:#ffffff;
+}
+
+body{padding:100px;}
+

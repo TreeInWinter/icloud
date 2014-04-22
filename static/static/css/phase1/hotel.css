@@ -1,0 +1,2652 @@
+@CHARSET "UTF-8";
+
+.listContent{margin:0 auto; width:65%;margin-top:5px}
+.listContent .listSubway{padding:10px;border:1px solid #d9e8ff;background:#f9fbff;margin-bottom:10px}
+.listContent .listSubway .lefticon{width:32px;height:38px;background:url(../pic/hotels2012.png) no-repeat -33px -885px;display:inline-block;float:left}
+.listContent .listSubway .rightcon{width:680px;float:right}
+.listContent .listSubway .rightcon li{float:left;color:#999;word-break:break-all;white-space:nowrap}
+.listContent .listSubway .rightcon li.actve a{background:#36c;color:#fff}
+.listContent .listSubway .rightcon li strong{font-weight:bold;color:#666}
+.listContent .tab{height:29px;border-bottom:2px solid #ff5600}
+.listContent .tab li{width:120px;height:27px;_height:28px;float:left;margin-left:5px;text-align:center}
+.listContent .tab li.list{border:1px solid #ff5600;background:url(../pic/hotels2012x.png?t=201305162157) repeat-x 0 -34px;margin-left:10px}
+.listContent .tab li.list a{width:120px;height:27px;display:block;background:url(../pic/hotels2012.png?t=201305162157) no-repeat -25px -46px;text-indent:20px;line-height:28px;color:#fff;text-decoration:none}
+.listContent .tab li.map{border:1px solid #f5bd97;border-bottom:1px solid #f9d2bb;background:url(../pic/hotels2012x.png?t=201305162157) repeat-x 0 -66px}
+.listContent .tab li.map a{width:120px;height:27px;display:block;background:url(../pic/hotels2012.png?t=201305162157) no-repeat -25px -74px;text-indent:15px;line-height:28px;color:#333;text-decoration:none}
+.listContent .simpleList{width:87px;height:23px;border:1px solid #c9c9c9;margin-top:1px;float:right;background:url(../pic/hotels2012x.png?t=201305162157) repeat-x 0 -205px}
+.listContent .simpleList a{width:60px;height:23px;text-decoration:none;color:#333;line-height:23px;background:url(../pic/hotels2012.png?t=201305162157) no-repeat -34px -496px;padding-left:28px;display:inline-block}
+.listContent .sort{border:1px solid #ccc;border-top:0;height:34px;background:url(../pic/hotels2012x.png?t=201305162157) repeat-x 0 -123px}
+.listContent .sort ul{width:215px;float:left;margin:8px 0 0 10px;display:inline}
+.listContent .sort li{width:50px;height:17px;border:1px solid #d9d9d9;border-right:0;float:left;text-align:center;background:url(../pic/hotels2012x.png?t=201305162157) repeat-x 0 -162px;color:#4a4a4a;line-height:16px;cursor:pointer}
+.listContent .sort li.def{background:url(../pic/hotels2012x.png?t=201305162157) repeat-x 0 -184px}
+.listContent .sort li.rbor{border-right:1px solid #d9d9d9}
+.listContent .sort li a{display:block;color:#4a4a4a;text-decoration:none}
+.listContent .sort li a.c{color:#ccc;cursor:not-allowed}
+.listContent .sort li a.up{background:url(../pic/hotels2012.png?t=201305162157) no-repeat 39px -258px}
+.listContent .sort li a.upl{background:url(../pic/hotels2012.png?t=201305162157) no-repeat 39px -271px}
+.listContent .sort li a.down{background:url(../pic/hotels2012.png?t=201305162157) no-repeat 39px -244px}
+.listContent .sort li a.downl{background:url(../pic/hotels2012.png?t=201305162157) no-repeat 39px -283px}
+.listContent .sort .preOptions{width:370px;*width:380px;float:right;height:20px;margin-top:7px;margin-right:10px;text-align:right;color:#666}
+.listContent .sort .preOptions a.view{color:#F30;font-size:12px;margin-left:20px}
+.listContent .sort .preOptions label{margin:0 7px 0 5px;*margin:0 4px 0 5px}
+.listContent .sort .preOptions input{vertical-align:-2px;*vertical-align:middle;margin-right:5px}
+.listContent .hotelInfo{border:1px solid #FF7203;margin-top:5px;padding:8px;_height:1%;float:left}
+.listContent .newSort{border:1px solid #ccc;border-top:1px solid #fe5500}
+.listContent .tabx{height:29px;position:relative}
+.listContent .tabx li{width:120px;height:27px;_height:28px;text-align:center}
+.listContent .tabx li.list{border:1px solid #ff5600;background:#fff;border-bottom:1px solid #fff;position:absolute;left:5px;bottom:-1px}
+.listContent .tabx li.list a{width:120px;height:27px;display:block;background:url(../pic/hotels2012.png?t=201305162157) no-repeat -30px -646px;text-indent:20px;line-height:30px;color:#333;text-decoration:none}
+.listContent .tabx li.map{position:absolute;left:130px;bottom:-1px}
+.listContent .tabx li.map a{width:120px;height:27px;display:block;background:url(../pic/hotels2012.png?t=201305162157) no-repeat -40px -673px;line-height:28px}
+.listContent .mvtSort{border:0;border-top:2px solid #6f9ed8;background:#f8f8f8;height:33px}
+.listContent .mvtSort ul{width:270px;margin:0}
+.listContent .mvtSort li{padding:7px 8px;border:0;border-right:1px dashed #ccc;background:0}
+.listContent .mvtSort li.rbor{border-right:1px dashed #ccc}
+.listContent .mvtSort li.def{background:#fff5e9;border:1px solid #ffbe60;border-top:0}
+.listContent .cuxiao{border:1px solid #FF7203;margin-top:30px;position:relative}
+.listContent .cuxiao .cuk{display:none;width:330px;height:28px;border-top:2px solid #10a200;border-right:1px solid #10a200;position:absolute;top:-28px;right:-1px;background:#fff}
+.listContent .cuxiao .cuk span.cukbg{width:23px;height:28px;display:inline-block;background:url(../pic/hotels2012.png?t=201305162157) no-repeat -32px -546px;position:absolute;left:-23px;top:-2px}
+.listContent .cuxiao .cuk .ic{color:#FF7203;background:url(../pic/hotels2012.png?t=201305162157) no-repeat -39px -165px;padding-left:20px;line-height:28px;display:inline-block;width:240px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.listContent .cuxiao .cuk a.more{float:right;*float:none;*margin-left:10px;text-decoration:underline;margin-right:10px;margin-top:5px}
+.com_way dl.morePromotion dt{height:px;font-weight:bold;margin-bottom:10px;padding-bottom:5px;border-bottom:1px solid #CCC}
+.listContent .inftop{float:right;width:559px}
+.listContent .hotelInfo .picwk{width:160px;height:110px;position:relative;float:left;margin-right:11px}
+.listContent .hotelInfo .pic{float:left}
+.listContent .container .com_bigpic{z-index:10;position:absolute;left:160px;top:-45%;margin-left:10px;border:2px solid #ccc;padding:3px;background:#fff;-moz-box-shadow:2px 2px 6px #aaa;-webkit-box-shadow:2px 2px 6px #aaa;box-shadow:2px 2px 6px #aaa}
+.listContent .container .com_bigpic img{width:auto!important;height:auto!important}
+.listContent .loa{text-align:center;width:100%;height:30px;padding-top:20px}
+.listContent .hotelInfo .info{width:289px;float:left;margin-right:5px}
+.listContent .hotelInfo .info dt{font-size:14px;font-weight:bold;margin-bottom:4px}
+.listContent .hotelInfo .info dt .name{display:inline-block;max-width:210px;_width:210px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;vertical-align:middle}
+.listContent .hotelInfo .info dt .dx,.listContent .hotelInfo .info dt .medal{margin-left:10px;vertical-align:-2px;vertical-align:0\9\0;*vertical-align:middle}
+.listContent .hotelInfo .info .crown,.listContent .hotelInfo .info .diamond{display:inline-block;width:17px;height:16px;margin-right:5px;background:url(../pic/comBg.png?t=201305162157) no-repeat 0 0;vertical-align:-2px;*vertical-align:middle}
+.listContent .hotelInfo .info .diamond{background-position:-17px 0}
+.listContent .hotelInfo .info dd{line-height:19px}
+.listContent .hotelInfo a.map{width:70px;height:15px;padding-left:12px;display:inline-block;background:url(../pic/hotels2012.png?t=201305162157) no-repeat -56px -623px}
+.listContent .hotelInfo .review{width:110px;height:60px;float:left;border-left:1px solid #eaeaea;border-right:1px solid #eaeaea;padding:3px 8px}
+.listContent .hotelInfo .review .sz{font-size:18px;margin-right:5px}
+.listContent .hotelInfo .price{width:130px;float:right;color:#f60;font-size:30px;text-align:center}
+.listContent .hotelInfo .price a{color:#f60;text-decoration:none}
+.listContent .hotelInfo .price .fh{font-size:12px;margin-right:3px;font-family:Arial;vertical-align:12px}
+.listContent .hotelInfo .price .fb{font-size:12px;margin-left:3px}
+.listContent .hotelInfo .price .lcicon{width:90px;margin-left:10px;display:inline-block;display:none;height:16px;background:url(../pic/hotels2012.png) no-repeat -48px -929px;font-size:12px;color:#009030;padding-left:12px}
+.listContent .hotelInfo .price .huajia{color:#131313;font-size:14px;text-decoration:line-through;text-align:center;cursor:help}
+.listContent .hotelInfo .intr{float:right;width:560px;height:20px;line-height:18px;margin-top:2px;overflow:hidden}
+.listContent .hotelInfo .intr span{color:#808080;margin-bottom:5px}
+.listContent .hotelInfo .intr span.newPromotions{float:left;display:inline-block;max-width:310px;_width:310px;color:#10a200;background:url(../pic/hotels2012.png?t=201305162157) no-repeat -39px -170px;padding-left:20px;line-height:20px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.listContent .hotelInfo .intr .more{float:left;*vertical-align:middle}
+.listContent .hotelInfo .intr span.cf60{color:#f60}
+.listContent .hotelInfo .intr strong{color:#808080}
+.listContent .hotelInfo .fac{height:30px;line-height:25px}
+.listContent .hotelInfo .fac_xs{height:20px;line-height:20px}
+.listContent .hotelInfo .tag{display:none}
+.listContent .noResults{background:#fff7f4;border:1px solid #fee3dd;padding:10px;clear:left;margin-top:15px;display:block}
+.listContent .noResults dt{width:60px;height:68px;background:url(../pic/detailicon.png?t=201305162157) no-repeat -240px -600px;display:inline-block;float:left;margin-left:40px;display:inline}
+.listContent .noResults dd{float:left;width:600px;height:25px;margin:10px 0 0 20px;color:#666}
+.listContent .recommendation{padding:10px 0;background:url(../pic/detailicon.png?t=201305162157) no-repeat -213px -668px;padding-left:100px;font-size:14px;color:#333;margin-top:10px}
+.listContent .room{width:100%;border:0;border-collapse:collapse;margin-top:10px}
+.listContent .room .title{height:22px;border:1px solid #dde4f0;background:url(../pic/hotels2012x.png?t=201305162157) repeat-x 0 -207px;color:#556c97}
+.listContent .room tr:hover{background:#F6F9FB}
+.listContent .room td{height:36px;border-bottom:1px solid #f2f2f2}
+.listContent .room td,.room th{text-align:center}
+.listContent .room th{*border:1px solid #dde4f0;*background:url(../pic/hotels2012x.png?t=201305162157) repeat-x 0 -206px;color:#556c97}
+.listContent .room .w1{width:225px;text-align:left;padding-left:10px}
+.listContent .room .w2{width:50px}
+.listContent .room .w3{width:120px;padding-left:70px;text-align:left}
+.listContent .room .w4{width:70px}
+.listContent .room .w5{width:120px}
+.listContent .room .w6{width:70px}
+.listContent .room .pri{color:#ff7200;font-size:20px;cursor:pointer}
+.listContent .room .pri .pfh{font-family:Arial;font-size:12px;margin-right:3px}
+.listContent .room .pri .bor{border-bottom:1px dotted #f60;_display:inline-block}
+.listContent .room .pri .reduce{font-size:16px;margin:0 3px}
+.listContent .room .del{color:#bebebe;text-decoration:line-through;cursor:default}
+.listContent .room .but,.listContent .room .buth{width:50px;height:20px;display:inline-block;outline:1px solid #d16600;border:1px solid #ffcb58;text-decoration:none;*border:1px solid #d16600;*height:22px;background:#ff9804;color:#fff;font-weight:bold;line-height:20px}
+.listContent .room .but:hover{outline:1px solid #c23a00;border:1px solid #ff9400;*border:1px solid #c23a00;background:#ff7a00}
+.listContent .room .buth{outline:1px solid #aaa;border:1px solid #e8e8e8;*border:1px solid #aaa;background:#cdcdcd;color:#fff;cursor:not-allowed}
+.listContent .prompt .ic{color:#10a200;background:url(../pic/hotels2012.png?t=201305162157) no-repeat -39px -172px;padding-left:20px;margin-top:10px;float:left;margin-left:10px}
+.listContent .prompt a{width:80px;height:20px;float:right;background:url(../pic/hotels2012.png?t=201305162157) no-repeat;padding-left:18px;margin-top:5px;text-decoration:none}
+.listContent .prompt a.ck{background-position:-42px -190px}
+.listContent .prompt a.tk{background-position:-42px -206px}
+.listContent .prompt .ck span{color:#9e9e9e}
+.listContent .hotelInfo .w730{width:730px}
+.listContent .hotelInfo .helpInf{margin-left:30px;display:inline;padding:20px 0;float:left}
+.listContent .hotelInfo .helpInf dt{width:660px;float:right;font-size:14px;color:#556c97;line-height:22px;margin-bottom:8px}
+.listContent .hotelInfo .helpInf dt .title{color:#65b212;font-weight:bold}
+.listContent .hotelInfo .helpInf dt .name{color:#666;font-weight:bold}
+.listContent .hotelInfo .helpInf .icon{width:25px;height:25px;float:left;background:url(../pic/hotels2012.png?t=201305162157) no-repeat -30px -271px;display:inline-block;margin-right:10px}
+.listContent .hotelInfo .helpInf dd{width:658px;float:right;color:#556c97;font-size:14px}
+.listContent .hotelInfo .helpInf li.cls{border:1px solid #f5bd97;float:left;height:15px;line-height:12px;margin-right:5px;background:#fff;padding-left:1px;color:#ff8040}
+.listContent .hotelInfo .helpInf li.cls a{width:13px;height:13px;background:url(../pic/hotels2012.png?t=201305162157) no-repeat 0 -46px;vertical-align:middle;display:inline-block;margin:0 1px;margin-top:1px;-webkit-margin-top:-1px}
+.listContent .hotelInfo .helpInf li.cls a{vertical-align:auto}
+
+.rpList{width:100%;border:0;border-collapse:collapse;border-spacing:0;margin:auto;margin-bottom:20px;margin-top:20px}
+.rpList tr tr:hover{background:#f7f7f7}
+.rpList th{color:#556c97;height:21px;border-top:1px solid #dde4f0;border-bottom:1px solid #dde4f0;background:url(../pic/detailbg.png?t=201305162157) repeat-x 0 -197px}
+.rpList .w1{width:210px;padding-left:5px}
+.rpList .w2{width:50px;text-align:center}
+.rpList .w3{width:55px;text-align:center}
+.rpList .w4{width:205px;padding-left:5px}
+.rpList .w5{width:70px}
+.rpList th.w1{width:134px;border-left:1px solid #dde4f0;padding-left:5px}
+.rpList th.w2{width:33px;text-align:center}
+.rpList th.w3{width:55px}
+.rpList th.w4{width:200px;padding-left:5px}
+.rpList th.w5{width:75px;border-right:1px solid #dde4f0}
+
+
+.rpList td{height:35px;border-bottom:1px solid #f2f2f2}
+.rpList td .gift{width:16px;height:16px;background:url(../pic/icons.png?t=201305162157) 0 -930px no-repeat;display:inline-block;margin-left:5px;vertical-align:middle}
+.rpNtable td{border:0}
+.rpNtable td.w4{font-size:20px;font-family:Tahoma;color:#ff7200}
+.rpNtable td.w3{font-size:14px;font-family:Tahoma}
+.rpNtable td.w3 span.f12,.rpNtable td.w4 span.f12{font-size:12px;font-family:Arial}
+.rpNtable td.w4 span.f12{vertical-align:5px}
+.rpNtable td.w4 span.bor{border-bottom:1px dotted #f60;cursor:pointer;_display:inline-block}
+.rpNtable td.w4 span.f16{font-size:16px;line-height:17px;margin-left:5px;width:50px;height:15px;background:url(../pic/detailicon.png?t=201305162157) no-repeat 36px -384px;_background:url(../pic/detailicon.png?t=201305162157) no-repeat 36px -383px;display:inline-block;cursor:pointer}
+.rpNtable td.w4 span.f16:hover{background:url(../pic/detailicon.png?t=201305162157) no-repeat 36px -399px}
+.rpNtable td.w3,.rpNtable td.w3 span.f12{text-decoration:line-through;text-align:center}
+.rpNtable td.w3 span.cuhe{cursor:help}
+.rpNtable td.w3 .xhuajia{color:#666;cursor:help}
+.rpNtable td.pd25{width:190px;padding-left:25px}
+
+.rpNtable td.w5 a.look,.rpNtable td.w5 a.full {
+	background: none repeat scroll 0 0 #FF7203;
+    color: white;
+    display: inline-block;
+    font: 400 16px/24px Microsoft Yahei,宋体;
+    height: 26px;
+    text-align: center;
+    text-decoration: none;
+    width: 60px;
+}
+
+.rpNtable td.w5 a.full {
+	background: none repeat scroll 0 0 #d0d0d0;
+    color: white;
+}
+
+
+.h-brief {
+    border-top: 1px solid #E2E2E2;
+    margin:0 auto;
+}
+
+.h-brief .hotelName li h1 {
+    color: #555555;
+    float: left;
+    font: 24px/30px "Microsoft Yahei",simhei,sans-serif;
+}
+
+
+
+
+.detailBox {
+    clear: both;
+    margin: 0 auto;
+    position: relative;
+    width: 1000px;
+}
+.detailMain {
+    margin:0 auto;
+    width: 740px;
+}
+
+.crown, .diamond {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 16px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 17px;
+}
+.diamond {
+    background-position: -17px 0;
+}
+.dx {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 12px;
+    overflow: hidden;
+    width: 60px;
+}
+.dx1 {
+    background-position: -48px -65px;
+}
+.dx2 {
+    background-position: -36px -65px;
+}
+.dx3 {
+    background-position: -24px -65px;
+}
+.dx4 {
+    background-position: -12px -65px;
+}
+.dx5 {
+    background-position: 0 -65px;
+}
+.medal {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 12px;
+    overflow: hidden;
+    width: 60px;
+}
+.me-0 {
+    background-position: -60px -105px;
+}
+.me-10 {
+    background-position: -48px -105px;
+}
+.me-20 {
+    background-position: -36px -105px;
+}
+.me-30 {
+    background-position: -24px -105px;
+}
+.me-40 {
+    background-position: -12px -105px;
+}
+.me-50 {
+    background-position: 0 -105px;
+}
+.me-5 {
+    background-position: -60px -85px;
+}
+.me-15 {
+    background-position: -48px -85px;
+}
+.me-25 {
+    background-position: -36px -85px;
+}
+.me-35 {
+    background-position: -24px -85px;
+}
+.me-45 {
+    background-position: -12px -85px;
+}
+span.loading {
+    background: url("../pic/indicator.gif?t=201305162157") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 16px;
+    overflow: hidden;
+    width: 16px;
+}
+.facility_icon {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll 0 0 transparent;
+    cursor: default;
+    display: inline-block;
+    height: 20px;
+    overflow: hidden;
+    width: 22px;
+}
+.fi_pickup {
+    background-position: 0 -20px;
+}
+.fi_wifi {
+    background-position: -22px -20px;
+}
+.fi_park {
+    background-position: -44px -20px;
+}
+.fi_restaurant {
+    background-position: -66px -20px;
+}
+.fi_businessCenter {
+    background-position: -88px -20px;
+}
+.fi_broadband {
+    background-position: 0 -40px;
+}
+.fi_pool {
+    background-position: -22px -40px;
+}
+.fi_gym {
+    background-position: -44px -40px;
+}
+.fi_conference {
+    background-position: -66px -40px;
+}
+.price {
+    color: #FF7200;
+    font-family: Tahoma;
+    font-size: 20px;
+}
+.price dfn {
+    color: #555555;
+    font: 14px arial;
+    margin-right: 2px;
+    vertical-align: 5px;
+}
+.priceDesignated {
+    color: #555555;
+    cursor: default;
+    font: 12px arial;
+    margin-right: 10px;
+    text-decoration: line-through;
+}
+.price .f12 {
+    color: #666666;
+    font-size: 12px;
+}
+.iconFan {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll -137px -125px transparent;
+    border: 1px solid #FFB027;
+    color: #FF8800;
+    cursor: default;
+    display: inline-block;
+    font-size: 11px;
+    height: 13px;
+    line-height: 13px;
+    margin-top: 3px;
+    padding-left: 15px;
+    padding-right: 2px;
+    text-align: right;
+}
+.iconJian {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll -137px -145px transparent;
+    border: 1px solid #FF8800;
+    color: #FF8800;
+    cursor: default;
+    display: inline-block;
+    font-size: 11px;
+    height: 13px;
+    line-height: 13px;
+    margin-top: 3px;
+    padding-left: 15px;
+    padding-right: 2px;
+    text-align: right;
+}
+.iconYufu {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll 0 -180px transparent;
+    display: inline-block;
+    height: 15px;
+    margin-top: 3px;
+    width: 32px;
+}
+.iconDanbao {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll -32px -180px transparent;
+    display: inline-block;
+    height: 15px;
+    margin-top: 3px;
+    width: 32px;
+}
+.iconCuxiao {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll -17px -125px transparent;
+    display: inline-block;
+    height: 19px;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 16px;
+}
+.iconLibao {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll 0 -125px transparent;
+    display: inline-block;
+    height: 18px;
+    vertical-align: -4px;
+    width: 17px;
+}
+.iconLongcui {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll 0 -144px transparent;
+    display: inline-block;
+    height: 18px;
+    margin: 0 5px;
+    vertical-align: middle;
+    width: 58px;
+}
+.iconXianshiq {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll 0 -162px transparent;
+    display: inline-block;
+    height: 18px;
+    margin: 0 5px;
+    vertical-align: middle;
+    width: 58px;
+}
+.iconCu {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll -33px -125px transparent;
+    display: inline-block;
+    height: 14px;
+    margin-top: 3px;
+    vertical-align: middle;
+    width: 14px;
+}
+.iconjinriTj {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll -58px -144px transparent;
+    display: inline-block;
+    height: 18px;
+    margin: 0 5px;
+    vertical-align: middle;
+    width: 58px;
+}
+.information {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll -136px -22px transparent;
+    display: inline-block;
+    height: 14px;
+    margin-left: 3px;
+    vertical-align: middle;
+    width: 14px;
+}
+.information:hover {
+    background-position: -136px -37px;
+}
+h2.detTitle {
+    background: none repeat scroll 0 0 #F8F8F8;
+    border-top: 2px solid #BBBBBB;
+    color: #555555;
+    font: 18px/33px Microsoft Yahei,simhei,sans-serif;
+    height: 33px;
+}
+h2.detTitle span {
+    border-top: 2px solid #7AA5DA;
+    color: #4F89D0;
+    display: inline-block;
+    font: 18px/33px Microsoft Yahei,simhei,sans-serif;
+    height: 33px;
+    position: relative;
+    text-align: center;
+    top: -2px;
+    width: 100px;
+}
+h2.detTitle .more {
+    float: right;
+    font-family: Simsun,sans-serif;
+    font-size: 12px;
+}
+.breadcrumb {
+    margin: 10px auto;
+    width: 1000px;
+}
+.breadcrumb .info {
+    color: #555555;
+    float: right;
+}
+.breadcrumb .info .recent {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll 0 -200px transparent;
+    display: inline-block;
+    height: 15px;
+    margin-right: 5px;
+    overflow: hidden;
+    vertical-align: -3px;
+    width: 15px;
+}
+.toTop {
+    bottom: 20px;
+    position: fixed;
+    right: 20px;
+    width: 50px;
+}
+.toTop .but {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll -100px -189px transparent;
+    cursor: pointer;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+}
+.toTop .but:hover {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll -100px -239px transparent;
+}
+.toTop .favorites {
+    background: none repeat scroll 0 0 #999999;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 20px;
+    margin-top: 2px;
+    padding-top: 5px;
+    text-align: center;
+    width: 50px;
+}
+.toTop .favorites:hover {
+    background: none repeat scroll 0 0 #555555;
+}
+.toTop .favicon {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll -112px -289px transparent;
+    display: inline-block;
+    height: 11px;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 13px;
+}
+.toTop .fkicon {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll -138px -289px transparent;
+    display: inline-block;
+    height: 11px;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 12px;
+}
+
+.h-brief .hotelName {
+    
+}
+.h-brief .hotelName li {
+    color: #555555;
+    overflow: hidden;
+}
+.h-brief .hotelName .name {
+    line-height: 30px;
+    padding: 10px 0;
+}
+.h-brief .hotelName li h1 {
+    color: #555555;
+    float: left;
+    font: 24px/30px "Microsoft Yahei",simhei,sans-serif;
+}
+.h-brief .hotelName li .dx, .h-brief .hotelName li .medal {
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.h-brief .hotelName li .map i {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll -40px 0 transparent;
+    display: inline-block;
+    height: 14px;
+    margin-right: 3px;
+    vertical-align: -2px;
+    width: 12px;
+}
+.h-brief .hotelName li .street i {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll -55px 0 transparent;
+    display: inline-block;
+    height: 14px;
+    margin-right: 3px;
+    vertical-align: -2px;
+    width: 12px;
+}
+.h-brief .hotelPrice {
+    margin-top: 23px;
+    text-align: right;
+}
+.h-brief .hotelPrice .price {
+    color: #FF6600;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-right: 20px;
+    vertical-align: -5px;
+}
+.h-brief .hotelPrice .price .fh {
+    color: #666666;
+    font-family: Arial;
+    font-size: 12px;
+    margin-right: 3px;
+    vertical-align: 12px;
+}
+.h-brief .hotelPrice .price .fb {
+    color: #666666;
+    font-size: 12px;
+    margin-left: 3px;
+}
+.h-brief .hotelPrice .btn {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -320px 0 transparent;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font: 18px/38px "Microsoft Yahei",simhei,sans-serif;
+    height: 40px;
+    padding-left: 20px;
+    text-align: left;
+    width: 120px;
+}
+.h-brief .hotelPrice .btn:hover {
+    background-position: -320px -50px;
+}
+.h-brief .hotelPrice .btn:active {
+    background-position: -320px -100px;
+}
+.h-brief .hotelPrice .iconLastMinute {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -250px -380px transparent;
+    display: inline-block;
+    height: 32px;
+    margin: 0 10px 0 -35px;
+    overflow: hidden;
+    width: 47px;
+}
+.h-pic {
+    margin-bottom: 10px;
+}
+.h-pic .img {
+    height: 220px;
+}
+.h-pic .img .focus {
+    float: left;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    width: 310px;
+}
+.h-pic .img .manip {
+    bottom: -30px;
+    height: 30px;
+    left: 0;
+    position: absolute;
+    transition: all 0.2s ease-in 0s;
+    width: 310px;
+    z-index: 1;
+}
+.h-pic .img .manip .cor {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
+    color: #FFFFFF;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+:root .h-pic .img .manip .cor {
+    filter: none;
+}
+.h-pic .img .focus:hover .manip, .h-pic .img .focus_on .manip {
+    bottom: 0;
+}
+.h-pic .img .box .posi160 .manip {
+    width: 160px;
+}
+.h-pic .img .box .posi120 .manip {
+    width: 120px;
+}
+.h-pic .img .box .posi135 .manip {
+    width: 135px;
+}
+.h-pic .img .box .posi160:hover .manip, .h-pic .img .box .posi120:hover .manip, .h-pic .img .box .posi135:hover .manip {
+    bottom: 0;
+}
+.h-pic .img .box {
+    float: right;
+    height: 220px;
+    width: 425px;
+}
+.h-pic .img .box .top {
+    height: 110px;
+}
+.h-pic .img .box .topm {
+    height: 105px;
+    margin-top: 5px;
+}
+.h-pic .img .box .no160 {
+    height: 110px;
+    overflow: hidden;
+    width: 160px;
+}
+.h-pic .img .box .no120 {
+    height: 110px;
+    overflow: hidden;
+    width: 120px;
+}
+.h-pic .img .box .no135 {
+    height: 110px;
+    overflow: hidden;
+    width: 135px;
+}
+.h-pic .img .box .posi160 {
+    height: 110px;
+    width: 160px;
+}
+.h-pic .img .box .posi120 {
+    height: 110px;
+    width: 120px;
+}
+.h-pic .img .box .posi135 {
+    height: 110px;
+    width: 135px;
+}
+.h-pic .img .box .topm .no160 {
+    height: 105px;
+}
+.h-pic .img .box .topm .no120 {
+    height: 105px;
+}
+.h-pic .img .box .topm .no135 {
+    height: 105px;
+}
+.h-pic .img .box .topm .posi160 {
+    height: 105px;
+}
+.h-pic .img .box .topm .posi120 {
+    height: 105px;
+}
+.h-pic .img .box .topm .posi135 {
+    height: 105px;
+}
+.h-pic .img .box .mr {
+    margin-right: 5px;
+}
+.h-pic .img .box .post {
+    position: relative;
+    z-index: 1;
+}
+.h-pic .img .box .post:hover {
+    z-index: 10;
+}
+.h-pic .img .pic-wrap {
+    display: block;
+    margin-left: -11px;
+    margin-top: -6px;
+}
+.h-pic .img .noimg {
+    cursor: default;
+}
+.h-pic .img .noimg img {
+    height: 120px;
+    width: 170px;
+}
+.h-pic .img .pic-wrap img {
+    border: 0 none;
+}
+.h-pic .img .pic-wrap img:hover {
+    opacity: 0.9;
+}
+.h-pic .img .box .po_pic .boxt {
+    position: relative;
+    z-index: 10;
+}
+.h-pic .img .box .po_pic .boxt .boxpic {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 2px solid #CCCCCC;
+    box-shadow: 2px 2px 6px #AAAAAA;
+    padding: 3px;
+    position: relative;
+}
+.h-pic .img .box .po_pic .boxt .pic-load {
+    background: url("../pic/popuploading.gif") no-repeat scroll center center #FFFFFF;
+    height: 233px;
+    width: 350px;
+}
+.h-pic .img .box .po_pic .boxt .boxpic img {
+    height: auto;
+    width: auto;
+}
+.h-pic .tools {
+    color: #555555;
+    float: left;
+    line-height: 35px;
+    width: 310px;
+}
+.h-pic .tools .divide {
+    color: #CCCCCC;
+    margin: 0 10px;
+}
+.h-pic .facicon {
+    float: right;
+    margin-top: 7px;
+    text-align: right;
+    width: 400px;
+}
+.h-pic .facicon i {
+    display: inline-block;
+    height: 20px;
+    margin-left: 10px;
+    width: 22px;
+}
+.h-element .review {
+    background: none repeat scroll 0 0 #F1F4F7;
+    color: #555555;
+    cursor: pointer;
+    height: 85px;
+    margin-bottom: 10px;
+    padding: 10px 10px 0;
+}
+.h-element .review:hover {
+    background: none repeat scroll 0 0 #DEEBF8;
+}
+.h-element .review .info {
+    border-bottom: 1px dashed #C7D4DE;
+    padding-bottom: 5px;
+}
+.h-element .review .num {
+    color: #3366CC;
+    font: 24px/24px Arial,Helvetica,sans-serif;
+}
+.h-element .review .num .unit {
+    font-size: 16px;
+}
+.h-element .review .counts {
+    color: #3366CC;
+    margin-left: 25px;
+}
+.h-element .review .counts strong {
+    font-weight: 700;
+}
+.h-element .review .item {
+    height: 44px;
+    padding-top: 10px;
+    position: relative;
+}
+.h-element .review .item .avatar {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -362px -430px transparent;
+    float: left;
+    height: 22px;
+    margin-right: 10px;
+    width: 22px;
+}
+.h-element .review:hover .item .avatar {
+    background-position: -386px -430px;
+}
+.h-element .review .item blockquote {
+    float: right;
+    height: 40px;
+    margin-top: -3px;
+    overflow: hidden;
+    padding-left: 18px;
+    text-overflow: ellipsis;
+    width: 170px;
+}
+.h-element .review .item .before, .h-element .review .item .after {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 9px;
+    position: absolute;
+    width: 12px;
+}
+.h-element .review .item .before {
+    background-position: -320px -175px;
+    left: 33px;
+    top: 9px;
+}
+.h-element .review .item .after {
+    background-position: -320px -185px;
+    bottom: 8px;
+    right: 0;
+}
+.h-element .review_no, .h-element .review_no:hover {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll right -245px #F1F4F7;
+    cursor: default;
+}
+.h-element .review_no .wrap {
+    margin: 15px 0 0 24px;
+}
+.h-element .review_no .wrap .icon {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -320px -200px transparent;
+    float: left;
+    height: 42px;
+    margin-right: 10px;
+    width: 42px;
+}
+.h-element .review_no .wrap ul {
+    float: left;
+}
+.h-element .map {
+    cursor: pointer;
+    height: 140px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.h-element .map .tip {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    cursor: pointer;
+    line-height: 30px;
+    padding: 0 10px;
+    position: absolute;
+    right: 0;
+    top: 110px;
+    transition: all 0.2s ease-in 0s;
+    z-index: 2;
+}
+:root .h-element .map .tip {
+    filter: none;
+}
+.h-element .map .tip .arrow {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll -124px 0 transparent;
+    display: none;
+    height: 14px;
+    vertical-align: -2px;
+    width: 14px;
+}
+.h-element .map:hover .tip, .h-element .map .tip:hover {
+    background: none repeat scroll 0 0 #3366CC;
+    filter: none;
+    padding-right: 20px;
+}
+.h-element .map:hover .tip .arrow, .h-element .map .tip:hover .arrow {
+    display: inline-block;
+}
+.h-element .map_no {
+    cursor: not-allowed;
+}
+.h-review .summary {
+    border-bottom: 1px dashed #D9D9D9;
+    color: #555555;
+    font-size: 14px;
+    padding: 8px 0;
+}
+.h-review .summary .rate {
+    float: left;
+    line-height: 52px;
+    margin-left: 5px;
+}
+.h-review .summary .rate .num {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -425px -190px transparent;
+    color: #3366CC;
+    display: inline-block;
+    font: 24px/52px Arial,Helvetica,sans-serif;
+    height: 52px;
+    padding-left: 15px;
+    width: 45px;
+}
+.h-review .summary .rate .num_small {
+    font-size: 18px;
+    padding-left: 10px;
+    width: 50px;
+}
+.h-review .summary .rate .num .unit {
+    font-size: 18px;
+}
+.h-review .summary .rank {
+    float: left;
+    line-height: 52px;
+    margin-left: 35px;
+}
+.h-review .summary .rank .cur {
+    color: #3366CC;
+    font-size: 18px;
+}
+.h-review .summary .rank .total {
+    font-size: 12px;
+    margin-left: 5px;
+}
+.h-review .summary .slogan {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -250px -345px transparent;
+    float: left;
+    height: 30px;
+    margin: 10px 0 0 45px;
+    text-indent: -9999em;
+    width: 250px;
+}
+.h-review .summary .btn {
+    background: none repeat scroll 0 0 #3672BD;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: right;
+    font: 16px/20px "Microsoft Yahei",simhei,sans-serif;
+    margin: 10px 10px 0 0;
+    padding: 5px 15px;
+    text-decoration: none;
+}
+.h-review .summary .btn:hover {
+    background: none repeat scroll 0 0 #1A4888;
+    color: #FFFFFF;
+}
+.h-review .filter {
+    border-bottom: 1px dashed #D9D9D9;
+}
+.h-review .filter li {
+    color: #555555;
+    float: left;
+    line-height: 24px;
+    padding-top: 12px;
+}
+.h-review .filter .title {
+    width: 80px;
+}
+.h-review .filter .wrap {
+    width: 660px;
+}
+.h-review .filter .btn {
+    background: none repeat scroll 0 0 #F1F4F7;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 12px;
+    margin-right: 10px;
+    padding: 0 8px;
+}
+.h-review .filter .btn:hover {
+    background: none repeat scroll 0 0 #CBE0FA;
+}
+.h-review .filter .btn_on, .h-review .filter .btn_on:hover {
+    background: none repeat scroll 0 0 #6F9ED8;
+    color: #FFFFFF;
+    cursor: default;
+}
+.h-review .list {
+    margin-bottom: 20px;
+}
+.h-review .list li {
+    border-bottom: 1px dashed #D9D9D9;
+    color: #555555;
+    padding: 15px 0;
+}
+.h-review .list li .user {
+    float: left;
+    text-align: center;
+    width: 70px;
+}
+.h-review .list li .user .avatar {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -320px -430px transparent;
+    height: 40px;
+    margin: 0 auto;
+    width: 40px;
+}
+.h-review .list li .user p {
+    margin-top: 7px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 70px;
+}
+.h-review .list li .attitude {
+    float: left;
+    height: 30px;
+    width: 28px;
+}
+.h-review .list li .attitude i {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 18px;
+    overflow: hidden;
+    width: 18px;
+}
+.h-review .list li .attitude .good {
+    background-position: -410px -145px;
+}
+.h-review .list li .attitude .bad {
+    background-position: -430px -145px;
+}
+.h-review .list li .box {
+    float: left;
+    width: 642px;
+}
+.h-review .list li .box .content {
+    line-height: 24px;
+    margin-bottom: 10px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.h-review .list li .box .content .highlight {
+    background: none repeat scroll 0 0 #FFF4A7;
+}
+.h-review .list li .box .info {
+    color: #999999;
+    float: left;
+}
+.h-review .list li .box .function {
+    float: right;
+}
+.h-review .list li .box .function .counts {
+    color: #999999;
+    margin-left: 3px;
+}
+.h-review .list li .box .function .like_plus {
+    color: #3366CC;
+    font-style: normal;
+    margin: 0;
+    pointer-events: none;
+    position: absolute;
+}
+.h-review .ico_mobile, .h-review .ico_like, .h-review .ico_response {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 16px;
+    margin-right: 3px;
+    overflow: hidden;
+    vertical-align: -3px;
+    width: 16px;
+}
+.h-review .ico_mobile {
+    background-position: -385px -145px;
+}
+.h-review .ico_like {
+    background-position: -345px -145px;
+}
+.h-review .response, .h-review .like {
+    color: #3366CC;
+    cursor: pointer;
+}
+.h-review .response:hover, .h-review .like:hover {
+    color: #FF6600;
+}
+.h-review .like {
+    display: inline-block;
+    margin-left: 10px;
+    width: 80px;
+}
+.h-review .liked, .h-review .liked:hover {
+    color: #999999;
+    cursor: not-allowed;
+}
+.h-review .liked .ico_like {
+    background-position: -345px -161px;
+}
+.h-review .ico_response {
+    background-position: -365px -145px;
+}
+.h-review .list li .box .responseBox {
+    background: none repeat scroll 0 0 #F8F8F8;
+    border-top: 1px solid #E2E2E2;
+    margin-top: 10px;
+    padding: 9px 20px 10px;
+    position: relative;
+    z-index: 1;
+}
+.h-review .list li .box .responseBox .arrow, .h-review .list li .box .responseBox .arrow em, .h-review .list li .box .responseBox .arrow span {
+    font: 22px/22px SimSun,Hiragino Sans GB;
+    position: absolute;
+    z-index: 10;
+}
+.h-review .list li .box .responseBox .arrow {
+    left: 510px;
+    top: -11px;
+}
+.h-review .list li .box .responseBox .arrow em {
+    color: #E2E2E2;
+    left: 0;
+    top: -1px;
+}
+.h-review .list li .box .responseBox .arrow span {
+    color: #F8F8F8;
+    left: 0;
+    top: 0;
+}
+.h-review .list li .box .responseBox .text {
+    line-height: 22px;
+}
+.h-review .list li .box .responseBox .time {
+    color: #999999;
+}
+.h-review .noreview .wrap {
+    padding: 90px 0 110px 230px;
+}
+.h-review .noreview .wrap .icon {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -370px -192px transparent;
+    float: left;
+    height: 50px;
+    margin-right: 15px;
+    width: 53px;
+}
+.h-review .noreview .wrap ul {
+    float: left;
+}
+.h-review .noreview .wrap ul li {
+    color: #555555;
+    font-size: 14px;
+    line-height: 24px;
+}
+.h-subtab {
+    border-bottom: 1px solid #4F89D0;
+}
+.h-subtab ul li {
+    color: #555555;
+    cursor: pointer;
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    padding: 10px 5px 5px;
+}
+.h-subtab ul li:hover {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+.h-subtab ul li.on {
+    cursor: default;
+    font-weight: 700;
+    position: relative;
+    z-index: 10;
+}
+.h-subtab ul li.not {
+    color: #999999;
+    cursor: not-allowed;
+}
+.h-subtab ul li span {
+    color: #999999;
+    font: 400 12px Arial,Helvetica,sans-serif;
+    margin-left: 5px;
+}
+.h-subtab ul a img {
+    vertical-align: -4px;
+}
+.h-subtab ul li i {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -485px -145px transparent;
+    bottom: -1px;
+    display: none;
+    height: 6px;
+    left: 12px;
+    position: absolute;
+    width: 11px;
+}
+.h-subtab ul li.on i {
+    display: block;
+}
+.daodao {
+    margin: 10px 0 20px;
+}
+.daodao h4 {
+    font-size: 14px;
+    font-weight: bold;
+}
+.daodao .DaodaoLogo {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll 0 -345px transparent;
+    display: inline-block;
+    height: 30px;
+    margin-left: 10px;
+    vertical-align: middle;
+    width: 101px;
+}
+.daodao dl {
+    border-bottom: 1px dashed #D9D9D9;
+    line-height: 24px;
+    padding: 15px 15px 15px 0;
+}
+.daodao dd {
+    color: #777777;
+}
+.daodao .tripadvisor {
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: text-bottom;
+}
+.tripadvisor {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll 0 0 transparent;
+    height: 15px;
+    width: 70px;
+}
+.T50 {
+    background-position: 0 -310px;
+}
+.T45 {
+    background-position: -14px -328px;
+}
+.T40 {
+    background-position: -14px -310px;
+}
+.T35 {
+    background-position: -28px -328px;
+}
+.T30 {
+    background-position: -28px -310px;
+}
+.T25 {
+    background-position: -42px -328px;
+}
+.T20 {
+    background-position: -42px -310px;
+}
+.T15 {
+    background-position: -56px -328px;
+}
+.T10 {
+    background-position: -56px -310px;
+}
+.T5 {
+    background-position: -70px -328px;
+}
+.T0 {
+    background-position: -70px -310px;
+}
+.h-pagination {
+    font: 14px Arial,Helvetica,sans-serif;
+    text-align: center;
+}
+.h-pagination .cur {
+    background: none repeat scroll 0 0 #FF8900;
+    color: #FFFFFF;
+    cursor: default;
+    margin-right: 5px;
+    padding: 3px 7px;
+}
+.h-pagination .more {
+    margin-right: 5px;
+    padding: 3px 7px;
+}
+.h-pagination a {
+    background: none repeat scroll 0 0 #CCCCCC;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin-right: 5px;
+    padding: 3px 7px;
+    text-decoration: none;
+}
+.h-pagination a:hover {
+    background: none repeat scroll 0 0 #555555;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.h-pagination a span {
+    background: url("../pic/comBg.png?t=201305162157") no-repeat scroll -124px 0 transparent;
+    cursor: pointer;
+    display: inline-block;
+    height: 14px;
+    vertical-align: -2px;
+    width: 14px;
+}
+.h-pagination a.prev {
+    margin-right: 5px;
+}
+.h-pagination a.prev span {
+    background-position: -110px 0;
+}
+.h-pagination a.no {
+    cursor: default;
+}
+.h-pagination a.no:hover {
+    background: none repeat scroll 0 0 #CCCCCC;
+}
+.h-pagination a.no span, .h-pagination a.no:hover span {
+    cursor: default;
+    opacity: 0.5;
+}
+.h-recommend .hotel {
+    color: #555555;
+    float: left;
+    margin-top: 15px;
+    padding-bottom: 10px;
+    width: 230px;
+}
+.h-recommend .mr {
+    margin-right: 25px;
+}
+.h-recommend .hotel p {
+    height: 24px;
+    line-height: 24px;
+    margin: 10px 0 5px;
+}
+.h-recommend .hotel .name {
+    display: block;
+    font: 700 14px/24px Arial,Simsun,sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.h-recommend .hotel .pic {
+    height: 146px;
+    overflow: hidden;
+    position: relative;
+    width: 230px;
+    z-index: 0;
+}
+.h-recommend .hotel .pic img {
+    max-width: 230px;
+}
+.h-recommend .hotel .pic img:hover {
+    opacity: 0.7;
+}
+.h-recommend .hotel .pic .mask {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    color: #FFFFFF;
+    height: 24px;
+    left: 0;
+    line-height: 24px;
+    position: absolute;
+    width: 230px;
+}
+:root .h-recommend .hotel .pic .mask {
+    filter: none;
+}
+.h-recommend .hotel .pic .mask .major {
+    float: left;
+    margin-left: 10px;
+}
+.h-recommend .hotel .pic .mask .minor {
+    float: right;
+    margin-right: 10px;
+}
+.h-recommend .hotel .review {
+    float: left;
+    margin-top: 7px;
+    width: 110px;
+}
+.h-recommend .hotel .price {
+    color: #FF6600;
+    float: right;
+    font-size: 20px;
+    line-height: 24px;
+    margin-right: 5px;
+    overflow: hidden;
+    text-align: right;
+    white-space: nowrap;
+    width: 100px;
+}
+.h-recommend .hotel .price .fh {
+    color: #666666;
+    font-family: Arial;
+    font-size: 12px;
+    margin-right: 3px;
+    vertical-align: 5px;
+}
+.h-recommend .hotel .price .fb {
+    color: #666666;
+    font-size: 12px;
+    margin-left: 3px;
+}
+.popMap {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 5px solid #E3E3E3;
+    height: 386px;
+    width: 990px;
+    z-index: 100;
+}
+.popMap .clos {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll 0 -580px transparent;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    height: 21px;
+    position: absolute;
+    right: -26px;
+    top: -5px;
+    width: 21px;
+    z-index: 100;
+}
+.popMap .clos:hover {
+    background-position: -21px -580px;
+}
+.popMapt .left {
+    border-right: 2px solid #CCCCCC;
+    float: left;
+    height: 386px;
+    overflow-y: auto;
+    width: 248px;
+}
+.popMapt .left .menu li {
+    background: linear-gradient(to bottom, #F3F3F3 0px, #F7F7F7 5%, #EDEDED 100%) repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #D9D9D9;
+    cursor: pointer;
+    line-height: 35px;
+    margin-bottom: 1px;
+}
+.popMapt .left .menu li:hover {
+    background: linear-gradient(to bottom, #FFFFFF 0px, #F0F5FF 2%, #DFEAFF 100%) repeat scroll 0 0 transparent;
+    border-bottom-color: #6699FF;
+}
+.popMapt .left .menu li span.jc, .popMapt .left .menu li span.dt, .popMapt .left .menu li span.jd, .popMapt .left .menu li span.ms, .popMapt .left .menu li span.yl {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 22px;
+    margin: 0 5px;
+    vertical-align: middle;
+    width: 22px;
+}
+.popMapt .left .menu li span.jc {
+    background-position: -400px -380px;
+}
+.popMapt .left .menu li span.dt {
+    background-position: -422px -380px;
+}
+.popMapt .left .menu li span.jd {
+    background-position: -444px -380px;
+}
+.popMapt .left .menu li span.ms {
+    background-position: -400px -402px;
+}
+.popMapt .left .menu li span.yl {
+    background-position: -422px -402px;
+}
+.popMapt .left .menu li a {
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 2px;
+    text-decoration: none;
+}
+.popMapt .left .menu li a span.unfold {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -466px -389px transparent;
+    display: inline-block;
+    height: 9px;
+    margin-left: 5px;
+    overflow: hidden;
+    width: 11px;
+}
+.popMapt .left .menu li a span.close {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -466px -380px transparent;
+    display: inline-block;
+    height: 9px;
+    margin-left: 5px;
+    overflow: hidden;
+    width: 11px;
+}
+.popMapt .left .menu li ul {
+}
+.popMapt .left .menu li li {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 0 none;
+    color: #999999;
+    line-height: 15px;
+    padding: 10px;
+}
+.popMapt .left .menu li li:hover {
+    background: none repeat scroll 0 0 #FBFBFB;
+}
+.popMapt .left .menu li li a {
+    color: #3366CC;
+    font-size: 12px;
+    font-weight: normal;
+    padding-left: 0;
+    text-decoration: none;
+}
+.popMapt .left .menu li li a:hover {
+    color: #3366CC;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.popMapt .left .menu li li span.title {
+    color: #3366CC;
+    font-size: 12px;
+    font-weight: normal;
+    padding-left: 0;
+}
+.popMapt .left .menu li li span.mapicon {
+    background: url("../pic/markers.png?t=201305162157") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 25px;
+    margin-right: 10px;
+    width: 19px;
+}
+.popMapt .left .menu li li span.mapicon.x1 {
+    background-position: -23px 0;
+}
+.popMapt .left .menu li li span.mapicon.x2 {
+    background-position: -23px -25px;
+}
+.popMapt .left .menu li li span.mapicon.x3 {
+    background-position: -23px -50px;
+}
+.popMapt .left .menu li li span.mapicon.x4 {
+    background-position: -23px -75px;
+}
+.popMapt .left .menu li li span.mapicon.x5 {
+    background-position: -23px -100px;
+}
+.popMapt .left .menu li li span.mapicon.x6 {
+    background-position: -23px -125px;
+}
+.popMapt .left .menu li li span.mapicon.x7 {
+    background-position: -23px -150px;
+}
+.popMapt .left .menu li li span.mapicon.x8 {
+    background-position: -23px -175px;
+}
+.popMapt .left .menu li li span.mapicon.x9 {
+    background-position: -23px -200px;
+}
+.popMapt .left .menu li li span.mapicon.x10 {
+    background-position: -23px -225px;
+}
+.popMapt .right {
+    background: none repeat scroll 0 0 #EDEDED;
+    float: right;
+    height: 386px;
+    width: 735px;
+}
+.poploading {
+    background: none repeat scroll 0 0 #FFFFFF;
+    font-family: Microsoft Yahei,宋体;
+    font-size: 14px;
+    height: 226px;
+    left: 0;
+    padding-top: 160px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 990px;
+}
+.poploading span {
+    background: url("../pic/popuploading.gif?t=201305162157") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 40px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 40px;
+}
+.popImgBox {
+    position: absolute;
+    top: 18%;
+    width: 100%;
+    z-index: 1002;
+}
+.popImg {
+    background: none repeat scroll 0 0 #3A3B3E;
+    border: 5px solid #E3E3E3;
+    height: 500px;
+    margin: auto;
+    position: relative;
+    width: 960px;
+}
+.popImg .clos {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll 0 -580px transparent;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    height: 21px;
+    position: absolute;
+    right: -26px;
+    top: -5px;
+    width: 21px;
+    z-index: 100;
+}
+.popImg .clos:hover {
+    background-position: -21px -580px;
+}
+.popImg .left {
+    float: left;
+    height: 500px;
+    overflow: hidden;
+    width: 680px;
+}
+.popImg .left .js {
+    color: #FFFFFF;
+    font-size: 14px;
+    height: 20px;
+    margin-top: -20px;
+    text-align: center;
+    width: 680px;
+}
+.popImg .controls {
+    position: absolute;
+    top: 40%;
+    width: 680px;
+}
+.popImg .controls a.prev {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll 0 -316px transparent;
+    display: inline-block;
+    float: left;
+    height: 100px;
+    width: 59px;
+}
+.popImg .controls a.prev:hover {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll 0 -416px transparent;
+}
+.popImg .controls a.next {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -60px -316px transparent;
+    display: inline-block;
+    float: right;
+    height: 100px;
+    width: 59px;
+}
+.popImg .controls a.next:hover {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -60px -416px transparent;
+}
+.popImg img {
+    border: 1px solid #FFFFFF;
+}
+.popImg .right {
+    background: none repeat scroll 0 0 #FFFFFF;
+    float: right;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    width: 280px;
+}
+.popImg .right .sta {
+    border-bottom: 2px solid #CCCCCC;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+}
+.popImg .right .sta strong {
+    font-weight: bold;
+}
+.popImg .right .list {
+    float: right;
+    height: 309px;
+    margin-right: 5px;
+    margin-top: 15px;
+    width: 260px;
+}
+.popImg .right .list .tab {
+    border-bottom: 1px solid #DDDDDD;
+    height: 27px;
+}
+.popImg .right .list .tab li {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #DDDDDD #DDDDDD -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 1px 0;
+    cursor: pointer;
+    float: left;
+    height: 26px;
+    line-height: 25px;
+    margin-right: 5px;
+    text-align: center;
+    width: 79px;
+}
+.popImg .right .list .tab li:hover {
+    border-top: 1px solid #C96702;
+}
+.popImg .right .list .tab li.mr {
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 1px solid #C96702;
+    color: #CF7A21;
+}
+.popImg .right .list .liImgbox {
+    float: left;
+    height: 270px;
+    overflow-y: auto;
+    width: 260px;
+}
+.popImg .right .list .liImg {
+    margin-top: 15px;
+}
+.popImg .right .list .liImg li {
+    background: none repeat scroll 0 0 #CCCCCC;
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+    float: left;
+    height: 72px;
+    margin: 2px;
+    overflow: hidden;
+    width: 72px;
+}
+.popImg .right .list .liImg li:hover, .popImg .right .list .liImg li.on {
+    border: 1px solid #757575;
+}
+.popImg .right .hotelPrice {
+    background: none repeat scroll 0 0 #F5F5F5;
+    border-top: 1px solid #DCDCDC;
+    bottom: 0;
+    float: left;
+    left: 0;
+    padding: 15px 10px;
+    position: absolute;
+    width: 260px;
+}
+.popImg .right .hotelPrice li {
+    color: #444444;
+    text-align: right;
+    width: 110px;
+}
+.popImg .right .hotelPrice li.high {
+}
+.popImg .right .hotelPrice .price {
+    color: #FF6600;
+    font-size: 30px;
+    margin-left: 10px;
+    vertical-align: -5px;
+}
+.popImg .right .hotelPrice .price .fh {
+    color: #666666;
+    font-family: Arial;
+    font-size: 12px;
+    margin-right: 3px;
+    vertical-align: 12px;
+}
+.popImg .right .hotelPrice .price .fb {
+    color: #666666;
+    font-size: 12px;
+    margin-left: 3px;
+}
+.popImg .right .hotelPrice .btn {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -320px 0 transparent;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    font: 18px/38px "Microsoft Yahei",simhei,sans-serif;
+    height: 40px;
+    margin-top: 5px;
+    padding-left: 20px;
+    text-align: left;
+    width: 120px;
+}
+.popImg .right .hotelPrice .btn:hover {
+    background-position: -320px -50px;
+}
+.popImg .right .hotelPrice .btn:active {
+    background-position: -320px -100px;
+}
+.seo .tab {
+    border-bottom: 1px solid #CFDBE9;
+}
+.seo .tab ul li {
+    color: #555555;
+    cursor: pointer;
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    padding: 10px 5px 5px;
+}
+.seo .tab ul li:hover {
+    color: #FF6600;
+}
+.seo .tab ul li.divide, .seo .tab ul li.divide:hover {
+    color: #999999;
+    cursor: default;
+}
+.seo .tab ul li.on {
+    cursor: default;
+    position: relative;
+    z-index: 10;
+}
+.seo .tab ul li.on:hover {
+    color: #555555;
+}
+.seo .tab ul li .arrow {
+    display: none;
+}
+.seo .tab ul li.on .arrow {
+    display: block;
+}
+.seo .tab ul li .arrow, .seo .tab ul li .arrow em, .seo .tab ul li .arrow span {
+    font: 14px/22px SimSun,Hiragino Sans GB;
+    position: absolute;
+    z-index: 10;
+}
+.seo .tab ul li .arrow {
+    left: 45%;
+    top: 29px;
+}
+.seo .tab ul li .arrow em {
+    color: #CFDBE9;
+    left: 0;
+    top: -1px;
+}
+.seo .tab ul li .arrow span {
+    color: #FFFFFF;
+    left: 0;
+    top: 0;
+}
+.seo .box {
+    margin-top: 10px;
+    padding: 0 10px;
+}
+.seo .box a {
+    color: #555555;
+}
+.seo .box a:hover {
+    color: #FF6600;
+}
+#bd {
+    background: url("../pic/bg_360detail.jpg?t=201305162157") no-repeat scroll center top #B9DFEA;
+}
+#bd_wrap {
+    background: none repeat scroll 0 0 #FFFFFF;
+    margin: 0 auto;
+    padding: 15px 10px;
+    width: 1000px;
+}
+.detailTab {
+    background: none repeat scroll 0 0 #F8F8F8;
+    border-top: 2px solid #4F89D0;
+    height: 40px;
+}
+.detailTab li {
+    border-right: 1px dashed #DFDFDF;
+    color: #4F89D0;
+    cursor: pointer;
+    float: left;
+    font: 400 18px/40px Microsoft Yahei,宋体;
+    height: 40px;
+    position: relative;
+    text-align: center;
+    width: 140px;
+}
+.detailTab li:hover {
+    background: none repeat scroll 0 0 #DDEBF8;
+}
+.detailTab li.action {
+    background: none repeat scroll 0 0 #4F89D0;
+    border-right: 1px solid #DFDFDF;
+    color: #FFFFFF;
+}
+.detailTab li.action span {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -193px -1px transparent;
+    bottom: -6px;
+    display: inline-block;
+    height: 7px;
+    left: 65px;
+    position: absolute;
+    width: 11px;
+}
+.detailFix {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    top: 0;
+    width: 1000px;
+    z-index: 100;
+}
+.detailFix li.action span {
+    display: none;
+}
+.detailTab .fixPrice {
+    float: right;
+    height: 40px;
+    width: 400px;
+}
+.detailTab .fixPrice span {
+    float: right;
+    margin: 0 5px;
+    padding-top: 5px;
+}
+.detailTab .fixPrice span.name {
+    font: 400 14px Microsoft Yahei,宋体;
+    max-width: 230px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.detailTab .fixPrice span.price {
+}
+.detailTab .fixPrice span.price span.f12 {
+    padding-top: 2px;
+}
+.detailTab a.button {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -260px 0 transparent;
+    color: #FFFFFF;
+    display: inline-block;
+    font: 400 16px/24px Microsoft Yahei,宋体;
+    height: 26px;
+    text-align: center;
+    text-decoration: none;
+    width: 60px;
+}
+.detailTab a.button:hover {
+    background-position: -260px -26px;
+}
+.detailTab a.button:active {
+    background-position: -260px -52px;
+}
+.alterDate {
+    height: 45px;
+    padding-top: 15px;
+}
+.alterDate li {
+    color: #555555;
+    float: left;
+    line-height: 30px;
+}
+.alterDate li.cuxiao {
+    float: right;
+}
+.alterDate li input.dateTxt {
+    border: 1px solid #FFFFFF;
+    color: #555555;
+    font-size: 18px;
+    font-weight: bold;
+    height: 24px;
+    line-height: 21px;
+    margin: 0 8px;
+    padding-left: 3px;
+    vertical-align: middle;
+    width: 112px;
+}
+.alterDate li input.action {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -140px -10px transparent;
+    border: 1px solid #BBBBBB;
+    font-size: 12px;
+    font-weight: normal;
+}
+.alterDate li input.button {
+    background: none repeat scroll 0 0 #6F9ED8;
+    border: 0 none;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+    width: 60px;
+}
+.alterDate li input.button:hover {
+    background: none repeat scroll 0 0 #3C85DE;
+}
+.noRoom {
+    background: none repeat scroll 0 0 #FFFBDB;
+    border: 1px solid #EFD57C;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+.noRoom span.icon {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -160px -34px transparent;
+    display: inline-block;
+    height: 26px;
+    margin-right: 15px;
+    vertical-align: middle;
+    width: 26px;
+}
+.loading {
+    background: url("../pic/popuploading.gif?t=201305162157") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 40px;
+    vertical-align: middle;
+    width: 40px;
+}
+.roomLoading {
+    font: 400 14px Microsoft Yahei,宋体b8b体;
+    margin-bottom: 15px;
+    padding: 10px;
+    text-align: center;
+}
+.roomLoading span.loading {
+    background: url("../pic/popuploading.gif?t=201305162157") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 40px;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 40px;
+}
+.detailRpList .title {
+    background: none repeat scroll 0 0 #F8F8F8;
+    border-top: 1px solid #E2E2E2;
+    height: 29px;
+}
+.detailRpList .title li {
+    color: #999999;
+    float: left;
+    padding: 5px 10px;
+}
+.detailRpList .title li.tw1 {
+    width: 245px;
+}
+.detailRpList .title li.tw2 {
+    text-align: center;
+    width: 32px;
+}
+.detailRpList .title li.tw3 {
+    text-align: right;
+    width: 112px;
+}
+.detailRpList .title li.tw4 {
+    width: 167px;
+}
+.detailRpList .roomTypes li.rbox {
+    border-bottom: 1px solid #E2E2E2;
+    clear: left;
+    height: auto;
+    overflow: auto;
+    padding: 10px 0;
+}
+.detailRpList .roomTypes li.none {
+    display: none;
+}
+.detailRpList .roomTypes li.norbox {
+    border-bottom: 0 none;
+}
+.detailRpList .roomTypes li p {
+    float: left;
+}
+.detailRpList .roomTypes li p.rw1 {
+    cursor: pointer;
+    height: 50px;
+    overflow: hidden;
+    width: 70px;
+}
+.detailRpList .roomTypes li p.rw2 {
+    margin: 0 8px;
+    width: 180px;
+}
+.detailRpList .roomTypes li p.rw3 {
+    color: #555555;
+    text-align: center;
+    width: 52px;
+}
+.detailRpList .roomTypes li p.rw4 {
+    padding-right: 10px;
+    text-align: right;
+    width: 122px;
+}
+.detailRpList .roomTypes li p.rw5 {
+    width: 65px;
+}
+.detailRpList .roomTypes li p.rw6 {
+    text-align: center;
+    width: 48px;
+}
+.detailRpList .roomTypes li p.rw7 {
+    text-align: right;
+    width: 73px;
+}
+.detailRpList .roomTypes li p.rw1 img:hover {
+    opacity: 0.8;
+}
+.detailRpList .roomTypes li p.rw2w {
+    width: 250px;
+}
+.detailRpList .roomTypes li p.rw2 a {
+    font-size: 14px;
+    text-decoration: none;
+}
+.detailRpList .roomTypes li p.rw2 a span.arrow {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -160px 0 transparent;
+    display: inline-block;
+    height: 10px;
+    vertical-align: middle;
+    width: 10px;
+}
+.detailRpList .roomTypes li p.rw2 a:hover span.arrow {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -170px 0 transparent;
+}
+.detailRpList .roomTypes li p.rw2 a span.arrowt {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -170px 0 transparent;
+}
+.detailRpList .roomTypes li p.rw4 .price {
+    border-bottom: 1px dotted #FF6600;
+}
+.detailRpList .roomTypes li p.rw4 .price {
+    border-bottom: 1px dotted #FF6600;
+    cursor: default;
+}
+.detailRpList .roomTypes li p .lijian {
+    color: #FF6600;
+    font-size: 14px;
+    padding-top: 5px;
+}
+.detailRpList .roomTypes li .button {
+    background: none #FF7203;
+    color: white;
+    display: inline-block;
+    font: 400 16px/24px Microsoft Yahei,宋体;
+    height: 26px;
+    text-align: center;
+    text-decoration: none;
+    width: 60px;
+}
+.detailRpList .roomTypes li .button:hover {
+    background-position: -260px -26px;
+}
+.detailRpList .roomTypes li .button:active {
+    background-position: -260px -52px;
+}
+.detailRpList .roomTypes li .nobut {
+    color: #999999;
+    cursor: not-allowed;
+    display: inline-block;
+    font: 400 16px/24px Microsoft Yahei,宋体;
+    height: 26px;
+    text-align: center;
+    text-decoration: none;
+    width: 60px;
+}
+.detailRpList .roomTypes li .surplus {
+    color: #A40035;
+    display: inline-block;
+    padding-top: 5px;
+}
+.detailRpList .roomTypes .roomImg {
+    background: none repeat scroll 0 0 #F8F8F8;
+    border-top: 1px solid #E2E2E2;
+    float: right;
+    margin-top: 10px;
+    padding: 10px;
+    position: relative;
+    width: 642px;
+}
+.detailRpList .roomTypes .wauto {
+    width: auto;
+}
+.detailRpList .roomTypes .roomImg span.arrow {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -180px 0 transparent;
+    display: inline-block;
+    height: 10px;
+    left: 30px;
+    position: absolute;
+    top: -8px;
+    width: 13px;
+}
+.detailRpList .roomTypes .roomImg .imgList li {
+    float: left;
+    height: 70px;
+    margin-right: 10px;
+    width: 70px;
+}
+.detailRpList .roomTypes .roomImg .imgList li a.more {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -250px -78px transparent;
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+}
+.detailRpList .roomTypes .roomImg .imgList li img:hover {
+    opacity: 0.8;
+}
+.detailRpList .roomTypes .roomImg .imgList li.img360 {
+    background: none repeat scroll 0 0 #333333;
+    position: relative;
+}
+.detailRpList .roomTypes .roomImg .imgList li.img360 img {
+    opacity: 0.5;
+}
+.detailRpList .roomTypes .roomImg .imgList li.img360 img:hover {
+    opacity: 0.8;
+}
+.detailRpList .roomTypes .roomImg .imgList li.img360 span.icon {
+    background: url("../pic/detail_bgbg1.png?t=201305162157") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 30px;
+    left: 19px;
+    position: absolute;
+    top: 12px;
+    width: 30px;
+}
+.detailRpList .roomTypes .roomImg .imgList li.img360 span.imgTxt {
+    color: #FFFFFF;
+    left: 1px;
+    position: absolute;
+    top: 45px;
+}
+.detailRpList .roomTypes .roomImg .imgList li .imgbg:hover {
+    opacity: 0.8;
+}
+.detailRpList .roomTypes .roomImg p.roomTxt {
+    color: #555555;
+    float: left;
+    padding-top: 3px;
+    width: 630px;
+}
+.detailRpList .moerRP {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #FFFFFF #E2E2E2 #E2E2E2;
+    border-image: none;
+    border-right: 1px solid #E2E2E2;
+    border-style: solid;
+    border-width: 1px;
+    clear: left;
+    height: 25px;
+    margin: -1px auto auto;
+    padding-top: 5px;
+    text-align: center;
+    width: 160px;
+}
+.detailRpList .moerRP span {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -204px 0 transparent;
+    display: inline-block;
+    height: 8px;
+    margin-left: 5px;
+    vertical-align: middle;
+    width: 9px;
+}
+.detailRpList .roomBox {
+    float: right;
+    width: 662px;
+}
+.detailRpList .roomBox li.rbox {
+    border-bottom: 1px dashed #E2E2E2;
+    padding: 8px 0;
+}
+.detailRpList .roomBox li.nborder {
+    border-bottom: 0 none;
+}
+.detailRpList .roomBox li p.rw2 a {
+    color: #555555;
+    font-size: 12px;
+    text-decoration: none;
+}
+.detailRpList .roomBox li p.rw2 {
+    color: #555555;
+    margin-left: 0;
+    width: 180px;
+}
+.detailRpList .noroomimg {
+    width: 740px;
+}
+.detailRpList .noroomimg li p.rw2 {
+    margin: 0 8px;
+    width: 250px;
+}
+.detailRpList .recHotle {
+    background: none repeat scroll 0 0 #F8F8F8;
+    margin-top: 20px;
+    padding: 10px;
+}
+.detailRpList .recHotle h2 {
+    color: #FF8800;
+    font: 16px Microsoft Yahei,simhei,sans-serif;
+}
+.detailRpList .recHotle h2 span {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -160px -60px transparent;
+    display: inline-block;
+    height: 30px;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 30px;
+}
+.detailRpList .recHotLis {
+    display: inline;
+    float: left;
+    height: 70px;
+    margin: 20px 20px 10px 0;
+    width: 220px;
+}
+.detailRpList .recHotLis dt {
+    float: left;
+    height: 70px;
+    width: 70px;
+}
+.detailRpList .recHotLis dt img:hover {
+    opacity: 0.8;
+}
+.detailRpList .recHotLis dd {
+    color: #999999;
+    float: right;
+    width: 140px;
+}
+.detailRpList .recHotLis dd a {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 140px;
+}
+.detailMain .mainDiv {
+    margin-bottom: 10px;
+}
+.detailMain .mainDiv .divNav {
+    margin: 20px 0 10px;
+}
+.detailMain .mainDiv .divNav li {
+    background: none repeat scroll 0 0 #F1F4F7;
+    color: #555555;
+    float: left;
+    font-size: 12px;
+    line-height: 22px;
+    margin-right: 10px;
+    padding: 0 10px 0 5px;
+}
+.detailMain .mainDiv .divNav li i {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: left;
+    height: 17px;
+    margin: 4px 2px 0 0;
+    width: 18px;
+}
+.detailMain .mainDiv .divNav .disable {
+    color: #9A9A9A;
+    padding: 0 10px;
+}
+.detailMain .mainDiv .contentUl {
+    color: #555555;
+}
+.detailMain .mainDiv .contentUl li {
+    border-bottom: 1px dashed #DADADA;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 10px 0;
+}
+.detailMain .mainDiv .contentUl li .map {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -18px 0 transparent;
+    display: block;
+    float: left;
+    height: 17px;
+    margin: 2px 2px 0 0;
+    width: 18px;
+}
+.detailMain .mainDiv .contentUl .last {
+    border-bottom: 0 none;
+}
+.detailMain .mainDiv .contentUl li .title {
+    display: block;
+    float: left;
+    width: 140px;
+}
+.detailMain .mainDiv .contentUl li p {
+    margin-left: 140px;
+}
+.detailMain .mainDiv .contentUl li p .open {
+    color: #3366CC;
+    margin-left: 5px;
+    text-decoration: none;
+}
+.detailMain .mainDiv .contentUl li p .open:hover {
+    background: none repeat scroll 0 0 #F1F4F7;
+}
+.detailMain .mainDiv .contentUl li p .open i {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -99px 1px transparent;
+    padding: 3px;
+}
+.detailMain .mainDiv .contentUl li p .open .on {
+    background-position: -109px 0;
+}
+.detailMain .mainDiv .contentUl li .fw span {
+    display: inline-block;
+    margin-right: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 130px;
+    word-break: normal;
+    word-wrap: break-word;
+}
+.detailMain .mainDiv .contentUl li .card {
+    height: 38px;
+}
+.detailMain .mainDiv .contentUl li .card span {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 38px;
+    margin-right: 5px;
+    text-indent: -9999em;
+}
+.detailMain .mainDiv .contentUl li .card .visa {
+    background-position: -58px -149px;
+    width: 59px;
+}
+.detailMain .mainDiv .contentUl li .card .unionpay {
+    background-position: 0 -149px;
+    width: 59px;
+}
+.detailMain .mainDiv .contentUl li .card .master {
+    background-position: 0 -111px;
+    width: 59px;
+}
+.detailMain .mainDiv .contentUl li .card .amex {
+    background-position: -36px -69px;
+    width: 37px;
+}
+.detailMain .mainDiv .contentUl li .card .dinersclub {
+    background-position: -73px -70px;
+    width: 57px;
+}
+.detailMain .mainDiv .contentUl li .card .jcb {
+    background-position: -59px -111px;
+    width: 59px;
+}
+.detailSidebar .hotelDiv {
+    background: none repeat scroll 0 0 #F8F8F8;
+    border-top: 1px solid #D5D5D5;
+    margin-bottom: 20px;
+}
+.detailSidebar .hotelDiv h3 {
+    color: #555555;
+    font: 16px Microsoft Yahei,simhei,sans-serif;
+    margin: 10px 0;
+    padding-left: 10px;
+}
+.detailSidebar .hotelDiv h3 i {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: left;
+    height: 21px;
+    width: 21px;
+}
+.detailSidebar .hotelDiv h3 .tj {
+    background-position: -54px 2px;
+}
+.detailSidebar .hotelDiv h3 .ls {
+    background-position: -75px 0;
+}
+.detailSidebar .hotelDiv h3 .cn {
+    background-position: -36px 2px;
+}
+.detailSidebar .hotelDiv .hotelUl li {
+    border-bottom: 1px dashed #DADADA;
+    color: #555555;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 10px 0 10px 10px;
+}
+.detailSidebar .hotelDiv .hotelUl .last {
+    border-bottom: 0 none;
+}
+.detailSidebar .hotelDiv .hotelUl li .del {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    height: 12px;
+    margin: 4px 10px 0 0;
+    overflow: hidden;
+    width: 12px;
+}
+.detailSidebar .hotelDiv .hotelUl li:hover .del {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll 0 -192px transparent;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    height: 12px;
+    margin: 3px 10px 0 0;
+    overflow: hidden;
+    width: 12px;
+}
+.detailSidebar .hotelDiv .hotelUl li .del:hover {
+    background-position: 0 -209px;
+}
+.detailSidebar .hotelDiv .hotelUl li .h_price {
+    color: #FE8433;
+    float: right;
+    margin-right: 10px;
+}
+.detailSidebar .hotelDiv .hotelUl li a .img {
+    border: 0 none;
+    float: left;
+    margin-right: 10px;
+}
+.detailSidebar .hotelDiv .hotelUl li a:hover .img {
+    opacity: 0.8;
+}
+.detailSidebar .hotelDiv .hotelUl li a {
+    color: #3769CD;
+    text-decoration: none;
+}
+.detailSidebar .hotelDiv .hotelUl li a:hover {
+    color: #FE8433;
+}
+.detailSidebar .hotelDiv .hotelUl li dl .jl {
+    color: #BBBBBB;
+}
+.detailSidebar .hotelDiv .hotelUl li dl dt a {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 130px;
+}
+.detailSidebar .hotelDiv .hotelUl li dl dd .price {
+    color: #FE8433;
+    font-size: 12px;
+}
+.detailSidebar .hotelDiv .proList {
+    padding-bottom: 20px;
+}
+.detailSidebar .hotelDiv .proList li {
+    color: #737373;
+    float: left;
+    font-size: 12px;
+    overflow: hidden;
+    text-align: center;
+    width: 75px;
+}
+.detailSidebar .hotelDiv .proList li div {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll 0 0 transparent;
+    height: 45px;
+    margin: 0 auto 4px;
+    width: 45px;
+}
+.detailSidebar .hotelDiv .proList .pro1 div {
+    background-position: -90px -23px;
+}
+.detailSidebar .hotelDiv .proList .pro2 div {
+    background-position: -46px -23px;
+}
+.detailSidebar .hotelDiv .proList .pro3 div {
+    background-position: 0 -23px;
+}
+.detailSidebar .csDiv {
+    background: none repeat scroll 0 0 #F1F4F7;
+    color: #608FC9;
+    display: block;
+    font: 18px/58px Microsoft Yahei;
+    padding-left: 15px;
+    width: 225px;
+}
+.detailSidebar .csDiv i {
+    background: url("../pic/detail_bgbg.png?t=201305162157") no-repeat scroll -18px -190px transparent;
+    display: block;
+    float: left;
+    height: 36px;
+    margin: 10px 10px 0 0;
+    overflow: hidden;
+    width: 30px;
+}
+.detailSidebar .csDiv:hover {
+    background: none repeat scroll 0 0 #4F89D0;
+}
+.detailSidebar .csDiv:hover i {
+    background-position: -58px -190px;
+}
+.detailSidebar .csDiv span {
+    color: #608FC9;
+}
+.detailSidebar .csDiv:hover span {
+    color: #FFFFFF;
+}
+.sf_average th, .sf_average td {
+    font-family: Arial,Helvetica,sans-serif;
+    padding: 2px 0;
+    text-align: center;
+    width: 70px;
+    word-break: break-all;
+}
+.sf_average thead th {
+    background: none repeat scroll 0 0 #F2F2F2;
+    border-bottom: 1px solid #D9D9D9;
+    color: #777777;
+    height: 22px;
+    line-height: 22px;
+}
+.sf_average del {
+    font-style: oblique;
+}
+.sf_reduce {
+    border-top: 1px dotted #CCCCCC;
+    color: #333333;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.morePromotion dt {
+    border-bottom: 1px solid #CCCCCC;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+.viewsPor {
+    height: 50px;
+    margin-bottom: 10px;
+    position: relative;
+    width: 250px;
+}
+.viewsPor .conBox {
+    background: none repeat scroll 0 0 #F37600;
+    border: 1px solid #F37600;
+    bottom: 0;
+    color: #000000;
+    height: 39px;
+    left: 0;
+    line-height: 39px;
+    padding-left: 25px;
+    position: absolute;
+    width: 213px;
+}
+.viewsPor .conBox span.di {
+    color: #FFFFFF;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 3px;
+}
+.viewsPor .clos {
+    background: url("../pic/bg_msg.png?t=201305162157") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25px;
+    z-index: 200;
+}
+.viewsPor .clos:hover {
+    background-position: -25px 0;
+}
+.viebornoe {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+}

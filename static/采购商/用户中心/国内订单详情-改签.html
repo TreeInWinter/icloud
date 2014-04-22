@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 用户中心 国内订单详情-改签</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+     
+    <link href="../../static/css/coin-slider-styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_flight.css" media="screen" />
+    
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+	<link rel="stylesheet" href="../../static/css/kendo.store.css" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+	<script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>    
+
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    
+    <script type="text/javascript" src="../../static/js/store/store.js"></script>
+</head>
+<body>
+
+<div class="main-wrapper">
+<header class="main-header">
+    <a class="logo" href="/"><h1>天地行</h1></a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first active"><a herf="#">首页</a></li>
+            <li><a herf="#">国内机票</a></li>
+            <li><a herf="#">国际机票</a></li>
+            <li><a herf="#">酒店</a></li>
+        </ul> 
+    </nav>
+    <nav class="main-links">
+        <ul class="clearfix">
+            <li class="first"><a href="#">订单管理</a></li>
+            <li><a href="#">分销管理</a></li>
+            <li><a href="#">电子钱包</a></li>
+            <li><a href="#">统计报表</a></li>
+            <li><a href="#">客服服务</a></li>
+            <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+            <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+</header>
+<section class="main-body clearfix">    
+        
+    <div class="order">  <!--order start-->
+         <div class="orTitle clearfix">
+              <a href="javascript:void(0);"> <em>&nbsp;</em> 返回</a>
+              <ul class="upProcess">
+                  <li>
+                      <i class="normal">1</i> <b>申 请</b> <em>&nbsp;</em>
+                  </li>
+                  <li>
+                      <i class="normal">2</i> <b>审 核</b> <em>&nbsp;</em>
+                  </li>
+                  <li>
+                      <i class="unable">3</i> <b class="untanned">支 付</b> <em>&nbsp;</em>
+                  </li>
+                  <li class="currentFlow">
+                      <i class="hightlight">4</i> <b>改 签</b>
+                  </li>
+              </ul>
+         </div>
+         <div class="order_trace clearfix">
+                 <div class="trace">订单跟踪：</div>
+                 <table cellpadding="0" cellspacing="0" class="trace_list">
+                     <colgroup>
+                          <col width="265px"/>
+                          <col width="200px"/>
+                          <col width="330px"/>
+                     </colgroup>
+                     <tr>
+                         <th>处理时间</th>
+                         <th>操作员</th>
+                         <th>处理信息</th>
+                         <th><a href="javascript:void(0);" class="toggle_trigger" toggle='{"target":".trace_list .more","filter":"","toggleText":["查看全部","收起"]}'>收起</a></th>
+                     </tr>
+                     <tr class="more examine">
+                         <td>2013-11-16 07:20:15</td>
+                         <td>客服</td>
+                         <td>审核中</td>
+                         <td> </td>
+                     </tr>
+                     <tr class="more">
+                         <td>2013-11-15 16:00:21</td>
+                         <td>用户</td>
+                         <td>提交订单，申请审核</td>
+                         <td> </td>
+                     </tr>
+                 </table>  
+         </div>       
+    </div>  <!--order end-->
+    
+    <table class="endorseOrder">
+           <colgroup>
+                 <col width="255"/>
+                 <col width="270"/>
+                 <col width="250"/>
+                 <col width="180"/>
+           </colgroup>
+           <tr>
+               <th><span class="orderNO"><b>改签订单号：</b><strong>31023242354364564</strong></span></th>
+               <th><span id="child_order_trigger" class="relevanceOr">关联订单<i>(3)</i> <em>&nbsp;</em></span></th>
+               <th></th>
+               <th></th>
+           </tr>
+           <tr>
+               <td>关联成人订单：<a href="javascript:void(0);" class="adultOrder">30312103112266</a></td>
+               <td>下单时间：2013-08-08</td>
+               <td>支付方式：天地行账户可用余额</td>
+               <td>状态：<b class="endorsing">改签中</b></td>
+           </tr>
+    </table>   
+    
+    <div class="departure">
+        <div id="orignal_flight" style="display:none;">
+            <div class="chief clearfix" style="margin-bottom:10px;"> <h3 class="chiefTit">原航班信息</h3></div>
+                <table cellpadding="0" cellspacing="0" class="route">
+                     <colgroup>
+                         <col width="140px"/>
+                         <col width="150px"/>
+                         <col width="100px"/>
+                         <col width="160px"/>
+                         <col width="140px"/>
+                         <col width="75px"/>
+                         <col width="115px"/>
+                         <col width="65px"/>
+                     </colgroup>        
+                    <thead>
+                        <tr>
+                            <th>航班号</th>
+                            <th>实际承运</th>
+                            <th>机型</th>
+                            <th>起降时间</th>
+                            <th>起降机场</th>
+                            <th>经停</th>
+                            <th>航位等级</th>
+                            <th>航位</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="aviation_icon">东方航空<br>MU5183</i></td>
+                            <td>MU5183</td>
+                            <td>大型机<br>333</td>
+                            <td>2013-09-09 08：20<br>2013-09-01 10：20</td>
+                            <td>首都机场T3<br>虹桥机场T2</td>
+                            <td>武汉</td>
+                            <td>特价经济航</td>
+                            <td>G/X</td>
+                        </tr>
+                        <tr class="dashed_top">
+                            <td><i class="aviation_icon">东方航空<br>MU5183</i></td>
+                            <td>MU5183</td>
+                            <td>大型机<br>333</td>
+                            <td>2013-09-09 08：20<br>2013-09-01 10：20</td>
+                            <td>戴高乐机场<br>虹桥机场T2</td>
+                            <td>武汉</td>
+                            <td>特价经济航</td>
+                            <td>G/X</td>
+                        </tr>
+                        <tr class="dashed_top">
+                            <td><i class="aviation_icon">东方航空<br>MU5183</i></td>
+                            <td>MU5183</td>
+                            <td>大型机<br>333</td>
+                            <td>2013-09-09 08：20<br>2013-09-01 10：20</td>
+                            <td>戴高乐机场<br>虹桥机场T2</td>
+                            <td>武汉</td>
+                            <td>特价经济航</td>
+                            <td>G/X</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+        <div class="chief clearfix"> <h3 class="chiefTit">航班信息</h3> <a href="javascript:void(0);" class="look toggle_trigger" toggle='{"target":"#orignal_flight","filter":"","toggleText":["查看原航班","收起原航班"]}'>查看原航班</a></div>
+        <table cellpadding="0" cellspacing="0" class="route">
+             <colgroup>
+                 <col width="140px"/>
+                 <col width="150px"/>
+                 <col width="100px"/>
+                 <col width="160px"/>
+                 <col width="140px"/>
+                 <col width="75px"/>
+                 <col width="115px"/>
+                 <col width="65px"/>
+             </colgroup>        
+            <thead>
+                <tr>
+                    <th>航班号</th>
+                    <th>实际承运</th>
+                    <th>机型</th>
+                    <th>起降时间</th>
+                    <th>起降机场</th>
+                    <th>经停</th>
+                    <th>航位等级</th>
+                    <th>航位</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><i class="aviation_icon">东方航空<br>MU5183</i></td>
+                    <td>MU5183</td>
+                    <td>大型机<br>333</td>
+                    <td>2013-09-09 08：20<br>2013-09-01 10：20</td>
+                    <td>首都机场T3<br>虹桥机场T2</td>
+                    <td>武汉</td>
+                    <td>特价经济航</td>
+                    <td>G/X</td>
+                </tr>
+                <tr class="dashed_top">
+                    <td><i class="aviation_icon">东方航空<br>MU5183</i></td>
+                    <td>MU5183</td>
+                    <td>大型机<br>333</td>
+                    <td>2013-09-09 08：20<br>2013-09-01 10：20</td>
+                    <td>戴高乐机场<br>虹桥机场T2</td>
+                    <td>武汉</td>
+                    <td>特价经济航</td>
+                    <td>G/X</td>
+                </tr>
+                <tr class="dashed_top">
+                    <td><i class="aviation_icon">东方航空<br>MU5183</i></td>
+                    <td>MU5183</td>
+                    <td>大型机<br>333</td>
+                    <td>2013-09-09 08：20<br>2013-09-01 10：20</td>
+                    <td>戴高乐机场<br>虹桥机场T2</td>
+                    <td>武汉</td>
+                    <td>特价经济航</td>
+                    <td>G/X</td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="orignal_ticket" style="display:none;">
+            <div class="chief clearfix" style="margin-bottom:10px;"> <h3 class="chiefTit">原客票信息</h3></div> 
+                    <table cellpadding="0" cellspacing="0" class="passTicket">
+                         <colgroup> 
+                             <col width="95px"/>
+                             <col width="120px"/>
+                             <col width="145px"/>
+                             <col width="175px"/>
+                             <col width="170px"/>
+                             <col width="100px"/>
+                             <col width="130px"/>
+                         </colgroup>        
+                        <thead>
+                            <tr>              
+                                <th colspan="2">姓名：<b style="font-size:14px; color:#636363;">朱晓玲</b>  </th>
+                                <th colspan="2">身份证：3101011900101222333</th>
+                                <th>PNR：JZ4W50</th>
+                                <th colspan="2">票号：999-1234544 <a href="javascript:void(0);" class="copy">复制</a></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>性别：女</td>
+                                <td>国籍：中国</td>
+                                <td>生日：1989-01-01</td>
+                                <td>电话：13811234568</td>
+                                <td>大编码：MJWM9</td>
+                                <td>票序号：C2</td>
+                                <td>行程单号：未打印</td>
+                            </tr>
+                            <tr class="dashed_top">
+                                <td colspan="7" class="accountRec">                   
+                                票款 ￥220.00 &nbsp; + &nbsp; 税款 ￥2260.00 &nbsp; + &nbsp; 附加费 0.00 &nbsp; - &nbsp; 客户返佣 23.00 &nbsp; + &nbsp; 手续费 100.00 = <strong>应收</strong> &nbsp; <em><b>￥</b>2580.00</em>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellpadding="0" cellspacing="0" class="passTicket">
+                         <colgroup> 
+                             <col width="95px"/>
+                             <col width="120px"/>
+                             <col width="145px"/>
+                             <col width="175px"/>
+                             <col width="170px"/>
+                             <col width="100px"/>
+                             <col width="130px"/>
+                         </colgroup>        
+                        <thead>
+                            <tr>              
+                                <th colspan="2">姓名：<b style="font-size:14px; color:#636363;">朱晓玲</b> </th>
+                                <th colspan="2">身份证：3101011900101222333</th>
+                                <th>PNR：JZ4W50</th>
+                                <th colspan="2">票号：999-1234544 <a href="javascript:void(0);" class="copy">复制</a></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>性别：女</td>
+                                <td>国籍：中国</td>
+                                <td>生日：1989-01-01</td>
+                                <td>电话：13811234568</td>
+                                <td>大编码：MJWM9</td>
+                                <td>票序号：C2</td>
+                                <td>行程单号：未打印</td>
+                            </tr>
+                            <tr class="dashed_top noborder">              
+                                <th colspan="2"> </th>
+                                <th colspan="2"> </th>
+                                <th>PNR：JZ4W50</th>
+                                <th colspan="2">票号：999-1234544 <a href="javascript:void(0);" class="copy">复制</a></th>
+                            </tr>
+                            <tr class="dashed_top">
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td>大编码：MJWM9</td>
+                                <td>票序号：C2</td>
+                                <td>行程单号：未打印</td>
+                            </tr>
+                            <tr class="dashed_top">
+                                <td colspan="7" class="accountRec">                   
+                                票款 ￥220.00 &nbsp; + &nbsp; 税款 ￥2260.00 &nbsp; + &nbsp; 附加费 0.00 &nbsp; - &nbsp; 客户返佣 23.00 &nbsp; + &nbsp; 手续费 100.00 = <strong>应收</strong> &nbsp; <em><b>￥</b>2580.00</em>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+        </div>
+        
+        <div class="chief clearfix"> <h3 class="chiefTit">客票信息</h3>  <a href="javascript:void(0);" class="look toggle_trigger" toggle='{"target":"#orignal_ticket","filter":"","toggleText":["查看原客票","收起原客票"]}'>查看原客票</a></div>     
+        <div class="psr_files clearfix">
+            <b>乘客证件：</b>
+            <a href="#">学生组-某在在.jpg</a>
+            <a href="#">学生组-某在在.jpg</a>
+            <a href="#">学生组-某在在.jpg</a>
+            <a href="#">学生组-某在在.jpg</a>
+        </div>
+        <table cellpadding="0" cellspacing="0" class="passTicket">
+             <colgroup> 
+                 <col width="95px"/>
+                 <col width="120px"/>
+                 <col width="145px"/>
+                 <col width="175px"/>
+                 <col width="170px"/>
+                 <col width="100px"/>
+                 <col width="130px"/>
+             </colgroup>        
+            <thead>
+                <tr>              
+                    <th colspan="2">姓名：<b style="font-size:14px; color:#636363;">朱晓玲</b>  </th>
+                    <th colspan="2">身份证：3101011900101222333</th>
+                    <th>PNR：JZ4W50</th>
+                    <th colspan="2">票号：999-1234544 <a href="javascript:void(0);" class="copy">复制</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>性别：女</td>
+                    <td>国籍：中国</td>
+                    <td>生日：1989-01-01</td>
+                    <td>电话：13811234568</td>
+                    <td>大编码：MJWM9</td>
+                    <td>票序号：C2</td>
+                    <td>行程单号：未打印</td>
+                </tr>
+                <tr class="dashed_top">
+                    <td colspan="7" class="accountRec">                   
+                    票款 ￥220.00 &nbsp; + &nbsp; 税款 ￥2260.00 &nbsp; + &nbsp; 附加费 0.00 &nbsp; - &nbsp; 客户返佣 23.00 &nbsp; + &nbsp; 手续费 100.00 = <strong>应收</strong> &nbsp; <em><b>￥</b>2580.00</em>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table cellpadding="0" cellspacing="0" class="passTicket">
+             <colgroup> 
+                 <col width="95px"/>
+                 <col width="120px"/>
+                 <col width="145px"/>
+                 <col width="175px"/>
+                 <col width="170px"/>
+                 <col width="100px"/>
+                 <col width="130px"/>
+             </colgroup>        
+            <thead>
+                <tr>              
+                    <th colspan="2">姓名：<b style="font-size:14px; color:#636363;">朱晓玲</b> </th>
+                    <th colspan="2">身份证：3101011900101222333</th>
+                    <th>PNR：JZ4W50</th>
+                    <th colspan="2">票号：999-1234544 <a href="javascript:void(0);" class="copy">复制</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>性别：女</td>
+                    <td>国籍：中国</td>
+                    <td>生日：1989-01-01</td>
+                    <td>电话：13811234568</td>
+                    <td>大编码：MJWM9</td>
+                    <td>票序号：C2</td>
+                    <td>行程单号：未打印</td>
+                </tr>
+                <tr class="dashed_top noborder">              
+                    <th colspan="2"> </th>
+                    <th colspan="2"> </th>
+                    <th>PNR：JZ4W50</th>
+                    <th colspan="2">票号：999-1234544 <a href="javascript:void(0);" class="copy">复制</a></th>
+                </tr>
+                <tr class="dashed_top">
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td>大编码：MJWM9</td>
+                    <td>票序号：C2</td>
+                    <td>行程单号：未打印</td>
+                </tr>
+                <tr class="dashed_top">
+                    <td colspan="7" class="accountRec">                   
+                    票款 ￥220.00 &nbsp; + &nbsp; 税款 ￥2260.00 &nbsp; + &nbsp; 附加费 0.00 &nbsp; - &nbsp; 客户返佣 23.00 &nbsp; + &nbsp; 手续费 100.00 = <strong>应收</strong> &nbsp; <em><b>￥</b>2580.00</em>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="rule">
+            <div class="chief" style="margin-bottom:10px;"> <h3 style="margin-bottom:-1px;">退改签规定</h3> </div>  
+            <p><b>【更改条件】</b>同等舱位免费更改。</p>
+            <p><b>【退票条件】</b>起飞前2小时（含）以外办理退票按订座舱位公布运价收取40％的退票费，2小时以内及起飞后退票按订座舱位公布运价收取50％的 退票费。退票费低于50元时按50元收取。</p>        
+            <p><b>【签转条件】</b>不得签转。</p>
+            <p><span>【补充规则】</span>(不管任何原因）签转到其他航空公司、跨月签转以及有政策航班改到无政策航班，需收回代理费。</p>
+            <p><b>退废票时间</b> </p>
+            <p>工作日：08:25-20:30</p>
+            <p>双休日：08:30-18:30</p>
+        </div>
+        
+        <div class="chief"> <h3>备注</h3> </div>
+        <textarea class="remarkTex"></textarea>
+        
+     </div>
+     
+     <div class="accountInfo" id="ac">
+         <div class="accountTit clearfix">
+              <h3>结算信息</h3>
+              <div class="acTotal">
+                  票款合计 &nbsp; <b>￥220</b> &nbsp; + &nbsp; 税款合计 &nbsp; <b>￥100</b> &nbsp; + &nbsp; 附加费 &nbsp; <b>￥0.00</b> &nbsp; - &nbsp; 客户返佣 &nbsp; <b>￥46.00</b> + &nbsp; 手续费 &nbsp; <b>￥200.00</b> &nbsp; = &nbsp; <em>应收合计</em> <strong>￥566</strong>
+              </div>
+         </div>
+         <div class="operateBtn">
+              <a class="printOrdBtn" href="javascript:void(0);">打印行程单</a>
+              <a class="adaptiveButton brightRed_btn">
+                  <span class="left"></span>
+                  <span class="center center_1">退 废</span>
+                  <span class="right"></span>
+              </a>
+              <a class="adaptiveButton brightRed_btn ac_endorse">
+                  <span class="left"></span>
+                  <span class="center center_1">改 签</span>
+                  <span class="right"></span>
+              </a>
+         </div>
+    </div>
+    
+<script type="text/x-kendo-template" id="ac_endorse_template">
+        <div>
+           <table class="intiback" style=" margin-bottom:15px;">
+                 <colgroup>
+                      <col width="135px"/>
+                      <col width="270px"/>
+                      <col width="170px"/>
+                      <col width="300px"/>
+                 </colgroup>
+                 <tr>
+                     <th>改签PNR：</th>
+                     <td>
+                         <input type="text" style="width:170px; height:22px; line-height:22px; padding:0 5px;"/>
+						 <!--<a href="javascript:void(0);" class="toLead">导入</a>-->
+                     </td>
+                     <td rowspan="2"> </td>
+                     <td rowspan="2">
+                         <div class="stipulateCon">
+                               <div class="stip"> <b>退改签规定</b> <em class="packUp toggle_trigger" toggle='{"target":"\\\\#allMes","filter":"","toggleText":["查看全部","收起"]}'>收起</em> </div>
+                               <p>【更改条件】同等舱位免费更改。</p>
+                               <p>【退票条件】起飞前2小时（含）以外办理退票按订座</p>
+                               <div class="unfold" id="allMes">
+                                   <p>舱位公布运价收取40％的退票费，2小时以内及起飞后退票按订座舱位公布运价收取50％的 退票费。退票费低于50元时按50元收取。</p>
+                                   <p>【签转条件】不得签转。</p>
+                                   <p><em>【补充规则】</em>（不管任何原因）签转到其他航空公司、跨月签转以及有政策航班改到无政策航班，需收回代理费</p>
+                               </div>
+                         </div>
+                     </td>
+                 </tr>
+                 <tr>
+                     <th>&nbsp;</th>
+                     <td>&nbsp;</td>
+                 </tr>
+           </table>
+           <div class="choiceDiv">
+                <div class="listTit clearfix">
+				     <h3 class="choiceTitle"><em class="required">*</em>选择客票：</h3>
+					 <div class="titleRi"><i></i><em class="chHint">选择不同客票，出现对应的航班</em></div>
+			    </div>
+                <table class="choiceTab">
+                     <colgroup>
+                          <col width="30px"/>
+                          <col width="100px"/>
+                          <col width="105px"/>
+                          <col width="105px"/>
+                          <col width="95px"/>
+                          <col width="130px"/>
+                          <col width="100px"/>
+                          <col width="100px"/>
+                          <col width="85px"/>
+                     </colgroup>
+                     <thead>
+                         <tr>
+                             <th> </th>
+                             <th>PNR</th>
+                             <th>姓名</th>
+                             <th>证件号码</th>
+                             <th>旅客类型</th>
+                             <th>票号</th>
+                             <th>序列号</th>
+                             <th>行程单号</th>
+                             <th>联系电话</th>
+                         </tr>
+                     </thead>
+                     <tbody>
+                         <tr>
+                             <td><input type="checkbox"/></td>
+                             <td>HX21RP</td>
+                             <td>ZHANG/YU</td>
+                             <td>A123456</td>
+                             <td>成人</td>
+                             <td>7919128790933</td>
+                             <td>C1</td>
+                             <td>未打印</td>
+                             <td>13811234567</td>
+                         </tr>
+                         <tr>
+                             <td><input type="checkbox"/></td>
+                             <td>HX21RP</td>
+                             <td>ZHANG/YU</td>
+                             <td>A123456</td>
+                             <td>成人</td>
+                             <td>7919128790933</td>
+                             <td>A1</td>
+                             <td>未打印</td>
+                             <td> </td>
+                         </tr>
+                     </tbody>
+                </table>
+           </div>
+           <div class="choiceDiv">                
+				<div class="listTit clearfix">
+				     <h3 class="choiceTitle"><em class="required">*</em>选择改期类型：</h3>
+					 <div class="titleRi">
+					      <label> <input type="radio" checked="" name="gaiqian" />升舱</label>
+						  <label> <input type="radio" name="gaiqian" />改期</label>
+						  <label> <input type="radio" name="gaiqian" />改期并升舱</label>
+						  <label> <input type="radio" name="gaiqian" />改路线</label>
+					 </div>
+			    </div>
+                <table class="choiceTab upGrade">
+					 <colgroup>
+						  <col width="30px"/>
+						  <col width="130px"/>
+						  <col width="170px"/>
+						  <col width="140px"/>
+						  <col width="120px"/>
+						  <col width="120px"/>
+						  <col width="140px"/>
+					 </colgroup>
+					 <thead>
+						 <tr>
+							 <th> </th>
+							 <th>航班号</th>
+							 <th>起降时间</th>
+							 <th>起降机场</th>
+							 <th>舱位</th>
+							 <th>应收合计</th>
+							 <th>退废票时间</th>
+						 </tr>
+					 </thead>
+					 <tbody>
+						 <tr>
+							 <td><input type="checkbox"/></td>
+							 <td>
+								 <i class="aviation_icon">东方航空<br/>MU5183</i>
+							 </td>
+							 <td>
+								 <div>2013-09-01 08:20</div>
+								 <div>2013-09-01 10:20</div>
+							 </td>
+							 <td>
+								 <div>首都机场T3</div>
+								 <div>虹桥机场T2</div>
+							 </td>
+							 <td><input type="text" style="width:40px; height:23px; padding-left:5px;" value="G"/></td>
+							 <td>
+								 <div>成人2600</div>
+								 <div>儿童2000</div>
+							 </td>
+							 <td>
+								 <div>工作日：08:25-20:30</div>
+								 <div>双休日：08:30-18:30</div>
+							 </td>
+						 </tr>
+						 <tr>
+							 <td><input type="checkbox"/></td>
+							 <td>
+								 <i class="aviation_icon">东方航空<br/>MU5183</i>
+							 </td>
+							 <td>
+								 <div>2013-09-01 08:20</div>
+								 <div>2013-09-01 10:20</div>
+							 </td>
+							 <td>
+								 <div>首都机场T3</div>
+								 <div>虹桥机场T2</div>
+							 </td>
+							 <td><input type="text" style="width:40px; height:23px; padding-left:5px;" value="G"/></td>
+							 <td>
+								 <div>成人2600</div>
+								 <div>儿童2000</div>
+							 </td>
+							 <td>
+								 <div>工作日：08:25-20:30</div>
+								 <div>双休日：08:30-18:30</div>
+							 </td>
+						 </tr>
+					 </tbody>
+				</table>
+				<table class="choiceTab changeDate" style="display:none;">
+					 <colgroup>
+						  <col width="30px"/>
+						  <col width="130px"/>
+						  <col width="170px"/>
+						  <col width="140px"/>
+						  <col width="120px"/>
+						  <col width="120px"/>
+						  <col width="140px"/>
+					 </colgroup>
+					 <thead>
+						 <tr>
+							 <th> </th>
+							 <th>航班号</th>
+							 <th>起降时间</th>
+							 <th>起降机场</th>
+							 <th>舱位</th>
+							 <th>应收合计</th>
+							 <th>退废票时间</th>
+						 </tr>
+					 </thead>
+					 <tbody>
+						 <tr>
+							 <td><input type="checkbox"/></td>
+							 <td>
+								 <i class="aviation_icon">东方航空<br/>MU5183</i>
+							 </td>
+							 <td>
+								 <div><input type="text" style="width:135px; height:23px; padding-left:5px; margin-bottom:5px;" value="2013-09-01 08:20"/></div>
+								 <div><input type="text" style="width:135px; height:23px; padding-left:5px;" value="2013-09-01 08:20"/></div>
+							 </td>
+							 <td>
+								 <div>首都机场T3</div>
+								 <div>虹桥机场T2</div>
+							 </td>
+							 <td>G</td>
+							 <td>
+								 <div>成人2600</div>
+								 <div>儿童2000</div>
+							 </td>
+							 <td>
+								 <div>工作日：08:25-20:30</div>
+								 <div>双休日：08:30-18:30</div>
+							 </td>
+						 </tr>
+						 <tr>
+							 <td><input type="checkbox"/></td>
+							 <td>
+								 <i class="aviation_icon">东方航空<br/>MU5183</i>
+							 </td>
+							 <td>
+								 <div><input type="text" style="width:135px; height:23px; padding-left:5px; margin-bottom:5px;" value="2013-09-01 08:20"/></div>
+								 <div><input type="text" style="width:135px; height:23px; padding-left:5px;" value="2013-09-01 08:20"/></div>
+							 </td>
+							 <td>
+								 <div>首都机场T3</div>
+								 <div>虹桥机场T2</div>
+							 </td>
+							 <td>G</td>
+							 <td>
+								 <div>成人2600</div>
+								 <div>儿童2000</div>
+							 </td>
+							 <td>
+								 <div>工作日：08:25-20:30</div>
+								 <div>双休日：08:30-18:30</div>
+							 </td>
+						 </tr>
+					 </tbody>
+				</table>
+				<table class="choiceTab upGrChDa" style="display:none;">
+					 <colgroup>
+						  <col width="30px"/>
+						  <col width="130px"/>
+						  <col width="170px"/>
+						  <col width="140px"/>
+						  <col width="120px"/>
+						  <col width="120px"/>
+						  <col width="140px"/>
+					 </colgroup>
+					 <thead>
+						 <tr>
+							 <th> </th>
+							 <th>航班号</th>
+							 <th>起降时间</th>
+							 <th>起降机场</th>
+							 <th>舱位</th>
+							 <th>应收合计</th>
+							 <th>退废票时间</th>
+						 </tr>
+					 </thead>
+					 <tbody>
+						 <tr>
+							 <td><input type="checkbox"/></td>
+							 <td>
+								 <i class="aviation_icon">东方航空<br/>MU5183</i>
+							 </td>
+							 <td>
+								 <div><input type="text" style="width:135px; height:23px; padding-left:5px; margin-bottom:5px;" value="2013-09-01 08:20"/></div>
+								 <div><input type="text" style="width:135px; height:23px; padding-left:5px;" value="2013-09-01 08:20"/></div>
+							 </td>
+							 <td>
+								 <div>首都机场T3</div>
+								 <div>虹桥机场T2</div>
+							 </td>
+							 <td><input type="text" style="width:40px; height:23px; padding-left:5px;" value="G"/></td>
+							 <td>
+								 <div>成人2600</div>
+								 <div>儿童2000</div>
+							 </td>
+							 <td>
+								 <div>工作日：08:25-20:30</div>
+								 <div>双休日：08:30-18:30</div>
+							 </td>
+						 </tr>
+						 <tr>
+							 <td><input type="checkbox"/></td>
+							 <td>
+								 <i class="aviation_icon">东方航空<br/>MU5183</i>
+							 </td>
+							 <td>
+								 <div><input type="text" style="width:135px; height:23px; padding-left:5px; margin-bottom:5px;" value="2013-09-01 08:20"/></div>
+								 <div><input type="text" style="width:135px; height:23px; padding-left:5px;" value="2013-09-01 08:20"/></div>
+							 </td>
+							 <td>
+								 <div>首都机场T3</div>
+								 <div>虹桥机场T2</div>
+							 </td>
+							 <td><input type="text" style="width:40px; height:23px; padding-left:5px;" value="G"/></td>
+							 <td>
+								 <div>成人2600</div>
+								 <div>儿童2000</div>
+							 </td>
+							 <td>
+								 <div>工作日：08:25-20:30</div>
+								 <div>双休日：08:30-18:30</div>
+							 </td>
+						 </tr>
+					 </tbody>
+				</table>
+				<table class="choiceTab changeRoutes" style="display:none;">
+					 <colgroup>
+						  <col width="30px"/>
+						  <col width="130px"/>
+						  <col width="170px"/>
+						  <col width="140px"/>
+						  <col width="120px"/>
+						  <col width="120px"/>
+						  <col width="140px"/>
+					 </colgroup>
+					 <thead>
+						 <tr>
+							 <th> </th>
+							 <th>航班号</th>
+							 <th>起降时间</th>
+							 <th>起降机场</th>
+							 <th>舱位</th>
+							 <th>应收合计</th>
+							 <th>退废票时间</th>
+						 </tr>
+					 </thead>
+					 <tbody>
+						 <tr>
+							 <td><input type="checkbox"/></td>
+							 <td>
+								 <input type="text" style="width:70px;" value="MU5183"/>
+							 </td>
+							 <td>
+								 <div><input type="text" style="width:135px;" value="2013-09-01 08:20"/></div>
+								 <div><input type="text" style="width:135px;" value="2013-09-01 08:20"/></div>
+							 </td>
+							 <td>
+								 <div><input type="text" style="width:80px;" value="首都机场T3"/></div>
+								 <div><input type="text" style="width:80px;" value="虹桥机场T2"/></div>
+							 </td>
+							 <td><input type="text" style="width:40px;" value="G"/></td>
+							 <td>
+								 <div><input type="text" style="width:80px;" value="成人2600"/></div>
+								 <div><input type="text" style="width:80px;" value="儿童2000"/></div>
+							 </td>
+							 <td>
+								 <div><input type="text" style="width:130px;" value="工作日：08:25-20:30"/></div>
+								 <div><input type="text" style="width:130px;" value="双休日：08:30-18:30"/></div>
+							 </td>
+						 </tr>
+						 <tr>
+							 <td><input type="checkbox"/></td>
+							 <td>
+								 <input type="text" style="width:70px;" value="MU5183"/>
+							 </td>
+							 <td>
+								 <div><input type="text" style="width:135px;" value="2013-09-01 08:20"/></div>
+								 <div><input type="text" style="width:135px;" value="2013-09-01 08:20"/></div>
+							 </td>
+							 <td>
+								 <div><input type="text" style="width:80px;" value="首都机场T3"/></div>
+								 <div><input type="text" style="width:80px;" value="虹桥机场T2"/></div>
+							 </td>
+							 <td><input type="text" style="width:40px;" value="G"/></td>
+							 <td>
+								 <div><input type="text" style="width:80px;" value="成人2600"/></div>
+								 <div><input type="text" style="width:80px;" value="儿童2000"/></div>
+							 </td>
+							 <td>
+								 <div><input type="text" style="width:130px;" value="工作日：08:25-20:30"/></div>
+								 <div><input type="text" style="width:130px;" value="双休日：08:30-18:30"/></div>
+							 </td>
+						 </tr>
+					 </tbody>
+				</table>
+           </div>
+           
+           <table class="subtab">
+                <colgroup>
+                      <col width="125px"/>
+                      <col width="650px"/>
+                </colgroup>
+                <tr>
+                    <th style="vertical-align:top;">备注：</th>
+                    <td>
+                        <textarea></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th> </th>
+                    <td style="text-align:center; padding-top:15px;">
+                        <a class="adaptiveButton brightOrange_btn">
+							  <span class="left"></span>
+							  <span class="center center_1">提 交</span>
+							  <span class="right"></span>
+						</a>
+                       <a href="javascript:void(0);" class="subtabCancel">取消</a>
+                    </td>
+                </tr>
+           </table>
+        </div>
+</script>   
+     
+      <div class="reOrder" style="display:none;" id="child_order">
+           <div class="reTi clearfix">
+               <span class="reNO"><b>改签订单号：</b><strong>31023242354364564</strong></span>
+               <label class="re_order">关联订单 <i>(3)</i> <em></em></label>
+           </div>
+           <div class="rawOrd clearfix">
+               <span class="rawNum">原订单 <a href="javascript:void(0);">1234567890</a></span>
+               <em class="ordNum">2580</em>
+           </div>
+           <ul class="orderSta">
+               <li>
+                   <i class="signOrd"> <em></em> </i>
+                   <div class="dateSta">
+                        <span>20130705 11:23 </span> <em class="sta">审核中</em>
+                   </div>
+                   <div class="staList">
+                           <table>
+                                 <colgroup>
+                                       <col width="290px"/>
+                                       <col width="55px"/>
+                                 </colgroup>
+                                 <tr>
+                                     <td>退票单 <a href="javascript:void(0);">030312103112260001</a> &nbsp; 操作人：王二</td>
+                                     <td rowspan="3" class="weight">-1299</td>
+                                 </tr>
+                                 <tr>
+                                     <td>于春东 PEK-PVG/PVG-PEK 退票</td>
+                                 </tr>
+                                 <tr>
+                                     <td>方永军 PEK-PVG/PVG-PEK 退票....</td>
+                                 </tr>
+                           </table>
+                     </div>
+               </li>
+               <li>
+                   <i class="signOrd"> <em></em> </i>
+                   <div class="dateSta">
+                        <span>20130705 11:23 </span> <em class="sta">已审核</em>
+                   </div>
+                   <div class="staList currentSta">
+                           <table>
+                                 <colgroup>
+                                       <col width="290px"/>
+                                       <col width="55px"/>
+                                 </colgroup>
+                                 <tr>
+                                     <td>退票单 <a href="javascript:void(0);">030312103112260001</a> &nbsp; 操作人：王二</td>
+                                     <td rowspan="3" class="weight">0</td>
+                                 </tr>
+                                 <tr>
+                                     <td>于春东 PEK-PVG/PVG-PEK 退票</td>
+                                 </tr>
+                                 <tr>
+                                     <td>方永军 PEK-PVG/PVG-PEK 退票....</td>
+                                 </tr>
+                           </table>
+                     </div>
+               </li>
+               <li>
+                   <i class="signOrd"></i>
+                   <div class="dateSta">
+                        <span>20130705 11:23 </span> <em class="sta">审核中</em>
+                   </div>
+                   <div class="staList">
+                           <table>
+                                 <colgroup>
+                                       <col width="290px"/>
+                                       <col width="55px"/>
+                                 </colgroup>
+                                 <tr>
+                                     <td>退票单 <a href="javascript:void(0);">030312103112260001</a> &nbsp; 操作人：王二</td>
+                                     <td rowspan="3" class="weight">-1299</td>
+                                 </tr>
+                                 <tr>
+                                     <td>于春东 PEK-PVG/PVG-PEK 退票</td>
+                                 </tr>
+                                 <tr>
+                                     <td>方永军 PEK-PVG/PVG-PEK 退票....</td>
+                                 </tr>
+                           </table>
+                     </div>
+               </li>
+           </ul>
+      </div>  
+     
+</section>
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+
+</body>
+</html>
+
+<script>
+$(function(){
+		   
+	var price_confirm_win = new PopWindow(".ac_endorse",{
+		   title:"改签",
+		   width:930,
+		   template:"#ac_endorse_template"
+	}).init();
+	
+		
+});
+
+</script>
+
+<script type="text/javascript">
+ $(function(){
+	 $(".titleRi").find("input[type='radio']").each(function (index) {
+			$(this).click(function () {
+				//console.log(index);
+				switch (index) {
+					case 0:
+						$(".upGrade").show();
+						$(".changeDate").hide();
+						$(".upGrChDa").hide();
+						$(".changeRoutes").hide();
+						break;
+					case 1:
+						$(".upGrade").hide();
+						$(".changeDate").show();
+						$(".upGrChDa").hide();
+						$(".changeRoutes").hide();
+						break;
+					case 2:
+						$(".upGrade").hide();
+						$(".changeDate").hide();
+						$(".upGrChDa").show();
+						$(".changeRoutes").hide();
+						break;
+					case 3:
+						$(".upGrade").hide();
+						$(".changeDate").hide();
+						$(".upGrChDa").hide();
+						$(".changeRoutes").show();
+						break;
+					default:
+						break;
+				}
+			});
+		});
+ })
+</script>
+
+ <script type="text/javascript">
+	$(function(){
+        $("body").click(function(e){
+            $("#child_order").hide();
+        });
+        $("#child_order_trigger").click(function(e){
+			var pos = $(this).closest("table.endorseOrder").offset();
+			$("#child_order").css({left:pos.left,top:pos.top}).toggle();
+            e.stopPropagation();
+        });
+		$("#child_order").click(function(e){
+			e.stopPropagation();					 
+		});
+        $('#ac').fixedBar({
+            inverse:true
+        });
+	});
+ </script>

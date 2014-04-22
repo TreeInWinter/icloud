@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 国际机票创建订单-白屏</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+     
+    <link href="../../static/css/coin-slider-styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_flight.css" media="screen" />
+    
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+	<link rel="stylesheet" href="../../static/css/kendo.store.css" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+	<script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>    
+
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    
+    <script type="text/javascript" src="../../static/js/store/store.js"></script>
+</head>
+<body>
+
+<div class="main-wrapper">
+<header class="main-header">
+    <a class="logo" href="/"><h1>天地行</h1></a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first active"><a herf="#">首页</a></li>
+            <li><a herf="#">国内机票</a></li>
+            <li><a herf="#">国际机票</a></li>
+            <li><a herf="#">酒店</a></li>
+        </ul> 
+    </nav>
+    <nav class="main-links">
+        <ul class="clearfix">
+            <li class="first"><a href="#">订单管理</a></li>
+            <li><a href="#">分销管理</a></li>
+            <li><a href="#">电子钱包</a></li>
+            <li><a href="#">统计报表</a></li>
+            <li><a href="#">客服服务</a></li>
+            <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+            <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+</header>
+<section class="main-body clearfix">
+
+    <div class="flow clearfix">
+       <h3>返回搜索结果页</h3>
+       <ul>
+          <li class="current_li">创建订单</li>
+          <li>审核</li>
+          <li>支付</li>
+          <li style="margin-right:0;">出票</li>     
+          <div style="width:65px;" class="line"></div>     
+       </ul>
+       
+    </div>
+    <div class="departure">
+        <div class="chief"> <h3>航班信息</h3> </div>
+        <table cellpadding="0" cellspacing="0" class="route">
+             <colgroup>
+                 <col width="110px"/>
+                 <col width="140px"/>
+                 <col width="113px"/>
+                 <col width="80px"/>
+                 <col width="96px"/>
+                 <col width="126px"/>
+                 <col width="130px"/>
+                 <col width="111px"/>
+             </colgroup>        
+            <thead>
+                <tr>
+                    <th>航班号</th>
+                    <th>实际承运</th>
+                    <th>机型</th>
+                    <th>舱位等级</th>
+                    <th>舱位</th>
+                    <th>中转次数</th>
+                    <th>起降时间</th>
+                    <th>起降机场</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><i class="aviation_icon">东方航空<br>MU5183</i></td>
+                    <td>MU5183</td>
+                    <td>大型机</td>
+                    <td>G/X</td>
+                    <td>特价经济舱</td>
+                    <td><a href="#">1次中转 <small>&nbsp;</small></a></td>
+                    <td>2013-09-09 08：20<br>2013-09-01 10：20</td>
+                    <td>首都机场T3<br>虹桥机场T2</td>
+                </tr>
+                <tr class="dashed_top">
+                   <td><i class="aviation_icon">东方航空<br>MU5183</i></td>
+                    <td>MU5183</td>
+                    <td>大型机</td>
+                    <td>G/X</td>
+                    <td>特价经济舱</td>
+                    <td><a href="#">1次中转 <small>&nbsp;</small></a></td>
+                    <td>2013-09-09 08：20<br>2013-09-01 10：20</td>
+                    <td>首都机场T3<br>虹桥机场T2</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="quote">
+       <ul class="message_ul clearfix">
+           <li class="message_li"><em><a href="#">成人报价信息</a></em></li>
+           <li><em><a href="#">儿童报价信息</a></em></li>
+           <li><em><a href="#">婴儿报价信息</a></em></li>           
+       </ul>
+       <table cellpadding="0" cellspacing="0" class="fare">
+             <colgroup>
+                 <col width="25px"/>
+                 <col width="80px"/>
+                 <col width="60px"/>
+                 <col width="60px"/>
+                 <col width="70px"/>
+                 <col width="80px"/>
+                 <col width="75px"/>
+                 <col width="60px"/>
+                 <col width="140px"/>
+                 <col width="140px"/>
+                 <col width="70px"/>
+             </colgroup>        
+            <thead>
+                <tr>
+                    <th> </th>
+                    <th>应收票款</th>
+                    <th>票款</th>
+                    <th>税款</th>
+                    <th>代理费</th>
+                    <th>奖励扣率</th>
+                    <th>奖励金额</th>
+                    <th>开票费</th>
+                    <th>出票时间</th>
+                    <th>退废票时间</th>
+                    <th>出票效率</th>
+                    <th>出票类型</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="radio" name="fee" checked="" /></td>
+                    <td><em>2147</em></td>
+                    <td><em>2260</em></td>
+                    <td>300</td>
+                    <td><em>5%</em></td>
+                    <td><em>5%</em></td>
+                    <td><em>10</em></td>
+                    <td><em>100</em></td>
+                    <td>工作日：08:25-20:30<br>双休日：08:30-18:30</td>
+                    <td>工作日：08:25-20:30<br>双休日：08:30-18:30</td>
+                    <td>90%</td>
+                    <td>BSP</td>
+                </tr>
+                <tr class="dashed_top">
+                    <td><input type="radio" name="fee" /></td>
+                    <td><em>2147</em></td>
+                    <td><em>2260</em></td>
+                    <td>300</td>
+                    <td><em>5%</em></td>
+                    <td><em>5%</em></td>
+                    <td><em>10</em></td>
+                    <td><em>100</em></td>
+                    <td>工作日：08:25-20:30<br>双休日：08:30-18:30</td>
+                    <td>工作日：08:25-20:30<br>双休日：08:30-18:30</td>
+                    <td>90%</td>
+                    <td>BSP</td>
+                </tr>
+                <tr class="dashed_top">
+                    <td><input type="radio" name="fee" /></td>
+                    <td><em>2147</em></td>
+                    <td><em>2260</em></td>
+                    <td>300</td>
+                    <td><em>5%</em></td>
+                    <td><em>5%</em></td>
+                    <td><em>10</em></td>
+                    <td><em>100</em></td>
+                    <td>工作日：08:25-20:30<br>双休日：08:30-18:30</td>
+                    <td>工作日：08:25-20:30<br>双休日：08:30-18:30</td>
+                    <td>90%</td>
+                    <td>BSP</td>
+                </tr>
+                <tr class="dashed_top">
+                    <td><input type="radio" name="fee" /></td>
+                    <td><em>2147</em></td>
+                    <td><em>2260</em></td>
+                    <td>300</td>
+                    <td><em>5%</em></td>
+                    <td><em>5%</em></td>
+                    <td><em>10</em></td>
+                    <td><em>100</em></td>
+                    <td>工作日：08:25-20:30<br>双休日：08:30-18:30</td>
+                    <td>工作日：08:25-20:30<br>双休日：08:30-18:30</td>
+                    <td>90%</td>
+                    <td>BSP</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="rule dashed_top">
+            <h3>退改签规定</h3>
+            <p><b>【更改条件】</b>同等舱位免费更改。</p>
+            <p><b>【退票条件】</b>起飞前2小时（含）以外办理退票按订座舱位公布运价收取40％的退票费，2小时以内及起飞后退票按订座舱位公布运价收取50％的 退票费。退票费低于50元时按50元收取。</p>        
+            <p><b>【签转条件】</b>不得签转。</p>
+            <p><span>【补充规则】</span>(不管任何原因）签转到其他航空公司、跨月签转以及有政策航班改到无政策航班，需收回代理费。</p>
+        </div>  
+    </div>
+    
+    <div class="departure" style="padding-bottom:0;">
+        <div class="chief"> <h3>旅客信息</h3> </div>
+        <div class="constant clearfix">
+             <div class="user">
+                  <p>亲爱的用户：航班CA1862仅剩3张票，此订单最多可以添加<span>3名</span>乘客。剩余票量随销售情况实时变化，请尽快提交订单。</p>
+                  <div class="save">
+                       <span>共<em>7</em>名乘客</span>
+                       <label>
+                           <input type="checkbox" checked="" />保存到常旅客
+                       </label>
+                  </div>
+             </div>
+            <div id="frequentFlyerContainer" class="pull-right">
+                <div id="ffc_title"><label for="ffc_input">选择常旅客</label></div>
+                <div><input type="text" name="" id="ffc_input" placeholder="请输入姓名搜索"></div>
+            </div>
+        </div>
+        <table cellpadding="0" cellspacing="0" class="route traveller">
+             <colgroup>                 
+                 <col width="60px"/>
+                 <col width="70px"/>
+                 <col width="70px"/>
+                 <col width="60px"/>
+                 <col width="73px"/>
+                 <col width="90px"/>
+                 <col width="73px"/>
+                 <col width="130px"/>
+                 <col width="83px"/>
+                 <col width="90px"/>
+                 <col width="97px"/>
+                 <col width="75px"/>
+             </colgroup>        
+            <thead>
+                <tr>
+                    <th style="width:60px;">
+                        <label> <input type="checkbox" /> 全选 </label>
+                    </th>                    
+                    <th>旅客类型</th>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>国籍</th>
+                    <th>证件类型</th>
+                    <th>签发地</th>
+                    <th>证件号码</th>
+                    <th>证件有效期</th>
+                    <th>出生日期</th>
+                    <th>联系电话</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" /> </td>
+                    <td>成人</td>
+                    <td>白展堂</td>
+                    <td>男</td>
+                    <td>中国</td>
+                    <td>身份证</td>
+                    <td>上海</td>
+                    <td>231005197008214579</td>
+                    <td>1970-08-21</td>
+                    <td>1970-08-21</td>
+                    <td>13811234567</td>
+                    <td> </td>
+                </tr>
+                <tr class="dashed_top">
+                    <td><input type="checkbox" /> </td>
+                    <td>儿童</td>
+                    <td>小白</td>
+                    <td>男</td>
+                    <td>中国</td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td>1970-08-21</td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr class="dashed_top case">
+                    <td><input type="checkbox" style="border:0;" /> </td>
+                    <td>
+                        <select data-role="dropdownlist"  style="width:60px">
+                            <option>成人</option>
+                            <option>儿童</option>
+                            <option>婴儿</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input style="width:57px;" type="text" value="姓名" />
+                    </td>
+                    <td>
+                        <select style="width:45px;" data-role="dropdownlist">
+                            <option>男</option>
+                            <option>女</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input style="width:57px;" type="text" value="国际" />
+                    </td>
+                    <td>
+                        <select data-role="dropdownlist" style="width:80px;">
+                            <option>护照</option>
+                            <option>其他</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input style="width:57px;" type="text" value="签发地" />
+                    </td>
+                    <td>
+                        <input style="width:117px;" type="text" value="证件号码" />
+                    </td>
+                    <td>
+                        <input style="width:75px;" type="text" value="证件有效期" />
+                    </td>
+                    <td>
+                        <input style="width:80px;" type="text" value="出生日期" />
+                    </td>
+                    <td>
+                        <input style="width:80px;" type="text" value="联系电话" />
+                    </td>
+                    <td>
+                        <a href="#" class="distance">
+                           <i class="delete">删除</i>                           
+                        </a>
+                        <a href="#" class="distance">
+                           <em class="add">添加</em>                        
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="del dashed_top bor_bom"><a href="#">删除所选</a></p>
+        <div class="fillout">
+            <h3>填写规则：</h3>
+            <p>1.请确认旅客姓名和证件上姓名相同，否则无法登机。英文名请在姓与名之间加“/”，如：“zhou/jielun”。</p>
+            <p>2.如名字中有生僻字，请将生僻字用拼音表示。如：朱紘，请输入：朱hong。</p>
+        </div>
+    </div>
+    
+    <div class="departure">
+        <div class="chief"> <h3>备注</h3> </div>
+        <textarea class="remark"> </textarea>
+    </div>
+    
+    <div class="departure clearfix">
+        <div class="chief"> <h3>结算信息</h3> </div>
+        <div class="accounts">
+           <span>票款合计</span>
+           <em>￥220.00</em>
+           <span>+  税款合计(机建/燃油)</span>
+           <em>￥2260.00</em>
+           <span>=</span>
+           <i>应收合计</i>
+           <b>￥2580.00</b>
+           <a class="adaptiveButton brightRed_btn">
+              <span class="left"></span>
+              <span class="center" style="padding:0 10px;">提交订单，去审核</span>
+              <span class="right"></span>
+           </a>
+        </div>
+    </div>
+
+       <div class="location_1"> <!--浮层开始-->
+          <div class="floating">
+              <i>&nbsp;</i>
+              <table class="floating_title">
+                 <colgroup>
+                   <col width="58px"/>
+                   <col width="120px"/>
+                   <col width="113px"/>
+                   <col width="60px"/>
+                   <col width="47px"/>
+                 </colgroup>
+                   <tr>
+                      <td>航班号</td>
+                      <td>起降时间</td>
+                      <td>起降机场</td>
+                      <td>飞行时间</td>
+                      <td>机型</td>
+                      <td>舱位</td>
+                   </tr>
+              </table>
+              <div class="aviation"> 
+                  <table>
+                     <colgroup>
+                       <col width="58px"/>
+                       <col width="120px"/>
+                       <col width="113px"/>
+                       <col width="60px"/>
+                       <col width="47px"/>
+                     </colgroup>
+                       <tr>
+                          <td>东方航空</td>
+                          <td>2012-12-12  09：00</td>
+                          <td>上海浦东机场(PVG)</td>
+                          <td>2：30</td>
+                          <td>大型机</td>
+                          <td>G</td>
+                       </tr>
+                       <tr>
+                          <td>MU5183</td>
+                          <td>2012-12-12  12：00</td>
+                          <td>台北桃园机场(MMK)</td>
+                          <td> </td>
+                          <td>333</td>
+                          <td> </td>
+                       </tr>
+                  </table>                   
+               </div>
+               <div class="aviation" style="border:0"> 
+                  <table>
+                     <colgroup>
+                       <col width="58px"/>
+                       <col width="120px"/>
+                       <col width="113px"/>
+                       <col width="60px"/>
+                       <col width="47px"/>
+                     </colgroup>
+                       <tr>
+                          <td>东方航空</td>
+                          <td>2012-12-12  09：00</td>
+                          <td>上海浦东机场(PVG)</td>
+                          <td>2：30</td>
+                          <td>大型机</td>
+                          <td>G</td>
+                       </tr>
+                       <tr>
+                          <td>MU5183</td>
+                          <td>2012-12-12  12：00</td>
+                          <td>台北桃园机场(MMK)</td>
+                          <td> </td>
+                          <td>333</td>
+                          <td> </td>
+                       </tr>
+                  </table> 
+               </div>
+          </div>
+      </div> <!--浮层结束-->
+    
+    
+</section>
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+
+
+<!--模板文件-->
+<script id="ffcTemplate" type="text/x-kendo-template">
+    <ul class="ul_ffc" data-role="panelbar">
+        # for(var i=0;i<data.length;i++){ #
+        <li>
+            #= data[i].categories #
+            # for(var j=0;j<data[i].customers.length;j++){ #
+            <div class="item"><label><input type="checkbox" value="#=data[i].customers[j].id #"> #= data[i].customers[j].name #</label></div>
+            # } #
+        </li>
+        # } #
+    </ul>
+</script>
+
+<script id="ffcsTemplate" type="text/x-kendo-template">
+    <ul class="ul_ffc">
+        # for(var i=0;i<data.length;i++){ #
+        <li style="padding:5px">
+            <label><input type="checkbox" value="#=data[i].id #"> #= data[i].name #</label>
+        </li>
+        # } #
+    </ul>
+</script>
+
+<!--模板文件-->
+
+<script type="text/javascript" src="../../static/js/store/freq_traveler.js"></script>
+</body>
+</html>

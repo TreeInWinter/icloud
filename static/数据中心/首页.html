@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>真旅数据中心 首页</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="stylesheet" href="/static/css/datacenter.css" media="screen" />
+<link rel="stylesheet" href="/static/css/datacenter.home.css" media="screen" />
+
+<script src="/static/js/jquery.min.js"></script>    
+<script src="/static/js/jquery.cycle.all.js"></script>
+
+<script>
+$(function(){
+    $('.slides').cycle({fx:"fade",timeout: 2000,center:true,pause:true,pager:".slides-pager div",pagerEvent: "click.cycle"});
+
+    function togglePanel(){
+        var loginPanelState = 0; //偶数时为关闭;
+        var loginPanel = $(".login-panel");
+        var loginPanelTop = loginPanel.css('top');
+
+        $(".login:eq(0)").bind("click",function(e){
+            if( loginPanelState%2 == 0){
+                loginPanel.animate({top:"10px"},400,function(){
+                    $(this).animate({top:0},200) 
+                });
+
+                $("input[name=username]").focus();
+            }else{
+                loginPanel.animate({top:loginPanelTop},400);
+            }
+
+            loginPanelState++;
+        });
+
+        $(document).on('click',function(e){
+            if(!$.contains(loginPanel[0],e.target) && !$(e.target).hasClass('login')){
+                console.log(loginPanelTop);
+                loginPanelState = 0;
+                loginPanel.animate({top:loginPanelTop},400);
+            }
+        });
+    }
+
+    togglePanel();
+});
+</script>
+
+
+<!--[if IE]>
+    <script src="/static/js/html5.js"></script>
+    <script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+    <![endif]-->
+</head>
+<body>
+
+<div class="main-wrapper">
+    <header class="main-header">
+        <div class="wrap">
+            <a class="logo" href="/"><h1>真率数据中心</h1></a>
+            <nav class="main-links">
+                <a herf="#" class="login hidetext">登录</a>
+                <div class="loginContainer">
+                    <div class="login-panel">
+                    <span class="arrow"></span>
+                    <ul>
+                        <li>
+                        <div class="input-wrap">
+                            <i class="icon icon1"></i>
+                            <input type="text"  name="username" value="marar@travelzen.com">
+                        </div>
+                        </li>
+                        <li>
+                        <div class="input-wrap">
+                            <i class="icon icon2"></i>
+                            <input type="password" name="" value="fdsafdsa">
+                        </div>
+                        </li>
+                        <li>
+                        <label for="remmberMe"><span class="checkbox-wrap">
+                                <input type="checkbox" id="remmberMe" name="">
+                                <i class="icon icon3"></i>
+                        </span>
+                        <span class="checkbox-text">记住我</span></label>
+                        </li>
+                        <li>
+                        <button class="btns btn-c1 btn-s1">登 录</button>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="main-body clearfix">
+        <div class="home-slides">
+            <div class="slides">
+                <div class="slide-item slide1"></div>
+                <div class="slide-item slide2"></div>
+                <div class="slide-item slide3"></div>
+            </div>
+            <div class="slides-pager">
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="home-links">
+            <div class="wrap">
+                <h3>平台互链：</h3>
+                <ul class="clearfix">
+                    <li><a href="#" class="link1 hidetext" title="天地行">天地行</a></li>
+                    <li><a href="#" class="link2 hidetext" title="采购商">采购商</a></li>
+                    <li><a href="#" class="link3 hidetext" title="供应商">供应商</a></li>
+                    <li><a href="#" class="link4 hidetext" title="真旅网">真旅网</a></li>
+                    <li><a href="#" class="link5 hidetext" title="B2G">B2G</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <center class="copyright">
+            Copyright &copy; 2013 天地行 All Rights Reserved.      沪ICP备08101503号
+        </center>
+    </footer>
+</div>
+
+
+</body>
+</html>
+

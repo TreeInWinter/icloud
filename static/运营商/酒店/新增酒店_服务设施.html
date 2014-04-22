@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html" charset="utf-8">
+    <title>酒店 酒店维护 新增酒店 服务设施</title>
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/b2b.css">
+    <link rel="stylesheet" href="/static/css/hotel.css">
+    <style type="text/css">
+        .services li{float:left;width:130px;margin:0 5px 5px 0}
+        td{vertical-align:top}
+        ul{margin-left:10px}
+    </style>
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+<!-- @CLB@ -->
+</head>
+<body style="background:#ffffff">
+<table>
+    <tr>
+        <td>
+            <div style="font-size:14px;margin-bottom:8px">酒店服务：</div>
+            <ul class="services">
+                <li><label><input type="checkbox">有线宽带</label></li>
+                <li><label><input type="checkbox">无线宽带</label></li>
+                <li><label><input type="checkbox">叫早服务</label></li>
+                <li><label><input type="checkbox">擦鞋服务</label></li>
+                <li><label><input type="checkbox">干洗熨烫服务</label></li>
+                <li><label><input type="checkbox">前台贵重物品保管</label></li>
+                <li><label><input type="checkbox">停车场</label></li>
+                <li><label><input type="checkbox">免费停车场</label></li>
+                <li><label><input type="checkbox">礼宾司服务</label></li>
+                <li><label><input type="checkbox">多语言礼宾司服务</label></li>
+                <li><label><input type="checkbox">管家服务</label></li>
+                <li><label><input type="checkbox">驻店医生</label></li>
+                <li><label><input type="checkbox">商店</label></li>
+                <li><label><input type="checkbox">红酒店</label></li>
+                <li><label><input type="checkbox">面包店</label></li>
+                <li><label><input type="checkbox">美发沙龙</label></li>
+                <li><label><input type="checkbox">医务室</label></li>
+                <li><label><input type="checkbox">司陪房</label></li>
+                <li><label><input type="checkbox">邮政服务</label></li>
+                <li><label><input type="checkbox">叫车服务</label></li>
+                <li><label><input type="checkbox">机场接送</label></li>
+                <li><label><input type="checkbox">旅游接待</label></li>
+                <li><label><input type="checkbox">ATM取款机</label></li>
+                <li><label><input type="checkbox">外币兑换</label></li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div style="font-size:14px;margin-bottom:8px">酒店餐饮：</div>
+            <ul class="services">
+                <li><label><input type="checkbox">中式餐厅</label></li>
+                <li><label><input type="checkbox">西餐厅</label></li>
+                <li><label><input type="checkbox">日式餐厅</label></li>
+                <li><label><input type="checkbox">韩式餐厅</label></li>
+                <li><label><input type="checkbox">东南亚餐厅</label></li>
+                <li><label><input type="checkbox">咖啡厅</label></li>
+                <li><label><input type="checkbox">酒吧</label></li>
+                <li><label><input type="checkbox">西饼屋</label></li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div style="font-size:14px;margin-bottom:8px">商务设施：</div>
+            <ul class="services">
+                <li><label><input type="checkbox">商务中心</label></li>
+                <li><label><input type="checkbox">会议室</label></li>
+                <li><label><input type="checkbox">多功能会议室</label></li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div style="font-size:14px;margin-bottom:8px">娱乐设施：</div>
+            <ul class="services">
+                <li><label><input type="checkbox">水疗/SPA</label></li>
+                <li><label><input type="checkbox">足疗</label></li>
+                <li><label><input type="checkbox">桑拿</label></li>
+                <li><label><input type="checkbox">日式浴池</label></li>
+                <li><label><input type="checkbox">按摩与桑拿中心</label></li>
+                <li><label><input type="checkbox">室内游泳池</label></li>
+                <li><label><input type="checkbox">歌舞厅</label></li>
+                <li><label><input type="checkbox">KTV包房</label></li>
+                <li><label><input type="checkbox">夜总会</label></li>
+                <li><label><input type="checkbox">健身房</label></li>
+                <li><label><input type="checkbox">桌球室</label></li>
+                <li><label><input type="checkbox">室外游泳池</label></li>
+                <li><label><input type="checkbox">篮球场</label></li>
+                <li><label><input type="checkbox">乒乓球</label></li>
+                <li><label><input type="checkbox">室外网球场</label></li>
+                <li><label><input type="checkbox">室内网球场</label></li>
+                <li><label><input type="checkbox">室外温水游泳池</label></li>
+                <li><label><input type="checkbox">室内温水游泳池</label></li>
+                <li><label><input type="checkbox">室外壁球场</label></li>
+                <li><label><input type="checkbox">室内壁球场</label></li>
+                <li><label><input type="checkbox">美式壁球场</label></li>
+            </ul>
+        </td>
+    </tr>
+
+</table>
+<div style="text-align:center">
+    <a href="javascript:;" class="button_1_2">保&nbsp;存</a>
+    <a href="javascript:;" class="button_2_2 close">取&nbsp;消</a>
+</div>
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("a.close").click(function(){
+            window.parent.$("span.k-i-close").trigger("click")
+        })
+    });
+</script>
+</body>
+</html>

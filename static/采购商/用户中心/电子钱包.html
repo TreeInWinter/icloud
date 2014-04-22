@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 用户中心 修改支付密码</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />     
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />     
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_ucenter.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_order.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.store.css" />
+    
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>    
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>    
+
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>    
+    <script type="text/javascript" src="../../static/js/store/store.js"></script>
+</head>
+<body>
+
+<div class="main-wrapper">
+<header class="main-header">
+    <a class="logo" href="/"><h1>天地行</h1></a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first active"><a herf="#">首页</a></li>
+            <li><a herf="#">国内机票</a></li>
+            <li><a herf="#">国际机票</a></li>
+            <li><a herf="#">酒店</a></li>
+        </ul> 
+    </nav>
+    <nav class="main-links">
+        <ul class="clearfix">
+            <li class="first"><a href="#">订单管理</a></li>
+            <li><a href="#">分销管理</a></li>
+            <li><a href="#">电子钱包</a></li>
+            <li><a href="#">统计报表</a></li>
+            <li><a href="#">客服服务</a></li>
+            <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+            <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+</header>
+<section class="main-body clearfix">
+    <aside class="us-nav">
+        <nav>
+            <h3>用户中心</h3>
+            <div class="us-bind"><a href="#">手机已绑定</a>&#12288;<a class="text1" href="#"><i class="ucnav_03"></i>邮箱未绑定</a></div>
+            <dl>
+                <dt><i class="ucnav_07"></i>订单管理</dt>
+                <dd><a href="#">当日所有订单</a></dd>
+                <dd><a href="#">国内机票订单</a></dd>
+                <dd><a href="#">国际机票订单</a></dd>
+                <dd><a href="#">酒店订单</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="ucnav_10"></i>询价单管理</dt>
+                <dd><a href="#">国内机票询价单</a></dd>
+                <dd><a href="#">国际机票询价单</a></dd>
+                <dd><a href="#">酒店询价单</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_12"></i>电子钱包</dt>
+                <dd><a class="current" href="#">电子钱包</a></dd>
+                <dd><a href="#">修改支付密码</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_15"></i>票据管理</dt>
+                <dd><a href="#">行程单</a></dd>
+                <dd><a href="#">发票</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_17"></i>统计报表</dt>
+                <dd><a href="#">财务报表</a></dd>
+                <dd><a href="#">机票业务</a></dd>
+                <dd><a href="#">酒店业务</a></dd>
+                <dd><a href="#">分销业务</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_19"></i>分销商管理</dt>
+                <dd><a href="#">分销商管理</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_22"></i>账户资料</dt>
+                <dd><a href="#">信息维护</a></dd>
+                <dd><a href="#">消息设置</a></dd>
+            </dl>
+
+            <dl>
+              <dt><i class="ucnav_26"></i>我的工具</dt>
+              <dd><a class="ic-j" href="#"><i class="ucnav_29"></i>常旅客管理</a></dd>
+                <dd><a class="ic-j" href="#"><i class="ucnav_32"></i>短消息</a></dd>
+            </dl>
+        </nav>
+    </aside>
+    <main class="us-content">
+        <div class="purseRightHead">
+             <div class="welcome">
+                  <em>laobai，欢迎您！</em>
+             </div>
+             <div class="recharge">
+                  <strong>可用余额：<b>￥4,499.00 </b></strong>
+                  <a class="adaptiveButton brightRed_btn ac-paymentCode">
+                        <span class="left"></span>
+                        <span class="center">充 值</span>
+                        <span class="right"></span>
+                  </a>
+                  <a class="adaptiveButton brightRed_btn ac-recharge">
+                        <span class="left"></span>
+                        <span class="center">充 值</span>
+                        <span class="right"></span>
+                  </a>
+                  <em>冻结金额：￥4,499.00</em>
+                  <i>押金：￥499.00 </i>
+             </div>
+        </div>
+        <div class="us-body minHeight">
+            <aside>
+                <ul class="tab_change clearfix">
+                    <li class="currentState"><em><a href="javascript:void(0);">收支明细</a></em></li>
+                    <li><em><a href="javascript:void(0);">充值记录</a></em></li>
+                    <li><em><a href="javascript:void(0);">退款记录</a></em></li>           
+                    <li><em><a href="javascript:void(0);">冻结记录</a></em></li>           
+                    <li><em><a href="javascript:void(0);">押金记录</a></em></li>        
+                </ul>
+            </aside>
+            
+            <div class="detail_content"> <!-- detail_content start -->
+                 <div class="incomeAndExpenses tab">  <!-- 收支明细 开始 -->
+                       <div style="position:relative;">
+                                 <div class="date">
+                                      <em>日期：</em>
+                                      <input class="datepicker" type="text" value="2013-08-08    周三" />
+                                      <span> - </span>
+                                      <input class="datepicker" type="text" value="2013-08-08    周三" />
+                                      <div style="position:absolute; top:38%; right:2%;">
+                                              <a class="adaptiveButton mediumOrange_btn">
+                                                   <span class="left"></span>
+                                                   <span class="center center_1">搜 索</span>
+                                                   <span class="right"></span>
+                                              </a>
+                                              <label class="find">
+                                                  <i>快速查找：</i>
+                                                  <a href="#" class="current_find">今天</a>
+                                                  <a href="#">最近一个月</a>
+                                              </label>
+                                       </div>
+                                 </div>
+                                 <div class="date" style="padding-top:0;">
+                                      <em>收款人：</em>
+                                      <input type="text" />
+                                      <select data-role="dropdownlist" style="margin-left:8px; width:70px;">
+                                           <option>订单号</option>
+                                           <option>票号</option>
+                                           <option>PNR</option>
+                                      </select>
+                                      <input type="text" />
+                                 </div>  
+                         </div>
+                         <table cellpadding="0" cellspacing="0" class="tabListDetail">
+                              <colgroup>
+                                  <col width="140px"/>
+                                  <col width="110px"/>
+                                  <col width="110px"/>
+                                  <col width="120px"/>
+                                  <col width="120px"/>
+                                  <col width="125px"/>
+                              </colgroup>
+                              <tr>
+                                  <th >建单日期</th>
+                                  <th>收入</th>
+                                  <th>支出</th>
+                                  <th>账户余额</th>
+                                  <th>可用余额</th>
+                                  <th>收支分类</th>
+                              </tr>
+                              <tr>
+                                  <td>2013-08-14</td>
+                                  <td>6,800</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr class="currentList">
+                                  <td>2013-08-14</td>
+                                  <td></td>
+                                  <td>6,800</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr>
+                                  <td>2013-08-14</td>
+                                  <td>6,800</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr>
+                                  <td>2013-08-14</td>
+                                  <td>6,800</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr>
+                                  <td>2013-08-14</td>
+                                  <td></td>
+                                  <td>6,800</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr>
+                                  <td>2013-08-14</td>
+                                  <td>6,800</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr>
+                                  <td>2013-08-14</td>
+                                  <td></td>
+                                  <td>6,800</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr>
+                                  <td>2013-08-14</td>
+                                  <td>6,800</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr>
+                                  <td>2013-08-14</td>
+                                  <td>6,800</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr>
+                                  <td>2013-08-14</td>
+                                  <td>6,800</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr>
+                                  <td>2013-08-14</td>
+                                  <td></td>
+                                  <td>6,800</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr>
+                                  <td>2013-08-14</td>
+                                  <td>6,800</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr>
+                                  <td>2013-08-14</td>
+                                  <td>6,800</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr>
+                                  <td>2013-08-14</td>
+                                  <td>6,800</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr>
+                                  <td>2013-08-14</td>
+                                  <td></td>
+                                  <td>6,800</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr>
+                                  <td>2013-08-14</td>
+                                  <td>6,800</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr>
+                                  <td>2013-08-14</td>
+                                  <td></td>
+                                  <td>6,800</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr>
+                                  <td>2013-08-14</td>
+                                  <td>6,800</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                         </table>
+                    </div>    <!-- 收支明细 结束 --> 
+                    
+                    <div class="tab" style="display:none;">  <!-- 充值记录 开始 -->
+                         <div style="position:relative;">
+                                    <div class="date">
+                                          <em>日期：</em>
+                                          <input class="datepicker" type="text" value="2013-08-08    周三" />
+                                          <span> - </span>
+                                          <input class="datepicker" type="text" value="2013-08-08    周三" />
+                                          <div style="position:absolute; top:38%; right:2%;">
+                                                  <a class="adaptiveButton mediumOrange_btn">
+                                                       <span class="left"></span>
+                                                       <span class="center center_1">搜 索</span>
+                                                       <span class="right"></span>
+                                                  </a>
+                                                  <label class="find">
+                                                      <i>快速查找：</i>
+                                                      <a href="#" class="current_find">今天</a>
+                                                      <a href="#">最近一个月</a>
+                                                  </label>
+                                          </div>
+                                    </div>    
+                                    <div class="date" style="padding-top:0;">
+                                          <em>汇款人：</em>
+                                          <input type="text" />
+                                    </div> 
+                            </div>   
+                            <table cellpadding="0" cellspacing="0" class="tabListDetail"> 
+                                      <colgroup>
+                                          <col width="150px"/>
+                                          <col width="180px"/>
+                                          <col width="140px"/>
+                                          <col width="160px"/>
+                                          <col width="120px"/>
+                                      </colgroup>
+                                      <tr>
+                                          <th>充值日期</th>
+                                          <th>充值方式</th>
+                                          <th>金额</th>
+                                          <th>充值状态</th>
+                                          <th>备注</th>
+                                      </tr>
+                                      <tr>
+                                          <td>2013-08-14</td>
+                                          <td>支付宝</td>
+                                          <td>6,800</td>
+                                          <td>已充值</td>
+                                          <td></td>
+                                      </tr>
+                                      <tr>
+                                          <td>2013-08-14</td>
+                                          <td>支付宝</td>
+                                          <td>6,800</td>
+                                          <td>已充值</td>
+                                          <td></td>
+                                      </tr>
+                                      <tr>
+                                          <td>2013-08-14</td>
+                                          <td>支付宝</td>
+                                          <td>6,800</td>
+                                          <td>已充值</td>
+                                          <td></td>
+                                      </tr>
+                                 </table>
+                        </div>   <!-- 充值记录 结束 -->
+                         
+                        <div class="tab" style="display:none;">  <!-- 退款记录 开始 -->
+                                 <div class="date">
+                                      <em>日期：</em>
+                                      <input class="datepicker" type="text" value="2013-08-08    周三" />
+                                      <span> - </span>
+                                      <input class="datepicker" type="text" value="2013-08-08    周三" />
+                                      <a class="adaptiveButton mediumOrange_btn">
+                                           <span class="left"></span>
+                                           <span class="center center_1">搜 索</span>
+                                           <span class="right"></span>
+                                      </a>
+                                      <label class="find">
+                                          <i>快速查找：</i>
+                                          <a href="#" class="current_find">今天</a>
+                                          <a href="#">最近一个月</a>
+                                      </label>
+                                </div>  
+                                 <table cellpadding="0" cellspacing="0" class="tabListDetail"> 
+                                      <colgroup>
+                                          <col width="150px"/>
+                                          <col width="180px"/>
+                                          <col width="140px"/>
+                                          <col width="160px"/>
+                                          <col width="120px"/>
+                                      </colgroup>
+                                      <tr>
+                                          <th>退款日期</th>
+                                          <th>关联单号</th>
+                                          <th>退款原因</th>
+                                          <th>金额</th>
+                                          <th>备注</th>
+                                      </tr>
+                                      <tr>
+                                          <td>2013-08-14</td>
+                                          <td><a href="#">32357979870709 </a></td>
+                                          <td>6,800</td>
+                                          <td>已充值</td>
+                                          <td></td>
+                                      </tr>
+                                      <tr>
+                                          <td>2013-08-14</td>
+                                          <td><a href="#">32357979870709 </a></td>
+                                          <td>6,800</td>
+                                          <td>已充值</td>
+                                          <td></td>
+                                      </tr>
+                                      <tr>
+                                          <td>2013-08-14</td>
+                                          <td><a href="#">32357979870709 </a></td>
+                                          <td>6,800</td>
+                                          <td>已充值</td>
+                                          <td></td>
+                                      </tr>
+                                 </table>
+                         </div>   <!-- 退款记录 结束 -->
+                         
+                         <div class="tab" style="display:none;">  <!-- 冻结记录 开始 -->
+                                  <div class="date">
+                                      <em>冻结日期：</em>
+                                      <input class="datepicker" type="text" value="2013-08-08    周三" />
+                                      <span> - </span>
+                                      <input class="datepicker" type="text" value="2013-08-08    周三" />
+                                      <a class="adaptiveButton mediumOrange_btn">
+                                           <span class="left"></span>
+                                           <span class="center center_1">搜 索</span>
+                                           <span class="right"></span>
+                                      </a>
+                                      <label class="find">
+                                          <i>快速查找：</i>
+                                          <a href="#" class="current_find">今天</a>
+                                          <a href="#">最近一个月</a>
+                                      </label>
+                                 </div> 
+                                 <table cellpadding="0" cellspacing="0" class="tabListDetail"> 
+                                      <colgroup>
+                                          <col width="150px"/>
+                                          <col width="180px"/>
+                                          <col width="140px"/>
+                                          <col width="160px"/>
+                                          <col width="120px"/>
+                                      </colgroup>
+                                      <tr>
+                                          <th>冻结类型</th>
+                                          <th>冻结金额</th>
+                                          <th>冻结时间</th>
+                                          <th>解冻时间</th>
+                                          <th>备注</th>
+                                      </tr>
+                                      <tr>
+                                          <td>行程单</td>
+                                          <td>10000.00</td>
+                                          <td>2013-09-09</td>
+                                          <td>2013-09-10</td>
+                                          <td></td>
+                                      </tr>
+                                      <tr>
+                                          <td>行程单</td>
+                                          <td>10000.00</td>
+                                          <td>2013-09-09</td>
+                                          <td>2013-09-10</td>
+                                          <td></td>
+                                      </tr>
+                                      <tr>
+                                          <td>行程单</td>
+                                          <td>10000.00</td>
+                                          <td>2013-09-09</td>
+                                          <td>2013-09-10</td>
+                                          <td></td>
+                                      </tr>
+                                      <tr>
+                                          <td>行程单</td>
+                                          <td>10000.00</td>
+                                          <td>2013-09-09</td>
+                                          <td>2013-09-10</td>
+                                          <td></td>
+                                      </tr>
+                                      <tr>
+                                          <td>行程单</td>
+                                          <td>10000.00</td>
+                                          <td>2013-09-09</td>
+                                          <td>2013-09-10</td>
+                                          <td></td>
+                                      </tr>
+                                 </table> 
+                         </div>  <!-- 冻结记录 结束 -->
+                         
+                         <div class="tab" style="display:none;">  <!-- 押金记录 开始 -->
+                                  <div class="date">
+                                      <em>付款日期：</em>
+                                      <input class="datepicker" type="text" value="2013-08-08    周三" />
+                                      <span> - </span>
+                                      <input class="datepicker" type="text" value="2013-08-08    周三" />
+                                      <a class="adaptiveButton mediumOrange_btn">
+                                           <span class="left"></span>
+                                           <span class="center center_1">搜 索</span>
+                                           <span class="right"></span>
+                                      </a>
+                                      <label class="find">
+                                          <i>快速查找：</i>
+                                          <a href="#" class="current_find">今天</a>
+                                          <a href="#">最近一个月</a>
+                                      </label>
+                                 </div> 
+                                 <table cellpadding="0" cellspacing="0" class="tabListDetail"> 
+                                      <colgroup>
+                                          <col width="150px"/>
+                                          <col width="180px"/>
+                                          <col width="140px"/>
+                                          <col width="160px"/>
+                                          <col width="120px"/>
+                                      </colgroup>
+                                      <tr>
+                                          <th>押金类型</th>
+                                          <th>押金金额</th>
+                                          <th>付款时间</th>
+                                          <th>退还时间</th>
+                                          <th>备注</th>
+                                      </tr>
+                                      <tr>
+                                          <td>行程单</td>
+                                          <td>160.56</td>
+                                          <td>2013-09-09</td>
+                                          <td>2013-09-10</td>
+                                          <td></td>
+                                      </tr>
+                                      <tr>
+                                          <td>行程单</td>
+                                          <td>160.56</td>
+                                          <td>2013-09-09</td>
+                                          <td>2013-09-10</td>
+                                          <td></td>
+                                      </tr>
+                                      <tr>
+                                          <td>行程单</td>
+                                          <td>160.56</td>
+                                          <td>2013-09-09</td>
+                                          <td>2013-09-10</td>
+                                          <td></td>
+                                      </tr>
+                                      <tr>
+                                          <td>行程单</td>
+                                          <td>160.56</td>
+                                          <td>2013-09-09</td>
+                                          <td>2013-09-10</td>
+                                          <td></td>
+                                      </tr>
+                                      <tr>
+                                          <td>行程单</td>
+                                          <td>160.56</td>
+                                          <td>2013-09-09</td>
+                                          <td>2013-09-10</td>
+                                          <td></td>
+                                      </tr>
+                                      <tr>
+                                          <td>行程单</td>
+                                          <td>160.56</td>
+                                          <td>2013-09-09</td>
+                                          <td>2013-09-10</td>
+                                          <td></td>
+                                      </tr>
+                                      <tr>
+                                          <td>行程单</td>
+                                          <td>160.56</td>
+                                          <td>2013-09-09</td>
+                                          <td>2013-09-10</td>
+                                          <td></td>
+                                      </tr>
+                                      <tr>
+                                          <td>行程单</td>
+                                          <td>160.56</td>
+                                          <td>2013-09-09</td>
+                                          <td>2013-09-10</td>
+                                          <td></td>
+                                      </tr>
+                                 </table>
+                         </div>   <!-- 押金记录 结束 -->
+                         
+                         <div class="pagination clearfix">
+                            <ul>
+                                 <li><a href="#">上一页</a></li>
+                                 <li><a href="#">1</a></li>
+                                 <li><a href="#">2</a></li>
+                                 <li><a href="#" class="present">3</a></li>
+                                 <li><a href="#">4</a></li>
+                                 <li><a href="#">5</a></li>
+                                 <li> <span>...</span> </li>
+                                 <li><a href="#">60</a></li>
+                                 <li><a href="#">下一页</a></li>
+                            </ul>
+                            <div>
+                               <span>共<em>132</em>条记录 &nbsp;&nbsp;&nbsp;共14页</span> 
+                            </div>
+                        </div>
+                        <div style="clear:both;"></div>
+            </div><!-- detail_content end -->     
+                  
+        </div>
+    </main>
+</section>
+<script type="text/x-kendo-template" id="ac-paymentCode-template">
+    <table class="paymentCode"> <!--paymentCode start-->
+         <colgroup>
+              <col width="90px"/>
+              <col width="170px"/>
+              <col width="75px"/>
+         </colgroup>
+         <tr>
+             <td colspan="3" style="text-align:left; padding-left:30px;">为了您的资金安全，请首先设置支付密码。</td>
+         </tr>
+         <tr>
+             <td>支付密码：</td>
+             <td><input type="text" /></td>
+             <td>密码规则</td>
+         </tr>
+         <tr>
+             <td>确认支付密码：</td>
+             <td><input type="text" /></td>
+             <td> </td>
+         </tr>
+         <tr>
+             <td> </td>
+             <td>
+                 <a class="adaptiveButton mediumOrange_btn">
+                      <span class="left"></span>
+                      <span class="center" style="padding:0 10px;">确认,去充值</span>
+                      <span class="right"></span>
+                 </a>
+                 <a href="javascript:void(0);" class="callOff">取消</a>
+             </td>
+             <td> </td>
+         </tr>
+    </table> <!--paymentCode end-->  
+</script>
+
+<script type="text/x-kendo-template" id="ac-recharge-template">
+        <div class="on_line"> <!--on_line start-->
+            <span style="padding:0 15px 15px;display:inline-block;">充值金额：<input type="text"  style="margin-left:10px"/></span>
+                        
+            <div class="pay_btn">
+                 <a class="adaptiveButton mediumOrange_btn">
+                      <span class="left"></span>
+                      <span class="center center_1">去支付</span>
+                      <span class="right"></span>
+                 </a>
+                <a href="javascript:void(0);" class="callOff">取消</a>
+            </div>
+        </div> <!--on_line end--> 
+</script>
+
+<script type="text/html" id="ac-paysuccess-template">
+    <div style="width:290px;margin:0 auto;line-height:1.625">
+        <div class="succeed">
+            <h3>提交成功！</h3>
+        </div>
+        <table>
+            <tr>
+                <td width="90" style="vertical-align:top" class="col-r">转账银行账号：</td>
+                <td>交通银行 施季军<br/>6222222156498786315（交通银行上海分行）</td>
+            </tr>
+            <tr>
+                <td class="col-r">汇款人：</td>
+                <td>佟湘玉</td>
+            </tr>
+            <tr>
+                <td class="col-r">汇款金额：</td>
+                <td><span class="money">10000.00</span>元</td>
+            </tr>
+            <tr>
+                <td class="col-r">汇款日期：</td>
+                <td>2013-09-13</td>
+            </tr>
+            <tr>
+                <td class="col-r">凭单号：</td>
+                <td>321365468742</td>
+            </tr>
+        </table>
+    </div>
+</script>
+
+
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+
+<script>
+    $(function(){
+        $(".tab_change li").each(function(index){
+            $(this).click(function(){
+                $(".us-body .tab").hide();
+                $(".us-body .tab:eq(" + index + ")").show();
+                $(".tab_change li").removeClass("currentState");
+                $(this).addClass("currentState");
+            });
+
+        });
+
+    });
+</script>
+
+<script type="text/javascript">
+	$(function(){
+		new PopWindow('.ac-paymentCode',{
+			template:'#ac-paymentCode-template',
+			title:'设置支付密码',
+			width:'400'
+		}).init();
+		
+		new PopWindow('.ac-recharge',{
+			template:'#ac-recharge-template',
+			title:'账户充值',
+			width:'400'
+		}).init();
+
+        new PopWindow('#btn_paying',{
+            template:'#ac-paysuccess-template',
+            title:'充值-线下转账',
+            width:'500'
+        }).init();
+
+    });
+	
+</script>
+
+<!--<script>
+    $(function(){
+        $(".tab_window li").each(function(index){
+            $(this).click(function(){
+                $(".pay .pay_tab").hide();
+                $(".pay .pay_tab:eq(" + index + ")").show();
+                $(".tab_window li").removeClass("currentWindow");
+                $(this).addClass("currentWindow");
+            });
+
+        });
+
+    });
+</script>-->
+
+</body>
+</html>
+

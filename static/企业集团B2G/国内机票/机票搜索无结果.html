@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 B2G 机票搜索无结果</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/b2g.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.b2g.css" />
+    <link rel="stylesheet" href="../../static/css/b2g_flight.css" media="all" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/b2g/common.js"></script>
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+    <!--[if lte IE 9]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="top-line"></div>
+    <header class="main-header">
+        <div class="header-content">
+            <a class="logo" href="/">天地行 B2G</a>
+            <nav class="main-nav">
+                <ul class="clearfix">
+                    <li class="first active"><a herf="#">行程预订</a></li>
+                    <li><a herf="#">行程管理</a></li>
+                    <li><a herf="#">数据服务</a></li>
+                    <li><a herf="#">创业维护</a></li>
+                    <li><a herf="#">系统设置</a></li>
+                </ul> 
+            </nav>
+        </div>
+    </header>
+    <div class="header-bar clearfix">
+        <div class="header-bar-content">
+            <i class="tips"></i><span>请先选择差旅人   * 默认状态下您为自己预订</span>
+            <div class="setuser">
+                <a href="javascript:void(0);">设置差旅人</a>
+            </div>
+            <div class="for_reason">
+                <span class="reason_checkbox checked"></span><label for="reason">因私</label><input type="checkbox" style="display:none;" id="reason" value="for_private" name="reason"/>
+            </div>
+        </div>
+    </div>
+
+    <section class="main-body clearfix">
+        <div class="main-body-content">
+        	<div class="titTop clearfix">
+                <h3 class="titleH3">上海到重庆机票 （往返）</h3>
+                <div class="flowImg">
+                        <em class="curFlowImg"><i></i>选择</em>
+                        <em>预订</em>
+                        <em>填写</em>
+                        <em>加入行程</em>
+                        <em class="lastFlowGray">提交行程</em>
+                </div>
+        	</div>  
+       
+      	 	<div class="seekCon">
+                <div class="againSeek">
+                    <table>
+                          <colgroup>
+                               <col width="210px"/>
+                               <col width="70px"/>
+                               <col width="210px"/>
+                               <col width="70px"/>
+                               <col width="210px"/>
+                               <col width="45px"/>
+                               <col width="190px"/>
+                               <col width="130px"/>
+                          </colgroup>
+                          <tr>
+                              <td rowspan="2">
+                                   <select data-role="dropdownlist" style="width:160px;" id="trip_type">
+                                         <option value="one_way">单程</option>
+                                         <option value="round_trip" selected>往返</option>
+                                         <option value="union_trip">联程</option>
+                                   </select>
+                              </td>
+                              <td>出发城市：</td>
+                              <td><input type="text" value="上海" /></td>
+                              <td>出发时间：</td>
+                              <td><input type="text" value="" class="datepicker"/></td>
+                              <td>舱位：</td>
+                              <td>
+                                  <select data-role="dropdownlist" style="width:150px;">
+                                       <option>不限</option>
+                                       <option>经济舱</option>
+                                       <option>商务舱</option>
+                                       <option>头等舱</option>
+                                  </select>
+                              </td>
+                              <td><button type="button" class="commonBtn lightBlueBtn" style="padding:7px 25px;">重新搜索</button></td>
+                          </tr>
+                          <tr>
+                              <td>到达城市：</td>
+                              <td><input type="text" value="重庆"/></td>
+                              <td colspan="2"><label id="return_label"><em >返程时间：</em><input type="text" value="" class="datepicker" id="return_date"/></label></td>
+                              <td></td>
+                              <td></td>
+                              <td valign="bottom">
+                                  <label class="heiSeek toggle_trigger" data-toggle='{"target":"#unfoldCon","textFilter":"i","toggleClass":["heiSeek","putAway"],"toggleText":["高级搜索","收起"]}'><i>高级搜索</i> <em></em></label>
+                                  <label class="putAway" style="display:none;"><i>收起</i> <em></em></label>
+                              </td>
+                          </tr>
+                     </table> 
+                </div>
+                <div class="unfoldCon" id="unfoldCon" style="display:none;">
+                     <b>舱位：</b>
+                     <label><input type="checkbox"/>全部</label>
+                     <label><input type="checkbox"/>头等舱</label>
+                     <label><input type="checkbox"/>商务舱</label>
+                     <label><input type="checkbox"/>经济舱 </label>
+                     <b>起飞时间：</b>
+                     <select data-role="dropdownlist" style="width:120px;">
+                          <option>不限</option>
+                          <option selected>00:00-02:00</option>
+                          <option>02:00-04:00</option>
+                          <option>04:00-06:00</option>
+                          <option>06:00-08:00</option>
+                          <option>08:00-10:00</option>
+                          <option>10:00-12:00</option>
+                          <option>12:00-14:00</option>
+                          <option>14:00-16:00</option>
+                          <option>16:00-18:00</option>
+                          <option>18:00-20:00</option>
+                          <option>20:00-22:00</option>
+                          <option>22:00-24:00</option>
+                     </select>
+                     <b style="margin-left:85px;">航空公司：</b>
+                     <select data-role="dropdownlist" style="width:120px;">
+                          <option>东方航空</option>
+                          <option>南方航空</option>
+                          <option>春秋航空</option>
+                     </select>
+                </div>
+        </div> 
+        
+        <div class="noResult clearfix"> <!--无搜索结果 开始-->
+             <div><img src="/static/images/b2g/flightNoResult.png" style="width:310px; height:187px;"/></div>
+             <div class="resultContent">
+                  <h4>没有找到您所查询的航班，您可以尝试如下操作：</h4>
+                  <ul class="resultList">
+                      <li>1、更改查询条件 &nbsp;<a href="javascript:void(0);">重新搜索</a></li>
+                      <li>2、联系客服电话（400-720-6666）进行咨询。</li>
+                  </ul>
+             </div>
+        </div> <!--无搜索结果 结束-->
+    
+        
+	</div>
+    </section>
+    <footer class="main-footer">
+        <p class="copyright">Copyright &copy; 2013 天地行 All Rights Reserved.     沪ICP备08101503号</p>
+    </footer>
+</div>
+</body>
+
+<script>
+
+        $(function(){
+
+            $("#trip_type").change(function(){
+				console.log($(this).val());
+                if($(this).val() == "one_way"){
+                    $("#return_label input").addClass("grayed");
+					$("#return_date").prop("disabled",true);                    
+                }else{
+					$("#return_date").removeClass("grayed").prop("disabled",false);
+
+                }
+            });
+        });
+    </script>
+
+<script>
+	$(function(){
+			  
+		$(".flight-item .linkA").kendoTooltip({
+			position:"bottom", //left right top
+			content:function(){
+				return "退票：仅退基建燃油费，机票款不退<br>废票：每张收取N元费用<br>更改：不得改期、升舱<br>签转：不允许签转<br>备注：";
+			},
+			offsetY:10
+			
+		});
+		$(".selectedInfo .oneTransfer").kendoTooltip({
+				position:"bottom", //left right top
+				wrapperClass:"lineWeight",
+				width:320,
+				content:function(){
+					return $("#oneTransfer").html();
+				},
+				offsetY:10				
+			});
+			
+			$(".selectedInfo .twiceTransfer").kendoTooltip({
+				position:"bottom", //left right top
+				wrapperClass:"lineWeight",
+				width:320,
+				content:function(){
+					return $("#twiceTransfer").html();
+				},
+				offsetY:10				
+			});
+	});
+</script>
+
+<script type="text/x-kendo-template" id="oneTransfer">
+	<table class="transferList">
+	       <colgroup>
+                 <col width="40px"/>
+                 <col width="140px"/>
+                 <col width="140px"/>
+           </colgroup>
+           <tr>
+               <th>中转</th>
+               <td>香港（香港国际机场）</td>
+               <td>停留时长：2小时15分</td>
+           </tr>
+	</table>	
+</script>
+
+<script type="text/x-kendo-template" id="twiceTransfer">
+	<table class="transferList">
+	       <colgroup>
+                 <col width="40px"/>
+                 <col width="140px"/>
+                 <col width="140px"/>
+           </colgroup>
+           <tr>
+               <th>中转</th>
+               <td>香港（香港国际机场）</td>
+               <td>停留时长：2小时15分</td>
+           </tr>
+		   <tr>
+               <th>经停</th>
+               <td>东京（东京国际机场）</td>
+               <td>停留时长：2小时15分</td>
+           </tr>
+	</table>	
+</script>
+</html>
+
+

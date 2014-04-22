@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 登陆注册 注册成功</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+     
+    <link href="../../static/css/coin-slider-styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_flight.css" media="screen" />    
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+	<link rel="stylesheet" href="../../static/css/kendo.store.css" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+	<script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>    
+
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>    
+    <script type="text/javascript" src="../../static/js/store/store.js"></script>
+</head>
+<body>
+
+<div class="main-wrapper">
+<header class="main-header">
+    <a class="logo" href="/"><h1>天地行</h1></a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first active"><a herf="#">首页</a></li>
+            <li><a herf="#">国内机票</a></li>
+            <li><a herf="#">国际机票</a></li>
+            <li><a herf="#">酒店</a></li>
+        </ul> 
+    </nav>
+    <nav class="main-links">
+        <ul class="clearfix">
+            <li class="first"><a href="#">订单管理</a></li>
+            <li><a href="#">分销管理</a></li>
+            <li><a href="#">电子钱包</a></li>
+            <li><a href="#">统计报表</a></li>
+            <li><a href="#">客服服务</a></li>
+            <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+            <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+</header>
+<section class="main-body clearfix" style="background:#fff;">
+       
+     <div class="successful">
+          <h3><em> </em> 恭喜您，注册成功</h3>
+          <div>欢迎使用本站。</div>
+          <ul class="clearfix">
+              <li><a href="#">国内机票</a></li>
+              <li><a href="#">国际机票</a></li>
+              <li><a href="#">酒店</a></li>
+          </ul>
+     </div>
+   
+
+     
+</section>
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+
+
+<!--模板文件-->
+<script id="ffcTemplate" type="text/x-kendo-template">
+    <ul class="ul_ffc" data-role="panelbar">
+        # for(var i=0;i<data.length;i++){ #
+        <li>
+            #= data[i].categories #
+            # for(var j=0;j<data[i].customers.length;j++){ #
+            <div class="item"><label><input type="checkbox" value="#=data[i].customers[j].id #"> #= data[i].customers[j].name #</label></div>
+            # } #
+        </li>
+        # } #
+    </ul>
+</script>
+
+<script id="ffcsTemplate" type="text/x-kendo-template">
+    <ul class="ul_ffc">
+        # for(var i=0;i<data.length;i++){ #
+        <li style="padding:5px">
+            <label><input type="checkbox" value="#=data[i].id #"> #= data[i].name #</label>
+        </li>
+        # } #
+    </ul>
+</script>
+
+<!--模板文件-->
+
+<script type="text/javascript" src="../../static/js/store/freq_traveler.js"></script>
+</body>
+</html>

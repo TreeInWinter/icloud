@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>系统设置 消息中心 新增消息模板</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.gray.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.reset.css" rel="stylesheet" type="text/css" /> <!--弹窗CSS-->
+    <link href="../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.reset.css" rel="stylesheet" />  
+    <link href="../../static/css/message.css" rel="stylesheet" type="text/css"/>
+    <script src="../../static/js/jquery.min.js" type="text/javascript"></script>
+    
+    <script src="../../static/js/kendo.web.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/static/js/scrollFix.js"></script>
+    <script type="text/javascript" src="../../static/js/public.js"></script>
+
+   <!-- <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript">
+$(function(){
+    new Collpase({
+        limitHeight:140,
+        container:'.xyzc_div' 
+    }).init();
+}) 
+    </script>-->
+<script src="../../static/js/hotel.js" type="text/javascript"></script> <!--弹窗JS--> 
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body>
+    <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">&nbsp;</a>
+                <span>&nbsp;</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent" style="overflow:hidden;">
+			<!-- 模板开始 -->
+        
+             <div class="topFixedToolsBar">
+                <div style="float:left;border-right:1px solid #ffffff">
+                    <a href="#" style="display:inline-block;line-height:33px;font-size: 14px;font-weight: bold;border-right: 1px solid #CDCECE;padding: 0 8px;">返回</a>
+                </div>                        
+                <div class="fixedMenu" style="font-weight:bold; width:auto;">
+                    <span>新增消息模板</span>
+                </div>                
+                <div class="fixedButton">
+                    <a class="button_secondary adaptiveButton small" href="javascript:;">
+                        <span class="left"></span>
+                        <span class="center center_1">取 消</span>
+                        <span class="right"></span>
+                    </a>
+                    <a class="button_secondary adaptiveButton small" href="javascript:;">
+                        <span class="left"></span>
+                        <span class="center center_1">保 存</span>
+                        <span class="right"></span>
+                    </a>
+                </div>                
+            </div>
+             
+          
+             <div class="template">
+                 <div class="tem_name">
+                     <b>模板名称：</b>
+                     <input type="text" value="请输入姓名..." />
+                     <b style="width:70px;">业务类型：</b>
+                     <select>
+                         <option>机票</option>
+                         <option>国内机票</option>
+                         <option>国际机票</option>
+                         <option>酒店</option>
+                         <option>通用</option>
+                     </select>
+                 </div>
+                 <div class="system">
+                     <b>系统消息模板：</b>
+                     <textarea> </textarea>
+                 </div>
+                 <div class="note">
+                     <label> <input type="checkbox" /> 短信模板：</label>
+                     <textarea> </textarea>
+                 </div>
+                 <div class="mail">
+                     <label> <input type="checkbox" /> 邮件模板：</label>
+                     <a href="javascript:;" class="button_secondary adaptiveButton small">
+                            <span class="left"></span>
+                            <span class="center">上 传</span>
+                            <span class="right"></span>
+                     </a>
+                     <a href="#" class="mail_a">ticketreject.html</a>
+                 </div>
+                 <div class="mail">
+                     <label> <input type="checkbox" /> 传真模板：</label>
+                     <a href="javascript:;" class="button_secondary adaptiveButton small">
+                            <span class="left"></span>
+                            <span class="center">上 传</span>
+                            <span class="right"></span>
+                     </a>
+                     <a href="#" class="mail_a">ticketreject.doc</a>
+                 </div>
+                 
+             </div>
+           
+             
+              
+            
+          </div>  <!-- 模板结束 -->
+    </div>
+    
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+    
+</body>
+</html>

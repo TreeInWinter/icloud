@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta content="text/html" charset="utf-8">
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/b2b.css">
+    <link rel="stylesheet" href="/static/css/kendo.common.css">
+    <link rel="stylesheet" href="/static/css/kendo.gray.css">
+    <link href="/static/css/kendo.reset.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/static/css/hotel.css">
+    <link rel="stylesheet" href="/static/css/hotel_sellPrice_rule.css">
+</head>
+<body>
+<div id="container" style="margin-top:0">
+<div id="mainContent">
+<div class="actions block">
+    <div class="col col-l sep-r">
+        <button class="btns btn-return">返回</button>
+    </div>
+    <div class="col col-l">
+        <span class="page-title">
+            普通加价政策
+        </span>
+    </div>
+    <div class="col col-r sep-l">
+        <a href="javascript:;" class="button_secondary adaptiveButton small">
+            <span class="left"></span>
+            <span class="center">修 改</span>
+            <span class="right"></span>
+        </a>
+        <a href="javascript:;" class="button_secondary adaptiveButton small">
+            <span class="left"></span>
+            <span class="center">复 制</span>
+            <span class="right"></span>
+        </a>
+        <a href="javascript:;" class="button_secondary adaptiveButton small">
+            <span class="left"></span>
+            <span class="center">挂 起</span>
+            <span class="right"></span>
+        </a>
+        <a href="javascript:;" class="button_secondary adaptiveButton small">
+            <span class="left"></span>
+            <span class="center">作 废</span>
+            <span class="right"></span>
+        </a>
+        <a href="javascript:;" class="button_secondary adaptiveButton small">
+            <span class="left"></span>
+            <span class="center">导 出</span>
+            <span class="right"></span>
+        </a>
+    </div>
+</div>
+
+<div style="padding:20px;border-bottom:1px solid #ccc;background:#fff">
+    <table>
+        <tr>
+            <td style="width:70px"><span class="important">*</span><span class="head">规则名称：</span></td>
+            <td style="width:210px">2013酒店下半年售价规则</td>
+            <td style="width:50px"><span class="head">规则ID：</span></td>
+            <td style="width:70px">未创建</td>
+            <td style="width:65px"><span class="head">规则状态：</span></td>
+            <td style="width:70px">未创建</td>
+            <td style="width:65px;"><span class="head">创建时间：</span></td>
+            <td style="width:105px">2013/07/31 14:21</td>
+            <td style="width:55px"><span class="head">创建人：</span></td>
+            <td>刘伟</td>
+        </tr>
+        <tr>
+            <td><span class="important">*</span><span class="head">有效期：</span></td>
+            <td>
+                2013-06-01 至 2013-06-01
+            </td>
+            <td colspan="4">
+                <ul class="weekday_select">
+                    <li>一</li>
+                    <li>二</li>
+                    <li>三</li>
+                    <li>四</li>
+                    <li>五</li>
+                    <li><span class="weekend">六</span></li>
+                    <li><span class="weekend">日</span></li>
+                </ul>
+            </td>
+            <td><span class="head">最后修改：</span></td>
+            <td>/</td>
+            <td><span class="head">操作人：</span></td>
+            <td>/</td>
+        </tr>
+        <tr>
+            <td style="vertical-align:top"><span class="head">备注：</span></td>
+            <td colspan="9">s适用于所有酒店</td>
+        </tr>
+    </table>
+</div>
+
+<div class="panel" style="padding:0 20px">
+<div class="subPanel" style="padding:10px">
+    <span class="head">酒店范围：</span>
+    <label style="margin-right:20px"><input type="radio" name="hotelRangeSelect" id="">全部地区</label>
+    <label><input type="radio" name="hotelRangeSelect" id="">签约经理</label>
+    <select name="" id="" style="width:132px">
+        <option value="">签约经理名单</option>
+    </select>
+    <label style="margin-left:20px"><input type="radio" name="hotelRangeSelect" id="">城市</label>
+    <input type="text" name="" id="" style="width:113px">
+    <a href="javascript:;" class="button_unimportant adaptiveButton small" style="margin-right:30px">
+        <span class="left"></span>
+        <span class="center">查 询</span>
+        <span class="right"></span>
+    </a>
+</div>
+<div class="subPanel">
+    <div class="subPanel_title">
+        <span class="head">省/直辖市：</span>
+        <span class="head" style="margin-right:25px">（2）</span>
+        <label><input type="checkbox" name="" id="">全选</label>
+    </div>
+    <div>
+        <ul style="margin:15px 0">
+            <li class="regionContainer" style="width:82px">
+                <ul>
+                    <li class="selectAll"><label><input type="checkbox" name="" id="">上海市</label></li>
+                </ul>
+            </li>
+            <li class="regionContainer" style="width:140px">
+                <ul>
+                    <li class="selectAll"><label><input type="checkbox" name="" id="">华北区</label></li>
+                    <li><label><input type="checkbox" name="" id="">北京</label></li>
+                    <li><label><input type="checkbox" name="" id="">河南</label></li>
+                    <li><label><input type="checkbox" name="" id="">辽宁</label></li>
+                    <li><label><input type="checkbox" name="" id="">内蒙古</label></li>
+                    <li><label><input type="checkbox" name="" id="">黑龙江</label></li>
+                    <li><label><input type="checkbox" name="" id="">山东</label></li>
+                    <li><label><input type="checkbox" name="" id="">吉林</label></li>
+                    <li><label><input type="checkbox" name="" id="">河北</label></li>
+                </ul>
+            </li>
+            <li class="regionContainer" style="width:128px">
+                <ul>
+                    <li class="selectAll"><label><input type="checkbox" name="" id="">华东区</label></li>
+                    <li><label><input type="checkbox" name="" id="">浙江</label></li>
+                    <li><label><input type="checkbox" name="" id="">江苏</label></li>
+                    <li><label><input type="checkbox" name="" id="">福建</label></li>
+                    <li><label><input type="checkbox" name="" id="">湖南</label></li>
+                    <li><label><input type="checkbox" name="" id="">安徽</label></li>
+                    <li><label><input type="checkbox" name="" id="">江西</label></li>
+                </ul>
+            </li>
+            <li class="regionContainer" style="width:128px">
+                <ul>
+                    <li class="selectAll"><label><input type="checkbox" name="" id="">华南区</label></li>
+                    <li><label><input type="checkbox" name="" id="">广东</label></li>
+                    <li><label><input type="checkbox" name="" id="">广西</label></li>
+                    <li><label><input type="checkbox" name="" id="">海南</label></li>
+                </ul>
+            </li>
+            <li class="regionContainer" style="width:128px">
+                <ul>
+                    <li class="selectAll"><label><input type="checkbox" name="" id="">华西</label></li>
+                    <li><label><input type="checkbox" name="" id="">四川</label></li>
+                    <li><label><input type="checkbox" name="" id="">新疆</label></li>
+                    <li><label><input type="checkbox" name="" id="">西藏</label></li>
+                    <li><label><input type="checkbox" name="" id="">湖北</label></li>
+                    <li><label><input type="checkbox" name="" id="">重庆</label></li>
+                    <li><label><input type="checkbox" name="" id="">山西</label></li>
+                    <li><label><input type="checkbox" name="" id="">甘肃</label></li>
+                    <li><label><input type="checkbox" name="" id="">宁夏</label></li>
+                    <li><label><input type="checkbox" name="" id="">青海</label></li>
+                    <li><label><input type="checkbox" name="" id="">云南</label></li>
+                    <li><label><input type="checkbox" name="" id="">贵州</label></li>
+                </ul>
+            </li>
+            <li class="regionContainer" style="width:82px">
+                <ul>
+                    <li class="selectAll"><label><input type="checkbox" name="" id="">港澳台</label></li>
+                </ul>
+            </li>
+            <li class="regionContainer" style="width:82px;border:none">
+                <ul>
+                    <li class="selectAll"><label><input type="checkbox" name="" id="">海外</label></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="subPanel">
+    <div class="subPanel_title">
+        <span class="head">市/县：</span>
+        <span class="head" style="margin-right:25px">（8）</span>
+        <label><input type="checkbox" name="" id="">全选</label>
+        <a href="javascript:;" class="button_secondary adaptiveButton small expand" style="float:right">
+            <span class="left"></span>
+            <span class="center" style="padding:0 5px">收 起 ︽</span>
+            <span class="right"></span>
+        </a>
+    </div>
+
+    <div class="expandPanel">
+        <div id="cityContainerLeftButton" class="tabsBarLeftButton"></div>
+        <div id="cityContainerRightButton" class="tabsBarRightButton"></div>
+        <div class="tabsContainer">
+            <ul id="cityTabsContainer" class="cityTabsContainer clearfix">
+                <li class="current">
+                    <div class="mtab">
+                        北京 <span>1</span>
+                        <span class="rightCover"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="mtab gray">
+                        北京 <span>1</span>
+                        <span class="rightCover"></span>
+                    </div>
+                </li>
+                <li class="current">
+                    <div class="mtab gray">
+                        北京 <span>1</span>
+                        <span class="rightCover"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="mtab gray">
+                        北京 <span>1</span>
+                        <span class="rightCover"></span>
+                    </div>
+                </li>
+                <li class="current">
+                    <div class="mtab gray">
+                        北京 <span>1</span>
+                        <span class="rightCover"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="mtab gray">
+                        北京 <span>1</span>
+                        <span class="rightCover"></span>
+                    </div>
+                </li>
+                <li class="current">
+                    <div class="mtab gray">
+                        北京 <span>1</span>
+                        <span class="rightCover"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="mtab gray">
+                        北京 <span>1</span>
+                        <span class="rightCover"></span>
+                    </div>
+                </li>
+                <li class="current">
+                    <div class="mtab gray">
+                        北京 <span>1</span>
+                        <span class="rightCover"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="mtab gray">
+                        北京 <span>1</span>
+                        <span class="rightCover"></span>
+                    </div>
+                </li>
+                <li class="current">
+                    <div class="mtab gray">
+                        北京 <span>1</span>
+                        <span class="rightCover"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="mtab gray">
+                        北京 <span>1</span>
+                        <span class="rightCover"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div style="border-bottom:1px solid #0FAADD"></div>
+        <div class="clearfix">
+            <ul class="cityContainer">
+                <li class="expandCityPanel"><label><input type="checkbox">大连市</label><a></a></li>
+                <li class="closeCityPanel"><label><input type="checkbox">大连市</label><a></a></li>
+                <li class="closeCityPanel"><label><input type="checkbox">大连市</label><a></a></li>
+                <li class="closeCityPanel"><label><input type="checkbox">大连市</label><a></a></li>
+                <li class="closeCityPanel"><label><input type="checkbox">大连市</label><a></a></li>
+                <li class="closeCityPanel"><label><input type="checkbox">大连市</label><a></a></li>
+                <li class="closeCityPanel"><label><input type="checkbox">大连市</label><a></a></li>
+                <li class="closeCityPanel"><label><input type="checkbox">大连市</label><a></a></li>
+                <li class="closeCityPanel"><label><input type="checkbox">大连市</label><a></a></li>
+                <li class="closeCityPanel"><label><input type="checkbox">大连市</label><a></a></li>
+                <li class="closeCityPanel"><label><input type="checkbox">大连市</label><a></a></li>
+                <li class="closeCityPanel"><label><input type="checkbox">大连市</label><a></a></li>
+                <li class="closeCityPanel"><label><input type="checkbox">大连市</label><a></a></li>
+                <li class="closeCityPanel"><label><input type="checkbox">大连市</label><a></a></li>
+                <li class="closeCityPanel"><label><input type="checkbox">大连市</label><a></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="subPanel" style="display:none">
+    <div class="subPanel_title">
+        <span class="head">位置：</span>
+        <span class="head" style="margin-right:25px">（8）</span>
+        <label><input type="radio" name="locationType" id="">行政区</label>
+        <label style="margin:0 10px"><input type="radio" name="locationType" id="">商业区</label>
+        <span style="border-left:1px solid #999;margin-right:10px"></span>
+        <label style=""><input type="checkbox" name="" id="">全选</label>
+        <a href="javascript:;" class="button_secondary adaptiveButton small expand" style="float:right">
+            <span class="left"></span>
+            <span class="center" style="padding:0 5px">收 起 ︽</span>
+            <span class="right"></span>
+        </a>
+    </div>
+    <div class="expandPanel">
+        <div class="tabsBarLeftButton">◀</div>
+        <div class="tabsBarRightButton active">▶</div>
+        <div class="tabsContainer">
+            <ul class="cityTabsContainer">
+                <li class="current">
+                    <div class="mtab gray">
+                        北京 <span>1</span>
+                        <span class="rightCover"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="mtab gray">
+                        北京 <span>1</span>
+                        <span class="rightCover"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="clearfix">
+            <ul class="cityContainer">
+                <li><label><input type="checkbox" name="" id="">大连市<span></span></label></li>
+                <li><label><input type="checkbox" name="" id="">大连市<span></span></label></li>
+                <li><label><input type="checkbox" name="" id="">大连市<span></span></label></li>
+                <li><label><input type="checkbox" name="" id="">大连市<span></span></label></li>
+                <li><label><input type="checkbox" name="" id="">大连市<span></span></label></li>
+                <li><label><input type="checkbox" name="" id="">大连市<span></span></label></li>
+                <li><label><input type="checkbox" name="" id="">大连市<span></span></label></li>
+                <li><label><input type="checkbox" name="" id="">大连市<span></span></label></li>
+                <li><label><input type="checkbox" name="" id="">大连市<span></span></label></li>
+                <li><label><input type="checkbox" name="" id="">大连市<span></span></label></li>
+                <li><label><input type="checkbox" name="" id="">大连市<span></span></label></li>
+                <li><label><input type="checkbox" name="" id="">大连市<span></span></label></li>
+                <li><label><input type="checkbox" name="" id="">大连市<span></span></label></li>
+                <li><label><input type="checkbox" name="" id="">大连市<span></span></label></li>
+                <li><label><input type="checkbox" name="" id="">大连市<span></span></label></li>
+                <li><label><input type="checkbox" name="" id="">大连市<span></span></label></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="subPanel">
+    <div class="subPanel_title">
+        <span class="head">连锁品牌：</span>
+        <span class="head" style="margin-right:25px">（42）</span>
+        <label><input type="checkbox" name="" id="">全选</label>
+        <a href="javascript:;" class="button_secondary adaptiveButton small expand" style="float:right">
+            <span class="left"></span>
+            <span class="center" style="padding:0 5px">收 起 ︽</span>
+            <span class="right"></span>
+        </a>
+    </div>
+    <div style="margin:10px 0" class="expandPanel">
+        <div class="domesticHotelContainer">
+            <table>
+                <tr>
+                    <td colspan="4" class="selectAll" style="font-weight:bold"><label><input type="checkbox" name="" id="">海外酒店管理集团</label></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id="dh1"></td>
+                    <td style="width:200px"><label for="dh1">洲际酒店集团（IHG）</label></td>
+                    <td><input type="checkbox" name="" id="dh2"></td>
+                    <td><label for="dh2">温德姆酒店集团（Wyndham Hotel Group）</label></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id="dh3"></td>
+                    <td style="width:200px"><label for="dh1">万豪国际集团（Marriott）</label></td>
+                    <td><input type="checkbox" name="" id="dh4"></td>
+                    <td><label for="dh2">法国雅高国际集团（ACCOR）</label></td>
+                </tr>
+            </table>
+        </div>
+        <div class="overseasHotelContainer">
+            <table>
+                <tr>
+                    <td colspan="4" class="selectAll" style="font-weight:bold"><label><input type="checkbox" name="" id="">国内酒店管理集团</label></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id="osh1" style="margin:0"></td>
+                    <td style="width:200px"><label for="osh1">上海锦江过久酒店（集团）</label></td>
+                    <td><input type="checkbox" name="" id="osh2"></td>
+                    <td><label for="osh2">首旅建国酒店管理公司</label></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id="osh1" style="margin:0"></td>
+                    <td style="width:200px"><label for="osh1">上海锦江过久酒店（集团）</label></td>
+                    <td><input type="checkbox" name="" id="osh2"></td>
+                    <td><label for="osh2">首旅建国酒店管理公司</label></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+</div>
+<div class="subPanel" style="padding:0">
+    <div class="subPanel_title">
+        <span class="head">星级：</span>
+        <span class="head" style="margin-right:25px">（42）</span>
+        <label style="margin-right:25px"><input type="checkbox" name="" id="">全选</label>
+        <label style="margin-right:25px"><input type="checkbox" name="" id="">二星及以下/经济</label>
+        <label style="margin-right:25px"><input type="checkbox" name="" id="">三星级/舒适</label>
+        <label style="margin-right:25px"><input type="checkbox" name="" id="">四星级/高档</label>
+        <label><input type="checkbox" name="" id="">五星级/豪华</label>
+    </div>
+</div>
+<div class="subPanel" style="border:none;padding-bottom:0">
+    <div class="subPanel_title">
+        <span class="head">酒店详情：</span>
+        <span class="head" style="margin-right:25px">（2000）</span>
+        <a href="javascript:;" class="button_secondary adaptiveButton small expand" style="float:right">
+            <span class="left"></span>
+            <span class="center" style="padding:0 5px">收 起 ︽</span>
+            <span class="right"></span>
+        </a>
+    </div>
+    <div style="padding:10px">
+        <span class="head">城市</span><input type="text" name="" id="" style="width:118px">
+        <span class="head" style="margin:0 5px">位置</span><input type="text" name="" id="" style="width:118px">
+        <span class="head" style="margin:0 5px">品牌</span><select name="" id="" style="width:98px"></select>
+        <span class="head" style="margin:0 5px">星级</span><select name="" id="" style="width:78px"></select>
+        <span class="head" style="margin:0 5px">名称</span><input type="text" name="" id="" style="width:88px">
+        <a href="javascript:;" class="button_important adaptiveButton small" >
+            <span class="left"></span>
+            <span class="center">查 询</span>
+            <span class="right"></span>
+        </a>
+        <a href="javascript:;" class="button_unimportant adaptiveButton small">
+            <span class="left"></span>
+            <span class="center">清除查询数据</span>
+            <span class="right"></span>
+        </a>
+    </div>
+    <div class="expandPanel">
+        <div style="background:#F6F6F6;padding:10px">
+            <label><input type="checkbox" name="" id="">全选</label>
+            <span class="important" style="margin-right:10px;float:right">*勾选排除酒店，房型</span>
+        </div>
+        <div class="xyzc_tab2_div_1">
+            <table cellpadding="0" cellspacing="0" class="xyzc_tab2">
+                <thead>
+                <tr>
+                    <td style="width:56px"><input type="checkbox">排除</td>
+                    <td style="width:85px">城市</td>
+                    <td style="width:95px">位置</td>
+                    <td style="width:280px">酒店名称</td>
+                    <td style="width:62px">星级</td>
+                    <td style="width:149px">品牌</td>
+                    <td style="width:91px">房型</td>
+                    <td style="width:88px">签约经理</td>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr class="four_bg">
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>上海</td>
+                    <td>闸北区</td>
+                    <td>宝华国际酒店</td>
+                    <td>4</td>
+                    <td>宝华国际</td>
+                    <td><a href="javascript:;" style="text-decoration:underline">4</a></td>
+                    <td>张三</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>上海</td>
+                    <td>闸北区</td>
+                    <td>宝华国际酒店</td>
+                    <td>4</td>
+                    <td>宝华国际</td>
+                    <td><a href="javascript:;" style="text-decoration:underline">4</a></td>
+                    <td>张三</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>上海</td>
+                    <td>闸北区</td>
+                    <td>宝华国际酒店</td>
+                    <td>4</td>
+                    <td>宝华国际</td>
+                    <td><a href="javascript:;" style="text-decoration:underline">4</a></td>
+                    <td>张三</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>上海</td>
+                    <td>闸北区</td>
+                    <td>宝华国际酒店</td>
+                    <td>4</td>
+                    <td>宝华国际</td>
+                    <td><a href="javascript:;" style="text-decoration:underline">4</a></td>
+                    <td>张三</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>上海</td>
+                    <td>闸北区</td>
+                    <td>宝华国际酒店</td>
+                    <td>4</td>
+                    <td>宝华国际</td>
+                    <td><a href="javascript:;" style="text-decoration:underline">4</a></td>
+                    <td>张三</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>上海</td>
+                    <td>闸北区</td>
+                    <td>宝华国际酒店</td>
+                    <td>4</td>
+                    <td>宝华国际</td>
+                    <td><a href="javascript:;" style="text-decoration:underline">4</a></td>
+                    <td>张三</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>上海</td>
+                    <td>闸北区</td>
+                    <td>宝华国际酒店</td>
+                    <td>4</td>
+                    <td>宝华国际</td>
+                    <td><a href="javascript:;" style="text-decoration:underline">4</a></td>
+                    <td>张三</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>上海</td>
+                    <td>闸北区</td>
+                    <td>宝华国际酒店</td>
+                    <td>4</td>
+                    <td>宝华国际</td>
+                    <td><a href="javascript:;" style="text-decoration:underline">4</a></td>
+                    <td>张三</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>上海</td>
+                    <td>闸北区</td>
+                    <td>宝华国际酒店</td>
+                    <td>4</td>
+                    <td>宝华国际</td>
+                    <td><a href="javascript:;" style="text-decoration:underline">4</a></td>
+                    <td>张三</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>上海</td>
+                    <td>闸北区</td>
+                    <td>宝华国际酒店</td>
+                    <td>4</td>
+                    <td>宝华国际</td>
+                    <td><a href="javascript:;" style="text-decoration:underline">4</a></td>
+                    <td>张三</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="grid-table-pagination">
+                              <span class="grid-table-count">
+                                  共 <em>132</em> 条记录
+                              </span>
+                              <span>
+                                  <a href="#" class="prev">&nbsp;</a>
+                              </span>
+                              <span class="links">
+                                  <a href="#">1</a>
+                                  <a href="#">2</a>
+                                  <a href="#" class="current">3</a>
+                                  <a href="#">4</a>
+                                  <a href="#">5</a>
+                                  <a href="javascript:;">...</a>
+                                  <a href="#">50</a>
+                              </span>
+                              <span>
+                                  <a href="#" class="next">&nbsp;</a>
+                              </span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="panel" style="padding:0;width:980px">
+    <div style="padding:21px">
+        <div style="font-weight: bold;padding:10px"><span>加价公式：</span><span>3</span>/10</div>
+        <div style="border:1px solid #ccc;padding:20px">
+            <div>
+                <span class="head" style="width:80px;display:inline-block">底价范围</span>
+                <span style="width:110px;display:inline-block"><label><input type="radio" name="" id="">不限</label></span>
+                <span style="font-size:18px;width:110px;display:inline-block"><input type="radio" name="" id=""> > <input type="text" style="width:48px"></span>
+                <span style="font-size:18px;width:110px;display:inline-block"><input type="radio" name="" id=""> &ge; <input type="text" style="width:48px"></span>
+                <span style="font-size:18px;width:110px;display:inline-block"><input type="radio" name="" id=""> < <input type="text" style="width:48px"></span>
+                <span style="font-size:18px;width:110px;display:inline-block"><input type="radio" name="" id=""> ≤ <input type="text" style="width:48px"></span>
+                <span><input type="radio" name="" id=""><input type="text" style="width:48px">-<input type="text" style="width:48px"></span>
+            </div>
+            <div style="border-top:1px dashed #999999;margin:10px 0"></div>
+            <div>
+                <span class="head" style="width:80px;display:inline-block">加价</span>
+                <span style="font-size:18px;width:110px;display:inline-block"><input type="radio" name="addPrice" id=""> % <input type="text" style="width:48px"></span>
+                <span style="font-size:18px;width:110px;display:inline-block"><input type="radio" name="addPrice" id=""> + <input type="text" style="width:48px"></span>
+                <span style="font-size:18px;width:110px;display:inline-block"><input type="radio" name="addPrice" id="priceMinus" class="dependShowByChange"> - <input type="text" style="width:48px"></span>
+                <span id="priceMinusNote" style="display:none">备注 <input type="text"></span>
+                <a href="javascript:;" class="button_secondary adaptiveButton small" style="float:right">
+                    <span class="left"></span>
+                    <span class="center">添 加</span>
+                    <span class="right"></span>
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="effective_period_listItem">
+                <span>底价>200+50</span>
+                <div style="position:absolute;right:5px;top:5px">
+                    <a href="javascript:;" data-bind="click:delete"><img src="../../static/images/deleteButton1.gif" alt=""></a>
+                </div>
+            </div>
+            <div class="effective_period_listItem">
+                <span>底价>200+50</span>
+                <div style="position:absolute;right:5px;top:5px">
+                    <a href="javascript:;" data-bind="click:delete"><img src="../../static/images/deleteButton1.gif" alt=""></a>
+                </div>
+            </div>
+            <div class="effective_period_listItem">
+                <span>底价>200+50</span>
+                <div style="position:absolute;right:5px;top:5px">
+                    <a href="javascript:;" data-bind="click:delete"><img src="../../static/images/deleteButton1.gif" alt=""></a>
+                </div>
+            </div>
+            <div class="effective_period_listItem">
+                <span>底价>200+50</span>
+                <div style="position:absolute;right:5px;top:5px">
+                    <a href="javascript:;" data-bind="click:delete"><img src="../../static/images/deleteButton1.gif" alt=""></a>
+                </div>
+            </div>
+            <div class="effective_period_listItem">
+                <span>底价>200+50</span>
+                <div style="position:absolute;right:5px;top:5px">
+                    <a href="javascript:;" data-bind="click:delete"><img src="../../static/images/deleteButton1.gif" alt=""></a>
+                </div>
+            </div>
+            <div class="effective_period_listItem">
+                <span>底价>200+50</span>
+                <div style="position:absolute;right:5px;top:5px">
+                    <a href="javascript:;" data-bind="click:delete"><img src="../../static/images/deleteButton1.gif" alt=""></a>
+                </div>
+            </div>
+            <div class="effective_period_listItem">
+                <span>底价>200+50</span>
+                <div style="position:absolute;right:5px;top:5px">
+                    <a href="javascript:;" data-bind="click:delete"><img src="../../static/images/deleteButton1.gif" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix" style="border-top:1px solid #ccc;margin:15px 0"></div>
+    <div style="padding:21px">
+        <table>
+            <tr>
+                <td colspan="4"><span class="head">政策规定</span></td>
+            </tr>
+            <tr>
+                <td style="width:70px"><span class="head">房态</span></td>
+                <td style="width:120px"><select name="" id=""><option>系统房态</option></select></td>
+                <td style="color:#999">*使用系统库存和售完房态。</td>
+            </tr>
+            <tr>
+                <td><span class="head">变更/取消</span></td>
+                <td colspan="2"><label><input type="radio" name="" id="">酒店价格规定</label><label style="margin-left:20px"><input type="radio" name="" id="">订单一经酒店确认，不得变更或取消</label></td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+<div class="panel" style="padding-bottom:0">
+    <div style="border-top:1px dashed #999"></div>
+    <div class="subPanel" style="border:none;padding-bottom:0">
+        <div class="subPanel_title">
+            <span class="head">设置客户</span>
+            <span class="head" style="margin-right:25px">（42）</span>
+            <label style="margin-right:25px"><input type="checkbox" name="" id="">全选</label>
+            <label style="margin-right:25px"><input type="checkbox" name="" id="">普通客户组（2000）</label>
+            <label style="margin-right:25px"><input type="checkbox" name="" id="">大客户组（8）</label>
+            <label style="margin-right:25px"><input type="checkbox" name="" id="">B2B客户组（8）</label>
+            <label><input type="checkbox" name="" id="">B2C客户组（3）</label>
+            <a href="javascript:;" class="button_secondary adaptiveButton small expand" style="float:right">
+                <span class="left"></span>
+                <span class="center" style="padding:0 5px">收 起 ︽</span>
+                <span class="right"></span>
+            </a>
+        </div>
+        <div class="expandPanel">
+            <div style="padding:0 10px;background:#F9F9F9">关联客户数：<span>2008</span></div>
+            <div id="setCustomerLeftButton" class="tabsBarLeftButton" style="top:65px"></div>
+            <div id="setCustomerRightButton" class="tabsBarRightButton" style="top:65px"></div>
+            <div class="tabsContainer setCustomer">
+                <ul id="setCustomerTabsContainer" class="cityTabsContainer">
+                    <li class="current">
+                        <div class="mtab">
+                            普通客户组（2000）
+                            <span class="rightCover"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mtab gray">
+                            B2B客户组（8）
+                            <span class="rightCover"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div style="border-bottom:1px solid #0FAADD"></div>
+            <div class="clearfix" style="padding:5px 20px 5px 50px">
+                输入客户名称 <input type="text" name="" id="">
+                <a href="javascript:;" class="button_important adaptiveButton small" style="">
+                    <span class="left"></span>
+                    <span class="center">检 索</span>
+                    <span class="right"></span>
+                </a>
+                <a href="javascript:;" class="button_unimportant adaptiveButton small" style="margin-right:30px">
+                    <span class="left"></span>
+                    <span class="center">清除查询条件</span>
+                    <span class="right"></span>
+                </a>
+                <span class="important" style="margin-right:10px;float:right">*勾选排除客户</span>
+            </div>
+            <div class="xyzc_tab2_div_1">
+                <table cellpadding="0" cellspacing="0" class="xyzc_tab2">
+                    <thead>
+                    <tr>
+                        <td style="width:56px"><input type="checkbox">排除</td>
+                        <td style="width:200px">客户名称</td>
+                        <td style="width:100px">创建时间</td>
+                        <td style="width:100px">账户类型</td>
+                        <td style="width:100px">余额</td>
+                        <td style="width:129px">签约经理</td>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr class="four_bg">
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>大有票务</td>
+                        <td>2013/1/12</td>
+                        <td>现结</td>
+                        <td>20000.00</td>
+                        <td>张三</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>大有票务</td>
+                        <td>2013/1/12</td>
+                        <td>现结</td>
+                        <td>20000.00</td>
+                        <td>张三</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>大有票务</td>
+                        <td>2013/1/12</td>
+                        <td>现结</td>
+                        <td>20000.00</td>
+                        <td>张三</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>大有票务</td>
+                        <td>2013/1/12</td>
+                        <td>现结</td>
+                        <td>20000.00</td>
+                        <td>张三</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>大有票务</td>
+                        <td>2013/1/12</td>
+                        <td>现结</td>
+                        <td>20000.00</td>
+                        <td>张三</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>大有票务</td>
+                        <td>2013/1/12</td>
+                        <td>现结</td>
+                        <td>20000.00</td>
+                        <td>张三</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>大有票务</td>
+                        <td>2013/1/12</td>
+                        <td>现结</td>
+                        <td>20000.00</td>
+                        <td>张三</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>大有票务</td>
+                        <td>2013/1/12</td>
+                        <td>现结</td>
+                        <td>20000.00</td>
+                        <td>张三</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>大有票务</td>
+                        <td>2013/1/12</td>
+                        <td>现结</td>
+                        <td>20000.00</td>
+                        <td>张三</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>大有票务</td>
+                        <td>2013/1/12</td>
+                        <td>现结</td>
+                        <td>20000.00</td>
+                        <td>张三</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="grid-table-pagination">
+                                  <span class="grid-table-count">
+                                      共 <em>132</em> 条记录
+                                  </span>
+                                  <span>
+                                      <a href="#" class="prev">&nbsp;</a>
+                                  </span>
+                                  <span class="links">
+                                      <a href="#">1</a>
+                                      <a href="#">2</a>
+                                      <a href="#" class="current">3</a>
+                                      <a href="#">4</a>
+                                      <a href="#">5</a>
+                                      <a href="javascript:;">...</a>
+                                      <a href="#">50</a>
+                                  </span>
+                                  <span>
+                                      <a href="#" class="next">&nbsp;</a>
+                                  </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript" src="../../static/js/iscroll.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+<script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+<script type="text/javascript" src="../../static/js/scrollFix.js"></script>
+<script type="text/javascript" src="../../static/js/hotel.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        moveElement($("#cityContainerLeftButton"),$("#cityContainerRightButton"),$("#cityTabsContainer"),$("#cityTabsContainer>li"));
+        moveElement($("#setCustomerLeftButton"),$("#setCustomerRightButton"),$("#setCustomerTabsContainer"),$("#setCustomerTabsContainer>li"));
+        $(".expand").click(function(){
+            if($("span.center",this).text()=="展 开 ︾")
+            {
+                $("span.center",this).text("收 起 ︽");
+                $(".expandPanel:eq("+$(".expand").index(this)+")").slideDown();
+            }
+            else
+            {
+                $("span.center",this).text("展 开 ︾");
+                $(".expandPanel:eq("+$(".expand").index(this)+")").slideUp();
+            }
+        });
+
+        /*单击显示target对应的元素*/
+        $("input[name=addPrice]:radio").change(function(){
+            if($(this).hasClass("dependShowByChange"))
+            {
+                $("#priceMinusNote").show();
+            }
+            else
+            {
+                $("#priceMinusNote").hide();
+            }
+        });
+
+        $(":checkbox,:radio,select,:text,textarea").prop("disabled",true);
+    })
+</script>
+</body>
+</html>

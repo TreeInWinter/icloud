@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>天地行 采购商 用户中心 常旅客管理</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+
+<link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+<link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+<link rel="stylesheet" href="../../static/css/store_ucenter.css" media="screen" />
+
+<link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+<link rel="stylesheet" href="../../static/css/kendo.store.css" />
+
+<script type="text/javascript" src="../../static/js/jquery.min.js"></script>    
+<script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+<script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+<script type="text/javascript" src="../../static/js/global.js"></script>    
+
+<!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <script src="../../static/js/vendor/IE7.min.js"></script>
+    <![endif]-->
+<script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+
+<script type="text/javascript" src="../../static/js/store/store.js"></script>
+</head>
+<body>
+
+<div class="main-wrapper">
+    <header class="main-header">
+        <a class="logo" href="/"><h1>天地行</h1></a>
+        <nav class="main-nav">
+            <ul class="clearfix">
+                <li class="first active"><a herf="#">首页</a></li>
+                <li><a herf="#">国内机票</a></li>
+                <li><a herf="#">国际机票</a></li>
+                <li><a herf="#">酒店</a></li>
+            </ul> 
+        </nav>
+        <nav class="main-links">
+            <ul class="clearfix">
+                <li class="first"><a href="#">订单管理</a></li>
+                <li><a href="#">分销管理</a></li>
+                <li><a href="#">电子钱包</a></li>
+                <li><a href="#">统计报表</a></li>
+                <li><a href="#">客服服务</a></li>
+                <li><span class="hyper-link"><u>lfdak</u>
+                    <i class="arrow-down"></i>
+                    <div class="hyper-text">
+                        <a href="#">提交审核</a>
+                        <a href="#">申请出票</a>
+                        <a href="#">提交审核</a>
+                        <a href="#">提交审核</a>
+                    </div>
+                </span></li>
+                <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+    </header>
+    <section class="main-body clearfix">
+        <aside class="us-nav">
+            <nav>
+                <h3>用户中心</h3>
+                <div class="us-bind"><a href="#">手机已绑定</a>&#12288;<a class="text1" href="#"><i class="ucnav_03"></i>邮箱未绑定</a></div>
+                <dl>
+                    <dt><i class="ucnav_07"></i>订单管理</dt>
+                    <dd><a href="#">当日所有订单</a></dd>
+                    <dd><a class="current" href="#">国内机票订单</a></dd>
+                    <dd><a href="#">国际机票订单</a></dd>
+                    <dd><a href="#">酒店订单</a></dd>
+                </dl>
+                <dl>
+                    <dt><i class="ucnav_10"></i>询价单管理</dt>
+                    <dd><a href="#">国内机票询价单</a></dd>
+                    <dd><a href="#">国际机票询价单</a></dd>
+                    <dd><a href="#">酒店询价单</a></dd>
+                </dl>
+
+                <dl>
+                    <dt><i class="ucnav_12"></i>电子钱包</dt>
+                    <dd><a href="#">账户信息</a></dd>
+                    <dd><a href="#">账户充值</a></dd>
+                </dl>
+
+                <dl>
+                    <dt><i class="ucnav_15"></i>票据管理</dt>
+                    <dd><a href="#">行程单</a></dd>
+                    <dd><a href="#">发票</a></dd>
+                </dl>
+
+                <dl>
+                    <dt><i class="ucnav_17"></i>统计报表</dt>
+                    <dd><a href="#">财务报表</a></dd>
+                    <dd><a href="#">机票业务</a></dd>
+                    <dd><a href="#">酒店业务</a></dd>
+                    <dd><a href="#">分销业务</a></dd>
+                </dl>
+
+                <dl>
+                    <dt><i class="ucnav_19"></i>分销商管理</dt>
+                    <dd><a href="#">分销商管理</a></dd>
+                </dl>
+
+                <dl>
+                    <dt><i class="ucnav_22"></i>账户资料</dt>
+                    <dd><a href="#">信息维护</a></dd>
+                    <dd><a href="#">消息设置</a></dd>
+                </dl>
+
+                <dl>
+                    <dt><i class="ucnav_26"></i>我的工具</dt>
+                    <dd><a class="ic-j" href="#"><i class="ucnav_29"></i>常旅客管理</a></dd>
+                    <dd><a class="ic-j" href="#"><i class="ucnav_32"></i>短消息</a></dd>
+                </dl>
+            </nav>
+        </aside>
+        <main class="us-content">
+        <h1 class="us-title">常旅客管理</h1>
+        <div class="us-body" style="min-height:1036px;">
+            <section class="us-query clearfix">
+                <table class="us-query-table">
+                    <tr>
+                        <th>旅客类型：</th>
+                        <td><select id="" name="" data-role="dropdownlist" style="width:70px;">
+                                <option selected="" value="全部">全部</option>
+                                <option value="成人">成人</option>
+                                <option value="儿童">儿童</option>
+                                <option value="婴儿">婴儿</option>
+                        </select></td>
+                        <th>旅客姓名：</th>
+                        <td><input id="" style="width:120px;" type="text" name=""></td>
+                        <th>证件号码：</th>
+                        <td><input id="" style="width:120px;" type="text" name=""></td>
+                        <td><a href="#" class="search_a">搜索</a></td>
+                    </tr>
+                </table>
+
+            </section>
+            <section class="us-result">
+                <aside class="us-actions clearfix">
+                    <span style="float:left">
+                        <span class="item">
+                            <label><input id="" type="checkbox" name=""> 全选</label>
+                        </span>
+                        <span class="item">
+                            操作：
+                            <a class="text1" href="#">删除</a>
+                            <a class="text1" href="#">批量导出</a>
+                        </span>
+                    </span>
+                    <span style="float:right">
+                    <a class="ac-import adaptiveButton brightRed_btn">
+                        <span class="left"></span>
+                        <span class="center">批量导入</span>
+                        <span class="right"></span>
+                    </a><a class="ac-new adaptiveButton brightRed_btn">
+                        <span class="left"></span>
+                        <span class="center">添加常旅客</span>
+                        <span class="right"></span>
+                    </a>
+                    </span>
+                </aside>
+
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>旅客类型</th>
+                            <th>旅客姓名</th>
+                            <th>国籍</th>
+                            <th>性别</th>
+                            <th>证件类型</th>
+                            <th>证件号码</th>
+                            <th>联系电话</th>
+                            <th>备注</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td><input id="" type="checkbox" name="">  成人</td>
+                        <td>白展堂</td>
+                        <td>中国</td>
+                        <td>男</td>      
+                        <td>身份证</td>
+                        <td>23**************68</td>
+                        <td>13923349878</td>
+                        <td>重点客户</td>
+                        <td>
+                            <a href="#" class="ac-view us-ac1 us-ac">查看</a>
+                            <a href="#" class="ac-edit us-ac2 us-ac">编辑</a>
+                            <a href="#" class="ac-del  us-ac3 us-ac">删除</a>
+                        </td>
+                    </tr>
+                    <tr class="currentList">
+                        <td><input id="" type="checkbox" name="">  成人</td>
+                        <td>白展堂</td>
+                        <td>中国</td>
+                        <td>男</td>      
+                        <td>身份证</td>
+                        <td>23**************68</td>
+                        <td>13923349878</td>
+                        <td>重点客户</td>
+                        <td>
+                            <a href="#" class="ac-view us-ac1 us-ac">查看</a>
+                            <a href="#" class="ac-edit us-ac2 us-ac">编辑</a>
+                            <a href="#" class="ac-del  us-ac3 us-ac">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input id="" type="checkbox" name="">  成人</td>
+                        <td>白展堂</td>
+                        <td>中国</td>
+                        <td>男</td>      
+                        <td>身份证</td>
+                        <td>23**************68</td>
+                        <td>13923349878</td>
+                        <td>重点客户</td>
+                        <td>
+                            <a href="#" class="ac-view us-ac1 us-ac">查看</a>
+                            <a href="#" class="ac-edit us-ac2 us-ac">编辑</a>
+                            <a href="#" class="ac-del  us-ac3 us-ac">删除</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            
+
+            <script type="x-kendo-template" id="ac-view-template">
+                <table class="cv-table ac-view-table">
+                <colgroup>
+                  <col width="100">
+                </colgroup>
+                    <tr>
+                        <th>旅客类型：</th>
+                        <td>成人</td>
+                    </tr>
+                    <tr>
+                      <th>姓名：</th>
+                      <td>白站汤</td>
+                    </tr>
+                    <tr>
+                      <th>国籍：</th>
+                      <td>中国</td>
+                    </tr>
+                    <tr>
+                      <th>性别：</th>
+                      <td>男</td>
+                    </tr>
+                    <tr>
+                       <th>出生日期：</th>
+                      <td>1980-09-09</td>
+                    </tr>
+                    <tr>
+                      <th>联系电话：</th>
+                      <td>138000481888</td>
+                    </tr>
+                    <tr>
+                      <th>证件类型：</th>
+                      <td>
+                        <div class="row pasid-row">
+                        身份证
+                        <strong>证件号码：</strong>1238492018903021
+                        <strong>证件有效期：</strong>2020-09-09
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>备注：</th>
+                      <td>
+                        <p>xxxxx</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th></th>
+                      <td align="center">
+                            <a class="adaptiveButton brightOrange_btn">
+                              <span class="left"></span>
+                              <span class="center" style="font-size:14px;">编 辑</span>
+                              <span class="right"></span>
+                           </a>
+                            <a href="javascript:;" class="popup-close">取消</a>
+                      </td>
+                    </tr>
+                </table>
+            </script>
+
+            <script type="x-kendo-template" id="ac-add-pasid-template">
+<div class="row pasid-row">
+<select data-role="dropdownlist" style="width:80px;">
+<option value="身份证">身份证</option>
+<option selected="" value="护照">护照</option>
+<option value="港澳通行证">港澳通行证</option>
+<option value="其他">其他</option>
+</select>
+<strong>证件号码：</strong><input id="" type="text" name="">
+<strong>证件有效期：</strong><input id="" style="width:80px;" placeholder="YYYY-MM-DD" type="text" name="">
+<a href="javascript:;" class="imact ac-add-pasid">添加证件</a>
+</div>
+            </script>
+
+            <script type="x-kendo-template" id="ac-edit-template">
+                <table class="cv-table">
+                <colgroup>
+                  <col width="100">
+                </colgroup>
+                
+                    <tr>
+                        <th><u>*</u>旅客类型：</th>
+                        <td>
+                            <label><input id="" type="radio" checked name="xxx">成人</label>
+                            <label><input id="" type="radio" name="xxx">儿童</label>
+                            <label><input id="" type="radio" name="xxx">婴儿</label>
+                        </td>
+                    </tr>
+                    <tr>
+                      <th><u>*</u>姓名：</th>
+                      <td><input value="#= data.passengerCnName #" placeholder="中文名" id="" type="text" name=""><span> 或者 </span><input value="#= data.passengerEnName #" placeholder="英文名" id="" type="text" name="">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>国籍：</th>
+                      <td><input id="" type="text" name=""></td>
+                    </tr>
+                    <tr>
+                      <th>性别：</th>
+                      <td>
+                            <label><input id="" checked type="radio" name="xxx2">男</label>
+                            <label><input id="" type="radio" name="xxx2">女</label>
+                      </td>
+                    </tr>
+                    <tr>
+                       <th>出生日期：</th>
+                      <td> <input id="" placeholder="例如：1980-09-08" type="text" name=""> </td>
+                    </tr>
+                    <tr>
+                      <th>联系电话：</th>
+                      <td><input id="" type="text" name=""></td>
+                    </tr>
+                    <tr>
+                      <th>证件类型：</th>
+                      <td>
+                        <div class="row pasid-row">
+                        <select data-role="dropdownlist" style="width:80px;">
+                        <option selected="" value="身份证">身份证</option>
+                        <option value="护照">护照</option>
+                        <option value="港澳通行证">港澳通行证</option>
+                        <option value="其他">其他</option>
+                        </select>
+                        <strong>证件号码：</strong><input id="" type="text" name="">
+                        <strong>证件有效期：</strong><input id="" style="width:80px;" placeholder="YYYY-MM-DD" type="text" name="">
+                        <a href="javascript:;" class="imact ac-add-pasid">添加证件</a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>备注：</th>
+                      <td>
+                        <textarea id="" name="" style="width:420px;height:70px"></textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th></th>
+                      <td>
+                            <a class="adaptiveButton brightOrange_btn ac-save">
+                              <span class="left"></span>
+                              <span class="center" style="font-size:14px;">保 存</span>
+                              <span class="right"></span>
+                           </a>
+                            <a href="javascript:;" class="popup-close">取消</a>
+                      </td>
+                    </tr>
+                </table>
+            </script>
+            <script type="x-kendo-template" id="ac-new-template">
+                <table class="cv-table">
+                <colgroup>
+                  <col width="100">
+                </colgroup>
+                
+                    <tr>
+                        <th><u>*</u>旅客类型：</th>
+                        <td>
+                            <label><input id="" type="radio" checked name="xxx">成人</label>
+                            <label><input id="" type="radio" name="xxx">儿童</label>
+                            <label><input id="" type="radio" name="xxx">婴儿</label>
+                        </td>
+                    </tr>
+                    <tr>
+                      <th><u>*</u>姓名：</th>
+                      <td><input placeholder="中文名" id="" type="text" name=""><span> 或者 </span><input placeholder="英文名" id="" type="text" name="">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>国籍：</th>
+                      <td><input id="" type="text" name=""></td>
+                    </tr>
+                    <tr>
+                      <th>性别：</th>
+                      <td>
+                            <label><input id="" checked type="radio" name="xxx2">男</label>
+                            <label><input id="" type="radio" name="xxx2">女</label>
+                      </td>
+                    </tr>
+                    <tr>
+                       <th>出生日期：</th>
+                      <td> <input id="" placeholder="例如：1980-09-08" type="text" name=""> </td>
+                    </tr>
+                    <tr>
+                      <th>联系电话：</th>
+                      <td><input id="" type="text" name=""></td>
+                    </tr>
+                    <tr>
+                      <th>证件类型：</th>
+                      <td>
+                        <div class="row pasid-row">
+                        <select data-role="dropdownlist" style="width:80px;">
+                        <option selected="" value="身份证">身份证</option>
+                        <option value="护照">护照</option>
+                        <option value="港澳通行证">港澳通行证</option>
+                        <option value="其他">其他</option>
+                        </select>
+                        <strong>证件号码：</strong><input id="" type="text" name="">
+                        <strong>证件有效期：</strong><input id="" style="width:80px;" placeholder="YYYY-MM-DD" type="text" name="">
+                        <a href="javascript:;" class="imact ac-add-pasid">添加证件</a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>备注：</th>
+                      <td>
+                        <textarea id="" name="" style="width:420px;height:70px"></textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th></th>
+                      <td>
+                            <a class="adaptiveButton brightOrange_btn ac-save">
+                              <span class="left"></span>
+                              <span class="center" style="font-size:14px;">保 存</span>
+                              <span class="right"></span>
+                           </a>
+                            <a href="javascript:;" class="popup-close">取消</a>
+                      </td>
+                    </tr>
+                </table>
+            </script>
+
+            <script type="text/x-kendo-template" id="ac-save-template">
+<center class="imsuccess"><i>&nbsp;</i>常旅客保存成功！</center>
+            </script>
+            <script type="text/x-kendo-template" id="ac-import-template">
+                <table class="cv-table imimport">
+                <colgroup>
+                  <col width="60">
+                  <col width="290">
+                </colgroup>
+                
+                  <tr>
+                    <th>第<span class="imstep">1</span>步</th>
+                    <td>
+                        <p class="row1">
+                            下载“常旅客信息”模板，在模板中添加旅客信息。
+                        </p>
+                        <p class="row2">
+                        <a class="adaptiveButton brightOrange_btn">
+                              <span class="left"></span>
+                              <span class="center" style="font-size:14px; padding:0 20px;">下 载</span>
+                              <span class="right"></span>
+                           </a>
+                        </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>第<span class="imstep">2</span>步</th>
+                    <td>
+                        <p class="row1">上传填写完成的旅客信息文件。</p>
+                        <p class="row2 clearfix" style="width:280px;height:30px;">
+                                <strong>上传附件：</strong>
+                                <input id="" type="file" name="">
+                        </p>
+                        <p class="row2">
+                        <a class="adaptiveButton brightOrange_btn">
+                              <span class="left"></span>
+                              <span class="center" style="font-size:14px; padding:0 20px;">上 传</span>
+                              <span class="right"></span>
+                           </a>
+                        </p>
+                    </td>
+                  </tr>
+                </table>
+            </script>
+
+            <script>
+$(function(){
+    var passid_template = kendo.template($('#ac-add-pasid-template').html())({});
+
+    $('body').on('click','.ac-add-pasid',function(){
+         $(this).removeClass('ac-add-pasid').text('删除').addClass('ac-del-pasid');
+         var wrapper = $(this).closest('td');
+         wrapper.append(passid_template); 
+         kendo.init(wrapper);
+    });
+
+    $('body').on('click','.ac-del-pasid',function(){
+        $(this).closest('.pasid-row').remove(); 
+    });
+
+    new PopWindow('.ac-import',{
+        title:'批量导入常旅客信息',
+        width:410,
+        reload:true,
+        open:function(){
+            $(':file').fileInput();
+        },
+        template:'#ac-import-template'
+    }).init();
+
+
+    
+    new PopWindow('.ac-save',{
+        title:'添加常旅客',
+        width:410,
+        autoHide: 1500,
+        animation: {
+            open:{
+                effects: "fade:in"
+            },
+            close: {
+                effects: "fade:out"
+            }
+        },
+        template:'#ac-save-template'
+    }).init();
+    new PopWindow('.ac-view',{
+        title:'查看常旅客',
+        width:690,
+        template:'#ac-view-template'
+    }).init();
+    new PopWindow('.ac-new',{
+        title:'添加常旅客',
+        width:690,
+        reload:true,
+        template:'#ac-new-template'
+    }).init();
+    new PopWindow('.ac-edit',{
+        title:'编辑常旅客',
+        width:690,
+        template:'#ac-edit-template',
+        data:{
+            passengerCnName:'白站汤', 
+            passengerEnName:'Tom'
+        }
+    }).init();
+}) 
+            </script>
+
+        </div>
+        </main>
+    </section>
+    <footer class="main-footer">
+        <center>
+            <a href="#">隐私问题</a>
+            <i class="bar">|</i>
+            <a href="#">常见问题</a>
+            <i class="bar">|</i>
+            <a href="#">关于我们</a>
+            <i class="bar">|</i>
+            <a href="#">媒体中心</a>
+            <i class="bar">|</i>
+            <a href="#">联系我们</a>
+        </center>
+        <center class="copyright">
+            Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+        </center>
+    </footer>
+</div>
+
+
+</body>
+</html>
+

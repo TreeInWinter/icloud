@@ -1,0 +1,139 @@
+div.panel{padding:0;width:980px}
+input[type=text]{height:20px}
+input[type=button]{border:none}
+.button_6,.button_6_select{padding:3px 10px;color:#000000;background:#ffffff;display:inline-block}
+.button_6:hover,.button_6_select{background:#10A9DD;color:#ffffff}
+.button_7{border:1px solid #A5E9FF;background:#D1F3FE;color:#008BB9;display:inline-block;padding:2px 5px}
+.button_8{border:1px solid #FFD4B8;background:#FEECE0;color:#FF6500;display:inline-block;padding:2px 5px}
+.button_9{border:1px solid #898888;background:#ACACAC;color:#F3F3F3;display:inline-block;padding:2px 5px}
+.ico_search{ width:19px; background:url(../images/xyzc_shuoshuo.jpg) no-repeat; display:inline-block; margin-left: 3px;height:20px;vertical-align: middle}
+.tbl_customersList thead td{background:#E4E4E4;border-right:1px solid #ffffff}
+.tbl_customersList tbody td{border-right:1px solid #E4E4E4}
+.searchPanel{background:#FFFCE8;padding:10px}
+.searchPanel input[type=text]{height:20px;margin:0 10px 0 5px;border:1px solid #F5B581;background-color:#ffffff;width:100px}
+.filterPanel{padding:10px;border-top:3px solid #FFA86E}
+.filterListItem{height:160px}
+.filterTitle{font-weight:bold;margin:0 0 5px 0}
+.filterAny{margin-bottom:5px}
+.ul_filterList li{margin-bottom:5px;float:left;word-break:keep-all}
+.filterHotelStyle li{width:78px}
+.filterParamsList{width:840px;float:left}
+.filterParamsList li{float:left;margin:0 5px 5px 0;border:1px solid #9FCDDD;background:#ECF7FB;padding:2px 6px;word-break:keep-all}
+.filterParamsPanel{position:relative;padding:10px;}
+.hotelListToolsBar{height:40px;line-height:40px;padding:0 10px;background:#F6F6F6}
+.hotelBasicInfo{height:115px}
+.hotelListItem{padding:18px;background:#ffffff;border:1px solid #E2E5E7}
+.hotelImg{float:left}
+.hotelTextInfo{width:610px;margin:0 15px;float:left}
+.hotelName{font-weight:bold;width:245px;float:left;margin-right:25px;overflow:hidden}
+.hotelStarLevel,.hotelStarLevel span{background:url("../images/star_level.gif") 0 -17px no-repeat;width:89px;height:17px;vertical-align:middle;float:left;margin-right:85px;}
+.hotelStarLevel span{background-position:0 0}
+.hotelStar5 span{width:89px;}
+.hotelStar4_5 span{width:81px}
+.hotelStar4 span{width:71px}
+.hotelStar3_5 span{width:63px}
+.hotelStar3 span{width:53px}
+.hotelStar2_5 span{width:45px}
+.hotelStar2 span{width:35px}
+.hotelStar1_5 span{width:27px}
+.hotelStar1 span{width:17px}
+.customerStyleLimit{font-weight:bold}
+.hotelAddress{color:#999999;float:left;margin:5px 0 10px}
+.agencyManagers{color:#000000;background:#DDF4FC;float:right;padding:2px 6px;margin:5px 40px 10px 0}
+.checkInOut{clear:both;margin-bottom:5px}
+
+.hotelLowestPrice{width:140px;height:105px;border:1px solid #E2E5E7;float:right;background:#F8F8F8;text-align:center}
+
+.hotelRoomStyleListContainer{padding-top:18px}
+.hotelRoomStyleListContainer thead td{background:#E4E4E4;border-right:1px solid #ffffff}
+.hotelRoomStyleListContainer tbody td{border-top:1px solid #E0E0E0}
+.hotelRoomStyleListContainer table{border:1px solid #E0E0E0}
+tr.hotelRoomOverView td{background:#ECF7FB}
+.roomStyle{font-weight:bold}
+.hotelGift{display:inline-block;width:15px;height:16px;text-indent:-3000px;float:left}
+.hotelGift.enable{background:url('../images/hotelGift.gif') no-repeat;cursor:pointer}
+.hotelRoomActionButtonContainer{text-align:right}
+.roomStyle_special{font-weight:bold;padding-left:15px}
+.hotelRoomdetail:hover td{background:#FFFFDB}
+.bedStyle{text-indent:0}
+.allPriceToggle{color:#0065CB}
+.rule{color:#0065CB;text-decoration:underline;font-weight:normal;padding-left:10px}
+.other{cursor:pointer}
+.basePrice,.sellPrice{cursor:pointer}
+.sellPrice{font-weight:bold;color:#ff2f00;}
+
+.btn_sort{background:url(../images/btn_sort.png) no-repeat 0 0;display:inline-block;width:9px;height:13px;vertical-align:middle}
+.btn_sort.desc{background-position:0 -30px}
+.btn_sort.asc{background-position:0 -15px}
+
+#errorMsgContainer{position:absolute;top:100px;left:50px;height:26px;display:none}
+#errorMsgArrow{position:absolute;top:50%;left:0;margin-top:-6px;width:6px;height:13px;background:url('../images/errorMsgArrow.gif') no-repeat left center;z-index:1001}
+#errorMsgContent{padding:3px 5px;background:#FFFCE8;border:1px solid #FF3333;position:absolute;top:0;left:5px;z-index:1000;color:#FF0000}
+
+.toolTipField{color:#0065CB;text-align:left}
+.k-tooltip{border-width:2px;background-color:#ffffff;color:#000000}
+.k-callout.k-callout-n{border-bottom-color:#666666}
+.k-callout.k-callout-s{border-top-color:#666666}
+
+.priceTable td{text-align:left}
+.priceTableHead td{background:#F6F6F6;width:40px}
+.priceTablePrice{font-weight:bold;color:#ff2f00}
+
+.xunjia_customer,.xunjia_hotel{margin-top:10px}
+.xunjia_customer thead td{background:#E4E4E4;border-right:1px solid #ffffff;border-bottom:3px solid #FEA96D}
+.xunjia_hotel thead td{background:#E4E4E4;border-right:1px solid #ffffff;border-bottom:3px solid #72D6FF}
+
+
+
+/**************************预付酒店详情页**********************************/
+
+.hotelDetail {background-color:#ffffff;margin-top:10px;padding:20px;}
+.hotelDetail .title {position:relative;height:50px;}
+.hotelDetail .title h2 {color:#2c2c2c;}
+.hotelDetail .title address {color:#999999;font-style:normal;}
+.hotelDetail .title .extra {position:absolute; right:0px;top:0px;width:520px;}
+.hotelDetail .title .extra a {
+    background: none repeat scroll 0 0 #DDF4FC;
+    color: #000000;
+    padding: 6px;
+    position:absolute;
+    right:200px;
+    top:0px;
+}
+.hotelDetail .title .price {
+    background-color: #F8F8F8;
+    border: 1px solid #E6E6E6;
+    color: #FF3000;
+    height: 45px;
+    line-height: 45px;
+    padding: 2px 40px 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+.hotelDetail .title .price sup {color: #666666;font-size:15px;}
+.hotelDetail .title .price sub{font-size:14px;}
+.hotelDetail .title .price b {font-size: 38px;}
+
+
+.pictureInfo {position:relative;margin-top:10px;}
+.pictureInfo .pic {position:relative;float:left;}
+.pictureInfo .pic span {width:270px;height:200px;position:absolute;left:0px;top:0px;}
+.pictureInfo .pic span img {width:270px;height:200px;}
+.pictureInfo .pic ul {width:275px;height:200px;margin-left:270px;position:relative;}
+.pictureInfo .pic ul li {margin:0 0 5px 5px;display:block;float:left;width:132px;height:100px;overflow:hidden;}
+.pictureInfo .pic ul li.secondRow {margin:0 0 0px 5px;}
+.pictureInfo .pic ul li img {width:132px;height:100px;}
+.pictureInfo .pic ul li.secondRow img {height:95px;}
+.pictureInfo .map {width:392px;height:200px;float:right;}
+.hotelDetail .checkIn {margin-top:10px;}
+.hotelDetail .checkIn label {display:inline-block;padding-right:40px;}
+.hotelDetail .checkIn strong {color:#ff6600;padding:3px;}
+.hotelDetail .checkIn a {padding:3px;}
+.hotelDetail .showInfo {margin-top:20px;}
+.hotelDetail .showInfo h3 {border-top:1px dotted #999999;padding:10px 0 15px 5px; color:#333333;}
+.hotelDetail .remark {margin-bottom:40px;}
+.hotelDetail .showInfo table th,.hotelDetail .showInfo table td strong {font-style:normal;color:#666666;}
+.hotelDetail .showInfo table td,.hotelDetail .showInfo table th {padding:5px;vertical-align:top;}
+.hotelDetail ul.item li {float:left;width:100px;color:#555555;}

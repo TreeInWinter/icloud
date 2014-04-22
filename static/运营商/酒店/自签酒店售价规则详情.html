@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta content="text/html" charset="utf-8">
+    <link rel="stylesheet" href="../../static/css/common.css">
+    <link rel="stylesheet" href="../../static/css/b2b.css">
+    <link rel="stylesheet" href="../../static/css/kendo.common.css">
+    <link rel="stylesheet" href="../../static/css/kendo.gray.css">
+    <link href="../../static/css/kendo.reset.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../static/css/hotel.css">
+    <link rel="stylesheet" href="../../static/css/hotel_sellPrice_rule.css">
+    <style type="text/css">
+        .k-tooltip{background-color:#fff;padding:0}
+        .tbl_tooltipRoomType td{border:1px solid #ccc}
+        .k-tooltip-closable .k-tooltip-content{padding-right:0}
+        .k-i-close{margin:5px}
+        .k-callout.k-callout-n{border-bottom-color:#666666}
+        .k-callout.k-callout-s{border-top-color:#666666}
+        .subPanel_title{background: #F9F9F9}
+        span.head{color:#333333}
+    </style>
+</head>
+<body>
+<div id="container" style="margin-top:0">
+    <div id="mainContent">
+        <div class="actions block">
+            <div class="col col-l sep-r">
+                <button class="btns btn-return">返回</button>
+            </div>
+            <div class="col col-l">
+        <span class="page-title">
+            添加销售规则
+        </span>
+            </div>
+            <div class="col col-r sep-l">
+                <a href="javascript:;" class="button_secondary adaptiveButton small">
+                    <span class="left"></span>
+                    <span class="center">关 闭</span>
+                    <span class="right"></span>
+                </a>
+                <a href="javascript:;" class="button_secondary adaptiveButton small">
+                    <span class="left"></span>
+                    <span class="center">清  除</span>
+                    <span class="right"></span>
+                </a>
+                <a href="javascript:;" class="button_secondary adaptiveButton small">
+                    <span class="left"></span>
+                    <span class="center">预览销售政策</span>
+                    <span class="right"></span>
+                </a>
+                <a href="javascript:;" class="button_important adaptiveButton small">
+                    <span class="left"></span>
+                    <span class="center">保  存</span>
+                    <span class="right"></span>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="panel">
+
+            <div style="border-bottom:1px solid #ccc;background:#fff;padding-bottom: 25px">
+                <table>
+                    <tr>
+                        <td style="width:70px"><span class="important">*</span><span class="head">规则名称：</span></td>
+                        <td style="width:215px">上海酒店售价</td>
+                        <td style="width:50px"><span class="head">规则ID：</span></td>
+                        <td style="width:70px">未创建</td>
+                        <td style="width:65px"><span class="head">规则状态：</span></td>
+                        <td style="width:70px">未创建</td>
+                        <td style="width:65px;"><span class="head">创建时间：</span></td>
+                        <td style="width:70px">/</td>
+                        <td style="width:65px"><span class="head">创建人：</span></td>
+                        <td>刘伟</td>
+                    </tr>
+                    <tr>
+                        <td><span class="important">*</span><span class="head">有效期：</span></td>
+                        <td>
+                            2013-06-01 至 2013-06-01
+                        </td>
+                        <td colspan="6">
+                            <ul class="weekday_select">
+                                <li>周一</li>
+                                <li>周二</li>
+                                <li>周三</li>
+                                <li>周四</li>
+                                <li>周五</li>
+                                <li><span class="weekend">周六</span></li>
+                                <li><span class="weekend">周日</span></li>
+                            </ul>
+                        </td>
+                        <td><span class="head">规则类型：</span></td>
+                        <td>自签酒店</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top"><span class="head">备注：</span></td>
+                        <td colspan="9">无</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="subPanel" style="margin-top: 25px">
+                <div class="subPanel_title" style="padding-bottom: 0;">
+                    <span class="head">酒店设置：</span>
+                    按城市
+                    <div class="expandPanel">
+                        <div class="tabsContainer" style="margin:10px -10px 0;width:940px;background:#f9f9f9">
+                            <ul id="cityTabsContainer" class="cityTabsContainer clearfix" style="padding:0 10px;width:980px">
+                                <li>
+                                    <div class="mtab">
+                                        上海市
+                                        <span class="rightCover"></span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <ul class="ul_cityTabsDetailContainer">
+                        <li class="selected"><span>宝山区</span></li>
+                    </ul>
+                </div>
+                <div class="clearfix" style="margin-bottom: 20px;"></div>
+                <div class="hotelLevelFilterContainer" style="">
+                    <span class="head">星级：</span>
+                    <label>无星级</label>
+                    <label>二星级及以下/经济</label>
+                    <label>准三星级</label>
+                    <label>三星级/舒适</label>
+                    <label>准四星级</label>
+                    <label>四星级/高档</label>
+                    <label>准五星级</label>
+                    <label>五星级/豪华</label>
+                </div>
+            </div>
+            <div class="subPanel">
+                <div class="expandPanel">
+                    <div class="tabsContainer setCustomer" style="margin:0;width:940px;">
+                        <ul id="setCustomerTabsContainer" class="cityTabsContainer" style="padding:0 10px;">
+                            <li class="current">
+                                <div class="mtab tabsItem" data='{"target":"#unexcludeHotelContainer","targetClass":".excludeHotelSetup"}'>
+                                    已排除酒店（30/500）
+                                    <span class="rightCover"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mtab gray tabsItem" data='{"target":"#suitableHotelContainer","targetClass":".excludeHotelSetup"}'>
+                                    适用酒店
+                                    <span class="rightCover"></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="border-bottom:1px solid #0FAADD"></div>
+                    <div id="unexcludeHotelContainer" class="excludeHotelSetup">
+                        <div class="clearfix" style="padding:5px 20px 5px 20px">
+                            <span class="head">酒店名称：</span> <input type="text" name="" id="">
+                            <a href="javascript:;" class="button_important adaptiveButton small" style="">
+                                <span class="left"></span>
+                                <span class="center">查 询</span>
+                                <span class="right"></span>
+                            </a>
+                        </div>
+                        <div class="xyzc_tab2_div_1">
+                            <table cellpadding="0" cellspacing="0" class="xyzc_tab2">
+                                <thead>
+                                <tr>
+                                    <td style="width:30px;text-align: center;"></td>
+                                    <td style="width:85px">城市</td>
+                                    <td style="width:95px">位置</td>
+                                    <td style="width:280px">酒店命成</td>
+                                    <td style="width:62px">星级</td>
+                                    <td style="width:62px">品牌</td>
+                                    <td style="width:149px">签约经理</td>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                <tr class="four_bg">
+                                    <td style="text-align: center"></td>
+                                    <td>上海</td>
+                                    <td>闸北区</td>
+                                    <td>宝华国际酒店</td>
+                                    <td>四星级</td>
+                                    <td>宝华国际</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr >
+                                    <td style="text-align: center"></td>
+                                    <td>上海</td>
+                                    <td>闸北区</td>
+                                    <td>宝华国际酒店</td>
+                                    <td>四星级</td>
+                                    <td>宝华国际</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr >
+                                    <td style="text-align: center"></td>
+                                    <td>上海</td>
+                                    <td>闸北区</td>
+                                    <td>宝华国际酒店</td>
+                                    <td>四星级</td>
+                                    <td>宝华国际</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr >
+                                    <td style="text-align: center"></td>
+                                    <td>上海</td>
+                                    <td>闸北区</td>
+                                    <td>宝华国际酒店</td>
+                                    <td>四星级</td>
+                                    <td>宝华国际</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr >
+                                    <td style="text-align: center"></td>
+                                    <td>上海</td>
+                                    <td>闸北区</td>
+                                    <td>宝华国际酒店</td>
+                                    <td>四星级</td>
+                                    <td>宝华国际</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr >
+                                    <td style="text-align: center"></td>
+                                    <td>上海</td>
+                                    <td>闸北区</td>
+                                    <td>宝华国际酒店</td>
+                                    <td>四星级</td>
+                                    <td>宝华国际</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr >
+                                    <td style="text-align: center"></td>
+                                    <td>上海</td>
+                                    <td>闸北区</td>
+                                    <td>宝华国际酒店</td>
+                                    <td>四星级</td>
+                                    <td>宝华国际</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr >
+                                    <td style="text-align: center"></td>
+                                    <td>上海</td>
+                                    <td>闸北区</td>
+                                    <td>宝华国际酒店</td>
+                                    <td>四星级</td>
+                                    <td>宝华国际</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr >
+                                    <td style="text-align: center"></td>
+                                    <td>上海</td>
+                                    <td>闸北区</td>
+                                    <td>宝华国际酒店</td>
+                                    <td>四星级</td>
+                                    <td>宝华国际</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr >
+                                    <td style="text-align: center"></td>
+                                    <td>上海</td>
+                                    <td>闸北区</td>
+                                    <td>宝华国际酒店</td>
+                                    <td>四星级</td>
+                                    <td>宝华国际</td>
+                                    <td>张三</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="grid-table-pagination">
+                                      <span class="grid-table-count">
+                                          共 <em>132</em> 条记录
+                                      </span>
+                                      <span>
+                                          <a href="#" class="prev">&nbsp;</a>
+                                      </span>
+                                      <span class="links">
+                                          <a href="#">1</a>
+                                          <a href="#">2</a>
+                                          <a href="#" class="current">3</a>
+                                          <a href="#">4</a>
+                                          <a href="#">5</a>
+                                          <a href="javascript:;">...</a>
+                                          <a href="#">50</a>
+                                      </span>
+                                      <span>
+                                          <a href="#" class="next">&nbsp;</a>
+                                      </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="suitableHotelContainer" class="excludeHotelSetup hidden">
+                        <div class="clearfix" style="padding:5px 20px 5px 20px">
+                            <span class="head">酒店名称：</span> <input type="text" name="" id="">
+                            <a href="javascript:;" class="button_important adaptiveButton small" style="">
+                                <span class="left"></span>
+                                <span class="center">查 询</span>
+                                <span class="right"></span>
+                            </a>
+                        </div>
+                        <div class="xyzc_tab2_div_1">
+                            <table cellpadding="0" cellspacing="0" class="xyzc_tab2">
+                                <thead>
+                                <tr>
+                                    <td style="width:30px;text-align: center;"></td>
+                                    <td style="width:85px">城市</td>
+                                    <td style="width:95px">位置</td>
+                                    <td style="width:280px">酒店命成</td>
+                                    <td style="width:62px">星级</td>
+                                    <td style="width:62px">品牌</td>
+                                    <td style="width:149px">签约经理</td>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                <tr class="four_bg">
+                                    <td style="text-align: center"></td>
+                                    <td>上海</td>
+                                    <td>闸北区</td>
+                                    <td>宝华国际酒店</td>
+                                    <td>四星级</td>
+                                    <td>宝华国际</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr >
+                                    <td style="text-align: center"></td>
+                                    <td>上海</td>
+                                    <td>闸北区</td>
+                                    <td>宝华国际酒店</td>
+                                    <td>四星级</td>
+                                    <td>宝华国际</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr >
+                                    <td style="text-align: center"></td>
+                                    <td>上海</td>
+                                    <td>闸北区</td>
+                                    <td>宝华国际酒店</td>
+                                    <td>四星级</td>
+                                    <td>宝华国际</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr >
+                                    <td style="text-align: center"></td>
+                                    <td>上海</td>
+                                    <td>闸北区</td>
+                                    <td>宝华国际酒店</td>
+                                    <td>四星级</td>
+                                    <td>宝华国际</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr >
+                                    <td style="text-align: center"></td>
+                                    <td>上海</td>
+                                    <td>闸北区</td>
+                                    <td>宝华国际酒店</td>
+                                    <td>四星级</td>
+                                    <td>宝华国际</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr >
+                                    <td style="text-align: center"></td>
+                                    <td>上海</td>
+                                    <td>闸北区</td>
+                                    <td>宝华国际酒店</td>
+                                    <td>四星级</td>
+                                    <td>宝华国际</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr >
+                                    <td style="text-align: center"></td>
+                                    <td>上海</td>
+                                    <td>闸北区</td>
+                                    <td>宝华国际酒店</td>
+                                    <td>四星级</td>
+                                    <td>宝华国际</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr >
+                                    <td style="text-align: center"></td>
+                                    <td>上海</td>
+                                    <td>闸北区</td>
+                                    <td>宝华国际酒店</td>
+                                    <td>四星级</td>
+                                    <td>宝华国际</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr >
+                                    <td style="text-align: center"></td>
+                                    <td>上海</td>
+                                    <td>闸北区</td>
+                                    <td>宝华国际酒店</td>
+                                    <td>四星级</td>
+                                    <td>宝华国际</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr >
+                                    <td style="text-align: center"></td>
+                                    <td>上海</td>
+                                    <td>闸北区</td>
+                                    <td>宝华国际酒店</td>
+                                    <td>四星级</td>
+                                    <td>宝华国际</td>
+                                    <td>张三</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="grid-table-pagination">
+                                      <span class="grid-table-count">
+                                          共 <em>132</em> 条记录
+                                      </span>
+                                      <span>
+                                          <a href="#" class="prev">&nbsp;</a>
+                                      </span>
+                                      <span class="links">
+                                          <a href="#">1</a>
+                                          <a href="#">2</a>
+                                          <a href="#" class="current">3</a>
+                                          <a href="#">4</a>
+                                          <a href="#">5</a>
+                                          <a href="javascript:;">...</a>
+                                          <a href="#">50</a>
+                                      </span>
+                                      <span>
+                                          <a href="#" class="next">&nbsp;</a>
+                                      </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel" style="padding:0;width:980px">
+            <div style="padding:21px">
+                <div style="font-weight: bold;padding:10px"><span>加价公式：</span><span>3</span>/10</div>
+                <div style="border:1px solid #ccc;padding:20px">
+                    <span><span class="head">底价</span> &gt; 200+50</span>
+                    <span><span class="head">底价</span> &gt; 200+50</span>
+                </div>
+            </div>
+            <div class="clearfix" style="border-top:1px solid #ccc;margin:15px 0"></div>
+            <div style="padding:21px">
+                <table>
+                    <tr>
+                        <td colspan="4"><span class="head">政策规定</span></td>
+                    </tr>
+                    <tr>
+                        <td style="width:70px"><span class="head">订单状态</span></td>
+                        <td style="width:120px">系统房态</td>
+                        <td style="color:#999"></td>
+                    </tr>
+                    <tr>
+                        <td><span class="head">变更/取消</span></td>
+                        <td colspan="2">酒店价格规定</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+        <div class="panel" style="padding-bottom:0">
+            <div class="subPanel" style="border:none;padding-bottom:0">
+                <div class="subPanel_title">
+                    <span class="head">客户设置：</span>
+                    按客户组
+                </div>
+                <div class="expandPanel">
+                    <table style="margin-left: 5px">
+                        <colgroup>
+                            <col width="100" style="padding-left: 10px">
+                        </colgroup>
+                        <tr>
+                            <td><span class="head">客户组：</span></td>
+                            <td>
+                                <ul class="ul_setCustomerFilter">
+                                    <li>酒店默认</li>
+                                    <li>酒店散客</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="head">采购商类型：</span></td>
+                            <td>
+                                <ul class="ul_setCustomerFilter">
+                                    <li>个人</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="head">账户信息：</span></td>
+                            <td>
+                                <ul class="ul_setCustomerFilter">
+                                    <li>单笔</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="tabsContainer setCustomer" style="margin:0;width:940px;">
+                        <ul id="setCustomerTabsContainer" class="cityTabsContainer" style="padding:0 10px">
+                            <li class="current">
+                                <div class="mtab tabsItem" data='{"target":"#unexcludeCustomerContainer","targetClass":".excludeCustomerSetup"}'>
+                                    已排除客户（30/500）
+                                    <span class="rightCover"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mtab gray tabsItem" data='{"target":"#suitableCustomerContainer","targetClass":".excludeCustomerSetup"}'>
+                                    适用客户
+                                    <span class="rightCover"></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="border-bottom:1px solid #0FAADD"></div>
+                    <div id="unexcludeCustomerContainer" class="excludeCustomerSetup">
+                        <div class="clearfix" style="padding:5px 20px 5px 20px">
+                            <span class="head">客户查询</span> <input type="text" name="" id="">
+                            <a href="javascript:;" class="button_important adaptiveButton small" style="">
+                                <span class="left"></span>
+                                <span class="center">查 询</span>
+                                <span class="right"></span>
+                            </a>
+                        </div>
+                        <div class="xyzc_tab2_div_1">
+                            <table cellpadding="0" cellspacing="0" class="xyzc_tab2">
+                                <colgroup>
+                                    <col style="width:30px">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <td style="width:30px;text-align: center"></td>
+                                    <td style="width:100px">客户简称</td>
+                                    <td style="width:120px">客户全称</td>
+                                    <td style="width:220px">客户组</td>
+                                    <td style="width:80px">客户类型</td>
+                                    <td style="width:100px">账户类型</td>
+                                    <td style="width:100px">结算账期</td>
+                                    <td style="width:140px">创建时间</td>
+                                    <td style="width:60px">联系人</td>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                <tr class="four_bg">
+                                    <td style="text-align: center;"></td>
+                                    <td>大有票务</td>
+                                    <td>大有票务</td>
+                                    <td>酒店默认客户组</td>
+                                    <td>旅行社</td>
+                                    <td>现结</td>
+                                    <td></td>
+                                    <td>2013/1/12 18:06</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr class="">
+                                    <td style="text-align: center;"></td>
+                                    <td>大有票务</td>
+                                    <td>大有票务</td>
+                                    <td>酒店默认客户组</td>
+                                    <td>旅行社</td>
+                                    <td>现结</td>
+                                    <td></td>
+                                    <td>2013/1/12 18:06</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr class="">
+                                    <td style="text-align: center;"></td>
+                                    <td>大有票务</td>
+                                    <td>大有票务</td>
+                                    <td>酒店默认客户组</td>
+                                    <td>旅行社</td>
+                                    <td>现结</td>
+                                    <td></td>
+                                    <td>2013/1/12 18:06</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr class="">
+                                    <td style="text-align: center;"></td>
+                                    <td>大有票务</td>
+                                    <td>大有票务</td>
+                                    <td>酒店默认客户组</td>
+                                    <td>旅行社</td>
+                                    <td>现结</td>
+                                    <td></td>
+                                    <td>2013/1/12 18:06</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr class="">
+                                    <td style="text-align: center;"></td>
+                                    <td>大有票务</td>
+                                    <td>大有票务</td>
+                                    <td>酒店默认客户组</td>
+                                    <td>旅行社</td>
+                                    <td>现结</td>
+                                    <td></td>
+                                    <td>2013/1/12 18:06</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr class="">
+                                    <td style="text-align: center;"></td>
+                                    <td>大有票务</td>
+                                    <td>大有票务</td>
+                                    <td>酒店默认客户组</td>
+                                    <td>旅行社</td>
+                                    <td>现结</td>
+                                    <td></td>
+                                    <td>2013/1/12 18:06</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr class="">
+                                    <td style="text-align: center;"></td>
+                                    <td>大有票务</td>
+                                    <td>大有票务</td>
+                                    <td>酒店默认客户组</td>
+                                    <td>旅行社</td>
+                                    <td>现结</td>
+                                    <td></td>
+                                    <td>2013/1/12 18:06</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr class="">
+                                    <td style="text-align: center;"></td>
+                                    <td>大有票务</td>
+                                    <td>大有票务</td>
+                                    <td>酒店默认客户组</td>
+                                    <td>旅行社</td>
+                                    <td>现结</td>
+                                    <td></td>
+                                    <td>2013/1/12 18:06</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr class="">
+                                    <td style="text-align: center;"></td>
+                                    <td>大有票务</td>
+                                    <td>大有票务</td>
+                                    <td>酒店默认客户组</td>
+                                    <td>旅行社</td>
+                                    <td>现结</td>
+                                    <td></td>
+                                    <td>2013/1/12 18:06</td>
+                                    <td>张三</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="grid-table-pagination">
+                                      <span class="grid-table-count">
+                                          共 <em>132</em> 条记录
+                                      </span>
+                                      <span>
+                                          <a href="#" class="prev">&nbsp;</a>
+                                      </span>
+                                      <span class="links">
+                                          <a href="#">1</a>
+                                          <a href="#">2</a>
+                                          <a href="#" class="current">3</a>
+                                          <a href="#">4</a>
+                                          <a href="#">5</a>
+                                          <a href="javascript:;">...</a>
+                                          <a href="#">50</a>
+                                      </span>
+                                      <span>
+                                          <a href="#" class="next">&nbsp;</a>
+                                      </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="suitableCustomerContainer" class="excludeCustomerSetup hidden">
+                        <div class="clearfix" style="padding:5px 20px 5px 20px">
+                            <span class="head">客户查询</span> <input type="text" name="" id="">
+                            <a href="javascript:;" class="button_important adaptiveButton small" style="">
+                                <span class="left"></span>
+                                <span class="center">查 询</span>
+                                <span class="right"></span>
+                            </a>
+                        </div>
+                        <div class="xyzc_tab2_div_1">
+                            <table cellpadding="0" cellspacing="0" class="xyzc_tab2">
+                                <colgroup>
+                                    <col style="width:30px">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <td style="width:30px;text-align: center"></td>
+                                    <td style="width:100px">客户简称</td>
+                                    <td style="width:120px">客户全称</td>
+                                    <td style="width:220px">客户组</td>
+                                    <td style="width:80px">客户类型</td>
+                                    <td style="width:100px">账户类型</td>
+                                    <td style="width:100px">结算账期</td>
+                                    <td style="width:140px">创建时间</td>
+                                    <td style="width:60px">联系人</td>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                <tr class="four_bg">
+                                    <td style="text-align: center;"></td>
+                                    <td>大有票务</td>
+                                    <td>大有票务</td>
+                                    <td>酒店默认客户组</td>
+                                    <td>旅行社</td>
+                                    <td>现结</td>
+                                    <td></td>
+                                    <td>2013/1/12 18:06</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr class="">
+                                    <td style="text-align: center;"></td>
+                                    <td>大有票务</td>
+                                    <td>大有票务</td>
+                                    <td>酒店默认客户组</td>
+                                    <td>旅行社</td>
+                                    <td>现结</td>
+                                    <td></td>
+                                    <td>2013/1/12 18:06</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr class="">
+                                    <td style="text-align: center;"></td>
+                                    <td>大有票务</td>
+                                    <td>大有票务</td>
+                                    <td>酒店默认客户组</td>
+                                    <td>旅行社</td>
+                                    <td>现结</td>
+                                    <td></td>
+                                    <td>2013/1/12 18:06</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr class="">
+                                    <td style="text-align: center;"></td>
+                                    <td>大有票务</td>
+                                    <td>大有票务</td>
+                                    <td>酒店默认客户组</td>
+                                    <td>旅行社</td>
+                                    <td>现结</td>
+                                    <td></td>
+                                    <td>2013/1/12 18:06</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr class="">
+                                    <td style="text-align: center;"></td>
+                                    <td>大有票务</td>
+                                    <td>大有票务</td>
+                                    <td>酒店默认客户组</td>
+                                    <td>旅行社</td>
+                                    <td>现结</td>
+                                    <td></td>
+                                    <td>2013/1/12 18:06</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr class="">
+                                    <td style="text-align: center;"></td>
+                                    <td>大有票务</td>
+                                    <td>大有票务</td>
+                                    <td>酒店默认客户组</td>
+                                    <td>旅行社</td>
+                                    <td>现结</td>
+                                    <td></td>
+                                    <td>2013/1/12 18:06</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr class="">
+                                    <td style="text-align: center;"></td>
+                                    <td>大有票务</td>
+                                    <td>大有票务</td>
+                                    <td>酒店默认客户组</td>
+                                    <td>旅行社</td>
+                                    <td>现结</td>
+                                    <td></td>
+                                    <td>2013/1/12 18:06</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr class="">
+                                    <td style="text-align: center;"></td>
+                                    <td>大有票务</td>
+                                    <td>大有票务</td>
+                                    <td>酒店默认客户组</td>
+                                    <td>旅行社</td>
+                                    <td>现结</td>
+                                    <td></td>
+                                    <td>2013/1/12 18:06</td>
+                                    <td>张三</td>
+                                </tr>
+                                <tr class="">
+                                    <td style="text-align: center;"></td>
+                                    <td>大有票务</td>
+                                    <td>大有票务</td>
+                                    <td>酒店默认客户组</td>
+                                    <td>旅行社</td>
+                                    <td>现结</td>
+                                    <td></td>
+                                    <td>2013/1/12 18:06</td>
+                                    <td>张三</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="grid-table-pagination">
+                                      <span class="grid-table-count">
+                                          共 <em>132</em> 条记录
+                                      </span>
+                                      <span>
+                                          <a href="#" class="prev">&nbsp;</a>
+                                      </span>
+                                      <span class="links">
+                                          <a href="#">1</a>
+                                          <a href="#">2</a>
+                                          <a href="#" class="current">3</a>
+                                          <a href="#">4</a>
+                                          <a href="#">5</a>
+                                          <a href="javascript:;">...</a>
+                                          <a href="#">50</a>
+                                      </span>
+                                      <span>
+                                          <a href="#" class="next">&nbsp;</a>
+                                      </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel" style="padding-bottom: 0;">
+            <div class="panelTitle" style="border: 0">
+                操作日志
+            </div>
+            <div class="panelContent clearfix">
+                <table class="operation_records">
+                    <thead>
+                    <tr>
+                        <td style="width:130px">日期</td>
+                        <td style="width:100px">操作人员</td>
+                        <td style="width:300px">操作项目</td>
+                        <td style="width:300px">操作内容</td>
+                        <td style="width:100px">操作类型</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>20130606 14:55</td>
+                        <td>liuwei</td>
+                        <td>增加行政商务套房</td>
+                        <td>增加行政商务套房</td>
+                        <td>新增</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="grid-table-pagination">
+                                  <span class="grid-table-count">
+                                      共 <em>132</em> 条记录
+                                  </span>
+                                  <span>
+                                      <a href="#" class="prev">&nbsp;</a>
+                                  </span>
+                                  <span class="links">
+                                      <a href="#">1</a>
+                                      <a href="#">2</a>
+                                      <a href="#" class="current">3</a>
+                                      <a href="#">4</a>
+                                      <a href="#">5</a>
+                                      <a href="javascript:;">...</a>
+                                      <a href="#">50</a>
+                                  </span>
+                                  <span>
+                                      <a href="#" class="next">&nbsp;</a>
+                                  </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/x-kendo-template" id="tooltipRoomTypeTemplate">
+    <table class="txt_l6 tbl_tooltipRoomType" style="width:100%">
+        <tr>
+            <td style="width:60px">排除</td>
+            <td style="width:120px">房型名称</td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" name="" id=""></label></td>
+            <td>商务标准房</td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" name="" id=""></label></td>
+            <td>商务标准房</td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" name="" id=""></label></td>
+            <td>商务标准房</td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" name="" id=""></label></td>
+            <td>商务标准房</td>
+        </tr>
+    </table>
+</script>
+
+<script type="text/html" id="clearExcludeTemplate">
+    <div class="warn" style="background-color:white">
+        <p>正在清除，请稍后</p>
+    </div>
+</script>
+
+<script type="text/javascript" src="../../static/js/iscroll.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+<script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+<script type="text/javascript" src="../../static/js/global.js"></script>
+<script type="text/javascript" src="../../static/js/scrollFix.js"></script>
+<script type="text/javascript" src="../../static/js/hotel.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        $(".mtab").click(function(){
+            $(this).removeClass("gray").closest("li").siblings().find(".mtab").addClass("gray");
+            if($(this).hasClass("tabsItem"))
+            {
+                var data=$.parseJSON($(this).attr("data"));
+                $(data.targetClass).hide();
+                $(data.target).show();
+            }
+        })
+        $(".btn_clearAllExclude").click(function(){
+            $.prompt({content:$("#clearExcludeTemplate").html()}).center().open();
+
+        })
+    })
+</script>
+</body>
+</html>

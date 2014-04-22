@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 酒店首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../static/css/coin-slider-styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../static/css/store_flight.css" media="screen" />
+    <link rel="stylesheet" href="../static/css/store_hotel.css">
+    <link rel="stylesheet" href="../static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="../static/css/kendo.store.css" />
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../static/js/global.js"></script>
+    <script type="text/javascript" src="../static/js/store/store.js"></script>
+    <script type="text/javascript" src="../static/js/coin-slider.js"></script>
+    <!--[if IE]>
+    <script src="../static/js/html5.js"></script>
+    <![endif]-->
+    <script src="../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+</head>
+<body>
+
+<div class="main-wrapper">
+<header class="main-header">
+    <a class="logo" href="/"><h1>天地行</h1></a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first"><a herf="#">首页</a></li>
+            <li><a herf="#">国内机票</a></li>
+            <li><a herf="#">国际机票</a></li>
+            <li class="active"><a herf="#">酒店</a></li>
+			<li><a herf="#">保险</a></li>
+        </ul> 
+    </nav>
+    <nav class="main-links">
+        <ul class="clearfix">
+            <li class="first"><a href="#">订单管理</a></li>
+            <li><a href="#">分销管理</a></li>
+            <li><a href="#">电子钱包</a></li>
+            <li><a href="#">统计报表</a></li>
+            <li><a href="#">客服服务</a></li>
+            <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+            <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+</header>
+<section class="main-body clearfix">
+  
+    <div class="annPrompt"><a href="#">免费机票大作战 第一波甜蜜来袭1！</a><a href="#">免费机票大作战 第一波甜蜜来袭2！</a><a href="#">免费机票大作战 第一波甜蜜来袭3！</a><a href="#">免费机票大作战 第一波甜蜜来袭4！</a></div>
+    
+    <div class="tavern clearfix"> <!--tavern start-->
+         <div class="hotel pull-left clearfix">
+            <!-- <div class="hotel_title"> 
+                 <h3>国内及港澳酒店</h3>
+                 <div>精选全球32，156家酒店 <em>&nbsp;</em></div>
+             </div>-->
+			 <div class="hotel_title"> 
+                 <ul>
+				   <li>国内酒店</li>
+				   <li class="current">港澳及国际酒店<em></em></li>
+				 </ul>
+             </div>            
+             <table class="hotel_tab" style="position:relative;">
+                <colgroup>
+                   <col style="width:30%;"/>
+                </colgroup>
+                 <tr>
+                    <td><i class="important">*</i>城市</td>
+                    <td><input class="gray-border" type="text" /></td>
+                 </tr>
+                 <tr>
+                    <td><i class="important">*</i>入住日期</td>
+                    <td>
+                        <input type="text" class="datepicker gray-border" value=""/>
+                    </td>
+                 </tr>
+                 <tr>
+                    <td><i class="important">*</i>离店日期</td>
+                    <td>
+                        <input type="text" class="datepicker gray-border violateInput" value=""/>
+						<div class="errorBlock"><span class="errorVerify"><i></i>=30天，请联系客服400-720-6666</span></div>
+                    </td>
+                 </tr>
+                 <tr>
+                    <td><i class="important">*</i>预订间数</td>
+                    <td>
+					 <select data-role="dropdownlist" name="room_num" style="width:148px;vertical-align:middle;margin-right:5px;">
+                         <option value="1">双人双床房</option>
+						 <option value="2">双人大床房</option>
+                     </select>
+					 <select data-role="dropdownlist" name="room_num" style="width:45px;vertical-align:middle;margin-right:3px;">
+                         <option value="1">1</option>
+						 <option value="2">2</option>
+                     </select>间
+                       
+                    </td>
+                 </tr>
+				 <tr>
+                    <td>客人国籍</td>
+                    <td><input type="text" class="gray-border" value="中国" /></td>
+                 </tr>
+                 <tr>
+                    <td>关键字</td>
+                    <td><input type="text" class="gray-border" value="(选填)酒店、商圈，地标)" /></td>
+                 </tr>
+                 <tr>
+                    <td>&nbsp;</td>
+                    <td><a class="adaptiveButton brightRed_btn">
+                              <span class="left"></span>
+                              <span class="center center_1">搜 索</span>
+                              <span class="right"></span>
+                         </a>
+                    </td>
+                 </tr>
+                 <tr>
+                    <td>&nbsp;</td>
+                    <td class="team">
+                       <a href="#">团队申请</a> <em>预订房间>5间可以申请团队。</em>
+                    </td>
+                 </tr>
+             </table>
+        </div>
+        <div class="slides pull-right" style="width:553px;height:330px;position:relative">
+            <div id="coin-slider">
+                <a  href="javascript:void(0);"><img src="../static/images/banner/hotel1.jpg" height="340px"><span></span></a>
+                <a  href="javascript:void(0);"><img src="../static/images/banner/hotel2.jpg"><span></span></a>
+                <a  href="javascript:void(0);"><img src="../static/images/banner/hotel3.jpg"><span></span></a>
+            </div>
+        </div>
+    </div> <!--tavern end-->
+    
+    <div style="width:980px;"> <!--bottom start-->
+        <div class="headline">
+            <h3>热门城市酒店特惠</h3>
+            <ul>
+               <li class="pitch-on">上海</li>
+               <li>广州</li>
+               <li>深圳</li>
+               <li>武汉</li>
+            </ul>
+        </div>
+        <div class="odds_show">
+            <dl>
+               <dt> <a href="#"><img src="../static/images/store/odds_show1.jpg" title="上海宝华国际酒店"/></a> <em>&nbsp;</em> </dt>
+               <dd>
+                  <p> <a href="#">上海宝华国际酒店</a></p>
+                  <span>￥450</span>
+               </dd>
+            </dl>
+            <dl>
+               <dt> <a href="#"><img src="../static/images/store/odds_show2.jpg" title="上海宝华国际酒店"/></a> </dt>
+               <dd>
+                  <p> <a href="#">上海宝华国际酒店</a></p>
+                  <span>￥450</span>
+               </dd>
+            </dl>
+            <dl>
+               <dt> <a href="#"><img src="../static/images/store/odds_show3.jpg" title="上海宝华国际酒店"/></a> </dt>
+               <dd>
+                  <p> <a href="#">上海宝华国际酒店</a></p>
+                  <span>￥450</span>
+               </dd>
+            </dl>
+            <dl style="margin-bottom:0;">
+               <dt> <a href="#"><img src="../static/images/store/odds_show4.jpg" title="上海宝华国际酒店"/></a> </dt>
+               <dd>
+                  <p> <a href="#">上海宝华国际酒店</a></p>
+                  <span>￥450</span>
+               </dd>
+            </dl>
+            <dl style="margin-right:0;">
+               <dt> <a href="#"><img src="../static/images/store/odds_show5.jpg" title="上海宝华国际酒店"/></a> </dt>
+               <dd>
+                  <p> <a href="#">上海宝华国际酒店</a></p>
+                  <span>￥450</span>
+               </dd>
+            </dl>
+            <!--<img src="../static/images/store/hotelHead.png"/>-->
+        </div>
+    </div> <!--bottom end-->
+    </section>
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+<script type="text/javascript" src="../static/js/store/hotel_index.js"></script>
+<script type="text/javascript" src="../static/js/jquery.cycle.all.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('#coin-slider').after('<div id="nav_homepage" class="slider_nav_homepage" style="top:289px">').cycle({fx:"fade",timeout: 2000,height:"300px",pause:true,pager:"#nav_homepage",pagerEvent: "click.cycle"});
+        var slideMsgEve=setInterval(slideMessage,3000);
+        $(".annPrompt").hover(function(){
+                    clearInterval(slideMsgEve);
+                },
+                function(){
+                    slideMsgEve=setInterval(slideMessage,3000);
+                }
+        );
+		
+    })
+
+    function slideMessage()
+    {
+        $(".annPrompt a").animate({"top":"-15px"},"1000")
+        setTimeout(function(){
+            $(".annPrompt").append($(".annPrompt a:first").remove());
+            $(".annPrompt a").css({"top":"0"});
+        },1200);
+    }
+</script>
+</body>
+</html>

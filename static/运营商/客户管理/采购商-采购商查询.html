@@ -1,0 +1,490 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>客户管理 采购商 采购商查询</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../../static/css/common.css" rel="stylesheet" type="text/css" />
+<link href="../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+<link href="../../static/css/kendo.common.css" rel="stylesheet" type="text/css" />
+<link href="../../static/css/kendo.gray.css" rel="stylesheet" type="text/css" />
+<link href="../../static/css/kendo.reset.css" rel="stylesheet"/>
+<link href="../../static/css/buyer.css" rel="stylesheet" type="text/css"/>
+
+<script src="../../static/js/jquery.min.js" type="text/javascript"></script>
+<script src="../../static/js/kendo.web.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript">
+		$(function(){
+			var c = new Collpase({
+				limitHeight:85,
+				container:'.query' 
+			}).init();
+			
+			//c.resetHeight();
+		}) 
+    </script>
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<!-- @CLB@ -->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+
+</head>
+<body>
+<div id="extHeader">
+    <div></div>
+</div>
+
+<div id="container">
+    <div class="header">
+        <h1></h1>
+        <div>
+            <span>你好,${name}</span>
+            <a href="javascript:void(0);">退出</a>
+        </div>
+        <ul id="top_menu">
+            <li><a href="javascript:void(0);">国内机票</a></li>
+            <li><a href="javascript:void(0);">国际机票</a></li>
+            <li><a href="javascript:void(0);">酒店</a></li>
+            <li><a href="javascript:void(0);">票证中心</a></li>
+            <li><a href="javascript:void(0);">财务管理</a></li>
+            <li><a href="javascript:void(0);">客户管理</a></li>
+            <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+        </ul>
+        <ol class="sub_menu">
+            <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+            <li><a href="javascript:void(0);">公司信息</a></li>
+            <li><a href="javascript:void(0);">组织架构</a></li>
+            <li><a href="javascript:void(0);">角色维护</a></li>
+            <li><a href="javascript:void(0);">基础数据</a></li>
+        </ol>
+        <div id="message">
+            <a href="javascript:void(0);">&nbsp;</a>
+            <span>&nbsp;</span>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="sub_menu_bar"></div>
+    <div id="mainContent">
+
+        <!-- 内容开始 -->
+        <div class="code">
+            <p><a href="#" class="code_a_1">采购商中心</a>
+            <a href="#">资质审核</a>
+            <a href="#">分配客户组</a>
+            </p>
+            <div class="add_btn">
+                <a href="javascript:;" class="button_secondary adaptiveButton small">
+                    <span class="left"></span>
+                    <span class="center center_1">新增采购商</span>
+                    <span class="right"></span>
+                </a>
+            </div>
+        </div>
+
+        <div class="query" style="padding-bottom:23px; border-bottom:0;">
+            <table cellpadding="0" cellspacing="0" class="query_tab">
+                <tr>
+                    <td class="list_1">客户名称</td>
+                    <td class="list_2"><input type="text" /> <button class="btns btn-search ac-search-user" role="window_trigger">查询</button> </td>
+                    <td class="list_3">客户类型</td>
+                    <td class="list_4"> <select><option>全部</option></select> <select><option>全部</option></select></td>
+                    <td class="list_5">客户状态</td>
+                    <td class="list_6"><select><option>全部</option></select> </td>
+                    <td class="list_9" rowspan="5"><a href="#" class="query_a">查 询</a></td>
+                </tr> 
+                <tr>
+                    <td class="list_1_1">注册日期</td>
+                    <td class="list_2_1"><input type="text" value="2012-03-04" /> <span>至</span> <input type="text" value="2012-03-04" /></td>
+                    <td>采购类型</td>
+                    <td class="list_4_1"> <select><option>全部</option></select></td>
+                    <td>审核状态</td>
+                    <td class="list_6"><select><option>全部</option></select> </td>
+                </tr>           
+                <tr>
+                    <td>
+                        协议到期日  
+                    </td>
+                    <td>
+                        <select style="width:95px;">
+                            <option selected="" value="请选择">请选择</option>
+                            <option value="行程单协议">行程单协议</option>
+                            <option value="黑屏配置协议">黑屏配置协议</option>
+                            <option value="支票/汇款承诺协议">支票/汇款承诺协议</option>
+                            <option value="三方协议">三方协议</option>
+                        </select>
+                        <input type="text" style="width:100px;" class="datepicker"> 
+                    </td>
+                    <td>最近购票</td>
+                    <td><input type="text" value="2012-03-04" style="width:88px;" class="datepicker" /> <span>至</span> <input type="text" value="2012-03-04" style="width:88px; color:#000;" class="datepicker orange" /></td>
+                    <td>大区归属</td>
+                    <td> 
+                        <select style="width:200px;">
+                             <option>不限</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr class="bor_bottom">
+                    <td>负责人</td>
+                    <td><input type="text" style="width:200px;" name=""></td>
+                    <td>固定电话</td>
+                    <td><input type="text" style="width:200px;" name=""></td>
+                    <td>手机号</td>
+                    <td><input type="text" style="width:200px;" name=""></td>
+                </tr>
+                <tr class="bor_bottom">
+                    <td>业务联系人</td>
+                    <td><input type="text" style="width:200px;" name=""></td>
+                    <td>固定电话</td>
+                    <td><input type="text" style="width:200px;" name=""></td>
+                    <td>手机号</td>
+                    <td><input type="text" style="width:200px;" name=""></td>
+                </tr>
+                <tr>
+                    <td>主账号</td>
+                    <td><input type="text" style="width:200px;" name=""></td>
+                    <td>账户类型</td>
+                    <td><input type="text" style="width:200px;" name=""></td>
+                    <td>邮箱</td>
+                    <td><input type="text" style="width:200px;" name=""></td>
+                </tr>
+                <tr>
+                    <td>公司地址</td>
+                    <td colspan="5" style="vertical-align:middle">
+                        <select id="sltProvince" name="companyInfo.addr.province" data-role="dropdownlist" class="addr" style="width:89px;">
+                            <option value="sha">上海</option>
+                        </select>
+                        <select id="sltCity" name="companyInfo.addr.city" data-role="dropdownlist" class="addr"  style="width:89px;">
+                            <option value="sha">上海市</option>
+                        </select>
+                        <select id="district" name="companyInfo.addr.district" data-role="dropdownlist" class="addr"  style="width:91px;">
+                            <option value="zb">闸北区</option>
+                        </select>
+                        <input type="text" name="address" style="width:480px;height:25px;"/>
+
+                    </td>
+                </tr>
+            </table>          
+        </div>
+
+        <!--<div class="qx">
+            <div class="xuanze">
+                <button class="btns btn-ac-blue">挂起</button>
+                <button class="btns btn-ac-blue">解锁</button>
+            </div>
+        </div>-->
+         
+        <div style="table-layout:fixed; margin-top:8px;">
+                <table cellpadding="0" cellspacing="0" class="discount_tab">
+                    <colgroup>
+                        <col width="20"/>
+                        <col width="110"/>
+                        <col width="190"/>
+                        <col width="105"/>
+                        <col width="80"/>
+                        <col width="70"/>
+                        <col width="60"/>
+                        <col width="90"/>
+                        <col width="90"/>
+                        <col width="155"/>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="th_left"><input type="checkbox" /></th>
+                            <th class="last_td" style="text-align:center;">
+                                <a href="#" class="allocation">分配</a> 
+                                <a href="#">挂起</a> 
+                            </th>
+                            <th style="text-align:center;">客户名称</th>
+                            <th>用户名</th>
+                            <th>业务负责人</th>
+                            <th>类型</th>
+                            <th>来源</th>
+                            <th>注册日期</th>
+                            <th>最近购票</th>
+                            <th style="text-align:center;">状态</th>
+                        </tr>
+                    </thead>
+        
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" checked="checked" /></td>
+                            <td class="last_td"> 
+                                 <div>  
+                                      <a href="#">修改</a> 
+                                      <a href="#">挂起</a> 
+                                 </div>
+                                 <div>  
+                                      <a href="#">详情</a> 
+                                      <a href="#" id="btn_checkJournalDetail">日志</a> 
+                                 </div>
+                            </td>
+                            <td class="nameList">
+                                <div>统一旅行</div>
+                                <div class="grayFont">上海不夜城国际旅行社</div>
+                            </td>
+                            <td><em class="ellipsis">ZXF1297549</em></td>
+                            <td>许文强</td>
+                            <td>旅行社</td>
+                            <td>采购</td>
+                            <td>2012/1/2</td>
+                            <td>2012/1/2</td>
+                            <td class="status">
+                                <em>正常</em>
+                                <em>未采购</em>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" checked="checked" /></td>
+                            <td class="last_td"> 
+                                 <div>  
+                                      <a href="#">修改</a> 
+                                      <a href="#">挂起</a> 
+                                 </div>
+                                 <div>  
+                                      <a href="#">详情</a> 
+                                      <a href="#" id="btn_checkJournalDetail">日志</a> 
+                                 </div>
+                            </td>
+                            <td class="nameList">
+                                <div>统一旅行</div>
+                                <div class="grayFont">上海不夜城国际旅行社</div>
+                            </td>
+                            <td><em class="ellipsis">ZXF1297549fjgjkghkyghdhfgjghjgyjgbnghhn</em></td>
+                            <td>许文强</td>
+                            <td>旅行社</td>
+                            <td>采购</td>
+                            <td>2012/1/2</td>
+                            <td>2012/1/2</td>
+                            <td class="status">
+                                <em class="lightOrangeBtn">挂起</em>
+                                <em class="lightBlueBtn">已审核</em>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" checked="checked" /></td>
+                            <td class="last_td"> 
+                                 <div>  
+                                      <a href="#">修改</a> 
+                                      <a href="#">挂起</a> 
+                                 </div>
+                                 <div>  
+                                      <a href="#">详情</a> 
+                                      <a href="#" id="btn_checkJournalDetail">日志</a> 
+                                 </div>
+                            </td>
+                            <td class="nameList">
+                                <div>统一旅行</div>
+                                <div class="grayFont">上海不夜城国际旅行社</div>
+                            </td>
+                            <td><em class="ellipsis">ZXF1297549</em></td>
+                            <td>许文强</td>
+                            <td>旅行社</td>
+                            <td>采购</td>
+                            <td>2012/1/2</td>
+                            <td>2012/1/2</td>
+                            <td class="status">
+                                <em>正常</em>
+                                <em>未采购</em>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" checked="checked" /></td>
+                            <td class="last_td"> 
+                                 <div>  
+                                      <a href="#">修改</a> 
+                                      <a href="#">挂起</a> 
+                                 </div>
+                                 <div>  
+                                      <a href="#">详情</a> 
+                                      <a href="#" id="btn_checkJournalDetail">日志</a> 
+                                 </div>
+                            </td>
+                            <td class="nameList">
+                                <div>统一旅行</div>
+                                <div class="grayFont">上海不夜城国际旅行社</div>
+                            </td>
+                            <td><em class="ellipsis">ZXF1297549dgrtjhrfthrfgjghkmhjklyuhggbm</em></td>
+                            <td>许文强</td>
+                            <td>旅行社</td>
+                            <td>采购</td>
+                            <td>2012/1/2</td>
+                            <td>2012/1/2</td>
+                            <td class="status">
+                                <em class="lightOrangeBtn">挂起</em>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" checked="checked" /></td>
+                            <td class="last_td"> 
+                                 <div>  
+                                      <a href="#">修改</a> 
+                                      <a href="#">挂起</a> 
+                                 </div>
+                                 <div>  
+                                      <a href="#">详情</a> 
+                                      <a href="#" id="btn_checkJournalDetail">日志</a> 
+                                 </div>
+                            </td>
+                            <td class="nameList">
+                                <div>统一旅行</div>
+                                <div class="grayFont">上海不夜城国际旅行社</div>
+                            </td>
+                            <td><em class="ellipsis">ZXF1297549tfjtyijhgvk,hvuktgyghjmh</em></td>
+                            <td>许文强</td>
+                            <td>旅行社</td>
+                            <td>采购</td>
+                            <td>2012/1/2</td>
+                            <td>2012/1/2</td>
+                            <td class="status">
+                                <em class="lightBlueBtn">已审核</em>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+          </div>
+                  <div class="grid-table-pagination page">
+                        <span class="grid-table-count">
+                            共 <em>132</em> 条记录
+                        </span>
+                        <span>
+                            <a href="#" class="prev">&nbsp;</a>
+                        </span>
+                        <span class="links">
+                            <a href="#">1</a>
+                            <a href="#">2</a>
+                            <a href="#" class="current">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="javascript:;">...</a>
+                            <a href="#">50</a>
+                        </span>
+                        <span>
+                            <a href="#" class="next">&nbsp;</a>
+                        </span>
+                 </div>
+        <!-- 内容结束 -->
+    </div>
+</div>
+
+<label class="usdHint">
+    <em>至少需要选择一个用户</em>
+    <i>X</i>
+    <span class="arrowDown"></span>
+</label>
+
+<div id="extFooter">
+    <div>
+        <p>
+        <a href="javascript:void(0);">关于我们</a>&nbsp;|
+        <a href="javascript:void(0);">微博</a>&nbsp;|
+        <a href="javascript:void(0);">服务条款</a>&nbsp;|
+        <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+        </p>
+        <p>客户服务热线:400-720-6666</p>
+    </div>
+    
+    
+    <div id="journalDetailTemplate">
+        <div style="position:absolute;top:-29px;right:40px">
+            <span style="vertical-align: middle"><span class="journalCurrentNo">1</span>/<span class="journalTotalPageNo">3</span></span>
+            <a class="pagesLeft enable" href="javascript:;"></a>
+            <a class="pagesRight enable" href="javascript:;"></a>
+        </div>
+    
+        <div style="padding:10px">
+            <table class="operation_records">
+                <thead>
+                    <tr>
+                        <td style="width:130px">操作时间</td>
+                        <td style="width:100px">操作人</td>
+                        <td style="width:500px">操作内容</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2013-06-06 10:50</td>
+                        <td>采购商</td>
+                        <td style="text-align:left;">维护账户类型，由信用更改成单笔，维护账户类型，由信用更改成单笔。</td>
+                    </tr>
+                    <tr>
+                        <td>2013-06-06 10:50</td>
+                        <td>采购商</td>
+                        <td style="text-align:left;">创建账号</td>
+                    </tr>
+                    <tr>
+                        <td>2013-06-06 10:50</td>
+                        <td>采购商</td>
+                        <td style="text-align:left;">维护账户类型，由信用更改成单笔</td>
+                    </tr>
+                    <tr>
+                        <td>2013-06-06 10:50</td>
+                        <td>采购商</td>
+                        <td style="text-align:left;">邮箱找回密码</td>
+                    </tr>
+                    <tr>
+                        <td>2013-06-06 10:50</td>
+                        <td>采购商</td>
+                        <td style="text-align:left;">鹰潭阳光假日酒店占地面积10.268亩，全楼高十一层，建筑面积16800平方米。酒店共有150间各类客房（包括豪华套房及行政套房）。客房装饰高雅，实施齐全，配有中央空调、程控电话、卫星电视、VOD。酒店配套机构阳光酒楼餐饮营业，全楼高十一层，建筑面积16800平方米。酒店共有150间各类客房（包括豪华套房及行政套房）。</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div id="allocationTemplate">
+         <table class="allocationTab">
+              <colgroup>
+                   <col width="200"/>
+                   <col width="220"/>
+              </colgroup>
+              <tr>
+                  <td>销售员：
+                       <select style="width:125px;" data-role="dropdownlist">
+                            <option>选择部门</option>
+                       </select>
+                  </td>
+                  <td>
+                      <select style="width:125px;" data-role="dropdownlist">
+                            <option>选择销售员</option>
+                       </select>
+                  </td>
+              </tr>
+         </table>
+         <div class="operationBtn">
+              <button class="large_button" type="button">提 交</button>
+              <button class="large_button disable" type="button">取 消</button>
+         </div>
+         
+    </div>
+    
+    <script>
+        $(function(){
+
+           kendo.init('body');
+			
+			new PopWindow("#btn_checkJournalDetail",{
+			title:"操作日志 客户名称：携程",
+			width:730,
+			open:function(){
+				var x = $(this)[0].wrapper;
+				setTimeout(function(){$(x.find(".k-window-content")).css({"overflow":"visible","z-index":"1"})},0);
+			}
+		   },"#journalDetailTemplate").init();
+			
+			new PopWindow(".allocation",{
+			title:"分配销售员",
+			width:470,
+		   },"#allocationTemplate").init();
+			
+        });
+    </script>
+    
+</div>
+
+</body>
+</html>

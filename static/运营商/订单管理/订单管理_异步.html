@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>订单 订单管理 国内机票 异步</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../static/css/common.css" rel="stylesheet" />
+	<link href="../../static/css/kendo.common.css" rel="stylesheet" />
+	<link href="../../static/css/kendo.gray.css" rel="stylesheet" />
+	<link href="../../static/css/b2b.css" rel="stylesheet" />
+    <link href="../../static/css/dingdanguanli.css" rel="stylesheet" />
+    <link href="../../static/css/kendo.reset.css" rel="stylesheet" />
+    <script src="../../static/js/jquery.min.js" type="text/javascript"></script>
+    <script src="../../static//js/kendo.web.js" type="text/javascript"></script>
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+<!-- @CLB@ --></head>
+<body>
+    <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">&nbsp;</a>
+                <span>&nbsp;</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent" class="guanli"><!--maincontent开始-->
+        
+            <div class="menu_1">
+                  <div class="menu_1_left">
+                      <a href="#" class="menu_1_left_a">订单查询</a>
+                      <a href="#">审核</a>
+                      <a href="#">出票</a>
+                      <a href="#">改签</a>
+                      <a href="#">废票</a>
+                      <a href="#">退票</a>
+                  </div>
+                  <div class="bpsd_btn">
+                    <a class="bpsd_btn_a" href="新增酒店 .html" onClick="add_department();">白屏预定</a>
+                  </div>
+            </div>
+            
+
+            <div class="order_search_panel">
+                <div class="search_btns" style="top:30px;">
+                    <a href="javascript:;" class="button_important adaptiveButton medium">
+                        <span class="left"></span>
+                        <span class="center">查&nbsp;询</span>
+                        <span class="right"></span>
+                    </a>
+                </div>
+                <table class="order_search">
+                    <colgroup>
+                        <col width="80">
+                        <col width="100">
+                        <col width="80">
+                        <col width="100">
+                        <col width="80">
+                        <col width="100">
+                        <col width="60">
+                        <col width="100">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>PNR</th>
+                            <td>
+                                <input type="text" name=""/>
+                            </td>
+                            <th>订单号</th>
+                            <td>
+                                <input type="text" name=""/>
+                            </td>
+                            <th>票号</th>
+                            <td>
+                                <input type="text" name=""/>
+                            </td>
+                            <th>订单类型</th>
+                            <td>
+                                <select style="width:120px" name="order_status" data-role="dropdownlist">
+                                    <option value="全部">全部</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>航空公司</th>
+                            <td>
+                                <input type="text" name=""/>
+                            </td>
+                            <th>创建日期</th>
+                            <td>
+                                <input type="text" name="" class="datepicker"/>
+                            </td>
+                            <th>至</th>
+                            <td>
+                                <input type="text" name="" class="datepicker orange"/>
+                            </td>
+                            <th>订单状态</th>
+                            <td>
+                                <select style="width:120px" name="order_status" data-role="dropdownlist">
+                                    <option value="全部">全部</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <select data-role="dropdownlist" name="create_person" style="width:80px;">
+                                    <option value="创建人">创建人</option>
+                                    <option value="审核人">审核人</option>
+                                    <option value="出票人">出票人</option>
+                                    <option value="收款人">收款人</option>
+                                </select>
+                            </th>
+                            <td>
+                                <input type="text" name=""/>
+                            </td>
+                            <th>建单营业点</th>
+                            <td>
+                                <input type="text" name="" placeholder="上海不夜城营业点" style="width:100px" /><a class="more_condition pull-right" href="javascript:void(0);"></a>
+                            </td>
+                            <th>出票营业点</th>
+                            <td>
+                                <input type="text" name="" placeholder="上海不夜城营业点" style="width:100px" /><a class="more_condition pull-right" href="javascript:void(0);"></a>
+                            </td>
+                            <th>航程</th>
+                            <td>
+                                <input type="text" name="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>客户名称</th>
+                            <td>
+                                <input type="text" name="" placeholder="携程" style="width:100px" /><a class="more_condition pull-right" href="javascript:void(0);"></a>
+                            </td>
+                            <th>结算方式</th>
+                            <td>
+                                <select data-role="dropdownlist" name="pay_ways" style="width:120px;">
+                                    <option>全部</option>
+                                    <option>帐号余额</option>
+                                    <option>信用账号</option>
+                                    <option>单笔</option>
+                                </select>
+                            </td>
+                            <th>供应商</th>
+                            <td>
+                                <select data-role="dropdownlist" name="supplier" style="width:120px">
+                                    <option>全部</option>
+                                    <option>不夜城BSP</option>
+                                    <option>517</option>
+                                    <option>百拓</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <!-- 异步 表格 -->
+            <div id="orderList"></div>
+            <script type="text/javascript" src="/static/js/order.js"></script>
+        </div><!--maincontent结束-->
+
+    </div>
+		
+    <div id="extFooter" >
+        <div>
+            <p style=" margin:0 auto; width:300px;" >
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+    <script>
+        $(function(){
+
+            kendo.init('body');
+        });
+    </script>
+</body>
+</html>

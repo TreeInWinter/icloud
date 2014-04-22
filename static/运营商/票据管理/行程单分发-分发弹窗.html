@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>行程单分发 分发弹窗</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.common.css" rel="stylesheet" />
+    <link href="../../static/ss/kendo.gray.css" rel="stylesheet" />
+    <link href="../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/kendo.reset.css" rel="stylesheet" />
+    <link href="../../static/css/tianjiabumentishi.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    
+    <style type="text/css">
+      body{ background:#fff; color:#333;}
+    </style>
+    
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+
+
+<body>
+<div class="distribute" style="margin-left:10px;">
+ 
+    <table cellpadding="0" cellspacing="0" class="distribute_tab">
+        <tr>
+            <td class="font_weight">申请客户：</td>
+            <td style="width:120px;">华敏票务</td>
+            <td class="font_weight">申请时间：</td>
+            <td>2013-08-12</td>
+        </tr>
+        <tr>
+            <td>申请营业点：</td>
+            <td>不夜城</td>
+            <td class="font_weight">申 请 人：</td>
+            <td>李晓明</td>
+        </tr>
+        <tr style="vertical-align:top;">
+            <td style=" padding-top:5px;">申请张数：</td>
+            <td style=" padding-top:5px;"><em>100</em> 张</td>
+            <td style=" padding-top:5px;" class="font_weight">客户备注：</td>
+            <td>
+               <textarea>申请100张行程单</textarea>
+            </td>
+        </tr>
+    </table>
+    
+    <h3>请选择：</h3>
+   
+   <table class="tgrid" style="width:99%;">
+                  <thead>
+                      <tr>
+                          <th class="line_left" style="width:35px;">选择</th>
+                          <th>起始票号</th>
+                          <th>终止票号</th>
+                          <th>剩余张数</th>
+                          <th>OFFICE</th>
+                          <th class="line_right">入库时间</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td><input type="checkbox" checked="" /></td>
+                          <td>4476975100</td>
+                          <td>4476975100</td>
+                          <td>20</td>
+                          <td>SHA255</td>
+                          <td>2013/08/01</td>
+                      </tr>
+                      <tr class="hui_bg">
+                          <td><input type="checkbox" /></td>
+                          <td>4476975100</td>
+                          <td>4476975100</td>
+                          <td>20</td>
+                          <td>SHA255</td>
+                          <td> </td>
+                      </tr>
+                      <tr>
+                          <td><input type="checkbox" /></td>
+                          <td>4476975100</td>
+                          <td>4476975100</td>
+                          <td>20</td>
+                          <td>SHA255</td>
+                          <td> </td>
+                      </tr>
+              </tbody>
+          </table>
+   
+         <div class="journey">
+            <b>行程单号：</b>
+            <input type="text" value="4476975100" />
+            <em>至</em>
+            <em>4476975199</em>
+            <span>共 <i>100</i> 张</span>
+         </div>
+    
+         <div class="benzhu">
+            <b>备 注：</b>
+            <textarea>输入文本...</textarea>
+         </div>
+    
+   <div style=" clear:both;"></div>
+   
+    <div class="biaoqian_button" style="margin-right:5px;">
+      <a class="tianjiaqueding_btn" href="#">确&nbsp;定 </a>
+      <a class="tianjiaquxiao_btn" href="#"> 取&nbsp;消</a>    
+    </div>
+
+ 
+</div>
+
+</body>
+</html>

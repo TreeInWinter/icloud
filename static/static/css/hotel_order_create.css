@@ -1,0 +1,235 @@
+.panelTitle {
+    border: 0
+}
+
+input[type=text] {
+    width: 138px;
+    height: 20px
+}
+
+select {
+    width: 150px
+}
+
+.priceDetailHead {
+    background: #E4E4E4;
+    border-bottom: 3px solid #FFA96D;
+    height: 25px
+}
+
+.priceDetailSubHeadB {
+    height: 38px;
+    background: #E1F5FF;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.priceDetailSubHeadY {
+    background: #FFFDE9;
+    width: 95px;
+    padding: 8px
+}
+.priceDetailSubHeadG td{
+    background: #F5F5F5;
+    color: #656565;
+}
+
+.priceDetailSubHeadY, .priceDetailSubHeadB {
+    border: 1px solid #E0E0E0;
+    border-width: 0 1px 1px 0
+}
+
+.priceDetailAmount td{background:#F5F5F5}
+
+.priceDetailContent {
+    height: 39px;
+    vertical-align: middle;
+    border: 1px solid #E0E0E0;
+    border-width: 0 1px 1px 0
+}
+.priceDetail .salePrice{color:#ff4e00}
+.priceDetail td{border:1px solid #E0E0E0;padding:10px 0;vertical-align:middle}
+
+.tbl_orderPrice td {
+    border: 1px solid #8BCAE6
+}
+.tbl_orderPriceHead{
+    background:#E1F5FF;
+    padding-left:30px;
+    height:16px
+}
+.tbl_orderPriceLeftHead{
+    background:#D0F1FF;
+    height:60px;
+    text-align:center;
+    vertical-align:middle
+}
+.tbl_orderPriceContent td{
+    padding-left: 30px;
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+.tbl_common td {
+    border: 1px solid #D5D5D5;
+    color:#666;
+}
+
+.tbl_common thead td {
+    background: #F5F5F5;
+    color:#333;
+}
+.tbl_common .td_head{
+    background: #F5F5F5;
+    color:#333;
+}
+
+.popwin {
+    color: #0066cc
+}
+
+.hotelOrderStatusContainer {
+    float: left;
+    padding: 20px 10px
+}
+
+.statusContainer {
+    float: left;
+    position: relative;
+    padding: 15px 10px 5px
+}
+
+.statusContainer.first .statusLineLeft {
+    display: none
+}
+
+.statusContainer.last .statusLineRight {
+    display: none
+}
+
+.statusDot {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    margin-left: -5px;
+    z-index: 2;
+    top: 0
+}
+
+.statusLine {;
+    z-index: 1
+}
+
+.status_ing {
+    color: #ff6600
+}
+
+.status_ing .statusDot {
+    background: url('../images/hotel_order_status_dot_ing.gif') no-repeat
+}
+
+.status_ing .statusLineLeft {
+    width: 50%;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    border-top: 2px solid #00a000
+}
+
+.status_ing .statusLineRight {
+    width: 50%;
+    position: absolute;
+    top: 4px;
+    right: 0;
+    border-top: 2px solid #e9e9e9
+}
+
+.status_complete {
+    color: #00a000
+}
+
+.status_complete .statusDot {
+    background: url('../images/hotel_order_status_dot_complete.gif') no-repeat
+}
+
+.status_complete .statusLineLeft {
+    width: 50%;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    border-top: 2px solid #00a000
+}
+
+.status_complete .statusLineRight {
+    width: 50%;
+    position: absolute;
+    top: 4px;
+    right: 0;
+    border-top: 2px solid #00a000
+}
+
+.status_uncomplete {
+    color: #666666
+}
+
+.status_uncomplete .statusDot {
+    background: url('../images/hotel_order_status_dot_uncomplete.gif') no-repeat
+}
+
+.status_uncomplete .statusLineLeft {
+    width: 50%;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    border-top: 2px solid #e9e9e9
+}
+
+.status_uncomplete .statusLineRight {
+    width: 50%;
+    position: absolute;
+    top: 4px;
+    right: 0;
+    border-top: 2px solid #e9e9e9
+}
+
+.priceDetail_otherToolTip{cursor:pointer}
+.hotelOrderStatusContainer .exception{color:#ff0000}
+.hotelOrderStatusContainer .exception .statusDot{background: url('../images/hotel_order_status_dot_exception.gif') no-repeat}
+
+.complete{font-weight:bold;color: #00a000}
+.ing{font-weight:bold;color: #ff6600}
+
+.fieldName{background:#f5f5f5;color:#333}
+
+.liuzhangInfoContainer{display: none;margin-top: 10px}
+
+
+/*确认单*/
+
+
+.k-dropdown{vertical-align:top}
+
+.journalCurrentNo{color: #ff6600;padding:0 3px}
+.journalTotalPageNo{padding:0 5px 0 3px}
+
+
+.optgroup{background-color:#fff;color:#333;text-decoration:none;font-weight:bold}
+.option{text-decoration:none;padding-left:5px}
+
+#smTemplate{
+    padding:10px 50px;
+}
+
+.money{
+    color:#FF6603;
+}
+
+.customerInfo td{
+    text-align: center;
+}
+
+.tbl_supplierInfo .fieldName{
+    vertical-align: middle;
+    text-align: center;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="/static/js/jquery.min.js"></script>
+  <script src="/static/js/global.js"></script>
+  <script>
+$(function(){
+  checkGroup();
+}) 
+  </script>
+</head>
+<body>
+
+<h1>demo1  父层元素增加 data-role="checkgroup" 属性</h1>
+<div data-role="checkgroup">
+    <span>row1</span>
+    <input id="" type="checkbox" name="">
+    <input checked id="" type="checkbox" name="">
+    <input id="" type="checkbox" name="">
+    <input id="" type="checkbox" name="">
+    <input id="" type="checkbox" name="">
+</div>
+<div data-role="checkgroup">
+    <span>row2</span>
+    <input id="" type="checkbox" name="">
+    <input checked id="" type="checkbox" name="">
+    <input id="" type="checkbox" name="">
+    <input id="" type="checkbox" name="">
+    <input id="" type="checkbox" name="">
+</div>
+
+
+
+
+<hr>
+<h1>demo2 给name属性相同的checkbox 增加data-role="checkgroup-item"属性</h1>
+<span>row1</span>
+<input data-role="checkgroup-item" id="" type="checkbox" name="c2">
+<input data-role="checkgroup-item" checked id="" type="checkbox" name="c2">
+<input data-role="checkgroup-item" id="" type="checkbox" name="c2">
+<br>
+<span>row2</span>
+<input data-role="checkgroup-item" checked id="" type="checkbox" name="c1">
+<input data-role="checkgroup-item" id="" type="checkbox" name="c1">
+<input data-role="checkgroup-item" id="" type="checkbox" name="c1">
+
+
+
+
+
+
+
+
+
+<hr>
+<h1>demo3</h1>
+<input id="" type="checkbox" name="">
+<input checked id="" type="checkbox" name="">
+  
+</body>
+</html>

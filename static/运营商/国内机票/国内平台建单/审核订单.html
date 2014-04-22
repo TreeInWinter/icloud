@@ -1,0 +1,475 @@
+<!DOCTYPE html><html><head>
+        <title>机票 国内机票 审核订单</title>
+        <meta charset="utf-8" />
+<link href="/static/css/kendo.common.css" rel="stylesheet" />
+<link href="/static/css/common.css" rel="stylesheet" />
+<link href="/static/css/b2b.css" rel="stylesheet" />
+<link href="/static/css/order.css" rel="stylesheet">
+<link href="/static/css/kendo.reset.css" rel="stylesheet" />
+
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/kendo.web.js"></script>
+<script type="text/javascript" src="/static/js/global.js"></script>
+<script type="text/javascript" src="/static/js/flight.js"></script>
+
+
+ <script type="text/x-kendo-template" id="ac-refuse-template">
+            <div class="row"><strong>审核退回原因：</strong></div>
+            <div class="row"><textarea id="refuseText" name="" style="width:400px;"></textarea></div>
+            <div class="row" style="text-align:right;">
+                <button class="ac-refuse-submit btns button_1_2">提 交</button> 
+                <button class="btns button_2_2">取 消</button> 
+            </div>
+        </script>
+    <script>
+$(function(){
+    var tooltip = FloatLayer({
+        trigger:'.insurancetip',
+        type:'hover',
+        template:'#insurance_tip'  
+    });
+
+
+    var ac_refuse_window = new PopWindow('.ac-refuse',{
+        title:'审核退回',
+        reload:true,
+        template:'#ac-refuse-template',
+        width:470
+    }).init(); 
+
+    $('body').on('click','.ac-refuse-submit',function(){
+        ac_refuse_window.close();
+        var html = '\
+<div class="block block77 block-module"> \
+    <div class="block-title">退回信息</div> \
+    <p class="block77-content"></p> \
+</div>';
+
+        if($('.block77').length<1){
+            $('.block1').after(html);
+        }
+
+        $('.block77-content').text($('#refuseText').val());
+    })
+
+})
+    </script>
+
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+<!-- @CLB@ -->
+</head>
+<body>  <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">消息</a>
+                <span>New</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent">
+<div class="actions block">
+    <div class="col col-l sep-r">
+        <button class="btns btn-return">返回</button>
+    </div>
+    <div class="col col-r sep-l">
+        <button class="btns btn-blue">保存</button>
+        <button class="ac-refuse btns btn-blue">退回</button>
+        <button class="btns btn-blue">审核通过</button>
+    </div>
+</div>
+
+<div class="block block0 clearfix">
+    <div class="col col-l">
+        <div class="row">
+            <span class="text1">订单号：<strong>12311321983921</strong></span>&nbsp;
+            <span class="text2"> - 订单类型：国内机票 </span>
+        </div>
+        <div class="row">
+            <span>最后更新：<em>航班号更改为CZ3609</em></span>&nbsp;&nbsp;<span>更新时间：<em>2013-06-15 11:23 </em></span>&nbsp;&nbsp;<span><a href="#">【更多操作日志】</a></span>
+        </div>
+    </div>
+    <div class="col col-r">
+        <ul class="flat-list">
+            <li>
+            <div class="instr clearfix">
+                <span class="">创建</span>
+                <span class="highlight-fl">审核</span>
+                <span>支付</span>
+                <span>出票</span>
+                <span>派送</span>
+                <span>完成</span>
+            </div> 
+            </li>
+            <li>
+            <div class="instr clearfix">
+                <span>收款</span>
+                <span>结算</span>
+            </div>
+            </li>
+            <li class="count"><span>附属订单</span><strong>3</strong>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- 订单信息 -->
+<div class="block block1 block-module">
+    <div class="block-title">订单信息</div>
+    <ul class="flat-list">
+        <li>
+        <label class="vertical-head">客户名称</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">结算方式</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">可用余额</label>
+        <span><strong style="color:#FF6608;">222.00</strong>元</span>
+        </li>
+        <li>
+        <label class="vertical-head">操作员</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">联系人</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">联系电话</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">手机号码</label>
+        <span>xxx</span>
+        </li>
+        <li>&nbsp;</li>
+        <li>
+        <label class="vertical-head">三方协议编号</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">客户订单编号</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">外部订单号</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">关联订单号</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">建单营业点</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">出票营业点</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">保险订单号</label>
+        <a class="text3" href="xxx.html">1231321321</a>
+        </li>
+        <li>&nbsp;</li>
+        <li class="col-wide highlight">
+        <label class="vertical-head">客户备注</label>
+                备注文字备注文字备注文字备注文字备注文字 
+        </li>
+        <li class="col-wide highlight">
+        <label style="vertical-align:top" class="vertical-head">内部备注</label>
+                备注文字备注文字备注文字备注文字备注文字 
+        </li>
+    </ul>
+</div>
+
+
+<div class="block block2 block-module">
+    <div class="block-title">
+        <span class="block-title-orange">航班信息</span>
+        <span class="block-module-action">
+            <button class="btns btn-ac-blue">刷新</button> 
+        </span>
+    </div> 
+    <div class="row">
+        <div id="flight_info_grid">
+            <table class="grid-table">
+                <tr class="thead">
+                    <td>PNR</td><td>大编码</td><td>新PNR</td><td>新大编码</td><td>离港机场</td><td>到港机场</td><td>航班号</td><td>舱位</td><td>机型</td><td>离港时间</td><td>到港时间</td><td>订座</td><td>预定OFFICE</td>
+                </tr>
+                <tr>
+                    <td>JZ4W50</td>
+                    <td>MJWM9N</td>
+                    <td> <input style="width:80px" /></td>
+                    <td> <input style="width:80px" /></td>
+                    <td>PEKT3</td>
+                    <td> PVG T2 </td>
+                    <td> CZ3609 </td>
+                    <td> W </td>
+                    <td> 777 </td>
+                    <td> 2013-06-22 20:35 </td>
+                    <td> 2013-06-22 23:25 </td>
+                    <td> HK </td>
+                    <td> SHA255 </td>
+                </tr>
+                <tr>
+                    <td>JZ4W50</td>
+                    <td>MJWM9N</td>
+                    <td> <input style="width:80px" /></td>
+                    <td> <input style="width:80px" /></td>
+                    <td>PEKT3</td>
+                    <td> PVG T2 </td>
+                    <td> CZ3609 </td>
+                    <td> W </td>
+                    <td> 777 </td>
+                    <td> 2013-06-22 20:35 </td>
+                    <td> 2013-06-22 23:25 </td>
+                    <td> HK </td>
+                    <td> SHA255 </td>
+                </tr>
+            </table> 
+        </div>
+    </div>
+</div>
+
+<div class="block block3 block-module">
+    <div class="block-title"><span class="block-title-blue">报价信息</span>
+        <span class="block-module-action">
+            <button class="btns btn-ac-blue">运价重置</button> 
+        </span>
+    </div>
+    <div>
+        <div class="row">
+            <table class="grid-table">
+                <tr class="thead">
+                    <td>旅客类型</td><td>人数</td><td>运价基础</td><td>应收票款</td><td>票款</td><td>税款</td><td>返点</td><td>返款</td><td>附加费</td><td>政策编号</td>
+                </tr>
+                <tr>
+                    <td> ADT </td>
+                    <td> 2 </td>
+                    <td> RTY+RTY </td>
+                    <td> 1997.6 </td>
+                    <td> 2060 </td>
+                    <td> 320 </td>
+                    <td> 5% </td>
+                    <td> 10 </td>
+                    <td> 0.00 </td>
+                    <td> 111 </td>
+                </tr>
+            </table> 
+        </div>
+        <div class="row row2">
+            <ul id="policy_tab" class="tablist clearfix" style="background-color:#F6F6F6;">
+                <li class="">
+                    <div class="mtab gray"> 
+                        <span>规定1</span>
+                        <span class="rightCover"></span>
+                    </div>
+                </li>
+
+                <li class="current">
+                    <div class="mtab">
+                        <span>规定二</span>
+                        <span class="rightCover"></span>
+                    </div>
+                </li>
+            </ul>
+
+            <h3>退改签规定</h3>
+            【<span>更改条件</span>】同等舱位免费更改。<br>
+            【<span>退票条件</span>】起飞前2小时（含）以外办理退票按订座舱位公布运价收取40％的退票费，2小时以内及起飞后退票按订座舱位公布运价收取50％的退票费。退票费低于50元时按50元收取。<br>
+            【<span>签转条件</span>】不得签转。<br><br>
+            <h3>政策说明</h3>
+            【<span>退改签补充规则</span>】（不管任何原因）签转到其他航空公司、跨月签转以及有政策航班改到无政策航班，需收回代理费。
+        </div>
+    </div>
+</div>
+
+
+<div class="block block4 block-module">
+    <div class="block-title"><span class="block-title-orange">旅客信息</span></div> 
+    <!-- <label id="save_as_frequent"> -->
+    <!--      <input type="checkbox">自动保存到长旅客  -->
+    <!-- </label> -->
+    <script type="text/x-kendo-template" id="insurance_tip">
+<div class="message_ct insurance_tip">
+            <div class="arrow arrow_north"></div>
+            <div class="message_text">
+1、保险名称：泰康新生活交通工具意外伤害保险<br>
+2、份数限制：3份<br>
+3、保险生效日：投保人所购首次航班起飞时间<br>
+4、保险有效期：7天<br>
+5、特别约定：由于各种原因，由航空公司为保险有效期内航班所有旅客调整的班机或被保险人经航空公司同意对约定航班进行改签，且起始港和目的港与原约定航班相同的班机视为等效航班，保险责任有效。<br>
+6、保险费：20元/份<br>
+7、保险金额：飞机乘客意外伤害身故与残疾40万，轮船乘客意外伤害身故与残疾10万元，火车乘客意外伤害身故与残疾10万元。<br>
+8、年龄：被保险人投保年龄为3周岁（含）至75周岁（含）。<br>
+9、投保要求：成年人必须为本人投保；未成年人必须是其父母作为投保人。<br>
+10、保险公司将委托真旅网为有需要的客户提供保险定额发票以作报销。保险定额发票仅作报销凭证，不是保单凭证。<br>
+11、数据电文是合法的合同表现形式，电子保单与纸质保单具有同等法律效力，请妥善保存。电子保单可在保险公司网站上查询和下载。<br>
+12、适用条款：本保险计划适用条款为《泰康新生活交通工具意外伤害保险》<br>
+13、投保人或被保险人应据实填写投保信息，否则本公司有权解除保险合同。<br>
+14、保单信息查询请登陆：www.taikang.com；保险公司客服电话：95522。<br>
+备注：根据中国保监会《关于父母为其未成年子女投保以死亡为给付保险金条件人身保险有关问题的通知》（保监发 [2010]95 号）文件的规定，自2011年4月1日起，父母为其未成年子女（未满 18 周岁）投保人身保险，在被保险人成年之前，各保险合同约定的被保险人死亡给付的保险金额总和、被保险人死亡时各保险公司实际支付的保险金总和均不得超过人民币 10 万元（航空意外伤害死亡保额不受此限制）。
+</div>
+        </div>
+    </script>
+    <div class="row">
+    <div id="passenger_info_grid">
+        <table class="grid-table">
+            <tr class="thead">
+              <td>姓名</td>
+        <td>性别</td>
+        <td>证件类型</td>
+        <td>证件号码</td>
+        <td>国籍</td>
+        <td>常旅卡号</td>
+        <td>旅客类型</td>
+        <td>出生日期</td>
+        <td>联系电话</td>
+        <td>保险</td>
+            </tr> 
+            <tr>
+              <td>周林</td>
+              <td>女</td>
+              <td>身份证</td>
+              <td>21321321321</td>
+              <td>中国</td>
+              <td>12314</td>
+              <td>成人</td>
+              <td>1978-08-09</td>
+              <td>13800138000</td>
+              <td>
+                <a class="insurancetip text3" href="javascript:;">意外险</a>
+                &nbsp;
+                <strong class="text2">￥20/份</strong>
+                &nbsp;
+                <span>
+                成功 （1份）
+                </span>
+              </td>
+          </tr>
+            <tr>
+              <td>周林</td>
+              <td>女</td>
+              <td>身份证</td>
+              <td>21321321321</td>
+              <td>中国</td>
+              <td>12314</td>
+              <td>成人</td>
+              <td>1978-08-09</td>
+              <td>13800138000</td>
+              <td>
+                <a class="insurancetip text3" href="javascript:;">意外险</a>
+                &nbsp;
+                <strong class="text2">￥20/份</strong>
+                &nbsp;
+                <span>
+                    <select id="" style="width:50px;" name="" data-role="dropdownlist">
+                        <option selected value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </span>
+              </td>
+          </tr>
+        </table>
+    </div>
+    </div>
+</div>
+
+<div class="block block5 block-calc">
+    <div id="order_calc">
+        <ul class="flat-list">
+            <li class="first">
+            <label>
+                <span>应收合计</span> 
+                <input value="2580.00" class="input-b"> 
+            </label>
+            </li> 
+            <li>
+            <label>
+                <span>票款合计</span>
+                <input value="320.00">
+            </label>
+            </li>
+            <li>
+            <label>
+                <span>税款合计(机建/燃油)</span>
+                <input>
+            </label>
+            </li>
+            <li>
+            <label>
+                <span>附加费</span>
+                <input>
+            </label>
+            </li>
+            <li>
+            <label>
+                <span>客户返佣</span>
+                <input>
+            </label>
+            </li>
+            <li>
+            <label>
+                <span>服务费</span>
+                <input>
+            </label>
+            </li>
+        </ul> 
+    </div>
+</div>
+
+<div class="block block6 block-module">
+    <div class="block-title">配送信息</div>
+</div>
+        </div>
+
+    </div>
+		
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+</body></html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 用户中心 支付</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_register.css" media="screen" />    
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+	<link rel="stylesheet" href="../../static/css/kendo.store.css" />
+    <!--<link rel="stylesheet" href="../../static/css/store_order.css" media="screen" />-->
+    <link rel="stylesheet" href="../../static/css/store_ucenter.css" media="screen" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>   
+    <script type="text/javascript" src="../../static/js/store/store.js"></script>
+    
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->  
+    
+   </head>
+<body>
+
+<div class="main-wrapper">
+<header class="main-header">
+    <a href="/" class="landing_logo"> </a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first"><a herf="#">关于天地行<i></i></a></li>
+            <li><a herf="#">服务中心<i></i></a></li>
+            <li class="last"><a herf="#">联系我们<i></i></a></li>
+        </ul> 
+    </nav>
+    <span class="phone">客服电话：400-720-6666</span>
+    <span class="QQ"><a href="javascript:void(0);" onClick="javascript:window.open('http://b.qq.com/webc.htm?new=0&sid=4007206666&eid=218808P8z8p8Q8K8y8R8R&o=&q=7&ref='+document.location, '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');">在线咨询</a></span>
+    
+</header>
+
+<section class="main-body">
+    <div class="bodyCont"> <!--bodyCont 开始-->
+          <div class="payInfo">
+               <table class="payInfoList">
+                     <colgroup>
+                          <col width="220px"/>
+                          <col width="280px"/>
+                          <col width="350px"/>
+                     </colgroup>
+                     <tbody>
+                          <tr>
+                              <td>产品类型：国内机票</td>
+                              <td>订单号：32432352554545 </td>
+                              <td>交易日期：2014-01-20</td>
+                          </tr>
+                          <tr>
+                              <td>交易金额：<b style=" font-size:20px; color:#ff6500;">28000.00</b>元</td>
+                          </tr>
+                     </tbody>
+               </table>
+          </div>
+          <div class="payWay">
+               <h2 class="payment">请选择支付方式：</h2>
+               <ul class="changeWay">
+                   <li id="account_blance" class="current">
+                       <div>
+                            <em class="payStyleTitle">余额支付</em> 
+                            <label class="balance"><input type="radio" checked="checked" /><span>账户可支付余额<b class="weight">5678989.00</b>元</span></label>
+                            <label class="topUp">账户余额不足，请选择其他支付方式，或先进行<a href="javascript:void(0);">账户充值</a></label>
+                       </div>
+                       <div class="item-content"></div>
+                   </li>
+                   <li id="thirdPay">
+                        <div class="thirdPayment">
+                            <em class="payStyleTitle">第三方支付</em> 
+                            <label ><input type="radio" name="thirdPay" /><i class="zfb"></i></label>
+                            <label><input type="radio" name="thirdPay" /><i class="cft"></i></label>
+                            <label><input type="radio" name="thirdPay" /><i class="hftx"></i></label>
+                        </div>
+                        <div class="zfbCont item-content" style="display:none;">
+                                <h4 class="zfbTitle">请关注您的订单金额是否超限</h4>
+                                <table class="zfbList">
+                                       <colgroup>
+                                             <col width="170px" />
+                                             <col width="170px" />
+                                             <col width="280px" />
+                                             <col width="130px" />
+                                       </colgroup>
+                                       <thead>
+                                            <tr>
+                                                <th>单笔限额(元)</th>
+                                                <th>每日限额(元)</th>
+                                                <th>需要满足的条件</th>
+                                                <th>备注</th>
+                                            </tr>
+                                       </thead>
+                                       <tbody>
+                                            <tr>
+                                                <td>500</td>
+                                                <td>1000</td>
+                                                <td>
+                                                    <div>办理电子口令卡（无需开通短信认证）</div>
+                                                    <div><a href="javascript:void(0);">如何办理</a></div>
+                                                </td>
+                                                <td rowspan="3">2012年1月起，工程银行“网银支付”2012年1月起，工程银行“网银支付”2012年1月起，工程银行“网银支付”</td>
+                                            </tr>
+                                            <tr>
+                                                <td>500</td>
+                                                <td>1000</td>
+                                                <td>
+                                                    <div>办理电子口令卡（无需开通短信认证）</div>
+                                                    <div><a href="javascript:void(0);">如何办理</a></div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>500</td>
+                                                <td>1000</td>
+                                                <td>
+                                                    <div>办理电子口令卡（无需开通短信认证）</div>
+                                                    <div><a href="javascript:void(0);">如何办理</a></div>
+                                                </td>
+                                            </tr>
+                                       </tbody>
+                                </table>
+                           </div>
+                           <div class="cftCont"></div>
+                           <div class="hftxCont"></div>
+                   </li>
+                   <li id="offline_pay">
+                       <div>
+                            <em class="payStyleTitle">线下转账</em> 
+                            <label class="offLineTransfer"><input type="radio" checked="checked" />填写银行转账信息</label>
+                       </div>
+                       <div class="offline item-content" style="display:none;"> <!--offline start-->
+                            <div style="float:left"><i class="important">*</i>转账银行账号：</div>
+                            <table cellpadding="0" cellspacing="0" class="bank" style="margin:-14px 0 0 100px">
+                                <colgroup>
+                                    <col width="115px" />
+                                    <col width="200px" />
+                                    <col width="145px" />
+                                    <col width="135px" />
+                                </colgroup>
+                                <tr>
+                                    <td> <label><input type="radio" name="bank" checked="checked" style="vertical-align:baseline"/><em class="shbank">上海银行</em></label> </td>
+                                    <td>上海不夜城国际旅行社有限公司</td>
+                                    <td>31656000600075300</td>
+                                    <td>上海银行长寿支行</td>
+                                </tr>
+                                <tr>
+                                    <td> <label><input type="radio" name="bank" style="vertical-align:baseline"/><em class="industry">工商银行</em></label> </td>
+                                    <td>上海不夜城国际旅行社有限公司</td>
+                                    <td>1001210029022580533</td>
+                                    <td>工行上海市长寿路支行</td>
+                                </tr>
+                                <tr>
+                                    <td> <label><input type="radio" name="bank" style="vertical-align:baseline"/><em class="shbank">上海银行</em></label> </td>
+                                    <td>上海长寿国际旅行社有限公司</td>
+                                    <td>31656003001748539</td>
+                                    <td>上海银行长寿支行</td>
+                                </tr>
+                                <tr>
+                                    <td> <label><input type="radio" name="bank" style="vertical-align:baseline"/><em class="industry">工商银行</em></label> </td>
+                                    <td>施纪军</td>
+                                    <td>1001041501212926986</td>
+                                    <td>工行</td>
+                                </tr>
+                                <tr>
+                                    <td> <label><input type="radio" name="bank" style="vertical-align:baseline"/><em class="traffic">交通银行</em></label> </td>
+                                    <td>施纪军</td>
+                                    <td>6222600110002534993</td>
+                                    <td>交行</td>
+                                </tr>
+                                <tr>
+                                    <td> <label><input type="radio" name="bank" style="vertical-align:baseline"/><em class="build">建设银行</em></label> </td>
+                                    <td>施纪军</td>
+                                    <td>1215589980110133621</td>
+                                    <td>建行</td>
+                                </tr>
+                                <tr>
+                                    <td> <label><input type="radio" name="bank" style="vertical-align:baseline"/><em class="farming">农业银行</em></label> </td>
+                                    <td>施纪军</td>
+                                    <td>6228480030923771510</td>
+                                    <td>农行</td>
+                                </tr>
+                            </table>
+                            <table id="offline_payerInfo">
+                                <colgroup>
+                                     <col width="90px"/>
+                                     <col width="200px"/>
+                                     <col width="75px"/>
+                                     <col width="300px"/>
+                                </colgroup>
+                                <tr>                                    
+                                    <td class="col-r"><i class="important">*</i>汇款日期：</td>
+                                    <td><input type="text" class="datepicker"/></td>
+                                    <td class="col-r">凭单号：</td>
+                                    <td><input type="text"/></td>                                    
+                                </tr>
+                                <tr>
+                                    <td class="col-r"><i class="important">*</i>汇款人：</td>
+                                    <td><input type="text"/></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-r" style="vertical-align:top;"><i class="important"></i>备注：</td>
+                                    <td colspan="3">
+                                        <textarea name="remarks" cols="60" rows="5"></textarea>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="transfer" style="margin-top:10px">
+                                <div class="hornTip">温馨提示：</div>
+                                <p style="padding-left:20px">银行转账（工作时间：周一至周五 <b>08:30 - 17：30</b>  联系电话：<span>021-62992610</span> &nbsp; 毛财务）</p>
+                            </div>
+                       </div> <!--offline end-->  
+                   </li>
+               </ul>
+               <div class="payBtn">
+                     <a class="adaptiveButton brightRed_btn ac-payAffirm">
+                          <span class="left"></span>
+                          <span class="center">确认付款</span>
+                          <span class="right"></span>
+                     </a>
+               </div>
+          </div>
+          
+          <div class="payWaySucceed">
+               <h2 class="payment">请选择支付方式：</h2>
+               <ul class="succeedCont">
+                   <li>
+                       <i class="succeedIcon"></i>
+                       <b class="weightFont">支付成功！</b>
+                       <em>3秒后返回商户...</em>
+                   </li>
+                   <li>
+                       <a href="javascript:void(0);" class="orangeLink">立即返回商户</a>
+                   </li>
+               </ul>
+          </div>
+          
+    </div>  <!--bodyCont 结束-->  
+</section>
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+
+<script type="text/x-kendo-template" id="thirdPaymentTemplate">
+    <div class="balanceCont">
+	    <p>报错文案报错文案报错文案报错文案报错文案</p>
+	</div>
+</script>
+
+<script type="text/x-kendo-template" id="ac-payAffirm-template">
+     <ul class="payAffirm">
+	     <li>请您在新打开的付款页面进行支付，支付完成前请不要关闭该窗口。</li>
+		 <li>
+		     <i class="paySucceed"></i>
+			 <em>付款成功：</em>
+			 <a href="javascript:void(0);" class="orangeFont">订单详情</a>
+		 </li>
+		 <li>
+		     <i class="payFail"></i>
+			 <em>付款失败：</em>
+			 <a href="javascript:void(0);" class="againPaymentBtn">重新选择支付方式</a>
+		 </li>
+	 </ul>  
+</script>
+
+<script>
+	$(function(){
+				
+		//第三方浮层
+		$(".thirdPayment .thirdPayStyle").kendoTooltip({
+			position:"bottom", //left right top
+			content:function(){
+				return $("#thirdPaymentTemplate").html();
+			},
+			offsetY:10,
+			width:280		
+		});
+		
+		//支付内容切换
+		$(".changeWay li").each(function(index){
+            $(this).click(function(){
+                //$(".changeWay .payCont").hide();
+               // $(".changeWay .payCont:eq(" + index + ")").show();
+                $(".changeWay li").removeClass("current");
+                $(this).addClass("current");
+            });
+
+        });
+		
+		//第三方内容切换
+		$(".thirdPayment label").each(function(index){
+            $(this).click(function(){
+                //$(".changeWay .payCont").hide();
+               // $(".changeWay .payCont:eq(" + index + ")").show();
+                $(".thirdPayment label").removeClass("currentWay");
+                $(this).addClass("currentWay");
+            });
+
+        });
+		
+		// 弹窗
+		new PopWindow('.ac-payAffirm',{
+			template:'#ac-payAffirm-template',
+			title:'付款确认',
+			width:'400'
+		}).init();
+		
+		//第三方支付
+		$("#thirdPay").bind("click",function(){
+			  $(".zfbCont").show();
+			  
+			  var input = $("input[name=thirdPay]:eq(0)");
+			  input.prop("checked",true);
+			  input.closest("div").find("label").removeClass("currentWay");
+			  input.parent().addClass("currentWay");
+		});
+		
+		$(".thirdPayment label").bind("click",function(e){
+			$(this).find(".zfb").size() == 1 ? $(".zfbCont").show() : $(".zfbCont").hide();
+			
+			$(this).closest("ul").find("li").removeClass("current");
+			
+			var li = $(this).closest("li");
+			li.addClass("current");
+			e.stopPropagation();
+		});
+		
+		//线下转账
+		$("#offline_pay").bind("click",function(){
+			  $(".offline").show();								
+		});
+		
+		$(".changeWay > li").bind("click",function(){
+			  $(this).closest("ul").find(".item-content").hide();
+			  
+			  if($(this).prop("id") != "thirdPay"){
+			   	$("#thirdPay input[type=radio]").prop("checked",false);
+				$("#thirdPay .currentWay").removeClass("currentWay");										 
+			  }
+			  $(this).find(".item-content").show();
+		});
+		
+	});
+</script>
+
+
+</body>
+</html>
+
+
+
+

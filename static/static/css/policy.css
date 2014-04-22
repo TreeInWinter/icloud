@@ -1,0 +1,230 @@
+﻿body
+{
+}
+.condition
+{
+	margin: 10px;
+}
+.condition table
+{
+	margin: 10px;
+}
+.condition table tr
+{
+	height: 30px;
+}
+.condition table td
+{
+}
+.content
+{
+	width: 1000px;
+}
+.content table
+{
+	width: 80%;
+	margin: 20px 40px;
+	padding:10px;
+	border:1px solid #ccc;
+}
+.content table tr
+{
+	height: 40px;
+}
+.content table td
+{
+	vertical-align: top;
+}
+.addcontent
+{
+	width: 800px;
+	margin: 0 auto;
+}
+.addcontent table
+{
+	width: 100%;
+	border:1px solid #ccc;
+	margin: 10px auto;
+	padding:10px 16px;
+}
+.addcontent table tr
+{
+	height: 34px;
+}
+.tishi
+{
+	margin: 24px 0 10px;
+	padding-left: 12px;
+	color: Red;
+	font-size: 14px;
+}
+.title
+{
+	margin: 16px;
+}
+#startTabs, #scityed, #cangwei, #endTabs
+{
+	width: 800px;
+	margin: 0 auto;
+}
+.cen
+{
+	width: 800px;
+	margin: 0 auto;
+}
+.cityspan
+{
+}
+.cityspan li
+{
+	height: 34px;
+	line-height: 34px;
+}
+.cityspan li span
+{
+	width:150px;
+    float:left;
+    display:inline;
+	margin-right: 24px;
+}
+.cityspan li a
+{
+	margin-right: 20px;
+}
+.b1px
+{
+    border-top:1px solid #ccc;
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;
+}
+.bg1
+{
+	background: #ecf5ff;
+	border: 1px solid #ccc;
+}
+.m10
+{
+	margin: 10px;
+}
+.m10 label
+{
+   font-weight:bold;
+}
+.psg
+{
+}
+.psg li
+{
+	line-height: 30px;
+	padding-left: 50px;
+}
+.psg span
+{
+	margin-right: 24px;
+}
+.psg label
+{
+	width: 100px;
+}
+dl
+{
+	float: left;
+	width: 100%;
+}
+
+.dl_zcgz
+{
+	padding-left: 20px;
+	margin-bottom:14px;
+}
+.b1px dl dt
+{
+	float: left;
+	height: 25px;
+	margin-left:20px;
+	font-weight:bold;
+}
+.dl_zcgz dd
+{
+	float: left;
+	height: 25px;
+    margin-left:28px;
+}
+.b1px h4
+{
+	height: 30px;
+	line-height: 30px;
+}
+.txta
+{
+	width: 600px;
+	height: 100px;
+}
+.top
+{
+	vertical-align: top;
+	font-weight:bold;
+}
+.p_zysx
+{
+	padding-left: 80px;
+	font-size: 14px;
+	color: red;
+}
+.btn
+{
+	width: 100%;
+	text-align: center;
+	margin:20px 0;
+}
+.ul_cangwei
+{
+   padding:14px;
+}
+.ul_cangwei li
+{
+	 float:left;
+	 width:36px;
+	 height:24px;
+}
+.clr
+{
+	clear:both;
+}
+.w110
+{
+	width:110px;
+}
+.pd20
+{
+	padding:20px 0;
+}
+.pd10
+{
+	padding:10px;
+}
+.pdl14
+{
+}
+.b1px_b
+{
+	border-bottom:1px solid #ccc;
+}
+.ul_city
+{
+	padding:5px 0px 10px 30px;
+}
+.ul_city li
+{
+	float:left;
+	width:74px;
+	margin-right:20px;
+}
+.hide
+{
+	display:none;
+}
+.show
+{
+	display:block;
+}

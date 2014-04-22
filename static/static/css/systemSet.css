@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+
+.fixedMenu .currentTerm{ padding:0px 10px; background:#fff; color:#333; border-bottom:3px solid #ff7702;}
+.setContent{ background:#fff; padding:20px 0;}
+.setContent .mtab label{ margin-right:5px;}
+#rolemenu .current .mtab a{ color:#0066cc; font-weight:bold;}
+#rolemenu .mtab a{ color:#2c2c2c;}
+.grayTitleTab{ margin:15px 25px;}
+.grayTitleTab thead th{ background:#ebeff1;color:#333333; padding:5px; font-weight:500; border:1px solid #cfcfcf; height:20px; text-align:left;}
+.grayTitleTab tbody td{ color:#454545; padding:5px; border:1px solid #cfcfcf; height:20px; line-height:20px; text-align:left;}
+.grayTitleTab .linkA a{ color:#0066cc; margin-right:5px;}
+.grayTitleTab .linkA a:hover{ text-decoration:underline;}
+.setBtn{ position:absolute; right:3%; top:-32%;}
+.grayTitleTab .gray{ color:#999999;}
+.redFont{ color:#ff3300; vertical-align:middle;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 B2G 酒店搜索无结果</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/b2g.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.b2g.css" />
+    <link rel="stylesheet" href="../../static/css/b2g_hotel.css" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/b2g/common.js"></script>
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=qkNnEXk6nC3jcPTM8mv3dcE8"></script>
+    <!--[if lte IE 9]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="top-line"></div>
+    <header class="main-header">
+        <div class="header-content">
+            <a class="logo" href="/">天地行 B2G</a>
+            <nav class="main-nav">
+                <ul class="clearfix">
+                    <li class="first active"><a herf="#">行程预订</a></li>
+                    <li><a herf="#">行程管理</a></li>
+                    <li><a herf="#">数据服务</a></li>
+                    <li><a herf="#">创业维护</a></li>
+                    <li><a herf="#">系统设置</a></li>
+                </ul> 
+            </nav>
+        </div>
+    </header>
+    <div class="header-bar clearfix">
+        <div class="header-bar-content">
+            <span class="font-titbar">潘小美，您正在为<em>钱多多</em><em>唐笑笑</em><em>小可怜</em>预订</span>
+        </div>
+    </div>
+    <section class="main-body clearfix">
+        <div class="main-body-content">
+        	<div class="titTop clearfix">
+                <div class="flowImg">
+                        <em class="curFlowImg"><i></i>选择</em>
+                        <em>预订</em>
+                        <em>填写</em>
+                        <em>加入行程</em>
+                        <em class="lastFlowGray">提交行程</em>
+                </div>
+        	</div>  
+       <!-- 搜索 -->
+      	 	<div class="searchCon">
+                <div class="againSearch">
+                    <table>
+                          <colgroup>
+                               <col width="90px"/>
+                               <col width="160px"/>
+                               <col width="90px"/>
+                               <col width="160px"/>
+                               <col width="90px"/>
+                               <col width="160px"/>
+                               <col width="80px"/>
+                               <col width="210px"/>
+                               <col width="120px"/>
+                          </colgroup>
+                          <tbody>
+                          <tr>
+                              <td class="tdTit">入住城市：</td>
+                              <td><input type="text" placeholder="上海"/></td>
+                              <td class="tdTit">入住日期：</td>
+                              <td><input type="text" value="" class="datepicker"/></td>
+                              <td class="tdTit">退房日期：</td>
+                              <td><input type="text" value="" class="datepicker"/></td>
+                              <td class="tdTit">关键词：</td>
+                              <td><input type="text" placeholder="酒店品牌 / 位置"/></td>
+                              <td>
+                              <button type="button" class="commonBtn orangeBtn" style="padding:7px 25px;">重新搜索</button></td>
+                          </tr>
+                         </tbody>
+                     </table>  
+                </div>
+                <div class="searchMore">
+                   <div class="searchRow">
+                    <div class="searchRowTitle"><em>酒店位置：</em><span class="nolimit sel" data-filter-type="locate">不限</span></div>
+                     <table class="hotelLocation">
+                       <tbody>
+                         <tr>
+                         <td>
+                          <span id="conveyance">交通<i></i></span>
+                          </td>
+                          <td>
+                          <span id="district">行政区<i></i></span>
+                          </td>
+                          <td>
+                          <span id="bsarea">商区<i></i></span>
+                          </td>
+                          </tr>
+                       </tbody>
+                     </table>
+                   </div>
+                    <div class="searchRow">
+                     <div class="searchRowTitle" style="padding:10px 0 0 0">
+                     <em>酒店价格：</em><span class="nolimit sel" data-filter-type="price|customer_price">不限</span>
+                     </div>
+                     <table>
+                       <tbody>
+                         <tr>
+                           <td>
+                           <label><input type="radio" name="price" value="150元以下"/>150元以下</label>
+                           </td>
+                           <td>
+                           <label><input type="radio" name="price" value="150-300元"/>150-300元</label>
+                           </td>
+                           <td>
+                           <label><input type="radio" name="price" value="300-600元"/>300-600元</label>
+                           </td>
+                           <td>
+                           <label><input type="radio" name="price" value="600元以上"/>600元以上</label>
+                           </td>
+                           <td style="width:240px">
+                           <span style="margin:0 0 0 10px">自定义：<input type="text" placeholder="0元" name="customer_price"/>到<input type="text" name="customer_price" placeholder="1200元"/></span>
+                           </td>
+                           <td> <button type="button" class="sureBtn">确定</button></td>
+                         </tr>
+                       </tbody>
+                     </table>
+                   </div>
+                    <div class="searchRow">
+                      <div class="searchRowTitle"><em>酒店星级：</em><span class="nolimit sel" data-filter-type="hotelStar">不限</span></div>
+                     <table>
+                       <tbody>
+                         <tr>
+                         <td>
+                          <label><input type="checkbox" name="hotelStar" value="五星/豪华"/>五星/豪华</label>
+                          </td>
+                          <td>
+                          <label><input type="checkbox" name="hotelStar" value="四星/高档"/>四星/高档</label>
+                          </td>
+                          <td>
+                          <label><input type="checkbox" name="hotelStar" value="三星/舒适"/>三星/舒适</label>
+                          </td>
+                          <td style="width:140px">
+                          <label><input type="checkbox" name="hotelStar" value="二星及以下/经济"/>二星及以下/经济</label>
+                          </td>
+                         </tr>
+                       </tbody>
+                     </table>
+                   </div>
+                    <div class="searchRow">
+                     <div class="searchRowTitle"><em>酒店品牌：</em><span class="nolimit sel" data-filter-type="brand">不限</span></div>
+                     <table>
+                       <tbody>
+                         <tr>
+                           <td>
+                           <label><input type="checkbox" name="brand" value="如家"/>如家</label>
+                           </td>
+                           <td>
+                           <label><input type="checkbox" name="brand" value="汉庭"/>汉庭</label>
+                           </td>
+                           <td>
+                           <label><input type="checkbox" name="brand" value="速8"/>速8</label>
+                           </td>
+                           <td>
+                           <label><input type="checkbox" name="brand" value="莫泰"/>莫泰</label>
+                           </td>
+                           <td>
+                           <label><input type="checkbox" name="brand" value="格林豪泰"/>格林豪泰</label>
+                           </td>
+                           <td>
+                           <span class="brandMore" id="moreBrand">更多<i></i></span>
+                           </td>
+                         </tr>
+                       </tbody>
+                     </table>
+                   </div>
+                   <div class="searchRow last">
+                     <div class="searchRowTitle"><em>酒店设施：</em><span class="nolimit sel" data-filter-type="facility">不限</span></div>
+                     <table>
+                       <tbody>
+                         <tr>
+                           <td>
+                           <label><input type="checkbox" name="facility" value="免费wifi"/>免费wifi</label>
+                           </td>
+                           <td>
+                           <label><input type="checkbox" name="facility" value="免费宽带"/>免费宽带</label>
+                           </td>
+                           <td>
+                           <label><input type="checkbox" name="facility" value="免费停车场"/>免费停车场</label>                     </td>
+                           <td>
+                           <label><input type="checkbox" name="facility" value="游泳池"/>游泳池</label>
+                           </td>
+                           <td>
+                           <label><input type="checkbox" name="facility" value="餐厅"/>餐厅</label>
+                           </td>
+                           <td>
+                           <label><input type="checkbox" name="facility" value="会议室"/>会议室</label>
+                           </td>
+                           <td>
+                           <label><input type="checkbox" name="facility" value="健身房"/>健身房</label>
+                           </td>
+                           <td>
+                           <label><input type="checkbox" name="facility" value="免费接机"/>免费接机</label>
+                           </td>
+                           <td>
+                           <label><input type="checkbox" name="facility" value="商务中心"/>商务中心</label>
+                           </td>
+                           <td>
+                           <label><input type="checkbox" name="facility" value="大床"/>大床</label>
+                           </td>
+                         </tr>
+                        <!-- <tr>
+                         <td><label><input type="checkbox" name="facility" value="大床"/>大床</label></td>
+                         <td><label><input type="checkbox" name="facility" value="大床"/>大床</label></td>
+                         <td><label><input type="checkbox" name="facility" value="大床"/>大床</label></td>
+                         </tr>-->
+                       </tbody>
+                     </table>
+                   </div>
+                   <div class="searchResult">
+                     <div class="clearCondition"><a href="#">清空条件</a></div>
+                     <!--<em>253</em><b>家酒店满足条件：</b>-->
+                     <!--<span><strong>航中路</strong><i></i></span><span><strong>150-300元</strong><i></i></span><span><strong>锦江之星</strong><i></i></span><span><strong>格林豪泰</strong><i></i></span><span><strong>免费wifi</strong><i></i></span>-->
+                      <div class="fitCondition">
+                        <div class="fitConditionTit"><em>253</em>家酒店满足条件：</div>
+                        <div class="fitContent">
+                          <ul>
+                            <!--
+                           <li><span><strong>航中路</strong><i></i></span></li>
+                           <li><span><strong>150-300元</strong><i></i></span></li>
+                           <li><span><strong>四星/高档</strong><i></i></span></li>
+                           <li><span><strong>格林豪泰</strong><i></i></span></li>
+                           <li><span><strong>免费wifi</strong><i></i></span></li>
+                           <li><span><strong>如家</strong><i></i></span></li>
+                           <li><span><strong>会议室</strong><i></i></span></li>
+                           <li><span><strong>150-300元</strong><i></i></span></li>
+                           <li><span><strong>二星及以下/经济</strong><i></i></span></li>
+                           <li><span><strong>人民广场</strong><i></i></span></li>
+                           <li><span><strong>免费宽带</strong><i></i></span></li>
+                           <li><span><strong>600元以上</strong><i></i></span></li>
+                           <li><span><strong>大床</strong><i></i></span></li>
+                           <li><span><strong>免费停车场</strong><i></i></span></li>
+                           <li><span><strong>大床</strong><i></i></span></li>
+                           <li><span><strong>免费停车场</strong><i></i></span></li>
+                           -->
+                          </ul>
+                        </div>
+                      
+                      </div>
+                   </div>
+                </div>
+                
+        </div>   
+    <!-- 搜索结束 -->
+    
+        <div class="noResult"> <!--无搜索结果 开始-->
+             <div><img src="/static/images/b2g/hotelNoResult.png" style="width:290px; height:172px;"/></div>
+             <div class="resultContent">
+                  <h4>没有找到您所查询的酒店，您可以尝试如下操作：</h4>
+                  <ul class="resultList">
+                      <li>1、更改查询条件 &nbsp;<a href="javascript:void(0);">重新搜索</a></li>
+                      <li>2、联系客服电话（400-720-6666）进行咨询。</li>
+                  </ul>
+             </div>
+        </div> <!--无搜索结果 结束-->
+    
+    </div>
+          
+</section>
+
+
+    <footer class="main-footer">
+        <p class="copyright">Copyright &copy; 2013 天地行 All Rights Reserved.     沪ICP备08101503号</p>
+    </footer>
+</div>
+
+</body>
+</html>
+
+

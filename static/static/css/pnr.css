@@ -1,0 +1,263 @@
+
+.input-pnrcode{
+    border:0;
+    color:#3365CB;font:bold 18px arial;text-transform:uppercase;
+    background:url(../images/pnr_r11_c5.png) no-repeat;
+    height:24px;
+    padding:5px 3px 2px 5px;
+    width:142px;
+}
+.input-ticketNo{
+    border:0;
+    background:url(../images/ticketNo_r11_c5.gif) no-repeat;
+    height:24px;
+    padding:5px 3px 2px 5px;
+    width:337px;
+}
+.block2 label{
+    padding-right:20px;
+}
+
+.block1 {
+    padding:20px;
+}
+.block1 li{
+    margin-right:20px;  
+}
+#tabstrip .k-state-default,#tabstrip  .k-state-active{
+    border:none;
+}
+.block2 li.k-state-default{
+    background-color:#f1f1f1;
+}
+.block2 .tab-head-list li{
+    margin-right:5px;
+    padding:0 10px;
+}
+.block2 li.k-state-active{
+    background-color:#d3f3fe;
+    font-weight:bold;
+}
+.block2 .k-content{
+    padding:10px 0;
+}
+.block2 {
+    min-height:400px;
+    padding:20px 30px;
+}
+.block2 .tab-head-list{
+    border-bottom:1px solid #d3f3fe;
+}
+.ac-default{
+    margin-left:10px;
+    height:19px;
+    width:37px;
+    background-color:#c5efff;
+    /* background-image:url(/images/pnr_r4_c13.png); */
+}
+
+.block2 .gj {
+    border-bottom: 1px solid #E7E7E7;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+.block2 input[type=radio]{
+    margin-right:3px;
+}
+.block2 .cv-table th{
+    font-weight:normal;
+}
+.block2 .gj label:nth-last-child(2){
+    padding-right:0;
+}
+.pnr-console{
+    color:#0f0;
+    background-color:#000;
+    width:480px;
+    height:260px;
+    padding:10px;
+    border:1px solid #666;
+}
+.row-title{
+    font-size:14px;
+    color:#333;
+    font-weight:bold;
+}
+.block2 h3.row-title{
+    margin-bottom:10px;
+}
+.block2 .row2{
+    margin-top:10px;
+    padding-top:20px;
+    padding-bottom:20px;
+    border-top:1px solid #e7e7e7;
+}
+.block2 .col1{
+    float:left;
+    margin-right:30px;
+    width:505px;
+}
+.block2 dt{
+    color:#CB0000;
+}
+.block2 dd{
+    margin-top:10px;
+    line-height:15px;
+}
+.block2 .col1{
+    position:relative;
+}
+.block2 .col1 .btns{
+    position:absolute;
+    left:540px;
+    top:250px;
+}
+.block2 .row{
+    margin-bottom:10px;
+}
+.block2 .flat-list li{
+    line-height:32px;
+    margin-right:10px;
+}
+.progressBarInProgressWrapper{
+	width: 55px;
+    margin-top:7px;
+    margin-left:10px;
+    float:left;
+}
+.progressWrapper {
+	width: 235px;
+	overflow: hidden;
+    float:left;
+    line-height:23px;
+    padding-right:10px;
+    padding-bottom:5px;
+}
+
+.progressContainer {
+	border: solid 1px #E8E8E8;
+	background-color: #F7F7F7;
+	overflow: hidden;
+}
+/* Message */
+.message {
+	margin: 1em 0;
+	padding: 10px 20px;
+	border: solid 1px #FFDD99;
+	background-color: #FFFFCC;
+	overflow: hidden;
+}
+/* Error */
+.red {
+	border: solid 1px #B50000;
+	background-color: #FFEBEB;
+}
+
+/* Current */
+.green {
+	border: solid 1px #DDF0DD;
+	background-color: #EBFFEB;
+}
+
+/* Complete */
+.blue {
+	border: solid 1px #9ecddd;
+	background-color: #ecf7fb;
+}
+
+.progressName {
+	width: 135px;
+    padding-left:5px;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+    float:left;
+}
+
+.progressBarInProgress,
+.progressBarComplete,
+.progressBarError {
+	font-size: 0;
+	width: 0%;
+	height: 5px;
+	background-color: #00a2ff;
+	margin-top: 2px;
+}
+
+.progressBarComplete {
+	width: 100%;
+	background-color: green;
+	visibility: hidden;
+}
+
+.progressBarError {
+	width: 100%;
+	background-color: red;
+	visibility: hidden;
+}
+
+.progressBarStatus {
+    display:none;
+	width: 60px;
+    overflow:hidden;
+	text-align: left;
+	white-space: nowrap;
+    float:left;
+}
+
+a.progressCancel {
+	font-size: 0;
+	display: block;
+	height: 23px;
+	width: 20px;
+	background: url(../images/guanbi.png) 50% 50% no-repeat;
+	float: right;
+}
+
+
+/* -- SWFUpload Object Styles ------------------------------- */
+.swfupload {
+	vertical-align: middle;
+}
+
+.fl-upholder{
+    margin-top:10px;
+    overflow:hidden;
+}
+.fl-uploader{
+    position:relative;
+    color:#999;
+}
+.fl-uploader-error{
+    display:none;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:#fff;
+    font-weight:normal;
+    width:400px;
+    color:red;
+}
+.fl-uploader-wrap{
+    display:none;
+    position:absolute;
+    left:-8px;
+    top:22px;
+}
+.fl-error{
+    cursor:pointer;
+    padding:2px 5px;
+    background:url(../images/errorfl.png) 50% 50% no-repeat;
+    position:relative;
+}
+.fl-error:hover .fl-uploader-wrap{
+    display:block;
+}
+.fl-uploader-errfiles{
+    width:225px;
+    color:#333;
+    line-height:20px;
+}
+.message_ct .arrow_north{
+    left:20px;
+}

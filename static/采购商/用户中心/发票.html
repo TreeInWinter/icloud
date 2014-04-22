@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 用户中心 发票</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_ucenter.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.store.css" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>    
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>    
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+    <script type="text/javascript" src="../../static/js/store/store.js"></script>
+</head>
+<body>
+
+<div class="main-wrapper">
+<header class="main-header">
+    <a class="logo" href="/"><h1>天地行</h1></a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first active"><a herf="#">首页</a></li>
+            <li><a herf="#">国内机票</a></li>
+            <li><a herf="#">国际机票</a></li>
+            <li><a herf="#">酒店</a></li>
+        </ul> 
+    </nav>
+    <nav class="main-links">
+        <ul class="clearfix">
+            <li class="first"><a href="#">订单管理</a></li>
+            <li><a href="#">分销管理</a></li>
+            <li><a href="#">电子钱包</a></li>
+            <li><a href="#">统计报表</a></li>
+            <li><a href="#">客服服务</a></li>
+            <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+            <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+</header>
+<section class="main-body clearfix">
+    <aside class="us-nav">
+        <nav>
+            <h3>用户中心</h3>
+            <div class="us-bind"><a href="#">手机已绑定</a>&#12288;<a class="text1" href="#"><i class="ucnav_03"></i>邮箱未绑定</a></div>
+            <dl>
+                <dt><i class="ucnav_07"></i>订单管理</dt>
+                <dd><a href="#">当日所有订单</a></dd>
+                <dd><a href="#">国内机票订单</a></dd>
+                <dd><a href="#">国际机票订单</a></dd>
+                <dd><a href="#">酒店订单</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="ucnav_10"></i>询价单管理</dt>
+                <dd><a href="#">国内机票询价单</a></dd>
+                <dd><a href="#">国际机票询价单</a></dd>
+                <dd><a href="#">酒店询价单</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_12"></i>电子钱包</dt>
+                <dd><a href="#">账户信息</a></dd>
+                <dd><a href="#">账户充值</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_15"></i>票据管理</dt>
+                <dd><a href="#">行程单</a></dd>
+                <dd><a class="current" href="#">发票</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_17"></i>统计报表</dt>
+                <dd><a href="#">财务报表</a></dd>
+                <dd><a href="#">机票业务</a></dd>
+                <dd><a href="#">酒店业务</a></dd>
+                <dd><a href="#">分销业务</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_19"></i>分销商管理</dt>
+                <dd><a href="#">分销商管理</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_22"></i>账户资料</dt>
+                <dd><a href="#">信息维护</a></dd>
+                <dd><a href="#">消息设置</a></dd>
+            </dl>
+
+            <dl>
+              <dt><i class="ucnav_26"></i>我的工具</dt>
+              <dd><a class="ic-j" href="#"><i class="ucnav_29"></i>常旅客管理</a></dd>
+                <dd><a class="ic-j" href="#"><i class="ucnav_32"></i>短消息</a></dd>
+            </dl>
+        </nav>
+    </aside>
+    <main class="us-content">
+        <h1 class="us-title">发票</h1>
+        <div class="us-body" style="margin-bottom: 13px">
+        <div class="tab_item">
+            <section style="padding-bottom:10px;">
+      		 <aside>
+                <ul class="tab_change clearfix">
+                    <li class="currentState"><em><a href="javascript:void(0);">开票申请</a></em></li>
+                    <li><em><a href="javascript:void(0);">发票管理</a></em></li>
+                </ul>
+             </aside>
+              
+                <table class="tbl_invoicedStatus" style="margin:15px 15px 0 15px;">
+                    <colgroup>
+                        <col width="80">
+                        <col width="480">
+                    </colgroup>
+                    <tr>
+                        <td>开票状况总览</td>
+                        <td>
+                            <span class="invoiced"></span>已开票
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="uninvoiced"></span>未开票
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>上年度开票：</td>
+                        <td>
+                            <div class="uninvoiced" style="display: block;width:100%;">
+                                <div class="invoiced" style="width:90%;"></div>
+                            </div>
+                            <div class="invoicedInfo">
+                                已开票<span class="invoicedMoney">￥2568958677.30</span>, 未开票<span class="invoicedMoney">￥25689.30</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>下年度开票：</td>
+                        <td>
+                            <div class="uninvoiced" style="display: block;width:100%;">
+                                <div class="invoiced" style="width:40%;"></div>
+                            </div>
+                            <div class="invoicedInfo">
+                                已开票<span class="invoicedMoney">￥2568958677.30</span>, 未开票<span class="invoicedMoney">￥25689.30</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div style="text-align: center;margin: 10px 0;">
+                    <a class="adaptiveButton brightRed_btn btn_applyInvoice">
+                        <span class="left"></span>
+                        <span class="center center_1">申请开票</span>
+                        <span class="right"></span>
+                    </a>
+                </div>
+            </section>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+        <div class="us-body">
+            <div class="tab_item">
+                <section class="us-query clearfix" style=" padding-top:15px; padding-bottom:5px;">
+                    <!--<div class="chief" style="margin-bottom:10px">
+                        <h3 style="width:90px;display: inline-block">发票管理</h3>
+                    </div>-->
+                    <table class="us-query-table">
+                        <tr>
+                            <th>开票单：</th>
+                            <td><input id="" type="text" name="" style="width:115px;"></td>
+                            <th>提开票日期：</th>
+                            <td>
+                                <input id="" value="2013-08-08" type="text" name="" style="width:73px;">
+                                <em> - </em>
+                                <input id="" value="2013-08-08" type="text" name="" style="width:73px;">
+                            </td>
+                            <th>申请状态：</th>
+                            <td>
+                                <select data-role="dropdownlist" style="width:120px" id="" name="">
+                                    <option value="">全部</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>申请单号：</th>
+                            <td><input id="" type="text" name="" style="width:115px;"></td>
+                            <th>申请日期：</th>
+                            <td>
+                                <input id="" value="2013-08-08" type="text" name="" style="width:73px;">
+                                <em> - </em>
+                                <input id="" value="2013-08-08" type="text" name="" style="width:73px;">
+                            </td>
+                            <th></th>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <a class="adaptiveButton brightRed_btn">
+                        <span class="left"></span>
+                        <span class="center center_1">搜&nbsp;索</span>
+                        <span class="right"></span>
+                    </a>
+                </section>
+                <section class="usResult">
+                    <div class="tblToolsBar"><a class="text1" href="javascript:;">导出Excel</a></div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>申请单号</th>
+                                <th>申请时间</th>
+                                <th>申请状态</th>
+                                <th>发票抬头</th>
+                                <th>开票时间</th>
+                                <th>开票金额</th>
+                                <th>发票号</th>
+                                <th>提交人</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>1</td>
+                            <td>2013-9-20 14:20:00</td>
+                            <td>已开票</td>
+                            <td>上海携程计算机</td>
+                            <td>2013-9-20 14:20:00</td>
+                            <td>30000</td>
+                            <td>30000</td>
+                            <td>携程酒店</td>
+                            <td><a class="text1 checkInvoiceStatus" href="javascript:;">查看</a></td>
+                        </tr>
+                        <tr class="currentList">
+                            <td>1</td>
+                            <td>2013-9-20 14:20:00</td>
+                            <td>已开票</td>
+                            <td>上海携程计算机</td>
+                            <td>2013-9-20 14:20:00</td>
+                            <td>30000</td>
+                            <td>30000</td>
+                            <td>携程酒店</td>
+                            <td><a class="text1 checkInvoiceStatus" href="javascript:;">查看</a></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2013-9-20 14:20:00</td>
+                            <td>已开票</td>
+                            <td>上海携程计算机</td>
+                            <td>2013-9-20 14:20:00</td>
+                            <td>30000</td>
+                            <td>30000</td>
+                            <td>携程酒店</td>
+                            <td><a class="text1" href="javascript:;">查看</a></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2013-9-20 14:20:00</td>
+                            <td>已开票</td>
+                            <td>上海携程计算机</td>
+                            <td>2013-9-20 14:20:00</td>
+                            <td>30000</td>
+                            <td>30000</td>
+                            <td>携程酒店</td>
+                            <td><a class="text1 checkInvoiceStatus" href="javascript:;">查看</a></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2013-9-20 14:20:00</td>
+                            <td>已开票</td>
+                            <td>上海携程计算机</td>
+                            <td>2013-9-20 14:20:00</td>
+                            <td>30000</td>
+                            <td>30000</td>
+                            <td>携程酒店</td>
+                            <td><a class="text1 checkInvoiceStatus" href="javascript:;">查看</a></td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
+                <div class="pagination clearfix">
+                    <ul>
+                         <li><a href="#">上一页</a></li>
+                         <li><a href="#">1</a></li>
+                         <li><a href="#">2</a></li>
+                         <li><a href="#" class="present">3</a></li>
+                         <li><a href="#">4</a></li>
+                         <li><a href="#">5</a></li>
+                         <li> <span>...</span> </li>
+                         <li><a href="#">60</a></li>
+                         <li><a href="#">下一页</a></li>
+                    </ul>
+                    <div>
+                       <span>共<em>132</em>条记录 &nbsp;&nbsp;&nbsp;共14页</span> 
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+        </div>
+    </main>
+</section>
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+
+<div id="applyInvoiceTemplate">
+    <table class="tbl_applyInvoice">
+        <tr>
+            <th>客户名称：</th>
+            <td>携程</td>
+        </tr>
+        <tr>
+            <th>业务类型：</th>
+            <td><label><input type="checkbox" name="" id=""/>酒店</label></td>
+        </tr>
+        <tr>
+            <th>可开发票金额：</th>
+            <td style="font-weight: bold;font-size: 18px;">￥50000</td>
+        </tr>
+        <tr>
+            <th><i class="important">* </i>发票抬头：</th>
+            <td><input type="text" name="" id="" style="width: 418px;" placeholder="请输入"/></td>
+        </tr>
+        <tr>
+            <th>开票总金额：</th>
+            <td class="orangeMoney" style="font-size: 18px;">￥50000</td>
+        </tr>
+        <tr>
+            <th style="vertical-align: top;padding-top: 8px;"><i class="important">* </i>经营项目：</th>
+            <td>
+                <table>
+                    <colgroup>
+                        <col width="170">
+                        <col width="40">
+                    </colgroup>
+                    <tr>
+                        <td>
+                            <select name="" id="" data-role="dropdownlist">
+                                <option value="0">房费</option>
+                            </select>
+                        </td>
+                        <th>金额：</th>
+                        <td>
+                            ￥ <input type="text" name="" id="" placeholder="请输入"/>
+                        </td>
+                        <td style="text-align: center">
+                            <a class="search_a btn_addJYXM" href="javascript:;" style="margin: 0 10px;">添加</a>
+                        </td>
+                    </tr>
+                    <tr class="secondeJYXM">
+                        <td>
+                            <select name="" id="" data-role="dropdownlist">
+                                <option value="0">房费</option>
+                            </select>
+                        </td>
+                        <th>金额：</th>
+                        <td>
+                            ￥ <input type="text" name="" id="" placeholder="请输入"/>
+                        </td>
+                        <td style="text-align: center;vertical-align: middle"><a href="javascript:;" class="btn_delJYXM">删除</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <th>是否邮寄：</th>
+            <td>
+                <label><input type="radio" checked name="needPost" id=""/>无需邮寄</label>
+                <label><input type="radio" name="needPost" id="needPost"/>需邮寄</label>
+            </td>
+        </tr>
+        <tr class="postInfo">
+            <th style="vertical-align: top;padding-top: 8px;">邮寄信息：</th>
+            <td><textarea name="" id="" placeholder="请输入..."></textarea></td>
+        </tr>
+        <tr>
+            <th style="vertical-align: top;padding-top: 8px;">备注：</th>
+            <td>
+                <textarea name="" id="" style="height: 50px;" placeholder="请输入..."></textarea>
+            </td>
+        </tr>
+    </table>
+    <div style="text-align: center;margin:10px 0">
+
+        <a class="adaptiveButton brightOrange_btn">
+            <span class="left"></span>
+            <span class="center center_1">提 交</span>
+            <span class="right"></span>
+        </a>
+        <span style="margin-left: 20px;">
+            <a href="javascript:;">关闭</a>
+        </span>
+    </div>
+</div>
+<div id="InvoicedTemplate">
+    <div class="invoiceStatusFlagContainer">
+        <div class="invoiceStatusFlag invoiceStatus_refuse">已拒绝</div>
+        <div class="invoiceStatusContent">拒绝原因：发票抬头与客户名称不符合！</div>
+    </div>
+    <table class="tbl_applyInvoice">
+        <tr>
+            <th>申请单号：</th>
+            <td>1</td>
+        </tr>
+        <tr>
+            <th>发票号：</th>
+            <td>N012991</td>
+        </tr>
+        <tr>
+            <th>客户名称：</th>
+            <td>携程</td>
+        </tr>
+        <tr>
+            <th>发票抬头：</th>
+            <td>上海携程计算机</td>
+        </tr>
+        <tr>
+            <th>开票总金额：</th>
+            <td class="orangeMoney" style="font-size: 18px;">￥50000</td>
+        </tr>
+        <tr>
+            <th style="vertical-align: top;padding-top: 8px;">经营项目：</th>
+            <td>
+                <table>
+                    <colgroup>
+                        <col width="100">
+                        <col width="40">
+                    </colgroup>
+                    <tr>
+                        <td>
+                            房费
+                        </td>
+                        <th>金额：</th>
+                        <td>
+                            ￥ 25000
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            会务费
+                        </td>
+                        <th>金额：</th>
+                        <td>
+                            ￥ 25000
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <th>开票日期：</th>
+            <td>2014-02-14</td>
+        </tr>
+        <tr>
+            <th>是否邮寄：</th>
+            <td>
+                需邮寄
+            </td>
+        </tr>
+        <tr>
+            <th style="vertical-align: top">邮寄地址：</th>
+            <td>上海市闸北区广中西路555号 宝华国际广场 16楼<p>电话：18551788777</p></td>
+        </tr>
+        <tr>
+            <th>相关订单：</th>
+            <td>
+                <a class="text1" href="javascript:;">下载详情</a>
+            </td>
+        </tr>
+        <tr>
+            <th>备注：</th>
+            <td></td>
+        </tr>
+    </table>
+    <div style="text-align: center;margin:10px 0">
+
+        <a class="adaptiveButton brightOrange_btn">
+            <span class="left"></span>
+            <span class="center center_1">关 闭</span>
+            <span class="right"></span>
+        </a>
+    </div>
+</div>
+<script type="text/javascript">
+    new PopWindow(".btn_applyInvoice",{
+        title:"按金额开票",
+        width:560
+    },"#applyInvoiceTemplate").init();
+    new PopWindow(".checkInvoiceStatus",{
+        title:"开票信息",
+        width:560
+    },"#InvoicedTemplate").init();
+
+    $("input[type=radio][name=needPost]").change(function(){
+        $(".postInfo").toggle();
+    })
+    $(".btn_addJYXM").click(function(){
+        $(".secondeJYXM").show();
+    })
+    $(".btn_delJYXM").click(function(){
+        $(".secondeJYXM").hide();
+    })
+</script>
+</body>
+</html>
+

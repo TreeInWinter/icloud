@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta content="text/html" charset="utf-8">
+    <link rel="stylesheet" href="/static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link href="/static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/kendo.common.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/kendo.gray.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/b2b.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/kendo.reset.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/hotel.css">
+    <link rel="stylesheet" href="/static/css/hotel_booking_searching.css">
+    <script src="/static/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/static/js/kendo.web.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/static/js/scrollFix.js"></script>
+    <script type="text/javascript" src="/static/js/public.js"></script>
+
+    <script src="/static/js/jquery-ui-1.10.3.custom.js"></script>
+    <script src="/static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+
+    <script type="text/javascript" src="/static/js/global.js"></script>
+
+
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/static/css/ie.css" />
+    <script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script>
+    <![endif]-->
+    <!-- @CLB@ -->
+    <script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body style="background:#fff">
+<div class="checkIn">
+    <label><b>入住:&nbsp;</b><span id="span_checkinDate">2013-07-01</span></label>
+    <label><b>退房:&nbsp;</b><span id="span_checkoutDate">2013-07-01</span></label>
+    <em>共<strong>1</strong>晚</em>
+    <a class="button_text_blue" id="change_date" >修改日期</a>
+    <a href="javascript:;" class="button_unimportant adaptiveButton small" style="vertical-align: middle;float:right" id="btn_cancel">
+        <span class="left"></span>
+        <span class="center" style="padding:0 2px">取 消</span>
+        <span class="right"></span>
+    </a>
+</div>
+
+
+<div class="hotelListContainer">
+    <div class="hotelRoomStyleListContainer">
+        <table style="width:100%">
+            <thead>
+            <tr>
+                <td style="width:105px">房型</td>
+                <td style="width:215px">床型</td>
+                <td style="width:50px">早餐</td>
+                <td style="width:50px">宽带</td>
+                <td style="width:54px">其他</td>
+                <td style="width:50px">底价</td>
+                <td style="width:50px">加价</td>
+                <td style="border:none;width:110px">卖价（不含服务费）</td>
+                <td style="border:none">&nbsp;</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="hotelRoomOverView">
+                <td class="roomStyle">商务标准房</td>
+                <td class="bedStyle"><div class="hotelGift">sdfoijweoriwjproiweuprowirpoiweu</div><span style="font-weight:bold">不可加床</span> 单人床（135cm*200cm）</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class="price">&nbsp;</td>
+                <td class="price">&nbsp;</td>
+                <td class="price" style="color:#FF2F00;font-weight:bold">&nbsp;</td>
+                <td class="hotelRoomActionButtonContainer">
+                    <a class="button_8" href="">待确认</a>
+                </td>
+            </tr>
+            <tr class="hotelRoomdetail">
+                <td class="roomStyle_special">含早特惠</td>
+                <td class="bedStyle"><div class="hotelGift enable" title="欧舒丹覅我饿哦日文的v女娃儿">sdfoijweoriwjproiweuprowirpoiweu</div></td>
+                <td>自助x1</td>
+                <td>宽带</td>
+                <td class="other" title="包含1间司陪房；包含机场接送">其他</td>
+                <td class="basePrice">￥380</td>
+                <td class="price">￥30</td>
+                <td><span class="sellPrice">￥410</span> <a href="javascript:;" class="rule" data-checkin="14:00以后" data-checkout="12:00以前" data-other="酒店预订确认后，不能变更或取消">规定</a></td>
+                <td class="hotelRoomActionButtonContainer">
+                    <a href="javascript:;" class="button_important adaptiveButton small" style="vertical-align: middle">
+                        <span class="left"></span>
+                        <span class="center" style="padding:0 2px">预 定</span>
+                        <span class="right"></span>
+                    </a>
+                    <a href="javascript:;" class="button_unimportant adaptiveButton small" style="vertical-align: middle">
+                        <span class="left"></span>
+                        <span class="center" style="padding:0 2px">询 价</span>
+                        <span class="right"></span>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hotelRoomdetail">
+                <td class="roomStyle_special">提前三天预定</td>
+                <td class="bedStyle"><div class="hotelGift">sdfoijweoriwjproiweuprowirpoiweu</div></td>
+                <td>自助x1</td>
+                <td>宽带</td>
+                <td class="other" title="包含1间司陪房；包含机场接送">其他</td>
+                <td class="basePrice">￥380</td>
+                <td class="price">￥30</td>
+                <td><span class="sellPrice">￥410</span> <a href="javascript:;" class="rule" data-checkin="14:00以后" data-checkout="12:00以前" data-other="酒店预订确认后，不能变更或取消">规定</a></td>
+                <td class="hotelRoomActionButtonContainer">
+                    <a href="javascript:;" class="button_important adaptiveButton small" style="vertical-align: middle">
+                        <span class="left"></span>
+                        <span class="center" style="padding:0 2px">预 定</span>
+                        <span class="right"></span>
+                    </a>
+                    <a href="javascript:;" class="button_unimportant adaptiveButton small" style="vertical-align: middle">
+                        <span class="left"></span>
+                        <span class="center" style="padding:0 2px">询 价</span>
+                        <span class="right"></span>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hotelRoomdetail">
+                <td class="roomStyle_special">连住2天</td>
+                <td class="bedStyle"><div class="hotelGift">sdfoijweoriwjproiweuprowirpoiweu</div></td>
+                <td>自助x1</td>
+                <td>宽带</td>
+                <td class="other" title="包含1间司陪房；包含机场接送">其他</td>
+                <td class="basePrice">￥380</td>
+                <td class="price">￥30</td>
+                <td><span class="sellPrice">￥410</span> <a href="javascript:;" class="rule" data-checkin="14:00以后" data-checkout="12:00以前" data-other="酒店预订确认后，不能变更或取消">规定</a></td>
+                <td class="hotelRoomActionButtonContainer">
+                    <a href="javascript:;" class="button_important adaptiveButton small" style="vertical-align: middle">
+                        <span class="left"></span>
+                        <span class="center" style="padding:0 2px">预 定</span>
+                        <span class="right"></span>
+                    </a>
+                    <a href="javascript:;" class="button_unimportant adaptiveButton small" style="vertical-align: middle">
+                        <span class="left"></span>
+                        <span class="center" style="padding:0 2px">询 价</span>
+                        <span class="right"></span>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hotelRoomOverView">
+                <td class="roomStyle">商务标准房</td>
+                <td class="bedStyle"><div class="hotelGift">sdfoijweoriwjproiweuprowirpoiweu</div><span style="font-weight:bold">不可加床</span> 单人床（135cm*200cm）</td>
+                <td>自助x1</td>
+                <td>宽带</td>
+                <td class="other" title="包含1间司陪房；包含机场接送">其他</td>
+                <td class="basePrice">￥380</td>
+                <td class="price">￥30</td>
+                <td><span class="sellPrice">￥410</span> <a href="javascript:;" class="rule" data-checkin="14:00以后" data-checkout="12:00以前" data-other="酒店预订确认后，不能变更或取消">规定</a></td>
+                <td class="hotelRoomActionButtonContainer">
+                    <a class="button_9" href="">无 房</a>
+                    <a href="javascript:;" class="button_important adaptiveButton small" style="vertical-align: middle">
+                        <span class="left"></span>
+                        <span class="center" style="padding:0 2px">预 定</span>
+                        <span class="right"></span>
+                    </a>
+                    <a href="javascript:;" class="button_unimportant adaptiveButton small" style="vertical-align: middle">
+                        <span class="left"></span>
+                        <span class="center" style="padding:0 2px">询 价</span>
+                        <span class="right"></span>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hotelRoomOverView">
+                <td class="roomStyle">商务标准房</td>
+                <td class="bedStyle"><div class="hotelGift">sdfoijweoriwjproiweuprowirpoiweu</div><span style="font-weight:bold">不可加床</span> 单人床（135cm*200cm）</td>
+                <td>自助x1</td>
+                <td>宽带</td>
+                <td class="other" title="包含1间司陪房；包含机场接送">其他</td>
+                <td class="basePrice">￥380</td>
+                <td class="price">￥30</td>
+                <td><span class="sellPrice">￥410</span> <a href="javascript:;" class="rule" data-checkin="14:00以后" data-checkout="12:00以前" data-other="酒店预订确认后，不能变更或取消">规定</a></td>
+                <td class="hotelRoomActionButtonContainer">
+                    <a class="button_7" href="">有 房</a>
+                    <a href="javascript:;" class="button_important adaptiveButton small" style="vertical-align: middle">
+                        <span class="left"></span>
+                        <span class="center" style="padding:0 2px">预 定</span>
+                        <span class="right"></span>
+                    </a>
+                    <a href="javascript:;" class="button_unimportant adaptiveButton small" style="vertical-align: middle">
+                        <span class="left"></span>
+                        <span class="center" style="padding:0 2px">询 价</span>
+                        <span class="right"></span>
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div id="window" style="display:none">
+    <span>入住</span> <input type="text" class="datepicker" value="2013-07-01" id="checkin_date"/>
+    <span style="padding-left:20px;">离店</span><input type="text" class="datepicker orange" value="2013-07-01" id="checkout_date"/>
+    <a href="javascript:;" class="button_important adaptiveButton medium" id="btn_save_changeDate" style="vertical-align: middle">
+        <span class="left"></span>
+        <span class="center">确 定</span>
+        <span class="right"></span>
+    </a>
+</div>
+
+<script type="text/javascript">
+    $(function(){
+        $("#change_date").click(function () {
+            var that=$(this);
+            var posT=that.offset().top+that.outerHeight();
+            var posL=that.offset().left;
+            if(!$("#window").data("kendoWindow"))
+            {
+                var win=$("#window").kendoWindow(
+                        {
+                            animation:false,
+                            modal:false,
+                            width:470,
+                            height:90,
+                            title:false,
+                            position:{
+                                top:posT,
+                                left:posL
+                            }
+                        }).data("kendoWindow");
+                //win.center();
+                win.open();
+                $(".k-window").css({top:posT,left:posL});
+            }
+            else
+            {
+                $("#window").data("kendoWindow").open();
+            }
+        });
+        $("#checkin_date").datepicker({
+            css:{"z-index":20000},
+            numberOfMonths:[1, 2],
+            minDate:new Date(),
+            showButtonPanel:true,
+            onSelect:function (dateText, inst) {
+                var date = new Date();
+                date.setFullYear(inst.selectedYear);
+                date.setMonth(inst.selectedMonth);
+                date.setDate(inst.selectedDay);
+
+                $("#checkout_date").datepicker("option", "minDate", date);
+                $("#checkout_date").datepicker("setDate", dateText);
+            }
+        });
+        $("#checkout_date").datepicker({
+            css:{"z-index":20000},
+            numberOfMonths:[1, 2],
+            minDate:new Date(),
+            showButtonPanel:true
+        });
+        $("#btn_save_changeDate").click(function(){
+            $("#span_checkinDate").text($("#checkin_date").val());
+            $("#span_checkoutDate").text($("#checkout_date").val());
+            $("#window").data("kendoWindow").close();
+        })
+
+        $("#btn_cancel").click(function(){
+            window.parent.closePopWin();
+        })
+    })
+</script>
+</body>
+</html>

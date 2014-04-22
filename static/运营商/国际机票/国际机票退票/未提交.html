@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>国际机票 退票管理 未提交</title>
+        <meta charset="utf-8" />
+<link href="/static/css/kendo.common.css" rel="stylesheet" />
+<link href="/static/css/kendo.gray.css" rel="stylesheet" />
+<link href="/static/css/common.css" rel="stylesheet" />
+<link href="/static/css/b2b.css" rel="stylesheet" />
+<link href="/static/css/kendo.reset.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="/static/css/global.css" />
+<link rel="stylesheet" href="/static/js/uploadify/uploadify.css">
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/kendo.web.js"></script>
+<script type="text/javascript" src="/static/js/plugins/jquery.fixedBar.js"></script>
+<script type="text/javascript" src="/static/js/uploadify/jquery.uploadify.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    $('.actions').fixedBar();
+    var lensf = function (){
+        $.each($('.instr'),function(){
+            var that = $(this);
+            if(that.find('.highlight-fl').size()>0){
+                var ele = that.find('.highlight');
+                var len = ele.size();
+                var wid = ele.width()*len + 15;
+                that.find('.line').prepend('<div style="background-color:#FF6608;height:2px;width:'+wid+'px" />')
+            }
+        });
+    }
+    lensf();
+});
+</script>
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+<!-- @CLB@ --></head><body>  <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+                <a href="javascript:void(0);">消息</a>
+                <span>New</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent">
+<link href="/static/css/order.css" rel="stylesheet"><div class="actions block">
+    <div class="col col-l sep-r">
+        <button class="btns btn-return">返回</button>
+    </div>
+    <div class="col col-r sep-l">
+        <button class="btns btn-blue">取消订单</button>
+        <button class="btns btn-blue">修改</button>
+        <button class="btns btn-blue">提交申请</button>
+    </div>
+</div>
+
+<div class="block block0 clearfix">
+    <div class="col col-l">
+        <div class="row">
+            <span class="text1">订单号：<strong>未生成</strong></span>&nbsp;
+            <!--<span class="text2"> - 订单类型：国内机票 </span>-->
+        </div>
+        <div class="row"></div>
+    </div>
+    <div class="col col-r">
+        <ul class="flat-list">
+            <li>
+            <div class="instr clearfix">
+                <span class="first highlight-fl">创建</span>
+                <span>审核</span>
+                <span>退票</span>
+                <span>完成</span>
+                <span class="last">取消</span>
+                <em class="line">&nbsp;</em>
+            </div> 
+            </li>
+            <li>
+            <div class="instr clearfix">
+                <span class="first">收款</span>
+                <span class="last">结算</span>
+                <em class="line">&nbsp;</em>
+            </div>
+            </li>
+            <li class="count" id="child_order_trigger"><span>关联订单</span><strong>3</strong>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- 订单信息 -->
+<div class="block block1 block-module">
+    <div class="block-title">订单信息</div>
+    <ul class="flat-list">
+        <li>
+        <label class="vertical-head">客户名称</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">结算方式</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">可用余额</label>
+        <span><strong style="color:#FF6608;">222.00</strong>元</span>
+        </li>
+        <li>
+        <label class="vertical-head">操作员</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">联系人</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">联系电话</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">手机号码</label>
+        <span>xxx</span>
+        </li>
+        <li>&nbsp;</li>
+        <li>
+        <label class="vertical-head">三方协议编号</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">客户订单编号</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">外部订单号</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">关联订单号</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">建单营业点</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">出票营业点</label>
+        <span>xxx</span>
+        </li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li class="col-wide">
+        <label class="vertical-head">客户备注</label>
+        <textarea disabled name=""></textarea>
+        </li>
+        <li class="col-wide">
+        <label style="vertical-align:top" class="vertical-head">内部备注</label>
+        <textarea disabled name=""></textarea>
+        </li>
+    </ul>
+</div>
+
+
+<div class="block block2 block-module">
+    <div class="block-title">
+        <span class="block-title-orange">航班信息</span>
+        <span class="block-module-action">
+            <button class="btns btn-ac-blue" id="del_select">删除所选</button> 
+            <button class="btns btn-ac-blue" id="del_unselect">删除未选</button> 
+        </span>
+    </div> 
+    <div class="row">
+        <div id="flight_info_grid">
+            <table class="grid-table">
+                <tr class="thead">
+                    <td><input type="checkbox" name="checkAll"/></td><td>航空公司</td><td>实际承运</td><td>航班号</td><td>机型</td><td>离港机场</td><td>到港机场</td><td>离港时间</td><td>到港时间</td><td>订座</td><td>燃油</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="flight_checkbox"/></td>
+                    <td>东方航空</td>
+                    <td>HO</td>
+                    <td>CZ3609</td>
+                    <td>空客A380</td>
+                    <td>上海浦东 PVG T3</td>
+                    <td>上海浦东 PEK T2</td>
+                    <td> 2013-06-22 20:35 </td>
+                    <td> 2013-06-22 23:25 </td>
+                    <td> HK </td>
+                    <td> 10 </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="flight_checkbox"/></td>
+                    <td>东方航空</td>
+                    <td>HO</td>
+                    <td>CZ3609</td>
+                    <td>空客A380</td>
+                    <td>上海浦东 PVG T3</td>
+                    <td>上海浦东 PEK T2</td>
+                    <td> 2013-06-22 20:35 </td>
+                    <td> 2013-06-22 23:25 </td>
+                    <td> HK </td>
+                    <td> 10 </td>
+                </tr>
+            </table> 
+        </div>
+    </div>
+</div>
+
+
+<div class="block block7 block-module">
+    <div class="block-title"><span class="block-title-orange">客票信息</span>
+        <span class="block-module-action">
+            <button class="btns btn-ac-blue">删除所选</button> 
+            <button class="btns btn-ac-blue">删除未选</button> 
+        </span>
+    </div> 
+    <div class="row">
+        <div id="passenger_info_grid">
+            <table class="grid-table">
+                <tr class="thead">
+                    <td><input type="checkbox" name=""/></td>
+                    <td>PNR</td>
+                    <td>票号</td>
+                    <td>票序号</td>
+                    <td>客票状态</td>
+                    <td>行程单号</td>
+                    <td>姓名</td>
+                    <td>乘客类型</td>
+                    <td>证件号码</td>
+                    <td>应收票款</td>
+                    <td>票款</td>
+                    <td>税款</td>
+                    <td>代理费</td>
+                    <td>奖励</td>
+                    <td>开票费</td>
+                    <td>供应商</td>
+                    <td>政策编号</td>
+                </tr> 
+                <tr>
+                    <td><input type="checkbox" name=""/></td>
+                    <td>HFJDD2</td>
+                    <td>781-2108936418</td>
+                    <td>C1</td>
+                    <td>已出票</td>
+                    <td>XXXX</td>
+                    <td>ZHANG/YU</td>
+                    <td>ADT</td>
+                    <td>A123456</td>
+                    <td>5500</td>
+                    <td>5000</td>
+                    <td>1100</td>
+                    <td>5%</td>
+                    <td>3%+100</td>
+                    <td>20</td>
+                    <td>不夜城</td>
+                    <td>2013071</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name=""/></td>
+                    <td>HFJDD2</td>
+                    <td>781-2108936418</td>
+                    <td>C1</td>
+                    <td>已出票</td>
+                    <td>XXXX</td>
+                    <td>ZHANG/YU</td>
+                    <td>ADT</td>
+                    <td>A123456</td>
+                    <td>5500</td>
+                    <td>5000</td>
+                    <td>1100</td>
+                    <td>5%</td>
+                    <td>3%+100</td>
+                    <td>20</td>
+                    <td>不夜城</td>
+                    <td>2013071</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="block block3 block-module">
+    <div class="block-title"><span>退改签规定</span>
+        <!--
+        <span class="block-module-action">
+        </span>
+        -->
+    </div>
+    <div>
+        <div class="row row3">
+            <span>改签费</span> CNY 100<br/><br/>
+            <span>NO SHOW</span> CNY 100<br/><br/>
+            <span>退票费</span> CNY500 <br/>
+        </div>
+    </div>
+</div>
+
+<div class="block block8 block-module clearfix">
+    <div class="block-title"><span>退票原因</span>
+        <!--
+        <span class="block-module-action">
+        </span>
+        -->
+    </div> 
+    <div class="row">
+        <table>
+            <tr>
+                <td><em>*</em>退票PNR</td>
+                <td><input type="text" style="width:130px;" readonly value="HGWFF"/></td>
+                <td colspan="2">
+                    <span class="prompt" style="color:#999999;border:1px solid #EFEFEF;display:block;width:295px;background-color:#FEFFEB;padding:5px;"><i></i>提示：填写已取消座位的退票PNR，部分退票时，需先分离出新PNR并取消座位，退票费以PNR取消时间为准</span> </td>
+            </tr>
+            <tr>
+                <td>请选择退票类型</td>
+                <td>
+                    <label><input id="" type="radio" name="ticket_type" />退票</label>
+                    &nbsp;&nbsp;&nbsp;
+                    <labeL><input id="" type="radio" name="ticket_type" />废票</label>
+                </td>
+                <td>退票原因</td>
+                <td>
+                    <select name="reason" style="width:166px;">
+                        <option value="当日作废" selected="">当日作废</option>
+                        <option value="按客规自愿退票">按客规自愿退票</option>
+                        <option value="民航原因（取消延误）">民航原因（取消延误）</option>
+                        <option value="客票换开">客票换开</option>
+                        <option value="因病全退">因病全退</option>
+                        <option value="其他原因">其他原因</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>附件</td>
+                <td colspan="3">
+                    <input id="" style="width:327px;" type="text" name="" value="选择文件" />
+                    <input class="button_gray" type="button" id="btn_upload" value="上传" />
+                </td>
+            </tr>
+            <tr>
+                <td>退票备注</td>
+                <td colspan="3">
+                    <textarea style="width:450px;" id="" name="" cols="60" rows="5"></textarea>
+                </td>
+            </tr>
+        </table>
+
+        <p>
+        注意事项：<br/>
+        1. 所有航司必须起飞2.5小时前提交废票。<br/>
+        2. PNR导入生成的订单，请先取消座位再提交申请<br/>
+        3. 非自愿退票必须上传证明。<br/>
+        4. 请仔细阅读退改签规定，若有误差以航空公司实际规定为准<br/>
+        5. 提交退废票申请前，请注意<em>核对您的“票号信息”</em>，实际退票以<em>“票号”</em>为准<br/>
+        <em>退票紧急电话：021-518116430</em><br/>
+</p>
+
+    </div>
+</div>
+
+<div class="block block4 block-module">
+    <div class="block-title"><span>请粘贴取消后完整的PNR信息</span>
+        <!--
+        <span class="block-module-action">
+        </span>
+        -->
+    </div>
+    <div>
+        <div class="row row3">
+            <textarea class="pnr-console" name="" style="width:98%;height:150px;overflow-y:scroll;padding:0px;">
+请用您的Eterm系统提取PNR内容。
+执行指令QTE:/航空公司，将其全部内容复制，保证准确，并粘贴到左边黑色输入框内。
+请确保导入的PNR中所含的航段是通过正常途径获得，任何通过非法手段获取低舱位的PNR，
+若导致产生ADM单，将由采购商承担。
+授权指令：RMK TJ AUTH OFFICE
+            </textarea>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+        
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+<script type="text/javascript">
+    $(function(){
+        $("#del_unselect").click(function(){
+            $("input[name='flight_checkbox']").each(function(index){
+                if(!$(this).prop("checked")){
+                    $(this).parents("tr").remove();
+                }
+             });
+        });
+
+        $("#del_select").click(function(){
+            $("input[name='flight_checkbox']").each(function(index){
+                if($(this).prop("checked")){
+                    $(this).parents("tr").remove();
+                }
+             });
+        });
+
+        $("#btn_upload").uploadify({
+            buttonClass   : "button_gray",
+            buttonText    : "浏 览",
+            width         : 71,
+            height        : 25,
+            uploader      : 'http://www.tz-local.com/test.php',
+            swf           : '/static/js/uploadify/uploadify.swf',
+            queueID       : 'queue',
+            removeTimeout :0,
+            onUploadSuccess:function(file,data,response){},
+            onUploadError:function(file,errorCode,errorMsg,errorString){alert(errorString);}
+        });
+    })
+</script>
+<script type="text/javascript" src="/运营商/child_orders.js"></script>
+</body>
+</html>
+

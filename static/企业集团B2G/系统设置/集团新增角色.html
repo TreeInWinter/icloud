@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 B2G 集团新增角色</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/b2g.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.b2g.css" />
+    <link rel="stylesheet" href="../../static/css/b2g_systemSet.css" media="all" />
+
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/b2g/common.js"></script>
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+    <!--[if lte IE 9]>
+    <script src="/static/js/html5.js"></script>
+    <![endif]-->
+  
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="top-line"></div>
+    <header class="main-header">
+        <div class="header-content">
+            <a class="logo" href="/">天地行 B2G</a>
+            <nav class="main-nav">
+                <ul class="clearfix">
+                    <li class="first"><a herf="#">行程预订</a></li>
+                    <li><a herf="#">行程管理</a></li>
+                    <li><a herf="#">数据服务</a></li>
+                    <li><a herf="#">创业维护</a></li>
+                    <li class="active"><a herf="#">系统设置</a></li>
+                </ul> 
+            </nav>
+        </div>
+    </header>
+    
+    <section class="main-body clearfix">
+        <div class="main-body-content">
+            <div class="block2" style="margin-bottom:0">
+                <div class="blockTit clearfix">
+                   <h2>新增角色</h2>
+                </div>
+                <div class="blockEdit clearfix">
+                   <table class="roleInfo">
+                     <colgroup>
+                      <col width="120px">
+                      <col width="900px">
+                      <col width="100px">
+                      </colgroup>
+                     <tbody>
+                       <tr>
+                         <th>角色名称：</th>
+                         <td colspan="2">
+                         <input type="text" name="rolename" id="" style="width:235px;" placeholder="">                        </td>
+                       </tr>
+                       <tr>
+                         <th>描述：</th>
+                         <td colspan="2">
+                         <textarea name="roledesc" id="" class="roleArea"></textarea>&nbsp;<span>0/50</span>                         </td>
+                       </tr>
+                       <tr>
+                         <th>适用范围：</th>
+                         <td colspan="2">
+                          <span class="rangeFont">苏宁易购</span>
+                         </td>
+                       </tr>
+                       
+                     </tbody>
+                     
+                   </table>
+                  
+                   
+                </div>
+               
+                
+            </div>
+            
+         <!-- 角色 内容 -->
+           <div class="block-role">
+             <!-- 悬停条 -->
+             <div class="roleTitBar clearfix">
+               <ul>
+                 <li class="current">
+                 <span class="usercheck halfchecked">
+                 <em></em>
+                 <input class="hidden_input" type="checkbox" name="bx" id="">
+                 </span>
+                 <label>行程预定</label>
+                 </li>
+                 <li>
+                 <span class="usercheck fullchecked">
+                 <em></em>
+                 <input class="hidden_input" type="checkbox" name="qx" id="">
+                 </span>
+                 <label>行程管理</label>
+                 </li>
+                 <li>
+                 <span class="usercheck halfchecked">
+                 <em></em>
+                 <input class="hidden_input" type="checkbox" name="wx" id="">
+                 </span>
+                 <label>数据服务</label>
+                 </li>
+                 <li>
+                 <span class="usercheck">
+                 <em></em>
+                 <input class="hidden_input" type="checkbox" name="wx" id="">
+                 </span>
+                 <label>企业维护</label>
+                 </li>
+                 <li>
+                  <span class="usercheck">
+                 <em></em>
+                 <input class="hidden_input" type="checkbox" name="wx" id="">
+                 </span>
+                 <label>系统设置</label>
+                 </li>
+               </ul>
+             </div>
+             <div class="roleItem">
+             <table>
+               <colgroup>
+                  <col width="143px">
+                  <col width="144px">
+                  <col width="661px">
+                  <col width="250px">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td>
+                  <span class="usercheck halfchecked">
+                  <em></em>
+                  <input class="hidden_input" type="checkbox" name="wx" id="">
+                  </span>
+                  <label>平台建单</label>
+                  </td>
+                  <td colspan="2" class="roleItemSet">
+                   <ul>
+                     <li><span class="sel">白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                   </ul>
+                  </td>
+                  <td class="roleItemSel last" style="padding-left:0">
+                    <span><input type="radio" name="ptjd" id=""><label>公司</label></span>
+                    <span><input type="radio" name="ptjd" id=""><label>部门</label></span>
+                    <span><input type="radio" name="ptjd" id="" checked><label>个人</label></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td rowspan="7">
+                  <span class="usercheck">
+                  <em></em>
+                  <input class="hidden_input" type="checkbox" name="wx" id="">
+                  </span>
+                  <label>订单管理</label>
+                  </td>
+                  <td>
+                  <span class="usercheck fullchecked">
+                  <em></em>
+                  <input class="hidden_input" type="checkbox" name="wx" id="">
+                  </span>
+                  <label>平台建单</label>
+                  </td>
+                  <td class="roleItemSet">
+                    <ul>
+                     <li><span class="sel">白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>导出Excel</span></li>
+                   </ul>
+                  </td>
+                  <td class="roleItemSel last" style="padding-left:0">
+                    <span><input type="radio" name="ddptjd" id=""><label>公司</label></span>
+                    <span><input type="radio" name="ddptjd" id=""><label>部门</label></span>
+                    <span><input type="radio" name="ddptjd" id="" checked><label>个人</label></span>
+                  </td>
+                </tr>
+                 <tr>
+                  <td>
+                  <span class="usercheck halfchecked">
+                  <em></em>
+                  <input class="hidden_input" type="checkbox" name="wx" id="">
+                  </span>
+                  <label>客票明细查询</label>
+                  </td>
+                  <td class="roleItemSet">
+                     <ul>
+                     <li><span>白屏预订</span></li>
+                     <li><span class="sel">白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>导出Excel</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                   </ul>
+                  </td>
+                  <td class="roleItemSel last" style="padding-left:0">
+                    <span><input type="radio" name="kpmxcx" id=""><label>公司</label></span>
+                    <span><input type="radio" name="kpmxcx" id=""><label>部门</label></span>
+                    <span><input type="radio" name="kpmxcx" id="" checked><label>个人</label></span>
+                  </td>
+                </tr>
+                 <tr>
+                  <td>
+                  <span class="usercheck halfchecked">
+                  <em></em>
+                  <input class="hidden_input" type="checkbox" name="wx" id="">
+                  </span>
+                  <label>审核管理</label>
+                  </td>
+                  <td class="roleItemSet">
+                   <ul>
+                     <li><span>白屏预订</span></li>
+                     <li><span class="sel">白屏预订</span></li>
+                     <li><span class="sel">导出Excel</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                   </ul>
+                  </td>
+                  <td class="roleItemSel last" style="padding-left:0">
+                    <span><input type="radio" name="shgl" id=""><label>公司</label></span>
+                    <span><input type="radio" name="shgl" id=""><label>部门</label></span>
+                    <span><input type="radio" name="shgl" id="" checked><label>个人</label></span>
+                  </td>
+                </tr>
+                 <tr>
+                  <td>
+                  <span class="usercheck">
+                  <em></em>
+                  <input class="hidden_input" type="checkbox" name="wx" id="">
+                  </span>
+                  <label>出票管理</label>
+                  </td>
+                  <td class="roleItemSet">
+                    <ul>
+                     <li><span>查询</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>此处文字比较多</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                   </ul>
+                  </td>
+                  <td class="roleItemSel last" style="padding-left:0">
+                    <span><input type="radio" name="cpgl" id=""><label>公司</label></span>
+                    <span><input type="radio" name="cpgl" id=""><label>部门</label></span>
+                    <span><input type="radio" name="cpgl" id="" checked><label>个人</label></span>
+                  </td>
+                </tr>
+                 <tr>
+                  <td>
+                  <span class="usercheck fullchecked">
+                  <em></em>
+                  <input class="hidden_input" type="checkbox" name="wx" id="">
+                  </span>
+                  <label>改签处理</label>
+                  </td>
+                  <td class="roleItemSet">
+                    <ul>
+                     <li><span class="sel">查询</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                   </ul>
+                  </td>
+                  <td class="roleItemSel last" style="padding-left:0">
+                    <span><input type="radio" name="gqgl" id=""><label>公司</label></span>
+                    <span><input type="radio" name="gqgl" id=""><label>部门</label></span>
+                    <span><input type="radio" name="gqgl" id="" checked><label>个人</label></span>
+                  </td>
+                </tr>
+                 <tr>
+                  <td>
+                  <span class="usercheck fullchecked">
+                  <em></em>
+                  <input class="hidden_input" type="checkbox" name="wx" id="">
+                  </span>
+                  <label>退票管理</label>
+                  </td>
+                  <td class="roleItemSet">
+                    <ul>
+                     <li><span>查询</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                   </ul>
+                  </td>
+                  <td class="roleItemSel last" style="padding-left:0">
+                    <span><input type="radio" name="tpgj" id=""><label>公司</label></span>
+                    <span><input type="radio" name="tpgj" id=""><label>部门</label></span>
+                    <span><input type="radio" name="tpgj" id="" checked><label>个人</label></span>
+                  </td>
+                </tr>
+                 <tr>
+                  <td>
+                  <span class="usercheck fullchecked">
+                  <em></em>
+                  <input class="hidden_input" type="checkbox" name="wx" id="">
+                  </span>
+                  <label>废票管理</label>
+                  </td>
+                  <td class="roleItemSet">
+                     <ul>
+                     <li><span>白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                     <li><span>白屏预订</span></li>
+                    </ul>
+                  </td>
+                  <td class="roleItemSel last" style="padding-left:0">
+                    <span><input type="radio" name="fpgj" id=""><label>公司</label></span>
+                    <span><input type="radio" name="fpgj" id=""><label>部门</label></span>
+                    <span><input type="radio" name="fpgj" id="" checked><label>个人</label></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td rowspan="2">
+                  <span class="usercheck">
+                  <em></em>
+                  <input class="hidden_input" type="checkbox" name="wx" id="">
+                  </span>
+                  <label>帐户管理</label>
+                  </td>
+                  <td>
+                  <span class="usercheck fullchecked">
+                  <em></em>
+                  <input class="hidden_input" type="checkbox" name="wx" id="">
+                  </span>
+                  <label>订单管理</label>
+                  </td>
+                  <td class="roleItemSet">
+                     <ul>
+                     <li><span>新增扣款</span></li>
+                     <li><span>新增扣款</span></li>
+                     <li><span>白屏预订</span></li>
+                    </ul>
+                  </td>
+                  <td class="roleItemSel last" style="padding-left:0">
+                    <span><input type="radio" name="ddgj" id=""><label>公司</label></span>
+                    <span><input type="radio" name="ddgj" id=""><label>部门</label></span>
+                    <span><input type="radio" name="ddgj" id="" checked><label>个人</label></span>
+                  </td>
+                </tr>
+                 <tr>
+                  <td>
+                  <span class="usercheck fullchecked">
+                  <em></em>
+                  <input class="hidden_input" type="checkbox" name="wx" id="">
+                  </span>
+                  <label>废票管理</label>
+                  </td>
+                  <td class="roleItemSet">
+                     <ul>
+                     <li><span>新增充值</span></li>
+                     </ul>
+                  </td>
+                  <td class="roleItemSel last" style="padding-left:0">
+                    <span><input type="radio" name="cz" id=""><label>公司</label></span>
+                    <span><input type="radio" name="cz" id=""><label>部门</label></span>
+                    <span><input type="radio" name="cz" id="" checked><label>个人</label></span>
+                  </td>
+                </tr>
+              </tbody>
+             </table> 
+             </div>
+             
+           <div class="buttonbox" style="padding:25px 0 30px 0">
+            <button type="button" class="commonBtn lightRedBtn btnfontStyle" style="margin-right:12px">确 定</button>
+            <button type="button" class="commonBtn grayBtn btnfontStyle close">取 消</button>
+           </div>
+             
+                  
+           </div>
+            
+        </div>
+    </section>
+           
+    
+    
+    <footer class="main-footer">
+        <p class="copyright">Copyright &copy; 2013 天地行 All Rights Reserved.     沪ICP备08101503号</p>
+    </footer>
+</div>
+
+  <script>
+
+        $(function(){
+			
+			$(".roleTitBar").fixedBar();
+			
+        });
+    </script>
+</body>
+</html>
+

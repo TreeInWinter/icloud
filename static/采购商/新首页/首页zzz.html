@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 国内-首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.store.css" />
+    <link rel="stylesheet" href="/static/css/toolkit.css"/>
+    <link rel="stylesheet" href="/static/css/store_v2/store.css"/>
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+    <script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="customerCenterContainer off">
+    <div class="customerCenterButton">
+        <div>用户中心</div>
+    </div>
+    <div class="customerCenterItemsContainer">
+        <div class="customerCenterItemsPanel">
+            <i></i>
+            <ul>
+                <li class="cc_orderManagerment"><div>订单管理</div></li>
+                <li class="cc_e-wallet"><div>电子钱包</div></li>
+                <li class="cc_statisticalReport"><div>统计报表</div></li>
+                <li class="cc_customerService"><div>客户服务</div></li>
+                <li class="cc_notice"><div>公告</div></li>
+                <li class="cc_message"><div>消息</div></li>
+                <li class="cc_onlineService"><div>在线客服</div></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="headBG">
+    <header class="main-header">
+        <a class="logo" href="/"><h1>天地行</h1></a>
+        <nav class="main-nav">
+            <ul class="clearfix">
+                <li class="active"><a herf="#">国内机票</a></li>
+                <li><a herf="#">国际机票</a></li>
+                <li><a herf="#">保险</a></li>
+                <li><a herf="#">酒店</a></li>
+                <li><a herf="#">机 + 酒</a></li>
+                <li><a herf="#">旅游</a></li>
+                <li><a herf="#">订单<i class="orderNum">10</i> </a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+<div class="internalSearchingBG clearfix">
+    <div class="annPrompt">
+        <a href="#" style="top: 0px;">免费机票大作战 第一波甜蜜来袭2！</a>
+        <a href="#" style="top: 0px;">免费机票大作战 第一波甜蜜来袭3！</a>
+        <a href="#" style="top: 0px;">免费机票大作战 第一波甜蜜来袭4！</a>
+        <a href="#" style="top: 0px;">免费机票大作战 第一波甜蜜来袭1！</a>
+    </div>
+    <script>
+        $(function(){
+            var slideMsgEve=setInterval(slideMessage,3000);
+            $(".annPrompt").hover(function(){
+                        clearInterval(slideMsgEve);
+                    },
+                    function(){
+                        slideMsgEve=setInterval(slideMessage,3000);
+                    }
+            );
+
+            function slideMessage()
+            {
+                $(".annPrompt a").animate({"top":"-22px"},"1000")
+                setTimeout(function(){
+                    $(".annPrompt").append($(".annPrompt a:first").remove());
+                    $(".annPrompt a").css({"top":"0"});
+                },1200);
+            }
+        })
+    </script>
+</div>
+<div class="main-wrapper">
+<footer class="main-footer">
+    <div class="footerContainer">
+        <div class="xssl bottomQuickNav">
+            <i class="ico"></i>
+
+            <h3>新手上路</h3>
+            <ul>
+                <li>用户手册</li>
+                <li>QQ客服</li>
+                <li>常见问题</li>
+            </ul>
+        </div>
+        <div class="zffs bottomQuickNav">
+            <i class="ico"></i>
+
+            <h3>支付方式</h3>
+            <ul>
+                <li>支付宝支付</li>
+                <li>汇付支付</li>
+                <li>财付通支付</li>
+            </ul>
+        </div>
+        <div class="sjfw bottomQuickNav">
+            <i class="ico"></i>
+
+            <h3>商家服务</h3>
+            <ul>
+                <li>客服电话</li>
+                <li>航司电话</li>
+                <li>出票时间</li>
+            </ul>
+        </div>
+        <div class="gywm bottomQuickNav">
+            <i class="ico"></i>
+
+            <h3>关于我们</h3>
+            <ul>
+                <li>天地行介绍</li>
+                <li>联系我们</li>
+            </ul>
+        </div>
+        <div class="kfrx bottomQuickNav last">
+            <i class="ico"></i>
+            <h4>
+                客服热线<br/>
+
+                <h2>400-720-6666</h2>
+            </h4>
+        </div>
+        <center class="copyright clearfix">
+            Copyright &copy; 2012 天地行 All Rights Reserved. 沪ICP备08101503号
+        </center>
+    </div>
+</footer>
+<div class="partnerContainer">
+    合作伙伴：
+    <i class="travelsky partnerIcon"></i>
+    <i class="elong partnerIcon"></i>
+    <i class="qunar partnerIcon"></i>
+    <i class="ctrip partnerIcon"></i>
+    <i class="gta partnerIcon"></i>
+</div>
+</div>
+
+<script>
+    $(function () {
+        $(".airWay li").each(function (index) {
+            $(this).click(function () {
+                $(".salePriceFlight .flightInfoList").hide();
+                $(".salePriceFlight .flightInfoList:eq(" + index + ")").show();
+                $(".airWay li").removeClass("current");
+                $(this).addClass("current");
+            });
+
+        });
+        $(".customerCenterButton").hover(
+                function(){
+                    $(this).animate(
+                            {width:"100%"},
+                            200,
+                            function(){$(".customerCenterContainer").addClass("expanded");}
+                    )},
+                function(){
+                    if($(".customerCenterContainer").hasClass("off")){
+                        $(this).animate(
+                                {width:"90px"},
+                                200,
+                                function(){
+                                    $(".customerCenterContainer").removeClass("expanded");
+                                }
+                        )
+                    }
+                }
+        )
+        $(".customerCenterButton").click(function(){
+            if(!$(".customerCenterContainer").hasClass("off"))
+            {
+                $(".customerCenterContainer").addClass("off");
+                $(".customerCenterItemsPanel").hide();
+                $(this).animate({width:"90px"},200,function(){$(".customerCenterContainer").removeClass("expanded");})
+                return false;
+            }
+            $(".customerCenterButton").animate({width:"100%"},"fast");
+            $(".customerCenterItemsPanel").slideDown("fast");
+            $(".customerCenterContainer").removeClass("off");
+
+        })
+    });
+</script>
+
+</body>
+</html>

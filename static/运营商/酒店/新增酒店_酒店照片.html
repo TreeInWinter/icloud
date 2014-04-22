@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html" charset="utf-8">
+    <title>酒店 酒店维护 新增酒店 酒店照片</title>
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/uploadify/jquery.uploadify.min.js"></script>
+    <script type="text/javascript" src="/static/js/kendo.web.js"></script>
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/b2b.css">
+    <link rel="stylesheet" href="/static/js/uploadify/uploadify.css">
+    <link rel="stylesheet" href="/static/css/hotel.css">
+    <style type="text/css">
+        .btnUpload{
+            border-radius:0;
+            border: 0;
+            width:120px;
+            height:34px;
+        }
+        #SWFUpload_0{left:0;top:0}
+    </style>
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+</head>
+<body style="background:#ffffff">
+
+<div id="queue">
+    <div style="width:197px;height:197px;text-align:center;background:#EBEBEB;margin:5px;float:left">
+        <div style="padding-top:50px">
+            <p style="padding-left:37px"><input type="file" id="btn_upload" name="btn_upload" multiple="true"></p>
+            <p><b><span class="important">*</span>只支持JPG、PNG格式图片文件</b></p>
+            <p>文件大小不超过2MB</p>
+        </div>
+    </div>
+</div>
+<div class="clearfix" style="border-top:1px dashed #cccccc;text-align:right">
+    <a href="javascript:;" class="button_1_2">保&nbsp;存</a>
+    <a href="javascript:;" class="button_2_2 close">取&nbsp;消</a>
+</div>
+<script type="text/x-kendo-template" id="picTemplate">
+    <div style="float:left;">
+        <p>
+            <img src="#= name #" alt="">
+        </p>
+        <a href="">设为默认</a>
+        <a href="">删除</a>
+    </div>
+</script>
+
+<script type="text/javascript">
+    $(function(){
+        var picTemplate=kendo.template($("#picTemplate").html());
+        $("#btn_upload").uploadify({
+            buttonImage   : '/static/images/btnUpload.gif',
+            button_image_url :'/static/images/btnUpload.gif',
+            height        : 34,
+            buttonClass   : 'btnUpload',
+            uploader      : 'test.html',
+            swf           : '/static/js/uploadify/uploadify.swf',
+            queueID       : 'queue',
+            removeTimeout :0,
+            itemTemplate  : '<div id="${fileID}" class="uploadify-queue-item" style="float:left;width:197px;height:197px;background:#EBEBEB;padding:0;margin:5px">\
+								<div class="uploadify-progress" style="margin-top:89px">\
+									<div class="uploadify-progress-bar" style="height:20px "><!--Progress Bar--></div>\
+								</div>\
+                			</div>',
+            onUploadSuccess:function(file,data,response){$("#queue").append(picTemplate({name:"15145042443.png"}))},
+            onUploadError:function(file,errorCode,errorMsg,errorString){alert(errorString);}
+        });
+        $("a.close").click(function(){
+            window.parent.$("span.k-i-close").trigger("click")
+        })
+    })
+</script>
+</body>
+</html>

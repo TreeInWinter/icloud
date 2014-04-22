@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 B2G 行程管理 我预定的订单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/b2g.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.b2g.css" />
+    <link rel="stylesheet" href="../../static/css/b2g_journey.css" media="all" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="..//static/js/b2g/common.js"></script>
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+    <!--[if lte IE 9]>
+    <script src="/static/js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="top-line"></div>
+    <header class="main-header">
+        <div class="header-content">
+            <a class="logo" href="/">天地行 B2G</a>
+            <nav class="main-nav">
+                <ul class="clearfix">
+                    <li class="first active"><a herf="#">行程预订</a></li>
+                    <li><a herf="#">行程管理</a></li>
+                    <li><a herf="#">数据服务</a></li>
+                    <li><a herf="#">创业维护</a></li>
+                    <li><a herf="#">系统设置</a></li>
+                </ul> 
+            </nav>
+        </div>
+    </header>
+   
+    <div class="header-bar clearfix">
+       <div class="header-bar-content block-order">
+            <div class="block-orderBar">
+                <span>
+                    <a href="javascript:void(0);" class="btn-color btn-color2">我预定的订单</a>&nbsp;<a href="javascript:void(0);" class="btn-color btn-color1">我审批的订单</a>&nbsp;<a href="javascript:void(0);" class="btn-color btn-color1">其他订单</a>
+                </span>
+            </div>
+        </div>
+    </div>
+    
+    <section class="main-body clearfix">
+        <div class="main-body-content"> <!--body 开始-->
+        	 <!--<div class="orderBtn">
+                  <button type="button" class="commonBtn lightRedBtn">我预定的订单</button>
+                  <button type="button" class="commonBtn lightBlueButton">我审批的订单</button> 
+             </div>-->
+             <div class="hoverCont">  <!--悬停开始-->
+                    <div class="queryList">
+                        <table>
+                             <colgroup>
+                                  <col width="105px"/>
+                                  <col width="210px"/>
+                                  <col width="60px"/>
+                                  <col width="210px"/>
+                                  <col width="75px"/>
+                                  <col width="400px"/>
+                                  <col width="100px"/>
+                             </colgroup>
+                             <tr>
+                                 <th>行程订单编号：</th>
+                                 <td><input type="text"/></td>
+                                 <th>差旅人：</th>
+                                 <td><input type="text"/></td>
+                                 <th>订单状态：</th>
+                                 <td>
+                                     <select data-role="dropdownlist" style="width:160px;">
+                                          <option>全部</option>
+                                          <option>待审批</option>
+                                          <option>待付款</option>
+                                          <option>待确认</option>
+                                          <option>已完成</option>
+                                          <option>已取消</option>
+                                          <option>返回/失效</option>
+                                          <option>部分退回/部分失效</option>
+                                     </select>
+                                 </td>
+                                 <td>
+                                     <button type="button" class="commonBtn orangeBtn">查  询</button>
+                                 </td>
+                             </tr>
+                        </table>
+                    </div> 
+                    <table class="orderInfoTitle">
+                           <colgroup>
+                                  <col width="484px"/>
+                                  <col width="94px"/>
+                                  <col width="90px"/>
+                                  <col width="112px"/>
+                                  <col width="80px"/>
+                                  <col width="87px"/>
+                                  <col width="102px"/>
+                          </colgroup> 
+                          <tr>
+                              <th style="text-align:left;"><b style="margin-left:100px;">行程订单信息</b></th>
+                              <th>差旅人</th>
+                              <th>订单金额</th>
+                              <th>差旅目的</th>
+                              <th>创建时间</th>
+                              <th>状态</th>
+                              <th>操作</th>
+                          </tr>
+                    </table>
+             </div>  <!--悬停结束-->
+             
+             <div class="infoListCont">  <!--订单信息开始-->
+                     <div class="orderInfoList"> <!-- 第一个list 开始-->
+                          <h3 class="numInfoTitle">行程订单编号：XC19830610 &nbsp;&nbsp; 因公出行</h3>
+                          <table class="journeyOrderList">
+                                <colgroup>
+                                       <col width="475px"/>
+                                       <col width="103px"/>
+                                       <col width="98px"/>
+                                       <col width="131px"/>
+                                       <col width="83px"/>
+                                       <col width="93px"/>
+                                       <col width="108px"/>
+                                </colgroup>
+                                <tr>
+                                    <td>
+                                        <ul class="numberInfo">
+                                            <li class="bottomDashed">
+                                                <label class="goAndBack">
+                                                     <i>去</i><br/>
+                                                     <em class="goArrow"></em>
+                                                </label>
+                                                <label>
+                                                    <i class="flightImg"></i>
+                                                    <b>胡志明市<em>&nbsp;—&nbsp;</em> <i class="transfer oneTransfer">1程中转</i> <em>&nbsp;—&nbsp;</em> <i class="fixWidth">埃塞俄比亚</i></b>
+													<span class="shinppingInfo">
+													<em class="flightWidth">阿联酋联合际航空 CZ6437</em>
+													<em class="shippingSpace">经济舱</em>
+                                                    </span>
+                                                </label>
+                                            </li>
+                                            <li class="topLine">
+                                                <label class="goAndBack">
+                                                     <div>返</div>
+                                                     <em class="backArrow"></em>
+                                                </label>
+                                                <label>
+                                                    <b>上海<em>&nbsp;—&nbsp;</em> <i class="transfer twiceTransfer">2程中转</i> <em>&nbsp;—&nbsp;</em> 北京</b>
+                                                    
+													<span class="shinppingInfo">
+													<em class="flightWidth">南方航空 CZ6437</em>
+													<em class="shippingSpace">经济舱</em>
+                                                    </span>
+                                                </label>
+                                               
+                                            </li>
+                                            <li>
+                                                <label>
+                                                    <i class="hotelImg"></i>
+                                                    <b style="min-width:308px;">靖江之星（北京金仙桥店）</b>
+													<span class="shinppingInfo">
+													<em class="shippingSpace">经济舱</em>
+                                                    </span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td class="halfGray minWidth">
+                                        <div><em>潘小美</em></div>
+                                        <div><em>钱多多</em></div>
+                                        <div><em>唐笑笑在</em> <i class="face"></i></div>
+                                        <div><em>依依</em></div>
+                                        <div><em>朱竹亚</em> <i class="disobey"></i></div>
+                                        <div><em>....</em></div>
+                                    </td>
+                                    <td>
+                                        <div>￥<b class="priceFont">1368</b></div>
+                                        <div>授信支付（月结）</div>
+                                    </td>
+                                    <td>
+                                        <div style="color:#333333;">因公开会</div>
+                                        <div>公司在北京召开经理会，通行活动在北京召开经理会公，此处30个字</div>
+                                    </td>
+                                    <td>
+                                        <div>2014-01-04</div>
+                                        <div>14:11</div>
+                                    </td>
+                                    <td><b class="orderStates">部分退回/部分失效</b></td>
+                                    <td style="border-right:0;">
+                                         <div>
+                                             <a href="javascript:void(0);">查看</a>
+                                             <a href="javascript:void(0);" class="orderLastA ac-cancel">取消订单</a>
+                                         </div>
+                                    </td>
+                                </tr>                                
+                          </table>
+                     </div> <!-- 第一个list 结束-->
+                      
+                     <div class="orderInfoList"> <!-- 第二个list 开始-->
+                          <h3 class="numInfoTitle">行程订单编号：XC19830610 &nbsp;&nbsp; 因公出行</h3>
+                          <table class="journeyOrderList">
+                                <colgroup>
+                                       <col width="475px"/>
+                                       <col width="103px"/>
+                                       <col width="98px"/>
+                                       <col width="131px"/>
+                                       <col width="83px"/>
+                                       <col width="93px"/>
+                                       <col width="108px"/>
+                                </colgroup>
+                                <tr>
+                                    <td>
+                                        <ul class="numberInfo">
+                                            <li>
+                                                <label>
+                                                    <i class="flightImg"></i>
+                                                    <b>上海<em>&nbsp;—&nbsp;</em> <i class="transfer twiceTransfer">2程中转</i> <em>&nbsp;—&nbsp;</em> 乌兰巴托</b>
+													<span class="shinppingInfo">
+													<em class="flightWidth">南方航空 CZ6437</em>
+													<em class="shippingSpace">经济舱</em>
+                                                    </span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                                                    <b>上海<em>&nbsp;—&nbsp;</em> <i class="transfer oneTransfer">1程中转</i> <em>&nbsp;—&nbsp;</em> 北京</b>
+													<span class="shinppingInfo">
+													<em class="flightWidth">南方航空 CZ6437</em>
+													<em class="shippingSpace">经济舱</em>
+                                                    </span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                                                    <i class="hotelImg"></i>
+                                                    <b style="min-width:308px;">靖江之星（北京金仙桥店）</b>
+													<span class="shinppingInfo">
+													<em class="shippingSpace">经济舱</em>
+                                                    </span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td class="halfGray minWidth">
+                                        <div><em>潘小美</em></div>
+                                        <div><em>钱多多</em></div>
+                                        <div><em>唐笑笑在</em></div>
+                                        <div><em>依依</em></div>
+                                        <div><em>朱竹亚</em></div>
+                                        <div><em>....</em></div>
+                                    </td>
+                                    <td>
+                                        <div>￥<b class="priceFont">1368</b></div>
+                                    </td>
+                                    <td>
+                                        <div style="color:#333333;">因公开会</div>
+                                        <div>公司在北京召开经理会，通行活动在北京召开经理会公，此处30个字</div>
+                                    </td>
+                                    <td>
+                                        <div>2014-01-04</div>
+                                        <div>14:11</div>
+                                    </td>
+                                    <td><b class="orderStates">待付款</b></td>
+                                    <td style="border-right:0;">
+                                         <div>
+                                             <a href="javascript:void(0);">查看</a>
+                                             <a href="javascript:void(0);" class="orderLastA ac-cancel">取消订单</a>
+                                         </div>
+                                         <div class="payBtn">
+                                              <button type="button" class="commonBtn lightRedBtn">支  付</button>
+                                         </div>
+                                    </td>
+                                </tr>                                
+                          </table>
+                     </div> <!-- 第二个list 结束-->
+                     
+                     <div class="orderInfoList"> <!-- 第三个list 开始-->
+                          <h3 class="numInfoTitle">行程订单编号：XC19830610 &nbsp;&nbsp; 因公出行</h3>
+                          <table class="journeyOrderList">
+                               <colgroup>
+                                       <col width="475px"/>
+                                       <col width="103px"/>
+                                       <col width="98px"/>
+                                       <col width="131px"/>
+                                       <col width="83px"/>
+                                       <col width="93px"/>
+                                       <col width="108px"/>
+                                </colgroup>
+                                <tr>
+                                    <td>
+                                        <ul class="numberInfo">
+                                            <li>
+                                                <label>
+                                                    <i class="flightImg"></i>
+                                                    <b>上海 <em>&nbsp;—&nbsp;</em> 乌兰巴托</b>
+													<span class="shinppingInfo">
+													<em class="flightWidth">南方航空 CZ6437</em>
+													<em class="shippingSpace">经济舱</em>
+                                                    </span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                                                    <b>上海<em>&nbsp;—&nbsp;</em> <i class="transfer twiceTransfer">2程中转</i> <em>&nbsp;—&nbsp;</em> 北京</b>
+													<span class="shinppingInfo">
+													<em class="flightWidth">南方航空 CZ6437</em>
+													<em class="shippingSpace">经济舱</em>
+                                                    </span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td class="halfGray minWidth">
+                                        <div><em>潘小美</em></div>
+                                        <div><em>钱多多</em></div>
+                                        <div><em>唐笑笑在</em> <i class="face"></i></div>
+                                        <div><em>依依</em></div>
+                                        <div><em>朱竹亚</em> <i class="disobey"></i></div>
+                                        <div><em>....</em></div>
+                                    </td>
+                                    <td>
+                                        <div>￥<b class="priceFont">1368</b></div>
+                                    </td>
+                                    <td>
+                                        <div style="color:#333333;">因公开会</div>
+                                        <div>公司在北京召开经理会，通行活动在北京召开经理会公，此处30个字</div>
+                                    </td>
+                                    <td>
+                                        <div>2014-01-04</div>
+                                        <div>14:11</div>
+                                    </td>
+                                    <td><b class="orderStates grayFont">退回/失效</b></td>
+                                    <td style="border-right:0;">
+                                         <div>
+                                             <a href="javascript:void(0);">查看</a>
+                                             <a href="javascript:void(0);" class="orderLastA ac-cancel">取消订单</a>
+                                         </div>
+                                    </td>
+                                </tr>                                
+                          </table>
+                     </div> <!-- 第三个list 结束-->
+                     
+                     <div class="orderInfoList"> <!-- 第四个list 开始-->
+                          <h3 class="numInfoTitle">行程订单编号：XC19830610 &nbsp;&nbsp; 因公出行</h3>
+                          <table class="journeyOrderList">
+                                <colgroup>
+                                       <col width="475px"/>
+                                       <col width="103px"/>
+                                       <col width="98px"/>
+                                       <col width="131px"/>
+                                       <col width="83px"/>
+                                       <col width="93px"/>
+                                       <col width="108px"/>
+                                </colgroup>
+                                <tr>
+                                    <td>
+                                        <ul class="numberInfo">
+                                            <li>
+                                                <label>
+                                                    <i class="flightImg"></i>
+                                                    <b>上海<em>&nbsp;—&nbsp;</em> <i class="transfer twiceTransfer">2程中转</i> <em>&nbsp;—&nbsp;</em> 乌兰巴托</b>
+													<span class="shinppingInfo">
+													<em class="flightWidth">南方航空 CZ6437</em>
+													<em class="shippingSpace">经济舱</em>
+                                                    </span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                                                    <b>上海<em>&nbsp;—&nbsp;</em> <i class="transfer oneTransfer">1程中转</i> <em>&nbsp;—&nbsp;</em> 北京</b>
+													<span class="shinppingInfo">
+													<em class="flightWidth">南方航空 CZ6437</em>
+													<em class="shippingSpace">经济舱</em>
+                                                    </span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                                                    <i class="hotelImg"></i>
+                                                    <b style="min-width:308px;">靖江之星（北京金仙桥店）</b>
+													<span class="shinppingInfo">
+													<em class="shippingSpace">经济舱</em>
+                                                    </span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td class="halfGray minWidth">
+                                        <div><em>潘小美</em></div>
+                                        <div><em>钱多多</em></div>
+                                        <div><em>唐笑笑在</em></div>
+                                        <div><em>依依</em></div>
+                                        <div><em>朱竹亚</em></div>
+                                        <div><em>....</em></div>
+                                    </td>
+                                    <td>
+                                        <div>￥<b class="priceFont">1368</b></div>
+                                    </td>
+                                    <td>
+                                        <div style="color:#333333;">因公开会</div>
+                                        <div>公司在北京召开经理会，通行活动在北京召开经理会公，此处30个字</div>
+                                    </td>
+                                    <td>
+                                        <div>2014-01-04</div>
+                                        <div>14:11</div>
+                                    </td>
+                                    <td><b class="orderStates orangeFont">部分退回/部分失效</b></td>
+                                    <td style="border-right:0;">
+                                         <div>
+                                             <a href="javascript:void(0);">查看</a>
+                                             <a href="javascript:void(0);" class="orderLastA ac-cancel">取消订单</a>
+                                         </div>
+                                         <div class="placeOrderBtn">
+                                              <button type="button" class="commonBtn lightBlueBtn">继续下单</button>
+                                         </div>
+                                    </td>
+                                </tr>                                
+                          </table>
+                     </div> <!-- 第四个list 结束--> 
+                     
+                     <div class="orderInfoList"> <!-- 第五个list 开始-->
+                          <h3 class="numInfoTitle">行程订单编号：XC19830610 &nbsp;&nbsp; 因公出行</h3>
+                          <table class="journeyOrderList">
+                                <colgroup>
+                                       <col width="475px"/>
+                                       <col width="103px"/>
+                                       <col width="98px"/>
+                                       <col width="131px"/>
+                                       <col width="83px"/>
+                                       <col width="93px"/>
+                                       <col width="108px"/>
+                                </colgroup>
+                                <tr>
+                                    <td>
+                                        <ul class="numberInfo">
+                                            <li>
+                                                <label>
+                                                    <i class="flightImg"></i>
+                                                    <b>上海<em>&nbsp;—&nbsp;</em> <i class="transfer oneTransfer">1程中转</i> <em>&nbsp;—&nbsp;</em> 乌兰巴托</b>
+													<span class="shinppingInfo">
+													<em class="flightWidth">南方航空 CZ6437</em>
+													<em class="shippingSpace">经济舱</em>
+                                                    </span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                                                    <b>上海<em>&nbsp;—&nbsp;</em> <i class="transfer twiceTransfer">2程中转</i> <em>&nbsp;—&nbsp;</em> 北京</b>
+													<span class="shinppingInfo">
+													<em class="flightWidth">南方航空 CZ6437</em>
+													<em class="shippingSpace">经济舱</em>
+                                                    </span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td class="halfGray minWidth">
+                                        <div><em>潘小美</em></div>
+                                        <div><em>钱多多</em></div>
+                                        <div><em>唐笑笑在</em> <i class="face"></i></div>
+                                        <div><em>依依</em></div>
+                                        <div><em>朱竹亚</em> <i class="disobey"></i></div>
+                                        <div><em>....</em></div>
+                                    </td>
+                                    <td>
+                                        <div>￥<b class="priceFont">1368</b></div>
+                                    </td>
+                                    <td>
+                                        <div style="color:#333333;">因公开会</div>
+                                        <div>公司在北京召开经理会，通行活动在北京召开经理会公，此处30个字</div>
+                                    </td>
+                                    <td>
+                                        <div>2014-01-04</div>
+                                        <div>14:11</div>
+                                    </td>
+                                    <td><b class="orderStates greenFont">已完成</b></td>
+                                    <td style="border-right:0;">
+                                         <div>
+                                             <a href="javascript:void(0);">查看</a>
+                                             <a href="javascript:void(0);" class="orderLastA ac-delete">删除</a>
+                                         </div>
+                                    </td>
+                                </tr>                                
+                          </table>
+                     </div> <!-- 第五个list 结束-->
+                     
+                     <div class="orderInfoList"> <!-- 第六个list 开始-->
+                          <h3 class="numInfoTitle">行程订单编号：XC19830610 &nbsp;&nbsp; 因公出行</h3>
+                          <table class="journeyOrderList">
+                                <colgroup>
+                                       <col width="475px"/>
+                                       <col width="103px"/>
+                                       <col width="98px"/>
+                                       <col width="131px"/>
+                                       <col width="83px"/>
+                                       <col width="93px"/>
+                                       <col width="108px"/>
+                                </colgroup>
+                                <tr>
+                                    <td>
+                                        <ul class="numberInfo">
+                                            <li>
+                                                <label>
+                                                    <i class="flightImg"></i>
+                                                    <b>上海<em>&nbsp;—&nbsp;</em> <i class="transfer twiceTransfer">2程中转</i> <em>&nbsp;—&nbsp;</em> 乌兰巴托</b>
+													<span class="shinppingInfo">
+													<em class="flightWidth">南方航空 CZ6437</em>
+													<em class="shippingSpace">经济舱</em>
+                                                    </span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="pull-left">
+                                                    <b>上海<em>&nbsp;—&nbsp;</em> 北京</b>
+													<span class="shinppingInfo">
+													<em class="flightWidth">南方航空 CZ6437</em>
+													<em class="shippingSpace">经济舱</em>
+                                                    </span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td class="halfGray minWidth">
+                                        <div><em>潘小美</em></div>
+                                    </td>
+                                    <td>
+                                        <div>￥<b class="priceFont">1368</b></div>
+                                    </td>
+                                    <td>
+                                        <div style="color:#333333;">因公开会</div>
+                                        <div>公司在北京召开经理会，通行活动在北京召开经理会公，此处30个字</div>
+                                    </td>
+                                    <td>
+                                        <div>2014-01-04</div>
+                                        <div>14:11</div>
+                                    </td>
+                                    <td><b class="orderStates grayFont">已取消</b></td>
+                                    <td style="border-right:0;">
+                                         <div>
+                                             <a href="javascript:void(0);">查看</a>
+                                             <a href="javascript:void(0);" class="orderLastA ac-delete">删除</a>
+                                         </div>
+                                    </td>
+                                </tr>                                
+                          </table>
+                     </div> <!-- 第六个list 结束-->  
+                     
+                     <div class="orderInfoList"> <!-- 第七个list 开始-->
+                          <h3 class="numInfoTitle">行程订单编号：XC19830610 &nbsp;&nbsp; 因公出行</h3>
+                          <table class="journeyOrderList">
+                                <colgroup>
+                                       <col width="475px"/>
+                                       <col width="103px"/>
+                                       <col width="98px"/>
+                                       <col width="131px"/>
+                                       <col width="83px"/>
+                                       <col width="93px"/>
+                                       <col width="108px"/>
+                                </colgroup>
+                                <tr>
+                                    <td>
+                                        <ul class="numberInfo">
+                                            <li>
+                                                <label>
+                                                    <i class="flightImg"></i>
+                                                    <b>上海<em>&nbsp;—&nbsp;</em> <i class="transfer twiceTransfer">2程中转</i> <em>&nbsp;—&nbsp;</em> 乌兰巴托</b>
+													<span class="shinppingInfo">
+													<em class="flightWidth">南方航空 CZ6437</em>
+													<em class="shippingSpace">经济舱</em>
+                                                    </span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                                                    <b>上海 <em>&nbsp;—&nbsp;</em> 北京</b>
+													<span class="shinppingInfo">
+													<em class="flightWidth">南方航空 CZ6437</em>
+													<em class="shippingSpace">经济舱</em>
+                                                    </span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td class="halfGray minWidth">
+                                        <div><em>潘小美</em></div>
+                                    </td>
+                                    <td>
+                                        <div>￥<b class="priceFont">1368</b></div>
+                                    </td>
+                                    <td>
+                                        <div style="color:#333333;">因公开会</div>
+                                        <div>公司在北京召开经理会，通行活动在北京召开经理会公，此处30个字</div>
+                                    </td>
+                                    <td>
+                                        <div>2014-01-04</div>
+                                        <div>14:11</div>
+                                    </td>
+                                    <td><b class="orderStates orangeFont">已受理</b></td>
+                                    <td style="border-right:0;">
+                                         <div>
+                                             <a href="javascript:void(0);">查看</a>
+                                         </div>
+                                    </td>
+                                </tr>                                
+                          </table>
+                     </div> <!-- 第七个list 结束--> 
+                     <div class="smallLoading"><em></em> <b>数据正在加载中……</b></div>
+                     
+             </div>  <!--订单信息结束-->
+                          
+        
+	   </div> <!--body 结束-->
+    </section>
+    <footer class="main-footer">
+        <p class="copyright">Copyright &copy; 2013 天地行 All Rights Reserved.     沪ICP备08101503号</p>
+    </footer>
+</div>
+  
+</body>
+</html>
+
+<script type="text/x-kendo-template" id="ac-cancel-template">		
+		<div class="row row-icontext">
+			<i class="icon icon3"></i>
+				确认取消该行程订单吗？
+		</div>
+		<div class="row row-btns">
+			<a href="javascript:;" class="btns btn-s2 btn-c1">确 定</a>
+			<a href="javascript:;" class="btns btn-s2 btn-c5">取 消</a>
+		</div>
+</script>
+
+<script type="text/x-kendo-template" id="ac-delete-template">		
+		<div class="row row-icontext">
+			<i class="icon icon3"></i>
+			 确认要永久删除该行程订单？
+		</div>
+		<div class="row row-btns">
+			<a href="javascript:;" class="btns btn-s2 btn-c1">删 除</a>
+			<a href="javascript:;" class="btns btn-s2 btn-c5">取 消</a>
+		</div>
+</script>
+
+<script type="text/x-kendo-template" id="oneTransfer">
+	<table class="transferList">
+	       <colgroup>
+                 <col width="40px"/>
+                 <col width="140px"/>
+                 <col width="140px"/>
+           </colgroup>
+           <tr>
+               <th>中转</th>
+               <td>香港（香港国际机场）</td>
+               <td>停留时长：2小时15分</td>
+           </tr>
+	</table>	
+</script>
+
+<script type="text/x-kendo-template" id="twiceTransfer">
+	<table class="transferList">
+	       <colgroup>
+                 <col width="40px"/>
+                 <col width="140px"/>
+                 <col width="140px"/>
+           </colgroup>
+           <tr>
+               <th>中转</th>
+               <td>香港（香港国际机场）</td>
+               <td>停留时长：2小时15分</td>
+           </tr>
+		   <tr>
+               <th>经停</th>
+               <td>东京（东京国际机场）</td>
+               <td>停留时长：2小时15分</td>
+           </tr>
+	</table>	
+</script>
+
+<script type="text/javascript">
+
+        $(function(){
+			
+			$(".hoverCont").fixedBar();
+			
+			new PopWindow('.ac-cancel',{
+				title:'取消订单',
+				template:'#ac-cancel-template',
+				width:500
+			}).init();
+			
+			new PopWindow('.ac-delete',{
+				title:'删除订单',
+				template:'#ac-delete-template',
+				width:500
+			}).init();
+
+			$(".journeyOrderList .oneTransfer").kendoTooltip({
+				position:"bottom", //left right top
+				wrapperClass:"lineWeight",
+				width:320,
+				content:function(){
+					return $("#oneTransfer").html();
+				},
+				offsetY:10				
+			});
+			
+			$(".journeyOrderList .twiceTransfer").kendoTooltip({
+				position:"bottom", //left right top
+				wrapperClass:"lineWeight",
+				width:320,
+				content:function(){
+					return $("#twiceTransfer").html();
+				},
+				offsetY:10				
+			});
+			
+        });
+</script>
+

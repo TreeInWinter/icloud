@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>机票 国内机票 改签 改签申请</title>
+        <meta charset="utf-8" />
+<link href="/static/css/kendo.common.css" rel="stylesheet" />
+<link href="/static/css/kendo.gray.css" rel="stylesheet" />
+<link href="/static/css/common.css" rel="stylesheet" />
+<link href="/static/css/b2b.css" rel="stylesheet" />
+<link href="/static/css/kendo.reset.css" rel="stylesheet" />
+
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/kendo.web.js"></script>
+<script type="text/javascript" src="/static/js/plugins/jquery.fixedBar.js"></script>
+<script type="text/javascript" src="/static/js/global.js"></script>
+<script type="text/javascript" src="/static/js/flight.js"></script>
+<script type="text/javascript" src="/static/js/uploadify/jquery.uploadify.min.js"></script>
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+<!-- @CLB@ --></head><body>  <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">消息</a>
+                <span>New</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent">
+<link href="/static/css/order.css" rel="stylesheet"><div class="actions block">
+    <div class="col col-l sep-r">
+        <button class="btns btn-return">返回</button>
+    </div>
+    <div class="col col-r sep-l">
+        <button class="btns btn-blue">取消订单</button>
+        <button class="btns btn-blue" id="save">保存</button>
+        <button class="btns btn-blue" id="edit" style="display:none;">修改</button>
+        <button class="btns btn-blue">提交申请</button>
+    </div>
+</div>
+
+<div class="block block0 clearfix">
+    <div class="col col-l">
+        <div class="row" >
+            <span class="text1">订单号：<strong>未生成</strong></span>&nbsp;
+            <!--<span class="text2"> - 订单类型：国内机票 </span>-->
+        </div>
+        <div class="row"></div>
+    </div>
+    <div class="col col-r">
+        <ul class="flat-list">
+            <li>
+            <div class="instr clearfix">
+                <span class="first highlight highlight-fl">创建</span>
+                <span>审核</span>
+                <span>改签</span>
+                <span>完成</span>
+                <span class="last">取消</span>
+                <em class="line">&nbsp;</em>
+            </div> 
+            </li>
+            <li>
+            <div class="instr clearfix">
+                <span class="first">收款</span>
+                <span class="last">结算</span>
+                <em class="line">&nbsp;</em>
+            </div>
+            </li>
+            <li class="count" id="child_order_trigger"><span>关联订单</span><strong>3</strong>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- 订单信息 -->
+<div class="block block1 block-module">
+    <div class="block-title">订单信息</div>
+    <ul class="flat-list">
+        <li>
+        <label class="vertical-head">客户名称</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">结算方式</label>
+        <span>
+            <input data-role="dropdownlist" style="width:100px;" data-value-field="value" data-text-field="text" data-source="[{'value':'账户余额','text':'账户余额'}]">
+        </span>
+        </li>
+        <li>
+        <label class="vertical-head">可用余额</label>
+        <span><strong style="color:#FF6608;">222.00</strong>元</span>
+        </li>
+        <li>
+        <label class="vertical-head">操作员</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">联系人</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">联系电话</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">手机号码</label>
+        <span>xxx</span>
+        </li>
+        <li>&nbsp;</li>
+        <li>
+        <label class="vertical-head">三方协议编号</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">客户订单编号</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">外部订单号</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">关联订单号</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">建单营业点</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">出票营业点</label>
+        <span>xxx</span>
+        </li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li class="col-wide">
+        <label class="vertical-head">客户备注</label>
+        <textarea name=""></textarea>
+        </li>
+        <li class="col-wide">
+        <label style="vertical-align:top" class="vertical-head">内部备注</label>
+        <textarea name=""></textarea>
+        </li>
+    </ul>
+</div>
+
+<div class="block block2 block-module" style="display:none">
+    <div class="block-title">
+        <span class="block-title-orange">原航班信息</span>
+        <!--
+        <span class="block-module-action">
+            <button class="btns btn-ac-blue">删除所选</button> 
+        </span>
+        -->
+    </div> 
+    <div class="row">
+        <div id="flight_info_grid">
+            <table class="grid-table">
+                <tr class="thead">
+                    <td>航空公司</td><td>实际承运</td><td>航班号</td><td>机型</td><td>舱位</td><td>舱位等级</td><td>离港机场</td><td>到港机场</td><td>离港时间</td><td>到港时间</td><td>订座</td><td>基建</td><td>燃油</td>
+                </tr>
+                <tr>
+                    <td>东方航空</td>
+                    <td>HO</td>
+                    <td><strong>CZ3609</strong></td>
+                    <td>空客A380</td>
+                    <td><strong>W</strong></td>
+                    <td>经济仓(7.5折)</td>
+                    <td>上海浦东 PVG T3</td>
+                    <td>上海浦东 PEK T2</td>
+                    <td><strong>2013-06-22 20:35</strong></td>
+                    <td><strong>2013-06-22 23:25</strong></td>
+                    <td> HK </td>
+                    <td> 50 </td>
+                    <td> 10 </td>
+                </tr>
+                <tr>
+                    <td>东方航空</td>
+                    <td>HO</td>
+                    <td><strong>CZ3609</strong></td>
+                    <td>空客A380</td>
+                    <td><strong>W</strong></td>
+                    <td>经济仓(7.5折)</td>
+                    <td>上海浦东 PVG T3</td>
+                    <td>上海浦东 PEK T2</td>
+                    <td><strong>2013-06-22 20:35</strong></td>
+                    <td><strong>2013-06-22 23:25</strong></td>
+                    <td> HK </td>
+                    <td> 50 </td>
+                    <td> 10 </td>
+                </tr>
+            </table> 
+        </div>
+    </div>
+</div>
+
+<!--
+<div class="block block-module">
+    <div class="row">
+        <label for="btn_upload"><strong>改签PNR</strong></label>
+        <input style="width:200px;" type="text" name="" placeholder="选择文件" />
+        <input class="button_gray" type="button" id="btn_upload" value="上传" />
+    </div>
+</div>
+-->
+
+<div class="block block3 block-module">
+    <div class="block-title">
+        <span class="block-title-orange">改签航班信息</span>
+        <span class="block-module-action">
+            <button class="btns btn-ac-blue" id="origin_flight_btn"><i>展开</i>原航班信息 <b>︽</b></button> 
+            <!--<button class="btns btn-ac-blue" id="add_flight">添加航班</button> -->
+            <span id="gaiqian_type">
+                <label><b style="color:red;">*</b>&nbsp;选择改签类型:</label>
+                <label>
+                    <input type="radio" name="gqtype" />
+                    <em>仅改期</em>
+                </label>
+                <label>
+                    <input type="radio" name="gqtype" />
+                    <em>仅升舱</em>
+                </label>
+                <label>
+                    <input type="radio" name="gqtype" />
+                    <em>升舱并改期</em>
+                </label>
+            </span>
+        </span>
+    </div> 
+    <div class="row">
+        <div id="flight_info_grid">
+            <script type="text/x-kendo-template" id="flight_template">
+                <tr>
+                    <td class="editable"><input type="checkbox" name="flight"/></td>
+                    <td class="uneditable" style="width:80px;"></td>
+                    <td class="editable"><input style="width:80px;" value="" /><b></b></td>
+                    <td class="editable"><input style="width:80px;" value="" /><b></b></td>
+                    <td class="editable"><input style="width:80px;" value="" /><b></b></td>
+                    <td class="editable"><input style="width:80px;" value="" /><b class="qt" ></b></td>
+                    <td class="editable"><input style="width:50px;" value="" /><b></b></td>
+                    <td class="editable"><input style="width:50px;" value="" /><b class="qt"></b></td>
+                    <td class="editable"><input style="width:110px;" value=""/><b class="qt" ></b></td>
+                    <td class="editable"><input style="width:110px;" value=""/><b class="qt" ></b></td>
+                    <td class="editable"><input style="width:80px;" value="SHA255"/><b >SHA255</b></td>
+                </tr>
+            </script>
+            <table id="flight_table" class="grid-table gaiqian" style="width:auto;">
+                <tbody>
+                    <tr class="thead">
+                        <td class="editable" style="width:30px;"><input type="checkbox" name="flight_all" id="flight_all"></td>
+                        <td class="uneditable" style="width:80px;">航空公司</td>
+                        <td class="editable" style="width:80px;">离港机场</td>
+                        <td class="editable" style="width:80px;">到港机场</td>
+                        <td class="editable" style="width:80px;" >实际承运</td>
+                        <td class="editable" style="width:80px;">航班号</td>
+                        <td class="editable" style="width:50px;">机型</td>
+                        <td class="editable" style="width:50px;">舱位</td>
+                        <td class="editable" style="width:110px;">离港时间</td>
+                        <td class="editable" style="width:110px;">到港时间</td>
+                        <td class="editable" style="width:80px;">预定OFFICE</td>
+                    </tr>
+                    <tr>
+                        <td class="editable"><input type="checkbox" name="flight"/></td>
+                        <td class="uneditable" style="width:80px;">东方航空</td>
+                        <td class="editable"><input type="text" style="width:80px;" value="PEK T3" /><b >PEK T3</b></td>
+                        <td class="editable"><input type="text" style="width:80px;" value="PVG T2" /><b >PVG T2</b></td>
+                        <td class="editable"><input type="text" style="width:80px;" value="HO" /><b >HO</b></td>
+                        <td class="editable"><input type="text" style="width:80px;" value="CZ3609" /><b class="qt" >CZ3609</b></td>
+                        <td class="editable"><input type="text" style="width:50px;" value="777" /><b >777</b></td>
+                        <td class="editable"><input type="text" style="width:50px;" value="W" /><b class="qt">W</b></td>
+                        <td class="editable"><input type="text" style="width:110px;" value="2013-06-22 20:35"/><b class="qt" >2013-06-22 20:35</b></td>
+                        <td class="editable"><input type="text" style="width:110px;" value="2013-06-22 23:25"/><b class="qt" >2013-06-22 23:25</b></td>
+                        <td class="editable"><input type="text" style="width:80px;" value="SHA255"/><b >SHA255</b></td>
+                    </tr>
+                    <tr>
+                        <td class="editable"><input type="checkbox" name="flight"/></td>
+                        <td class="uneditable" style="width:80px;">东方航空</td>
+                        <td class="editable"><input type="text" style="width:80px;" value="PEK T3" /><b >PEK T3</b></td>
+                        <td class="editable"><input type="text" style="width:80px;" value="PVG T2" /><b >PVG T2</b></td>
+                        <td class="editable"><input type="text" style="width:80px;" value="HO" /><b >HO</b></td>
+                        <td class="editable"><input type="text" style="width:80px;" value="CZ3609" /><b class="qt" >CZ3609</b></td>
+                        <td class="editable"><input type="text" style="width:50px;" value="777" /><b >777</b></td>
+                        <td class="editable"><input type="text" style="width:50px;" value="W" /><b class="qt">W</b></td>
+                        <td class="editable"><input type="text" style="width:110px;" value="2013-06-22 20:35"/><b class="qt" >2013-06-22 20:35</b></td>
+                        <td class="editable"><input type="text" style="width:110px;" value="2013-06-22 23:25"/><b class="qt" >2013-06-22 23:25</b></td>
+                        <td class="editable"><input type="text" style="width:80px;" value="SHA255"/><b >SHA255</b></td>
+                    </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<div class="block block7 block-module" style="display:none;" id="origin_ticket_info">
+    <div class="block-title"><span class="block-title-blue">原客票信息</span>
+        <!--
+        <span class="block-module-action">
+            <button class="btns btn-ac-blue">删除所选</button> 
+        </span>
+        -->
+    </div> 
+    <div class="row">
+        <div id="passenger_info_grid">
+            <table class="grid-table">
+                <tr class="thead">
+                    <td>PNR</td>
+                    <td>票号</td>
+                    <td>旅客类型</td>
+                    <td>姓名</td>
+                    <td>性别</td>
+                    <td>证件类型</td>
+                    <td>证件号码</td>
+                    <td>票面价</td>
+                    <td>佣金</td>
+                    <td>税款</td>
+                    <td>附加费</td>
+                    <td>合计</td>
+                    <td>行程单号</td>
+                    <td>联系电话</td>
+                </tr> 
+                <tr>
+                    <td>HFJDD2</td>
+                    <td>781-2108936418</td>
+                    <td>成人</td>
+                    <td>周林</td>
+                    <td>男</td>
+                    <td>身份证</td>
+                    <td>21321321321</td>
+                    <td class="qt">590</td>
+                    <td>32</td>
+                    <td>100</td>
+                    <td>0</td>
+                    <td class="qt">658</td>
+                    <td>未打印</td>
+                    <td>13800138000</td>
+                </tr>
+                <tr>
+                    <td>HFJDD2</td>
+                    <td>781-2108936418</td>
+                    <td>成人</td>
+                    <td>周林</td>
+                    <td>男</td>
+                    <td>身份证</td>
+                    <td>21321321321</td>
+                    <td class="qt">590</td>
+                    <td>32</td>
+                    <td>100</td>
+                    <td>0</td>
+                    <td class="qt">658</td>
+                    <td>未打印</td>
+                    <td>13800138000</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="block block7 block-module">
+    <div class="block-title"><span class="block-title-blue">改签客票信息</span>
+        <span class="block-module-action">
+            <button class="btns btn-ac-blue" id="ticket_info_btn"><i>展开</i>原客票信息 <b>︽</b></button> 
+        </span>
+    </div> 
+    <div class="row">
+        <div id="passenger_info_grid2">
+            <table class="grid-table">
+                <tr class="thead">
+                    <td class="editable"><input type="checkbox" name="passenger_all" id="passenger_all"/></td>
+                    <td class="editable">PNR</td>
+                    <td class="editable">票号</td>
+                    <td class="editable">旅客类型</td>
+                    <td class="editable">姓名</td>
+                    <td class="editable">性别</td>
+                    <td class="editable">证件类型</td>
+                    <td class="editable">证件号码</td>
+                    <td class="editable">票面价</td>
+                    <td class="editable">佣金</td>
+                    <td class="editable">税款</td>
+                    <td class="editable">附加费</td>
+                    <td class="editable">合计</td>
+                    <td class="editable">行程单号</td>
+                    <td class="editable">联系电话</td>
+                </tr> 
+                <tr>
+                    <td class="editable"><input type="checkbox" name="passenger"/></td>
+                    <td class="editable">HFJDD2</td>
+                    <td class="editable">781-2108936418</td>
+                    <td class="editable">成人</td>
+                    <td class="editable">周林</td>
+                    <td class="editable">男</td>
+                    <td class="editable">身份证</td>
+                    <td class="editable">21321321321</td>
+                    <td class="editable" class="qt">590</td>
+                    <td class="editable">32</td>
+                    <td class="editable">100</td>
+                    <td class="editable">0</td>
+                    <td class="editable"><i class="qt">658</i></td>
+                    <td class="editable">未打印</td>
+                    <td class="editable">13800138000</td>
+                </tr>
+                <tr>
+                    <td class="editable"><input type="checkbox" name="passenger"/></td>
+                    <td class="editable">HFJDD2</td>
+                    <td class="editable">781-2108936418</td>
+                    <td class="editable">成人</td>
+                    <td class="editable">周林</td>
+                    <td class="editable">男</td>
+                    <td class="editable">身份证</td>
+                    <td class="editable">21321321321</td>
+                    <td class="editable" class="qt">590</td>
+                    <td class="editable">32</td>
+                    <td class="editable">100</td>
+                    <td class="editable">0</td>
+                    <td class="editable"><i class="qt">658</i></td>
+                    <td class="editable">未打印</td>
+                    <td class="editable">13800138000</td>
+                </tr>
+                <tr>
+                    <td class="editable"><input type="checkbox" name="passenger"/></td>
+                    <td class="editable">HFJDD2</td>
+                    <td class="editable">781-2108936418</td>
+                    <td class="editable">成人</td>
+                    <td class="editable">周林</td>
+                    <td class="editable">男</td>
+                    <td class="editable">身份证</td>
+                    <td class="editable">21321321321</td>
+                    <td class="editable" class="qt">590</td>
+                    <td class="editable">32</td>
+                    <td class="editable">100</td>
+                    <td class="editable">0</td>
+                    <td class="editable"><i class="qt">658</i></td>
+                    <td class="editable">未打印</td>
+                    <td class="editable">13800138000</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="block block4 block-module">
+    <div class="block-title"><span>退改签规定</span>
+        <!--
+        <span class="block-module-action">
+        </span>
+        -->
+    </div>
+    <div>
+        <div class="row row3 fare_rule">
+            【<span>更改条件</span>】同等舱位免费更改。<br>
+            【<span>退票条件</span>】起飞前2小时（含）以外办理退票按订座舱位公布运价收取40％的退票费，2小时以内及起飞后退票按订座舱位公布运价收取50％的退票费。退票费低于50元时按50元收取。<br>
+            【<span>签转条件</span>】不得签转。<br><br>
+            <h3>政策说明</h3>
+            【<span>退改签补充规则</span>】（不管任何原因）签转到其他航空公司、跨月签转以及有政策航班改到无政策航班，需收回代理费。<br/>
+            【<span>政策备注</span>】这里是政策备注
+        </div>
+    </div>
+</div>
+<div class="block block8 block-module clearfix" style="min-height:60px">
+    <div class="block-title"><span>备注</span>
+        <!--
+        <span class="block-module-action">
+        </span>
+        -->
+    </div> 
+    <div class="row row1"> 
+        <textarea style="width:100%;height:100px;overflow-y:scroll;"></textarea>
+
+    </div>
+</div>
+<div class="block block9 block-module clearfix" style="min-height:60px">
+    <div class="block-title"><span>记录</span>
+        <!--
+        <span class="block-module-action">
+        </span>
+        -->
+    </div> 
+    <div class="row row1"> 
+        <table style="width:40%;">
+            <thead>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="width:40%">修改客票价格</td>
+                    <td>2013-08-08 15:00</td>
+                </tr>
+                <tr>
+                    <td>修改改签价格</td>
+                    <td>2013-08-06 15:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+        </div>
+    </div>
+		
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+<script type="text/javascript">
+    $(function(){
+            //全选处理
+            $("#flight_all").click(function(){
+                $("input[name='flight']").prop("checked", $(this).prop("checked"));
+             });
+
+            /*
+            //添加航班
+            $("#add_flight").click(function(){
+                var template = kendo.template($("#flight_template").html());
+                $("#flight_table").append(template);
+            });
+            */
+
+            $("#passenger_all").click(function(){
+                $("input[name='passenger']").prop("checked", $(this).prop("checked"));
+             });
+
+            // 输入框事件
+            $("#flight_table input").focusout(function(){
+                $(this).parent("td").find("b").html($(this).val());
+            });
+
+
+            //保存按钮处理
+            $("#save").click(function(){
+                $(this).hide();
+
+                $("#flight_table tr,#passenger_info_grid2 table tr").each(function(){
+                    $("td:eq(0)",this).hide();
+                    $("td.normalhidden",this).hide();
+                    $("td.editable input",this).hide();
+                    $("td.editable b",this).show();
+                    $("td.uneditable",this).show();
+                });
+                $("#gaiqian_type").hide();
+                $("#edit").show();
+            });
+            //修改按钮处理
+            $("#edit").click(function(){
+                $(this).hide();
+                $("#flight_table b").hide();
+
+                $("#flight_table tr,#passenger_info_grid2 table tr").each(function(){
+                    $("td.editable b",this).hide();
+                    $("td.uneditable",this).hide();
+                    $("td:eq(0)",this).show();
+                    $("td.normalhidden",this).show();
+                    $("td.editable input",this).show();
+                });
+                $("#gaiqian_type").show();
+                $("#save").show();
+            });
+
+            $("#ticket_info_btn").click(function(){
+                if($("b",this).html() == '︾'){
+                    $("#origin_ticket_info").fadeOut();
+                    $("b",this).html("︽");
+                    $("i",this).html("展开");
+                }else{
+                    $("#origin_ticket_info").fadeIn();
+                    $("b",this).html("︾");
+                    $("i",this).html("收回");
+                }
+            });
+            $("#origin_flight_btn").click(function(){
+                if($("b",this).html() == '︾'){
+                    $("div.block2").fadeOut();
+                    $("b",this).html("︽");
+                    $("i",this).html("展开");
+                }else{
+                    $("div.block2").fadeIn();
+                    $("b",this).html("︾");
+                    $("i",this).html("收回");
+                }
+        });
+
+    })
+</script>
+<script type="text/javascript" src="/运营商/child_orders.js"></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 国内机票 首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../static/css/store_flight.css" media="screen" />
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="../static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="../static/css/kendo.store.css" />
+
+
+    <script type="text/javascript" src="../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../static/js/global.js"></script>
+    <script type="text/javascript" src="../static/js/store/store.js"></script>
+
+  
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+    
+    
+    
+   
+    
+      <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="main-wrapper">
+<header class="main-header">
+    <a class="logo" href="/"><h1>天地行</h1></a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first active"><a herf="#">首页</a></li>
+            <li><a herf="#">国内机票</a></li>
+            <li><a herf="#">国际机票</a></li>
+            <li><a herf="#">酒店</a></li>
+        </ul> 
+    </nav>
+    <nav class="main-links">
+        <ul class="clearfix">
+            <li class="first"><a href="#">订单管理</a></li>
+            <li><a href="#">分销管理</a></li>
+            <li><a href="#">电子钱包</a></li>
+            <li><a href="#">统计报表</a></li>
+            <li><a href="#">客服服务</a></li>
+            <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+            <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+</header>
+<section class="main-body clearfix">
+
+    <!-- 国际机票白屏 start -->
+    <div class="row gray-border" style="margin-bottom:10px">
+        <h3 class="title"><strong>黑屏预订</strong>
+            <em class="gn-title-tip"><i>&nbsp;</i>航司要求：如何录入旅客联系方式？
+                <div class="message_ct gn-tip-div">
+                    <div class="arrow arrow_north"></div>
+                    <div class="message_text">
+                        海航（HU），深航（ZH）,吉祥航(HO),河北航（NS） CTCT后要空格 <br>
+                        指令：OSI 航空公司代码 CTCT 您的手机号码/Pn <br>
+                        例如：OSI HU CTCT 138*****888/PN <br>
+                        首都航（JD）,东上航（MU/FM）,国航（CA）,南航（CZ）,西藏航（TV） CTCT后不要空格 <br>
+                        指令：OSI 航空公司代码 CTCT您的手机号码/Pn <br>
+                        例如：OSI CA CTCT138*****888/P1 <br>
+                        厦航（MF） CTC后加逗号 <br>
+                        指令：OSI 航空公司代码 CTC,您的手机号码/Pn <br>
+                        例如：OSI MF CTC,138*****888/P1 <br>
+                        2.南航(CZ)儿童需要加以下SSR项的提示： <br>
+                        指令：SSR CHLD 航空公司代码 Action-Code1/出生日期/Pn <br>
+                        例如：SSR CHLD CZ HK1/03MAR04/P1 <br>
+                        一个成人带一个儿童，如果多带请咨询航空公司，以防不能登机
+                    </div>
+                </div>
+            </em>
+        </h3>
+
+        <section class="row">
+            <ul class="black_booking">
+                <li class="passenger gap">
+                    <span class="subline">乘客类型:</span>
+                    <label><input type="radio" name="passenger_type" value="adult" checked/><span>成人</span></label>
+                    <label><input type="radio" name="passenger_type" value="child"/><span>儿童</span></label>
+                    <label><input type="radio" name="passenger_type" value="team"/><span>团队</span></label>
+                </li>
+                <li class="passenger gap" id="child_extra" style="display:none;">
+                    <span class="subline">儿童情况:</span>
+                    <label><input type="radio" name="with_type" checked value="without_adult"/><span>无成人陪伴</span></label>
+                    <label><input type="radio" name="with_type" value="adult_pnr"/><span>成人PNR</span></label>
+                    <label><input type="radio" name="with_type" value="adult_order"/><span>成人订单号</span></label>
+                    <label id="adult_pnr" style="display:none;"><span style="padding-right:10px;">请输入成人PNR:</span><input type="text" class="normal_txt" style="width:80px"/></label>
+                    <label id="adult_order" style="display:none;"><span style="padding-right:10px">请输入成人订单号:</span><input type="text" class="normal_txt" style="width:200px"/></label>
+                </li>
+                <li class="ways" style="position:relative;">
+                    <label class="subline"><span>方式一 PNR导入:</span><input type="text" class="large_txt" style="margin-left:20px;width:100px;"/></label>
+                    
+                    <div class="tips_txt">PNR数据不完整，请重新拷贝。
+                    </div>
+                    
+                </li>
+                <li>
+                    <span class="dotted_line" style="width:80px;"></span>
+                    <em class="muted">&nbsp;或者&nbsp;</em>
+                    <span class="dotted_line" style="width:455px;"></span>
+                </li>
+                <li class="ways" style="position:relative;">
+                <label class="subline"><span style="vertical-align:top;">方式二 黑屏粘贴:</span></label>
+                    <textarea style="width:440px;height:180px;line-height:20px;margin-left:15px;padding:10px;" class="black-paste">
+使用方法:
+1. 请使用您的Eterm系统提取PNR内容。
+2. 再执行PAT:A指令,将全部内容复制,并粘贴到黑色输入框内。
+3. 团队从RT:N/编码开始复制到PAT:A结果的所有内容。
+4. 根据航空公司出票要求,PNR内容中必须备注手机号码。
+5. 注意:复制的内容建议从RT编码开始复制到PAT:A结果的所有内容。
+儿童PNR编码,请走儿童订单专用通道。
+                    </textarea>                 
+
+                    <div class="btn_area">
+                        <a class="adaptiveButton brightRed_btn">
+                            <span class="left"></span>
+                            <span class="center center_1">创建订单</span>
+                            <span class="right"></span>
+                        </a>
+                    </div>
+
+                    <p class="muted">
+                    注意事项:<br/>
+                    1.请确保该PNR姓名组正确;<br/>
+                    2.请确保航段组正确，舱位状态正确;<br/>
+                    3.请确保每个乘客具有真实有效的信息;<br/>
+                    4.该PNR不能包含票价组项，如：FC/FN/FP.<br/>
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+    <div class="row domestic gray-border flight_search">
+        <div class="pull-left" style="width:70%;border-right:1px solid #e1e1e1;">
+            <h3 class="title"><strong>白屏预订</strong></h3>
+            <section style="position:relative;">
+                <form>
+                    <ul>
+                        <li class="trip_type gap">
+                            <strong>航程类型</strong>
+                            <label><input type="radio" name="flight_type" value="one_way" checked style="vertical-align:middle;"/><span>单程</span></label>
+                            <label><input type="radio" name="flight_type" value="round_trip" style="vertical-align:middle;"/><span>往返</span></label>
+                        </li>
+                        <li class="one_way round_trip clearfix" style="position:relative;padding-left:20px;">
+                            <table class="time_city">
+                                <colgroup>
+                                    <col width="13%">
+                                    <col width="46%">
+                                    <col width="13%">
+                                    <col width="30%">
+                                </colgroup>
+
+                                <tbody>
+                                    <tr>
+                                        <td><label for="departure_city"><em>*</em><span>出发城市</span></label></td>
+                                        <td><input type="text" name="departure_city" id="departure_city" value="" class="normal_txt gray-border" style="width:145px"></td>
+                                        <td><label for="departure_date"><em>*</em><span>出发日期</span></label></td>
+                                        <td><input type="text" id="departure_date" value="2013-09-09" name="departure_date" style="width:145px;"  class="normal_txt gray-border datepicker"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="arrive_city"><em>*</em><span>到达城市</span></label></td>
+                                        <td><input type="text" id="arrive_city" name="arrive_city" value="" class="normal_txt gray-border" style="width:145px"></td>
+                                        <td id="return_label"><label for="return_date" class="muted"><em>*</em><span>返程日期</span></label></td>
+                                        <td><input type="text" id="return_date" name="return_date" style="width:145px;" disabled="disabled" value="" class="normal-txt gray-border datepicker"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <div class="btn_area" id="white_search" style="top:10px;">
+                                <a class="adaptiveButton brightRed_btn">
+                                    <span class="left"></span>
+                                    <span class="center center_1">搜&nbsp;索</span>
+                                    <span class="right"></span>
+                                </a>
+                            </div>
+
+                            <div class="xchange" style="top:8px;left:240px;">
+                                <b></b>
+                                <a href="javascript:void(0);">换</a>
+                                <i></i>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+            </section>
+        </div>
+
+        <aside class="pull-right" style="width:29.8%;"> 
+        <div>
+            <h3 class="title"><strong>国内机票询价</strong></h3>
+            <!-- <ul class="two_col gray-border-left clearfix "> 
+               <li>
+                    <a href="#"><img src="../static/images/store/inlandgroup.png" alt="团队申请" title="团队申请"/>
+                    <div class="applyfor">团队申请</div></a>
+                </li>
+                <li>
+                <a href="#"><img src="../static/images/store/officialbusiness.png" alt="公务机申请" title="公务机申请"/>
+                    <div class="applyfor">公务机申请</div></a>
+                </li>
+            </ul>
+            -->
+					<div class="ticketEnquiryBlock">
+						<ul>
+							<li>
+								<a href="#"><img src="../static/images/store/icon_teamApply.png" title="团队申请"/>
+								<span >团队申请</span></a>
+								
+							</li>
+						</ul>
+					</div>
+        </div>
+        </aside>
+    </div>
+    <!-- 国际机票白屏 end -->
+
+    </section>
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+<script type="text/javascript" src="../static/js/store/domestic_flight_index.js"></script>
+</body>
+</html>

@@ -1,0 +1,512 @@
+@charset "utf-8";
+/* CSS Document */
+
+.roleManagement{ background:#f4f4f4; padding:10px; font-size:14px; border:1px solid #d3d3d3;}
+.btn-s1{ line-height:30px;}
+.groupUse{ border:1px solid #d3d3d3; border-top:0; background:#fff; color:#333333;}
+.groupList{ margin:15px; color:#333333;}
+.groupList table { width:100%; border:1px solid #d7d7d7; font-size:14px;}
+.groupList td{ line-height: 40px; border-bottom: 1px solid #f1f1f1;}
+.groupList tbody tr:hover{ background:#f5f5f5;}
+.groupList .text2{ margin-right:15px;}
+.text2{color: #3765bd;}
+.groupTbList thead{ line-height:40px; background:#f0efef;}
+.groupQuery{ margin:15px; margin-top:0; font-size:14px; padding-top:15px;}
+.groupTbList .grayfont{ color:#666666;}
+
+
+
+/**/
+.block-client {
+	margin:5px auto 0 auto;
+}
+.block-clientBar {
+    color:#ccc;
+    font-size:14px;
+	padding:0 0 0 25px
+}
+.block-clientBar {
+    color:#ccc;
+    font-size:14px;
+	padding:0 0 0 25px
+}
+.barBtns {
+    margin-left:10px
+}
+.btn-color1 {
+    background-color:#3c5c7f;
+    color:#fff !important;
+}
+.btn-color1:hover{
+    text-decoration:none;
+    background-color:#426488;
+}
+.btn-color2 {
+    background-color:#01adde;
+    color:#fff !important;
+}
+.btn-color2:hover{
+    text-decoration:none;
+    background-color:#02b7ea;
+}
+.btn-color {
+    display:inline-block;
+    text-align:center;
+    line-height:34px;
+    vertical-align:middle;
+    font-size:16px;
+	padding:0 10px;
+	min-width:100px;
+}
+.block-header {
+    background-color:#f4f4f4;
+    height:45px;
+    padding:5px 15px 0 15px;
+    border-bottom:1px solid #b2b2b2;
+}
+.blockTit h2 {
+    font-size:16px;
+	color:#333;
+	font-weight:bold;
+}
+.block2{
+    border:1px solid #d3d3d3;
+    background-color:#fff;
+    margin-bottom:30px;
+}
+.sel-header {
+	background-color:#f4f4f4;
+    height:45px;
+    border-bottom:1px solid #b2b2b2;
+	padding:10px 10px 0 10px;
+}
+.search-header {
+    height:45px;
+    padding:5px 15px 0 15px;
+}
+.search-area {
+	float:left;
+	padding:5px 0 0 0;
+}
+.search-area label {
+	font-size:14px;
+	color:#333;
+}
+.search-area input {
+	vertical-align:middle;	
+}
+.links{
+    float:right;
+    line-height:17px;
+    font-size:14px;
+    margin-top:10px;
+}
+.links a{
+    margin-right:25px;
+}
+.icon-add{
+	background:url(../images/b2g/sprite.png) no-repeat 0 -150px;
+	width:16px;
+	height:16px;
+	display:inline-block;
+	vertical-align:middle;
+}
+.btn-jsgl{
+    display:inline-block;
+    width:120px;
+    text-align:center;
+    line-height:32px;
+    vertical-align:middle;
+    font-size:16px;
+}
+.block-body{
+    margin:10px;
+    position:relative;
+    color:#333;
+    margin-bottom:20px;
+}
+.col-tree .wrap{
+    padding:10px;
+    font-size:14px;
+}
+.col-content{
+    margin-left:250px;
+    min-height:500px;
+}
+.col-tree{
+    position:absolute;
+    height:100%;
+    background-color:#f4f4f4;
+    border:1px solid #e4e4e4;
+	left:0;
+}
+.col-tree.fixedBar{
+    height:auto;
+}
+.block-result table{
+    width:920px;
+    border:1px solid #d7d7d7;
+    font-size:14px;
+}
+.block-result th{
+    background-color:#f0eeef;
+    line-height:40px;
+    border-bottom:1px solid #d7d7d7;
+}
+.block-result td{
+    line-height:40px;
+    border-bottom:1px solid #f1f1f1;
+}
+.block-result tr:nth-last-child(1) td{
+    border-bottom:0;
+}
+.block-result tr.del td{
+    background:url(../images/b2g/line.png) 0 22px repeat-x;
+    background-color:#dcdadb !important;
+}
+.block-result tr.del td:nth-child(1){
+    background-image:none;
+}
+.block-result tr.del td:nth-last-child(1){
+    background-image:none;
+}
+.block-result tr:hover td{
+    background-color:#f5f5f5;
+}
+.block-result input[type=checkbox]{
+    margin-left:10px;
+}
+.block-result .hyper-link{
+    margin-right:5px;
+}
+/*新增角色*/
+.blockTit {
+    background-color:#f4f4f4;
+    height:45px;
+	line-height:45px;
+    padding:0 0 0 30px;
+    border-bottom:1px solid #d2d2d2;
+}
+.blockEdit {
+	padding:20px 0;
+}
+.roleInfo th, .roleInfo td {
+	color:#333;
+	font-size:14px;
+	padding:5px 0 5px 5px
+}
+.roleInfo th {
+	font-weight:bold;
+	text-align:right;
+}
+.roleInfo .roleArea {
+    width:940px;
+    height:58px;
+    overflow-y:scroll;
+}
+.roleInfo textarea {
+    border:1px solid #c7c7c7;
+}
+.editBtn {
+	border:0;
+	color:#fff;
+	font-size:16px;
+	font-weight:bold;
+	padding:5px 25px;
+	vertical-align:middle;
+	cursor:pointer;
+}
+.k-ie7 .editBtn {
+	padding:2px 10px;
+}
+.groupClientTouch-unfold i{
+	background:url(../images/b2g/smallImg.png) no-repeat -21px 0;
+	width:11px;
+	height:11px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-left:5px;
+}
+.groupClientTouch-fold i{
+	background:url(../images/b2g/smallImg.png) no-repeat -37px 0;
+	width:11px;
+	height:11px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-left:5px;	
+}
+.groupClientTouch  {
+	margin-top:10px;
+}
+.groupClientTouch em {
+	color:#3764bd;
+	font-size:14px;
+	text-decoration:underline
+}
+.rangeFont {
+	color:#999;
+}
+
+
+.groupClient {
+	line-height:35px;
+}
+.groupClient li{
+	float:left
+}
+.groupClient span {
+	background:#f0fdff;
+	border:1px solid #4ddbee;
+	color:#666;
+	padding:3px 10px;
+	margin:0 5px 0 0;
+	cursor:pointer;
+	position:relative;
+}
+.groupClient span strong {
+	padding:0 15px 0 0;
+	font-weight:normal;
+}
+.groupClient span:hover {
+	background:#dcf7fb;
+	border:1px solid #4ddbee;
+}
+.groupClient span i {
+	background: url(../images/b2g/icon_sprite.png) no-repeat 0 -42px;
+	width:7px;
+	height:7px;
+	display:block;
+	vertical-align:middle;
+	position:absolute;
+	top:10px;
+	right:6px;
+}
+.groupClient span:hover i {
+}
+
+.roleContent {
+}
+.block-role {
+	border:1px solid #d2d2d2;
+	background:#fff;
+	margin-top:8px;
+	overflow:hidden;
+}
+.roleTitBar {
+	border-bottom:1px solid #d2d2d2;
+	background:#fff;
+	width:1198px;
+}
+.roleTitBar .fixedBar{
+    height:auto;
+}
+.roleTitBar li {
+	float:left;
+	padding:10px 30px;
+	font-size:16px;
+	color:#333;
+	border-right:1px solid #d2d2d2;
+	cursor:pointer;
+}
+.roleTitBar li:hover {
+	color:#0193c3;
+}
+.roleTitBar .current {
+	color:#fff;
+	background:#13bde2;
+}
+.roleTitBar .current:hover {
+	color:#fff;
+	background:#13bde2;
+}
+.usercheck {
+    display:inline-block;
+    width:12px;
+    border:1px solid #8e8f8f;
+	background:#f4f4f4;
+    height:12px;
+    position:relative;
+	vertical-align:middle;
+}
+.usercheck em {
+    display:inline-block;
+    width:16px;
+    height:16px;
+    position:absolute;
+    top:-2px;
+    left:-2px;
+    cursor:pointer;
+}
+.halfchecked em {
+    background: url(../images/j-3.png) no-repeat center center;
+}
+.fullchecked em {
+    background: url(../images/j-4.png) no-repeat center center;
+}
+.usercheck .hidden_input {
+   display: none;
+}
+.roleTitBar input[type=checkbox] {
+}
+
+.roleItem td {
+	border-right:1px solid #d2d2d2;
+	border-bottom:1px solid #d2d2d2;
+	padding:5px 0 5px 10px;
+	font-size:14px;
+	color:#333;
+}
+.roleItem .last {
+	border-right:none;
+}
+.roleItemSet {
+	line-height:36px;
+}
+.roleItemSet li{
+	float:left;
+}
+.roleItemSet span {
+	background:#e2e2e2;
+	color:#333;
+	padding:5px 10px;
+	margin:0 5px 0 0;
+	cursor:pointer;
+}
+.roleItemSet .sel {
+	background:#13bde2;
+	color:#fff;
+}
+.roleItemSet:hover .sel {
+	background:#13bde2;
+	color:#fff;
+}
+.roleItemSet span:hover {
+	background:#eee;
+	color:#333;
+}
+.roleItemSel {
+}
+.roleItemSel span {
+	margin:0 0 0 25px;
+}
+.btnfontStyle{
+	font-family:"Microsoft YaHei";
+	font-size:16px;
+	font-weight:bold;
+	height:38px;
+	line-height:38px;
+	text-align:center;
+	padding:0 40px;
+}
+.k-ie7 .btnfontStyle {
+	line-height:26px;
+}
+/*部门组织架构树*/
+.orgchartDiv p{
+	padding:5px 0 5px 60px;
+}
+.orgchartDiv label{
+	font-weight:bold;
+	color:#333;
+	font-size:14px;
+}
+.treeview-white{
+    background-color:#fff;
+    overflow-y:auto;
+    height:230px;
+    margin-left:40px;
+    margin-right:40px;
+    border:1px solid #ccc;
+    padding:10px;
+    font-size:14px;
+}
+/*员工管理弹窗*/
+.ul_selectedTravelClerk li {
+    margin-bottom: 5px;
+    border:1px solid #D8D8D8;
+    background-color: #FAFAFA;
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    text-indent:12px;
+    position: relative;
+
+}
+.ul_selectedTravelClerk li:hover,.ul_selectedTravelClerk li.select {
+    background-color: #F0FDFF;
+    border-color: #4DDBEE;
+}
+.ul_selectedTravelClerk li i.btn_del {
+    background: url("../images/b2g/sprite.png") -50px -140px;
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    top:50%;
+    margin-top: -3px;
+    right:10px;
+    cursor: pointer;
+}
+.ul_selectedTravelClerk li:hover i.btn_del,.ul_selectedTravelClerk li.select i.btn_del {
+    background-position: -60px -140px;
+}
+.iptWithSearchButtonContainer {
+    position: relative;
+}
+.iptWithSearchButtonContainer input:focus {
+    border-color: #c7c7c7;
+    box-shadow: none;
+}
+.searchButtonInInputContainer.highLight {
+    background-color: #75E5F7;
+    border-left: 1px solid #40CAE0;
+}
+.searchButtonInInputContainer.highLight  i.searchButtonInInput {
+    background-position:-80px -200px;
+}
+.searchButtonInInputContainer i.searchButtonInInput {
+    background: url("../images/b2g/sprite.png") -110px -200px;
+    width:20px;
+    height: 20px;
+    display: inline-block;
+    margin-top: 5px;
+    cursor: pointer;
+
+}
+.searchButtonInInputContainer{
+    top: 1px;
+    position: absolute;
+    right: -1px;
+    width: 46px;
+    height: 28px;
+    text-align: center;
+}
+.btn_setApprover {
+	background: url("../images/b2g/sprite.png") -80px -329px;
+    width: 41px;
+    height: 41px;
+    top:50%;
+    left:50%;
+    margin:-20px 0 0 -20px;
+    position: absolute;	
+}
+.btn_setApprover.clickable{
+    background-position:-80px -280px;
+}
+.btn_setApprover.clickable:hover{
+    background-position: -80px -230px;
+    cursor: pointer;
+}
+.oriApproverContainer{
+    border:1px solid #c7c7c7;
+    overflow-y:auto;
+    overflow-x:hidden;
+    padding:5px 5px 0;
+}
+.ul_allApprover li,.ul_allApprover_batch li{cursor: pointer}
+.important{color:red}
+.approverTip{
+    background-color: #FFFBE8;
+    border:1px solid #ED885B;
+    color:#656565;
+    padding:3px 10px
+}

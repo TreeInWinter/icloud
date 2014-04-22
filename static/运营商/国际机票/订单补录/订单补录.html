@@ -1,0 +1,136 @@
+<!DOCTYPE html><html><head>
+        <title>机票 国内机票 平台建单</title>
+        <script src="http://localhost:35729/livereload.js"></script><meta charset="utf-8" />
+<link href="/static/css/common.css" rel="stylesheet" />
+<link href="/static/css/b2b.css" rel="stylesheet" />
+<link href="/static/css/kendo.common.css" rel="stylesheet" />
+<link href="/static/css/kendo.gray.css" rel="stylesheet" />
+<link href="/static/css/kendo.reset.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="/static/css/global.css" />
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/kendo.web.js"></script>
+<script type="text/javascript" src="/static/js/plugins/jquery.fixedBar.js"></script>
+<script type="text/javascript" src="/static/js/global.js"></script>
+<script type="text/javascript" src="/static/js/flight.js"></script>
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+<!-- @CLB@ -->
+</head>
+<body>  <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">消息</a>
+                <span>New</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent">
+<link href="/static/css/pnr.css" rel="stylesheet"><div id="page-importpnr"><div class="actions block">
+    <div class="col col-r sep-l">
+        <button class="btns btn-blue">黑屏预订</button>
+        <button class="btns btn-blue">白屏预订</button>
+    </div>
+    <span class="page-title">
+        订单补录
+    </span>
+</div>
+<div class="block block1">
+    <!-- search_form -->
+    <ul class="flat-list">
+        <li>
+        <label class="vertical-head">客户名称</label>
+        <input style="width:120px" />
+        <button class="btns btn-search">查询</button>
+        </li>
+    </ul>
+</div>
+
+<div class="block block2">
+    <div id="tabstrip">
+        <div>
+            <div class="row">
+                <form action="#">
+                <ul class="flat-list">
+                    <li class="row-title">方式一：</li>
+                    <li>通过PNR创建</li>
+                  <li>
+                  <input class="input-pnrcode" value="HYGNKR">
+                  </li>
+                  <li>
+                  <button class="btns btn-orange-n">创建订单</button> 
+                  </li>
+                </ul>
+                </form>
+            </div>
+            <div class="row">
+                <ul class="flat-list">
+                    <li class="row-title">方式二：</li>
+                    <li>通过票号创建</li>
+                    <li>
+                        <input class="input-ticketNo" value="HYGNKR">
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/x-kendo-template" id="salepoint-window">
+    <div>
+        <h1>
+            建单营业点 
+        </h1> 
+    </div>
+</script>
+
+<script type="text/javascript" src="/static/js/importpnr.js"></script>
+
+</div>        </div>
+
+    </div>
+		
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+</body></html>

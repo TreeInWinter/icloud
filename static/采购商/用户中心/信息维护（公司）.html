@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 用户中心 国内订单列表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+     
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_ucenter.css" media="screen" />
+
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.store.css" />
+    
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>    
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>    
+
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+    
+    <script type="text/javascript" src="../../static/js/store/store.js"></script>
+
+</head>
+<body>
+
+<div class="main-wrapper">
+<header class="main-header">
+    <a class="logo" href="/"><h1>天地行</h1></a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first active"><a herf="#">首页</a></li>
+            <li><a herf="#">国内机票</a></li>
+            <li><a herf="#">国际机票</a></li>
+            <li><a herf="#">酒店</a></li>
+        </ul> 
+    </nav>
+    <nav class="main-links">
+        <ul class="clearfix">
+            <li class="first"><a href="#">订单管理</a></li>
+            <li><a href="#">分销管理</a></li>
+            <li><a href="#">电子钱包</a></li>
+            <li><a href="#">统计报表</a></li>
+            <li><a href="#">客服服务</a></li>
+            <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+            <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+</header>
+<section class="main-body clearfix">
+    <aside class="us-nav">
+        <nav>
+            <h3>用户中心</h3>
+            <div class="us-bind"><a href="#">手机已绑定</a>&#12288;<a class="text1" href="#"><i class="ucnav_03"></i>邮箱未绑定</a></div>
+            <dl>
+                <dt><i class="ucnav_07"></i>订单管理</dt>
+                <dd><a href="#">当日所有订单</a></dd>
+                <dd><a href="#">国内机票订单</a></dd>
+                <dd><a href="#">国际机票订单</a></dd>
+                <dd><a href="#">酒店订单</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="ucnav_10"></i>询价单管理</dt>
+                <dd><a href="#">国内机票询价单</a></dd>
+                <dd><a href="#">国际机票询价单</a></dd>
+                <dd><a href="#">酒店询价单</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_12"></i>电子钱包</dt>
+                <dd><a href="#">账户信息</a></dd>
+                <dd><a href="#">账户充值</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_15"></i>票据管理</dt>
+                <dd><a href="#">行程单</a></dd>
+                <dd><a href="#">发票</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_17"></i>统计报表</dt>
+                <dd><a href="#">财务报表</a></dd>
+                <dd><a href="#">机票业务</a></dd>
+                <dd><a href="#">酒店业务</a></dd>
+                <dd><a href="#">分销业务</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_19"></i>分销商管理</dt>
+                <dd><a href="#">分销商管理</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_22"></i>账户资料</dt>
+                <dd><a class="current" href="#">信息维护</a></dd>
+                <dd><a href="#">消息设置</a></dd>
+            </dl>
+
+            <dl>
+              <dt><i class="ucnav_26"></i>我的工具</dt>
+              <dd><a class="ic-j" href="#"><i class="ucnav_29"></i>常旅客管理</a></dd>
+                <dd><a class="ic-j" href="#"><i class="ucnav_32"></i>短消息</a></dd>
+            </dl>
+        </nav>
+    </aside>
+    <main class="us-content">
+        <h1 class="us-title">信息维护</h1>
+        <div class="us-body">
+            <aside>
+                <ul class="tab_change clearfix">
+                    <li class="currentState"><em><a href="javascript:void(0);">公司信息</a></em></li>
+                    <li><em><a href="javascript:void(0);">我的账号</a></em></li>
+                    <li><em><a href="javascript:void(0);">我的账号</a></em></li>
+                </ul>
+            </aside>
+            <div class="successful">登录密码修改成功！</div>
+            <div class="tabPanel">
+                <h1 class="us-title">公司信息</h1>
+                <table>
+                    <colgroup>
+                        <col width="75">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td class="td_head">公司类型：</td>
+                            <td>旅行社</td>
+                        </tr>
+                        <tr>
+                            <td class="td_head">公司名称：</td>
+                            <td>旅行社</td>
+                        </tr>
+                        <tr>
+                            <td class="td_head">公司简称：</td>
+                            <td>旅行社</td>
+                        </tr>
+                        <tr>
+                            <td class="td_head">所在地区：</td>
+                            <td>旅行社</td>
+                        </tr>
+                        <tr>
+                            <td class="td_head">详细地址：</td>
+                            <td>旅行社</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h1 class="us-title">公司负责人信息</h1>
+                <table>
+                    <colgroup>
+                        <col width="75">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td class="td_head">姓名：</td>
+                            <td>旅行社</td>
+                        </tr>
+                        <tr>
+                            <td class="td_head">电子邮箱：</td>
+                            <td>旅行社</td>
+                        </tr>
+                        <tr>
+                            <td class="td_head">手机号码：</td>
+                            <td>旅行社</td>
+                        </tr>
+                        <tr>
+                            <td class="td_head">办公电话：</td>
+                            <td>旅行社</td>
+                        </tr>
+                        <tr>
+                            <td class="td_head">QQ：</td>
+                            <td>旅行社</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h1 class="us-title">主要业务联系人信息</h1>
+                <table>
+                    <colgroup>
+                        <col width="75">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td class="td_head">姓名：</td>
+                            <td>旅行社</td>
+                        </tr>
+                        <tr>
+                            <td class="td_head">电子邮箱：</td>
+                            <td>旅行社</td>
+                        </tr>
+                        <tr>
+                            <td class="td_head">手机号码：</td>
+                            <td>旅行社</td>
+                        </tr>
+                        <tr>
+                            <td class="td_head">办公电话：</td>
+                            <td>旅行社</td>
+                        </tr>
+                        <tr>
+                            <td class="td_head">QQ：</td>
+                            <td>旅行社</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tabPanel" style="display:none">
+                <h1 class="us-title">账号信息</h1>
+                <table>
+                    <colgroup>
+                        <col width="75">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td class="td_head">用户名：</td>
+                            <td>laobao</td>
+                        </tr>
+                        <tr>
+                            <td class="td_head">电子邮箱：</td>
+                            <td>234567@163.com</td>
+                        </tr>
+                        <tr>
+                            <td class="td_head">登录密码：</td>
+                            <td>********<a href="javascript:;" class="btn_modifyPassword">修改密码</a></td>
+                        </tr>
+                        <tr>
+                            <td class="td_head">客户类型：</td>
+                            <td>公司</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h1 class="us-title">
+                    主要业务联系人信息
+                    <span style="float:right;margin-top:-8px">
+                        <a class="adaptiveButton medium brightRed_btn btn_edit">
+                            <span class="left"></span>
+                            <span class="center center_1">编辑</span>
+                            <span class="right"></span>
+                        </a>
+                        <a class="adaptiveButton medium brightRed_btn btn_save" style="display:none">
+                            <span class="left"></span>
+                            <span class="center center_1">保存</span>
+                            <span class="right"></span>
+                        </a>
+                    </span>
+                </h1>
+                <table id="tbl_mainBusinessContactInfo">
+                    <colgroup>
+                        <col width="75">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <td class="td_head"><i class="important" style="display:none">*</i>姓名：</td>
+                        <td><input value="燕小六" type="text" name="" id="" class="editable disabled" readonly="readonly"/></td>
+                    </tr>
+                    <tr>
+                        <td class="td_head"><i class="important" style="display:none">*</i>电子邮箱：</td>
+                        <td><input value="234567@163.com" type="text" name="" id="" class="editable disabled" readonly="readonly"/></td>
+                    </tr>
+                    <tr>
+                        <td class="td_head"><i class="important" style="display:none">*</i>手机号码：</td>
+                        <td><input value="13912345678" type="text" name="" id="" class="editable disabled" readonly="readonly"/></td>
+                    </tr>
+                    <tr>
+                        <td class="td_head"><i class="important" style="display:none">*</i>办公电话：</td>
+                        <td><input type="text" name="" id="" class="editable disabled" readonly="readonly" value="021" style="width:30px"/>-<input value="543217890" type="text" name="" id="" class="editable disabled" readonly="readonly" style="width:92px"/></td>
+                    </tr>
+                    <tr>
+                        <td class="td_head">QQ：</td>
+                        <td><input value="13912345678" type="text" name="" id="" class="editable disabled" readonly="readonly"/></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tabPanel" style="display:none">
+                <h1 class="us-title">
+                    员工信息
+                    <span style="float:right;margin-top:-8px">
+                        <a class="adaptiveButton medium brightRed_btn btn_edit">
+                            <span class="left"></span>
+                            <span class="center center_1">编辑</span>
+                            <span class="right"></span>
+                        </a>
+                        <a class="adaptiveButton medium brightRed_btn btn_save" style="display:none">
+                            <span class="left"></span>
+                            <span class="center center_1">保存</span>
+                            <span class="right"></span>
+                        </a>
+                    </span>
+                </h1>
+                <table id="tbl_mainBusinessContactInfo">
+                    <colgroup>
+                        <col width="75">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <td class="td_head">用户名：</td>
+                        <td>燕小六</td>
+                    </tr>
+                    <tr>
+                        <td class="td_head">电子邮箱：</td>
+                        <td><input value="234567@163.com" type="text" name="" id="" class="editable disabled" readonly="readonly"/></td>
+                    </tr>
+                    <tr>
+                        <td class="td_head">登录密码：</td>
+                        <td>******** <a href="javascript:;" class="btn_modifyPassword">修改密码</a></td>
+                    </tr>
+                    <tr>
+                        <td class="td_head">手机号码：</td>
+                        <td><input value="13912345678" type="text" name="" id="" class="editable disabled" readonly="readonly"/></td>
+                    </tr>
+                    <tr>
+                        <td class="td_head">办公电话：</td>
+                        <td><input type="text" name="" id="" class="editable disabled" readonly="readonly" value="021" style="width:30px"/>-<input value="543217890" type="text" name="" id="" class="editable disabled" readonly="readonly" style="width:92px"/></td>
+                    </tr>
+                    <tr>
+                        <td class="td_head">QQ：</td>
+                        <td><input value="13912345678" type="text" name="" id="" class="editable disabled" readonly="readonly"/></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</section>
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+<script type="text/javascript">
+    $(function(){
+        $(".btn_edit").click(function(){
+            $("#tbl_mainBusinessContactInfo :text").removeClass("disabled").prop("readonly",false);
+            $("#tbl_mainBusinessContactInfo i.important").show();
+            $(this).hide();
+            $(".btn_save").show();
+        });
+        $(".btn_save").click(function(){
+            $("#tbl_mainBusinessContactInfo :text").addClass("disabled").prop("readonly",true);
+            $("#tbl_mainBusinessContactInfo i.important").hide();
+            $(this).hide();
+            $(".btn_edit").show();
+        });
+        $(".tab_change li").each(function(index){
+            $(this).click(function(){
+                $(".tabPanel").hide();
+                $(".tabPanel:eq(" + index + ")").show();
+                $(".tab_change li").removeClass("currentState");
+                $(this).addClass("currentState");
+            });
+
+        });
+    })
+</script>
+</body>
+</html>
+

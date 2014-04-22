@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>运营商 旅游 游客列表-全部</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.common.min.css" rel="stylesheet" />
+    <link href="../../static/css/kendo.gray.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.reset.css" rel="stylesheet" type="text/css" /> 
+    <link href="../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.reset.css" rel="stylesheet" />
+    <link href="../../static/css/travel.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../static/js/vendor/jquery.min.js"></script>
+	<script type="text/javascript" src="../../static/js/plugins/jquery.fixedBar.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/finance.js"></script>
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" href="../../static/css/ie.css" />
+        <script type="text/javascript" src="../../static/js/vendor/IE7.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../../static/js/sync.js"></script>
+
+   <!-- <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            new Collpase({
+                limitHeight:140,
+                container:'.xyzc_div' 
+            }).init();
+        }) 
+    </script>-->
+
+</head>
+<body>
+    <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">&nbsp;</a>
+                <span>&nbsp;</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent" style="overflow:hidden;">
+			<!-- start content -->
+        
+            <div class="topFixedToolsBar">
+                <div style="float:left;border-right:1px solid #ffffff">
+                    <a href="#" style="display:inline-block;line-height:33px;font-size: 14px;font-weight: bold;border-right: 1px solid #CDCECE;padding: 0 8px;">返回</a>
+                </div>                        
+                <div class="fixedMenu" style="font-weight:bold; width:auto;">
+                    <span>游客列表</span>
+                </div>           
+            </div>
+            
+            <div class="america">
+                <em>团号：BM-130908-001</em>
+                <b>美国东西海岸14日团队游(3钻)·7成四星酒店</b>
+                <span style="margin-right:20px;">出发日期： 2014-04-30</span>
+                <span>行程天数：6天</span>
+            </div>
+            
+            <div class="information_div">
+                   <table cellpadding="0" cellspacing="0" class="information_tab">
+                      <colgroup>
+                           <col width="55px" /> 
+                           <col width="220x" /> 
+                           <col width="65px" /> 
+                           <col width="230px" /> 
+                           <col width="55px" /> 
+                           <col width="220px" />
+                      </colgroup>
+                      <tr>
+                         <td>游客姓名</td>
+                         <td>
+                             <input type="text" style="width:120px;"/>
+                         </td>
+                         <td>客户名称</td>
+                         <td>
+                              <input type="text" style="width:120px;"/>
+                              <button class="btns btn-search ac-search-user" role="window_trigger">查询</button>
+                         </td>
+                         <td>报名状态</td>
+                         <td>
+                             <select style="width:125px;">
+                                 <option>全部</option>
+                                 <option>正常</option>
+                                 <option>已取消</option>
+                             </select>
+                         </td>
+                         <td rowspan="2">
+                             <a href="javascript:;" class="button_important adaptiveButton medium">
+                                <span class="left"></span>
+                                <span class="center" style="padding:0 25px;">查 询</span>
+                                <span class="right"></span>
+                            </a>
+                         </td>
+                      </tr> 
+                      <tr>
+                          <td>签证状态</td>
+                          <td>
+                              <select style="width:125px;">
+                                   <option>全部</option>
+                                   <option>材料到齐/已齐</option>
+                                   <option>...</option>
+                              </select>
+                          </td>
+                          <td>支付状态</td>
+                          <td>
+                              <select style="width:125px;">
+                                   <option>全部</option>
+                                   <option>未支付</option>
+                                   <option>定金支付</option>
+                                   <option>全额支付</option>
+                              </select>
+                          </td>
+                          <td>销售</td>
+                          <td>
+                              <select style="width:125px;">
+                                   <option>全部</option>
+                                   <option>李勇</option>
+                                   <option>张三</option>
+                                   <option>刘鹏</option>
+                              </select>
+                          </td>
+                      </tr>
+                    </table>              
+             </div>
+           
+              
+             <table cellpadding="0" cellspacing="0" class="tgrid">
+                  <thead>
+                      <tr>
+                          <th class="line_left">中文姓名</th>
+                          <th>手机号</th>
+                          <th>性别</th>
+                          <th>签证状态</th>
+                          <th>支付状态</th>
+                          <th>支付金额</th>
+                          <th>客户名称</th>
+                          <th>联系人</th>
+                          <th>手机号</th>
+                          <th>销售</th>
+                          <th>报名状态</th>
+                          <th class="line_right">报名日期</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>张大国</td>
+                          <td>13800138000</td>
+                          <td>M</td>
+                          <td>材料到齐</td>
+                          <td>定金支付</td>
+                          <td>500.00元</td>
+                          <td>北京途牛国际旅行社有限公司</td>
+                          <td>胡寺凌</td>
+                          <td>13601123456</td>
+                          <td>张骏</td>
+                          <td>正常</td>
+                          <td>2014/03/08</td>
+                      </tr>
+                      <tr>
+                          <td>张大国</td>
+                          <td>13800138000</td>
+                          <td>F</td>
+                          <td>材料到齐</td>
+                          <td>全额支付</td>
+                          <td>500.00元</td>
+                          <td>北京途牛国际旅行社有限公司</td>
+                          <td>胡寺凌</td>
+                          <td>13601123456</td>
+                          <td>张骏</td>
+                          <td>正常</td>
+                          <td>2014/03/08</td>
+                      </tr>
+                      <tr>
+                          <td>张大国</td>
+                          <td>13800138000</td>
+                          <td>M</td>
+                          <td>材料到齐</td>
+                          <td>无签证</td>
+                          <td>500.00元</td>
+                          <td>北京途牛国际旅行社有限公司</td>
+                          <td>胡寺凌</td>
+                          <td>13601123456</td>
+                          <td>张骏</td>
+                          <td>正常</td>
+                          <td>2014/03/08</td>
+                      </tr>
+                      <tr class="disabled">
+                          <td>张大国</td>
+                          <td>13800138000</td>
+                          <td>F</td>
+                          <td>自备</td>
+                          <td>收取签证费</td>
+                          <td>500.00元</td>
+                          <td>不夜城旅行社</td>
+                          <td>胡寺凌</td>
+                          <td>13601123456</td>
+                          <td>张骏</td>
+                          <td>已取消</td>
+                          <td>2014/03/08</td>
+                      </tr>
+                      <tr class="disabled">
+                          <td>张大国</td>
+                          <td>13800138000</td>
+                          <td>F</td>
+                          <td>自备</td>
+                          <td>无签证</td>
+                          <td>500.00元</td>
+                          <td>不夜城旅行社</td>
+                          <td>胡寺凌</td>
+                          <td>13601123456</td>
+                          <td>张骏</td>
+                          <td>已取消</td>
+                          <td>2014/03/08</td>
+                      </tr>
+                      <tr>
+                          <td>张大国</td>
+                          <td>13800138000</td>
+                          <td>M</td>
+                          <td>自备</td>
+                          <td>审核资料</td>
+                          <td>500.00元</td>
+                          <td>不夜城旅行社</td>
+                          <td>胡寺凌</td>
+                          <td>13601123456</td>
+                          <td>张骏</td>
+                          <td>正常</td>
+                          <td>2014/03/08</td>
+                      </tr>
+                      <tr>
+                          <td>张大国</td>
+                          <td>13800138000</td>
+                          <td>M</td>
+                          <td>材料到齐</td>
+                          <td>无签证</td>
+                          <td>500.00元</td>
+                          <td>不夜城旅行社</td>
+                          <td>胡寺凌</td>
+                          <td>13601123456</td>
+                          <td>张骏</td>
+                          <td>正常</td>
+                          <td>2014/03/08</td>
+                      </tr>
+              </tbody>
+          </table>
+          
+              <div class="grid-table-pagination page">
+                  <span class="grid-table-count">
+                      共 <em>132</em> 条记录
+                  </span>
+                  <span>
+                      <a href="#" class="prev">&nbsp;</a>
+                  </span>
+                  <span class="links">
+                      <a href="#">1</a>
+                      <a href="#">2</a>
+                      <a href="#" class="current">3</a>
+                      <a href="#">4</a>
+                      <a href="#">5</a>
+                      <a href="javascript:;">...</a>
+                      <a href="#">50</a>
+                  </span>
+                  <span>
+                      <a href="#" class="next">&nbsp;</a>
+                  </span>
+              </div>
+              
+            </div>
+          </div>
+ 
+    <!-- end of content -->
+    </div>
+    
+    <script type="text/x-kendo-template" id="ac-cancel_registration-template">
+	<div class="apply_file">
+		<div class="proposer">
+			<b>申请人：</b>
+			<em>王飞</em>
+		</div>    
+		<div class="cancel">
+			 <h3>申请取消报名游客：</h3>
+			 <table>
+				  <colgroup>
+					   <col width="93px"/>
+					   <col width="93px"/>
+					   <col width="93px"/>
+					   <col width="93px"/>
+				  </colgroup>
+				  <thead>
+					   <tr>
+						   <th>姓名</th>
+						   <th>证件类型</th>
+						   <th>签证状态</th>
+						   <th>支付状态</th>
+					   </tr>
+				  </thead>
+				  <tbody>
+					   <tr>
+						   <td>张大国</td>
+						   <td>护照</td>
+						   <td>无签证</td>
+						   <td>未付款</td>
+					   </tr>
+					   
+				  </tbody>
+			 </table>
+		</div>
+		<div class="cancel">
+			 <h3>申请取消报名产品：</h3>
+			 <table>
+				  <colgroup>
+					   <col width="97px"/>
+					   <col width="190px"/>
+					   <col width="65px"/>
+					   <col width="63px"/>
+				  </colgroup>
+				  <thead>
+					   <tr>
+						   <th>团号</th>
+						   <th>产品名称</th>
+						   <th>出发日期</th>
+						   <th>行程天数</th>
+					   </tr>
+				  </thead>
+				  <tbody>
+					   <tr>
+						   <td>BM-130908-001</td>
+						   <td>美国东西海岸14日团队游(3钻)...</td>
+						   <td>10-27</td>
+						   <td>5天</td>
+					   </tr>
+					   
+				  </tbody>
+			 </table>
+		</div>
+		<div class="cancel_reason">
+			 <h3><em> * </em>申请取消报名原因：</h3>
+			 <textarea  readonly="readonly">这里是取消报名原因，不可编辑状态！！！
+	取消报名原因取消报名原因取消报名原因取消报名原因取消报名原因取消报名原因取消报名原因取消报名原因取消报名原因取消报名原因
+			 </textarea>      
+		</div>
+		
+		<div class="select_btn">
+		  <a href="javascript:;" class="button_important adaptiveButton medium">
+				<span class="left"></span>
+				<span class="center">审核通过</span>
+				<span class="right"></span>
+		  </a>
+		  <a href="javascript:;" class="button_unimportant adaptiveButton medium">
+				<span class="left"></span>
+				<span class="center gray_clour">审核通过</span>
+				<span class="right"></span>
+		  </a> 
+		</div>
+	</div>
+	</script>
+    
+    
+    
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+	$(function(){
+		new PopWindow('.ac-cancel_registration',{
+			template:'#ac-cancel_registration-template',
+			title:'取消报名审核',
+			width:'470'
+		}).init();
+		
+	});
+	
+	</script>
+    
+    
+</body>
+</html>

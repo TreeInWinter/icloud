@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>客户管理 采购商-公司-详情页</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+<link rel="stylesheet" href="/static/css/kendo.common.min.css" />
+<link rel="stylesheet" href="/static/css/kendo.gray.css" />
+<link rel="stylesheet" href="/static/css/kendo.reset.css" />
+<link rel="stylesheet" href="/static/css/common.css" />
+<link rel="stylesheet" href="/static/css/b2b.css" />
+<link rel="stylesheet" href="/static/css/buyer.css" />
+
+<script type="text/javascript" src="/static/js/vendor/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/plugins/jquery.fixedBar.js"></script>
+<script type="text/javascript" src="/static/js/kendo.web.js"></script>
+<script type="text/javascript" src="/static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+<script type="text/javascript" src="/static/js/global.js"></script>
+<script type="text/javascript" src="/static/js/khgl.js"></script>
+<!--[if lt IE 8]>
+    <link rel="stylesheet" href="/static/css/ie.css" />
+    <script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body>  
+<div id="extHeader">
+    <div></div>
+</div>
+
+<div id="container">
+    <div class="header">
+        <h1></h1>
+        <div>
+            <span>你好,${name}</span>
+            <a href="javascript:void(0);">退出</a>
+        </div>
+        <ul id="top_menu">
+            <li><a href="javascript:void(0);">国内机票</a></li>
+            <li><a href="javascript:void(0);">国际机票</a></li>
+            <li><a href="javascript:void(0);">酒店</a></li>
+            <li><a href="javascript:void(0);">票证中心</a></li>
+            <li><a href="javascript:void(0);">财务管理</a></li>
+            <li><a href="javascript:void(0);">客户管理</a></li>
+            <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+        </ul>
+        <ol class="sub_menu">
+            <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+            <li><a href="javascript:void(0);">公司信息</a></li>
+            <li><a href="javascript:void(0);">组织架构</a></li>
+            <li><a href="javascript:void(0);">角色维护</a></li>
+            <li><a href="javascript:void(0);">基础数据</a></li>
+        </ol>
+        <div id="message">
+            <a href="javascript:void(0);">消息</a>
+            <span>New</span>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="sub_menu_bar"></div>
+    <div id="mainContent">
+        <div class="actions block">
+            <div class="col col-l sep-r">
+                <button class="btns btn-return">返回</button>
+            </div>
+            <div class="col col-l" style="padding-left:10px;">
+                <a class="item highlight" href="#">编辑采购商</a>
+            </div>            
+        </div>
+        <div class="block"> <!--block 开始-->
+            <div class="block-field">
+                <span style="margin-right:40px;">采购商类型：公司</span>
+                <span style="margin-right:40px;">内部设置：OTA  只冲票量</span>
+                <span>大区：华东</span>
+            </div>
+            <div class="block-field">
+                <div class="block-title">
+                    <span>公司信息</span> 
+                </div>
+                <table class="detailsInfo">
+                     <colgroup>
+                          <col width="300"/>
+                          <col width="180"/>
+                          <col width="210"/>
+                          <col width="210"/>
+                     </colgroup>
+                     <tbody>
+                          <tr>
+                              <td>全称：真旅网上海技术中心</td>
+                              <td>简称：真旅</td>
+                              <td>法人姓名：无</td>
+                              <td>法人证件：无</td>
+                          </tr>
+                          <tr>
+                              <td>地址：上海市闸北区广中西路555号</td>
+                              <td> </td>
+                              <td>邮政编码：无</td>
+                              <td> </td>
+                          </tr>
+                     </tbody>
+                </table>
+            </div>
+            <div class="block-field">
+                <div class="block-title">
+                    <span>联系方式</span> 
+                </div>
+                <div style="margin-bottom:10px;">
+                     <h3 class="inforContent"> <i class="peopleIcon"></i>负责人信息：</h3>
+                     <table class="detailsInfo">
+                         <colgroup>
+                              <col width="120"/>
+                              <col width="170"/>
+                              <col width="150"/>
+                              <col width="220"/>
+                              <col width="130"/>
+                              <col width="140"/>
+                         </colgroup>
+                         <tbody>
+                              <tr>
+                                  <td>姓名：周时祥</td>
+                                  <td>联系电话：021-233223</td>
+                                  <td>手机：12312123232</td>
+                                  <td>电子邮箱：<em class="ellipsis">deeefeffd@dfd...</em></td>
+                                  <td>QQ：无</td>
+                                  <td>传真：无</td>
+                              </tr>
+                         </tbody>
+                     </table>
+                </div>
+                <div>
+                     <h3 class="inforContent"> <i class="peopleIcon"></i>业务联系人信息：</h3>
+                     <table class="detailsInfo">
+                         <colgroup>
+                              <col width="120"/>
+                              <col width="170"/>
+                              <col width="150"/>
+                              <col width="220"/>
+                              <col width="130"/>
+                              <col width="140"/>
+                         </colgroup>
+                         <tbody>
+                              <tr>
+                                  <td>姓名：周时祥</td>
+                                  <td>联系电话：021-233223</td>
+                                  <td>手机：12312123232</td>
+                                  <td>电子邮箱：<em class="ellipsis">deeefeffd@dfd...</em></td>
+                                  <td>QQ：无</td>
+                                  <td>传真：无</td>
+                              </tr>
+                         </tbody>
+                     </table>
+                </div>
+            </div>
+            <div class="block-field">
+                <div class="block-title">
+                    <span>资质证书</span> 
+                </div>
+                <table class="detailsInfo">
+                     <colgroup>
+                          <col width="320"/>
+                          <col width="320"/>
+                          <col width="280"/>
+                     </colgroup>
+                     <tbody>
+                          <tr>
+                              <td>营业执照：<a href="javascript:void(0);" class="accessory">附件</a></td>
+                              <td>税务登记证：<a href="javascript:void(0);" class="accessory">附件</a></td>
+                              <td>一般纳税人证书：<a href="javascript:void(0);" class="accessory">附件</a></td>
+                          </tr>
+                     </tbody>
+                </table>
+            </div>
+            <div class="block-field">
+                <div class="block-title">
+                    <span>账号信息</span> 
+                </div>
+                <table class="detailsInfo">
+                     <colgroup>
+                          <col width="320"/>
+                          <col width="320"/>
+                          <col width="280"/>
+                     </colgroup>
+                     <tbody>
+                          <tr>
+                              <td>用户名：zhoushixiang </td>
+                              <td>密码：******</td>
+                              <td>邮箱：无</td>
+                          </tr>
+                     </tbody>
+                </table>
+            </div>
+            <div class="block-field">
+                <div class="block-title">
+                    <span>账户信息</span> 
+                </div>
+                <table class="detailsInfo">
+                     <colgroup>
+                          <col width="320"/>
+                          <col width="320"/>
+                          <col width="280"/>
+                     </colgroup>
+                     <tbody>
+                          <tr>
+                              <td>类型：单笔</td>
+                              <td> </td>
+                              <td> </td>
+                          </tr>
+                     </tbody>
+                </table>
+            </div>
+            <div class="block-field">
+                <div class="block-title">
+                    <span>协议信息</span> 
+                </div>
+                <table class="detailsInfo">
+                     <colgroup>
+                          <col width="155"/>
+                          <col width="775"/>
+                     </colgroup>
+                     <tbody>
+                          <tr>
+                              <td style="vertical-align:top;">机票合作配置协议</td>
+                              <td class="moreList">
+                                  <label>2014-01-01至2015-01-01<a href="javascript:void(0);" class="accessory">附件</a></label>
+                                  <label>2014-01-01至2015-01-01<a href="javascript:void(0);" class="accessory">附件</a></label>
+                                  <label>2014-01-01至2015-01-01<a href="javascript:void(0);" class="accessory">附件</a></label>
+                                  <label>2014-01-01至2015-01-01<a href="javascript:void(0);" class="accessory">附件</a></label>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>黑屏配置协议</td>
+                              <td>无</td>
+                          </tr>
+                          <tr>
+                              <td>支票/汇款承诺配置协议</td>
+                              <td>无</td>
+                          </tr>
+                          <tr>
+                              <td style="vertical-align:top;">三方协议</td>
+                              <td class="moreList">
+                                  <label>BK(奥凯) &nbsp;&nbsp;&nbsp; 协议编号：2382832939<a href="javascript:void(0);" class="accessory">附件</a></label>
+                                  <label>BK(奥凯) &nbsp;&nbsp;&nbsp; 协议编号：2382832939<a href="javascript:void(0);" class="accessory">附件</a></label>
+                                  <label>BK(奥凯) &nbsp;&nbsp;&nbsp; 协议编号：2382832939<a href="javascript:void(0);" class="accessory">附件</a></label>
+                              </td>
+                          </tr>
+                     </tbody>
+                </table>
+            </div>           
+        </div> <!--block 结束-->
+        
+      </div>
+</div>
+
+<div id="extFooter">
+    <div>
+        <p>
+        <a href="javascript:void(0);">关于我们</a>&nbsp;|
+        <a href="javascript:void(0);">微博</a>&nbsp;|
+        <a href="javascript:void(0);">服务条款</a>&nbsp;|
+        <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+        </p>
+        <p>客户服务热线:400-720-6666</p>
+    </div>
+</div>
+</body>
+</html>

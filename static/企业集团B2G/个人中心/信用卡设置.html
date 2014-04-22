@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta content="text/html" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css"/>
+    <link rel="stylesheet" href="../../static/css/b2g.css" media="all"/>
+    <link rel="stylesheet" href="../../static/css/kendo.common.css"/>
+    <link rel="stylesheet" href="../../static/css/kendo.b2g.css"/>
+    <link rel="stylesheet" href="../../static/css/b2g_personage_center.css" media="all" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/b2g/common.js"></script>
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+    <!--[if lte IE 9]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <style>
+        .ac-floatlayer {
+            background-color: transparent;
+        }
+
+        .k-ie7 .ac-floatlayer, .k-ie8 .ac-floatlayer {
+            background-color: transparent;
+        }
+        input.k-input:focus{
+            border: 0;
+            box-shadow:none;
+            -webkit-box-shadow:none;
+        }
+        .k-select{
+            border: 0 !important;
+        }
+    </style>
+    <style>
+
+    </style>
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="top-line"></div>
+    <header class="main-header">
+        <div class="header-content"><a class="logo" href="/">天地行 B2G</a>
+            <nav class="main-nav">
+                <ul class="clearfix">
+                    <li class="first active"><a herf="#">行程预订</a></li>
+                    <li><a herf="#">行程管理</a></li>
+                    <li><a herf="#">数据服务</a></li>
+                    <li><a herf="#">创业维护</a></li>
+                    <li><a herf="#">系统设置</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="header-bar clearfix">
+        <div class="header-bar-content"><span class="font-titbar">潘小美，您正在为<em>钱多多</em><em>唐笑笑</em><em>小可怜</em>预订</span>
+        </div>
+    </div>
+    <section class="main-body clearfix">
+        <div class="main-body-content">
+            <div class="personalNavBar clearfix">
+		  <ul>
+		    <li><span class="journey"><em>我的行程</em></span></li>
+			<li class="current"><span class="card"><em>信用卡</em></span></li>
+			<li><span class="secretary"><em>差旅秘书</em></span></li>
+			<li><span class="approver"><em>代理审批人</em></span></li>
+			<li><span class="messages"><em>消息中心</em></span></li>
+			<li><span class="data"><em>我的资料</em></span></li>
+			<li><span class="password"><em>修改密码</em></span></li>
+		  </ul>
+		</div>
+            <div class="fillIn clearfix"> <!--fillIn start-->
+                <div class="leftFillIn"> <!--leftFillIn start-->
+                    <div class="infoContent">
+                        <h3 class="writeTitle">我的信用卡</h3>
+                        <div class="fillInContent clearfix myVisa">
+                            <div class="cardEnsure">
+                                <div class="cardType basicInfoSetup_items">
+                                    <ul>
+                                        <li><span><i class="zs"></i>招商银行</span></li>
+                                        <li><span class="cardNumber">6222 3333 4444 5555</span></li>
+                                        <li><span class="cardDays">有效期至：2015年 5月</span></li>
+                                        <li class="cardControl"><a href="javascript:;" class="cardDel">删除</a></li>
+                                    </ul>
+                                    <ul class="cardSelected">
+                                        <li><span><i class="jtyh"></i>交通银行</span></li>
+                                        <li><span class="cardNumber">6222 3333 4444 5555</span></li>
+                                        <li><span class="cardDays">有效期至：2015年 5月</span></li>
+                                        <li class="cardControl"><a href="javascript:;" class="cardDel">删除</a></li>
+                                    </ul>
+                                    <ul class="cardType_add">
+                                       <li>
+                                           <i></i>添加一张信用卡
+                                       </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="clearfix" style="height: 20px;"></div>
+                            <div class="editVisaInfo" style="display:none">
+                                <div class="fillCard">
+                                    <div class="cardSelTit"><b>请选择担保信用卡：</b>
+                                        <span class="cardSelTips">请确保信用卡证件登记信息与发卡行记录信息一致 !</span>
+                                    </div>
+                                    <table class="add_cardList writeList">
+                                        <colgroup>
+                                            <col width="230px"/>
+                                            <col width="152px"/>
+                                            <col width="162px"/>
+                                            <col width="162px"/>
+                                            <col width="80px"/>
+                                            <col width=""/>
+                                        </colgroup>
+                                        <tbody>
+                                        <tr>
+                                            <th>持卡人姓名：</th>
+                                            <td><input class="" type="text" style="width:150px;"/></td>
+                                            <th>发卡银行：</th>
+                                            <td>
+                                                <select data-role="dropdownlist" style="width:150px;">
+                                                    <option>光大银行</option>
+                                                    <option>广发银行</option>
+                                                    <option>招商银行</option>
+                                                    <option>建设银行</option>
+                                                </select>
+                                            </td>
+                                            <th>卡号：</th>
+                                            <td><input class="ipt_cardNo" type="text" class="" style="width:220px;" placeholder="请输入信用卡卡号"
+                                                       maxlength="19"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>信用卡有效期：</th>
+                                            <td colspan="5">
+                                                <select data-role="dropdownlist" style="width:45px; margin-right:3px;">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>月
+                                                <input type="text" name="" id="" style="width:70px" data-role="combobox" data-suggest="true" data-filter="startswith" data-source="['2014','2015','2016','2017','2018']"/>年
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>发卡银行预留证件：</th>
+                                            <td>
+                                                <select data-role="dropdownlist" style="width:150px;">
+                                                    <option>身份证</option>
+                                                    <option>驾驶证</option>
+                                                    <option>军官证</option>
+                                                    <option>学生证</option>
+                                                </select>
+                                            </td>
+                                            <th>证件号：</th>
+                                            <td colspan="3"><input class="" type="text" style="width:150px;"/></td>
+                                        </tr>
+                                        <tr>
+                                            <th>证件签发地：<br><span class="codeword">(2字码)</span></th>
+                                            <td><input class="" type="text" style="width:150px;"/></td>
+                                            <th>证件到期日：</th>
+                                            <td>
+                                                <input type="text" name="" placeholder="" style="width:150px" class="gray-border datepicker"/>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="buttonBox">
+                                        <button type="button" class="commonBtn lightRedBtn btnfontStyle" style="margin-right:12px">保 存</button>
+                                        <button type="button" class="commonBtn grayBtn btnfontStyle close bis_cancel">取 消</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="newVisaInfo" style="display:none">
+                                <div><span class="btn_addVisa"></span><span class="title16">添加一张信用卡</span></div>
+                                <div class="fillCard">
+                                    <div class="cardSelTit"><b>请选择担保信用卡：</b>
+                                        <span class="cardSelTips">请确保信用卡证件登记信息与发卡行记录信息一致 !</span>
+                                    </div>
+                                    <table class="add_cardList writeList">
+                                        <colgroup>
+                                            <col width="230px"/>
+                                            <col width="152px"/>
+                                            <col width="162px"/>
+                                            <col width="162px"/>
+                                            <col width="80px"/>
+                                            <col width=""/>
+                                        </colgroup>
+                                        <tbody>
+                                        <tr>
+                                            <th>持卡人姓名：</th>
+                                            <td><input class="" type="text" style="width:150px;"/></td>
+                                            <th>发卡银行：</th>
+                                            <td>
+                                                <select data-role="dropdownlist" style="width:150px;">
+                                                    <option>光大银行</option>
+                                                    <option>广发银行</option>
+                                                    <option>招商银行</option>
+                                                    <option>建设银行</option>
+                                                </select>
+                                            </td>
+                                            <th>卡号：</th>
+                                            <td><input class="ipt_cardNo" type="text" class="" style="width:220px;" placeholder="请输入信用卡卡号"
+                                                       maxlength="19"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>信用卡有效期：</th>
+                                            <td colspan="5">
+                                                <select data-role="dropdownlist" style="width:45px; margin-right:3px;">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>月
+                                                <input type="text" name="" id="" style="width:70px" data-role="combobox" data-suggest="true" data-filter="startswith" data-source="['2014','2015','2016','2017','2018']"/>年
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>发卡银行预留证件：</th>
+                                            <td>
+                                                <select data-role="dropdownlist" style="width:150px;">
+                                                    <option>身份证</option>
+                                                    <option>驾驶证</option>
+                                                    <option>军官证</option>
+                                                    <option>学生证</option>
+                                                </select>
+                                            </td>
+                                            <th>证件号：</th>
+                                            <td colspan="3"><input class="" type="text" style="width:150px;"/></td>
+                                        </tr>
+                                        <tr>
+                                            <th>证件签发地：<br><span class="codeword">(2字码)</span></th>
+                                            <td><input class="" type="text" style="width:150px;"/></td>
+                                            <th>证件到期日：</th>
+                                            <td>
+                                                <input type="text" name="" placeholder="" style="width:150px" class="gray-border datepicker"/>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="buttonBox">
+                                        <button type="button" class="commonBtn lightRedBtn btnfontStyle" style="margin-right:12px">添 加</button>
+                                        <button type="button" class="commonBtn grayBtn btnfontStyle close bis_cancel">取 消</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div id="delVisaTemplate" class="hide popup-window">
+    <div class="row row-icontext">
+        <i class="icon icon3"></i>
+        确认要删除这张信用卡吗？
+    </div>
+    <div class="row row-btns">
+        <a href="javascript:;" class="btns btn-s2 btn-c1">确 定</a>
+        <a href="javascript:;" class="btns btn-s2 btn-c5">取 消</a>
+    </div>
+</div>
+
+
+
+<script type="text/html" id="cardNoTemplate">
+    <div class="blockNumber">
+        #= cardNo #
+    </div>
+</script>
+
+<script>
+    $(function(){
+        $(".cardEdit").click(function(){
+            $(this).closest("ul").siblings("ul").css("visibility","hidden");
+            $(".editVisaInfo").slideDown("fast");
+        })
+        $(".editVisaInfo .buttonBox button").click(function(){
+            $(".editVisaInfo").slideUp("fast",function(){
+                $(".cardType ul").css("visibility","visible");
+            });
+
+        })
+        $(".cardType_add").click(function(){
+            $(".cardEnsure").hide();
+            $(".newVisaInfo").slideDown("fast");
+        })
+        $(".newVisaInfo .buttonBox button").click(function(){
+            $(".newVisaInfo").slideUp("fast",function(){
+                $(".cardEnsure").show();
+            });
+
+        })
+        new PopWindow(".cardDel",{
+            title:"删除订单",
+            width:500
+        },"#delVisaTemplate").init();
+
+        cardNo = FloatLayer({
+            trigger: '.ipt_cardNo',
+            template: '#cardNoTemplate',
+            offsetY: 25,
+            offsetX: -4,
+            data: {cardNo: ""},
+            type: "keypress"
+
+        })
+
+        $(".ipt_cardNo").keydown(function (e) {
+            var code = e.keyCode || e.charCode;
+            if ((code < 48 || code > 57) && (code != 8 && code != 46) && (code < 96 || code > 105)) return false;
+            setTimeout(function () {
+                var cardNo_txt = $(this).val().replace(/\s/g, "");
+                var tmp = "";
+                while (cardNo_txt.length > 4) {
+                    tmp += cardNo_txt.substr(0, 4) + " ";
+                    cardNo_txt = cardNo_txt.substring(4);
+                }
+                tmp += cardNo_txt;
+                $(this).val(tmp)
+                cardNo.data({cardNo: tmp});
+                if(!tmp.length) cardNo.close();
+            }.bind(this), 0);
+        })
+    })
+</script>
+</body>
+</html>

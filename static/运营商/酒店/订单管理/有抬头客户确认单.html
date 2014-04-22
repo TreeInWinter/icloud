@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- saved from url=(0136)http://proto.b2b.com/%e8%bf%90%e8%90%a5%e5%95%86/%e9%85%92%e5%ba%97/%e9%85%92%e5%ba%97%e5%85%a5%e4%bd%8f%e5%8d%95%e6%a8%a1%e6%9d%bf.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <meta content="text/html" charset="utf-8">
+    <style type="text/css">
+        body{background-color:#fff;font-size: 12px}
+        ul{list-style:none;margin:0;padding:0}
+        input[type=radio],input[type=checkbox]{margin-right:5px}
+        input[type=text],textarea{height:25px;border:1px solid #D3D3D3;padding:0 5px}
+        .title{color:#333333;font-size: 14px;}
+        table{width:100%}
+        td,th{padding:5px;text-align: left}
+        th{font-size: 14px}
+        .clearfix{zoom:1;clear:both}
+        .mainbody{width:780px}
+        .head{height:70px;border-bottom: 5px solid #EEEEEE;position: relative}
+        .logo{background:url("http://sc1.tdxinfo.com/images/travelzen_logo.gif") 10px 50% no-repeat;height:70px;width:140px;position:absolute;top: 0;left: 0;border-bottom: 5px solid #BDDFF2}
+        .caption{font-size: 30px;color:#000;position:absolute;top:20px;right:20px;font-weight: bold}
+        .infoContainer{padding:5px 10px}
+        .infoPanel{border-bottom: 1px dashed #ccc;padding:5px 10px;margin-bottom: 5px}
+        #addressInfo{text-align: left;float: left;}
+        #orderInfo{text-align: right;float: right;}
+        #addressInfo li,#orderInfo li{color:#656565;font-size: 14px;font-weight: bold;margin-bottom: 5px}
+        .subCaption{color:#333333;font-size: 14px;font-weight: bold;margin: 5px 0 10px;border-bottom: 1px dashed #cccccc;padding-bottom: 10px;}
+        .namearea {margin:15px 15px 15px 0;font-size: 14px;}
+        .tbl_head{background-color:#EEEEEE}
+        #rules{list-style:inside}
+        #rules li{margin-bottom: 12px}
+        .notice {margin-top: 10px;line-height:25px;}
+        .foot{border-top: 5px solid #EEEEEE;padding:15px 0;text-align: center;line-height: 1.625}
+    </style>
+    <style>
+        [touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }
+    </style>
+    <style type="text/css">
+            /*通用按钮样式2013-07-12*/
+        .adaptiveButton{display:inline-block;margin:0 2px;vertical-align:middle;cursor:pointer;vertical-align: top}
+        .adaptiveButton span.center{padding:0 15px}
+        .button_secondary{color:#ffffff}
+        .button_secondary span.center {color:#ffffff;}
+
+        .adaptiveButton.small span{float:left;height:25px;display:inline-block;line-height:25px}
+
+        .button_secondary.small .left{background:url('http://sc1.tdxinfo.com/images/button/button_secondary_small.png') 0 0 no-repeat;width:5px}
+        .button_secondary.small .center{background:url("http://sc1.tdxinfo.com/images/button/button_secondary_small.png") 0 -27px repeat-x;}
+        .button_secondary.small .right{background:url('http://sc1.tdxinfo.com/images/button/button_secondary_small.png') 0 -54px no-repeat;width:5px}
+
+        .adaptiveButton.small:hover .left{background-position:0 -81px;}
+        .adaptiveButton.small:hover .center{background-position:0 -108px;}
+        .adaptiveButton.small:hover .right{background-position:0 -135px;}
+        .adaptiveButton.small:active .left{background-position:0 -162px;}
+        .adaptiveButton.small:active .center{background-position:0 -189px;}
+        .adaptiveButton.small:active .right{background-position:0 -216px;}
+    </style>
+</head>
+<body>
+    <div class="mainbody">
+        <div class="head">
+            <a href="http://www.travelzen.com" class="logo"></a>
+            <div class="caption">客户确认单</div>
+        </div>
+        <div class="infoContainer">
+            <div class="infoPanel">
+                <ul id="addressInfo">
+                    <li>中国上海市闸北区</li>
+                    <li>广中西路555号宝华国际广场16楼</li>
+                    <li>邮编：200072</li>
+                </ul>
+                <ul id="orderInfo">
+                    <li>订单号：[$OrderNum]</li>
+                    <li>日期：[$Date]</li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="infoPanel">
+                <div class="subCaption">客人</div>
+                <div class="namearea">[$GuestName]</div>
+                <table cellspacing="0">
+                    <colgroup>
+                        <col width="250">
+                        <col width="210">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th class="tbl_head">详情</th>
+                        <th class="tbl_head">房间 x [Num] 间</th>
+                        <th class="tbl_head">酒店地址/电话</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><b>[$City],[$HotelName]</b></td>
+                        <td><b>[$RoomName],[$ExtraBed]</b></td>
+                        <td>地址：[$HotelAdd]</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold">入住日期：[$CheckIn] [$Week]</td>
+                        <td>[$BedName]；[$RoomArea]；</td>
+                        <td>电话：[$HotelTel]</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold">退房日期：[$CheckOut] [$Week]</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                    <thead>
+                    <tr>
+                        <th class="tbl_head">日期</th>
+                        <th class="tbl_head">单价</th>
+                        <th class="tbl_head">早餐</th>
+                    </tr>
+                    </thead>
+                    <tbody><tr>
+                        <td>[Date][Week]</td>
+                        <td>[$SalePrice]</td>
+                        <td>[$Breakfast]</td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th class="tbl_head" colspan="3">合计：￥[$TotalSalePrice]元</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div style="padding:5px 10px">
+                <div class="subCaption">酒店条款与规定</div>
+                <ul id="rules">
+                    <li>床型由饭店依情况而定。</li>
+                    <li>[$Pet]</li>
+                    <li>入住时间[$CheckInTime],提前到店可能需要等待；</li>
+                    <li>退房时间[$CheckOutTime],延迟离店将会产生其他自理费用。</li>
+                    <li>[$Policy]。</li>
+                    <li>未入住且切事前未申请取消，将不会获得退款；</li>
+                    <li>已入住提前退房，请电话或邮件与客服联系，客服将尽快与酒店确认并为您办理。</li>
+                </ul>
+                <div class="notice">如需要更改或取消订房，请您打开我们电邮给您的入住单，点击邮箱上的”答复发件人“，然后在回邮中详细说明您的要求，我们将第一时间为您处理。</div>
+            </div>
+        </div>
+        <div class="foot">
+            <div style="font-size: 14px"><b>关于订单的任何疑问，或需要更改/取消您的行程等， 请登录天地行联系我们的客服中心。</b></div>
+            <div style="margin-top: 5px;">电邮: service@travelzen.com    电话: 400-720-6666</div>
+        </div>
+    </div>
+
+
+</body></html>

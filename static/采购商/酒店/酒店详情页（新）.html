@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html" charset="utf-8">
+    <title>酒店 酒店详情页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_hotel.css" media="screen" />
+	<link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.css" />
+	<link rel="stylesheet" href="../../static/css/kendo.store.css" />
+
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+	<script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+	<script type="text/javascript" src="/static/js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="../../static/js/jcarousellite_1.0.1.pack.js"></script>
+	<script type="text/javascript" src="../../static/js/global.js"></script>
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        .pagination{line-height:1}
+    </style>
+</head>
+<body>
+<div class="main-wrapper">
+    <header class="main-header">
+        <a class="logo" href="/"><h1>天地行</h1></a>
+        <nav class="main-nav">
+            <ul class="clearfix">
+                <li class="first"><a herf="#">首页</a></li>
+                <li><a herf="#">国内机票</a></li>
+                <li><a herf="#">国际机票</a></li>
+                <li class="active"><a herf="#">酒店</a></li>
+				<li><a herf="#">保险</a></li>
+            </ul>
+        </nav>
+        <nav class="main-links">
+            <ul class="clearfix">
+                <li class="first"><a href="#">订单管理</a></li>
+                <li><a href="#">分销管理</a></li>
+                <li><a href="#">电子钱包</a></li>
+                <li><a href="#">统计报表</a></li>
+                <li><a href="#">客服服务</a></li>
+                <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+                <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+        <span class="QQ"><a href="javascript:void(0);" onclick="javascript:window.open('http://b.qq.com/webc.htm?new=0&sid=4007206666&eid=218808P8z8p8Q8K8y8R8R&o=&q=7&ref='+document.location, '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');">在线咨询</a></span>
+    </header>
+    <section class="main-body clearfix">
+	  <div class="breadbar">
+	    <span><i class="icon_seat"></i>国内及港澳预付酒店</span>&gt;<span>上海衡山宾馆</span>
+	  </div>
+	  <div class="hotelSummary_block clearfix">
+	    <div class="summary_left">
+		  <ul class="hotelInfo">
+		    <li class="hotelName">上海宝华国际酒店</li>
+			<li>徐汇区衡山路534号（徐汇区 徐家汇地区）</li>
+			<li><b>宾客类型：</b>中宾，港澳台，外宾<i class="icon_remind"></i><span style="font-size:12px">酒店不能接待xxxx地区的旅客，请谅解。</span></li>
+		  </ul>
+		  <ul class="hotelInfo_tips">
+		     <li><div class="hotelStarLevel hotelStar1_5"><span></span></div></li>
+			 <li>五星级豪华酒店</li>
+			 <li class="icon-list">
+			   <span class="ico-wifi" title="收费wifi"></span>
+               <span class="ico-park" title="停车场"></span>
+               <span class="ico-restaurant" title="餐厅"></span>
+               <span class="ico-outdoorswim" title="室外泳池"></span>
+			   <span class="ico-pickup" title="接机服务"></span>
+			 </li>
+		  </ul>
+		
+		</div>
+		<div class="summary_right">
+		  <span><em class="pricermb">￥</em><em class="hotel_Price">650</em> 起</span>
+		   <div style="margin-top:10px">
+             <a class="adaptiveButton brightRed_btn" href="#bookDetails">
+             <span class="left"></span>
+             <span class="center center_1">立即预订</span>
+             <span class="right"></span>
+             </a>
+           </div>
+		</div>
+	  </div>
+	  <!--images start-->
+	      <ul class="hotelImgs clearfix">
+                  <li class="hotelLeftBigImg more-pic">
+                      <a href="javascript:void(0);" target="_blank">
+					  <img src="../../static/images/store/hotelBigimg01.jpg" />
+                      <label class="ImgHover"><span>共<b>48</b>张图片</span></label>
+                      </a>
+                  </li>
+                  <li>
+                      <ul class="hotelMoSmImgTop clearfix">
+                          <li><a href="javascript:void(0)" target="_blank"><img data-big-src="hotelPic-big.jpg" src="../../static/images/store/hotelSmallimg01.jpg"/>
+                                 <label class="ImgHover"><span>客户图片</span></label>
+                              </a>
+                          </li>
+                          <li><a href="javascript:void(0)" target="_blank"><img data-big-src="hotelPic-big.jpg" src="../../static/images/store/hotelSmallimg02.jpg"/>
+                                 <label class="ImgHover"><span>客户图片</span></label>
+                              </a>
+                          </li>
+                      </ul>
+					  <ul class="hotelMoSmImgBtm clearfix">
+                         <li class="moddleSmallImg">
+                              <a href="javascript:void(0)" target="_blank"><img data-big-src="hotelPic-big.jpg" src="../../static/images/store/hotelSmallimg03.jpg"/>
+                                 <label class="ImgHover"><span>客户图片</span></label>
+                              </a>
+                          </li>
+						   <li class="moddleSmallImg">
+                              <a href="javascript:void(0)" target="_blank"><img data-big-src="hotelPic-big.jpg" src="../../static/images/store/hotel_noPic.jpg"/>
+                                 <label class="ImgHover"><span>客户图片</span></label>
+                              </a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li class="hotelRightMap">
+				  <a href="javascript:void(0)" target="_blank">
+				  <img src="../../static/images/store/hotelSmallMap.jpg" alt=""/>
+				  </a>
+				  </li>
+              </ul>
+	  <!--images end-->
+      
+		<!--houseType booking-->
+		 <div class="hotel-info-item" style="border-bottom:none">
+			  <ul class="changeList clearfix">
+			    <li><a href="#"><i></i>酒店图片</a></li>
+				<li class="liLine"></li>
+				<li><a href="#house_type" class="currentLi"><i></i>房型预定</a></li>
+				<li class="liLine"></li>
+				<li><a href="#introduce"><i></i>酒店介绍</a></li>
+				<li class="liLine"></li>
+				<li><a href="#facility"><i></i>服务设施</a></li>
+			  </ul>
+			<div class="house_search">
+			  <div class="condition">
+			  <b>重新查询价格</b>
+            <label><strong>入住日期</strong><input type="text" name="" placeholder="" style="width:140px" class="gray-border datepicker"/></label>
+            <label><strong>离店日期</strong><input type="text" name="" placeholder="" style="width:140px" class="datepicker gray-border"/></label>
+            <label>
+                <strong>预订间数</strong>
+                <select data-role="dropdownlist" name="room_num" style="width:45px;vertical-align:middle;">
+                    <option value="1">1</option>
+                </select>
+            </label>
+            <a class="adaptiveButton brightRed_btn medium">
+                <span class="left"></span>
+                <span class="center">查询</span>
+                <span class="right"></span>
+            </a>
+        </div>
+			</div>
+			<!--house List-->
+			
+                    <div class="roomTypeListContainer clearfix">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td class="roomTypeGroupFirstField" width="180">房型</td>
+                                    <td width="215">床型</td>
+                                    <td width="100">早餐</td>
+                                    <td width="90">宽带</td>
+                                    <td width="80">规定</td>
+									<td width="80"></td>
+                                    <td width="">价格</td>
+                                    <td width="80">&nbsp;</td>
+                                </tr>
+                            </thead>
+                        </table>
+                        <div class="roomTypeDetailContainer">
+                            <table>
+                                <tbody>	
+                                <tr>
+                                 <td colspan="8" style="height:45px"><b>贵宾房</b></td>
+                                </tr>
+                                <tr>
+                                 <td width="160" class="roomTypeGroupDetailFirstField">
+								 <i class="ico_gift"></i>特惠含早
+								 </td>
+                                 <td width="215">双人大床</td>
+                                 <td width="100">包含早餐</td>
+                                 <td width="90">包含</td>
+                                 <td width="80"><span class="fontColor_loess">规定</span></td>
+								 <td width="80"><span class="fontColor_darkgreen">立即确认</span></td>
+                                 <td><span class="roomPrice"><em>￥</em>650</span></td>
+                                 <td width="80">
+                                   <a class="adaptiveButton mediumOrange_btn">
+                                   <span class="left"></span>
+                                   <span class="center center_1">预订</span>
+                                   <span class="right"></span>
+                                   </a>
+                                 </td>
+                                </tr>
+                                <tr>
+                                 <td class="roomTypeGroupDetailFirstField"><i class="ico_gift"></i>特惠无早</td>
+                                 <td>双人大床</td>
+                                 <td>包含早餐</td>
+                                 <td>包含</td>
+                                 <td><span class="fontColor_loess">规定</span></td>
+								 <td><span class="fontColor_darkgreen">立即确认</span></td>
+                                 <td><span class="roomPrice"><em>￥</em>650</span></td>
+                                 <td style="text-align:center">
+								   <a class="adaptiveButton mediumDisabled_btn">
+                                   <span class="left"></span>
+                                   <span class="center center_1">预订</span>
+                                   <span class="right"></span>
+                                   </a>
+								 </td>
+                                </tr>
+                                <tr class="last">
+                                 <td class="roomTypeGroupDetailFirstField">特惠价</td>
+                                 <td>双人大床<br>1800*2000</td>
+                                 <td>包含早餐</td>
+                                 <td>包含</td>
+                                 <td><span class="fontColor_loess">规定</span></td>
+								 <td><span class="fontColor_darkgreen">立即确认</span></td>
+                                 <td><span class="roomPrice"><em>￥</em>650</span></td>
+                                 <td style="text-align:center">
+								   <a class="adaptiveButton mediumOrange_btn">
+                                   <span class="left"></span>
+                                   <span class="center center_1">预订</span>
+                                   <span class="right"></span>
+                                   </a>
+								 </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="roomTypeDetailContainer">
+                            <table>
+                                <tbody>
+                                <tr>
+                                  <td colspan="8" style="height:45px"><b>高级大床房(无窗)</b></td>
+                                </tr>
+                               <tr>
+                                 <td width="160" class="roomTypeGroupDetailFirstField">
+								 <i class="ico_gift"></i>特惠含早
+								 </td>
+                                 <td width="215">双人大床</td>
+                                 <td width="100">包含早餐</td>
+                                 <td width="90">包含</td>
+                                 <td width="80"><span class="fontColor_loess">规定</span></td>
+								 <td width="80"><span class="fontColor_darkgreen">立即确认</span></td>
+                                 <td><span class="roomPrice"><em>￥</em>650</span></td>
+                                 <td width="80">
+                                   <a class="adaptiveButton mediumOrange_btn">
+                                   <span class="left"></span>
+                                   <span class="center center_1">预订</span>
+                                   <span class="right"></span>
+                                   </a>
+                                 </td>
+                                </tr>
+                                <tr>
+                                 <td class="roomTypeGroupDetailFirstField"><i class="ico_gift"></i>特惠无早</td>
+                                 <td>双人大床</td>
+                                 <td>包含早餐</td>
+                                 <td>包含</td>
+                                 <td><span class="fontColor_loess">规定</span></td>
+								 <td><span class="fontColor_darkgreen">立即确认</span></td>
+                                 <td><span class="roomPrice"><em>￥</em>650</span></td>
+                                 <td style="text-align:center">
+								   <a class="adaptiveButton mediumOrange_btn">
+                                   <span class="left"></span>
+                                   <span class="center center_1">预订</span>
+                                   <span class="right"></span>
+                                   </a>
+								 </td>
+                                </tr>
+                                <tr class="last">
+                                 <td class="roomTypeGroupDetailFirstField">特惠价</td>
+                                 <td>双人大床<br>1800*2000</td>
+                                 <td>包含早餐</td>
+                                 <td>包含</td>
+                                 <td><span class="fontColor_loess">规定</span></td>
+								 <td><span class="fontColor_darkgreen">立即确认</span></td>
+                                 <td><span class="roomPrice"><em>￥</em>650</span></td>
+                                 <td style="text-align:center">
+								   <a class="adaptiveButton mediumOrange_btn">
+                                   <span class="left"></span>
+                                   <span class="center center_1">预订</span>
+                                   <span class="right"></span>
+                                   </a>
+								 </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="roomTypeDetailContainer" >
+                            <table>
+                                <tbody>
+                                 <tr>
+                                  <td colspan="8" style="height:45px"><b>高级房</b></td>
+                                </tr>
+                               <tr class="last">
+                                 <td width="160" class="roomTypeGroupDetailFirstField">
+								 <i class="ico_gift"></i>特惠含早
+								 </td>
+                                 <td width="215">双人大床</td>
+                                 <td width="100">包含早餐</td>
+                                 <td width="90">包含</td>
+                                 <td width="80"><span class="fontColor_loess">规定</span></td>
+								 <td width="80"><span class="fontColor_darkgreen">立即确认</span></td>
+                                 <td><span class="roomPrice"><em>￥</em>650</span></td>
+                                 <td width="80">
+                                   <a class="adaptiveButton mediumOrange_btn">
+                                   <span class="left"></span>
+                                   <span class="center center_1">预订</span>
+                                   <span class="right"></span>
+                                   </a>
+                                 </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--<div class="roomTypeListBottomButtonContainer">
+                            <a href="javascript:void(0);" class="expand" style="display:none;">展开全部房型<i class="ico_down"></i></a>
+                            <a href="javascript:void(0);" class="expand">收起全部房型<i class="ico_up"></i></a>
+                        </div>-->
+                    </div>
+           
+		<!--house List End-->	
+		 </div>
+	  <!--house introduce-->
+		 <div class="hotel-info-item">
+		    <a name="introduce"></a>
+			<ul class="changeList clearfix">
+			    <li><a href="#"><i></i>酒店图片</a></li>
+				<li class="liLine"></li>
+				<li><a href="#house_type"><i></i>房型预定</a></li>
+				<li class="liLine"></li>
+				<li><a href="#introduce" class="currentLi"><i></i>酒店介绍</a></li>
+				<li class="liLine"></li>
+				<li><a href="#facility"><i></i>服务设施</a></li>
+			 </ul>
+			<div class="hotelIntroduce">
+			  <div class="clearfix">    
+			  <p><b>开业时间</b>1976年</p>
+			  <p><b>装修时间</b>1976年</p>
+			  <p><b>房&nbsp;&nbsp;间&nbsp;&nbsp;数</b>776间</p>
+			  </div>
+			  <div class="hotelText clearfix">
+			   <div class="hotelTextTit">酒店介绍</div>
+			   <div class="hotelTextCon"><p>华亭宾馆位于漕溪北路，毗邻地铁站，地铁1，3，4号线均可到达，漫步即可抵达徐家汇商业中心，与上海八万人体育馆咫尺之遥。无论您要去上海市内任何地方，快速的交通，将会给您带来超越期望的享受。 上海华亭宾馆是中国旅游业标志性饭店之一。作为08年北京奥运会上海赛区官方指定接待酒店，2010年世博会以及2011年第十四届国际泳联世界锦标赛官方指定接待酒店。 上海华亭宾馆一楼花苑自助餐厅，全新概念开放式厨房设计，提供国际风味佳肴。一楼美食店，精心准备新鲜、美味、品种繁多的点心、中西简餐供您选择。大堂酒吧是轻松小憩和会见友人的最佳场所，夜间还有精彩菲律宾乐队现场表演。26楼观月台景观中餐厅，把盏品馔，临巅俯瞰，徐家汇地区都市胜景尽收眼底。香港得奖名厨领衔主理，精品传家粤菜、上海菜。 上海华亭宾馆三楼克拉克海奇健身中心来，宽敞现代的健身房，干净恒温的游泳池，舒适的桑拿，弹子房等各类健身项目任你挑。贵宾楼行政楼层的客人会醉心于单独登记入住，24小时贴身管家服务，独立行政酒廊的尊贵享受。酒店主要的设施设备，喜欢至尊体验的客人均可享用，带给您全方位的奢华享受。
+			   </p></div>
+			  </div>
+			</div>
+		 </div>
+	   <!--house introduce End-->
+	   
+	   <!--house equipments-->
+		 <div class="hotel-info-item">
+		    <a name="facility"></a>
+		     <ul class="changeList clearfix">
+			    <li><a href="#"><i></i>酒店图片</a></li>
+				<li class="liLine"></li>
+				<li><a href="#house_type"><i></i>房型预定</a></li>
+				<li class="liLine"></li>
+				<li><a href="#introduce"><i></i>酒店介绍</a></li>
+				<li class="liLine"></li>
+				<li><a href="#facility" class="currentLi"><i></i>服务设施</a></li>
+		     </ul>
+			<div class="hotelEquipment">
+			   <div class="equipmentItem clearfix">
+			   <div class="hotelTextTit">酒店服务</div>
+			   <div class="hotelTextCon">
+			    <ul>
+                <li>有线宽带</li>
+                <li>无线宽带</li>
+				<li>叫早服务</li>
+				<li>干洗熨烫服务</li>
+				<li>前台贵重物品保存</li>
+				<li>收费停车场</li>
+				<li>免费停车场</li>
+				<li>礼宾司服务</li>
+                <li>多语言礼宾司服务</li>
+				<li>美发沙龙</li>
+				<li>医务室</li>
+				<li>邮政服务</li>
+				<li>叫车服务</li>
+				<li>机场接送</li>
+				<li>旅游接待</li>
+				<li>ATM取款机</li>
+				<li>外币兑换</li>
+				<li>残疾人房型</li>
+				</ul>
+			   </div>
+            </div>
+			<div class="equipmentItem clearfix">
+			   <div class="hotelTextTit">酒店餐饮</div>
+			   <div class="hotelTextCon">
+			    <ul>
+                <li>中式餐厅</li>
+                <li>西式餐厅</li>
+				<li>日式餐厅</li>
+				<li>咖啡厅</li>
+				<li>酒吧</li>
+				</ul>
+			   </div>
+            </div>
+			<div class="equipmentItem clearfix">
+			   <div class="hotelTextTit">商务设施</div>
+			   <div class="hotelTextCon">
+			    <ul>
+                <li>商务中心</li>
+                <li>会议室</li>
+				<li>多功能会议室</li>
+				</ul>
+			   </div>
+            </div>
+			<div class="equipmentItem clearfix">
+			   <div class="hotelTextTit">娱乐设施</div>
+			   <div class="hotelTextCon">
+			    <ul>
+                <li>水疗/SPA</li>
+                <li>桑拿</li>
+				<li>按摩与桑拿中心</li>
+				<li>室内游泳池</li>
+				<li>健身房</li>
+				</ul>
+			   </div>
+            </div>
+			</div>
+		 </div>
+       <!--house equipments End-->
+	   
+        <div class="itemBorder itemPoint">
+        <div class="titleline">
+            <h3>温馨提示</h3>
+        </div>
+        <div class="itemContent">
+            <p>从外部备注获取，如有则显示，没有则不显示温馨提示信息。</p>
+        </div>
+        </div>
+
+    </section>
+    <footer class="main-footer">
+        <center>
+            <a href="#">隐私问题</a>
+            <i class="bar">|</i>
+            <a href="#">常见问题</a>
+            <i class="bar">|</i>
+            <a href="#">关于我们</a>
+            <i class="bar">|</i>
+            <a href="#">媒体中心</a>
+            <i class="bar">|</i>
+            <a href="#">联系我们</a>
+        </center>
+        <center class="copyright">
+            Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号
+        </center>
+    </footer>
+</div>
+<script type="text/x-kendo-template" id="stipulateTemplate">
+    <div class="stipulateCont">
+	    <p><b>入住时间：</b>14点以后</p>
+		<p><b>退房时间：</b>14点以前</p>
+		<p><b>变更/取消：</b>入住前1天12点之前取消或变更，不收取任何费用；入住前1天12点之后取消或变更，将收取首晚房费。</p>
+	</div>
+</script>
+<script type="text/x-kendo-template" id="salePriceTblTemplate">
+    <div class="salePriceTblContainer">
+        <table class="hotelSalePriceTbl">
+            <thead>
+            <tr>
+                <th class="first"><b>第一周</b></th>
+                <th>08-12 一</th>
+                <th>08-13 二</th>
+                <th>08-14 三</th>
+                <th>08-15 四</th>
+                <th>08-16 五</th>
+                <th class="weekend">08-17 六</th>
+                <th class="weekend last">08-18 日</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="first">
+                    <div><b>单价</b></div>
+                    <div><b>早餐</b></div>
+                    <div><b>宽带</b></div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <div class="price">￥450</div>
+                    <div>自助*1</div>
+                    <div>宽带</div>
+                </td>
+                <td>
+                    <div class="price">￥450</div>
+                    <div>自助*1</div>
+                    <div>宽带</div>
+                </td>
+                <td>
+                    <div class="price">￥450</div>
+                    <div>自助*1</div>
+                    <div>宽带</div>
+                </td>
+                <td class="last">
+                    <div class="price">￥450</div>
+                    <div>自助*1</div>
+                    <div>宽带</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="salePriceTblContainer">
+        <table class="hotelSalePriceTbl">
+        <thead>
+        <tr>
+            <th class="first"><b>第二周</b></th>
+            <th>08-19 一</th>
+            <th>08-20 二</th>
+            <th>08-21 三</th>
+            <th>08-22 四</th>
+            <th>08-23 五</th>
+            <th class="weekend">08-24 六</th>
+            <th class="weekend last">08-25 日</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="first">
+                <div><b>单价</b></div>
+                <div><b>早餐</b></div>
+                <div><b>宽带</b></div>
+            </td>
+            <td>
+                <div class="price">￥450</div>
+                <div>自助*1</div>
+                <div>宽带</div>
+            </td>
+            <td>
+                <div class="price">￥450</div>
+                <div>自助*1</div>
+                <div>宽带</div>
+            </td>
+            <td>
+                <div class="price">￥450</div>
+                <div>自助*1</div>
+                <div>宽带</div>
+            </td>
+            <td>
+                <div class="price">￥450</div>
+                <div>自助*1</div>
+                <div>宽带</div>
+            </td>
+            <td></td>
+            <td></td>
+            <td class="last">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+</script>
+
+
+<script type="text/javascript">
+    $(function(){
+        $(".expand").click(function(){
+            var container = $(this).closest(".hotelPanel");
+            $(this).hide();
+            $(this).siblings().show();
+
+            if($(this).find(".ico_down").size() != 0){
+                //展开
+                $(".roomTypeDetailContainer",container).each(function(){
+                    var self = this;
+
+                    $(this).animate({height:this.scrollHeight},function(){$(".expand_hide",self).hide();});
+                });
+            }else{
+                $(".roomTypeDetailContainer",container).each(function(){
+                    var self = this;
+                    $(this).css({"overflow":"hidden"}).animate({height:"45px"},function(){$(".expand_hide",self).show();});
+                });
+            }
+
+        });
+        $(".hotelGalleryImagesContainer").jCarouselLite({
+            visible:5,
+            btnNext:".btn_hotelImageGallery_right",
+            btnPrev:".btn_hotelImageGallery_left",
+            circular:false
+        });
+        $(".hotelGalleryImagesContainer li").click(function(){
+            $(this).addClass("current").siblings().removeClass("current");
+            $(".hotelBigImage").attr("src",$("img",this).attr("src"));
+        })
+		
+		 $(".roomTypeDetailContainer .fontColor_loess").kendoTooltip({
+			position:"bottom", //left right top
+			content:function(){
+				return $("#stipulateTemplate").html();
+			},
+			offsetY:10,
+			width:480
+		});
+		
+		
+        var layer=new FloatLayer({
+            trigger:".rule",
+            template:"<div class='location clearfix'> <!--浮层开始-->\
+                        <div class='floating'>\
+                            <i>&nbsp;</i>\
+                            <p>stgexyhdcrfyhesryesxghrxdh</p>\
+                            <p>xjcfgjftyjnghnnftyhrtuhrtuhrtjcfjrtjcf hn</p>\
+                            <p>stgexyhdcrfyhesryesxghrxdh</p>\
+                            <p>xjcfgjftyjnghnnftyhrtuhrtuhrtjcfjrtjcf hn</p>\
+                        </div>\
+                       </div>",
+            offsetX:-107
+        })
+        var layer1=new FloatLayer({
+            trigger:".hotelRoomPrice",
+            template:'#salePriceTblTemplate',
+            offsetX:-107
+        });
+		
+		var image_window = new PopWindow(".more-pic", { 
+                    title:"上海衡山宾馆",
+                    width:770,
+					open:function(){
+                        image_window.wrapper.find(".k-content").css({"background-color":"#ffffff"});
+                    },
+                    content : { 
+                        url : 'images.html',
+                        data : {param1:'a',param2:'b'}
+                    }
+
+                }).init();
+		
+    })
+</script>
+</body>
+</html>

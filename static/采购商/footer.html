@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 国内-首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="../static/css/kendo.store.css" />
+    <link rel="stylesheet" href="../static/css/toolkit.css" />
+    <link rel="stylesheet" href="../static/css/store_v2/store.css">
+    
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../static/js/global.js"></script>
+    <script src="../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+    
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="customerCenterContainer off">
+    <div class="customerCenterButton">
+        <div>用户中心</div>
+    </div>
+    <div class="customerCenterItemsContainer">
+        <div class="customerCenterItemsPanel">
+            <i></i>
+            <ul>
+                <li class="cc_orderManagerment"><div>订单管理</div></li>
+                <li class="cc_e-wallet"><div>电子钱包</div></li>
+                <li class="cc_statisticalReport"><div>统计报表</div></li>
+                <li class="cc_customerService"><div>客户服务</div></li>
+                <li class="cc_notice"><div>公告</div></li>
+                <li class="cc_message"><div>消息</div></li>
+                <li class="cc_onlineService"><div>在线客服</div></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="headBG">
+    <header class="main-header">
+        <a class="logo" href="/"><h1>天地行</h1></a>
+        <nav class="main-nav">
+            <ul class="clearfix">
+                <li class="active"><a herf="#">国内机票</a></li>
+                <li><a herf="#">国际机票</a></li>
+                <li><a herf="#">保险</a></li>
+                <li><a herf="#">酒店</a></li>
+                <li><a herf="#">机 + 酒</a></li>
+                <li><a herf="#">旅游</a></li>
+                <li><a herf="#">订单<i class="orderNum">10</i> </a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+<div class="hotelHomePageBG clearfix">
+    <div class="annPrompt">
+        <a href="#" style="top: 0px;">免费机票大作战 第一波甜蜜来袭2！</a>
+        <a href="#" style="top: 0px;">免费机票大作战 第一波甜蜜来袭3！</a>
+        <a href="#" style="top: 0px;">免费机票大作战 第一波甜蜜来袭4！</a>
+        <a href="#" style="top: 0px;">免费机票大作战 第一波甜蜜来袭1！</a>
+    </div>
+    <script>
+        $(function(){
+            var slideMsgEve=setInterval(slideMessage,3000);
+            $(".annPrompt").hover(function(){
+                        clearInterval(slideMsgEve);
+                    },
+                    function(){
+                        slideMsgEve=setInterval(slideMessage,3000);
+                    }
+            );
+
+            function slideMessage()
+            {
+                $(".annPrompt a").animate({"top":"-22px"},"1000")
+                setTimeout(function(){
+                    $(".annPrompt").append($(".annPrompt a:first").remove());
+                    $(".annPrompt a").css({"top":"0"});
+                },1200);
+            }
+        })
+    </script>
+</div>
+<div class="main-wrapper">
+        <section class="querytab querytab-hotel">
+            <div class="querytab-wrapper col clearfix">
+            <aside class="querytab-controller">
+            <ul>
+                <li><b data-role="ctype" data-index="1" data-group="qtab" class="current">国内酒店</b></li>
+                <li><b data-role="ctype" data-index="2" data-group="qtab">国际酒店</b></li>
+            </ul>
+            </aside>
+            <div class="querytab-content col">
+                <div class="querytab-hotel-content" data-role="ctype-item" data-index="1" data-group="qtab">
+                    <h3>国内 预付酒店</h3>
+                    <span class="text1" style="" data-role="ctype-item" data-group="trip_type" data-index="c2"> 团队单请咨询：<s class="tel">400-720-6666</s></span>
+                        <ul>
+                            <li>
+                                <table class="default_search">
+                                     <colgroup>
+                                         <col class="col1">
+                                         <col class="col2">
+                                         <col class="col3">
+                                         <col class="col4">
+                                    </colgroup>
+                                    <tr>
+                                        <th>出发城市</th>
+                                        <td><input class="city_ac" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>入住日期</th>
+                                        <td><input class="startDate" type="text"></td>
+                                        <th>离店日期</th>
+                                        <td><input class="endDate" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>预定间数</th>
+                                        <td>
+                                            <select data-role="dropdownlist" style="width:152px;">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                </select>
+                                        </td>
+                                    </tr>
+                                    </table>
+                            </li>
+                            <li>
+                            <h4 class="underline-title"><span><i class="icon icon-arrows"></i>高级搜索</span></h4>
+                            <table class="hotel_advanced_search">
+                                <colgroup>
+                                    <col class="col1">
+                                    <col class="col2">
+                                    <col class="col3">
+                                    <col class="col4">
+                                    </colgroup>
+                                <tr>
+                                    <th>关键字</th>
+                                    <td>
+                                        <input type="text" placeholder="酒店名称，商圈，地标">
+                                    </td>
+                                    <th>酒店星级</th>
+                                    <td>
+                                        <select style="width:152px;" data-role="dropdownlist">
+                                            <option>全部</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                            </li>
+                        </ul>
+
+                            <div class="btn_area">
+                                <button type="button" class="btn btn-c1 btn-s1">搜  索</button>
+                            </div>
+                </div>
+                <div class="querytab-hotel-content" style="display:none;" data-role="ctype-item" data-index="2" data-group="qtab">
+                    <h3>港澳台 · 国际 预付酒店</h3>
+                    <span class="text1" style="" data-role="ctype-item" data-group="trip_type" data-index="c2"> 团队单请咨询：<b class="tel">400-720-6666</b></span>
+                        <ul>
+                            <li>
+                                <table class="default_search">
+                                     <colgroup>
+                                         <col class="col1">
+                                         <col class="col2">
+                                         <col class="col3">
+                                         <col class="col4">
+                                    </colgroup>
+                                    <tr>
+                                        <th>出发城市</th>
+                                        <td><input class="city_ac" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>入住日期</th>
+                                        <td><input class="startDate" type="text"></td>
+                                        <th>离店日期</th>
+                                        <td><input class="endDate" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>预定房间</th>
+                                        <td>
+                                            <select data-role="dropdownlist" style="width:152px;">
+                                                <option>双人双床房</option>
+                                                </select>
+                                        </td>
+                                        <th>间数</th>
+                                        <td>
+                                            <select data-role="dropdownlist" style="width:152px;">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                </select>
+                                        </td>
+                                    </tr>
+                                    </table>
+                            </li>
+                            <li>
+                            <h4 class="underline-title"><span><i class="icon icon-arrows"></i>高级搜索</span></h4>
+                            <table class="hotel_advanced_search">
+                                <colgroup>
+                                    <col class="col1">
+                                    <col class="col2">
+                                    <col class="col3">
+                                    <col class="col4">
+                                    </colgroup>
+                                <tr>
+                                    <th>客人国籍</th>
+                                    <td>
+                                        <input type="text" value="中国">
+                                    </td>
+                                    <th>关键字</th>
+                                    <td>
+                                        <input type="text" placeholder="酒店名称，商圈，地标">
+                                    </td>
+                                </tr>
+                            </table>
+                            </li>
+                        </ul>
+
+                            <div class="btn_area">
+                                <button type="button" class="btn btn-c1 btn-s1">搜  索</button>
+                            </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+<script type="text/x-kendo-template" id="city_popup">
+<div id="gn-tabstrip" class="tcy_tabstrip">
+<span class="tcy_title">
+    热门城市/国家（支持中文名/拼音/英文名/三字码）
+</span>
+<ul>
+<li id="hot_city" class="k-state-active">热门</li>
+# for (var i=0; i<data.group.length; i++ ) { #
+<li>#= data.group[i] #</li>
+# } #
+</ul>
+<div id="hot_city_tab">
+<ul class="tcy_list clearfix">
+
+# for(var j=0;j<hotcitylist.length;j++){ #
+# var citylist_item = hotcitylist[j] #
+<li class="item" title="#= citylist_item.code #" data-code="#= citylist_item.code #">#= citylist_item.name #</li>
+# } #
+</ul>
+</div>
+
+# for(var i=0;i<data.citylist.length;i++){ #
+# var citylist_item = data.citylist[i] #
+<div class="city_tab">
+<ul class="tcy_list clearfix">
+  # for(var k=0;k<data.group[i].length;k++){ #
+    <li class="tcy_list_sep">#= data.group[i].split('')[k] #</li>
+    # for(var j=0;j<citylist_item.value.length;j++){ #
+        # var citylist_value_item = citylist_item.value[j]; #
+        # if(citylist_value_item.py.slice(0,1) == data.group[i].split('')[k]) {#
+            <li class="item" title="#= citylist_value_item.code #" data-code="#= citylist_value_item.code #">#= citylist_value_item.name #</li>
+        # } #
+    # } #
+  # } #
+</ul>
+</div>
+
+# } #
+</div>
+</script>
+<script>
+    $(function(){
+        $.role_ctype({
+            changeClass:'current' 
+        });
+        kendo.init('body');
+        $('.startDate').datepicker({
+            minDate :new Date(),
+            numberOfMonths:[1,2],
+            showDay:true,
+            onSelect:function(dateText,inst){
+                console.log(inst.selectedDay);
+                var date = new Date(inst.selectedYear,inst.selectedMonth,parseInt(inst.selectedDay)+1);
+                $(".endDate").datepicker( "option", "minDate", date);
+                $(".endDate").datepicker( "setDate", dateText);
+            }
+        });
+        $('.endDate').datepicker({
+            minDate:tomorrow(),
+            numberOfMonths:[1,2],
+            showDay:true
+        });
+
+        function tomorrow(){
+            var today = new Date();
+            return today.setDate(today.getDate()+1);
+        }
+        $('.startDate').datepicker('setDate',new Date());
+        $('.endDate').datepicker('setDate',tomorrow());
+
+
+    function createCityAc(ele){
+        CityAutocomplete({
+            template: "#city_popup",
+            input: ele,
+            width: 200,
+            // autocomplete:{
+            //     dataSource:{
+            //         transport:{
+            //             read:{
+
+            //             }
+            //         }
+            //     },
+            //     placeholder:'三字吗/城市'
+            // },
+            // 以@分割热门非热门，以;分割条目，以|分割三字码拼音和中文
+            url:'/static/js/data.txt',
+            group: ["热门","GHJ", "ABCDEF", "KLMN", "PQSTW", "XYZ"]
+        });
+    }
+
+    createCityAc(".city_ac");
+
+    })
+    </script>
+
+
+    
+
+
+
+<section class="main-body clearfix"> <!--body start-->
+     
+<!--[if lte IE 7]>
+<style type="text/css">
+.hoverIcon{position:relative;overflow:hidden;}
+.hoverIcon a{position:absolute;left:50%;top:50%;}
+.hoverIcon a img{position:relative;left:-50%;top:-50%;}
+</style>
+<![endif]-->
+<section class="hotHotelBlock clearfix">
+  <!--hotHotel start-->
+    <div class="hotHotelContent"> 
+        <div class="blockTopTitle clearfix">
+            <b>热门酒店推荐</b>
+            <ul class="hotelPlace">
+               <li class="li_current"><a href="#">上海</a></li>
+               <li><a href="javascript:void(0);">北京</a></li>
+			   <li><a href="javascript:void(0);">广州</a></li>
+               <li><a href="javascript:void(0);">成都</a></li>
+               <li><a href="javascript:void(0);">重庆</a></li>
+			   <li><a href="javascript:void(0);">西安</a></li>
+            </ul>
+        </div>
+        <div class="hotHotel_show clearfix">
+            <dl>
+               <dt><a href="javascript:void(0);"><img src="../static/images/store/homeStore/homeHotelImg01.jpg" title="上海世和酒店"/></a></dt>
+               <dd>
+                  <span style="vertical-align:middle;"><a href="javascript:void(0);">上海世和酒店</a></span>
+				  <span class="hotelStar"><em class="star04"></em></span>
+                  <p class="price"><em>￥</em>4500</p>
+               </dd>
+            </dl>
+            <dl>
+               <dt><a href="javascript:void(0);"><img src="../static/images/store/homeStore/homeHotelImg02.jpg" title="上海世和酒店"/></a></dt>
+               <dd>
+                  <span style="vertical-align:middle;"><a href="javascript:void(0);">上海世和酒店</a></span>
+				  <span class="hotelStar"><em class="star03"></em></span>
+                  <p class="price"><em>￥</em>4500</p>
+               </dd>
+            </dl>
+            <dl>
+               <dt><a href="javascript:void(0);"><img src="../static/images/store/homeStore/homeHotelImg03.jpg" title="上海世和酒店"/></a></dt>
+               <dd>
+                  <span style="vertical-align:middle;"><a href="javascript:void(0);">上海世和酒店</a></span>
+				  <span class="hotelStar"><em class="star02"></em></span>
+                  <p class="price"><em>￥</em>4500</p>
+               </dd>
+            </dl>
+            <dl style="margin-right:0;">
+               <dt><a href="javascript:void(0);"><img src="../static/images/store/homeStore/homeHotelImg04.jpg" title="上海世和酒店"/></a></dt>
+               <dd>
+                  <span style="vertical-align:middle;"><a href="javascript:void(0);">上海世和酒店</a></span>
+				  <span class="hotelStar"><em class="star01"></em></span>
+                  <p class="price"><em>￥</em>4500</p>
+               </dd>
+            </dl>
+        </div>
+		
+		<div class="hotHotel_show clearfix" style="display:none;">
+            <dl>
+               <dt><a href="javascript:void(0);"><img src="../static/images/store/homeStore/homeHotelImg01.jpg" title="上海世和酒店"/></a></dt>
+               <dd>
+                  <span style="vertical-align:middle;"><a href="javascript:void(0);">南京世和酒店</a></span>
+				  <span class="hotelStar"><em class="star04"></em></span>
+                  <p class="price"><em>￥</em>4500</p>
+               </dd>
+            </dl>
+            <dl>
+               <dt><a href="javascript:void(0);"><img src="../static/images/store/homeStore/homeHotelImg02.jpg" title="上海世和酒店"/></a></dt>
+               <dd>
+                  <span style="vertical-align:middle;"><a href="javascript:void(0);">南京世和酒店</a></span>
+				  <span class="hotelStar"><em class="star03"></em></span>
+                  <p class="price"><em>￥</em>4500</p>
+               </dd>
+            </dl>
+            <dl>
+               <dt><a href="javascript:void(0);"><img src="../static/images/store/homeStore/homeHotelImg03.jpg" title="上海世和酒店"/></a></dt>
+               <dd>
+                  <span style="vertical-align:middle;"><a href="javascript:void(0);">南京世和酒店</a></span>
+				  <span class="hotelStar"><em class="star02"></em></span>
+                  <p class="price"><em>￥</em>4500</p>
+               </dd>
+            </dl>
+            <dl style="margin-right:0;">
+               <dt><a href="javascript:void(0);"><img src="../static/images/store/homeStore/homeHotelImg04.jpg" title="上海世和酒店"/></a></dt>
+               <dd>
+                  <span style="vertical-align:middle;"><a href="javascript:void(0);">南京世和酒店</a></span>
+				  <span class="hotelStar"><em class="star01"></em></span>
+                  <p class="price"><em>￥</em>4500</p>
+               </dd>
+            </dl>
+        </div>
+		
+		
+    </div> 
+<!--hotHotel end-->
+	
+ </section>
+ 
+ <section class="hotCityBrand clearfix">
+ <!--hotCityBrand start-->
+   <div class="hotCityBrandContent clearfix">
+     <div class="hotCityContent">
+	   <div class="blockTopTitle clearfix">
+            <b>热门城市</b>
+	   </div>
+	
+	   <ul class="clearfix" style="margin-bottom:8px">
+	     <li><a href="javascript:void(0);"><img src="../static/images/store/homeStore/homeHotCityImg01.jpg" title="三亚 休闲胜地"/>
+		     <label class="hotCityImgHover"><span class="searchIcon"></span></label>
+		 </a></li>
+		 <li><a href="javascript:void(0);" style="cursor:default;"><img src="../static/images/store/homeStore/homeHotCityImg02.jpg" title=""/>
+		 </a></li>
+	   </ul>
+	   <ul class="clearfix">
+		 <li><a href="javascript:void(0);"><img src="../static/images/store/homeStore/homeHotCityImg03.jpg" title="珠海"/>
+		     <label class="hotCityImgHover"><span class="searchIcon"></span></label>
+		 </a></li>
+		 <li><a href="javascript:void(0);"><img src="../static/images/store/homeStore/homeHotCityImg04.jpg" title="苏州"/>
+		     <label class="hotCityImgHover"><span class="searchIcon"></span></label>
+		 </a></li>
+		 <li><a href="javascript:void(0);"><img src="../static/images/store/homeStore/homeHotCityImg05.jpg" title="大连"/>
+		     <label class="hotCityImgHover"><span class="searchIcon"></span></label>
+		 </a></li>
+	   </ul>
+	   
+	 </div>
+	 
+	 <div class="hotelBrandContent">
+	   <div class="blockTopTitle clearfix" style="padding-left:0;">
+            <b>酒店品牌推荐</b>
+	   </div>
+	   <ul class="clearfix">
+	     <li class="hoverIcon"><a href="javascript:void(0);"><img src="../static/images/store/homeStore/hotelBrand01.png" title=""/></a></li>
+		 <li class="hoverIcon"><a href="javascript:void(0);"><img src="../static/images/store/homeStore/hotelBrand02.png" title=""/></a></li>
+		 <li class="hoverIcon"><a href="javascript:void(0);"><img src="../static/images/store/homeStore/hotelBrand03.png" title=""/></a></li>
+		 <li class="hoverIcon"><a href="javascript:void(0);"><img src="../static/images/store/homeStore/hotelBrand04.png" title=""/></a></li>
+		 <li class="hoverIcon"><a href="javascript:void(0);"><img src="../static/images/store/homeStore/hotelBrand05.png" title=""/></a></li>
+		 <li class="hoverIcon"><a href="javascript:void(0);"><img src="../static/images/store/homeStore/hotelBrand06.png" title=""/></a></li>
+		 <li class="hoverIcon"><a href="javascript:void(0);"><img src="../static/images/store/homeStore/hotelBrand07.png" title=""/></a></li>
+		 <li class="hoverIcon"><a href="javascript:void(0);"><img src="../static/images/store/homeStore/hotelBrand08.png" title=""/></a></li>
+		 <li class="hoverIcon"><a href="javascript:void(0);"><img src="../static/images/store/homeStore/hotelBrand09.png" title=""/></a></li>
+		 <li class="hoverIcon"><a href="javascript:void(0);"><img src="../static/images/store/homeStore/hotelBrand10.png" title=""/></a></li>
+		 <li class="hoverIcon"><a href="javascript:void(0);"><img src="../static/images/store/homeStore/hotelBrand11.png" title=""/></a></li>
+		 <li class="hoverIcon"><a href="javascript:void(0);"><img src="../static/images/store/homeStore/hotelBrand12.png" title=""/></a></li>
+		 <li class="hoverIcon"><a href="javascript:void(0);"><img src="../static/images/store/homeStore/hotelBrand13.png" title=""/></a></li>
+		 <li class="hoverIcon"><a href="javascript:void(0);"><img src="../static/images/store/homeStore/hotelBrand14.png" title=""/></a></li>
+		 <li class="hoverIcon"><a href="javascript:void(0);"><img src="../static/images/store/homeStore/hotelBrand15.png" title=""/></a></li>
+		 <li class="hoverIcon"><a href="javascript:void(0);"><img src="../static/images/store/homeStore/hotelBrand16.png" title=""/></a></li>
+		 <li class="hoverIcon"><a href="javascript:void(0);"><img src="../static/images/store/homeStore/hotelBrand17.png" title=""/></a></li>
+		 <li class="hoverIcon"><a href="javascript:void(0);"><img src="../static/images/store/homeStore/hotelBrand18.png" title=""/></a></li>
+	   </ul>
+	 </div>
+   </div>
+ 
+ <!--hotCityBrand end-->
+  
+ </section>
+ 
+ <!--homePage Banner start-->
+ <div class="homePageBanner clearfix"><img src="../static/images/store/homeStore/homeBannerBottom.jpg" title="天地行 钻石服务" /></div>
+ <!--homePage Banner end-->
+ 
+<script>
+    $(function(){
+        $(".hotelPlace li").each(function(index){
+            $(this).click(function(){
+                $(".hotHotelContent .hotHotel_show").hide();
+                $(".hotHotelContent .hotHotel_show:eq(" + index + ")").show();
+                $(".hotelPlace li").removeClass("li_current");
+                $(this).addClass("li_current");
+            });
+        });
+        
+		
+    });
+</script> 
+
+<!--<script type="text/javascript">
+$(function(){
+     $(".pnrImport").click(function () {
+       $(".pnrImportInfor,.enquiryInfor-gray").show();
+       $(".pnrImport,.enquiryInfor,.enquiryInfor").hide();
+        });
+	 $(".enquiryInfor-gray").click(function () {
+       $(".enquiryInfor,.pnrImport").show();
+       $(".pnrImportInfor,.enquiryInfor-gray").hide();
+        })
+})
+</script>-->
+
+
+
+</section> <!--body end-->
+        <footer class="main-footer">
+            <div class="footerContainer">
+                <div class="xssl bottomQuickNav">
+                    <i class="ico"></i>
+                    <h3>新手上路</h3>
+                    <ul>
+                        <li><a href="#">用户手册</a></li>
+                        <li><a href="#">QQ客服</a></li>
+                        <li><a href="#">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="zffs bottomQuickNav">
+                    <i class="ico"></i>
+                    <h3>支付方式</h3>
+                    <ul>
+                        <li><a href="#">支付宝支付</a></li>
+                        <li><a href="#">汇付支付</a></li>
+                        <li><a href="#">财付通支付</a></li>
+                    </ul>
+                </div>
+                <div class="sjfw bottomQuickNav">
+                    <i class="ico"></i>
+                    <h3>商家服务</h3>
+                    <ul>
+                        <li><a href="#">客服电话</a></li>
+                        <li><a href="#">航司电话</a></li>
+                        <li><a href="#">出票时间</a></li>
+                    </ul>
+                </div>
+                <div class="gywm bottomQuickNav">
+                    <i class="ico"></i>
+                    <h3>关于我们</h3>
+                    <ul>
+                        <li><a href="#">天地行介绍</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="kfrx bottomQuickNav last">
+                    <i class="ico"></i>
+                    <h4>
+                        客服热线<br/>
+                        <h2>400-720-6666</h2>
+                    </h4>
+                </div>
+                <center class="copyright clearfix">
+                    Copyright &copy; 2014 天地行 All Rights Reserved.     沪ICP备08101503号
+                </center>
+            </div>
+        </footer>
+<div class="partnerContainer">
+    合作伙伴：
+    <i class="travelsky partnerIcon"></i>
+    <i class="elong partnerIcon"></i>
+    <i class="qunar partnerIcon"></i>
+    <i class="ctrip partnerIcon"></i>
+    <i class="gta partnerIcon"></i>
+</div>
+</div>
+
+<script>
+    $(function(){
+        $(".airWay li").each(function(index){
+            $(this).click(function(){
+                $(".salePriceFlight .flightInfoList").hide();
+                $(".salePriceFlight .flightInfoList:eq(" + index + ")").show();
+                $(".airWay li").removeClass("current");
+                $(this).addClass("current");
+            });
+
+        });
+        $(".customerCenterButton").hover(
+                function(){
+                    $(this).animate(
+                            {width:"100%"},
+                            200,
+                            function(){$(".customerCenterContainer").addClass("expanded");}
+                    )},
+                function(){
+                    if($(".customerCenterContainer").hasClass("off")){
+                        $(this).animate(
+                                {width:"90px"},
+                                200,
+                                function(){
+                                    $(".customerCenterContainer").removeClass("expanded");
+                                }
+                        )
+                    }
+                }
+        )
+        $(".customerCenterButton").click(function(){
+            if(!$(".customerCenterContainer").hasClass("off"))
+            {
+                $(".customerCenterContainer").addClass("off");
+                $(".customerCenterItemsPanel").hide();
+                $(this).animate({width:"90px"},200,function(){$(".customerCenterContainer").removeClass("expanded");})
+                return false;
+            }
+            $(".customerCenterButton").animate({width:"100%"},"fast");
+            $(".customerCenterItemsPanel").slideDown("fast");
+            $(".customerCenterContainer").removeClass("off");
+
+        })
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta content="text/html" charset="utf-8">
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/b2g.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.b2g.css" />
+</head>
+<body>
+<input type="button" id="btn_pop" value="弹窗"/>
+<script type="text/html" id="checkPricePopwinTemplate">
+    <div class="pricesShownContainer">
+        <strong style="float: left;margin-top:35px">价格浮动：</strong>
+        <div class="pricesShown">
+            <ul>
+                <li style="text-decoration:line-through">机票原价：￥9799.00</li>
+                <li>机票金额：<span class="text1" style="font-size: 16px">￥9799.00</span></li>
+                <li>燃油+参考税：0+1355元</li>
+            </ul>
+        </div>
+        <div class="priceStatus priceUp">
+            +30.25
+        </div>
+        <div class="priceStatus priceDown">
+            +30.25
+        </div>
+    </div>
+    <div class="travelPolicyStatusContainer">
+        <img src="../../static/images/b2g/ico_notMeetTravelPolicy.gif" alt=""/>
+        <ul class="notMeetTravelPolicyDetail">
+            <li>该员工仅限乘坐经济舱<span class="nmtp_person">【李大川】</span></li>
+            <li>员工不允许男女混住<span class="nmtp_person">【李大川】</span><span class="nmtp_person">【李大川】</span><span class="nmtp_person">【李大川】</span></li>
+            <li>员工不允许男女混住<span class="nmtp_person">【李大川】</span><span class="nmtp_person">【李大川】</span><span class="nmtp_person">【李大川】</span><span class="nmtp_person">【李大川】</span><span class="nmtp_person">【李大川】</span><span class="nmtp_person">【李大川】</span><span class="nmtp_person">【李大川】</span><span class="nmtp_person">【李大川】</span><span class="nmtp_person">【李大川】</span><span class="nmtp_person">【李大川】</span><span class="nmtp_person">【李大川】</span></li>
+        </ul>
+    </div>
+    <div class="buttonbox">
+        <button type="button" class="commonBtn lightBlueBtn btnfontStyle" style="margin-right:12px">为符合政策的预订</button>
+        <button type="button" class="commonBtn lightRedBtn btnfontStyle" style="margin-right:12px">添 加</button>
+        <a href="javascript:;" class="btn_a_cancel">取消</a>
+    </div>
+</script>
+<script>
+    $(function(){
+        new PopWindow("#btn_pop",{
+            title:"提示",
+            width:"580",
+            template:"#checkPricePopwinTemplate"
+        }).init();
+    })
+</script>
+</body>
+</html>

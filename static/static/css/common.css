@@ -1,0 +1,137 @@
+/* 
+    Document   : commom.css
+    Created on : 2013-6-9, 16:18
+    Author     : 234
+    Description:
+        Purpose of the stylesheet follows.
+*/
+html,body,div,p,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,input,select,button,textarea,iframe,table,th,td,header,footer {
+	margin:0;
+	padding:0;
+	outline-style:none;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	-webkit-text-size-adjust:none;
+}
+*:focus {
+	outline:none;
+}
+img {
+	border:0 none;
+	vertical-align:top;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+ul,li {
+	list-style-type:none;
+}
+h1,h2,h3,h4,h5,h6 {
+	color:#666;
+}
+h1 {font-size:2em;}
+h2 {font-size:1.5em;}
+h3 {font-size:1.3em;}
+h4 {font-size:1.2em;}
+h5 {font-size:1em;}
+h6 {font-size:.875em;}
+body,input,select,button,textarea {
+	font-size:12px;
+}
+
+textarea{
+    resize:none;
+}
+input {
+/*	hcursor:pointer;*/
+}
+input[type=text],input[type=password]{
+	cursor:text;
+}
+i,em,cite {
+	font-style:normal;
+}
+body {
+	/*text-align:center;*//*zzz*/
+    font-size:0.8em;
+}
+a {
+	outline:none;
+	text-decoration:none;
+	/*for FF*/
+}
+a {
+	star:expression(this.onFocus=this.blur());
+	/* for Ie*/
+}
+.fixed:after {
+	content:".";
+	display:block;
+	clear:both;
+	height:0;
+	visibility:hidden;
+}
+.fixed {
+	display:block;
+	min-height:1%;
+}
+*html .fixed {
+	height:1%;
+}
+.clear {
+	display:block !important;
+	float:none !important;
+	clear:both;
+	overflow:hidden;
+	width:auto !important;
+	height:0 !important;
+	margin:0 auto !important;
+	padding:0 !important;
+	font-size:0;
+	line-height:0;
+}
+
+.fl,.fr {
+	display:inline;
+	float:left;
+}
+.fr {
+	float:right;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  *zoom: 1; }
+
+label input{
+    vertical-align:middle;
+}
+
+body{background:#d5d5d5;}
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table td,table th {
+    empty-cells:show;
+}
+
+button{
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+    *overflow: visible;  /* 4 */
+    text-transform: none;
+    line-height: normal;
+    font-size: 100%; /* 1 */
+    margin: 0; /* 2 */
+    vertical-align: baseline; /* 3 */
+    *vertical-align: middle; /* 3 */
+}

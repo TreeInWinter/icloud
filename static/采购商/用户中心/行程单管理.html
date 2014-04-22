@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 用户中心 行程单申请</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+     
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_ucenter.css" media="screen" />
+
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.store.css" />
+    
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>    
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>    
+
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+    
+    <script type="text/javascript" src="../../static/js/store/store.js"></script>
+</head>
+<body>
+
+<div class="main-wrapper">
+<header class="main-header">
+    <a class="logo" href="/"><h1>天地行</h1></a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first active"><a herf="#">首页</a></li>
+            <li><a herf="#">国内机票</a></li>
+            <li><a herf="#">国际机票</a></li>
+            <li><a herf="#">酒店</a></li>
+        </ul> 
+    </nav>
+    <nav class="main-links">
+        <ul class="clearfix">
+            <li class="first"><a href="#">订单管理</a></li>
+            <li><a href="#">分销管理</a></li>
+            <li><a href="#">电子钱包</a></li>
+            <li><a href="#">统计报表</a></li>
+            <li><a href="#">客服服务</a></li>
+            <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+            <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+</header>
+<section class="main-body clearfix">
+    <aside class="us-nav">
+        <nav>
+            <h3>用户中心</h3>
+            <div class="us-bind"><a href="#">手机已绑定</a>&#12288;<a class="text1" href="#"><i class="ucnav_03"></i>邮箱未绑定</a></div>
+            <dl>
+                <dt><i class="ucnav_07"></i>订单管理</dt>
+                <dd><a href="#">当日所有订单</a></dd>
+                <dd><a href="#">国内机票订单</a></dd>
+                <dd><a href="#">国际机票订单</a></dd>
+                <dd><a href="#">酒店订单</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="ucnav_10"></i>询价单管理</dt>
+                <dd><a href="#">国内机票询价单</a></dd>
+                <dd><a href="#">国际机票询价单</a></dd>
+                <dd><a href="#">酒店询价单</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_12"></i>电子钱包</dt>
+                <dd><a href="#">账户信息</a></dd>
+                <dd><a href="#">账户充值</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_15"></i>票据管理</dt>
+                <dd><a class="current" href="#">行程单</a></dd>
+                <dd><a href="#">发票</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_17"></i>统计报表</dt>
+                <dd><a href="#">财务报表</a></dd>
+                <dd><a href="#">机票业务</a></dd>
+                <dd><a href="#">酒店业务</a></dd>
+                <dd><a href="#">分销业务</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_19"></i>分销商管理</dt>
+                <dd><a href="#">分销商管理</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_22"></i>账户资料</dt>
+                <dd><a href="#">信息维护</a></dd>
+                <dd><a href="#">消息设置</a></dd>
+            </dl>
+
+            <dl>
+              <dt><i class="ucnav_26"></i>我的工具</dt>
+              <dd><a class="ic-j" href="#"><i class="ucnav_29"></i>常旅客管理</a></dd>
+                <dd><a class="ic-j" href="#"><i class="ucnav_32"></i>短消息</a></dd>
+            </dl>
+        </nav>
+    </aside>
+    <main class="us-content">
+        <h1 class="us-title">行程单</h1>
+        <div class="us-body">
+            <aside>
+                <ul class="tab_change clearfix">
+                    <li><em><a href="javascript:void(0);">行程单申请</a></em></li>
+                    <li class="currentState"><em><a href="javascript:void(0);">行程单管理</a></em></li>
+                </ul>
+            </aside>
+            <div class="tab_item">
+                <section class="us-query clearfix">
+                    <table class="us-query-table fixed-table">
+                        <colgroup>
+                            <col width="60">
+                            <col width="170">
+                            <col width="75">
+                            <col width="350">
+                        </colgroup>
+                        <tr>
+                            <th>行程单号：</th>
+                            <td><input id="" style="width:115px;" type="text" name=""></td>
+                            <th>行程单状态：</th>
+                            <td>
+                                <select data-role="dropdownlist" style="width:90px" id="" name="">
+                                    <option value="">全部</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                        <th>票号：</th>
+                        <td>
+                            <input id="" style="width:115px;" type="text" name="">
+                        </td>
+                            <th>操作日期：</th>
+                            <td>
+                                <input id="" class="datepicker dpShort" value="" type="text" name=""><s> - </s><input id="" class="datepicker dpShort" value="" type="text" name="">
+                            </td>
+                        </tr>
+                    </table>
+                    <a class="adaptiveButton brightRed_btn">
+                        <span class="left"></span>
+                        <span class="center">搜&nbsp;索</span>
+                        <span class="right"></span>
+                    </a>
+                </section>
+            </div>
+
+                <section class="us-result xcd-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>行程单号</th>
+                                <th>票号</th>
+                                <th>订单号</th>
+                                <th>操作人</th>
+                                <th>操作时间</th>
+                                <th>行程单状态</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>582198291321</td>
+                            <td>582198291321</td>
+                            <td>582198291321</td>
+                            <td>张小发</td>
+                            <td>2013-09-09</td>
+                            <td>已使用</td>
+                            <td><span class="text1">作废</span></td>
+                        </tr>
+                        <tr>
+                            <td>582198291321</td>
+                            <td>582198291321</td>
+                            <td>582198291321</td>
+                            <td>张小发</td>
+                            <td>2013-09-09</td>
+                            <td>已使用</td>
+                            <td><span class="text1">作废</span></td>
+                        </tr>
+                        <tr>
+                            <td>582198291321</td>
+                            <td>582198291321</td>
+                            <td>582198291321</td>
+                            <td>张小发</td>
+                            <td>2013-09-09</td>
+                            <td>已使用</td>
+                            <td><span class="text1">作废</span></td>
+                        </tr>
+                        <tr>
+                            <td>582198291321</td>
+                            <td>582198291321</td>
+                            <td>582198291321</td>
+                            <td>张小发</td>
+                            <td>2013-09-09</td>
+                            <td>已使用</td>
+                            <td><span class="text1">作废</span></td>
+                        </tr>
+                        <tr>
+                            <td>582198291321</td>
+                            <td>582198291321</td>
+                            <td>582198291321</td>
+                            <td>张小发</td>
+                            <td>2013-09-09</td>
+                            <td>已使用</td>
+                            <td><span class="text1">作废</span></td>
+                        </tr>
+                        <tr>
+                            <td>582198291321</td>
+                            <td>582198291321</td>
+                            <td>582198291321</td>
+                            <td>张小发</td>
+                            <td>2013-09-09</td>
+                            <td>已使用</td>
+                            <td><span class="text1">作废</span></td>
+                        </tr>
+                        <tr>
+                            <td>582198291321</td>
+                            <td>582198291321</td>
+                            <td>582198291321</td>
+                            <td>张小发</td>
+                            <td>2013-09-09</td>
+                            <td>已使用</td>
+                            <td><span class="text1">作废</span></td>
+                        </tr>
+                        <tr>
+                            <td>582198291321</td>
+                            <td>582198291321</td>
+                            <td>582198291321</td>
+                            <td>张小发</td>
+                            <td>2013-09-09</td>
+                            <td>已使用</td>
+                            <td><span class="text1">作废</span></td>
+                        </tr>
+                        <tr>
+                            <td>582198291321</td>
+                            <td>582198291321</td>
+                            <td>582198291321</td>
+                            <td>张小发</td>
+                            <td>2013-09-09</td>
+                            <td>已使用</td>
+                            <td><span class="text1">作废</span></td>
+                        </tr>
+                        <tr>
+                            <td>582198291321</td>
+                            <td>582198291321</td>
+                            <td>582198291321</td>
+                            <td>张小发</td>
+                            <td>2013-09-09</td>
+                            <td>已使用</td>
+                            <td><span class="text1">作废</span></td>
+                        </tr>
+                        <tr>
+                            <td>582198291321</td>
+                            <td>582198291321</td>
+                            <td>582198291321</td>
+                            <td>张小发</td>
+                            <td>2013-09-09</td>
+                            <td>已使用</td>
+                            <td><span class="text1">作废</span></td>
+                        </tr>
+                    </table>
+                </section>
+                <div class="pagination clearfix">
+                    <ul>
+                        <li><a href="#">上一页</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#" class="present">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li> <span>...</span> </li>
+                        <li><a href="#">60</a></li>
+                        <li><a href="#">下一页</a></li>
+                    </ul>
+                    <div>
+                        <span>共<em>132</em>条记录 &nbsp;&nbsp;&nbsp;共14页</span> 
+                    </div>
+                </div>
+
+        </div>
+
+
+
+
+    </main>
+</section>
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+
+
+</body>
+</html>
+

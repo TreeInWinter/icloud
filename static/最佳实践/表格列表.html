@@ -1,0 +1,1791 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<!-- Common Kendo UI Web CSS -->
+	<link href="/static/css/kendo.common.min.css" rel="stylesheet" />
+	<!-- Default Kendo UI Web theme CSS -->
+	<link href="/static/css/kendo.blueopal.min.css" rel="stylesheet" />
+	<!-- jQuery JavaScript -->
+	<script src="/static/js/jquery.min.js"></script>
+	<!-- Kendo UI Web combined JavaScript -->
+	<script src="/static/js/kendo.web.min.js"></script>
+	
+	<!-- Log -->
+	<script src="/static/js/console.js"></script>
+	
+	<script src="/最佳实践/formatPage.js"></script>
+
+	<script>
+	    var firstNames = ["Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael", "Robert", "Laura", "Anne", "Nige"],
+	    lastNames = ["Davolio", "Fuller", "Leverling", "Peacock", "Buchanan", "Suyama", "King", "Callahan", "Dodsworth", "White"],
+	    cities = ["Seattle", "Tacoma", "Kirkland", "Redmond", "London", "Philadelphia", "New York", "Seattle", "London", "Boston"],
+	    titles = ["Accountant", "Vice President, Sales", "Sales Representative", "Technical Support", "Sales Manager", "Web Designer",
+	    "Software Developer", "Inside Sales Coordinator", "Chief Techical Officer", "Chief Execute Officer"],
+	    birthDates = [new Date("1948/12/08"), new Date("1952/02/19"), new Date("1963/08/30"), new Date("1937/09/19"), new Date("1955/03/04"), new Date("1963/07/02"), new Date("1960/05/29"), new Date("1958/01/09"), new Date("1966/01/27"), new Date("1966/03/27")];
+
+	    function createRandomData(count) {
+		var data = [],
+		    now = new Date();
+		for (var i = 0; i < count; i++) {
+		    var firstName = firstNames[Math.floor(Math.random() * firstNames.length)],
+			lastName = lastNames[Math.floor(Math.random() * lastNames.length)],
+			city = cities[Math.floor(Math.random() * cities.length)],
+			title = titles[Math.floor(Math.random() * titles.length)],
+			birthDate = birthDates[Math.floor(Math.random() * birthDates.length)],
+			age = now.getFullYear() - birthDate.getFullYear();
+
+		    data.push({
+			Id: i + 1,
+			FirstName: firstName,
+			LastName: lastName,
+			City: city,
+			Title: title,
+			BirthDate: birthDate,
+			Age: age
+		    });
+		}
+		return data;
+	    }
+	</script>
+	
+    </head>
+    <body>
+	
+	<h1>表格 数据来源Javascript数组</h1>
+	<div id="grid"></div>
+	<script>
+	    $("#grid").kendoGrid({
+		height: 200,
+		columns:[
+		    {
+			field: "FirstName",
+			title: "First Name"
+		    },
+		    {
+			field: "LastName",
+			title: "Last Name"
+		    }
+		],
+		dataSource: {
+		    data: [
+			{
+			    FirstName: "John",
+			    LastName: "Doe"
+			},
+			{
+			    FirstName: "Jane",
+			    LastName: "Doe"
+			}
+		    ]
+		}
+	    });
+	</script>
+	
+	
+	<h1>表格 数据来源Javascript数组 自定义CSS</h1>
+	<div id="clientsDb">
+	    <div id="grid2" style="height: 380px"></div>
+	</div>
+	<style type="text/css">
+	    #clientsDb {
+		width: 692px;
+		height: 413px;
+		margin: 30px auto;
+		padding: 51px 4px 0 4px;
+		background: url('/kendoui.web/examples/content/web/grid/clientsDb.png') no-repeat 0 0;
+	    }
+	</style>
+	<script>
+	    $(document).ready(function() {
+		$("#grid2").kendoGrid({
+		    dataSource: {
+			data: createRandomData(50),
+			pageSize: 10
+		    },
+		    groupable: true,
+		    sortable: true,
+		    pageable: {
+			refresh: true,
+			pageSizes: true
+		    },
+		    columns: [ {
+			    field: "FirstName",
+			    width: 90,
+			    title: "First Name"
+			} , {
+			    field: "LastName",
+			    width: 90,
+			    title: "Last Name"
+			} , {
+			    width: 100,
+			    field: "City"
+			} , {
+			    field: "Title"
+			} , {
+			    field: "BirthDate",
+			    title: "Birth Date",
+			    template: '#= kendo.toString(BirthDate,"dd MMMM yyyy") #'
+			} , {
+			    width: 50,
+			    field: "Age"
+			}
+		    ]
+		});
+	    });
+	</script>
+	
+	
+	<h1>通过HTML table 创建表格</h1>
+	<table id="grid3">
+	    <thead>
+		<tr>
+		    <th data-field="make">Car Make</th>
+		    <th data-field="model">Car Model</th>
+		    <th data-field="year">Year</th>
+		    <th data-field="category">Category</th>
+		    <th data-field="airconditioner">Air Conditioner</th>
+		</tr>
+	    </thead>
+	    <tbody>
+		<tr>
+		    <td>Volvo</td>
+		    <td>S60</td>
+		    <td>2010</td>
+		    <td>Saloon</td>
+		    <td>Yes</td>
+		</tr>
+		<tr>
+		    <td>Audi</td>
+		    <td>A4</td>
+		    <td>2002</td>
+		    <td>Saloon</td>
+		    <td>Yes</td>
+		</tr>
+		<tr>
+		    <td>BMW</td>
+		    <td>535d</td>
+		    <td>2006</td>
+		    <td>Saloon</td>
+		    <td>Yes</td>
+		</tr>
+		<tr>
+		    <td>BMW</td>
+		    <td>320d</td>
+		    <td>2006</td>
+		    <td>Saloon</td>
+		    <td>No</td>
+		</tr>
+		<tr>
+		    <td>VW</td>
+		    <td>Passat</td>
+		    <td>2007</td>
+		    <td>Saloon</td>
+		    <td>No</td>
+		</tr>
+		<tr>
+		    <td>Peugeot</td>
+		    <td>407</td>
+		    <td>2006</td>
+		    <td>Saloon</td>
+		    <td>Yes</td>
+		</tr>
+		<tr>
+		    <td>Honda</td>
+		    <td>Accord</td>
+		    <td>2008</td>
+		    <td>Saloon</td>
+		    <td>No</td>
+		</tr>
+		<tr>
+		    <td>Alfa Romeo</td>
+		    <td>159</td>
+		    <td>2008</td>
+		    <td>Saloon</td>
+		    <td>No</td>
+		</tr>
+		<tr>
+		    <td>Nissan</td>
+		    <td>Almera</td>
+		    <td>2001</td>
+		    <td>Saloon</td>
+		    <td>Yes</td>
+		</tr>
+		<tr>
+		    <td>Mitsubishi</td>
+		    <td>Lancer</td>
+		    <td>2008</td>
+		    <td>Saloon</td>
+		    <td>Yes</td>
+		</tr>
+		<tr>
+		    <td>Opel</td>
+		    <td>Vectra</td>
+		    <td>2008</td>
+		    <td>Saloon</td>
+		    <td>Yes</td>
+		</tr>
+		<tr>
+		    <td>Toyota</td>
+		    <td>Avensis</td>
+		    <td>2008</td>
+		    <td>Saloon</td>
+		    <td>Yes</td>
+		</tr>
+		<tr>
+		    <td>Audi</td>
+		    <td>Q7</td>
+		    <td>2007</td>
+		    <td>SUV</td>
+		    <td>Yes</td>
+		</tr>
+		<tr>
+		    <td>Hyundai</td>
+		    <td>Santa Fe</td>
+		    <td>2012</td>
+		    <td>SUV</td>
+		    <td>Yes</td>
+		</tr>
+		<tr>
+		    <td>Nissan</td>
+		    <td>Qashqai</td>
+		    <td>2007</td>
+		    <td>SUV</td>
+		    <td>Yes</td>
+		</tr>
+		<tr>
+		    <td>Mercedez</td>
+		    <td>B Class</td>
+		    <td>2007</td>
+		    <td>Hatchback</td>
+		    <td>Yes</td>
+		</tr>
+		<tr>
+		    <td>Lancia</td>
+		    <td>Ypsilon</td>
+		    <td>2006</td>
+		    <td>Hatchback</td>
+		    <td>Yes</td>
+		</tr>
+	    </tbody>
+	</table>
+	<script>
+	    $(document).ready(function() {
+		$("#grid3").kendoGrid({
+		    height: 430
+		});
+	    });
+	</script>
+
+	<h1>本地Javascript数据源 <a href="/kendoui.web/examples/content/shared/js/products.js">products.js</a></h1>
+	<script src="/kendoui.web/examples/content/shared/js/products.js"></script>
+	<div id="grid4"></div>
+	<script>
+	    $(document).ready(function() {
+		$("#grid4").kendoGrid({
+		    dataSource: {
+			data: products,
+			schema: {
+			    model: {
+				fields: {
+				    ProductName: { type: "string" },
+				    UnitPrice: { type: "number" },
+				    UnitsInStock: { type: "number" },
+				    Discontinued: { type: "boolean" }
+				}
+			    }
+			},
+			pageSize: 20
+		    },
+		    height: 430,
+		    scrollable: true,
+		    sortable: true,
+		    filterable: true,
+		    pageable: {
+			input: true,
+			numeric: false
+		    },
+		    columns: [
+			"ProductName",
+			{ field: "UnitPrice", title: "Unit Price", format: "{0:c}", width: "130px" },
+			{ field: "UnitsInStock", title: "Units In Stock", width: "130px" },
+			{ field: "Discontinued", width: "130px" }
+		    ]
+		});
+	    });
+	</script>
+	
+	<h1>远程数据源</h1>
+	
+	<textarea rows="20" cols="80">
+	  以下为解析后的 JSON 对象
+{
+  "d": {
+    "results": [
+      {
+        "__metadata": {
+          "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10248)",
+          "type": "SampleModel.Order"
+        },
+        "OrderID": 10248,
+        "CustomerID": "VINET",
+        "EmployeeID": 5,
+        "OrderDate": "\/Date(836438400000)\/",
+        "RequiredDate": "\/Date(838857600000)\/",
+        "ShippedDate": "\/Date(837475200000)\/",
+        "ShipVia": 3,
+        "Freight": "32.38",
+        "ShipName": "Vins et alcools Chevalier",
+        "ShipAddress": "59 rue de l'Abbaye",
+        "ShipCity": "Reims",
+        "ShipRegion": null,
+        "ShipPostalCode": "51100",
+        "ShipCountry": "France",
+        "Customer": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10248)/Customer"
+          }
+        },
+        "Employee": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10248)/Employee"
+          }
+        },
+        "Order_Details": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10248)/Order_Details"
+          }
+        },
+        "Shipper": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10248)/Shipper"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10249)",
+          "type": "SampleModel.Order"
+        },
+        "OrderID": 10249,
+        "CustomerID": "TOMSP",
+        "EmployeeID": 6,
+        "OrderDate": "\/Date(836524800000)\/",
+        "RequiredDate": "\/Date(840153600000)\/",
+        "ShippedDate": "\/Date(836956800000)\/",
+        "ShipVia": 1,
+        "Freight": "11.61",
+        "ShipName": "Toms Spezialit\u00e4ten",
+        "ShipAddress": "Luisenstr. 48",
+        "ShipCity": "M\u00fcnster",
+        "ShipRegion": null,
+        "ShipPostalCode": "44087",
+        "ShipCountry": "Germany",
+        "Customer": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10249)/Customer"
+          }
+        },
+        "Employee": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10249)/Employee"
+          }
+        },
+        "Order_Details": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10249)/Order_Details"
+          }
+        },
+        "Shipper": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10249)/Shipper"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10250)",
+          "type": "SampleModel.Order"
+        },
+        "OrderID": 10250,
+        "CustomerID": "HANAR",
+        "EmployeeID": 4,
+        "OrderDate": "\/Date(836784000000)\/",
+        "RequiredDate": "\/Date(839203200000)\/",
+        "ShippedDate": "\/Date(837129600000)\/",
+        "ShipVia": 2,
+        "Freight": "65.83",
+        "ShipName": "Hanari Carnes",
+        "ShipAddress": "Rua do Pa\u00e7o, 67",
+        "ShipCity": "Rio de Janeiro",
+        "ShipRegion": "RJ",
+        "ShipPostalCode": "05454-876",
+        "ShipCountry": "Brazil",
+        "Customer": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10250)/Customer"
+          }
+        },
+        "Employee": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10250)/Employee"
+          }
+        },
+        "Order_Details": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10250)/Order_Details"
+          }
+        },
+        "Shipper": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10250)/Shipper"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10251)",
+          "type": "SampleModel.Order"
+        },
+        "OrderID": 10251,
+        "CustomerID": "VICTE",
+        "EmployeeID": 3,
+        "OrderDate": "\/Date(836784000000)\/",
+        "RequiredDate": "\/Date(839203200000)\/",
+        "ShippedDate": "\/Date(837388800000)\/",
+        "ShipVia": 1,
+        "Freight": "41.34",
+        "ShipName": "Victuailles en stock",
+        "ShipAddress": "2, rue du Commerce",
+        "ShipCity": "Lyon",
+        "ShipRegion": null,
+        "ShipPostalCode": "69004",
+        "ShipCountry": "France",
+        "Customer": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10251)/Customer"
+          }
+        },
+        "Employee": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10251)/Employee"
+          }
+        },
+        "Order_Details": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10251)/Order_Details"
+          }
+        },
+        "Shipper": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10251)/Shipper"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10252)",
+          "type": "SampleModel.Order"
+        },
+        "OrderID": 10252,
+        "CustomerID": "SUPRD",
+        "EmployeeID": 4,
+        "OrderDate": "\/Date(836870400000)\/",
+        "RequiredDate": "\/Date(839289600000)\/",
+        "ShippedDate": "\/Date(837043200000)\/",
+        "ShipVia": 2,
+        "Freight": "51.30",
+        "ShipName": "Supr\u00eames d\u00e9lices",
+        "ShipAddress": "Boulevard Tirou, 255",
+        "ShipCity": "Charleroi",
+        "ShipRegion": null,
+        "ShipPostalCode": "B-6000",
+        "ShipCountry": "Belgium",
+        "Customer": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10252)/Customer"
+          }
+        },
+        "Employee": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10252)/Employee"
+          }
+        },
+        "Order_Details": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10252)/Order_Details"
+          }
+        },
+        "Shipper": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10252)/Shipper"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10253)",
+          "type": "SampleModel.Order"
+        },
+        "OrderID": 10253,
+        "CustomerID": "HANAR",
+        "EmployeeID": 3,
+        "OrderDate": "\/Date(836956800000)\/",
+        "RequiredDate": "\/Date(838166400000)\/",
+        "ShippedDate": "\/Date(837475200000)\/",
+        "ShipVia": 2,
+        "Freight": "58.17",
+        "ShipName": "Hanari Carnes",
+        "ShipAddress": "Rua do Pa\u00e7o, 67",
+        "ShipCity": "Rio de Janeiro",
+        "ShipRegion": "RJ",
+        "ShipPostalCode": "05454-876",
+        "ShipCountry": "Brazil",
+        "Customer": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10253)/Customer"
+          }
+        },
+        "Employee": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10253)/Employee"
+          }
+        },
+        "Order_Details": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10253)/Order_Details"
+          }
+        },
+        "Shipper": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10253)/Shipper"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10254)",
+          "type": "SampleModel.Order"
+        },
+        "OrderID": 10254,
+        "CustomerID": "CHOPS",
+        "EmployeeID": 5,
+        "OrderDate": "\/Date(837043200000)\/",
+        "RequiredDate": "\/Date(839462400000)\/",
+        "ShippedDate": "\/Date(838080000000)\/",
+        "ShipVia": 2,
+        "Freight": "22.98",
+        "ShipName": "Chop-suey Chinese",
+        "ShipAddress": "Hauptstr. 31",
+        "ShipCity": "Bern",
+        "ShipRegion": null,
+        "ShipPostalCode": "3012",
+        "ShipCountry": "Switzerland",
+        "Customer": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10254)/Customer"
+          }
+        },
+        "Employee": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10254)/Employee"
+          }
+        },
+        "Order_Details": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10254)/Order_Details"
+          }
+        },
+        "Shipper": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10254)/Shipper"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10255)",
+          "type": "SampleModel.Order"
+        },
+        "OrderID": 10255,
+        "CustomerID": "RICSU",
+        "EmployeeID": 9,
+        "OrderDate": "\/Date(837129600000)\/",
+        "RequiredDate": "\/Date(839548800000)\/",
+        "ShippedDate": "\/Date(837388800000)\/",
+        "ShipVia": 3,
+        "Freight": "148.33",
+        "ShipName": "Richter Supermarkt",
+        "ShipAddress": "Starenweg 5",
+        "ShipCity": "Gen\u00e8ve",
+        "ShipRegion": null,
+        "ShipPostalCode": "1204",
+        "ShipCountry": "Switzerland",
+        "Customer": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10255)/Customer"
+          }
+        },
+        "Employee": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10255)/Employee"
+          }
+        },
+        "Order_Details": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10255)/Order_Details"
+          }
+        },
+        "Shipper": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10255)/Shipper"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10256)",
+          "type": "SampleModel.Order"
+        },
+        "OrderID": 10256,
+        "CustomerID": "WELLI",
+        "EmployeeID": 3,
+        "OrderDate": "\/Date(837388800000)\/",
+        "RequiredDate": "\/Date(839808000000)\/",
+        "ShippedDate": "\/Date(837561600000)\/",
+        "ShipVia": 2,
+        "Freight": "13.97",
+        "ShipName": "Wellington Importadora",
+        "ShipAddress": "Rua do Mercado, 12",
+        "ShipCity": "Resende",
+        "ShipRegion": "SP",
+        "ShipPostalCode": "08737-363",
+        "ShipCountry": "Brazil",
+        "Customer": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10256)/Customer"
+          }
+        },
+        "Employee": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10256)/Employee"
+          }
+        },
+        "Order_Details": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10256)/Order_Details"
+          }
+        },
+        "Shipper": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10256)/Shipper"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10257)",
+          "type": "SampleModel.Order"
+        },
+        "OrderID": 10257,
+        "CustomerID": "HILAA",
+        "EmployeeID": 4,
+        "OrderDate": "\/Date(837475200000)\/",
+        "RequiredDate": "\/Date(839894400000)\/",
+        "ShippedDate": "\/Date(837993600000)\/",
+        "ShipVia": 3,
+        "Freight": "81.91",
+        "ShipName": "HILARION-Abastos",
+        "ShipAddress": "Carrera 22 con Ave. Carlos Soublette #8-35",
+        "ShipCity": "San Crist\u00f3bal",
+        "ShipRegion": "T\u00e1chira",
+        "ShipPostalCode": "5022",
+        "ShipCountry": "Venezuela",
+        "Customer": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10257)/Customer"
+          }
+        },
+        "Employee": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10257)/Employee"
+          }
+        },
+        "Order_Details": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10257)/Order_Details"
+          }
+        },
+        "Shipper": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10257)/Shipper"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10258)",
+          "type": "SampleModel.Order"
+        },
+        "OrderID": 10258,
+        "CustomerID": "ERNSH",
+        "EmployeeID": 1,
+        "OrderDate": "\/Date(837561600000)\/",
+        "RequiredDate": "\/Date(839980800000)\/",
+        "ShippedDate": "\/Date(838080000000)\/",
+        "ShipVia": 1,
+        "Freight": "140.51",
+        "ShipName": "Ernst Handel",
+        "ShipAddress": "Kirchgasse 6",
+        "ShipCity": "Graz",
+        "ShipRegion": null,
+        "ShipPostalCode": "8010",
+        "ShipCountry": "Austria",
+        "Customer": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10258)/Customer"
+          }
+        },
+        "Employee": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10258)/Employee"
+          }
+        },
+        "Order_Details": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10258)/Order_Details"
+          }
+        },
+        "Shipper": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10258)/Shipper"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10259)",
+          "type": "SampleModel.Order"
+        },
+        "OrderID": 10259,
+        "CustomerID": "CENTC",
+        "EmployeeID": 4,
+        "OrderDate": "\/Date(837648000000)\/",
+        "RequiredDate": "\/Date(840067200000)\/",
+        "ShippedDate": "\/Date(838252800000)\/",
+        "ShipVia": 3,
+        "Freight": "3.25",
+        "ShipName": "Centro comercial Moctezuma",
+        "ShipAddress": "Sierras de Granada 9993",
+        "ShipCity": "M\u00e9xico D.F.",
+        "ShipRegion": null,
+        "ShipPostalCode": "05022",
+        "ShipCountry": "Mexico",
+        "Customer": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10259)/Customer"
+          }
+        },
+        "Employee": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10259)/Employee"
+          }
+        },
+        "Order_Details": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10259)/Order_Details"
+          }
+        },
+        "Shipper": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10259)/Shipper"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10260)",
+          "type": "SampleModel.Order"
+        },
+        "OrderID": 10260,
+        "CustomerID": "OTTIK",
+        "EmployeeID": 4,
+        "OrderDate": "\/Date(837734400000)\/",
+        "RequiredDate": "\/Date(840153600000)\/",
+        "ShippedDate": "\/Date(838598400000)\/",
+        "ShipVia": 1,
+        "Freight": "55.09",
+        "ShipName": "Ottilies K\u00e4seladen",
+        "ShipAddress": "Mehrheimerstr. 369",
+        "ShipCity": "K\u00f6ln",
+        "ShipRegion": null,
+        "ShipPostalCode": "50739",
+        "ShipCountry": "Germany",
+        "Customer": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10260)/Customer"
+          }
+        },
+        "Employee": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10260)/Employee"
+          }
+        },
+        "Order_Details": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10260)/Order_Details"
+          }
+        },
+        "Shipper": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10260)/Shipper"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10261)",
+          "type": "SampleModel.Order"
+        },
+        "OrderID": 10261,
+        "CustomerID": "QUEDE",
+        "EmployeeID": 4,
+        "OrderDate": "\/Date(837734400000)\/",
+        "RequiredDate": "\/Date(840153600000)\/",
+        "ShippedDate": "\/Date(838684800000)\/",
+        "ShipVia": 2,
+        "Freight": "3.05",
+        "ShipName": "Que Del\u00edcia",
+        "ShipAddress": "Rua da Panificadora, 12",
+        "ShipCity": "Rio de Janeiro",
+        "ShipRegion": "RJ",
+        "ShipPostalCode": "02389-673",
+        "ShipCountry": "Brazil",
+        "Customer": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10261)/Customer"
+          }
+        },
+        "Employee": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10261)/Employee"
+          }
+        },
+        "Order_Details": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10261)/Order_Details"
+          }
+        },
+        "Shipper": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10261)/Shipper"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10262)",
+          "type": "SampleModel.Order"
+        },
+        "OrderID": 10262,
+        "CustomerID": "RATTC",
+        "EmployeeID": 8,
+        "OrderDate": "\/Date(837993600000)\/",
+        "RequiredDate": "\/Date(840412800000)\/",
+        "ShippedDate": "\/Date(838252800000)\/",
+        "ShipVia": 3,
+        "Freight": "48.29",
+        "ShipName": "Rattlesnake Canyon Grocery",
+        "ShipAddress": "2817 Milton Dr.",
+        "ShipCity": "Albuquerque",
+        "ShipRegion": "NM",
+        "ShipPostalCode": "87110",
+        "ShipCountry": "USA",
+        "Customer": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10262)/Customer"
+          }
+        },
+        "Employee": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10262)/Employee"
+          }
+        },
+        "Order_Details": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10262)/Order_Details"
+          }
+        },
+        "Shipper": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10262)/Shipper"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10263)",
+          "type": "SampleModel.Order"
+        },
+        "OrderID": 10263,
+        "CustomerID": "ERNSH",
+        "EmployeeID": 9,
+        "OrderDate": "\/Date(838080000000)\/",
+        "RequiredDate": "\/Date(840499200000)\/",
+        "ShippedDate": "\/Date(838771200000)\/",
+        "ShipVia": 3,
+        "Freight": "146.06",
+        "ShipName": "Ernst Handel",
+        "ShipAddress": "Kirchgasse 6",
+        "ShipCity": "Graz",
+        "ShipRegion": null,
+        "ShipPostalCode": "8010",
+        "ShipCountry": "Austria",
+        "Customer": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10263)/Customer"
+          }
+        },
+        "Employee": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10263)/Employee"
+          }
+        },
+        "Order_Details": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10263)/Order_Details"
+          }
+        },
+        "Shipper": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10263)/Shipper"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10264)",
+          "type": "SampleModel.Order"
+        },
+        "OrderID": 10264,
+        "CustomerID": "FOLKO",
+        "EmployeeID": 6,
+        "OrderDate": "\/Date(838166400000)\/",
+        "RequiredDate": "\/Date(840585600000)\/",
+        "ShippedDate": "\/Date(840758400000)\/",
+        "ShipVia": 3,
+        "Freight": "3.67",
+        "ShipName": "Folk och f\u00e4 HB",
+        "ShipAddress": "\u00c5kergatan 24",
+        "ShipCity": "Br\u00e4cke",
+        "ShipRegion": null,
+        "ShipPostalCode": "S-844 67",
+        "ShipCountry": "Sweden",
+        "Customer": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10264)/Customer"
+          }
+        },
+        "Employee": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10264)/Employee"
+          }
+        },
+        "Order_Details": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10264)/Order_Details"
+          }
+        },
+        "Shipper": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10264)/Shipper"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10265)",
+          "type": "SampleModel.Order"
+        },
+        "OrderID": 10265,
+        "CustomerID": "BLONP",
+        "EmployeeID": 2,
+        "OrderDate": "\/Date(838252800000)\/",
+        "RequiredDate": "\/Date(840672000000)\/",
+        "ShippedDate": "\/Date(839808000000)\/",
+        "ShipVia": 1,
+        "Freight": "55.28",
+        "ShipName": "Blondel p\u00e8re et fils",
+        "ShipAddress": "24, place Kl\u00e9ber",
+        "ShipCity": "Strasbourg",
+        "ShipRegion": null,
+        "ShipPostalCode": "67000",
+        "ShipCountry": "France",
+        "Customer": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10265)/Customer"
+          }
+        },
+        "Employee": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10265)/Employee"
+          }
+        },
+        "Order_Details": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10265)/Order_Details"
+          }
+        },
+        "Shipper": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10265)/Shipper"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10266)",
+          "type": "SampleModel.Order"
+        },
+        "OrderID": 10266,
+        "CustomerID": "WARTH",
+        "EmployeeID": 3,
+        "OrderDate": "\/Date(838339200000)\/",
+        "RequiredDate": "\/Date(841968000000)\/",
+        "ShippedDate": "\/Date(838771200000)\/",
+        "ShipVia": 3,
+        "Freight": "25.73",
+        "ShipName": "Wartian Herkku",
+        "ShipAddress": "Torikatu 38",
+        "ShipCity": "Oulu",
+        "ShipRegion": null,
+        "ShipPostalCode": "90110",
+        "ShipCountry": "Finland",
+        "Customer": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10266)/Customer"
+          }
+        },
+        "Employee": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10266)/Employee"
+          }
+        },
+        "Order_Details": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10266)/Order_Details"
+          }
+        },
+        "Shipper": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10266)/Shipper"
+          }
+        }
+      },
+      {
+        "__metadata": {
+          "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10267)",
+          "type": "SampleModel.Order"
+        },
+        "OrderID": 10267,
+        "CustomerID": "FRANK",
+        "EmployeeID": 4,
+        "OrderDate": "\/Date(838598400000)\/",
+        "RequiredDate": "\/Date(841017600000)\/",
+        "ShippedDate": "\/Date(839289600000)\/",
+        "ShipVia": 1,
+        "Freight": "208.58",
+        "ShipName": "Frankenversand",
+        "ShipAddress": "Berliner Platz 43",
+        "ShipCity": "M\u00fcnchen",
+        "ShipRegion": null,
+        "ShipPostalCode": "80805",
+        "ShipCountry": "Germany",
+        "Customer": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10267)/Customer"
+          }
+        },
+        "Employee": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10267)/Employee"
+          }
+        },
+        "Order_Details": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10267)/Order_Details"
+          }
+        },
+        "Shipper": {
+          "__deferred": {
+            "uri": "http://demos.kendoui.com/service/Northwind.svc/Orders(10267)/Shipper"
+          }
+        }
+      }
+    ],
+    "__count": "830"
+  }
+}
+	</textarea>
+	<div id="grid5"></div>
+	<script>
+	    $(document).ready(function() {
+		$("#grid5").kendoGrid({
+		    dataSource: {
+			type: "odata",
+			transport: {
+			    read: "http://demos.kendoui.com/service/Northwind.svc/Orders"
+			},
+			schema: {
+			    model: {
+				fields: {
+				    OrderID: { type: "number" },
+				    Freight: { type: "number" },
+				    ShipName: { type: "string" },
+				    OrderDate: { type: "date" },
+				    ShipCity: { type: "string" }
+				}
+			    }
+			},
+			pageSize: 20,
+			serverPaging: true,
+			serverFiltering: true,
+			serverSorting: true
+		    },
+		    height: 430,
+		    filterable: true,
+		    sortable: true,
+		    pageable: true,
+		    columns: [{
+			    field:"OrderID",
+			    filterable: false
+			},
+			"Freight",
+			{
+			    field: "OrderDate",
+			    title: "Order Date",
+			    width: 120,
+			    format: "{0:MM/dd/yyyy}"
+			}, {
+			    field: "ShipName",
+			    title: "Ship Name",
+			    width: 260
+			}, {
+			    field: "ShipCity",
+			    title: "Ship City",
+			    width: 150
+			}
+		    ]
+		});
+	    });
+	</script>
+	
+	
+	<h1>内敛 编辑、新建功能的 grid</h1>
+	<div id="grid6"></div>
+	<script>
+	    $(document).ready(function () {
+		var crudServiceBaseUrl = "http://demos.kendoui.com/service",
+		    dataSource = new kendo.data.DataSource({
+			transport: {
+			    read:  {
+				url: crudServiceBaseUrl + "/Products",
+				dataType: "jsonp"
+			    },
+			    update: {
+				url: crudServiceBaseUrl + "/Products/Update",
+				dataType: "jsonp"
+			    },
+			    destroy: {
+				url: crudServiceBaseUrl + "/Products/Destroy",
+				dataType: "jsonp"
+			    },
+			    create: {
+				url: crudServiceBaseUrl + "/Products/Create",
+				dataType: "jsonp"
+			    },
+			    parameterMap: function(options, operation) {
+				if (operation !== "read" && options.models) {
+				    return {models: kendo.stringify(options.models)};
+				}
+			    }
+			},
+			batch: true,
+			pageSize: 20,
+			schema: {
+			    model: {
+				id: "ProductID",
+				fields: {
+				    ProductID: { editable: false, nullable: true },
+				    ProductName: { validation: { required: true } },
+				    UnitPrice: { type: "number", validation: { required: true, min: 1} },
+				    Discontinued: { type: "boolean" },
+				    UnitsInStock: { type: "number", validation: { min: 0, required: true } }
+				}
+			    }
+			}
+		    });
+
+		$("#grid6").kendoGrid({
+		    dataSource: dataSource,
+		    pageable: true,
+		    height: 430,
+		    toolbar: ["create"],
+		    columns: [
+			"ProductName",
+			{ field: "UnitPrice", title: "Unit Price", format: "{0:c}", width: "100px" },
+			{ field: "UnitsInStock", title:"Units In Stock", width: "100px" },
+			{ field: "Discontinued", width: "100px" },
+			{ command: ["edit", "destroy"], title: "&nbsp;", width: "172px" }],
+		    editable: "inline" //内敛
+		});
+	    });
+	</script>
+	
+	
+	
+	<h1>弹层  编辑、新建功能的 grid</h1>
+	<div id="grid7"></div>
+	<script>
+	    $(document).ready(function () {
+		var crudServiceBaseUrl = "http://demos.kendoui.com/service",
+		    dataSource = new kendo.data.DataSource({
+			transport: {
+			    read:  {
+				url: crudServiceBaseUrl + "/Products",
+				dataType: "jsonp"
+			    },
+			    update: {
+				url: crudServiceBaseUrl + "/Products/Update",
+				dataType: "jsonp"
+			    },
+			    destroy: {
+				url: crudServiceBaseUrl + "/Products/Destroy",
+				dataType: "jsonp"
+			    },
+			    create: {
+				url: crudServiceBaseUrl + "/Products/Create",
+				dataType: "jsonp"
+			    },
+			    parameterMap: function(options, operation) {
+				if (operation !== "read" && options.models) {
+				    return {models: kendo.stringify(options.models)};
+				}
+			    }
+			},
+			batch: true,
+			pageSize: 20,
+			schema: {
+			    model: {
+				id: "ProductID",
+				fields: {
+				    ProductID: { editable: false, nullable: true },
+				    ProductName: { validation: { required: true } },
+				    UnitPrice: { type: "number", validation: { required: true, min: 1} },
+				    Discontinued: { type: "boolean" },
+				    UnitsInStock: { type: "number", validation: { min: 0, required: true } }
+				}
+			    }
+			}
+		    });
+
+		$("#grid7").kendoGrid({
+		    dataSource: dataSource,
+		    pageable: true,
+		    height: 430,
+		    toolbar: ["create"],
+		    columns: [
+			"ProductName",
+			{ field: "UnitPrice", title: "Unit Price", format: "{0:c}", width: "100px" },
+			{ field: "UnitsInStock", title:"Units In Stock", width: "100px" },
+			{ field: "Discontinued", width: "100px" },
+			{ command: ["edit", "destroy"], title: "&nbsp;", width: "172px" }],
+		    editable: "popup" //弹层
+		});
+	    });
+	</script>
+	
+	
+	
+	
+	<h1>嵌套表格 每页都是服务器返回的分页数据</h1>
+	<div id="grid8"></div>
+	<script>
+	    $(document).ready(function() {
+		var element = $("#grid8").kendoGrid({
+		    dataSource: {
+			type: "odata",
+			transport: {
+			    read: "http://demos.kendoui.com/service/Northwind.svc/Employees"
+			},
+			pageSize: 6,
+			serverPaging: true,
+			serverSorting: true
+		    },
+		    height: 430,
+		    sortable: true,
+		    pageable: true,
+		    detailInit: detailInit,
+		    dataBound: function() {
+			//展开第一项
+			//this.expandRow(this.tbody.find("tr.k-master-row").first());
+		    },
+		    columns: [
+			{
+			    field: "FirstName",
+			    title: "First Name",
+			    width: "110px"
+			},
+			{
+			    field: "LastName",
+			    title: "Last Name",
+			    width: "110px"
+			},
+			{
+			    field: "Country",
+			    width: "110px"
+			},
+			{
+			    field: "City",
+			    width: "110px"
+			},
+			{
+			    field: "Title"
+			}
+		    ]
+		});
+	    });
+
+	    function detailInit(e) {
+		$("<div/>").appendTo(e.detailCell).kendoGrid({
+		    dataSource: {
+			type: "odata",
+			transport: {
+			    read: "http://demos.kendoui.com/service/Northwind.svc/Orders"
+			},
+			serverPaging: true,
+			serverSorting: true,
+			serverFiltering: true,
+			pageSize: 5,
+			filter: { field: "EmployeeID", operator: "eq", value: e.data.EmployeeID }
+		    },
+		    scrollable: false,
+		    sortable: true,
+		    pageable: true,
+		    columns: [
+			{ field: "OrderID", width: "70px" },
+			{ field: "ShipCountry", title:"Ship Country", width: "110px" },
+			{ field: "ShipAddress", title:"Ship Address" },
+			{ field: "ShipName", title: "Ship Name", width: "200px" }
+		    ]
+		});
+	    }
+	</script>
+	
+	
+	
+	
+	<h1>嵌套表格 自定义子表格模版</h1>
+	<div id="grid9"></div>
+	<!-- 定义  模版 -->
+	<script type="text/x-kendo-template" id="template">
+	    <div class="tabstrip">
+		<ul>
+		    <li class="k-state-active">
+			Orders
+		    </li>
+		    <li>
+			Contact Information
+		    </li>
+		</ul>
+		<div>
+		    <div class="orders"></div>
+		</div>
+		<div>
+		    <div class='employee-details'>
+			<ul>
+			    <li><label>Country:</label>#= Country #</li>
+			    <li><label>City:</label>#= City #</li>
+			    <li><label>Address:</label>#= Address #</li>
+			    <li><label>Home Phone:</label>#= HomePhone #</li>
+			</ul>
+		    </div>
+		</div>
+	    </div>
+	</script>
+
+	<script>
+	    $(document).ready(function() {
+                    var element = $("#grid9").kendoGrid({
+                        dataSource: {
+                            type: "odata",
+                            transport: {
+                                read: "http://demos.kendoui.com/service/Northwind.svc/Employees"
+                            },
+                            pageSize: 5,
+                            serverPaging: true,
+                            serverSorting: true
+                        },
+                        height: 430,
+                        sortable: true,
+                        pageable: true,
+                        detailTemplate: kendo.template($("#template").html()),
+                        detailInit: detailInit2,
+                        dataBound: function() {
+                            this.expandRow(this.tbody.find("tr.k-master-row").first());
+                        },
+                        columns: [
+                            {
+                                field: "FirstName",
+                                title: "First Name",
+                                width: "120px"
+                            },
+                            {
+                                field: "LastName",
+                                title: "Last Name",
+                                width: "120px"
+                            },
+                            {
+                                field: "Country",
+                                width: "120px"
+                            },
+                            {
+                                field: "City",
+                                width: "120px"
+                            },
+                            {
+                                field: "Title"
+                            }
+                        ]
+                    });
+                });
+
+                function detailInit2(e) {
+                    var detailRow = e.detailRow;
+
+                    detailRow.find(".tabstrip").kendoTabStrip({
+                        animation: {
+                            open: { effects: "fadeIn" }
+                        }
+                    });
+
+                    detailRow.find(".orders").kendoGrid({
+                        dataSource: {
+                            type: "odata",
+                            transport: {
+                                read: "http://demos.kendoui.com/service/Northwind.svc/Orders"
+                            },
+                            serverPaging: true,
+                            serverSorting: true,
+                            serverFiltering: true,
+                            pageSize: 5,
+                            filter: { field: "EmployeeID", operator: "eq", value: e.data.EmployeeID }
+                        },
+                        scrollable: false,
+                        sortable: true,
+                        pageable: true,
+                        columns: [
+                            { field: "OrderID", title:"ID", width: "80px" },
+                            { field: "ShipCountry", title:"Ship Country", width: "110px" },
+                            { field: "ShipAddress", title:"Ship Address" },
+                            { field: "ShipName", title: "Ship Name", width: "190px" }
+                        ]
+                    });
+                }
+	</script>
+	
+	
+	<h1>表格排序 Javascript 排序, 单列排序和多列排序 数据<a href="/kendoui.web/examples/content/shared/js/orders.js">orders.js</a></h1>
+	<script src="/kendoui.web/examples/content/shared/js/orders.js"></script>
+	<h2>单列排序</h2>
+	<div id="singleSort"></div>
+	<h2>多列排序</h2>
+	<div id="multipleSort"></div>
+	<script>
+	    $(document).ready(function () {
+		$("#singleSort").kendoGrid({
+		    dataSource: {
+			data: orders,
+			pageSize: 5
+		    },
+		    sortable: {
+			mode: "single",
+			allowUnsort: false
+		    },
+		    pageable: {
+			buttonCount: 5
+		    },
+		    scrollable: false,
+		    columns: [
+			{
+			    field: "ShipCountry",
+			    title: "Ship Country",
+			    width: 200
+			},
+			{
+			    field: "Freight",
+			    width: 200
+			},
+			{
+			    field: "OrderDate",
+			    title: "Order Date",
+			    format: "{0:dd/MM/yyyy}"
+			}
+		    ]
+		});
+
+		$("#multipleSort").kendoGrid({
+		    dataSource: {
+			data: orders,
+			pageSize: 5
+		    },
+		    sortable: {
+			mode: "multiple",
+			allowUnsort: true
+		    },
+		    pageable: {
+			buttonCount: 5
+		    },
+		    scrollable: false,
+		    columns: [
+			{
+			    field: "ShipCountry",
+			    title: "Ship Country",
+			    width: 200
+			},
+			{
+			    field: "Freight",
+			    width: 200
+			},
+			{
+			    field: "OrderDate",
+			    title: "Order Date",
+			    format: "{0:d}"
+			}
+		    ]
+		});
+	    });
+	</script>
+	
+	
+	<h1>选中 行和单元格,列位置调整以及宽度调整</h1>
+	<h2>行选中,按住CTRL后可多选 (这里设置了reorderable: true ，这样可以拖动列交互位置)</h2>
+	<ul class="options">
+	    <li>
+		<input type="text" value="0" id="selectRow" class="k-textbox"/>
+		<button class="selectRow k-button">选择行</button><span>行号从0开始</span>
+	    </li>
+	    <li>
+		<button class="clearSelection k-button">清除选择</button>
+	    </li>
+	</ul>
+
+	<div id="rowSelection"></div>
+	<h2>单元格选中 (这里设置了resizable: true ，这样可以改变列的宽度)</h2>
+	<div id="cellSelection"></div>
+	<script>
+	    $(document).ready(function () {
+		$(".clearSelection").click(function () {
+		    $("#rowSelection").data("kendoGrid").clearSelection();
+		});
+
+		var selectRow = function (e) {
+		    if (e.type != "keypress" || kendo.keys.ENTER == e.keyCode) {
+			var grid = $("#rowSelection").data("kendoGrid"),
+				rowIndex = $("#selectRow").val(),
+				row = grid.tbody.find(">tr:not(.k-grouping-row)").eq(rowIndex);
+
+			grid.select(row);
+		    }
+		}
+		
+		$(".selectRow").click(selectRow);
+                $("#selectRow").keypress(selectRow);
+		
+		$("#rowSelection").kendoGrid({
+		    dataSource: {
+			data: orders,
+			pageSize: 5
+		    },
+		    selectable: "multiple",
+		    reorderable: true,//注意这个属性 表示可以拖动
+		    pageable: {
+			buttonCount: 5
+		    },
+		    scrollable: false,
+		    navigatable: true,
+		    columns: [
+			{
+			    field: "ShipCountry",
+			    title: "Ship Country",
+			    width: 200
+			},
+			{
+			    field: "Freight",
+			    width: 200
+			},
+			{
+			    field: "OrderDate",
+			    title: "Order Date",
+			    format: "{0:dd/MM/yyyy}"
+			}
+		    ]
+		});
+
+		$("#cellSelection").kendoGrid({
+		    dataSource: {
+			data: orders,
+			pageSize: 5
+		    },
+		    selectable: "multiple cell",
+		    resizable: true,	//这里表示可以改变列的宽度
+		    pageable: {
+			buttonCount: 5
+		    },
+		    scrollable: false,
+		    navigatable: true,
+		    columns: [
+			{
+			    field: "ShipCountry",
+			    title: "Ship Country",
+			    width: 200
+			},
+			{
+			    field: "Freight",
+			    width: 200
+			},
+			{
+			    field: "OrderDate",
+			    title: "Order Date",
+			    format: "{0:dd/MM/yyyy}"
+			}
+		    ]
+		});
+	    });
+	</script>
+	
+	
+	
+	<h1>自定义行显示模版</h1>
+	<table id="grid12">
+	    <colgroup>
+		<col class="photo" />
+		<col class="details"/>
+		<col/>
+	    </colgroup>
+	    <thead>
+		<tr>
+		    <th>
+			Picture
+		    </th>
+		    <th>
+			Details
+		    </th>
+		    <th>
+			ID
+		    </th>
+		</tr>
+	    </thead>
+	    <tbody>
+		<tr>
+		    <td colspan="3"></td>
+		</tr>
+	    </tbody>
+	</table>
+	<!-- 定义数据行模版  -->
+	<script id="rowTemplate" type="text/x-kendo-tmpl">
+		<tr>
+			<td class="photo">
+		    <img src="/kendoui.web/examples/content/web/Employees/#:data.EmployeeID#.jpg" alt="#: data.EmployeeID #" />
+			</td>
+			<td class="details">
+				<span class="title">#: Title #</span>
+				<span class="description">Name : #: FirstName# #: LastName#</span>
+				<span class="description">Country : #: Country# </span>
+			</td>
+			<td class="employeeID">
+			    #: EmployeeID #
+			</td>
+		</tr>
+	</script>
+	<script>
+	    $(document).ready(function() {
+		$("#grid12").kendoGrid({
+		    dataSource: {
+			type: "odata",
+			transport: {
+			    read: {	
+				url: "http://demos.kendoui.com/service/Northwind.svc/Employees",
+			    }
+			}
+		    },
+		    rowTemplate: kendo.template($("#rowTemplate").html()),
+		    height: 430
+		});
+	    });
+	</script>
+
+	
+	<h1>事件处理</h1>
+	<div id="grid13"></div>
+	<div class="console"></div>
+
+	<script>
+	    function onChange(arg) {
+		var selected = $.map(this.select(), function(item) {
+		    //console.log(item);//tr 引用
+		    return $(item).text();
+		});
+
+		kendoConsole.log("Selected: " + selected.length + " item(s), [" + selected.join(", ") + "]");
+	    }
+
+	    function onDataBound(arg) {
+		kendoConsole.log("Grid data bound");
+	    }
+
+	    function onDataBinding(arg) {
+		kendoConsole.log("Grid data binding");
+	    }
+
+	    $(document).ready(function () {
+		$("#grid13").kendoGrid({
+		    dataSource: {
+			transport: {
+			    read: {
+				url: "http://demos.kendoui.com/service/Products",
+				dataType: "jsonp"
+			    }
+			},
+			pageSize: 5
+		    },
+		    change: onChange,
+		    dataBound: onDataBound,
+		    dataBinding: onDataBinding,
+		    selectable: "multiple",
+		    pageable: true,
+		    sortable: true,
+		    scrollable: false,
+		    columns: [
+			{
+			    field: "ProductName",
+			    title: "Product Name"
+			},
+			{
+			    field: "UnitPrice",
+			    title: "Unit Price",
+			    format: "{0:c}"
+			},
+			{
+			    field: "UnitsInStock",
+			    title: "Units In Stock"
+			}
+		    ]
+		});
+	    });
+	</script>
+
+    </body>
+</html>

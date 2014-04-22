@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>政策 国内政策 标签管理</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.gray.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/buyer.css" rel="stylesheet" type="text/css"/>
+    
+    <script src="../../static/js/jquery.min.js" type="text/javascript"></script>
+    <script src="../../static/js/kendo.web.js" type="text/javascript"></script>
+    <script src="../../static/js/global.js" type="text/javascript"></script>
+
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<!-- @CLB@ -->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+<script>
+var POLICY_TAGS = [
+    {
+        id:1,
+        tagname:'东航',
+        checked: false
+    },{
+        id:2,
+        tagname:'东航fda',
+        checked: false
+    },{
+        id:3,
+        tagname:'东航fda',
+        checked: false
+    }
+];
+
+
+$(function(){
+    $.fn.pltags = function(tagData){
+        this.each(function(){
+            var that = $(this);
+
+            var layer = new PopWindow('.policy-input',{
+                title:'点击添加标签：',
+                template:'#ac-tags-template',
+                width:570,
+                open:function(e){
+                    //var left = this.input.parent().offset().left;
+                    //this.css('left',left); 
+                    kendo.bind(e.sender.element,tagModel);
+                }
+            }).init();
+
+            var tagModel = kendo.observable({
+                active:'',
+                title:'点击添加标签：',
+                selected:'东航政策标签',
+                tags:tagData,
+                tagClick:function(e){
+                   var className = e.data.checked ? 'highlight':'';
+                   $(e.target).parent().attr('class',className);
+                    this.set('selected',e.data.tagname);
+                    layer.close();
+                    this.get('tags').forEach(function(i){
+                        if(e.data.id != i.get('id')){
+                            i.set('checked',false);
+                        }
+                    });
+                    //高度增加 每次都检测添加按钮位置，
+                    //var oTop = that.find('.add-tag').offset().top+28;
+                    //layer.css('top',oTop);
+                }
+            });
+
+
+            kendo.bind(that,tagModel);
+        });
+
+    };
+
+    $('.policy-input').pltags(POLICY_TAGS);
+
+}); 
+</script>
+<script type="text/x-kendo-template" id="ac-tags-template">
+            <div class="pt-body" data-bind="source:tags" data-template="ac-tag-template"></div>
+</script>
+
+<script type="text/x-kendo-template" id="ac-tag-template">
+<label data-bind="attr:{class:checked?'highlight':''}"><input id="" data-bind="checked:checked,click:tagClick" type="checkbox" name=""> 
+            <span data-bind="text:tagname"></span></label>
+</script>
+</head>
+<body>
+    <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">&nbsp;</a>
+                <span>&nbsp;</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent">
+        
+		<!-- 舱位代码开始 -->
+        <div class="code_2">
+          <p style="float:left;">
+          <a href="#">政策管理</a>
+          <a href="#">后返管理</a>
+          <a href="#">协议管理</a>
+          <a href="#" class="code_a_1">标签管理</a>
+          </p>
+          <div class="add_btn">
+              <a href="javascript:;" class="button_secondary adaptiveButton small">
+              <span class="left"></span>
+              <span class="center" style="padding:0 10px;">添加政策</span>
+              <span class="right"></span>
+              </a>
+              <a href="javascript:;" class="button_secondary adaptiveButton small">
+              <span class="left"></span>
+              <span class="center" style="padding:0 10px;">添加标签</span>
+              <span class="right"></span>
+              </a>
+          </div>
+        </div>
+        
+        <div class="query_2">
+          <table cellpadding="0" cellspacing="0" class="query_tab">
+            <tr>
+              <td class="list_3">标签名称</td>
+              <td class="list_4" colspan="5"><input type="text" readonly class="policy-input" data-bind="value:selected" style="margin-top:0px;" /></td>
+              <td class="list_9"><a href="#" class="query_a">查 询</a></td>
+            </tr> 
+          </table>          
+        </div>
+        
+        <table cellpadding="0" cellspacing="0" class="discount_tab">
+          <tr>
+             <th>ID</th>
+             <th>标签名称</th>
+             <th>关联政策</th>
+             <th>备注</th>
+             <th>修改时间</th>
+             <th>操作员</th>
+             <th style="text-align:center; width:130px;">操作</th>
+          </tr>
+          <tr>
+             <td>13061811120</td>
+             <td>MU 东航</td>
+             <td>23</td>
+             <td>13年4-6月国内团队政策</td>
+             <td>2013-06-18 22:44</td>
+             <td>李晓明</td>
+             <td class="last_td_b"> <a href="#">修改</a> <a href="#">复制</a> <a href="#">删除</a></td>
+          </tr>
+          <tr class="hui_bg">
+             <td>13061811120</td>
+             <td>MU 东航</td>
+             <td>23</td>
+             <td>13年4-6月国内团队政策</td>
+             <td>2013-06-18 22:44</td>
+             <td>李晓明</td>
+             <td class="last_td_b"> <a href="#">修改</a> <a href="#">复制</a> <a href="#">删除</a></td>
+          </tr>
+          <tr>
+             <td>13061811120</td>
+             <td>MU 东航</td>
+             <td>23</td>
+             <td>13年4-6月国内团队政策</td>
+             <td>2013-06-18 22:44</td>
+             <td>李晓明</td>
+             <td class="last_td_b"> <a href="#">修改</a> <a href="#">复制</a> <a href="#">删除</a></td>
+          </tr>
+          <tr class="hui_bg">
+             <td>13061811120</td>
+             <td>MU 东航</td>
+             <td>23</td>
+             <td>13年4-6月国内团队政策</td>
+             <td>2013-06-18 22:44</td>
+             <td>李晓明</td>
+             <td class="last_td_b"> <a href="#">修改</a> <a href="#">复制</a> <a href="#">删除</a></td>
+          </tr>
+         <tr>
+             <td>13061811120</td>
+             <td>MU 东航</td>
+             <td>23</td>
+             <td>13年4-6月国内团队政策</td>
+             <td>2013-06-18 22:44</td>
+             <td>李晓明</td>
+             <td class="last_td_b"> <a href="#">修改</a> <a href="#">复制</a> <a href="#">删除</a></td>
+          </tr>
+        </table>
+           
+         
+         <div class="grid-table-pagination page">
+          <span class="grid-table-count">
+              共 <em>132</em> 条记录
+          </span>
+          <span>
+              <a href="#" class="prev">&nbsp;</a>
+          </span>
+          <span class="links">
+              <a href="#">1</a>
+              <a href="#">2</a>
+              <a href="#" class="current">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+              <a href="javascript:;">...</a>
+              <a href="#">50</a>
+          </span>
+          <span>
+              <a href="#" class="next">&nbsp;</a>
+          </span>
+      </div>
+           
+           
+           
+           
+        <!-- 舱位代码结束 -->
+    </div>
+	</div> 
+    
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+</body>
+</html>

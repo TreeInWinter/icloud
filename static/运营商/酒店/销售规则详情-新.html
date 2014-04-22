@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta content="text/html" charset="utf-8">
+    <link rel="stylesheet" href="/static/css/kendo.common.css">
+    <link rel="stylesheet" href="/static/css/kendo.gray.css">
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/b2b.css">
+    <link href="/static/css/kendo.reset.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/static/css/hotel.css">
+    <link rel="stylesheet" href="/static/css/hotel_sellPrice_rule.css">
+    <style type="text/css">
+        .k-tooltip{background-color:#fff;padding:0}
+        .tbl_tooltipRoomType td{border:1px solid #ccc}
+        .k-tooltip-closable .k-tooltip-content{padding-right:0}
+        .k-i-close{margin:5px}
+        .k-callout.k-callout-n{border-bottom-color:#666666}
+        .k-callout.k-callout-s{border-top-color:#666666}
+    </style>
+</head>
+<body>
+<div id="container" style="margin-top:0">
+    <div id="mainContent">
+        <div class="actions block">
+            <div class="col col-l sep-r">
+                <button class="btns btn-return">返回</button>
+            </div>
+            <div class="col col-l">
+        <span class="page-title">
+            XXXXX销售规则详情
+        </span>
+            </div>
+            <div class="col col-r sep-l">
+                <a href="javascript:;" class="button_secondary adaptiveButton small">
+                    <span class="left"></span>
+                    <span class="center">修 改</span>
+                    <span class="right"></span>
+                </a>
+                <a href="javascript:;" class="button_secondary adaptiveButton small">
+                    <span class="left"></span>
+                    <span class="center">复 制</span>
+                    <span class="right"></span>
+                </a>
+                <a href="javascript:;" class="button_secondary adaptiveButton small">
+                    <span class="left"></span>
+                    <span class="center">挂 起</span>
+                    <span class="right"></span>
+                </a>
+                <a href="javascript:;" class="button_important adaptiveButton small">
+                    <span class="left"></span>
+                    <span class="center">作 废</span>
+                    <span class="right"></span>
+                </a>
+            </div>
+        </div>
+
+        <div style="padding:20px;border-bottom:1px solid #ccc;background:#fff">
+            <table>
+                <tr>
+                    <td style="width:70px"><span class="important">*</span><span class="head">规则名称：</span></td>
+                    <td style="width:215px">全年XXXXXX销售计划</td>
+                    <td style="width:50px"><span class="head">规则ID：</span></td>
+                    <td style="width:70px">abc</td>
+                    <td style="width:65px"><span class="head">规则状态：</span></td>
+                    <td style="width:70px">已创建</td>
+                    <td style="width:65px;"><span class="head">创建时间：</span></td>
+                    <td style="width:90px">2012-10-01</td>
+                    <td style="width:55px"><span class="head">创建人：</span></td>
+                    <td>刘伟</td>
+                </tr>
+                <tr>
+                    <td><span class="important">*</span><span class="head">有效期：</span></td>
+                    <td colspan="7">
+                        2012-01-01 至 2012-10-01 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top"><span class="head">备注：</span></td>
+                    <td colspan="9"><textarea name="" id="" style="border:0;width:786px;height:68px" >备备备备备备备备注注注注注注注注</textarea></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="panel" style="padding:0 20px">
+            <div class="subPanel" style="padding:10px">
+                <div class="subPanel_title">
+                    <span class="head">城市范围：</span>
+                </div>
+            </div>
+            <div class="subPanel_data">
+                <div>
+                    <ul style="margin:15px 0">
+                        <li class="regionContainer" style="width:82px">
+                            <ul>
+                                <li class="selectAll"><label>上海市</label></li>
+                            </ul>
+                        </li>
+                        <li class="regionContainer" style="width:140px">
+                            <ul>
+                                <li class="selectAll"><label>华北区</label></li>
+                                <li><label>北京</label></li>
+                                <li><label>河南</label></li>
+                                <li><label>辽宁</label></li>
+                                <li><label>内蒙古</label></li>
+                                <li><label>黑龙江</label></li>
+                                <li><label>山东</label></li>
+                                <li><label>吉林</label></li>
+                                <li><label>河北</label></li>
+                            </ul>
+                        </li>
+                        <li class="regionContainer" style="width:128px">
+                            <ul>
+                                <li class="selectAll"><label>华东区</label></li>
+                                <li><label>浙江</label></li>
+                                <li><label>江苏</label></li>
+                                <li><label>福建</label></li>
+                                <li><label>湖南</label></li>
+                                <li><label>安徽</label></li>
+                                <li><label>江西</label></li>
+                            </ul>
+                        </li>
+                        <li class="regionContainer" style="width:128px">
+                            <ul>
+                                <li class="selectAll"><label>华南区</label></li>
+                                <li><label>广东</label></li>
+                                <li><label>广西</label></li>
+                                <li><label>海南</label></li>
+                            </ul>
+                        </li>
+                        <li class="regionContainer" style="width:128px">
+                            <ul>
+                                <li class="selectAll"><label>华西</label></li>
+                                <li><label>四川</label></li>
+                                <li><label>新疆</label></li>
+                                <li><label>西藏</label></li>
+                                <li><label>湖北</label></li>
+                                <li><label>重庆</label></li>
+                                <li><label>山西</label></li>
+                                <li><label>甘肃</label></li>
+                                <li><label>宁夏</label></li>
+                                <li><label>青海</label></li>
+                                <li><label>云南</label></li>
+                                <li><label>贵州</label></li>
+                            </ul>
+                        </li>
+                        <li class="regionContainer" style="width:82px">
+                            <ul>
+                                <li class="selectAll"><label>港澳台</label></li>
+                            </ul>
+                        </li>
+                        <li class="regionContainer" style="width:82px;border:none">
+                            <ul>
+                                <li class="selectAll"><label>海外</label></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="subPanel" style="border:none;padding-bottom:0">
+                <div class="subPanel_title">
+                    <span class="head">排除城市：</span>
+                    <span class="head" style="margin-right:25px"><b>(<strong>2000</strong>)</b></span>
+
+                    <a href="javascript:void(0)" class="oper pull-right">查看适用城市</a>
+                </div>
+                <div class="subPanel_data">
+                    <label class="item_data">苏州;</label>
+                    <label class="item_data">苏州;</label>
+                    <label class="item_data">苏州;</label>
+                    <label class="item_data">苏州;</label>
+                    <label class="item_data">苏州;</label>
+                    <label class="item_data">苏州;</label>
+                </div>
+            </div>
+            <div class="subPanel" style="border:none;padding-bottom:0">
+                <div class="subPanel_title star">
+                    <span class="head">星级：</span>
+                    <label class="item_data"><span>无星级</span></label>
+                    <label class="item_data"><span>二星级及以下/经济</span></label>
+                    <label class="item_data"><span>三星级/舒适</span></label>
+                    <label class="item_data"><span>四星级/高档</span></label>
+                    <label class="item_data"><span>五星级/豪华</span></label>
+                </div>
+                <div class="subPanel_data">
+                    <div style="height:20px;"></div>
+                </div>
+            </div>
+
+            <div class="subPanel" style="border:none;padding-bottom:0">
+                <div class="subPanel_title">
+                    <span class="head">排除酒店：</span>
+                    <span class="head" style="margin-right:25px"><b>(<strong>2000</strong>)</b></span>
+
+                    <a href="javascript:void(0)" class="oper pull-right">查看适用酒店</a>
+                </div>
+                <div class="subPanel_data">
+                    <label class="item_data">上海，宝华国际酒店;</label>
+                    <label class="item_data">上海，宝华国际酒店;</label>
+                    <label class="item_data">上海，宝华国际酒店;</label>
+                    <label class="item_data">上海，宝华国际酒店;</label>
+                    <label class="item_data">上海，宝华国际酒店;</label>
+                    <label class="item_data">上海，宝华国际酒店;</label>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="panel" style="padding:0;width:980px">
+            <div style="padding:20px 20px 40px 20px;">
+                <div style="font-weight: bold;padding:10px"><span>加价公式：</span><span>3</span>/10</div>
+                <div style="border:1px solid #ccc;padding:20px">
+                    <div>
+                        <span class="head" style="width:80px;display:inline-block">底价范围</span>
+                        <span style="width:110px;"><label>不限</label></span>
+                        <span style="width:110px;"><label>低价 &gt; 200 + 50</label></span>
+                        <span style="width:110px;"><label>- 低价 &lt; 200 + 50</label></span>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix" style="border-top:1px solid #ccc;margin:15px 0"></div>
+            <div style="padding:0 20px 20px 20px">
+                <table>
+                    <tr>
+                        <td colspan="4"><span class="head">政策规定</span></td>
+                    </tr>
+                    <tr>
+                        <td style="width:70px"><span class="head">房态</span></td>
+                        <td style="width:120px">系统房态</td>
+                        <td style="color:#999"></td>
+                    </tr>
+                    <tr>
+                        <td><span class="head">变更/取消</span></td>
+                        <td colspan="2"><label>酒店价格规定</label></td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+        <div class="panel" style="padding-bottom:0">
+            <div class="subPanel_title">
+                <span class="head">设置客户：</span>
+            </div>
+            <div class="subPanel_data customer">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th style="width:15%">客户组：</th>
+                            <td style="width:80%">
+                                <label class="item_data"><span>酒店默认</span></label>
+                                <label class="item_data"><span>酒店散客</span></label>
+                                <label class="item_data"><span>大客户</span></label>
+                                <label class="item_data"><span>艺龙</span></label>
+                                <label class="item_data"><span>携程</span></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="width:15%">采购商类型：</th>
+                            <td style="width:80%">
+                                <label class="item_data"><span>个人</span></label>
+                                <label class="item_data"><span>旅行社</span></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="width:15%">账户信息：</th>
+                            <td style="width:80%">
+                                <label class="item_data"><span>单笔</span></label>
+                                <label class="item_data"><span>授信</span></label>
+                                <label class="item_data"><span>预存</span></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="width:15%">账期：</th>
+                            <td style="width:80%">
+                                <label class="item_data"><span>0+0</span></label>
+                                <label class="item_data"><span>12+12</span></label>
+                                <label class="item_data"><span>30+10</span></label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="subPanel_title">
+                <span class="head">排除客户：</span>
+                <span class="head" style="margin-right:25px"><b>(<strong>2000</strong>)</b></span>
+
+                <a href="javascript:void(0)" class="oper pull-right">查看适用客户</a>
+            </div>
+            <div class="subPanel_data">
+                <label class="item_data">上海，清空旅社;</label>
+                <label class="item_data">上海，清空旅社;</label>
+                <label class="item_data">上海，清空旅社;</label>
+                <label class="item_data">上海，清空旅社;</label>
+                <label class="item_data">上海，清空旅社;</label>
+                <label class="item_data">上海，清空旅社;</label>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panelTitle" style="border: 0">
+                操作日志
+            </div>
+            <div class="panelContent clearfix">
+                <table class="operation_records">
+                    <thead>
+                        <tr>
+                            <td style="width:130px">日期</td>
+                            <td style="width:100px">操作人员</td>
+                            <td style="width:300px">操作项目</td>
+                            <td style="width:300px">操作内容</td>
+                            <td style="width:100px">操作类型</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>20130606 14:55</td>
+                            <td>liuwei</td>
+                            <td>增加行政商务套房</td>
+                            <td>增加行政商务套房</td>
+                            <td>新增</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/x-kendo-template" id="tooltipRoomTypeTemplate">
+    <table class="txt_l6 tbl_tooltipRoomType" style="width:100%">
+        <tr>
+            <td style="width:60px">排除</td>
+            <td style="width:120px">房型名称</td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" name="" id=""></label></td>
+            <td>商务标准房</td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" name="" id=""></label></td>
+            <td>商务标准房</td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" name="" id=""></label></td>
+            <td>商务标准房</td>
+        </tr>
+        <tr>
+            <td><label><input type="checkbox" name="" id=""></label></td>
+            <td>商务标准房</td>
+        </tr>
+    </table>
+</script>
+
+<script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+<script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+<script type="text/javascript" src="../../static/js/global.js"></script>
+
+
+
+
+
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>
+

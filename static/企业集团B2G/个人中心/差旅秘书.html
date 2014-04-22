@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 B2G 个人中心 差旅秘书</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/b2g.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.b2g.css" />
+	
+    <link rel="stylesheet" href="../../static/css/b2g_personage_center.css" media="all" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/b2g/common.js"></script>
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+    <!--[if lte IE 9]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+ <script>
+$(function(){
+
+    new PopWindow('.personalCard_add',{
+        title:'添加差旅秘书',
+        template:'#pc-addCard-template',
+        open:function(){
+            $('.contact-search').kendoAutoComplete({
+                filter: "contains",
+                dataSource:[{
+                    "id":1012,
+                    "email":"xaoquan@163.com",
+                    "name":"张小全",
+                    "department":"产品设计部",
+                    "phone":"13800138000"
+                },{
+                    "id":1912,
+                    "email":"xaoquan@163.com",
+                    "name":"张小全",
+                    "department":"产品设计部",
+                    "phone":"13800138000"
+                },{
+                    "id":1422,
+                    "email":"xaoquan@163.com",
+                    "name":"张小按",
+                    "department":"产品设计部",
+                    "phone":"13800138000"
+                },{
+                    "id":141889,
+                    "email":"xaoquan@163.com",
+                    "name":"张黄非",
+                    "department":"产品设计部",
+                    "phone":"13800138000"
+                },{
+                    "id":1411,
+                    "email":"xaoquan@163.com",
+                    "name":"张小非",
+                    "department":"产品设计部",
+                    "phone":"13800138000"
+                }],
+                placeholder:'姓名/部门/邮箱',
+                dataTextField:'name',
+                select:function(e){
+                     var dataItem = this.dataItem(e.item.index());
+                    // var id = dataItem.id;
+                    // if($('li[rel='+id+']').length>0){
+                    //     treeview.expand('.k-item');
+                    //     treeview.select('li[rel='+id+']');
+                    //     selectedHandler(id,dataItem.name);
+                    // }
+                    if($(".selectedTravelClerkContainer li").length<5)
+                    {
+                        $(".selectedTravelClerkContainer").append(kendo.template("<li>#= name# #= phone# #= email# <i class='btn_del'></i></li>")(dataItem));
+                    }
+                },
+                template:'<span class="address-name">#= name#</span><span class="address-phone">#= phone#</span><span class="address-email">#= email#</span>',
+                height:150
+            });
+        },
+        width:580
+    }).init();
+   
+    new PopWindow('.pc-delete',{
+        title:'删除订单',
+        template:'#pc-delete-template',
+        open:function(){
+            // 获取当前的tr
+            console.log(this.target.closest('tr'));
+            var name = this.target.closest('tr').children('td').eq(1).text();
+            this.data({
+                name:name
+            });
+        },
+        width:500
+    }).init();
+
+   
+})
+    </script>
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="top-line"></div>
+    <header class="main-header">
+        <div class="header-content">
+            <a class="logo" href="/">天地行 B2G</a>
+            <nav class="main-nav pc_main-nav">
+                <ul class="clearfix">
+                    <li class="active"><a herf="#">用户中心</a></li>
+                </ul> 
+            </nav>
+        </div>
+    </header>
+    
+
+    <section class="main-body clearfix">
+        <div class="main-body-content"><!--main-body-content start-->
+		<div class="personalNavBar clearfix">
+		  <ul>
+		    <li><span class="journey"><em>我的行程</em></span></li>
+			<li><span class="card"><em>信用卡</em></span></li>
+			<li class="current"><span class="secretary"><em>差旅秘书</em></span></li>
+			<li><span class="approver"><em>代理审批人</em></span></li>
+			<li><span class="messages"><em>消息中心</em></span></li>
+			<li><span class="data"><em>我的资料</em></span></li>
+			<li><span class="password"><em>修改密码</em></span></li>
+		  </ul>
+		</div>
+         <div class="personalBlock">
+		   <div class="personalBlockTit">我的差旅秘书</div>
+		   <div class="personalContent">
+		       <ul class="secretary_ul clearfix">
+			     <li>
+				   <div class="personalCard">
+				   <div class="personalCard-left">
+					  <p>姓名：<em>王小二</em></p>
+					  <p>部门：<em>技术部</em></p>
+					  <p>邮箱：<em>3208391@qq.com</em></p>
+					  <p>移动电话：<em>13918786997</em></p>
+				   </div>
+				   <div class="personalCard-right">
+					 <div class="cardImgarea">
+					   <span class="girlPic"></span>
+					 </div>
+					 <div class="delete_card"><em class="pc-delete">删除</em></div>
+				   </div>
+				   </div>
+				 </li>
+				 
+				 <li>
+				   <div class="personalCard">
+				   <div class="personalCard-left">
+					  <p>姓名：<em>王小二</em></p>
+					  <p>部门：<em>技术部</em></p>
+					  <p>邮箱：<em>3208391@qq.com</em></p>
+					  <p>移动电话：<em>13918786997</em></p>
+				   </div>
+				   <div class="personalCard-right">
+					 <div class="cardImgarea">
+					   <span class="boyPic"></span>
+					 </div>
+					 <div class="delete_card"><em class="pc-delete">删除</em></div>
+				   </div>
+				   </div>
+				 </li>
+				 
+				 <li>
+				   <div class="personalCard">
+				   <div class="personalCard-left">
+					  <p>姓名：<em>王小二</em></p>
+					  <p>部门：<em>技术部</em></p>
+					  <p>邮箱：<em>3208391@qq.com</em></p>
+					  <p>移动电话：<em>13918786997</em></p>
+				   </div>
+				   <div class="personalCard-right">
+					 <div class="cardImgarea">
+					   <span class="girlPic"></span>
+					 </div>
+					 <div class="delete_card"><em class="pc-delete">删除</em></div>
+				   </div>
+				   </div>
+				 </li>
+				 
+				 <li>
+				   <div class="personalCard">
+				   <div class="personalCard-left">
+					  <p>姓名：<em>王小二</em></p>
+					  <p>部门：<em>技术部</em></p>
+					  <p>邮箱：<em>3208391@qq.com</em></p>
+					  <p>移动电话：<em>13918786997</em></p>
+				   </div>
+				   <div class="personalCard-right">
+					 <div class="cardImgarea">
+					   <span class="girlPic"></span>
+					 </div>
+					 <div class="delete_card"><em class="pc-delete">删除</em></div>
+				   </div>
+				   </div>
+				 </li>
+				 
+				 <li>
+				   <div class="personalCard_add">
+				      <span><i></i><em class="pc-addCard">添加差旅秘书</em></span>
+				   </div>
+				 </li>
+				 
+			   </ul>
+		   </div>
+		 </div> 
+        
+        
+	   </div><!--main-body-content end-->
+    </section>
+    <footer class="main-footer">
+        <p class="copyright">Copyright &copy; 2013 天地行 All Rights Reserved.     沪ICP备08101503号</p>
+    </footer>
+</div>
+</body>
+
+<script type="text/x-kendo-template" id="pc-addCard-template">
+    <div class="row" style="margin:10px 25px;height:250px;">
+        <table class="tbl_comm">
+            <colgroup>
+                <col width="100">
+				<col width="400">
+            </colgroup>
+            <tr>
+                <td style="vertical-align:top;line-height:30px"><strong style="color:black">查找差旅秘书：</strong></td>
+                <td>
+                    <input class="contact-search" style="width:100%;" type="text" name="">
+                </td>
+            </tr>
+            <tr>
+			    <td></td>
+                <td><i class="important">*</i>最多支持设置5个差旅秘书</td>
+            </tr>
+            <tr>
+			   <td style="vertical-align:top;line-height:30px"><strong style="color:black">当前差旅秘书：</strong></td>
+                <td>
+                    <ul class="ul_selectedTravelClerk selectedTravelClerkContainer">
+                        <li>潘晓梅 行政部 123467589@qq.com<i class="btn_del"></i></li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="row row-btns">
+        <a href="javascript:;" class="btns btn-s2 btn-c1">确 定</a>
+        <a href="javascript:;" class="btns btn-s2 btn-c5">取 消</a>
+    </div>
+</script>
+
+<script type="text/x-kendo-template" id="pc-delete-template">
+    <div class="row row-icontext">
+        <i class="icon icon3"></i>
+        确认要删除该差旅秘书吗？
+    </div>
+    <div class="row row-btns">
+        <a href="javascript:;" class="btns btn-s2 btn-c1">确 定</a>
+        <a href="javascript:;" class="close btns btn-s2 btn-c5">取 消</a>
+    </div>
+</script>
+
+</html>
+
+

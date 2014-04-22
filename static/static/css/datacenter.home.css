@@ -1,0 +1,224 @@
+li{
+    list-style:none;
+}
+ul{
+    padding:0;
+    margin:0;
+}
+.logo{
+    position:absolute;
+    top:35px;
+    left:10px;
+}
+.loginContainer{
+    position:absolute;
+    top:120px;
+    right:10px;
+    z-index:999;
+    width:280px;
+    height:270px;
+    overflow: hidden;
+}
+.login-panel{
+    color:#fff;
+    background:rgba(14,18,21,.95);
+    background:rgb(14,18,21)\9;
+    position:absolute;
+    top:-300px;
+    left:0;
+    width:280px;
+    height:270px;
+    border-radius:10px;
+}
+.login-panel ul{
+    padding-top:40px;
+}
+.login-panel li{
+    margin-left:32px;
+    margin-bottom:25px;
+}
+.login-panel .arrow{
+    position:absolute;
+    width:30px;
+    height:15px;
+    top:-10px;
+    left:50%;
+    margin-left:-15px;
+    background:url(../images/datacenter/spirit.png) -85px -45px no-repeat;
+}
+.login{
+    position:absolute;
+    top:25px;
+    right:110px;
+    display:block;
+    width:81px;
+    height:81px;
+    background:url(../images/datacenter/login.png) 0px 0px no-repeat;
+}
+.login:hover{
+    background-position: 0 -82px;
+}
+.main-header .wrap{
+    z-index:9;
+    position:relative;
+}
+a{cursor:pointer;}
+
+.slide-item{
+    height:100%;
+    width:100%;
+    display:none;
+}
+.slide1{
+    background:#192E41 url(../images/datacenter/slide1.jpg) 50% 50% no-repeat;
+}
+.slide2{
+    background:#192E41 url(../images/datacenter/slide1.jpg) 50% 50% no-repeat;
+}
+.slide3{
+    background:#192E41 url(../images/datacenter/slide1.jpg) 50% 50% no-repeat;
+}
+.home-slides .slides{
+    height:430px;
+}
+.home-slides{
+    position:relative;
+}
+.home-links {
+    height:340px;
+}
+.home-links a{
+    display:block;
+    height:197px;
+    background-position: 10px -211px;
+    background-repeat:no-repeat;
+    margin-right:64px;
+    width:196px;
+}
+.home-links li{
+    float:left;
+}
+.home-links .link1{
+    background-image:url(../images/datacenter/l1.png);
+}
+.home-links .link2{
+    background-image:url(../images/datacenter/l2.png);
+}
+.home-links .link3{
+    background-image:url(../images/datacenter/l3.png);
+}
+.home-links .link4{
+    background-image:url(../images/datacenter/l4.png);
+}
+.home-links .link5{
+    background-image:url(../images/datacenter/l5.png);
+    margin-right:0;
+}
+.home-links a:hover{
+    background-position:0 0;
+}
+.home-links h3{
+    color:#30516f;
+    font-size:24px;
+    font-family:'Microsoft Yahei';
+    text-shadow: 1px 3px 2px #fff;
+}
+.slides-pager a{
+    background-color:#2192D4;
+    float:left;
+    width:34px;
+    height:6px;
+    margin-right:6px;
+
+    /* hidetext class */
+    white-space:nowrap;
+    text-indent:100%;
+    *text-indent:0;
+    *line-height:100em;
+    overflow:hidden;
+}
+.slides-pager .activeSlide{
+    background-color:#fff;
+}
+.slides-pager{
+    position:absolute;
+    bottom:10px;
+    z-index:4;
+    left:50%;
+}
+.slides-pager div{
+    white-space:nowrap;
+    position:relative;
+    left:-50%;
+}
+.input-wrap input{
+    background:none; 
+    border:0;
+    color:#fff;
+    font-size:14px;
+}
+.input-wrap{
+    background:rgba(62, 96, 122, 0.5);
+    background:rgb(62, 96, 122)\9;
+    border-radius: 5px;
+    height:34px;
+    line-height:34px;
+    width:230px;
+}
+.icon1{
+    width:27px;
+    height:27px;
+    margin:0 10px 0 5px;
+    vertical-align:middle;
+    background:url(../images/datacenter/dc_14.png) no-repeat;
+}
+.icon2{
+    width:27px;
+    height:27px;
+    margin:0 10px 0 5px;
+    vertical-align:middle;
+    background:url(../images/datacenter/dc_17.png) no-repeat;
+}
+.btn-s1{
+    display:inline-block;
+    width:130px;
+    line-height:40px;
+    margin-left:55px;
+    margin-top:-8px;
+}
+.btn-c1{
+    background-color:#E7AC21;
+    color:#fff !important;
+    font-weight:bold;
+    font-size:16px;
+}
+.btn-c1:hover{
+    text-decoration:none;
+    background-color:#E8BD24;
+}
+.checkbox-wrap{
+    margin-left:5px;
+    vertical-align:middle;
+    display:inline-block;
+    height:20px;
+    width:20px;
+}
+.checkbox-wrap i{
+    display:inline-block;
+    height:20px;
+    width:20px;
+    background:url(../images/datacenter/dc_19.png) 0 -20px no-repeat;
+}
+.checkbox-wrap input{
+    position:absolute;
+    left:-999em;
+}
+.checkbox-text{
+    vertical-align:middle;
+    margin-left:10px;
+    font-size:14px;
+}
+
+.checkbox-wrap :checked ~ i{
+    background-position:0 0;
+}

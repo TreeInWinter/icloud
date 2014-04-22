@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 登陆注册 注册</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+     
+    <link href="../../static/css/coin-slider-styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_register.css" media="screen" />
+    
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+	<link rel="stylesheet" href="../../static/css/kendo.store.css" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+	<script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>    
+
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    
+    <script type="text/javascript" src="../../static/js/store/store.js"></script>
+</head>
+<body>
+
+<div class="main-wrapper">
+<header class="main-header">
+    <!--<a class="logo" href="/"><h1>天地行</h1></a>-->
+    <a href="/" class="landing_logo"> </a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first"><a herf="#">关于天地行<i></i></a></li>
+            <li><a herf="#">服务中心<i></i></a></li>
+            <li class="last"><a herf="#">联系我们<i></i></a></li>
+        </ul> 
+    </nav>
+    <span class="phone">客服电话：400-720-6666</span>
+</header>
+<section class="main-body clearfix">
+    <div class="regist"> <!--regist start-->
+         <div class="chief"> <h3>会员注册</h3> </div>
+         <div class="message"> <!--message start-->
+              <h3>账号信息</h3>
+              <table cellpadding="0" cellspacing="0" class="mes_tab">
+                  <colgroup>
+                      <col width="150px"/>
+                  </colgroup>
+                  <tr>
+                      <td><i>*</i> 用户名</td>
+                      <td> <input type="text"/> <em>字母开头，由4～16个数字或字母组成。</em></td>
+                  </tr>
+                  <tr>
+                      <td><i>*</i> 电子邮箱</td>
+                      <td> <input type="text"/> <em>此邮箱用户找回密码等服务，请确保地址正确。</em></td>
+                  </tr>
+                  <tr>
+                      <td><i>*</i> 设置密码</td>
+                      <td> <input type="text"/> <em>4~20位数字或者字母的组合，区分大小写。</em></td>
+                  </tr>
+                  <tr>
+                      <td><i>*</i> 确认密码</td>
+                      <td> <input type="text"/></td>
+                  </tr>
+                  <tr>
+                      <td><i>*</i> 客户类型</td>
+                      <td>
+                          <label> <input type="radio" checked="" name="type"/>公司</label>
+                          <label> <input type="radio" name="type"/>个人</label>
+                      </td>
+                  </tr>
+              </table>
+         </div> <!--message end-->
+         
+         <div class="company"> <!--company start-->
+                 <div class="message"> <!--message start-->
+                      <h3>公司信息</h3>
+                      <table cellpadding="0" cellspacing="0" class="mes_tab">
+                          <colgroup>
+                              <col width="150px"/>
+                          </colgroup>
+                          <tr>
+                              <td><i>*</i> 公司类型</td>
+                              <td>
+                                  <label> <input type="radio" checked="" name="type1"/>旅行社</label>
+                                  <label> <input type="radio" name="type1"/>企业</label>
+                                  <label> <input type="radio" name="type1"/>加盟店</label>
+                                  <label> <input type="radio" name="type1"/>会展公司</label>
+                                  <label> <input type="radio" name="type1"/>不夜城分部</label>
+                                  <label> <input type="radio" name="type1"/>其他</label>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><i>*</i> 公司名称</td>
+                              <td> <input type="text"/></td>
+                          </tr>
+                          <tr>
+                              <td><i>*</i> 公司简称</td>
+                              <td> <input type="text"/></td>
+                          </tr>
+                          <tr>
+                              <td><i>*</i> 公司地区</td>
+                              <td>
+                                  <select name="sheng" style="width:88px;" data-role="dropdownlist">
+                                      <option>上海市</option>
+                                      <option>浙江省</option>
+                                      <option>安徽省</option>
+                                  </select>
+                                  <select name="city" style="width:88px;" data-role="dropdownlist">
+                                      <option>上海市</option>
+                                  </select>
+                                  <select name="street" style="width:88px;" data-role="dropdownlist">
+                                      <option>闸北区</option>
+                                  </select>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><i>*</i> 详细地址</td>
+                              <td> <input type="text"/></td>
+                          </tr>
+                      </table>
+                 </div> <!--message end-->
+                 
+                 <div class="empty"></div>
+                 
+                 <div class="message"> <!--message start-->
+                      <h3>公司负责人信息</h3>
+                      <table cellpadding="0" cellspacing="0" class="mes_tab">
+                          <colgroup>
+                              <col width="150px"/>
+                          </colgroup>
+                          <tr>
+                              <td><i>*</i> 姓名</td>
+                              <td> <input type="text"/></td>
+                          </tr>
+                          <tr>
+                              <td><i>*</i> 电子邮箱</td>
+                              <td> <input type="text"/></td>
+                          </tr>
+                          <tr>
+                              <td><i>*</i> 手机号码</td>
+                              <td class="hint"> 
+                                  <input type="text"/>
+                                  <small> <span> </span>请填写手机号码</small>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td><i>*</i> 办公电话</td>
+                              <td><input type="text" name="" id="" placeholder="区号" style="width:40px;"/>-<input value="" style="width:100px;" type="text" name="" /></td>
+                          </tr>
+                          <tr>
+                              <td>QQ</td>
+                              <td> <input type="text"/></td>
+                          </tr>
+                      </table>
+                 </div> <!--message end-->
+         </div> <!--company end-->
+         
+         <div class="message"> <!--message start-->
+              <h3>主要业务联系人信息</h3>
+              <table cellpadding="0" cellspacing="0" class="mes_tab">
+                  <colgroup>
+                      <col width="150px"/>
+                  </colgroup>
+                  <tr>
+                      <td><i>*</i> 姓名</td>
+                      <td> <input type="text"/></td>
+                  </tr>
+                  <tr>
+                      <td><i>*</i> 电子邮箱</td>
+                      <td> 
+                          <input type="text"/>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td><i>*</i> 手机号码</td>
+                      <td> 
+                          <input type="text"/>                         
+                      </td>
+                  </tr>
+                  <tr>
+                      <td><i>*</i> 办公电话</td>
+                      <td> <input type="text"/></td>
+                  </tr>
+                  <tr>
+                      <td>QQ</td>
+                      <td> <input type="text"/></td>
+                  </tr>
+                  <tr>
+                      <td> </td>
+                      <td> <textarea> </textarea> </td>
+                  </tr>
+                  <tr>
+                      <td> </td>
+                      <td> <label> <input type="checkbox"/>我愿意接受某某某某协议</label></td>
+                  </tr>
+                  <tr>
+                      <td> </td>
+                      <td>
+                           <a class="adaptiveButton brightRed_btn">
+                              <span class="left"></span>
+                              <span class="center">注 册</span>
+                              <span class="right"></span>
+                           </a>
+                      </td>
+                  </tr>
+              </table>
+         </div> <!--message end-->
+         
+    </div> <!--regist start-->
+     
+</section>
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+
+
+<script type="text/javascript"> <!--两个单选框的切换-->
+	$(function(){
+		$("input[name='type']").each(function(index){
+			
+			$(this).click(function(){
+				console.log(index);
+				if(index == 0){
+					$(".company").show();
+					$(".empty").hide();
+				}else{
+					$(".company").hide();
+					$(".empty").show();
+				}
+			});
+		});
+	});
+</script>
+
+<!--模板文件-->
+<script id="ffcTemplate" type="text/x-kendo-template">
+    <ul class="ul_ffc" data-role="panelbar">
+        # for(var i=0;i<data.length;i++){ #
+        <li>
+            #= data[i].categories #
+            # for(var j=0;j<data[i].customers.length;j++){ #
+            <div class="item"><label><input type="checkbox" value="#=data[i].customers[j].id #"> #= data[i].customers[j].name #</label></div>
+            # } #
+        </li>
+        # } #
+    </ul>
+</script>
+
+<script id="ffcsTemplate" type="text/x-kendo-template">
+    <ul class="ul_ffc">
+        # for(var i=0;i<data.length;i++){ #
+        <li style="padding:5px">
+            <label><input type="checkbox" value="#=data[i].id #"> #= data[i].name #</label>
+        </li>
+        # } #
+    </ul>
+</script>
+
+<!--模板文件-->
+
+<script type="text/javascript" src="../../static/js/store/freq_traveler.js"></script>
+</body>
+</html>

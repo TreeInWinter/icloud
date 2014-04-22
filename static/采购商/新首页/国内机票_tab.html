@@ -1,0 +1,401 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+ <link rel="stylesheet" href="/static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="/static/css/store_reset.css" />
+    <link rel="stylesheet" href="/static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="/static/css/kendo.store.css" />
+    <link rel="stylesheet" href="/static/css/toolkit.css" />
+        <link rel="stylesheet" href="/static/css/tmp/querytab.css">
+
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="/static/js/global.js"></script>
+
+
+<script type="text/javascript" src="/static/js/swfup/swfupload.js"></script>
+<script type="text/javascript" src="/static/js/swfup/swfupload.queue.js"></script>
+<script type="text/javascript" src="/static/js/swfup/fileprogress_cgs.js"></script>
+<!--[if IE]>
+<script src="../static/js/html5.js"></script>
+<![endif]-->
+
+    </head>
+    <body>
+        <section class="querytab querytab-domestic">
+            <div class="querytab-wrapper col clearfix">
+            <aside class="querytab-controller">
+            <ul>
+                <li><b data-role="ctype" data-index="1" data-group="qtab" class="current"> 机票预定</b></li>
+                <li><b data-role="ctype" data-index="2" data-group="qtab">PNR导入</b></li>
+                <li><a href="#"><b>询价单</b></a></li>
+            </ul>
+            </aside>
+            <div class="querytab-content col">
+                <div class="querytab-flight" data-role="ctype-item" data-index="1" data-group="qtab">
+                        <ul>
+                            <li class="trip_type gap">
+                            <strong>航程类型</strong>
+                            <label><input type="radio" data-role="ctype" data-group="trip_type" data-index="c1" name="flight_type" checked/><span>单程</span></label>
+                            <label><input type="radio" class="isDouble" data-role="ctype" data-group="trip_type" data-index="c1" name="flight_type" /><span>往返</span></label>
+                            </li>
+                            <li class="round_trip clearfix">
+                            <div  class="single_trip" data-role="ctype-item" data-index="c1" data-group="trip_type">
+                            <b class="xchange">换</b>
+                            <table>
+                                <colgroup>
+                                    <col class="col1">
+                                    <col class="col2">
+                                    </colgroup>
+                                <tr>
+                                    <td>
+                                    <label><span class="text">出发城市</span><input style="width:145px;" class="city_ac" type="text" name="" /></label>
+                                    </td>
+                                    <td>
+                                    <label><span class="text">出发日期</span><input style="width:145px;" placeholder="yyyy-mm-dd" type="text" name="" class="datepicker" /></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    <label><span class="text">到达城市</span><input style="width:145px;" class="city_ac" type="text" name="" /></label>
+                                    </td>
+                                    <td>
+                                    <label class="return_date disabled"><span class="text">返程日期</span><input type="text" disabled name="" placeholder="yyyy-mm-dd" style="width:145px;" class="datepicker" /></label>
+                                    </td>
+                                </tr>
+                            </table>
+                            </div>
+
+                            <h4 class="underline-title"><span><i class="icon icon-arrows"></i>高级搜索</span></h4>
+                            <table class="advanced_search clearfix">
+                                <colgroup>
+                                    <col class="col1">
+                                    <col class="col2">
+                                    </colgroup>
+                                <tr>
+                                    <td>
+                                    <label><span class="text">舱位等级</span><select data-role="dropdownlist" style="width:145px;">
+                                            <option selected="" value="经济舱">经济舱</option>
+                                            <option value="超级经济舱">超级经济舱</option>
+                                            <option value="商务舱">商务舱</option>
+                                            <option value="头等舱">头等舱</option>
+                                        </select>
+                                    </label>
+                                    </td>
+                                        <td>
+                                    <label><span class="text">航空公司</span><input style="width:145px;" data-role="combobox" data-filter="contains" data-suggest="true" placeholder="编号/中文" data-text-field="text" data-value-field="value"  data-source='[{ text: "南航", value: "8U" }, { text: "国航", value: "BK" }]' class="sel_airlines" />
+
+                                        </label>
+
+                                </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    <label><span class="text">起飞时间</span><select data-role="dropdownlist" style="width:145px;">
+                                            <option>00:00-02:00</option>
+                                            <option>00:20-04:00</option>
+                                            <option>00:40-06:00</option>
+                                        </select>
+                                    </label>
+                                    </td>
+                                    <td>
+                                    <label class="sail_type"><input type="radio" checked="" name="type" />全部</label>
+                                    <label class="sail_type"><input type="radio" name="type"/>直飞</label>
+                                    <label class="sail_type"><input type="radio" name="type"/>中转</label>
+                                    </td>
+                                </tr>
+                            </table>
+                            </li>
+                        </ul>
+
+                            <div class="btn_area">
+                                <button type="button" class="btn btn-c1 btn-s1">搜  索</button>
+                            </div>
+                </div>
+
+                <div class="querytab-pnr" data-role="ctype-item" data-index="2" data-group="qtab" style="display:none;">
+                    <ul class="black_booking">
+                        <li class="passenger gap">
+                        <span class="subline">乘客类型</span>
+                        <label><input type="radio" name="passenger_type" data-role="ctype" data-group="passenger_type" checked /><span>成人</span></label>
+                        <label><input type="radio" name="passenger_type" data-role="ctype" data-group="passenger_type" data-index="c1" /><span>儿童</span></label>
+                        <label><input type="radio" name="passenger_type" data-role="ctype" data-group="passenger_type" /><span>团队</span></label>
+                        </li>
+
+                        <li class="passenger gap" data-role="ctype-item" data-group="passenger_type" data-index="c1" style="display:none;">
+                        <span class="subline">儿童情况</span>
+                            <label><input type="radio" data-role="ctype" data-index="1" data-group="chd_detail" name="withType" checked value="PNR"/><span>成人PNR</span></label>
+                            <label><input type="radio" data-role="ctype" data-index="2" data-group="chd_detail" name="withType" value="orderCode"/><span>成人订单号</span></label>
+                            <label data-role="ctype-item" data-index="1" data-group="chd_detail">请输入成人PNR: <input type="text" id="withTypePnr" style="width:80px"/></label>
+                            <label data-role="ctype-item" data-index="2" data-group="chd_detail" style="display:none;">请输入成人订单号: <input type="text" id="withTypeOrderCode" style="width:106px"/></label>
+                            </li>
+
+                        <li class="ways clearfix">
+                        <div class="col">
+                        <p class="way-console">
+                            <span class="subline">导入PNR</span>
+                            <input type="text" placeholder="请输入6位PNR编码" class="input-pnr">
+                            <span class="invalid-text">PNR和黑屏必须填写一个</span>
+                        </p>
+                        <textarea class="black-paste">
+使用方法:
+1. 请使用您的Eterm系统提取PNR内容。
+2. 再执行PAT:A指令,将全部内容复制,并粘贴到黑色输入框内。
+3. 团队从RT:N/编码开始复制到PAT:A结果的所有内容。
+4. 根据航空公司出票要求,PNR内容中必须备注手机号码。
+5. 注意:复制的内容建议从RT编码开始复制到PAT:A结果的所有内容。儿童PNR编码,请走儿 童订单专用通道。
+</textarea>
+                        <div class="btn_area">
+                              <button type="button" class="btn btn-c1 btn-s1">创建订单</button>
+                        </div>
+                        </div>
+                    <div class="col pnr-notes">
+                        <strong class="text2">注意事项：</strong>
+<ol>
+    <li class="text3">重要更新提示：各航司预留编码取消输入CT项，按照OSI项格式输入联系方式。<br> 指令：OSI 航空公司代码 CTCT您的手机号码（一个PNR只允许出现一个OSI项。<br>   例如：OSI MU CTCT138*****888</li>
+    <li>支持成人单程、往返程、联程、缺口程及团队PNR编码导入。</li>
+    <li>该PNR姓名组正确。</li>
+    <li>航段组正确、舱位状况正确。</li>
+    <li class="text3">每个乘客均有真实的SSR FOID 项输入。</li>
+    <li>该PNR不能包含票价组项，如FC/FN/FP。</li>
+    <li>JD航空，一个PNR只允许一位乘机人。</li>
+</ol>
+                    </div>
+
+
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="querytab-sheet"></div>
+            </div>
+            </div>
+        </section>
+
+<script type="text/x-kendo-template" id="city_popup">
+<div id="gn-tabstrip" class="tcy_tabstrip">
+<span class="tcy_title">
+    热门城市/国家（支持中文名/拼音/英文名/三字码）
+</span>
+<ul>
+<li id="hot_city" class="k-state-active">热门</li>
+# for (var i=0; i<data.group.length; i++ ) { #
+<li>#= data.group[i] #</li>
+# } #
+</ul>
+<div id="hot_city_tab">
+<ul class="tcy_list clearfix">
+
+# for(var j=0;j<hotcitylist.length;j++){ #
+# var citylist_item = hotcitylist[j] #
+<li class="item" title="#= citylist_item.code #" data-code="#= citylist_item.code #">#= citylist_item.name #</li>
+# } #
+</ul>
+</div>
+
+# for(var i=0;i<data.citylist.length;i++){ #
+# var citylist_item = data.citylist[i] #
+<div class="city_tab">
+<ul class="tcy_list clearfix">
+  # for(var k=0;k<data.group[i].length;k++){ #
+    <li class="tcy_list_sep">#= data.group[i].split('')[k] #</li>
+    # for(var j=0;j<citylist_item.value.length;j++){ #
+        # var citylist_value_item = citylist_item.value[j]; #
+        # if(citylist_value_item.py.slice(0,1) == data.group[i].split('')[k]) {#
+            <li class="item" title="#= citylist_value_item.code #" data-code="#= citylist_value_item.code #">#= citylist_value_item.name #</li>
+        # } #
+    # } #
+  # } #
+</ul>
+</div>
+
+# } #
+</div>
+</script>
+
+
+
+<script>
+function createSwfUpload(index,allowSize, allowFile){
+    var upload = window.swfu = new SWFUpload({
+	// Backend Settings
+	upload_url: "/php/upload.php",
+	post_params: {"name" : "testname"},
+	// File Upload Settings
+	//file_types : "*.*;",
+	file_size_limit : allowSize ,
+	file_types : allowFile ,
+	file_types_description : "Choose Files",
+	file_upload_limit : "0",
+	file_queue_limit : "0",
+	// Event Handler Settings (all my handlers are in the Handler.js file)
+	file_dialog_start_handler : fileDialogStart,
+	file_queued_handler : fileQueued,
+	file_queue_error_handler : fileQueueError,
+	file_dialog_complete_handler : fileDialogComplete,
+	upload_start_handler : uploadStart,
+	upload_progress_handler : uploadProgress,
+	upload_error_handler : uploadError,
+	upload_success_handler : uploadSuccess,
+	upload_complete_handler : uploadComplete,
+	// Button Settingsimg/fee
+   // button_image_url : "/static/images/button_3_3_5.png",
+	button_text : '<span class="text">上 传</span>',
+	button_text_style : ".text{text-align:center;font-size:13px;}",
+	button_text_top_padding: 5,
+
+	button_placeholder_id : "UploaderPlaceholder_" + index,
+	button_width: 55,
+	button_height: 26,
+	button_window_mode:"TRANSPARENT",
+	button_cursor: SWFUpload.CURSOR.HAND,
+	// Flash Settings
+	flash_url : "/static/flash/swfupload.swf",
+	custom_settings : {
+		progressTarget : "UploaderProgress_" + index,
+		cancelButtonId : "UploaderCancelBtn_" + index,
+		callback : function(file,serverData){
+            var tmp = $.parseJSON(serverData);
+		}
+	},
+
+	// Debug Settings
+	debug: false
+    });
+
+    return upload;
+}
+
+var uploads = [];
+
+$(function(){
+    $.role_ctype({
+        changeClass:'current'
+    });
+
+    $('.input-pnr').on('blur',function(){
+        $(this).addClass('invalid');
+        $('.invalid-text').show();
+    });
+
+    $('.black-paste').on('focus',function(){
+        $('.uploader-wrapper').hide();
+    });
+
+    $('.querytab').on('click','.uploadComplete .progressCancel',function(){
+         $(this).closest('.progressWrapper').remove();
+    });
+
+    $('.querytab').on('click','.progressCancel',function(){
+         if($('.querytab .progressWrapper').length<1){
+                $('.uploader-wrapper').hide();
+         }
+    });
+
+    $(".Uploader").each(function(index){
+        uploads.push(createSwfUpload(index + 1,$(this).attr("allowSize"),$(this).attr("allowFile")));
+    });
+
+    $('body').on('click','.fl-complete .progressCancel',function(){
+        $(this).closest('.progressWrapper').remove();
+    });
+
+    $('.top_title input').on('change',function(){
+        var li = $(this).closest('li');
+        li.addClass('selected');
+        li.siblings().removeClass('selected');
+    });
+
+    var uploadsettings = {
+        multiple:false,
+        showFileList:false,
+        select:function(e){
+            e.sender.wrapper.prev().val(e.files[0].name);
+        },
+        complete:function(e){
+            var url = e;
+        },
+        async: {
+            saveUrl: "/path/to/save.jsp",
+            //saveUrl: 'http://www.tz-local.com/test.php',
+            autoUpload: true
+        },
+        localization:{
+            select: '浏览'
+        }
+    };
+
+    kendo.culture('zh-CN');
+
+    $('.ac-add-line').bind('click',function(){
+        var container = $('.muti_trip tbody');
+        var html = kendo.template($('#ac-add-line-template').html())({});
+        if(container.find('tr').length>5) return
+        container.append(html);
+        // kendo.init(container);
+        // container.find('[type=file]').eq(-1).kendoUpload(uploadsettings)
+        reorder();
+        createCityAc(container.find('tr').last().find('.city_ac'));
+    });
+
+    $('body').delegate('.ac-remove-line','click',function(){
+        var t = $(this);
+        if (t.closest('table').find('tr').length <= 2){
+            //return alert('只剩一条了');
+            return;
+        }
+        t.closest('tr').remove();
+        reorder();
+    });
+
+    function reorder(){
+        $('.index_num').each(function(i){
+            var t = $(this);
+            t.text(i+1);
+        });
+    }
+
+    function createCityAc(ele){
+        CityAutocomplete({
+            template: "#city_popup",
+            input: ele,
+            width: 200,
+            // autocomplete:{
+            //     dataSource:{
+            //         transport:{
+            //             read:{
+
+            //             }
+            //         }
+            //     },
+            //     placeholder:'三字吗/城市'
+            // },
+            // 以@分割热门非热门，以;分割条目，以|分割三字码拼音和中文
+            url:'/static/js/data.txt',
+            group: ["热门","GHJ", "ABCDEF", "KLMN", "PQSTW", "XYZ"]
+        });
+    }
+
+    createCityAc(".city_ac");
+
+    kendo.init('body');
+    $('[type=file]').kendoUpload(uploadsettings)
+
+    $('.trip_type [type=radio]').on('change',function(){
+        var that = $(this);
+        if(that.hasClass('isDouble') && that.is(':checked')){
+            $('.return_date').removeClass('disabled');
+            $('.return_date input').prop('disabled',false);
+        }else{
+            $('.return_date').addClass('disabled');
+            $('.return_date input').prop('disabled',true);
+        }
+    });
+
+});
+
+</script>
+
+    </body>
+</html>

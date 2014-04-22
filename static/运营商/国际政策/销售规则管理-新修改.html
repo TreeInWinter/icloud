@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>政策 国际政策 销售规则管理-新修改</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.gray.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.reset.css" rel="stylesheet" type="text/css" /> <!--弹窗CSS-->
+    <link href="../../static/css/xieyizhengche.css" rel="stylesheet" type="text/css"/>
+    <script src="../../static/js/jquery.min.js" type="text/javascript"></script>
+    <script src="../../static/js/hotel.js" type="text/javascript"></script> <!--弹窗JS--> 
+    <script src="../../static/js/kendo.web.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../static/js/scrollFix.js"></script>
+    <script type="text/javascript" src="../../static/js/public.js"></script>
+
+
+    <!--<script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript">
+$(function(){
+    new Collpase({
+        limitHeight:140,
+        container:'.xyzc_div' 
+    }).init();
+}) 
+    </script>-->
+	
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body>
+    <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">&nbsp;</a>
+                <span>&nbsp;</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent" style="overflow:hidden;">
+			<!-- start zhuzhijiagou -->
+        
+            <div class="topFixedToolsBar">
+                <div class="fixedMenu">
+                    <strong style="display:inline-block; font-size:14px; font-weight:bold; margin-left:10px;">销售规则管理</strong>
+                </div>
+                <div class="fixedButton">
+                    <em style="height:25px; line-height:25px; color:#666;">添加销售规则：</em>
+                    <a class="button_secondary adaptiveButton small" href="javascript:;">
+                        <span class="left"></span>
+                        <span class="center center_1">按条件</span>
+                        <span class="right"></span>
+                    </a>
+                    <a class="button_secondary adaptiveButton small" href="javascript:;">
+                        <span class="left"></span>
+                        <span class="center center_1">按数据</span>
+                        <span class="right"></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="zhuzhijiagou">
+               <div class="xyzc_div">
+               <table cellpadding="0" cellspacing="0" class="xyzc_tab1 list">
+                   <tr>
+                       <td>规则名称</td>
+                       <td><input type="text" style="width:146px;"/></td>
+                       <td class="zchk">客户名称</td>
+                       <td class="name"><input type="text"/></td>
+                       <td>订单号</td>
+                       <td><input type="text" style="width:231px;"/></td>
+                   </tr>
+                  <tr>
+                     <td class="zchk">航空公司</td>
+                     <td class="mu">
+                         <select>
+                              <option>全部</option>
+                              <option>3U 川航</option>
+                              <option selected="">MU 东航</option>
+                              <option>CZ 南航</option>
+                              <option>MF 夏航</option>
+                              <option>……</option>
+                         </select>
+                     </td>
+                     <td class="zchk">供应商</td>
+                     <td class="cklx">
+                         <select>
+                             <option>全部</option>
+                             <option selected="">不夜城BSP</option>
+                             <option>517</option>
+                             <option>百拓</option>
+                         </select> 
+                     </td>
+                     <td class="zchk">有效日期</td>
+                     <td> <input type="text" class="cjrq_input_1 datePicker"/> <span class="cjrq_span">至</span>  <input type="text" class="cjrq_input_2 datePicker"/></td>
+                     <td class="xyzc_cx" rowspan="6"><a href="#" class="xyzc_cx_a">查询</a></td>
+                  </tr> 
+                  <tr>
+                     <td class="zchk">状态</td>
+                     <td class="mu"> 
+                         <select>
+                             <option value="所有" selected="">所有</option>
+                             <option value="未发布">未发布</option>
+                             <option value="已发布">已发布</option>
+                             <option value="挂起">挂起</option>
+                             <option value="作废">作废</option>
+                         </select> 
+                     </td>
+                     <td class="zchk">处理人</td>
+                     <td class="faburen">
+                         <input type="text"/> <button class="btns btn-search ac-search-user" role="window_trigger">查询</button>
+                     </td>
+                     <td class="zchk">修改日期</td>
+                     <td> <input type="text" class="cjrq_input_1 datePicker"/> <span class="cjrq_span">至</span>  <input type="text" class="cjrq_input_2 datePicker"/></td>
+                  </tr>
+               </table>
+              
+            </div>
+
+            
+              <div class="qx">
+                  <div class="xuanze">
+                      <button class="btns btn-ac-blue">挂起</button>
+                      <button class="btns btn-ac-blue">作废</button>
+                  </div>
+                  <div class="qx_right">
+                      <em> <button class="btns btn-ac-blue">导出Excel</button> </em>
+                      <em> <button class="btns btn-ac-blue">模版导入</button> </em>
+                      <button class="btns btn-ac-blue">导入说明【模版下载】</button>
+                  </div>
+              </div>
+              
+              <div class="scroll">
+              <table class="tgrid" style="width:120%;" cellpadding="0" cellspacing="0">
+                  <thead>
+                      <tr>
+                          <th><input type="checkbox"/></th>
+                          <th>ID</th>
+                          <th>规则名称</th>
+                          <th>规则类型</th>
+                          <th>状态</th>
+                          <th>自动</th>
+                          <th>关联客户</th>
+                          <th>关联政策</th>
+                          <th>备注</th>
+                          <th>开始时间</th>
+                          <th>结束时间</th>
+                          <th>修改时间</th>
+                          <th>操作员</th>
+                          <th class="last" style="width:155px; text-align:center;">操作</td>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td><input type="checkbox" name="rule"/></td>
+                          <td>13061811120</td>
+                          <td>MU 东航</td>
+                          <td>按数据</td>
+                          <td>已发布</td>
+                          <td>否</td>
+                          <td>
+                              <a href="javascript:void(0);" class="popwin" data='{"url":"关联客户弹窗.html","width":570,"height":500,"title":"关联客户"}' id="add_city_code">100</a>
+                          </td>
+                          <td>
+                              <a href="javascript:void(0);" class="popwin" data='{"url":"关联政策弹窗.html","width":950,"height":500,"title":"关联政策"}' id="add_city_code">30</a>
+                          </td>
+                          <td>无</td>
+                          <td>2010/09/01<br>22:44</td>
+                          <td>2010/09/01<br>22:44</td>
+                          <td>2010/09/01<br>22:44</td>
+                          <td>李晓明</td>
+                          <td>
+                             <a href="javascript:void(0);">查看</a>
+                             <a href="javascript:void(0);">修改</a>
+                             <a href="javascript:void(0);">复制</a>
+                             <a href="javascript:void(0);">挂起</a>
+                             <a href="javascript:void(0);">作废</a>
+                          </td>
+                      </tr>
+                      <tr class="hui_bg">
+                          <td><input type="checkbox" name="rule"/></td>
+                          <td>13061811120</td>
+                          <td>MU 东航</td>
+                          <td>按条件</td>
+                          <td class="red_color">已挂起</td>
+                          <td>否</td>
+                          <td>
+                              <a href="javascript:void(0);" class="popwin" data='{"url":"关联客户弹窗.html","width":570,"height":500,"title":"关联客户"}' id="add_city_code">20</a>
+                          </td>
+                          <td>
+                              <a href="javascript:void(0);" class="popwin" data='{"url":"关联政策弹窗.html","width":950,"height":500,"title":"关联政策"}' id="add_city_code">30</a>
+                          </td>
+                          <td>无</td>
+                          <td>2010/09/01<br>22:44</td>
+                          <td>2010/09/01<br>22:44</td>
+                          <td>2010/09/01<br>22:44</td>
+                          <td>李晓明</td>
+                          <td>
+                             <a href="javascript:void(0);">查看</a>
+                             <a href="javascript:void(0);">修改</a>
+                             <a href="javascript:void(0);">复制</a>
+                             <a href="javascript:void(0);">挂起</a>
+                             <a href="javascript:void(0);">作废</a>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td><input type="checkbox" name="rule"/></td>
+                          <td>13061811120</td>
+                          <td>MU 东航</td>
+                          <td>按数据</td>
+                          <td class="huise">已作废</td>
+                          <td>否</td>
+                          <td>
+                              <a href="javascript:void(0);" class="popwin" data='{"url":"关联客户弹窗.html","width":570,"height":500,"title":"关联客户"}' id="add_city_code">10</a>
+                          </td>
+                          <td>
+                              <a href="javascript:void(0);" class="popwin" data='{"url":"关联政策弹窗.html","width":950,"height":500,"title":"关联政策"}' id="add_city_code">30</a>
+                          </td>
+                          <td>无</td>
+                          <td>2010/09/01<br>22:44</td>
+                          <td>2010/09/01<br>22:44</td>
+                          <td>2010/09/01<br>22:44</td>
+                          <td>李晓明</td>
+                          <td>
+                             <a href="javascript:void(0);">查看</a>
+                             <a href="javascript:void(0);">修改</a>
+                             <a href="javascript:void(0);">复制</a>
+                             <a href="javascript:void(0);">挂起</a>
+                             <a href="javascript:void(0);">作废</a>
+                          </td>
+                      </tr>
+                      <tr class="hui_bg">
+                          <td><input type="checkbox" name="rule"/></td>
+                          <td>13061811120</td>
+                          <td>MU 东航</td>
+                          <td>按数据</td>
+                          <td>已发布</td>
+                          <td>是</td>
+                          <td>
+                              <a href="javascript:void(0);" class="popwin" data='{"url":"关联客户弹窗.html","width":570,"height":500,"title":"关联客户"}' id="add_city_code">20</a>
+                          </td>
+                          <td>
+                              <a href="javascript:void(0);" class="popwin" data='{"url":"关联政策弹窗.html","width":950,"height":500,"title":"关联政策"}' id="add_city_code">30</a>
+                          </td>
+                          <td>是</td>
+                          <td>2010/09/01<br>22:44</td>
+                          <td>2010/09/01<br>22:44</td>
+                          <td>2010/09/01<br>22:44</td>
+                          <td>李晓明</td>
+                          <td>
+                             <a href="javascript:void(0);">查看</a>
+                             <a href="javascript:void(0);">修改</a>
+                             <a href="javascript:void(0);">复制</a>
+                             <a href="javascript:void(0);">挂起</a>
+                             <a href="javascript:void(0);">作废</a>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td><input type="checkbox" name="rule"/></td>
+                          <td>13061811120</td>
+                          <td>MU 东航</td>
+                          <td>按条件</td>
+                          <td class="huise">已作废</td>
+                          <td>否</td>
+                          <td>
+                              <a href="javascript:void(0);" class="popwin" data='{"url":"关联客户弹窗.html","width":570,"height":500,"title":"关联客户"}' id="add_city_code">10</a>
+                          </td>
+                          <td>
+                              <a href="javascript:void(0);" class="popwin" data='{"url":"关联政策弹窗.html","width":950,"height":500,"title":"关联政策"}' id="add_city_code">30</a>
+                          </td>
+                          <td>无</td>
+                          <td>2010/09/01<br>22:44</td>
+                          <td>2010/09/01<br>22:44</td>
+                          <td>2010/09/01<br>22:44</td>
+                          <td>李晓明</td>
+                          <td>
+                             <a href="javascript:void(0);">查看</a>
+                             <a href="javascript:void(0);">修改</a>
+                             <a href="javascript:void(0);">复制</a>
+                             <a href="javascript:void(0);">挂起</a>
+                             <a href="javascript:void(0);">作废</a>
+                          </td>
+                      </tr>
+                      <tr class="hui_bg">
+                          <td><input type="checkbox" name="rule"/></td>
+                          <td>13061811120</td>
+                          <td>MU 东航</td>
+                          <td>按条件</td>
+                          <td class="red_color">已挂起</td>
+                          <td>是</td>
+                          <td>
+                              <a href="javascript:void(0);" class="popwin" data='{"url":"关联客户弹窗.html","width":570,"height":500,"title":"关联客户"}' id="add_city_code">20</a>
+                          </td>
+                          <td>
+                              <a href="javascript:void(0);" class="popwin" data='{"url":"关联政策弹窗.html","width":950,"height":500,"title":"关联政策"}' id="add_city_code">30</a>
+                          </td>
+                          <td>是</td>
+                          <td>2010/09/01<br>22:44</td>
+                          <td>2010/09/01<br>22:44</td>
+                          <td>2010/09/01<br>22:44</td>
+                          <td>李晓明</td>
+                          <td>
+                             <a href="javascript:void(0);">查看</a>
+                             <a href="javascript:void(0);">修改</a>
+                             <a href="javascript:void(0);">复制</a>
+                             <a href="javascript:void(0);">挂起</a>
+                             <a href="javascript:void(0);">作废</a>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td><input type="checkbox" name="rule"/></td>
+                          <td>13061811120</td>
+                          <td>MU 东航</td>
+                          <td>按数据</td>
+                          <td>已发布</td>
+                          <td>否</td>
+                          <td>
+                              <a href="javascript:void(0);" class="popwin" data='{"url":"关联客户弹窗.html","width":570,"height":500,"title":"关联客户"}' id="add_city_code">10</a>
+                          </td>
+                          <td>
+                              <a href="javascript:void(0);" class="popwin" data='{"url":"关联政策弹窗.html","width":950,"height":500,"title":"关联政策"}' id="add_city_code">30</a>
+                          </td>
+                          <td>无</td>
+                          <td>2010/09/01<br>22:44</td>
+                          <td>2010/09/01<br>22:44</td>
+                          <td>2010/09/01<br>22:44</td>
+                          <td>李晓明</td>
+                          <td>
+                             <a href="javascript:void(0);">查看</a>
+                             <a href="javascript:void(0);">修改</a>
+                             <a href="javascript:void(0);">复制</a>
+                             <a href="javascript:void(0);">挂起</a>
+                             <a href="javascript:void(0);">作废</a>
+                          </td>
+                      </tr>
+                      <tr class="hui_bg">
+                          <td><input type="checkbox" name="rule"/></td>
+                          <td>13061811120</td>
+                          <td>MU 东航</td>
+                          <td>按数据</td>
+                          <td>已发布</td>
+                          <td>是</td>
+                          <td>
+                              <a href="javascript:void(0);" class="popwin" data='{"url":"关联客户弹窗.html","width":570,"height":500,"title":"关联客户"}' id="add_city_code">20</a>
+                          </td>
+                          <td>
+                              <a href="javascript:void(0);" class="popwin" data='{"url":"关联政策弹窗.html","width":950,"height":500,"title":"关联政策"}' id="add_city_code">30</a>
+                          </td>
+                          <td>是</td>
+                          <td>2010/09/01<br>22:44</td>
+                          <td>2010/09/01<br>22:44</td>
+                          <td>2010/09/01<br>22:44</td>
+                          <td>李晓明</td>
+                          <td>
+                             <a href="javascript:void(0);">查看</a>
+                             <a href="javascript:void(0);">修改</a>
+                             <a href="javascript:void(0);">复制</a>
+                             <a href="javascript:void(0);">挂起</a>
+                             <a href="javascript:void(0);">作废</a>
+                          </td>
+                      </tr>
+              </tbody>
+          </table>
+          </div>
+
+
+              <div class="grid-table-pagination page">
+                  <span class="grid-table-count">
+                      共 <em>132</em> 条记录
+                  </span>
+                  <span>
+                      <a href="#" class="prev">&nbsp;</a>
+                  </span>
+                  <span class="links">
+                      <a href="#">1</a>
+                      <a href="#">2</a>
+                      <a href="#" class="current">3</a>
+                      <a href="#">4</a>
+                      <a href="#">5</a>
+                      <a href="javascript:;">...</a>
+                      <a href="#">50</a>
+                  </span>
+                  <span>
+                      <a href="#" class="next">&nbsp;</a>
+                  </span>
+              </div>
+           
+          </div>
+        </div>
+        <!-- end of zhuzhijiagou -->
+    </div>
+    
+    <div id="window"></div>
+    
+    
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>    
+    
+</body>
+</html>

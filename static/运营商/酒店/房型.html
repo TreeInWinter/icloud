@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html" charset="utf-8">
+    <title>酒店 酒店维护 房型</title>
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/b2b.css">
+    <link rel="stylesheet" href="/static/css/kendo.common.css">
+    <link rel="stylesheet" href="/static/css/kendo.gray.css">
+<link href="/static/css/kendo.reset.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/hotel.css">
+    <style type="text/css">
+        .ulRoomStyleList li{border-top:1px solid #cccccc;color:#656565}
+        .ulRoomStyleButtonList li{border:0;margin-bottom:5px}
+        .ulRoomStyleButtonList .button_3_2{margin:0}
+        .extraBed{color:#CB0000}
+    </style>
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<!-- @CLB@ -->
+</head>
+<body>
+    <div class="main">
+        <div class="actions block">
+            <div class="col col-l sep-r">
+                <button class="btns btn-return">返回</button>
+            </div>
+            <div class="col col-l" style="padding-left:10px;">
+                <a class="item" href="#">酒店信息</a>
+                <a class="item" href="#">供应商信息</a>
+                <a class="item highlight" href="#">房型</a>
+                <a href="#" class="item">价格计划</a>
+            </div>
+            <div class="col col-r sep-l">
+                <a class="button_4_3" href="#" style="color:#ffffff;margin-top:4px;">提交</a>
+                <a class="button_4_3" href="#" style="color:#ffffff;margin-top:4px">关闭</a>
+            </div>
+        </div>
+        <div class="panel" style="height:21px">
+            <div class="panelTitle">签约信息</div>
+            <div style="float:left;">
+                <span class="head" style="margin-left:75px">城市：<span style="color:#1C64A7">上海</span></span>
+                <span class="head" style="margin-left:75px">酒店名称：<span style="color:#1C64A7">----</span></span>
+                <span class="head" style="margin-left:75px"><span class="important">*</span>签约经理</span>
+                <select>
+                    <option value="签约经理列表">签约经理列表</option>
+                    <option value="李小路" selected="">李小路</option>
+                </select>
+                <span class="head" style="margin-left:75px">状态：<span style="color:#1C64A7">草稿</span></span>
+            </div>
+            <div style="float:right;margin-right:17px">
+                <a class="button_3_3" href="javascipt:;">保存</a>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panelTitle">
+                酒店房型
+            </div>
+            <div style="position: absolute;top:15px;left: 110px;">
+                <a class="button_3_3 popwin" href="javascipt:;" data='{"url":"修改排序.html","width":700,"height":360,"title":"修改排序"}'>修改排序</a>
+                <a class="button_3_3 popwin" href="javascipt:;" data='{"url":"添加房型.html","width":700,"height":600,"title":"添加房型"}'>添加房型</a>
+            </div>
+            <div class="ulRoomStyleList clearfix">
+                <ul>
+                    <li>
+                        <table>
+                            <colgroup>
+                                <col width="83">
+                                <col width="220">
+                                <col width="83">
+                                <col width="180">
+                                <col width="83">
+                            </colgroup>
+                            <tr>
+                                <td><span class="head">房型名称</span></td>
+                                <td>
+                                    <span class="subhead">商务标准房</span>
+                                </td>
+                                <td>
+                                    <span class="head">入住人数</span>
+                                </td>
+                                <td>
+                                    2人
+                                    <span class="extraBed">不可加床</span>
+                                </td>
+                                <td colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td><span class="head">套内面积</span></td>
+                                <td>20平米</td>
+                                <td>
+                                    <span class="head">楼层</span>
+                                </td>
+                                <td>10层</td>
+                                <td>
+                                    <span class="head">窗户</span>
+                                </td>
+                                <td>无窗</td>
+                            </tr>
+                            <tr>
+                                <td><span class="head">房间床型</span></td>
+                                <td>
+                                    单人床（135cm*200cm）
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><span class="head">房间设施</span></td>
+                                <td>有无烟房/空调/冰箱</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="head">房间照片</span><br/>
+                                    <span class="head" style="padding-left: 32px;">3/5</span>
+                                </td>
+                                <td colspan="5">
+                                    <ul class="ul_roomTypePics">
+                                        <li>
+                                            <img src="/static/images/roomTypePic_small.gif" alt=""/>
+                                            <p>标准房</p>
+                                        </li>
+                                        <li>
+                                            <img src="/static/images/roomTypePic_small.gif" alt=""/>
+                                            <p>标准房</p>
+                                        </li>
+                                        <li>
+                                            <img src="/static/images/roomTypePic_small.gif" alt=""/>
+                                            <p>标准房</p>
+                                        </li>
+                                        <li>
+                                            <img src="/static/images/roomTypePic_small.gif" alt=""/>
+                                            <p>标准房</p>
+                                        </li>
+                                        <li>
+                                            <img src="/static/images/roomTypePic_small.gif" alt=""/>
+                                            <p>标准房</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="head">备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注</span></td>
+                                <td>备注备注备注</td>
+                                <td></td>
+                            </tr>
+                        </table>
+
+                        <ul class="ulRoomStyleButtonList">
+                            <li><a class="button_3_2" style="font-weight: normal" href="javascipt:;">编辑</a></li>
+                            <li><a class="button_3_2" style="font-weight: normal" href="javascipt:;">删除</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panelTitle" style="border: 0">
+                操作日志
+            </div>
+            <div class="panelContent clearfix">
+                <table class="operation_records">
+                    <thead>
+                    <tr>
+                        <td>日期</td>
+                        <td>操作人员</td>
+                        <td>操作项目</td>
+                        <td>操作类型</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>20130606 14:55</td>
+                        <td>liuwei</td>
+                        <td>增加行政商务套房</td>
+                        <td>新增</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+<div id="window"></div>
+    
+<script type="text/html" id="roomPicsTemplate">
+    <div class="bigImgContainer">
+        <img src="/static/images/roomTypePic_big.jpg" alt=""/>
+        <div class="bigImgLeftSpace"><em></em></div>
+        <div class="bigImgRightSpace"><em></em></div>
+    </div>
+    <div class="imgNavContainer">
+        <ul class="ul_roomTypePics">
+            <li class="current">
+                <img src="/static/images/roomTypePic_small.gif" data-target="/static/images/roomTypePic_big.jpg" alt=""/>
+                <p>标准房</p>
+                <em></em>
+            </li>
+            <li>
+                <img src="/static/images/roomTypePic_small.gif" data-target="/static/images/roomTypePic_big.jpg" alt=""/>
+                <p>标准房</p>
+                <em></em>
+            </li>
+            <li>
+                <img src="/static/images/roomTypePic_small.gif" data-target="/static/images/roomTypePic_big.jpg" alt=""/>
+                <p>标准房</p>
+                <em></em>
+            </li>
+            <li>
+                <img src="/static/images/roomTypePic_small.gif" data-target="/static/images/roomTypePic_big.jpg" alt=""/>
+                <p>标准房</p>
+                <em></em>
+            </li>
+            <li>
+                <img src="/static/images/roomTypePic_small.gif" data-target="/static/images/roomTypePic_big.jpg" alt=""/>
+                <p>标准房</p>
+                <em></em>
+            </li>
+        </ul>
+    </div>
+</script>
+
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/kendo.web.js"></script>
+<script type="text/javascript" src="/static/js/scrollFix.js"></script>
+<script type="text/javascript" src="/static/js/hotel.js"></script>
+    <script type="text/javascript" src="/static/js/global.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            new PopWindow(".ul_roomTypePics li",{
+                title:"酒店名称，房型名称",
+                width:700,
+                template:"#roomPicsTemplate"
+            }).init();
+
+            $("body").delegate(".imgNavContainer li","click",function(){
+                $(this).addClass("current").siblings(".current").removeClass("current");
+                var bigImg=$(this).closest(".imgNavContainer").siblings(".bigImgContainer").find("img");
+                bigImg.attr("src",$("img",this).attr("data-target"));
+            })
+
+            $("body").delegate(".bigImgLeftSpace","click",function(){
+                var navLi=$(this).closest(".bigImgContainer").siblings(".imgNavContainer").find("li");
+                var currentLi=$(this).closest(".bigImgContainer").siblings(".imgNavContainer").find("li.current");
+                var index=currentLi.index();
+                if(index==0)
+                {
+                    navLi.last().trigger("click");
+                }
+                else
+                {
+                    currentLi.prev().trigger("click");
+                }
+            })
+
+            $("body").delegate(".bigImgRightSpace","click",function(){
+                var navLi=$(this).closest(".bigImgContainer").siblings(".imgNavContainer").find("li");
+                var currentLi=$(this).closest(".bigImgContainer").siblings(".imgNavContainer").find("li.current");
+                var index=currentLi.index();
+                if(index==navLi.length-1)
+                {
+                    navLi.first().trigger("click");
+                }
+                else
+                {
+                    currentLi.next().trigger("click");
+                }
+            })
+        })
+    </script>
+</body>
+</html>
+

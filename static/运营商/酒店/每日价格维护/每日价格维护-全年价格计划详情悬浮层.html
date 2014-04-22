@@ -1,0 +1,527 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>酒店 酒店维护 每日价格维护 全年价格计划详情 浮层</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+    <link href="../../../static/css/kendo.common.css" rel="stylesheet" type="text/css" />
+    <link href="../../../static/css/kendo.gray.css" rel="stylesheet" type="text/css" />
+     <link href="/css/kendo.reset.css" rel="stylesheet" />
+    <link href="../../../static/css/modify.css" rel="stylesheet" type="text/css"/>
+    <script src="../../static/js/jquery.min.js" type="text/javascript"></script>
+    <script src="../../static/js/kendo.web.js" type="text/javascript"></script>
+    <script src="../../static/js/public.js" type="text/javascript"></script>
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<!-- @CLB@ -->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body>
+    <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">&nbsp;</a>
+                <span>&nbsp;</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent"> <!--mainContent开始-->
+        <div class="actions block">
+            <div class="col col-l sep-r">
+                <button class="btns btn-return">返回</button>
+            </div>
+            <div class="col col-l" style="padding-left:10px;">
+                <a class="item" href="#">酒店基本信息</a>
+                <a class="item" href="#">供应商信息</a>
+                <a class="item" href="#">酒店房型</a>
+                <a href="#" class="item">价格计划</a>
+                <a class="item" href="#">库存与房态</a>
+                <a class="item highlight" href="#">每日价格</a>
+            </div>
+            <div class="col col-r sep-l">
+                <a class="button_4_3" href="#" style="color:#ffffff;margin-top:4px;">提交</a>
+                <a class="button_4_3" href="#" style="color:#ffffff;margin-top:4px">关闭</a>
+            </div>
+        </div>
+           <div class="xzfx">
+             <span>选择房型</span>
+             <select><option>全部房型</option></select>
+             <label>共&nbsp;&nbsp;5&nbsp;&nbsp;个房型</label>
+           </div>
+           
+           <div class="sfbzf"> <!--sfbzf开始-->
+            <div class="sfbzf_content"> <!--sfbzf_content开始-->
+              <div class="sfbzf_top">
+                <h3>商务标准房</h3>
+                <ul>
+                  <li>不可加床</li>
+                  <li><em>4</em>个价格计划</li>
+                </ul>
+              </div>
+              <div class="df_page_btn">
+                <span>&nbsp;</span> <a href="#" class="df_toppage">上一页</a>
+                 <label>开始日期</label> <input type="text" value="2013-06-24" /> <a href="#" class="df_page_a">查 询</a>
+                 <p>
+                   <a href="#" class="df_page_a">修 改</a>
+                   <a href="#" class="df_page_a_1">修改时段价格</a>
+                   <em>&nbsp;</em> <a href="#" class="df_toppage_1">下一页</a>
+                 </p>
+              </div>
+              <table cellspacing="0" cellpadding="0" class="tab_bzf">
+                <tr>
+                  <th rowspan="2" class="one1 tab_bzf_th">日期</th>
+                  <th>06-24</th>
+                  <th>06-25</th>
+                  <th>06-26</th>
+                  <th>06-27</th>
+                  <th>06-28</th>
+                  <th class="color">06-29</th>
+                  <th class="tab_bzf_th_1 color">06-30</th>
+                </tr>
+                <tr class="second">
+                  <th>一</th>
+                  <th>二</th>
+                  <th>三</th>
+                  <th>四</th>
+                  <th>五</th>
+                  <th class="color">六</th>
+                  <th class="tab_bzf_th_1 color">日</th>
+                </tr>
+                <tr class="tab_bzf_border bg">
+                   <td class="td_blanket_1">含早特惠</td>
+                   <td class="third">400&nbsp;&nbsp;<img src="../../../static/images/icon_1.png"></td>
+                   <td class="third">400</td>
+                   <td class="third">400</td>
+                   <td>400</td>
+                   <td class="third">400</td>
+                   <td>400 </td>
+                   <td>400</td>
+                </tr>
+                <tr class="bg_1">
+                   <td class="tab_bzf_left_1">用户组A</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                </tr>
+                <tr class="tab_bzf_border bg">
+                   <td class="tab_bzf_left">提前3天预订</td>
+                   <td class="td_blanket">400</td>
+                   <td class="third">400</td>
+                   <td class="third">400</td>
+                   <td>400</td>
+                   <td>400</td>
+                   <td>400</td>
+                   <td>400</td>
+                </tr>
+                <tr class="bg_1">
+                   <td class="tab_bzf_left_1">用户组A</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                </tr>
+                <tr class="tab_bzf_border bg">
+                   <td class="tab_bzf_left">提前7天预订</td>
+                   <td>400 </td>
+                   <td>400</td>
+                   <td>400 </td>
+                   <td>400 </td>
+                   <td>400</td>
+                   <td>400 </td>
+                   <td>400</td>
+                </tr>
+                <tr class="bg_1">
+                   <td class="tab_bzf_left_1">用户组A</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                </tr>
+                <tr class="tab_bzf_border bg">
+                   <td class="tab_bzf_left">连住2晚及以上...</td>
+                   <td>400</td>
+                   <td>400</td>
+                   <td>400</td>
+                   <td>400</td>
+                   <td>400</td>
+                   <td>400</td>
+                   <td>400</td>
+                </tr>
+                <tr class="bg_1">
+                   <td class="tab_bzf_left_1">用户组A</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                </tr>
+              </table>
+            </div> <!--sfbzf_content结束-->
+           </div> <!--sfbzf结束-->
+           
+           <div class="sfbzf"> <!--sfbzf开始-->
+            <div class="sfbzf_content"> <!--sfbzf_content开始-->
+              <div class="sfbzf_top">
+                <h3>商务套房（双床）</h3>
+                <ul>
+                  <li>不可加床</li>
+                  <li><em>4</em>个价格计划</li>
+                </ul>
+              </div>
+              <div class="df_page_btn">
+                <span>&nbsp;</span> <a href="#" class="df_toppage">上一页</a>
+                 <label>开始日期</label> <input type="text" value="2013-06-24" /> <a href="#" class="df_page_a">查 询</a>
+                 <p>
+                   <a href="#" class="df_page_a">修 改</a>
+                   <a href="#" class="df_page_a_1">修改时段价格</a>
+                   <em>&nbsp;</em> <a href="#" class="df_toppage_1">下一页</a>
+                 </p>
+              </div>
+              <table cellspacing="0" cellpadding="0" class="tab_bzf">
+                <tr>
+                  <th rowspan="2" class="one1 tab_bzf_th">日期</th>
+                  <th>06-24</th>
+                  <th>06-25</th>
+                  <th>06-26</th>
+                  <th>06-27</th>
+                  <th>06-28</th>
+                  <th class="color">06-29</th>
+                  <th class="tab_bzf_th_1 color">06-30</th>
+                </tr>
+                <tr class="second">
+                  <th>一</th>
+                  <th>二</th>
+                  <th>三</th>
+                  <th>四</th>
+                  <th>五</th>
+                  <th class="color">六</th>
+                  <th class="tab_bzf_th_1 color">日</th>
+                </tr>
+                <tr class="tab_bzf_border bg">
+                   <td class="tab_bzf_left">含早特惠</td>
+                   <td class="third">400&nbsp;&nbsp;<img src="../../../static/images/icon_1.png"></td>
+                   <td class="third">400</td>
+                   <td class="third">400</td>
+                   <td>400</td>
+                   <td class="third">400</td>
+                   <td>400 </td>
+                   <td>400</td>
+                </tr>
+                <tr class="bg_1">
+                   <td class="tab_bzf_left_1">用户组A</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                </tr>
+                <tr class="tab_bzf_border bg">
+                   <td class="tab_bzf_left">提前3天预订</td>
+                   <td>400</td>
+                   <td class="third">400</td>
+                   <td class="third">400</td>
+                   <td>400</td>
+                   <td>400</td>
+                   <td>400</td>
+                   <td>400</td>
+                </tr>
+                <tr class="bg_1">
+                   <td class="tab_bzf_left_1">用户组A</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                </tr>
+                <tr class="tab_bzf_border bg">
+                   <td class="tab_bzf_left">提前7天预订</td>
+                   <td>400 </td>
+                   <td>400</td>
+                   <td>400 </td>
+                   <td>400 </td>
+                   <td>400</td>
+                   <td>400 </td>
+                   <td>400</td>
+                </tr>
+                <tr class="bg_1">
+                   <td class="tab_bzf_left_1">用户组A</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                </tr>
+                <tr class="tab_bzf_border bg">
+                   <td class="tab_bzf_left">连住2晚及以上...</td>
+                   <td>400</td>
+                   <td>400</td>
+                   <td>400</td>
+                   <td>400</td>
+                   <td>400</td>
+                   <td>400</td>
+                   <td>400</td>
+                </tr>
+                <tr class="bg_1">
+                   <td class="tab_bzf_left_1">用户组A</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                </tr>
+              </table>
+            </div> <!--sfbzf_content结束-->
+           </div> <!--sfbzf结束-->
+        
+           <div class="sfbzf"> <!--sfbzf开始-->
+            <div class="sfbzf_content"> <!--sfbzf_content开始-->
+              <div class="sfbzf_top">
+                <h3>行政商务套房</h3>
+                <ul>
+                  <li>不可加床</li>
+                  <li><em>4</em>个价格计划</li>
+                </ul>
+              </div>
+              <div class="df_page_btn">
+                <span>&nbsp;</span> <a href="#" class="df_toppage">上一页</a>
+                 <label>开始日期</label> <input type="text" value="2013-06-24" /> <a href="#" class="df_page_a">查 询</a>
+                 <p>
+                   <a href="#" class="df_page_a">修 改</a>
+                   <a href="#" class="df_page_a_1">修改时段价格</a>
+                   <em>&nbsp;</em> <a href="#" class="df_toppage_1">下一页</a>
+                 </p>
+              </div>
+              <table cellspacing="0" cellpadding="0" class="tab_bzf">
+                <tr>
+                  <th rowspan="2" class="one1 tab_bzf_th">日期</th>
+                  <th>06-24</th>
+                  <th>06-25</th>
+                  <th>06-26</th>
+                  <th>06-27</th>
+                  <th>06-28</th>
+                  <th class="color">06-29</th>
+                  <th class="tab_bzf_th_1 color">06-30</th>
+                </tr>
+                <tr class="second">
+                  <th>一</th>
+                  <th>二</th>
+                  <th>三</th>
+                  <th>四</th>
+                  <th>五</th>
+                  <th class="color">六</th>
+                  <th class="tab_bzf_th_1 color">日</th>
+                </tr>
+                <tr class="tab_bzf_border bg">
+                   <td class="tab_bzf_left">含早特惠</td>
+                   <td class="third">400&nbsp;&nbsp;<img src="../../../static/images/icon_1.png"></td>
+                   <td class="third">400</td>
+                   <td class="third">400</td>
+                   <td>400</td>
+                   <td class="third">400</td>
+                   <td>400 </td>
+                   <td>400</td>
+                </tr>
+                <tr class="bg_1">
+                   <td class="tab_bzf_left_1">用户组A</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                </tr>
+                <tr class="tab_bzf_border bg">
+                   <td class="tab_bzf_left">提前3天预订</td>
+                   <td>400</td>
+                   <td class="third">400</td>
+                   <td class="third">400</td>
+                   <td>400</td>
+                   <td>400</td>
+                   <td>400</td>
+                   <td>400</td>
+                </tr>
+                <tr class="bg_1">
+                   <td class="tab_bzf_left_1">用户组A</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                </tr>
+                <tr class="tab_bzf_border bg">
+                   <td class="tab_bzf_left">提前7天预订</td>
+                   <td>400 </td>
+                   <td>400</td>
+                   <td>400 </td>
+                   <td>400 </td>
+                   <td>400</td>
+                   <td>400 </td>
+                   <td>400</td>
+                </tr>
+                <tr class="bg_1">
+                   <td class="tab_bzf_left_1">用户组A</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                </tr>
+                <tr class="tab_bzf_border bg">
+                   <td class="tab_bzf_left">连住2晚及以上...</td>
+                   <td>400</td>
+                   <td>400</td>
+                   <td>400</td>
+                   <td>400</td>
+                   <td>400</td>
+                   <td>400</td>
+                   <td>400</td>
+                </tr>
+                <tr class="bg_1">
+                   <td class="tab_bzf_left_1">用户组A</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                   <td class="gk_bg">400</td>
+                   <td>400</td>
+                </tr>
+              </table>
+            </div> <!--sfbzf_content结束-->
+           </div> <!--sfbzf结束-->        
+           
+           <div class="czrz"> <!--czrz开始-->
+              <h3>操作日志</h3>
+              <table cellpadding="0" cellspacing="0" class="czrz_tab">
+                  <tr class="first">
+                     <td class="td_1">日期</td>
+                     <td class="td_2">操作人员</td>
+                     <td class="td_3">操作项目</td>
+                     <td class="td_4">操作内容</td>
+                     <td class="td_5">操作类型</td>
+                  </tr>
+                  <tr>
+                     <td>2013-06-06</td>
+                     <td>张三</td>
+                     <td>商务标准房</td>
+                     <td>含早特惠</td>
+                     <td>新增</td>
+                  </tr>
+                  <tr>
+                     <td>2013-06-18</td>
+                     <td>张三</td>
+                     <td>商务标准房</td>
+                     <td>修改</td>
+                     <td>修改</td>
+                  </tr>
+                  <tr>
+                     <td>2013-06-18</td>
+                     <td>张三</td>
+                     <td>商务套房</td>
+                     <td>连住2晚及以上</td>
+                     <td>修改</td>
+                  </tr>
+              </table>
+           </div> <!--czrz结束-->
+        
+           <div class="blanket_1"> <!--悬浮层开始-->
+              <div class="blanket_left">
+                  <p>礼包备注</p>
+                  <h3>包含服务</h3>
+                  <h3>酒店规定</h3>
+              </div>
+              <div class="blanket_right">  <!--blanket_right开始-->
+                  <div class="blanket_bottom">
+                      <p>xxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                      <p>xxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                  </div>
+                  <div class="blanket_right_div">
+                     <p><span>自助餐</span> <label>x1</label></p>
+                     <p>宽带</p>
+                 </div>
+                  <div class="time">
+                     <p> <span>入住时间</span> <label>14:00以后</label></p>
+                     <p> <span>退房时间</span> <label>12：以前</label></p>
+                     <p> <span>保留时间</span> <label>无</label></p>
+                 </div>
+                  <div class="expense">
+                     <p>入住前1天的12点之前变更或取消，不收取任何费用；</p>
+                     <p>入住前1天的12点之后变更或取消，酒店将扣除首晚房费；</p>
+                 </div>
+              </div>  <!--blanket_right结束-->
+           </div> <!--悬浮层结束-->
+        
+        
+		</div><!--mainContent结束-->
+    </div>
+	<div id="add_department"></div>
+    <div id="add_employe"></div>
+    
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+</body>
+</html>

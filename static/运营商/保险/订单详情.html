@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>运营商 保险 订单详情</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../../static/css/common.css" rel="stylesheet" type="text/css" />
+<link href="../../static/css/kendo.common.css" rel="stylesheet" type="text/css" />
+<link href="../../static/css/kendo.gray.css" rel="stylesheet" type="text/css" />
+<link href="../../static/css/kendo.reset.css" rel="stylesheet" type="text/css" />
+<!--弹窗CSS-->
+<link href="../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+<link href="../../static/css/kendo.reset.css" rel="stylesheet" />
+<link href="../../static/css/order.css" rel="stylesheet">
+<link href="../../static/css/insurance.css" rel="stylesheet" type="text/css"/>
+<script src="../../static/js/jquery.min.js" type="text/javascript"></script>
+<script src="../../static/js/kendo.web.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../static/js/global.js"></script>
+<script type="text/javascript" src="../../static/js/flight.js"></script>
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="../../static/css/ie.css" /> 
+<script type="text/javascript" src="../../static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+
+<!-- <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript">
+$(function(){
+    new Collpase({
+        limitHeight:140,
+        container:'.xyzc_div' 
+    }).init();
+}) 
+    </script>-->
+<script type="text/javascript" src="../../static/js/sync.js"></script>
+</head>
+<body>
+<div id="extHeader">
+  <div></div>
+</div>
+<div id="container">
+  <div class="header">
+    <h1></h1>
+    <div> <span>你好,${name}</span> <a href="javascript:void(0);">退出</a> </div>
+    <ul id="top_menu">
+      <li><a href="javascript:void(0);">国内机票</a></li>
+      <li><a href="javascript:void(0);">国际机票</a></li>
+      <li><a href="javascript:void(0);">酒店</a></li>
+      <li><a href="javascript:void(0);">票证中心</a></li>
+      <li><a href="javascript:void(0);">财务管理</a></li>
+      <li><a href="javascript:void(0);">客户管理</a></li>
+      <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+    </ul>
+    <ol class="sub_menu">
+      <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+      <li><a href="javascript:void(0);">公司信息</a></li>
+      <li><a href="javascript:void(0);">组织架构</a></li>
+      <li><a href="javascript:void(0);">角色维护</a></li>
+      <li><a href="javascript:void(0);">基础数据</a></li>
+    </ol>
+    <div id="message"> <a href="javascript:void(0);">&nbsp;</a> <span>&nbsp;</span> </div>
+  </div>
+  <div class="clear"></div>
+  <div id="sub_menu_bar"></div>
+  <div id="mainContent" style="overflow:hidden;"> 
+    <!-- start content -->
+    
+     <div class="actions block">
+      <div class="col col-l sep-r"> <a href="#" class="btns btn-return">返回</a> </div>
+      <div class="col col-r sep-l">
+        <button class="btns btn-blue">修改订单</button>
+        <button class="btns btn-blue">取消订单</button>
+        <button class="btns btn-orange">支付</button>
+      </div>
+    </div>
+    <div class="block block0 clearfix">
+      <div class="col col-l">
+         <div class="row"> <span class="text1">订单号：<strong>未生成</strong></span>&nbsp; <span class="text2"> - 订单类型：保险订单 </span> 
+         </div>
+         <div class="row"> <span>最后更新：<em>更改</em></span>&nbsp;&nbsp;<span>更新时间：<em>2013-06-15 11:23 </em></span>&nbsp;&nbsp;<span><a href="#">【更多操作日志】</a></span> 
+         </div>
+      </div>
+      <div class="col col-r">
+        <ul class="flat-list" style="text-align:center">
+                    <li>
+                    <div class="instr clearfix">
+                        <span class="highlight-fl">创建</span>
+                        <span>支付</span>
+                        <span>投保</span>
+                        <span>完成</span>
+                    </div> 
+                    </li>
+                    <li>
+                    <div class="instr clearfix">
+                        <span>收款</span>
+                        <span>结算</span>
+                    </div>
+                    </li>
+                    <li class="count"><span>关联订单</span><strong>3</strong>
+                    </li>
+                </ul>
+       </div>
+    </div>
+    
+    <!-- 订单信息 -->
+    <div class="block block1 block-module">
+      <div class="block-title">订单信息</div>
+      <ul class="insurance_details">
+        <li>
+          <label class="vertical-head">客户名称</label>
+          <span>苏宁</span> </li>
+        <li>
+          <label class="vertical-head">结算方式</label>
+          <span>苏宁</span> </li>
+        <li>
+          <label class="vertical-head">可用余额</label>
+          <span><strong style="color:#FF6608;">6870.00</strong>元</span> </li>
+        <li>
+          <label class="vertical-head">联系人</label>
+          <span>张大中</span> </li>
+        <li>
+          <label class="vertical-head">联系电话</label>
+          <span>021-56894123</span> </li>
+        <li>
+          <label class="vertical-head">手机号码</label>
+          <span>13845621456</span> </li>
+      </ul>
+    </div>
+    
+    <!-- 产品信息 -->
+    <div class="block block2 block-module">
+      <div class="block-title"> <span class="block-title-orange">产品信息</span> </div>
+      <div class="row">
+          <table cellpadding="0" cellspacing="0" class="insurance_pro">
+            <colgroup>
+            <col width="100px" />
+            <col width="80px" />
+            <col width="180px" />
+            <col width="110px" />
+            <col width="120px" />
+            <col width="130px" />
+            <col width="130px" />
+            <col width="130px" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th>保险产品</th>
+                <th>险种编号</th>
+                <th>险种名称</th>
+                <th>保险期限</th>
+                <th>保险金额（元）</th>
+                <th>保险费用</th>
+                <th>适用范围</th>
+                <th class="th-last">保险生效日期</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>太平保险</td>
+              <td>00001</td>
+              <td>e顺高额航空意外保险</td>
+              <td>7天</td>
+              <td>5，000，000</td>
+              <td><span class="f-td"><b>10.00</b></span>元/份</td>
+              <td>国内机票</td>
+              <td>2013/11/12</td>
+            </tr>
+            </tbody>
+          </table>
+      </div>
+      
+      <!-- 投保人信息 -->
+      <div class="block-title"> <span class="block-title-blue">投保人信息</span> </div>
+      <div class="row">
+        
+          <table cellpadding="0" cellspacing="0" class="insurance_pro">
+            <colgroup>
+            <col width="100px" />
+            <col width="100px" />
+            <col width="280px" />
+            <col width="160px" />
+            <col width="160px" />
+            <col width="200px" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th>姓名</th>
+                <th>证件类型</th>
+                <th>证件号码</th>
+                <th>性别</th>
+                <th>出生日期</th>
+                <th class="th-last">手机号码</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>张大国</td>
+              <td >身份证</td>
+              <td>420813198809131539</td>
+              <td>男</td>
+              <td>1985/10/23</td>
+              <td>13800138000</td>
+            </tr>
+            </tbody>
+          </table>
+      
+      </div>
+      <!-- 被保人信息 -->
+      
+      <div class="block-title"> <span class="block-title-orange">被保人信息</span> </div>
+      <div class="row">
+        <table cellpadding="0" cellspacing="0" class="insurance_pro">
+          <colgroup>
+          <col width="100px" />
+          <col width="80px" />
+          <col width="160px" />
+          <col width="110px" />
+          <col width="120px" />
+          <col width="130px" />
+          <col width="100px" />
+          <col width="170px" />
+          <col width="100px" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th>姓名</th>
+              <th>证件类型</th>
+              <th>证件号码</th>
+              <th>性别</th>
+              <th>出生日期</th>
+              <th>手机号码</th>
+              <th>保险数量</th>
+              <th>保险单</th>
+              <th class="th-last">投保状态</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>张大国</td>
+            <td>身份证</td>
+            <td>420813198809131539</td>
+            <td>男</td>
+            <td>1985/10/23</td>
+            <td>13800138000</td>
+            <td>1份</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="ipt02" style="border:none">
+        <p><b>受益人信息：</b></p>
+        <p>法定</p>
+      </div>
+    </div>
+    <!-- 应收金额-->
+    <div class="block block5 block-calc">
+      <div id="order_calc">
+        <ul class="flat-list">
+          <li class="first">
+            <label> <span>应收合计</span>
+              <input class="input-b" value="20.00">
+            </label>
+          </li>
+          <li>
+            <label> <span style="margin:25px 0 0 0">=</span> </label>
+          </li>
+          <li>
+            <label> <span style="text-align:left">保险数量</span>
+              <input value="2">&nbsp;份</label>
+          </li>
+          <li>
+            <label> <span style="margin:25px 0 0 0">X</span> </label>
+          </li>
+          <li>
+            <label> <span style="text-align:left">保险费用</span>
+              <input value="10.00">
+              &nbsp;元/份 </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- end of content -->
+</div>
+<div id="extFooter">
+  <div>
+    <p> <a href="javascript:void(0);">关于我们</a>&nbsp;| <a href="javascript:void(0);">微博</a>&nbsp;| <a href="javascript:void(0);">服务条款</a>&nbsp;| <a href="javascript:void(0);">隐私政策</a>&nbsp;| </p>
+    <p>客户服务热线:400-720-6666</p>
+  </div>
+</div>
+</body>
+</html>

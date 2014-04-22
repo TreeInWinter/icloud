@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta content="text/html" charset="utf-8">
+    <link rel="stylesheet" href="../../static/css/common.css">
+    <link rel="stylesheet" href="../../static/css/b2b.css">
+    <link rel="stylesheet" href="../../static/css/kendo.common.css">
+    <link rel="stylesheet" href="../../static/css/kendo.gray.css">
+    <link href="../../static/css/kendo.reset.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../static/css/travel.css"/>
+</head>
+<body>
+<div id="container" style="margin-top:0">
+    <div id="mainContent">
+        <div class="actions block">
+            <div class="col col-l sep-r">
+                <button class="btns btn-return">返回</button>
+            </div>
+            <div class="col col-l">
+                <div class="fixedMenu">
+                    <a href="#" class="current">预订报名</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="subPanel" style="border-bottom:1px solid #ccc">
+                <span class="subPanelTitle">美国东西海岸14日团队游（3钻）·7成四星酒店</span>
+                <span style="margin-left:30px">行程天数： 8天</span>
+                <span style="float:right;margin:-5px 10px 0 0">
+                    <a href="javascript:;" class="button_important adaptiveButton small">
+                        <span class="left"></span>
+                        <span class="center">保 存</span>
+                        <span class="right"></span>
+                    </a>
+                </span>
+            </div>
+            <div id="calendarTitle">请点击日期添加团信息</div>
+            <div id="calendarContainer">
+                <div id="calendarOperationPanel">
+                    <div id="calendarMonthUp" class=""></div>
+                    <div id="calendarDateInfo">
+                        <div style="padding:0 5px;border-bottom:1px dashed #ccc;margin-bottom:5px"><b id="calendarMonthValue" class="monthValue">10</b><span id="calendarMonthTag">月</span></div>
+                        <div style="font-weight:bold"><span id="calendarYearValue">2013</span>年</div>
+                    </div>
+                    <div id="calendarMonthDown"></div>
+                </div>
+                <div id="calendarHead">
+                    <table>
+                        <tr>
+                            <th>日</th>
+                            <th>一</th>
+                            <th>二</th>
+                            <th>三</th>
+                            <th>四</th>
+                            <th>五</th>
+                            <th>六</th>
+                        </tr>
+                    </table>
+                </div>
+                <div id="calendar"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/x-kendo-template" id="tripDetailAddContainer">
+<div class="tripDetailAddContainer" style="height:400px">
+    <div class="tripDetailContainerLeft" style="width:220px;">
+        # console.dir(data) #
+        # for(var i=0;i<data.length;i++){ #
+        <div class="tripDetailItem" data-itemIndex="#=i#">
+            <div style="margin-bottom:8px"><b>团号：</b>#= data[i].tuanhao #</div>
+            <span style="margin:0 20px 0 30px;font-weight:bold">余15位</span><span style="font-size:16px;font-weight:bold;font-family:arial">￥15000起</span>
+        </div>
+        # } #
+        <div class="tripDetailAddButton" id="btn_addnewTimePriceItem">添加团</div>
+        <div class="spliteArrowLeft"></div>
+    </div>
+    <div class="tripDetailContainerRight" style="width:270px;padding:10px 20px">
+        <ul>
+            <li><b>出发日期：</b>2013-10-27</li>
+            <li><b class="important">*</b><b>团号：</b><input value="" type="text" name="" id="tuanhao" style="width:100px"></li>
+            <li style="padding-bottom:8px"><b class="important">*</b><b>计划人数：</b><input value="" type="text" name="" id="" style="width:33px"> 人</li>
+            <li style="padding-bottom:8px">
+                <table>
+                    <tr>
+                        <th>价格</th>
+                        <th>人数</th>
+                    </tr>
+                    <tr>
+                        <td><b class="important">*</b>成人：<span class="important"><input value="" type="text" name="" id="" style="width:43px;"></span> 元</td>
+                        <td><input value="" type="text" name="" id="" style="width:34px"> 人</td>
+                    </tr>
+                    <tr>
+                        <td><b class="important">*</b>儿童：<span class="important"><input value="" type="text" name="" id="" style="width:43px;"></span> 元</td>
+                        <td><input value="" type="text" name="" id="" style="width:34px;"> 人</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b class="important">*</b>单房差：
+                            <select name="" id="" style="width: 75px">
+                                <option value="">三星</option>
+                            </select>
+                        </td>
+                        <td>价格： <input value="20" type="text" name="" id=""  style="width:50px;"></td>
+                    </tr>
+                </table>
+            </li>
+            <li>
+                <b>当前是否接受报名：</b><label><input type="radio" name="" id="" checked="checked">是</label><label style="margin-left:20px"><input type="radio" name="" id="">否</label>
+            </li>
+            <li>
+                <b>报名截止日期：</b><input type="text" name="" id="" class="datePicker" style="width:100px">
+            </li>
+            <li>
+                <a href="javascript:;" id="btn_timePriceItemSave" class="button_important adaptiveButton medium">
+                    <span class="left"></span>
+                    <span class="center" style="padding:0 35px">保存</span>
+                    <span class="right"></span>
+                </a>
+
+                <a href="javascript:;" id="btn_timePriceItemDelete" class="button_unimportant adaptiveButton medium">
+                    <span class="left"></span>
+                    <span class="center" style="padding:0 35px">删除</span>
+                    <span class="right"></span>
+                </a>
+            </li>
+        </ul>
+        <div id="tripDetailContainerRightConver"></div>
+    </div>
+</div>
+
+</script>
+
+<div class="tripDetailContainer">
+    <div class="tripDetailContainerLeft">
+        <div class="tripDetailItem">
+            <div style="margin-bottom:8px"><b>团号：</b>BM-130908-001</div>
+            <span style="color:#339900;margin:0 20px 0 30px;font-weight:bold">余15位</span><span style="color:#FF3300;font-size:16px;font-weight:bold;font-family:arial">￥15000起</span>
+        </div>
+        <div class="tripDetailItem">
+            <div style="margin-bottom:8px"><b>团号：</b>BM-130908-001</div>
+            <span style="color:#339900;margin:0 20px 0 30px;font-weight:bold">余15位</span><span style="color:#FF3300;font-size:16px;font-weight:bold;font-family:arial">￥15000起</span>
+        </div>
+        <div class="spliteArrowLeft"></div>
+    </div>
+    <div class="tripDetailContainerRight">
+        <ul>
+            <li><b>出发日期：</b>2013-10-27</li>
+            <li><b>团号：</b>BM-130908-001</li>
+            <li style="border-bottom:1px solid #ccc;padding-bottom:8px"><b>计划人数：</b>45人</li>
+            <li>
+                <table>
+                    <tr>
+                        <th>价格</th>
+                        <th>人数</th>
+                    </tr>
+                    <tr>
+                        <td>成人：<span class="important">15000</span> 元</td>
+                        <td>
+                            <select name="" id="" style="width:50px">
+                                <option value value="">1</option>
+                                <option value value="">2</option>
+                                <option value value="">3</option>
+                                <option value value="">4</option>
+                                <option value value="">5</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>儿童：<span class="important">15000</span> 元</td>
+                        <td>
+                            <select name="" id="" style="width:50px">
+                                <option value value="">1</option>
+                                <option value value="">2</option>
+                                <option value value="">3</option>
+                                <option value value="">4</option>
+                                <option value value="">5</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </li>
+            <li>
+                <a href="javascript:;" class="button_important adaptiveButton small">
+                    <span class="left"></span>
+                    <span class="center">立即报名</span>
+                    <span class="right"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="window"></div>
+
+<script id="calendarTemplate" type="text/x-kendo-template">
+    # if($.inArray(+data.date, data.dates) != -1){ #
+        # if(!eve[$.dateToString(data.date)]){ #
+            <div style="position:relative;height:70px">
+                <span class="canlendar_jqjr">#= getjqjr(data.date.getFullYear(),data.date.getMonth()+1,data.date.getDate()) #</span>
+                <span class="calendar_date">#= data.value #</span>
+                <b class="holiday"></b>
+        # }else{ #
+            <div style="position:relative;height:70px" class="sale">
+                <span class="calendar_date">#= data.value #</span>
+                <span class="remainNum">余#= eve[$.dateToString(date)][0] #位</span>
+                <span class="salePrice">￥#= eve[$.dateToString(date)][1] #<span>起</span></span>
+                <b class="edge"></b>
+        # } #
+    #}else{#
+            <div style="position:relative;height:70px">
+                <span class="canlendar_jqjr">#= getjqjr(data.date.getFullYear(),data.date.getMonth()+1,data.date.getDate()) #</span>
+                <span class="calendar_date">#= data.value #</span>
+    #}#
+            </div>
+</script>
+
+<script type="text/html" id="testJsonStr">
+    {
+    "2013/10/02": [
+    {
+    "tourGroupId": "123",
+    "numberOfPlanSignUp": "123",
+    "adultPrice": "123",
+    "childPrice": "123",
+    "balancePrice": "123",
+    "signUpEndDate": "2013-10-29",
+    "hotelStarLevel": "3"
+    },
+    {
+    "tourGroupId": "22",
+    "numberOfPlanSignUp": "22",
+    "adultPrice": "22",
+    "childPrice": "22",
+    "balancePrice": "22",
+    "signUpEndDate": "2013-10-23",
+    "hotelStarLevel": "3"
+    }
+    ]
+    }
+</script>
+
+<script type="text/javascript" src="../../static/js/ccc0.1/ccc.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+<script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+<script type="text/javascript" src="../../static/js/kendo.culture.zh-CHS.min.js"></script>
+<script type="text/javascript" src="../../static/js/DateControl.js"></script>
+<script type="text/javascript">
+    eve={"2013/09/12":[15,1500],"2013/10/1":"","2013/10/2":"","2013/10/3":"","2013/10/4":"","2013/10/5":"","2013/10/6":"","2013/10/7":"","2013/10/22":[22,45678]};
+
+    $.dateToString = function (s, sep) {
+        var sep = sep || '/'
+        return [s.getFullYear(), (s.getMonth() < 9 ? "0" : "") + (s.getMonth() + 1), (s.getDate() < 10 ? "0" : "") + s.getDate()].join(sep);
+    };
+
+
+    $(function(){
+        var t=kendo.template($("#tripDetailAddContainer").html());
+        var today = new Date(),
+            toDate=today;
+        var spDate=(function(){
+            var arr=[];
+            for(name in eve){
+                arr.push(+new Date(name));
+            }
+            return arr;
+        })();
+        var calendar=$("#calendar").kendoCalendar({
+            culture:"zh-CHS",
+            dates:spDate,
+            value:today,
+            footer:false,
+            month:{content:$("#calendarTemplate").html()},
+            change:function(e){
+                toDate=e.sender.current();
+                changeCalendarDateInfo(toDate);
+                ts=hashDate((+new Date(toDate.Format("yyyy/MM/dd"))).toString());
+                if(!model.timePrice[ts])
+                {
+                    model.timePrice[ts]=[];
+                }
+
+                var c=t(model.timePrice[ts]);
+                w1.setOptions({"title":toDate.Format("yyyy/MM/dd")})
+                w1.refresh({"template":c})
+                w1.center().open();
+                setWP("timePriceItemName",ts);
+                setWP("editStatus","addible")
+            }
+        }).data("kendoCalendar");
+
+        $("#calendarMonthDown").click(function(){
+            if(!$(this).hasClass("disabled"))
+            {
+                toDate=toDate.DateAdd("m",+1);
+                calendar.navigate(toDate,"month");
+                changeCalendarDateInfo(toDate);
+            }
+        })
+        $("#calendarMonthUp").click(function(){
+            if(!$(this).hasClass("disabled"))
+            {
+                toDate=toDate.DateAdd("m",-1);
+                calendar.navigate(toDate,"month");
+                changeCalendarDateInfo(toDate);
+            }
+        })
+
+        $("#calendar").delegate("td","mouseenter mouseleave",function(e){
+            if(e.type==="mouseenter")
+            {
+                if(!$("div.sale",this).length)
+                    $(this).addClass("hover");
+            }
+            else
+            {
+                $(this).removeClass("hover");
+            }
+        });
+
+        //$("#calendar").delegate("td","click",function(){w1.center().open()})
+
+        function changeCalendarDateInfo(toDate)
+        {
+            $("#calendarYearValue").text(toDate.getFullYear());
+            $("#calendarMonthValue").text(toDate.getMonth()+1);
+        }
+
+        changeCalendarDateInfo(today);
+
+        $("body").delegate(".tripDetailItem","click",function(){
+            $(this).addClass("active").siblings().removeClass("active");
+            $(".spliteArrowLeft").css("top",$(this).position().top+$(this).outerHeight()/2);
+            modifyTimePriceItem($(this).attr("data-itemIndex"));
+            setWP("editStatus","editable");
+            setWP("editItemIndex",$(this).attr("data-itemIndex"));
+            $("#tripDetailContainerRightConver").hide();
+        })
+
+        //$("#calendar").delegate("td:not('.hover')","click",function(){w.center().open();})
+
+        //$(".tripDetailItem:first").trigger("click");
+
+        var w=$(".tripDetailContainer").kendoWindow({
+            visible:false,
+            modal:true,
+            animation:false,
+            title:"2013/09/12"
+        }).data("kendoWindow");
+        var w1=$("#window").kendoWindow({
+            visible:false,
+            modal:true,
+            animation:false,
+            title:"2013/09/12"
+        }).data("kendoWindow");
+
+        $("body").delegate("#btn_timePriceItemSave","click",function(){
+            if(getWP("timePriceItemName"))
+            {
+                switch($("#window").data("editStatus"))
+                {
+                    case "addible":model.timePrice[getWP("timePriceItemName")].push(new TimePriceItem());break;
+                    case "editable":model.timePrice[getWP("timePriceItemName")][getWP("editItemIndex")]=new TimePriceItem();break;
+                    default :return;
+                }
+                w1.refresh({"template":t(model.timePrice[getWP("timePriceItemName")])});
+                setWP("editStatus","uneditable");
+                refreshCalendar_add(getWP("timePriceItemName"));
+                $("#tripDetailContainerRightConver").show();
+            }
+        })
+
+        $("body").delegate("#btn_timePriceItemDelete","click",function(){
+            if(getWP("timePriceItemName") && getWP("editItemIndex") && getWP("editStatus")!="uneditable")
+            {
+                model.timePrice[getWP("timePriceItemName")].splice(getWP("editItemIndex"),1);
+                w1.refresh({"template":t(model.timePrice[getWP("timePriceItemName")])});
+                setWP("editStatus","uneditable");
+                refreshCalendar_delete(getWP("timePriceItemName"));
+            }
+        });
+
+
+        $("body").delegate("#btn_addnewTimePriceItem","click",function(){
+            $("#window").data("editStatus","addible");
+            $("#tripDetailContainerRightConver").hide();
+        })
+
+    });
+
+
+    function modifyTimePriceItem(index)
+    {
+        var item=model.timePrice[getWP("timePriceItemName")][index];
+        $("#tuanhao").val(item.tuanhao);
+    }
+
+    function refreshCalendar_add(t)
+    {
+        t=parseFloat(dehashDate(t));
+        var df=new Date(t).Format("yyyy/MM/dd");
+        if(!eve[df])
+        {
+            eve[df]=[22,890];
+            calendar.options.dates.push(t);
+            var anim=calendar.options.animation;
+            calendar.options.animation=false;
+            calendar.navigate(new Date(t),"month");
+            calendar.options.animation=anim;
+        }
+
+
+    }
+
+    function refreshCalendar_delete(t)
+    {
+        t=parseFloat(dehashDate(t));
+        if(model.timePrice[getWP("timePriceItemName")].length==0)
+        {
+            var df=new Date(t).Format("yyyy/MM/dd");
+            delete eve[df];
+            if(calendar.options.dates.indexOf(t)!=-1)
+            {
+                calendar.options.dates.splice(calendar.options.dates.indexOf(t),1);
+                var anim=calendar.options.animation;
+                calendar.options.animation=false;
+                calendar.navigate(new Date(t),"month");
+                calendar.options.animation=anim;
+            }
+            setWP("editStatus","addible");
+        }
+        else
+        {
+            $("#tripDetailContainerRightConver").show();
+        }
+    }
+
+    function getjqjr(year,month,day)
+    {
+        myCal=new CCC(year,month,day);
+        myLunarCal=myCal.lunar();
+        sTerm=myCal.solarTerm();
+        var tmp="";
+        tmp+=myCal.sFtvl()!=""?myCal.sFtvl()+"<br />":"";
+        tmp+=myCal.jqFtvl()!=""?myCal.jqFtvl()+"<br />":"";
+        tmp+=myLunarCal.lunFtvl()!=""?myLunarCal.lunFtvl()+"<br />":"";
+        return (tmp);
+    }
+
+    var model=kendo.observable({
+        timePrice:{}
+    })
+    kendo.bind($("body"),model);
+
+    function TimePriceItem()
+    {
+        this.tuanhao=$("#tuanhao").val();
+    }
+
+    function setWP(name,value)
+    {
+        $("#window").data(name,value);
+    }
+
+    function getWP(name)
+    {
+        return $("#window").data(name);
+    }
+
+    function hashDate(t)
+    {
+        t= t.replace(/0/g,'a');
+        t= t.replace(/1/g,'b');
+        t= t.replace(/2/g,'c');
+        t= t.replace(/3/g,'d');
+        t= t.replace(/4/g,'e');
+        t= t.replace(/5/g,'f');
+        t= t.replace(/6/g,'g');
+        t= t.replace(/7/g,'h');
+        t= t.replace(/8/g,'i');
+        t= t.replace(/9/g,'j');
+        return t;
+    }
+
+    function dehashDate(t)
+    {
+        t= t.replace(/a/g,'0');
+        t= t.replace(/b/g,'1');
+        t= t.replace(/c/g,'2');
+        t= t.replace(/d/g,'3');
+        t= t.replace(/e/g,'4');
+        t= t.replace(/f/g,'5');
+        t= t.replace(/g/g,'6');
+        t= t.replace(/h/g,'7');
+        t= t.replace(/i/g,'8');
+        t= t.replace(/j/g,'9');
+        return t;
+    }
+
+    function getData()
+    {
+        var jsonD=model.timePrice.toJSON();
+        var stringD=JSON.stringify(jsonD);
+        for(var p in jsonD)
+        {
+            var t=dehashDate(p);
+            var sfd=new Date(parseFloat(t)).Format("yyyy/MM/dd");
+            stringD=stringD.replace(p,sfd);
+        }
+        console.log(stringD);
+    }
+
+    jsonStr= $.parseJSON($("#testJsonStr").html());
+
+    setData(jsonStr);
+
+    function setData(jsonStr)
+    {
+        for(var p in jsonStr)
+        {
+            eve[p]=[22,890];
+            var ts=hashDate((+new Date(p)).toString());
+            model.timePrice[ts]=jsonStr[p];
+        }
+    }
+
+    function refreshCalendar(_date)
+    {
+//        eve["2013/10/16"]=[33,33]
+//        calendar.options.dates.push(new Date("2013/10/16").getTime())
+        var anim=calendar.options.animation;
+        calendar.options.animation=false;
+        calendar.navigate(_date?_date:new Date(),"month");
+        calendar.options.animation=anim;
+    }
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>订单列表</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<link href="/static/css/phase1/b2b_common.css" rel="stylesheet" />
+	<link href="/static/css/phase1/order.css" rel="stylesheet" />
+	
+	<!-- Common Kendo UI Web CSS -->
+	<link href="/static/css/kendo.common.css" rel="stylesheet" />
+	<link href="/static/css/kendo.default.css" rel="stylesheet" />
+	
+
+    </head>
+    <body>
+	
+	<div id="container">
+		<div class="top_header">
+			<h1></h1>
+			<div class="profile">
+				<span>欢迎 <a href="javascript:void(0);">吕小名</a></span>
+				<span><a href="登陆.html">退出</a></span>
+
+			</div>
+		
+	    </div>
+		<div class="clear"></div>
+	    <ul id="menu">
+			<li>
+				<a href="国内机票搜索页.html">国内机票</a>
+				
+			</li>
+			<li>
+				<a href="javascript:void(0);">国际机票</a>
+			</li>
+			<li>
+				<a href="javascript:void(0);">酒店</a>
+				<ul>
+					<li><a href="国内酒店搜索页.html">国内酒店</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);">PNR操作</a>
+				<ul>
+					<li><a href="PNR导入生成预订单.html">PNR导入生成预订单</a></li>
+					<li><a href="黑屏指令粘贴生成预订单.html">黑屏指令粘贴生成预订单</a></li>
+				</ul>
+			</li>
+			<li class="k-state-selected">
+				<a href="javascript:void(0);">订单管理</a>
+				<ul>
+					<li class="k-state-selected"><a href="订单列表.html">订单列表</a></li>
+					<li><a href="手工录入订单.html">手工录入订单</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);">客户管理</a>
+				<ul>
+					<li>供应商</li>
+					<li><a href="采购商.html">采购商</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);">系统管理</a>
+				<ul>
+					<li>政策管理</li>
+					<li><a href="用户管理.html">用户管理</a></li>
+					<li><a href="角色管理.html">角色管理</a></li>
+				</ul>
+			</li>
+		</ul>
+		<div class="breadcrum"> &gt;&gt; <a href="订单列表.html">订单列表</a> </div>
+		
+		<div class="tabstrip">
+			<ul>
+				<li class="k-state-active">
+					订单查询
+				</li>
+			</ul>
+			<div>
+				<form name="orderSearch" action="订单列表.html" method="get">
+					<table>
+						<tr>
+							<td><span class="redImportant">*</span>订单类型：</td>
+							<td>
+								<select name="orderType" id="orderType">
+									<option value="all">全部</option>
+									<option value="flight">机票订单</option>
+									<option value="hotel">酒店订单</option>
+								</select>
+							</td>
+							<td><span class="redImportant">*</span>订单状态：</td>
+							<td>
+								<select name="orderStatus" id="orderStatus">
+									<option value="all">全部</option>
+									<option value="">待审核</option>
+									<option value="">待出票</option>
+									<option value="">待付款</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="redImportant">*</span>订单创建开始日期：</td>
+							<td><input class="Datepicker" name="startDate" type="text"></td>
+							<td><span class="redImportant">*</span>订单创建结束日期：</td>
+							<td><input class="Datepicker" name="endDate"  type="text"></td>
+						</tr>
+						<tr>
+							<td><span class="redImportant">*</span>付款方式：</td>
+							<td>
+								<select name="payMethod">
+									
+									<option selected="selected" value="all">全部</option>
+									<option value="XJ">现金</option>
+									<option value="ZP">支票</option>
+									<option value="YS">预收账款</option>
+									<option value="XK">信用卡</option>
+									<option value="WD">网上支付</option>
+									<option value="HK">汇款</option>
+									<option value="ZH">帐户</option>
+									<option value="WZ">网支</option>
+									<option value="FY">其他</option>
+									<option value="QK">月结欠款</option>
+									<option value="LS">临时欠款</option>
+									<option value="DH">电话支付</option>
+									<option value="zb">支付宝支付</option>
+									<option value="KQ">快钱支付</option>
+									<option value="HF">汇付</option>
+									<option value="CT">财富通</option>
+									<option value="WY">网赢</option>
+									<option value="HX">环讯</option>
+									<option value="DFT">德付通</option>
+									<option value="JSF">及时付</option>
+									<option value="YL">易商旅</option>
+								</select>
+							</td>
+							<td></td>
+							<td></td>
+						</tr>
+						
+						<tr>
+							<td></td>
+							<td><div style="text-align:center;margin:20px 0"><input type="submit" class="button_main_m" name="submit" value="查询"/></div></td>
+							<td></td>
+							<td>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		<script type="text/x-kendo-template" id="orderButton">
+			<ul>
+				<li><a href="javascript:orderDetail('#=OrderID#');">编辑</a>&nbsp;<a href="javascript:alert('#=OrderID# 想出票了');">出票</a></li>
+			</ul>
+		</script>
+		<div id="orderList"></div>
+		<div id="orderDetail"></div>
+	</div>
+	<!-- jQuery JavaScript -->
+	<script src="/static/js/jquery.min.js"></script>
+	<!-- Kendo UI Web combined JavaScript -->
+
+	<script src="/static/js/kendo.web.js"></script>
+	<script src="/static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+	<script src="/static/js/phase1/common.js"></script>
+	<script src="/static/js/phase1/order.js"></script>
+	
+    </body>
+</html>

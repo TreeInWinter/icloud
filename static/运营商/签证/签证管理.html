@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>运营商 签证 签证管理</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../../static/css/kendo.common.css" rel="stylesheet" type="text/css" />
+    <link href="../../../static/css/kendo.gray.css" rel="stylesheet" type="text/css" />
+    <link href="../../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+    <link href="../../../static/css/kendo.reset.css" rel="stylesheet" />
+    <link href="../../../static/css/visa.css" rel="stylesheet" type="text/css"/>
+    <script src="../../../static/js/jquery.min.js" type="text/javascript"></script>
+    <script src="../../../static/js/kendo.web.js" type="text/javascript"></script>
+    <!--[if lt IE 8]> 
+    <link rel="stylesheet" href="/static/css/ie.css" /> 
+    <script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+    <![endif]-->
+    <!-- @CLB@ -->
+    <script  src="../../../static/js/sync.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="extHeader">
+        <div></div>
+    </div>
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+				<li><a href="javascript:void(0);">旅游</a></li>
+				<li><a href="javascript:void(0);">签证</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">&nbsp;</a>
+                <span>&nbsp;</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent" style="overflow:hidden;">
+			<!-- start content -->
+            
+            <div class="actions block">
+                    <!--<div class="col col-l sep-r">
+                        <button class="btns btn-return">返回</button>
+                    </div>-->
+                   <!-- <div class="col col-l">
+                         <a class="item highlight" href="订单管理.html" style="margin-left:20px;">订单查询</a> 
+                         <a class="item" href="保单查询.html">保单查询</a> 
+                     </div>-->
+                     <div class="col col-r sep-l">
+                           <button class="btns btn-blue ac-new">新建订单</button>
+                     </div>
+            </div>
+            
+            <div class="visa_div">
+               <table cellpadding="0" cellspacing="0" class="visa_table" style="width:100%">
+                  <colgroup>
+                       <col width="55px" />
+                       <col width="120px" />
+                       <col width="70px" />
+                       <col width="120px" />
+                       <col width="55px" />
+                       <col width="120px" />
+                       <col width="80px"/>
+                  </colgroup>
+                  <tr>
+                     <td>游客姓名</td>
+                     <td><input type="text" style="width:90px;"/></td>
+                     <td>签证目的地</td>
+                     <td>
+                         <select style="width:95px;" data-role="dropdownlist">
+                             <option>全部</option>
+                             <option>米国</option>
+                             <option>加拿大</option>
+                             <option>……</option>
+                         </select>
+                     </td>
+                     <td>签证类型</td>
+                     <td>
+					    <select style="width:95px;" data-role="dropdownlist">
+                             <option>全部</option>
+                             <option>米国</option>
+                             <option>加拿大</option>
+                             <option>……</option>
+                         </select>
+                      </td>
+                      <td>
+                          计划出行日期
+                      </td>
+                      <td>
+                          <input type="text" class="datepicker" style="width:90px;" value="2013-11-14"/>
+                          <em> 至 </em>
+                          <input type="text" class="datepicker orange" style="width:90px;" value="2013-11-14"/>
+                      </td>
+
+                      <td rowspan="3" valign="middle" align="right" >
+                          <a href="javascript:;" class="button_important adaptiveButton medium">
+                              <span class="left"></span>
+                              <span class="center" style="padding:0 20px;">查 询</span>
+                              <span class="right"></span>
+                          </a>
+                      </td>
+                  </tr> 
+                  <tr>
+                      <td>签证状态</td>
+                      <td>
+                         <select style="width:95px;" data-role="dropdownlist">
+                             <option>全部</option>
+                             <option>新建</option>
+                             <option>支付</option>
+                             <option>投保</option>
+                             <option>完成</option>
+                         </select>
+                      </td>
+                      <td>支付状态</td>
+                      <td>
+                         <select style="width:95px;" data-role="dropdownlist">
+                             <option>全部</option>
+                             <option>已收款</option>
+                             <option>未收款</option>
+                         </select>
+                      </td>
+                      <td>预定名称</td>
+                      <td>
+                          <select style="width:95px;" data-role="dropdownlist">
+                              <option>全部</option>
+                              <option>已收款</option>
+                              <option>未收款</option>
+                          </select>
+
+                      </td>
+
+                  </tr>
+                  <tr>
+                      <td>订单号</td>
+                      <td>
+                         <input type="text" style="width:90px;"/>
+                      </td>
+                      <td>客户名称</td>
+					   <td>
+                           <input type="text" name="" id="" style="width: 64px;"/>
+                           <button class="btns btn-search ac-search-user" role="window_trigger">查询</button>
+
+					  </td>
+					  <td>销售</td>
+                      <td>
+                          <select style="width:95px;" data-role="dropdownlist">
+                              <option>全部</option>
+                              <option>采购商</option>
+                              <option>运营商</option>
+                          </select>
+                      </td>
+                      <td>
+
+					  </td>
+                  </tr>
+               </table>              
+            </div>
+           
+            <div class="scroll" style="table-layout:fixed;">  
+                      <table class="tgrid">
+                          <thead>
+                              <tr>
+                                  <th class="line_left thCenter">操作</th>
+                                  <th>游客姓名</th>
+                                  <th>签证状态</th>
+                                  <th>签证产品</th>
+                                  <th>签证类型</th>
+                                  <th>是否需要面试</th>
+                                  <th>支付状态</th>
+                                  <th>客户名称</th>
+                                  <th>销售</th>
+                                  <th>报名日期</th>
+                                  <th>计划出行日期</th>
+                                  <th class="line_right">预订状态</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td class="tdCenter">
+								  <a href="javascript:void(0);">受理</a><a href="javascript:void(0);">详情</a>
+								  </td>
+                                  <td>李晓明</td>
+                                  <td><a href="javascript:void(0);" class="highlight-orange">材料到齐/已齐</a></td>
+                                  <td>美国个人旅游签证</td>
+                                  <td>B1/B2</td>
+                                  <td>需要面试</td>
+                                  <td>未支付</td>
+								  <td>途牛</td>
+                                  <td>张小黑</td>
+                                  <td>2013-10-29</td>
+                                  <td>2014-05-26</td>
+                                  <td>正常</td>
+                              </tr>
+                              <tr>
+                                  <td class="tdCenter">
+								  <a href="javascript:void(0);">受理</a><a href="javascript:void(0);">详情</a>
+								  </td>
+                                  <td>李晓明</td>
+                                  <td><a href="javascript:void(0);" class="highlight-orange">材料到齐/已齐</a></td>
+                                  <td>美国个人旅游签证</td>
+                                  <td>B1/B2</td>
+                                  <td>需要面试</td>
+                                  <td>未支付</td>
+								  <td>途牛</td>
+                                  <td>张小黑</td>
+                                  <td>2013-10-29</td>
+                                  <td>2014-05-26</td>
+                                  <td>正常</td>
+                              </tr>
+                              <tr>
+                                  <td class="tdCenter">
+								  <a href="javascript:void(0);">受理</a><a href="javascript:void(0);">详情</a>
+								  </td>
+                                  <td>李晓明</td>
+                                  <td><a href="javascript:void(0);" class="highlight-orange">材料到齐/已齐</a></td>
+                                  <td>美国个人旅游签证</td>
+                                  <td>B1/B2</td>
+                                  <td>需要面试</td>
+                                  <td>未支付</td>
+								  <td>途牛</td>
+                                  <td>张小黑</td>
+                                  <td>2013-10-29</td>
+                                  <td>2014-05-26</td>
+                                  <td>正常</td>
+                              </tr>
+                              <tr>
+                                  <td class="tdCenter">
+								  <a href="javascript:void(0);">受理</a><a href="javascript:void(0);">详情</a>
+								  </td>
+                                  <td>李晓明</td>
+                                  <td><a href="javascript:void(0);" class="highlight-orange">材料到齐/已齐</a></td>
+                                  <td>美国个人旅游签证</td>
+                                  <td>B1/B2</td>
+                                  <td>需要面试</td>
+                                  <td>未支付</td>
+								  <td>途牛</td>
+                                  <td>张小黑</td>
+                                  <td>2013-10-29</td>
+                                  <td>2014-05-26</td>
+                                  <td>正常</td>
+                              </tr>
+                              <tr>
+                                  <td class="tdCenter">
+								  <a href="javascript:void(0);">受理</a><a href="javascript:void(0);">详情</a>
+								  </td>
+                                  <td>李晓明</td>
+                                  <td><a href="javascript:void(0);" class="highlight-orange">材料到齐/已齐</a></td>
+                                  <td>美国个人旅游签证</td>
+                                  <td>B1/B2</td>
+                                  <td>需要面试</td>
+                                  <td>未支付</td>
+								  <td>途牛</td>
+                                  <td>张小黑</td>
+                                  <td>2013-10-29</td>
+                                  <td>2014-05-26</td>
+                                  <td>正常</td>
+                              </tr>
+                      </tbody>
+                  </table>
+              </div>
+          
+              <div class="grid-table-pagination page">
+                  <span class="grid-table-count">
+                      共 <em>132</em> 条记录
+                  </span>
+                  <span>
+                      <a href="#" class="prev">&nbsp;</a>
+                  </span>
+                  <span class="links">
+                      <a href="#">1</a>
+                      <a href="#">2</a>
+                      <a href="#" class="current">3</a>
+                      <a href="#">4</a>
+                      <a href="#">5</a>
+                      <a href="javascript:;">...</a>
+                      <a href="#">50</a>
+                  </span>
+                  <span>
+                      <a href="#" class="next">&nbsp;</a>
+                  </span>
+              </div>
+              
+            </div>
+          </div>
+ 
+    <!-- end of content -->
+    </div>
+    
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function(){
+            kendo.init($("body"));
+        })
+    </script>
+</body>
+</html>

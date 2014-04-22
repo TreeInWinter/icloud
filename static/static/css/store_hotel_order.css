@@ -1,0 +1,198 @@
+body{
+    color:#3F3F3F;
+}
+.panel{
+    border:1px solid #E4E4E4;
+    margin-bottom: 10px;
+	background:#fff;
+}
+.order{
+    border:2px solid #F3D1B6
+}
+.orderInfo{
+    padding:20px 20px 5px;
+    position: relative;
+}
+.orderInfo div{
+    margin-bottom: 10px;
+}
+.orderNo{
+    font-size: 22px;
+    color:#3F3F3F;
+    font-weight: bold;
+}
+.orderState_confirmed{
+    color:#F1634B;
+    font-size: 18px;
+    font-weight: bold;
+}
+.orderTrackInfo{
+    background: #FFF7F1;
+    border-top: 1px solid #F6DBC5;
+    padding:20px 10px;
+    position: relative;
+}
+.orderTrackInfo td,.orderTrackInfo th{
+    height: 25px;
+    padding-left: 10px;
+}
+.orderTrackInfo tbody td{
+    color:#636363;
+}
+th{
+    font-weight: bold;
+}
+.linkA{
+    color:#CF6B00;
+    text-decoration:none;
+}
+.orderTrackInfo_upwardArrow{
+    position: absolute;
+    background: url("../images/store/upward_hotel_orderTrackInfo.gif") no-repeat;
+    height: 7px;
+    width: 9px;
+    top:-6px;
+    left:80px;
+}
+.associatedOrderContainer{
+    position: absolute;
+    top:20px;
+    right:15px;
+    z-index: 801;
+    padding-right: 8px;
+    background: url("../images/store/downward_solid_gray.png") right center no-repeat;
+    cursor: pointer;
+}
+.associatedOrderContainer.expand{
+    background:url("../images/store/upward_solid_gray.png") right center no-repeat;
+}
+.associatedOrderNo{
+    color:#F1634B
+}
+.subPanel{
+    padding:20px;
+    border-bottom: 1px solid #E4E4E4;
+}
+.subPanel_title{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.subPanel table{
+    width: 100%;
+}
+.subPanel th{
+    height: 40px;
+    line-height: 40px;
+    background: #F3F3F3;
+    padding-left: 10px;
+}
+.subPanel td{
+    padding: 5px 0 5px 10px;
+}
+.subPanel td p{
+    margin: 8px 0;
+}
+.bookingNote{
+    border-top:1px dashed #E4E4E4;
+    padding:10px;
+    color: #636363;
+}
+.priceDetailContainer ul{
+    float:left;
+    width:116px;
+    margin-bottom: 10px;
+}
+.priceDetailContainer li{
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+}
+li.priceDetail_head{
+    background-color: #F3F3F3;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+}
+.holiday{
+    color: #FF6500;
+}
+.priceDetail_price{
+    color:#FF6500;
+    font-weight: bold;
+    font-family: arial;
+}
+.priceDetail_totalContainer{
+    border-top: 1px dashed #E4E4E4;
+    padding:10px;
+    font-size: 14px;
+    clear: both;
+}
+.priceDetail_totalContainer p{
+    margin-bottom: 10px;
+}
+.talignR{
+    text-align: right;
+}
+.accountInfo{
+    background: rgba(255,225,203,0.8);
+    background: rgb(255,225,203)\9;
+    height: 70px;
+    line-height: 70px;
+    padding:0 20px;
+    width:940px;
+}
+.accountInfo .priceDetail_price{
+    font-size: 16px;
+}
+.accountInfo em{
+    font-size: 16px;
+}
+.accountInfo strong{
+    font-size: 20px;
+}
+.orderTrackInfo_current{
+    background: url("../images/store/rightarrows_solid_orange.png") left center no-repeat;
+}
+.checkout{
+    border:1px solid #DADADA;
+    background-color: #F3F3F3;
+}
+.checkout .priceDetail_head{
+    background: url("../images/store/tuifang.png") 0 0 no-repeat #F3F3F3;
+}
+.originalOrderInfo,.originalPriceDetail{
+    background:#F7F7F7;
+    border:1px dashed #E4E4E4;
+    display: none;
+}
+.originalOrderInfo th,.originalPriceDetail .priceDetail_head{
+    background: #EBEBEB;
+}
+/*关联订单*/
+.reOrder{ border:1px solid #e1e1e1; padding:12px 12px 0; width:375px; color:#404040; position:absolute; top:278px; left:560px; background:#ffffff;}
+.reTi{ padding-bottom:10px; border-bottom:1px dashed #e1e1e1;}
+.reNO{ float:left;}
+.reNO b{ font-size:14px;}
+.reNO strong{ font-size:13px; font-weight:bold;}
+.re_order{ float:right;}
+.re_order em{ display:inline-block; width:9px; height:5px; background:url(../images/store/up_down.png) no-repeat 0 0; vertical-align:middle;}
+.re_order i{ color:#f1634c;}
+.rawOrd{ padding:7px 10px; border-bottom:1px dashed #e1e1e1;}
+.rawNum{ float:left; font-size:14px;}
+.ordNum{ float:right; font-size:14px; color:#ff6500; font-weight:bold;}
+.orderSta{ margin-top:10px;}
+.orderSta li{padding:0 0 20px 12px; position:relative;}
+.sta{ color:#f1634c; margin-left:20px;}
+.staList{padding:10px; margin-top:7px;border:1px solid #E1E1E1}
+.staList td{ line-height:20px;padding:1px 0;}
+.staList a,.rawNum a{ color:#cf6b00;}
+.staList a:hover,.rawNum a:hover{ color:#f1634c;}
+.weight{ font-size:14px; font-weight:bold; color:#ff6500;text-align: right}
+.signOrd{ display:block; width:7px; height:100%; background:url(../images/store/smallsign.png) no-repeat left top; position:absolute; left:0; top:5px; z-index:1;}
+.signOrd em{ border-left:1px solid #e1e1e1; position:absolute; left:3px; top:7px; width:1px; height:100%; display:block; z-index:0;}
+.currentSta{ border:1px solid #f1634c;}
+.currentSta:hover{ background:#f0f0f0;}
+.associatedOrder_operator{text-align: right}
+.associatedOrder_type{font-size: 14px}
+/*关联订单*/

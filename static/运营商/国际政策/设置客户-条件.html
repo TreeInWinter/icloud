@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>政策 国际政策 设置客户 条件</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.gray.css" />
+    <link rel="stylesheet" href="../../static/css/global.css" />
+    <link rel="stylesheet" href="../../static/css/common.css" />
+    <link rel="stylesheet" href="../../static/css/b2b.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.reset.css">
+    <link rel="stylesheet" href="../../static/css/finance.css">
+    <script type="text/javascript" src="../../static/js/vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/plugins/jquery.fixedBar.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/flight.js"></script>
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/css/ie.css" />
+    <script type="text/javascript" src="/js/vendor/IE7.min.js"></script>
+    <![endif]-->
+    <style>
+        .block1 label {display:inline-block;width:65px;margin-right:5px;}
+    </style>
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body>
+<div id="container" style="margin:0 auto">
+    <div class="actions block">
+        <div class="col col-l sep-r">
+            <button class="btns btn-return">返回</button>
+        </div>
+        <span style="font-size:14px;color:#686868;font-weight:bold;padding-left:20px">设置客户</span>
+        <div class="col col-r sep-l fixedButton">
+            <a href="javascript:;" class="button_secondary adaptiveButton small" style="margin-top:3px">
+                <span class="left"></span>
+                <span class="center">取消</span>
+                <span class="right"></span>
+            </a>
+            <a href="javascript:;" class="button_important adaptiveButton small" style="margin-top:3px">
+                <span class="left"></span>
+                <span class="center">保存</span>
+                <span class="right"></span>
+            </a>
+        </div>
+    </div>
+    <div class="block block1 block-module" style="padding:10px;position:relative">
+        <div style="margin-bottom:10px">
+            <label><input type="checkbox" name="" id=""> 客户类型</label>
+            <input data-role="dropdownlist" data-value-field="value" data-text-field="text" data-source="[{'value':'包含','text':'包含'}]">
+            <input type="text" name="" id="" style="vertical-align: bottom">
+        </div>
+        <div style="margin-bottom:10px">
+            <label><input type="checkbox" name="" id=""> 结算方式</label>
+            <input data-role="dropdownlist" data-value-field="value" data-text-field="text" data-source="[{'value':'包含','text':'包含'}]">
+            <input data-role="dropdownlist" style="width: 129px" data-value-field="value" data-text-field="text" data-source="[{'value':'支付宝','text':'支付宝'}]">
+        </div>
+        <div style="margin-bottom:10px">
+            <label><input type="checkbox" name="" id=""> 客户组</label>
+            <input data-role="dropdownlist" data-value-field="value" data-text-field="text" data-source="[{'value':'包含','text':'包含'}]">
+            <input type="text" name="" id="" style="vertical-align: bottom">
+        </div>
+        <div style="position:absolute;top:50%;right:20px;margin-top:-15px">
+            <button class="btns btn-orange-s">预览</button>
+        </div>
+    </div>
+    <div class="block block2">
+        <div class="block-header">
+            <span style="font-weight:bold">关联客户：</span><span style="color:#0066cc">122</span>个
+        </div>
+        <table class="tgrid" style="width:100%;" cellpadding="0" cellspacing="0">
+                  <thead>
+                      <tr>
+                          <th>客户名称</th>
+                          <th>创建时间</th>
+                          <th>可用余额</th>
+                          <th>联系人</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>苏宁</td>
+                          <td>2010/09/01</td>
+                          <td>23，000.00</td>
+                          <td>李晓明</td>
+                      </tr>
+                      <tr class="hui_bg">
+                          <td>苏宁</td>
+                          <td>2010/09/01</td>
+                          <td>23，000.00</td>
+                          <td>李晓明</td>
+                      </tr>
+                      <tr>
+                          <td>苏宁</td>
+                          <td>2010/09/01</td>
+                          <td>23，000.00</td>
+                          <td>李晓明</td>
+                      </tr>
+                      <tr class="hui_bg">
+                          <td>苏宁</td>
+                          <td>2010/09/01</td>
+                          <td>23，000.00</td>
+                          <td>李晓明</td>
+                      </tr>
+                      <tr>
+                          <td>苏宁</td>
+                          <td>2010/09/01</td>
+                          <td>23，000.00</td>
+                          <td>李晓明</td>
+                      </tr>
+                      <tr class="hui_bg">
+                          <td>苏宁</td>
+                          <td>2010/09/01</td>
+                          <td>23，000.00</td>
+                          <td>李晓明</td>
+                      </tr>
+                      <tr>
+                          <td>苏宁</td>
+                          <td>2010/09/01</td>
+                          <td>23，000.00</td>
+                          <td>李晓明</td>
+                      </tr>
+                      <tr class="hui_bg">
+                          <td>苏宁</td>
+                          <td>2010/09/01</td>
+                          <td>23，000.00</td>
+                          <td>李晓明</td>
+                      </tr>
+              </tbody>
+          </table>
+
+              <div class="grid-table-pagination page">
+                  <span class="grid-table-count">
+                      共 <em>132</em> 条记录
+                  </span>
+                  <span>
+                      <a href="#" class="prev">&nbsp;</a>
+                  </span>
+                  <span class="links">
+                      <a href="#">1</a>
+                      <a href="#">2</a>
+                      <a href="#" class="current">3</a>
+                      <a href="#">4</a>
+                      <a href="#">5</a>
+                      <a href="javascript:;">...</a>
+                      <a href="#">50</a>
+                  </span>
+                  <span>
+                      <a href="#" class="next">&nbsp;</a>
+                  </span>
+              </div>
+              
+    </div>
+    <script type="text/javascript">
+    $(function () {
+        new GridTable('.block2 .grid-table', {
+            dataSource:[
+                {
+                    c1:"苏宁",
+                    c2:"2013-12-12",
+                    c3:"11,321,321.00",
+                    c4:"张三"
+                },
+                {
+                    c1:"苏宁",
+                    c2:"2013-12-12",
+                    c3:"11,321,321.00",
+                    c4:"张三"
+                }
+            ],
+            rowTemplate:kendo.template($("#block2-grid-row-template").html())
+        }).init();
+    });
+</script>
+    <script type="text/x-kendo-template" id="block2-grid-row-template">
+        <tr>
+            <td>#= data.c1 #</td>
+            <td>#= data.c2 #</td>
+            <td>#= data.c3 #</td>
+            <td>#= data.c4 #</td>
+        </tr>
+    </script>
+</div>
+<script type="text/javascript">
+    $(function(){
+        kendo.init($("body"));
+    })
+</script>
+</body>
+</html>

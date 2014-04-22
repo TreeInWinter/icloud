@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>国内机票 白屏预订 往返2</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+<link rel="stylesheet" href="/static/css/kendo.common.min.css" />
+<link rel="stylesheet" href="/static/css/kendo.gray.css" />
+<link rel="stylesheet" href="/static/css/kendo.reset.css" />
+<link rel="stylesheet" href="/static/css/common.css" />
+<link rel="stylesheet" href="/static/css/b2b.css" />
+<link rel="stylesheet" href="/static/css/flight_logo.css" />
+<link rel="stylesheet" href="/static/css/search_flight.css" />
+
+<script type="text/javascript" src="/static/js/vendor/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/plugins/jquery.fixedBar.js"></script>
+<script type="text/javascript" src="/static/js/kendo.web.js"></script>
+<script type="text/javascript" src="/static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+<script type="text/javascript" src="/static/js/global.js"></script>
+<script type="text/javascript" src="/static/js/search_flight.js"></script>
+<!--[if lt IE 8]>
+    <link rel="stylesheet" href="/static/css/ie.css" />
+    <script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head><body>  <div id="extHeader">
+    <div></div>
+</div>
+
+<div id="container">
+    <div class="header">
+        <h1></h1>
+        <div>
+            <span>你好,${name}</span>
+            <a href="javascript:void(0);">退出</a>
+        </div>
+        <ul id="top_menu">
+            <li><a href="javascript:void(0);">国内机票</a></li>
+            <li><a href="javascript:void(0);">国际机票</a></li>
+            <li><a href="javascript:void(0);">酒店</a></li>
+            <li><a href="javascript:void(0);">票证中心</a></li>
+            <li><a href="javascript:void(0);">财务管理</a></li>
+            <li><a href="javascript:void(0);">客户管理</a></li>
+            <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+        </ul>
+        <ol class="sub_menu">
+            <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+            <li><a href="javascript:void(0);">公司信息</a></li>
+            <li><a href="javascript:void(0);">组织架构</a></li>
+            <li><a href="javascript:void(0);">角色维护</a></li>
+            <li><a href="javascript:void(0);">基础数据</a></li>
+        </ol>
+        <div id="message">
+            <a href="javascript:void(0);">消息</a>
+            <span>New</span>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="sub_menu_bar"></div>
+    <div id="mainContent">
+        <div class="actions block">
+    <div class="col col-l">
+        <span class="page-title">
+            白屏创建订单
+        </span>
+    </div>
+    <div class="col col-r sep-l">
+        <button class="btns btn-blue">黑屏预定</button>
+    </div>
+</div>
+
+<div class="block block1 clearfix">
+    <div class="col col-l">
+        <ul class="flat-list">
+            <li style="width:60px;">
+            <div class="row">
+                <label>
+                    <input type="radio" class="radio radio_is_single is_single" value="1" name="IS_SINGLE" />
+                    单程
+                </label>
+            </div>
+            <div class="row">
+                <label>
+                    <input type="radio" class="radio radio_is_single is_double" value="2" checked name="IS_SINGLE" />
+                    往返
+                </label>
+            </div>
+            </li>
+            <li style="width:250px;">
+            <div class="row">
+                <label class="vertical-head">出发城市</label>
+                <input type="text" id="id_startCity" style="width:180px" class="text suggest depcity suggest-city" value="" name="" />
+                <input name="" id="id_dep" type="hidden" />
+            </div>
+            <div class="row">
+                <label class="vertical-head">到达城市</label>
+                <input type="text" id="id_endCity" style="width:180px;" class="text suggest depcity suggest-city" value="" name="" />
+                <input name="" id="id_arr" type="hidden" />
+            </div>
+            </li>
+            <li style="width:220px;">
+            <div class="row">
+                <label class="vertical-head">出发日期</label>
+                <input type="text" id="depd" data-role="datepicker" class="text depdate " value="" name="" />
+            </div>
+            <div class="row">
+                <label class="vertical-head">返程日期</label>
+                <input type="text" id="arrd" class="text arrdate " value="" data-role="datepicker" name="" />
+            </div>
+            </li>
+            <li style="width:280px;">
+            <div class="row">
+                <label class="vertical-head">起飞时间</label>
+                <input type="text" class="text timepicker" style="width:90px" id="time" value="0:00" name="" />
+                到
+                <input type="text" class="text timepicker" style="width:90px" value="24:00" name="" />
+            </div>
+            <div class="row">
+                <label class="vertical-head">航空公司</label>
+                <!-- <input type="text" class="sel_airlines" /> -->
+                <select style="width:197px;" id="sel_airlines" class="sel_airlines">
+                    <option selected="selected" value="">全部</option>
+                    <option value="3u">3U （川航）</option>
+                    <option value="8L">8L （祥鹏）</option>
+                    <option value="BK">BK （奥凯）</option>
+                    <option value="CA">CA （国航）</option>
+                    <option value="CN">CN （大新华）</option>
+                    <option value="CZ">CZ （南航）</option>
+                    <option value="EU">EU （成都）</option>
+                    <option value="FM">FM （上航）</option>
+                    <option value="G5">G5 （华夏）</option>
+                    <option value="GS">GS （天津）</option>
+                    <option value="HO">HO （吉祥）</option>
+                    <option value="HU">HU （海航）</option>
+                    <option value="JD">JD （首都）</option>
+                    <option value="JR">JR （幸福）</option>
+                    <option value="KN">KN （中联）</option>
+                    <option value="KY">KY （昆明）</option>
+                    <option value="MF">MF （厦航）</option>
+                    <option value="MU">MU （东航）</option>
+                    <option value="NS">NS （河北）</option>
+                    <option value="OZ">OZ （韩亚华空）</option>
+                    <option value="PN">PN （西部）</option>
+                    <option value="SC">SC （山航）</option>
+                    <option value="TV">TV （西藏）</option>
+                    <option value="VD">VD （河南）</option>
+                    <option value="ZH">ZH （深航）</option>
+                </select>
+                <!-- <input type="text" class="text airlines" value="" name="" /> -->
+                <!-- <input type="hidden" class="text airlines_hidden" value="" name="" /> -->
+            </div>
+            </li>
+            <li style="width:60px;"></li>
+
+                    <li>
+                    <label class="vertical-head">客户名称</label>
+                    <input style="width:80px" type="text">
+                    <button class="btns btn-search ac-search-customer">查询</button>
+                    </li>
+
+        </ul>
+    </div>
+    <div class="col col-r" style="padding-top:10px;">
+        <button class="btns btn-orange-s">查询</button>
+    </div>
+</div>
+
+<div class="block block3">
+    <h3>
+        已选择的去程航班
+    </h3>
+    <div class="row">
+        <ul class="flat-list">
+            <li>
+            <span>
+                <strong>上海</strong> 
+                <b>&#10141;</b>
+                <strong>北京</strong>
+            </span>
+            <span>
+                <strong>2013-09-12</strong> 
+            </span> 
+            </li> 
+            <li>
+            <span>东方航空</span> 
+            <span>MU414</span>
+            </li>
+            <li>
+            <span>大型机</span> 
+            <span>232</span>
+            </li>
+            <li>
+            <span>起飞：07：00</span>
+            <span>到达：09：20</span>
+            </li>
+            <li>
+            <span>虹桥机场 T2</span> 
+            <span>首都机场 T3</span>
+            </li>
+            <li>
+            <span>Y 经济舱[100]</span> 
+            </li>
+            <li>
+            <span class="price">
+                ￥799 
+            </span> 
+            </li>
+            <li>
+            <a href="#" class="ac-change-dep">修改去程航班</a> 
+            </li>
+        </ul> 
+    </div>
+</div>
+
+<div class="block block2" style="padding-bottom:25px;">
+    <div class="row row1 clearfix">
+        <ul class="flat-list">
+            <li>
+            <a href="#">
+                <span class="date">07-08<b>周日</b></span>
+                <span class="price">&#165;799</span>
+            </a>
+            </li>
+            <li>
+            <a href="#">
+                <span class="date">07-08<b>周日</b></span>
+                <span class="price">&#165;799</span>
+            </a>
+            </li>
+            <li>
+            <a href="#">
+                <span class="date">07-08<b>周日</b></span>
+                <span class="price">&#165;799</span>
+            </a>
+            </li>
+            <li class="current">
+            <a href="#">
+                <span class="date">07-08<b>周日</b></span>
+                <span class="price">&#165;799</span>
+            </a>
+            </li>
+            <li>
+            <a href="#">
+                <span class="date">07-08<b>周日</b></span>
+                <span class="price">&#165;799</span>
+            </a>
+            </li>
+            <li>
+            <a href="#">
+                <span class="date">07-08<b>周日</b></span>
+                <span class="price">&#165;799</span>
+            </a>
+            </li>
+            <li>
+            <a href="#">
+                <span class="date">07-08<b>周日</b></span>
+                <span class="price">&#165;799</span>
+            </a>
+            </li>
+        </ul>
+    </div>
+    <div class="row row2">
+        <p>
+        <span>
+            <strong>上海</strong> 
+            <b>&#10141;</b>
+            <strong>北京</strong>
+        </span>
+        <span style="margin-right:10px;color:#0065CB;">
+            （去程）
+        </span>
+        <span style="margin-right:30px;">出发日期：2013-09-12</span>
+        <span>当前共有<b>40</b>条航班记录，最低价 <b class="price">￥809</b></span>
+        </p> 
+        <ul class="flat-list">
+            <li><strong>航空公司</strong></li>
+            <li>
+            <label class="btn-ac-blue"><input class="checkall" type="checkbox"> 全部</label> 
+            </li>
+            <li>
+            <label><input type="checkbox"> 东方航空</label> 
+            </li>
+            <li>
+            <label><input type="checkbox"> 海南航空</label> 
+            </li>
+            <li>
+            <label><input type="checkbox"> 吉祥航空</label> 
+            </li>
+        </ul>
+        <ul class="flat-list">
+            <li><strong>舱位</strong></li>
+            <li>
+            <label class="btn-ac-blue"><input class="checkall" type="checkbox"> 全部</label> 
+            </li>
+            <li>
+            <label><input type="checkbox"> 经济舱</label> 
+            </li>
+            <li>
+            <label><input type="checkbox"> 商务舱</label> 
+            </li>
+            <li>
+            <label><input type="checkbox"> 头等舱</label> 
+            </li>
+        </ul>
+        <ul class="flat-list">
+            <li><strong>舱位代码</strong></li>
+            <li>
+            <label class="btn-ac-blue"><input class="checkall" type="checkbox"> 全部</label> 
+            </li>
+            <li>
+            <label><input type="checkbox"> Y</label> 
+            </li>
+            <li>
+            <label><input type="checkbox"> Z</label> 
+            </li>
+            <li>
+            <label><input type="checkbox"> R</label> 
+            </li>
+        </ul>
+    </div>
+    <div class="row row3">
+        <div class="caption">
+            温馨提示：结算价以订座成功PAT数据支付页面为准（注：结算价均不含机建费，燃油费和保险费）
+        </div>
+        <div class="gn-result-head">
+            <table>
+            <colgroup>
+              <col width="100">
+              <col width="50">
+              <col width="80">
+              <col width="100">
+              <col width="40">
+              <col width="70">
+              <col width="70">
+              <col width="50">
+              <col width="40">
+              <col width="50">
+              <col width="60">
+              <col width="70">
+              <col width="65">
+              <col width="93">
+            </colgroup>
+            <tr>
+                <th>航班号</th>
+                <th>机型</th>
+                <th>起降时间 <i class="icon9"></i> </th>
+                <th>起降机场</th>
+                <th>经停</th>
+                <th>机建/燃油</th>
+                <th>舱位等级</th>
+                <th>舱位</th>
+                <th>座位</th>
+                <th>退改签</th>
+                <th>票面价<i class="icon9"></i> </th>
+                <th>返点<i class="icon9"></i> </th>
+                <th>结算价<i class="icon9"></i> </th>
+                <th></th>
+            </tr>
+            </table>
+        
+        </div>
+        <div class="gn-result-row">
+        <table class="grid-table">
+            <colgroup>
+              <col width="100">
+              <col width="50">
+              <col width="80">
+              <col width="100">
+              <col width="40">
+              <col width="70">
+              <col width="70">
+              <col width="50">
+              <col width="40">
+              <col width="50">
+              <col width="60">
+              <col width="70">
+              <col width="65">
+              <col width="93">
+            </colgroup>
+            <tr class="gn-type-row0">
+                <td>
+                    <span class="pubFlights_cx fico">&nbsp;</span>
+                    <span class="fname">
+                        <u class="flight-name">东方航空</u>
+                        <u class="flight-num">MU1231</u>
+                    </span>
+                </td>
+                <td>
+                    <span class="sjx">
+                        大型机<u class="jx">333</u>
+                    </span>
+                </td>
+                <td>
+                    <span class="deptime">07:00</span><br>
+                    <span class="arrtime">09:20</span>
+                </td>
+                <td>
+                    <span class="depcity">虹桥机场(t2)</span><br>
+                    <span class="arrcity">首都机场(t2)</span>
+                </td>
+                <td>
+                    否
+                </td>
+                <td>50/130</td>
+                <td>
+                    经济舱
+                </td>
+                <td>
+                    Y [100]
+                </td>
+                <td>
+                    >9
+                </td>
+                <td>
+                    <u class="tgq">退改签</u>
+                </td>
+                <td>
+                    <span class="price">￥123</span> 
+                </td>
+                <td>
+                    <span class="price">
+                        6.0%
+                    </span>
+                    <span class="price">
+                        ￥51
+                    </span>
+                </td>
+                <td>
+                    <span class="price highlight">
+                        ￥799 </span>
+                </td>
+                <td>
+                    <a href="#" class="btns btn-order">预 定</a>
+                    <a class="more" href="javascript:;">更多舱位</a>
+                </td>
+            </tr>
+            <tr class="gn-type-row gn-type-row1">
+                <td colspan="6"></td>
+                <td>
+                   商务舱 
+                </td>
+                <td>
+                    Y [100]
+                </td>
+                <td>
+                    >9
+                </td>
+                <td>
+                    <u class="tgq">退改签</u>
+                </td>
+                <td>
+                    <span class="price">￥123</span> 
+                </td>
+                <td>
+                    <span class="price">
+                        6.0%
+                    </span>
+                    <span class="price">
+                        ￥51
+                    </span>
+                </td>
+                <td>
+                    <span class="price highlight">
+                        ￥799 </span>
+                </td>
+                <td>
+                    <a href="#" class="btns btn-order">预 定</a>
+                </td>
+            </tr>
+            <tr class="gn-type-row gn-type-row2">
+                <td colspan="6"></td>
+                <td>
+                   头等舱 
+                </td>
+                <td>
+                    Y [100]
+                </td>
+                <td>
+                    >9
+                </td>
+                <td>
+                    <u class="tgq">退改签</u>
+                </td>
+                <td>
+                    <span class="price">￥123</span> 
+                </td>
+                <td>
+                    <span class="price">
+                        6.0%
+                    </span>
+                    <span class="price">
+                        ￥51
+                    </span>
+                </td>
+                <td>
+                    <span class="price highlight">
+                        ￥799 </span>
+                </td>
+                <td>
+                    <a href="#" class="btns btn-order">预 定</a>
+                </td>
+            </tr>
+        </table>
+        <table class="grid-table gn-detail-table">
+            <colgroup>
+              <col width="100">
+              <col width="50">
+              <col width="80">
+              <col width="100">
+              <col width="40">
+              <col width="70">
+              <col width="70">
+              <col width="50">
+              <col width="40">
+              <col width="50">
+              <col width="60">
+              <col width="70">
+              <col width="65">
+              <col width="93">
+            </colgroup>
+            <tr >
+                <td colspan="6"></td>
+                <td>
+                    经济舱
+                </td>
+                <td>
+                    Y [100]
+                </td>
+                <td>
+                    >9
+                </td>
+                <td>
+                    <u class="tgq">退改签</u>
+                </td>
+                <td>
+                    <span class="price">￥123</span> 
+                </td>
+                <td>
+                    <span class="price">
+                        6.0%
+                    </span>
+                    <span class="price">
+                        ￥51
+                    </span>
+                </td>
+                <td>
+                    <span class="price highlight">
+                        ￥799 </span>
+                </td>
+                <td>
+                    <a href="#" class="btns btn-order">预 定</a>
+                </td>
+            </tr>
+            <tr >
+                <td colspan="6"></td>
+                <td>
+                    经济舱
+                </td>
+                <td>
+                    Y [100]
+                </td>
+                <td>
+                    >9
+                </td>
+                <td>
+                    <u class="tgq">退改签</u>
+                </td>
+                <td>
+                    <span class="price">￥123</span> 
+                </td>
+                <td>
+                    <span class="price">
+                        6.0%
+                    </span>
+                    <span class="price">
+                        ￥51
+                    </span>
+                </td>
+                <td>
+                    <span class="price highlight">
+                        ￥799 </span>
+                </td>
+                <td>
+                    <a href="#" class="btns btn-order">预 定</a>
+                </td>
+            </tr>
+            <tr >
+                <td colspan="6"></td>
+                <td>
+                    经济舱
+                </td>
+                <td>
+                    Y [100]
+                </td>
+                <td>
+                    >9
+                </td>
+                <td>
+                    <u class="tgq">退改签</u>
+                </td>
+                <td>
+                    <span class="price">￥123</span> 
+                </td>
+                <td>
+                    <span class="price">
+                        6.0%
+                    </span>
+                    <span class="price">
+                        ￥51
+                    </span>
+                </td>
+                <td>
+                    <span class="price highlight">
+                        ￥799 </span>
+                </td>
+                <td>
+                    <a href="#" class="btns btn-order">预 定</a>
+                </td>
+            </tr>
+            <tr >
+                <td colspan="6"></td>
+                <td>
+                    经济舱
+                </td>
+                <td>
+                    Y [100]
+                </td>
+                <td>
+                    >9
+                </td>
+                <td>
+                    <u class="tgq">退改签</u>
+                </td>
+                <td>
+                    <span class="price">￥123</span> 
+                </td>
+                <td>
+                    <span class="price">
+                        6.0%
+                    </span>
+                    <span class="price">
+                        ￥51
+                    </span>
+                </td>
+                <td>
+                    <span class="price highlight">
+                        ￥799 </span>
+                </td>
+                <td>
+                    <a href="#" class="btns btn-order">预 定</a>
+                </td>
+            </tr>
+        </table>
+        </div>
+        <div class="gn-result-row">
+        <table class="grid-table">
+            <colgroup>
+              <col width="100">
+              <col width="50">
+              <col width="80">
+              <col width="100">
+              <col width="40">
+              <col width="70">
+              <col width="70">
+              <col width="50">
+              <col width="40">
+              <col width="50">
+              <col width="60">
+              <col width="70">
+              <col width="65">
+              <col width="93">
+            </colgroup>
+            <tr class="gn-type-row0">
+                <td>
+                    <span class="pubFlights_cx fico">&nbsp;</span>
+                    <span class="fname">
+                        <u class="flight-name">东方航空</u>
+                        <u class="flight-num">MU1231</u>
+                    </span>
+                </td>
+                <td>
+                    <span class="sjx">
+                        大型机<u class="jx">333</u>
+                    </span>
+                </td>
+                <td>
+                    <span class="deptime">07:00</span><br>
+                    <span class="arrtime">09:20</span>
+                </td>
+                <td>
+                    <span class="depcity">虹桥机场(t2)</span><br>
+                    <span class="arrcity">首都机场(t2)</span>
+                </td>
+                <td>
+                    否
+                </td>
+                <td>50/130</td>
+                <td>
+                    经济舱
+                </td>
+                <td>
+                    Y [100]
+                </td>
+                <td>
+                    >9
+                </td>
+                <td>
+                    <u class="tgq">退改签</u>
+                </td>
+                <td>
+                    <span class="price">￥123</span> 
+                </td>
+                <td>
+                    <span class="price">
+                        6.0%
+                    </span>
+                    <span class="price">
+                        ￥51
+                    </span>
+                </td>
+                <td>
+                    <span class="price highlight">
+                        ￥799 </span>
+                </td>
+                <td>
+                    <a href="#" class="btns btn-order">预 定</a>
+                    <a class="more" href="javascript:;">更多舱位</a>
+                </td>
+            </tr>
+            <tr class="gn-type-row gn-type-row1">
+                <td colspan="6"></td>
+                <td>
+                   商务舱 
+                </td>
+                <td>
+                    Y [100]
+                </td>
+                <td>
+                    >9
+                </td>
+                <td>
+                    <u class="tgq">退改签</u>
+                </td>
+                <td>
+                    <span class="price">￥123</span> 
+                </td>
+                <td>
+                    <span class="price">
+                        6.0%
+                    </span>
+                    <span class="price">
+                        ￥51
+                    </span>
+                </td>
+                <td>
+                    <span class="price highlight">
+                        ￥799 </span>
+                </td>
+                <td>
+                    <a href="#" class="btns btn-order">预 定</a>
+                </td>
+            </tr>
+            <tr class="gn-type-row gn-type-row2">
+                <td colspan="6"></td>
+                <td>
+                   头等舱 
+                </td>
+                <td>
+                    Y [100]
+                </td>
+                <td>
+                    >9
+                </td>
+                <td>
+                    <u class="tgq">退改签</u>
+                </td>
+                <td>
+                    <span class="price">￥123</span> 
+                </td>
+                <td>
+                    <span class="price">
+                        6.0%
+                    </span>
+                    <span class="price">
+                        ￥51
+                    </span>
+                </td>
+                <td>
+                    <span class="price highlight">
+                        ￥799 </span>
+                </td>
+                <td>
+                    <a href="#" class="btns btn-order">预 定</a>
+                </td>
+            </tr>
+        </table>
+        <table class="grid-table gn-detail-table">
+            <colgroup>
+              <col width="100">
+              <col width="50">
+              <col width="80">
+              <col width="100">
+              <col width="40">
+              <col width="70">
+              <col width="70">
+              <col width="50">
+              <col width="40">
+              <col width="50">
+              <col width="60">
+              <col width="70">
+              <col width="65">
+              <col width="93">
+            </colgroup>
+            <tr >
+                <td colspan="6"></td>
+                <td>
+                    经济舱
+                </td>
+                <td>
+                    Y [100]
+                </td>
+                <td>
+                    >9
+                </td>
+                <td>
+                    <u class="tgq">退改签</u>
+                </td>
+                <td>
+                    <span class="price">￥123</span> 
+                </td>
+                <td>
+                    <span class="price">
+                        6.0%
+                    </span>
+                    <span class="price">
+                        ￥51
+                    </span>
+                </td>
+                <td>
+                    <span class="price highlight">
+                        ￥799 </span>
+                </td>
+                <td>
+                    <a href="#" class="btns btn-order">预 定</a>
+                </td>
+            </tr>
+            <tr >
+                <td colspan="6"></td>
+                <td>
+                    经济舱
+                </td>
+                <td>
+                    Y [100]
+                </td>
+                <td>
+                    >9
+                </td>
+                <td>
+                    <u class="tgq">退改签</u>
+                </td>
+                <td>
+                    <span class="price">￥123</span> 
+                </td>
+                <td>
+                    <span class="price">
+                        6.0%
+                    </span>
+                    <span class="price">
+                        ￥51
+                    </span>
+                </td>
+                <td>
+                    <span class="price highlight">
+                        ￥799 </span>
+                </td>
+                <td>
+                    <a href="#" class="btns btn-order">预 定</a>
+                </td>
+            </tr>
+            <tr >
+                <td colspan="6"></td>
+                <td>
+                    经济舱
+                </td>
+                <td>
+                    Y [100]
+                </td>
+                <td>
+                    >9
+                </td>
+                <td>
+                    <u class="tgq">退改签</u>
+                </td>
+                <td>
+                    <span class="price">￥123</span> 
+                </td>
+                <td>
+                    <span class="price">
+                        6.0%
+                    </span>
+                    <span class="price">
+                        ￥51
+                    </span>
+                </td>
+                <td>
+                    <span class="price highlight">
+                        ￥799 </span>
+                </td>
+                <td>
+                    <a href="#" class="btns btn-order">预 定</a>
+                </td>
+            </tr>
+            <tr >
+                <td colspan="6"></td>
+                <td>
+                    经济舱
+                </td>
+                <td>
+                    Y [100]
+                </td>
+                <td>
+                    >9
+                </td>
+                <td>
+                    <u class="tgq">退改签</u>
+                </td>
+                <td>
+                    <span class="price">￥123</span> 
+                </td>
+                <td>
+                    <span class="price">
+                        6.0%
+                    </span>
+                    <span class="price">
+                        ￥51
+                    </span>
+                </td>
+                <td>
+                    <span class="price highlight">
+                        ￥799 </span>
+                </td>
+                <td>
+                    <a href="#" class="btns btn-order">预 定</a>
+                </td>
+            </tr>
+        </table>
+        </div>
+    </div>
+</div>
+<script type="text/x-kendo-template" id="city_popup_tpl">
+<div id="tabstrip" class="tabstrip" style="width:370px">
+<ul>
+<li id="hot_city" class="k-state-active">热门</li>
+# for (var i=0; i<data.group.length; i++ ) { #
+<li>#= data.group[i] #</li>
+# } #
+</ul>
+
+<div title="热门" id="hot_city_tab">
+<ul class="tcy_list clearfix">
+<li data-code="PEK">北京</li>
+<li data-code="SHA">上海虹桥</li>
+<li data-code="PVG">上海浦东</li>
+<li data-code="CAN">广州</li>
+<li data-code="SZX">深圳</li>
+<li data-code="CTU">成都</li>
+<li data-code="HGH">杭州</li>
+<li data-code="WUH">武汉</li>
+<li data-code="XIY">西安</li> 
+<li data-code="CKG">重庆</li>
+<li data-code="TAO">青岛</li>
+<li data-code="CSX">长沙</li>
+<li data-code="NKG">南京</li>
+<li data-code="XMN">厦门</li>
+<li data-code="KMG">昆明</li>
+<li data-code="DLC">大连</li>
+<li data-code="TSN">天津</li> 
+<li data-code="CGO">郑州</li>
+<li data-code="SYX">三亚</li>
+<li data-code="TNA">济南</li>
+<li data-code="FOC">福州</li>
+</ul>
+</div>
+
+# for(var i=0;i<data.citylist.length;i++){ #
+#  var citylist_item = data.citylist[i] #
+<div title="#= citylist_item.name #" class="city_tab">
+<ul class="tcy_list clearfix">
+# for(var j=0;j<citylist_item.value.length;j++){ #
+#  var citylist_value_item = citylist_item.value[j] #
+<li data-code="#= citylist_value_item.code #">#= citylist_value_item.name #</li>
+# } #
+</ul></div>
+# } #
+
+
+</div>
+</script>
+
+            </div>
+</div>
+
+<div id="extFooter">
+    <div>
+        <p>
+        <a href="javascript:void(0);">关于我们</a>&nbsp;|
+        <a href="javascript:void(0);">微博</a>&nbsp;|
+        <a href="javascript:void(0);">服务条款</a>&nbsp;|
+        <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+        </p>
+        <p>客户服务热线:400-720-6666</p>
+    </div>
+</div>
+</body>
+</html>

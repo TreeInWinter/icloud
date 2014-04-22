@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html" charset="utf-8">
+    <title>酒店 酒店维护 新增酒店 服务费用</title>
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/b2b.css">
+    <link rel="stylesheet" href="/static/css/hotel.css">
+    <style type="text/css">
+        .ipt_servicePrice{width:60px;margin-left:15px}
+        .ul_servicePriceGroup{float:left;padding:0 20px 0 10px;border-right:1px dashed #e4e4e4;height:150px}
+        .ul_servicePriceGroup.last{border:none}
+        .ul_servicePriceGroup li{height:36px;line-height:36px}
+    </style>
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+</head>
+<body style="background:#ffffff">
+<div style="width:570px;margin:0 auto;height:170px">
+    <ul class="ul_servicePriceGroup">
+        <li><b>早餐</b></li>
+        <li><label><input type="checkbox" name="" id="">自助早餐</label><input type="text" class="ipt_servicePrice"/></li>
+        <li><label><input type="checkbox" name="" id="">中式早餐</label><input type="text" class="ipt_servicePrice"/></li>
+        <li><label><input type="checkbox" name="" id="">西式早餐</label><input type="text" class="ipt_servicePrice"/></li>
+    </ul>
+    <ul class="ul_servicePriceGroup">
+        <li><b>其他餐费</b></li>
+        <li><label><input type="checkbox" name="" id="">儿童早餐</label><input type="text" class="ipt_servicePrice"/></li>
+        <li><label><input type="checkbox" name="" id="">晚餐</label><input type="text" class="ipt_servicePrice" style="margin-left:39px"/></li>
+    </ul>
+    <ul class="ul_servicePriceGroup last">
+        <li><b>宽带</b></li>
+        <li><label><input type="checkbox" name="" id="">宽带</label><input type="text" class="ipt_servicePrice" style="margin-left:39px"/></li>
+        <li><b>其他</b></li>
+        <li><label><input type="checkbox" name="" id="">司陪房</label><input type="text" class="ipt_servicePrice" style="margin-left:27px"/></li>
+    </ul>
+    <div style="clear:both;border-top: 1px solid #ccc;padding: 10px;margin: 10px 0;">
+        <label class="txt_l3"><input type="checkbox" name="" id="">可以本站代购</label><span class="txt_l6">*勾选后，以上已选服务可以在预订时一同购买。</span>
+    </div>
+</div>
+<div style="text-align:center" class="clearfix">
+    <a href="javascript:;" class="button_1_2">保&nbsp;存</a>
+    <a href="javascript:;" class="button_2_2 close">取&nbsp;消</a>
+</div>
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("a.close").click(function(){
+            window.parent.$("span.k-i-close").trigger("click")
+        })
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 用户中心 国内订单列表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+     
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_ucenter.css" media="screen" />
+
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.store.css" />
+    
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>    
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>    
+
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+    
+    <script type="text/javascript" src="../../static/js/store/store.js"></script>
+
+</head>
+<body>
+
+<div class="main-wrapper">
+<header class="main-header">
+    <a class="logo" href="/"><h1>天地行</h1></a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first active"><a herf="#">首页</a></li>
+            <li><a herf="#">国内机票</a></li>
+            <li><a herf="#">国际机票</a></li>
+            <li><a herf="#">酒店</a></li>
+        </ul> 
+    </nav>
+    <nav class="main-links">
+        <ul class="clearfix">
+            <li class="first"><a href="#">订单管理</a></li>
+            <li><a href="#">分销管理</a></li>
+            <li><a href="#">电子钱包</a></li>
+            <li><a href="#">统计报表</a></li>
+            <li><a href="#">客服服务</a></li>
+            <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+            <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+</header>
+<section class="main-body clearfix">
+    <main class="us-content" style="width:100%">
+        <h1 class="us-title" style="border-bottom:none">
+            航空公司升舱规定
+            <span class="important" style="font-weight: normal;font-size: 12px;">（此规定仅供参考，最终以航空公司规定为准。）</span>
+            <span style="font-size: 12px;font-weight: normal;float:right"><a href="javascript:;">查看各航空公司退票规定<i class="rightArrow"></i></a></span>
+        </h1>
+        <div class="us-body" style="border:none">
+            <table class="tbl_comm tdGridAll">
+                <colgroup>
+                    <col width="100">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>航空公司</th>
+                        <th>处理意见</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>南航CZ</td>
+                        <td>升舱换开：必须是正常舱位的单程机票，两张票名字、证件、行程一致，升舱费大于变更费。原编码飞机起飞前两个小时必须取消编码，不能成为误机状态；注意：此升舱客规仅供参考，以代理人权限为准，升舱换开前请咨询客服或者提交改签申请待审核后再做处理。</td>
+                    </tr>
+                    <tr>
+                        <td>东航MU</td>
+                        <td>1、BSP升舱换开：必须是正常舱位的单程机票，两张票名字、证件、行程一致，升舱费大于变更费，原编码飞机起飞前两个小时必须取消编码，不能成为误机状态。
+                            2、可提交升舱补差，以供应商审核后为准。 注意：此升舱客规仅供参考，以代理人权限为准，升舱换开前请咨询客服或者提交改签申请待审核后再做处理。
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>上航FM</td>
+                        <td>上航升舱只能到营业部或者机场办理升舱补差价,若出发地点没有营业部或者柜台的，可以办理升舱全退
+                            注意：此升舱客规仅供参考，以代理人权限为准，升舱换开前请咨询客服或者提交改签申请待审核后再做处理。
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>国航CA</td>
+                        <td>1、升舱换开以各代理人权限为准，升舱换开前请咨询客服或者提交改签申请待审核后再做处理。 2、升舱补差建议联系国航客服用信用卡支付差价，或者提交升舱补差，以供应商审核后为准。</td>
+                    </tr>
+                    <tr>
+                        <td>山航SC</td>
+                        <td>1、升舱换开以各代理人权限为准，升舱换开前请咨询客服或者提交改签申请待审核后再做处理。 2、升舱补差价建议联系山航客服可以通过信用卡支付升舱补差</td>
+                    </tr>
+                    <tr>
+                        <td>深航ZH</td>
+                        <td>凡需收取改期费\变更费或票价差额的客票,旅客可拨打深航呼叫中心95080-8号键，以电话信用卡支付形式办理，或者前往深航直属售票部门办理,在无深航直属售票部</td>
+                    </tr>
+                    <tr>
+                        <td>川航3U</td>
+                        <td>
+                            升舱换开：必须是正常舱位的单程机票，两张票名字、证件、行程一致，升舱费大于变更费，新票出票前备注EI项。原编码飞机起飞前两个小时必须取消编码，不能成为误机状态；特殊备注的不能办理升舱全退。注意：此升舱客规仅供参考，以代理人权限为准，升舱换开前请咨询客服或者提交改签申请待审核后再做处理。
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>幸福航空HR</td>
+                        <td>联系400-868-0000 预留位置机场补差或者办理升舱换开注意：此升舱客规仅供参考，以代理人权限为准，升舱换开前请咨询客服或者提交改签申请待审核后再做处理。</td>
+                    </tr>
+                    <tr>
+                        <td>昆明航空KY</td>
+                        <td>以479开头的票号，旅客可拨打深航呼叫中心95080-8号键升舱补差</td>
+                    </tr>
+                    <tr>
+                        <td>金鹿航空JD</td>
+                        <td>
+                            升舱换开：必须是正常舱位的单程机票，两张票名字、证件、行程一致，升舱费大于变更费。原编码飞机起飞前两个小时必须取消编码，不能成为误机状态；特殊备注的不能办理升舱全退。注意：此升舱客规仅供参考，以代理人权限为准，升舱换开前请咨询客服或者提交改签申请待审核后再做处理。
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>中联航空KN</td>
+                        <td>
+                            升舱换开：必须是正常舱位的单程机票，两张票名字、证件、行程一致，升舱费大于变更费。原编码飞机起飞前两个小时必须取消编码，不能成为误机状态；注意：此升舱客规仅供参考，以代理人权限为准，升舱换开前请咨询客服或者提交改签申请待审核后再做处理。退票时要新行程单复印件原行程单原件
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>东北航空NS</td>
+                        <td>升舱换开：必须是正常舱位的单程机票，两张票名字、证件、行程一致，升舱费大于变更费，新票出票前备注EI项：EI
+                            EXCH/原舱位/1。原编码飞机起飞前两个小时必须取消编码，不能成为误机状态；特殊备注的不能办理升舱全退。注意：此升舱客规仅供参考，以代理人权限为准，升舱换开前请咨询客服或者提交改签申请待审核后再做处理。机场柜台少,如果代理人办理不了升舱全退，就联系0773-2845444尽量处理
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>奥凯航空BK</td>
+                        <td>
+                            升舱换开：四折以上的票才可换开，原票申请全退要把行程单原件退回并且和新票的行程单复印件传真。必须是正常舱位的单程机票，两张票名字、证件、行程一致，升舱费大于变更费。原编码飞机起飞前两个小时必须取消编码，不能成为误机状态；注意：此升舱客规仅供参考，以代理人权限为准，升舱换开前请咨询客服或者提交改签申请待审核后再做处理。
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>华夏航空G5</td>
+                        <td>
+                            升舱换开：必须是正常舱位的单程机票，两张票名字、证件、行程一致，升舱费大于变更费。原编码飞机起飞前两个小时必须取消编码，不能成为误机状态；注意：此升舱客规仅供参考，以代理人权限为准，升舱换开前请咨询客服或者提交改签申请待审核后再做处理。退票时须提供新票行程单，全国机场都无柜台，不能升舱补差价，不能签转。
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>吉祥航空HO</td>
+                        <td>
+                            机场无柜台或者当地无营业部可以重复购买高折扣票，原票申请全退，备注以代理人为准。升舱换开：必须是正常舱位的单程机票，两张票名字、证件、行程一致，升舱费大于变更费。原编码飞机起飞前两个小时必须取消编码，不能成为误机状态；注意：此升舱客规仅供参考，以代理人权限为准，升舱换开前请咨询客服或者提交改签申请待审核后再做处理。
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>成都航空EU</td>
+                        <td>
+                            新旧客票须要备注EI、RMK3.5折以下（含3.5）不能办理升舱，升舱换开：必须是正常舱位的单程机票，两张票名字、证件、行程一致，升舱费大于变更费。原编码飞机起飞前两个小时必须取消编码，不能成为误机状态；注意：此升舱客规仅供参考，以代理人权限为准，升舱换开前请咨询客服或者提交改签申请待审核后再做处理。
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>海航HU</td>
+                        <td>1、升舱补差：1)供应商审核后提交海航网站补差；2）联系海航预留位置，机场或者营业部补差。3）电话联系海航客服用银行转账的方式直接升舱补差价。
+                            2、升舱换开：升舱换开以各代理人权限为准，升舱换开前请咨询客服或者提交改签申请待审核后再做处理。
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>厦航MF</td>
+                        <td>升舱换开：升舱换开以各代理人权限为准，升舱换开前请咨询客服或者提交改签申请待审核后再做处理。</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</section>
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+<script type="text/javascript">
+    $(function(){
+        $(".btn_edit").click(function(){
+            $("#tbl_mainBusinessContactInfo :text").removeClass("disabled").prop("readonly",false);
+            $(this).hide();
+            $(".btn_save").show();
+        });
+        $(".btn_save").click(function(){
+            $("#tbl_mainBusinessContactInfo :text").addClass("disabled").prop("readonly",true);
+            $(this).hide();
+            $(".btn_edit").show();
+        });
+    })
+</script>
+</body>
+</html>
+

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 B2G 企业维护 临时差旅人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/b2g.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.b2g.css" />
+    <link rel="stylesheet" href="../../static/css/b2g_management.css" media="all" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/b2g/common.js"></script>
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+    <!--[if lte IE 9]>
+    <script src="/static/js/html5.js"></script>
+    <![endif]-->
+    <script>
+	$(function(){
+
+    new PopWindow('.ac-delete',{
+        title:'删除',
+        template:'#ac-delete-template',
+        open:function(){
+            // 获取当前的tr
+            console.log(this.target.closest('tr'));
+            var name = this.target.closest('tr').children('td').eq(1).text();
+            this.data({
+                name:name
+            });
+        },
+        width:500
+    }).init();
+   
+})
+   </script>
+    <style type="text/css">
+        strong{
+            font-size: 14px;
+            color:#333333;
+        }
+    </style>
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="top-line"></div>
+    <header class="main-header">
+        <div class="header-content">
+            <a class="logo" href="/">天地行 B2G</a>
+            <nav class="main-nav">
+                <ul class="clearfix">
+                    <li class="first"><a herf="#">行程预订</a></li>
+                    <li><a herf="#">行程管理</a></li>
+                    <li><a herf="#">数据服务</a></li>
+                    <li class="active"><a herf="#">企业维护</a></li>
+                    <li><a herf="#">系统设置</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+   
+    <div class="header-bar clearfix">
+        <div class="header-bar-content block-client">
+            <div class="block-clientBar">
+                <span>客户</span>
+                <select id="" style="width:160px;margin-left:5px;" data-role="dropdownlist" name="">
+                    <option value="">不夜城</option>
+                </select>
+                <span class="barBtns">
+                    <a href="javascript:void(0);" class="btn-color1 btn-color" >企业组织</a>&nbsp;<a href="javascript:void(0);" class="btn-color1 btn-color">企业成本中心</a>&nbsp;<a href="javascript:void(0);" class="btn-color1 btn-color">差旅政策</a>&nbsp;<a href="javascript:void(0);" class="btn-color2 btn-color">临时差旅人</a>&nbsp;<a href="javascript:void(0);" class="btn-color1 btn-color">其他设置</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <section class="main-body clearfix">
+        <div class="main-body-content">
+            <div class="block block2">
+				<div class="block-header clearfix">
+                    <span class="tab-header">
+                        <a href="#" style="background:none;border:0;">临时差旅人管理</a>
+                    </span>
+                    <span class="links">
+                        <a href="#">
+                            <i class="icon icon2"></i>
+                            新增临时差旅人
+                        </a>
+                    </span>
+                </div>
+                
+                <div class="block-body tab-body clearfix">
+                    <div class="col">
+                        <div class="block block-query">
+                            <table>
+                                <colgroup>
+                                    <col width="70">
+                                    <col width="150">
+                                    <col width="90">
+                                    <col width="150">
+                                    <col width="80">
+									<col width="180">
+                                    <col width="100">
+									<col width="370">
+									<col width="110">
+                                </colgroup>
+                                <tr>
+                                    <th>姓名：</th>
+                                    <td><input id="" type="text" name="" style="width:130px;"></td>
+                                    <th>手机号码：</th>
+                                    <td><input id="" type="text" name="" style="width:130px;"></td>
+                                    <th>邮箱：</th>
+                                    <td><input id="" type="text" name="" style="width:180px;"></td>
+                                    <th>属性：</th>
+									<td><select name="status" data-role="dropdownlist" style="width:90px;">
+										<option>公开</option>
+										<option>保密</option>
+									</select>
+									</td>
+                                    <td>
+                                        <button class="btns btn-c3">查 询</button>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </div>
+                        <div class="block block-result">
+                             <table class="table-header"  style="width:1160px;">
+                                 <colgroup>
+									 <col width="10">
+                                     <col width="100">
+                                     <col width="180">
+                                     <col width="220">
+                                     <col width="220">
+                                     <col width="100">
+                                     <col width="150">
+									 <col width="100">
+                                 </colgroup>
+
+                                 <thead>
+                                  <tr>
+										<th></th>
+                                        <th>姓名</th>
+                                        <th>手机</th>
+                                        <th>邮箱</th>
+                                        <th>临时差旅人属性</th>
+                                        <th>操作人</th>
+                                        <th>操作日期</th>
+                                        <th style="text-align:center">操作</th>
+                                  </tr>
+                                 </thead>
+                             </table>
+                             <table  style="width:1160px;">
+                                 <colgroup>
+								     <col width="10">
+                                     <col width="100">
+                                     <col width="180">
+                                     <col width="220">
+                                     <col width="220">
+                                     <col width="100">
+                                     <col width="150">
+									 <col width="100">
+                                 </colgroup>
+                                 <tbody>
+                                 <tr>
+									 <td></td>
+                                     <td>潘小美</td>
+									 <td>1223455555</td>
+                                     <td>xiachen.pan@travelzen.com</td>
+                                     <td>公开</td>
+                                     <td>唐笑笑</td>
+									 <td>2013-12-12</td>
+                                     <td>
+                                         <span><a href="" class="text2">编辑</a></span>
+										 <span><a href="" class="text2">删除</a></span>
+                                     </td>
+                                 </tr>
+								 <tr>
+									 <td></td>
+                                     <td>潘小美</td>
+									 <td>1223455555</td>
+                                     <td>xiachen.pan@travelzen.com</td>
+                                     <td>公开</td>
+                                     <td>唐笑笑</td>
+									 <td>2013-12-12</td>
+                                     <td>
+                                         <span><a href="" class="text2">编辑</a></span>
+										 <span><a href="" class="text2">删除</a></span>
+                                     </td>
+                                 </tr>
+								 <tr>
+									<td></td>
+                                     <td>潘小美</td>
+									 <td>1223455555</td>
+                                     <td>xiachen.pan@travelzen.com</td>
+                                     <td>私密</td>
+                                     <td>唐笑笑</td>
+									 <td>2013-12-12</td>
+                                     <td>
+                                         <span><a href="" class="text2">编辑</a></span>
+										 <span><a href="" class="text2">删除</a></span>
+                                     </td>
+                                 </tr>
+                                 </tbody>
+                             </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <p class="copyright">Copyright &copy; 2013 天地行 All Rights Reserved.     沪ICP备08101503号</p>
+    </footer>
+</div>
+
+
+
+<script type="text/x-kendo-template" id="ac-delete-template">
+    <div class="row row-icontext">
+        <i class="icon icon3"></i>
+        确认要删除员工：#= data.name # 吗？
+    </div>
+    <div class="row row-btns">
+        <a href="javascript:;" class="btns btn-s2 btn-c1">确 定</a>
+        <a href="javascript:;" class="close btns btn-s2 btn-c5">取 消</a>
+    </div>
+</script>
+
+</body>
+</html>
+

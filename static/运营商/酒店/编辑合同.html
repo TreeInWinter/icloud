@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html" charset="utf-8">
+    <title>酒店 酒店维护 编辑合同</title>
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/b2b.css">
+    <link rel="stylesheet" href="/static/css/kendo.common.css">
+    <link rel="stylesheet" href="/static/css/kendo.gray.css">
+<link href="/static/css/kendo.reset.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/hotel.css">
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+<!-- @CLB@ --></head>
+<body style="background:#ffffff">
+<div>
+    <table class="tbform">
+            <tr>
+                <td style="width:83px"><span class="head">合同有效期</span></td>
+                <td>
+                    <input type="text" name="sdate" value="" class="Datepicker" style="width:118px" placeholder="YYYY-MM-DD"/> 至 <input type="text" name="edate" style="width:118px"  value="" class="Datepicker"/>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <label><input type="checkbox" name="notify" checked="checked" value="true"/>到期提醒</label>
+                    <span>提前</span>
+                    <select id="beforeDay" name="beforeDay">
+                        <option value="1 day">1天</option>
+                        <option value="3 day">3天</option>
+                        <option value="1 week">1周</option>
+                        <option value="2 week">2周</option>
+                        <option value="3 week">3周</option>
+                        <option value="4 week">4周</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>联系人邮件 <input type="text" name="" id="" style="width:442px"></td>
+            </tr>
+            <tr>
+                <td><span class="head">供应商类型</span></td>
+                <td>
+                    <select id="" name="gys_type">
+                        <option value="">请选择</option>
+                        <option value="">代理</option>
+                        <option value="">连锁品牌</option>
+                        <option value="">GDS</option>
+                        <option value="">酒店业主</option>
+                    </select>
+                    <input type="text" name="gys_name" value="供应商名称" style="width:392px"/>
+                </td>
+            </tr>
+            <tr>
+                <td><span class="head">供应商实体</span></td>
+                <td>
+                    <select name="loc">
+                        <option value="请选择" selected="">请选择</option>
+                        <option value="中国大陆">中国大陆</option>
+                        <option value="香港">香港</option>
+                        <option value="澳门">澳门</option>
+                        <option value="国外">国外</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><span class="head">收款账户名</span></td>
+                <td>
+                    <input type="text" name="account_name" style="width:118px"/>
+                    <span class="head" style="padding-left:10px">开户银行</span>
+                    <input type="text" name="account_bank" style="width:95px"/>
+                    <span class="head" style="padding-left:10px">账号</span>
+                    <input type="text" name="account_bank" style="width:163px"/>
+                </td>
+            </tr>
+    </table>
+</div>
+<div style="text-align:right">
+    <a href="javascript:;" class="button_1_2">保&nbsp;存</a>
+    <a href="javascript:;" class="button_2_2 close">取&nbsp;消</a>
+</div>
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("a.close").click(function(){
+            window.parent.$("span.k-i-close").trigger("click")
+        })
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>旅游 订单详情</title>
+<meta charset="utf-8" />
+<link href="/static/css/kendo.common.css" rel="stylesheet" />
+<link href="/static/css/common.css" rel="stylesheet" />
+<link href="/static/css/b2b.css" rel="stylesheet" />
+<link href="/static/css/order.css" rel="stylesheet" />
+<link href="/static/css/kendo.reset.css" rel="stylesheet" />
+
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/kendo.web.js"></script>
+<script type="text/javascript" src="/static/js/global.js"></script>
+
+<!--[if lt IE 10]> 
+        <link rel="stylesheet" href="/static/css/ie.css" /> 
+        <script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+        <![endif]-->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+<!-- @CLB@ -->
+
+<script>
+$(function(){
+    kendo.init('body');
+    lensf();
+})
+</script>
+
+</head>
+<body>
+<div id="extHeader">
+    <div></div>
+</div>
+
+<div id="container">
+    <div class="header">
+        <h1></h1>
+        <div>
+            <span>你好,${name}</span>
+            <a href="javascript:void(0);">退出</a>
+        </div>
+        <ul id="top_menu">
+            <li><a href="javascript:void(0);">国内机票</a></li>
+            <li><a href="javascript:void(0);">国际机票</a></li>
+            <li><a href="javascript:void(0);">酒店</a></li>
+            <li><a href="javascript:void(0);">票证中心</a></li>
+            <li><a href="javascript:void(0);">财务管理</a></li>
+            <li><a href="javascript:void(0);">客户管理</a></li>
+            <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+        </ul>
+        <ol class="sub_menu">
+            <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+            <li><a href="javascript:void(0);">公司信息</a></li>
+            <li><a href="javascript:void(0);">组织架构</a></li>
+            <li><a href="javascript:void(0);">角色维护</a></li>
+            <li><a href="javascript:void(0);">基础数据</a></li>
+        </ol>
+        <div id="message">
+            <a href="javascript:void(0);">消息</a>
+            <span>New</span>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="sub_menu_bar"></div>
+    <div id="mainContent">
+        <div class="actions block">
+            <div class="col col-l sep-r">
+                <button class="btns btn-return">返回</button>
+            </div>
+            <div class="col col-l">
+                <span class="page-title">修改订单</span>
+            </div>
+            <div class="col col-r sep-l">
+                <a href="javascript:;" class="button_important adaptiveButton small"> <span class="left"></span> <span class="center">提交</span> <span class="right"></span></a>
+            </div>
+        </div>
+
+
+        <div class="block block0 clearfix">
+            <div class="col col-l">
+                <div class="row" style="height:50px;line-height:40px;">
+                    <span class="text1">订单号：<strong>124132131241</strong></span>&nbsp;
+                    <span class="text2"> - 订单类型：旅游订单</span>
+                </div>
+            </div>
+            <div class="col col-r">
+                <ul class="flat-list travel-instr">
+                    <li>
+                    <div class="instr">
+                        <span class="highlight">创建</span>
+                        <span>支付</span>
+                        <span>完成</span>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="instr">
+                        <span>收款</span>
+                        <span>结算</span>
+                    </div>
+                    </li>
+                    <li class="count"><span>关联订单</span><strong>3</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="block block1 block-module">
+            <div class="block-title">订单信息</div>
+            <ul class="flat-list">
+                <li>
+                <label class="vertical-head">客户名称</label>
+                <span>图牛</span>
+                </li>
+                <li>
+                <label class="vertical-head">结算方式</label>
+                <span>xxx</span>
+                </li>
+                <li>
+                <label class="vertical-head">可用余额</label>
+                <span class="money"><s class="text2">6222.00</s>元</span>
+                </li>
+                <li>&nbsp;</li>
+                <li>
+                <label class="vertical-head">联系人</label>
+                <span>张大中</span>
+                </li>
+                <li>
+                <label class="vertical-head">手机号码</label>
+                <span>18704210801</span>
+                </li>
+                <li>
+                <label class="vertical-head">联系电话</label>
+                <span>095190213</span>
+                </li>
+                <li>&nbsp;</li>
+                <li class="col-wide">
+                <label class="vertical-head">采购备注</label>
+                <textarea name=""></textarea>
+                </li>
+                <li class="col-wide">
+                <label class="vertical-head">内部备注</label>
+                <textarea name=""></textarea>
+                </li>
+            </ul>
+            <div class="block-title">产品信息</div>
+            <table class="grid-table productinfo">
+                <tr class="thead">
+                    <td>团号</td>
+                    <td>线路名称</td>
+                    <td>出发日期</td>
+                    <td>行程天数</td>
+                    <td>价格</td>
+                </tr>
+                <tr>
+                    <td>BM-130908-001</td>
+                    <td><span class="text3">美国东西海岸夏威夷14天（4/30，夏进纽出）</span></td>
+                    <td>2013/01/03</td>
+                    <td>15天</td>
+                    <td><span class="text2">1500.00</span>元（成人）&nbsp;&nbsp;
+                        <span class="text4">1500.00元（成人）</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="block block-module">
+            <div class="userinfos">
+                <div class="block-title">游客信息&#12288;</div>
+                <div class="userinfo">
+                        <div class="usercount">
+                            <i class="icon">&nbsp;</i>第<em>1</em>位游客&#12288;
+                        </div>
+                        <table class="cv-table">
+                            <colgroup>
+                                <col width="90">
+                                <col width="220">
+                                <col width="90">
+                            </colgroup>
+                            
+                            <tr>
+                                <th><u>*</u>中文姓名：</th>
+                                <td>
+                                    <input placeholder="中文名" style="width:160px;" id="" type="text" name="">
+                                </td>
+                                <th><u>*</u>拼音：</th>
+                                <td>
+                                    <input placeholder="中文名的拼音" style="width:170px;" id="" type="text" name="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><u>*</u>成人/儿童：</th>
+                                <td>
+                                    <select id="" name="" style="width:55px;">
+                                        <option value="">成人</option>
+                                        <option value="">儿童</option>
+                                    </select>
+                                </td>
+                                <th>是否房差</th>
+                                <td>
+                                    <select id="" name="" style="width:55px;">
+                                        <option value="">是</option>
+                                        <option value="">否</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>证件类型：</th>
+                                <td>
+                                    <select id="" name="" style="width:65px;">
+                                        <option value="">护照</option>
+                                    </select>
+                                    <input style="width:90px;" id="" type="text" name="">
+                                </td>
+                                <th>证件有效期：</th>
+                                <td>
+                                    <select id="" name="" style="width:55px;">
+                                        <option value="">11</option>
+                                    </select>
+                                    <select id="" name="" style="width:55px;">
+                                        <option value="">AUG</option>
+                                    </select>
+                                    <select id="" name="" style="width:55px;">
+                                        <option value="">2005</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                            <th>性别：</th>
+                                <td>
+                                    <select style="width:65px;" id="" name="">
+                                        <option value="">F</option>
+                                        <option value="">M</option>
+                                    </select>
+                                </td>
+                                <th>国籍：</th>
+                                <td>
+                                    <input id="" style="width:170px;" type="text" name="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>出生地：</th>
+                                <td>
+                                    <input id="" style="width:160px;" type="text" name="">
+                                </td>
+                                <th>出生日期：</th>
+                                <td>
+                                    <select id="" name="" style="width:55px;">
+                                        <option value="">11</option>
+                                    </select>
+                                    <select id="" name="" style="width:55px;">
+                                        <option value="">AUG</option>
+                                    </select>
+                                    <select id="" name="" style="width:55px;">
+                                        <option value="">2005</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                            <th>手机号：</th>
+                                <td colspan="3">
+                                    <input style="width:160px;" id="" type="text" name="">
+                                </td>
+                            </tr>
+                            <tr>
+                            <th>有无签证：</th>
+                                <td colspan=3>
+                               <select id="" name="" style="width:65px;">
+                                   <option value="">有</option>
+                                   <option value="">无</option>
+                               </select>
+                               <input id="" style="width:230px;" placeholder="请输入签证产品名称" type="text" name="">
+                               <button class="btns btn-search">&nbsp;</button>
+                                </td>
+                            </tr>
+                        </table>
+                </div>
+                <div class="userinfo">
+                        <div class="usercount">
+                            <i class="icon">&nbsp;</i>第<em>2</em>位游客&#12288;
+                        </div>
+                        <table class="cv-table">
+                            <colgroup>
+                                <col width="90">
+                                <col width="220">
+                                <col width="90">
+                            </colgroup>
+                            
+                            <tr>
+                                <th><u>*</u>中文姓名：</th>
+                                <td>
+                                    <input placeholder="中文名" style="width:160px;" id="" type="text" name="">
+                                </td>
+                                <th><u>*</u>拼音：</th>
+                                <td>
+                                    <input placeholder="中文名的拼音" style="width:170px;" id="" type="text" name="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><u>*</u>成人/儿童：</th>
+                                <td>
+                                    <select id="" name="" style="width:55px;">
+                                        <option value="">成人</option>
+                                        <option value="">儿童</option>
+                                    </select>
+                                </td>
+                                <th>是否房差</th>
+                                <td>
+                                    <select id="" name="" style="width:55px;">
+                                        <option value="">是</option>
+                                        <option value="">否</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>证件类型：</th>
+                                <td>
+                                    <select id="" name="" style="width:65px;">
+                                        <option value="">护照</option>
+                                    </select>
+                                    <input style="width:90px;" id="" type="text" name="">
+                                </td>
+                                <th>证件有效期：</th>
+                                <td>
+                                    <select id="" name="" style="width:55px;">
+                                        <option value="">11</option>
+                                    </select>
+                                    <select id="" name="" style="width:55px;">
+                                        <option value="">AUG</option>
+                                    </select>
+                                    <select id="" name="" style="width:55px;">
+                                        <option value="">2005</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                            <th>性别：</th>
+                                <td>
+                                    <select style="width:65px;" id="" name="">
+                                        <option value="">F</option>
+                                        <option value="">M</option>
+                                    </select>
+                                </td>
+                                <th>国籍：</th>
+                                <td>
+                                    <input id="" style="width:170px;" type="text" name="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>出生地：</th>
+                                <td>
+                                    <input id="" style="width:160px;" type="text" name="">
+                                </td>
+                                <th>出生日期：</th>
+                                <td>
+                                    <select id="" name="" style="width:55px;">
+                                        <option value="">11</option>
+                                    </select>
+                                    <select id="" name="" style="width:55px;">
+                                        <option value="">AUG</option>
+                                    </select>
+                                    <select id="" name="" style="width:55px;">
+                                        <option value="">2005</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                            <th>手机号：</th>
+                                <td colspan="3">
+                                    <input style="width:160px;" id="" type="text" name="">
+                                </td>
+                            </tr>
+                            <tr>
+                            <th>有无签证：</th>
+                                <td colspan=3>
+                               <select id="" name="" style="width:65px;">
+                                   <option value="">有</option>
+                                   <option value="">无</option>
+                               </select>
+                               <input id="" style="width:230px;" placeholder="请输入签证产品名称" type="text" name="">
+                               <button class="btns btn-search">&nbsp;</button>
+                                </td>
+                            </tr>
+                        </table>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="block block-module">
+            <div class="block-title">销售人信息</div>
+            <table class="cv-table userinfo">
+                <tr>
+                    <th><u>*</u>销售人姓名：</th>
+                    <td>
+                        <select id="" style="width:140px;" name="">
+                            <option value="">张三</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+
+    </div>
+
+</div>
+
+<div id="extFooter">
+    <div>
+        <p>
+        <a href="javascript:void(0);">关于我们</a>&nbsp;|
+        <a href="javascript:void(0);">微博</a>&nbsp;|
+        <a href="javascript:void(0);">服务条款</a>&nbsp;|
+        <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+        </p>
+        <p>客户服务热线:400-720-6666</p>
+    </div>
+</div>
+</body>
+</html>

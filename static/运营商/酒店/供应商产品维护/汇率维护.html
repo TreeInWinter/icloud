@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>酒店 酒店维护 汇率维护</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link href="../../../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../../static/css/kendo.common.css" rel="stylesheet" type="text/css" />
+    <link href="../../../static/css/kendo.gray.css" rel="stylesheet" type="text/css" />
+    <link href="../../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+    <link href="../../../static/css/kendo.reset.css" rel="stylesheet" />
+    <link href="../../../static/css/hotel.css" rel="stylesheet" type="text/css">
+    <link href="../../../static/css/jiudianweihuzs.css" rel="stylesheet" type="text/css"/>
+    <script src="../../../static/js/jquery.min.js" type="text/javascript"></script>
+	<script src="../../../static/js/jquery-ui-1.10.3.custom.js"></script>
+    <script src="../../../static/js/kendo.web.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../../static/js/public.js"></script>
+    <script type="text/javascript" src="../../../static/js/sync.js"></script>
+</head>
+<body>
+    <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">&nbsp;</a>
+                <span>&nbsp;</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent">
+            <div class="actions block">
+				<div class="col col-l">
+					<a class="item" href="javascript:void(0);">酒店售价维护</a> 
+					<a class="item highlight" href="javascript:void(0);">汇率维护</a> 
+				</div>
+			</div>
+            <div class="zhuzhijiagou">
+               <div class="rate_div">
+			    <div class="rateBlock clearfix">
+				  <div class="rateBlock-tit"><span>货币名称</span></div>
+				  <div class="rateBlock-con">
+				    <span style="padding-top:4px;margin-right:30px"><b>美元</b></span>
+					<span>当前实时汇率<em class="rate">6.0514</em></span>
+					<span style="margin:0 0 0 40px"><i class="refresh"></i></span>
+					<div class="rateBlock-tips">更新时间：2014/01/24  18:00</div>
+				  </div>
+				  <div class="rateConversion">
+					<label>美元</label> <input type="text" style="" name="" id="dollar">
+					<span class="rateArrow"></span>
+					<label>人民币</label> <input type="text" style="" name="" id="rmb">
+					<span class="computeBtn">
+					   <a class="button_secondary adaptiveButton small" href="javascript:;">
+                        <span class="left"></span>
+                        <span class="center center_1">试   算</span>
+                        <span class="right"></span>
+                       </a>
+					</span>
+				  </div>
+				 </div>
+				 
+				 <div class="rateBlock clearfix" style="border-bottom:none">
+				  <div class="rateBlock-tit"><span class="orange">当前系统汇率</span></div>
+				  <div class="rateBlock-con">
+				    <input class="txt_readonly" type="text" value="6.0614"/>
+					<span class="fontBlue">修改</span><span class="fontBlue" style="display:none;">保存</span><span style="display:none;" class="fontBlue">取消</span>
+					<div class="rateBlock-tips">更新时间：2014/01/24  18:00  操作人：刘伟</div>
+				  </div>
+				 
+				  <div class="rateConversion">
+					<label>美元</label> <input type="text" style="" name="" id="dollar_system"/>
+					<span class="rateArrow"></span>
+					<label>人民币</label> <input type="text" style="" name="" id="rmb_system"/>
+					<span class="computeBtn">
+					   <a class="button_secondary adaptiveButton small" href="javascript:void(0);">
+                        <span class="left"></span>
+                        <span class="center center_1">试   算</span>
+                        <span class="right"></span>
+                       </a>
+				    </span>
+				  </div>
+				 </div>
+				 
+				 <div class="rateBlock receivedBlock clearfix">
+				  <div class="rateBlock-tit"><span>预警接收人</span></div>
+				  <div class="rateBlock-con">
+				    <input class="txt_readonly" style="width:112px" type="text" name="name" id="nameInput" value="陈睿歆" placeholder="请输入姓名"/>
+					<span class="fontBlue">修改</span><span style="display:none;" class="fontBlue">保存</span><span style="display:none;" class="fontBlue">取消</span>
+					<div class="rateBlock-tips" id="nameInfo" style="color:#333333">
+						<span>手机：13812345678</span><span>电话：021-11111111</span><span>电邮：liuwei@mail.com</span>
+					</div>
+				  </div>
+				 </div>
+				 
+			   </div>
+
+            <div class="panel" style="padding-bottom:0;height:auto;overflow:hidden;">
+            <div class="panelTitle" style="border: 0">
+                操作日志
+            </div>
+            <div class="panelContent clearfix">
+                <table class="operation_records">
+                    <thead>
+                    <tr>
+                        <td style="width:130px">日期</td>
+                        <td style="width:100px">操作人员</td>
+                        <td style="width:150px">操作项目</td>
+                        <td style="width:450px">操作内容</td>
+                        <td style="width:100px">操作类型</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>20130606 14:55</td>
+                        <td>张三</td>
+                        <td>美元汇率</td>
+                        <td>系统汇率从6.0614改为6.0617</td>
+                        <td>新增</td>
+                    </tr>
+					<tr>
+                        <td>20130606 14:55</td>
+                        <td>张三</td>
+                        <td>美元汇率</td>
+                        <td>系统汇率从6.0614改为6.0617</td>
+                        <td>修改</td>
+                    </tr>
+					<tr>
+                        <td>20130606 14:55</td>
+                        <td>张三</td>
+                        <td>美元汇率</td>
+                        <td>系统汇率从6.0614改为6.0617</td>
+                        <td>修改</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--<div class="grid-table-pagination">
+                                  <span class="grid-table-count">
+                                      共 <em>132</em> 条记录
+                                  </span>
+                                  <span>
+                                      <a href="#" class="prev">&nbsp;</a>
+                                  </span>
+                                  <span class="links">
+                                      <a href="#">1</a>
+                                      <a href="#">2</a>
+                                      <a href="#" class="current">3</a>
+                                      <a href="#">4</a>
+                                      <a href="#">5</a>
+                                      <a href="javascript:;">...</a>
+                                      <a href="#">50</a>
+                                  </span>
+                                  <span>
+                                      <a href="#" class="next">&nbsp;</a>
+                                  </span>
+            </div>-->
+        </div>
+          </div>
+        </div>
+    </div>
+    
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+
+    <script>
+        $(function(){
+			
+			var nameList = [
+			  {
+				value: "陈小美",
+				mobile: "13455555",
+				tel: "588989",
+				email: "456@1.com"
+			  },
+			  {
+				value: "陈小美2",
+				mobile: "134555551212",
+				tel:"12199123",
+				email:"123@1.com"
+			  },
+			  {
+				value: "sizzlejs",
+				mobile: "1212121212",
+				tel:"12121",
+				email :"liuwei@mail.com"
+			  }
+			];
+
+			$("#nameInput").kendoAutoComplete({
+				dataSource: nameList,
+				select:function(e){
+					var item = this.dataItem(e.item.index());
+					//console.log(item);
+					
+					$("#nameInfo").html('<span>手机：' + item.mobile +'</span><span>电话：' + item.tel + '</span><span>电邮：' + item.email + '</span>').show();
+					
+				},
+				dataTextField: "value",
+				placeholder: "请输入姓名..."
+			});
+			
+			
+			var clickFn = function(event){
+				var input = $(this).closest(".rateBlock-con").find("input");
+				
+				var wrap = input;
+				if(input.hasClass("k-input")){
+					wrap = input.parent();
+				}
+				
+				switch($(this).html()){
+					case '修改':
+						wrap.removeClass("txt_readonly").addClass("txt_edit");
+						input.removeAttr("readonly");
+						input.data('old_value',input.val());
+						$(this).hide();
+						$(this).next().show().next().show();
+						break;
+					case '保存':
+						wrap.removeClass("txt_edit").addClass("txt_readonly");
+						input.prop("readonly","readonly");
+						$(this).hide().next().hide();
+						$(this).prev().show();
+						
+						break;
+					case '取消':
+						wrap.removeClass("txt_edit").addClass("txt_readonly");
+						input.prop("readonly","readonly");
+						input.val(input.data('old_value'));
+						$(this).hide();
+						$(this).prev().hide().prev().show();
+						break;
+					default:
+						break;	
+				}
+			}
+			
+			$(".fontBlue").bind("click",clickFn);
+			
+			$(".rateConversion input").bind("click",function(e){
+		  		$(this).parent(".rateConversion").addClass("state-focus");
+				
+				$(this).parent(".rateConversion").find("a.button_secondary").animate({
+					"margin-left":"0"
+				});
+		  	
+				/*
+				$(this).parent(".rateConversion").removeClass("state-focus");
+				$(this).parent(".rateConversion").find("a.button_secondary").css({
+					"margin-left":"-42px"
+				});
+				*/
+			});
+        });
+	
+   </script>
+</body>
+</html>

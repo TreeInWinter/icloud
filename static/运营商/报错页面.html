@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>天地行 报错页面</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="../static/css/common.css" rel="stylesheet" />
+	<link href="../static/css/kendo.common.css" rel="stylesheet" />
+	<link href="../static/css/kendo.gray.css" rel="stylesheet" />
+	<link href="../static/css/b2b.css" rel="stylesheet" />
+    <link href="../static/css/kendo.reset.css" rel="stylesheet" />
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../static/js/header.js"></script>
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="../static/css/ie.css" /> 
+<script type="text/javascript" src="../static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<!-- @CLB@ -->
+</head>
+<body>
+    <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div class="profile">
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li class="current">
+                    <a href="javascript:void(0);">国内机票</a>
+                    <ol class="sub_menu gnjp" style="display:block;">
+                        <li><a href="javascript:void(0);">平台建单</a></li>
+                        <li><a href="javascript:void(0);">订单管理</a></li>
+                        <li><a href="javascript:void(0);">政策维护</a></li>
+                        <li><a href="javascript:void(0);">售价维护</a></li>
+                        <li><a href="javascript:void(0);">数据报表</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">国际机票</a>
+                    <ol class="sub_menu gjjp">
+                        <li><a href="javascript:void(0);">平台建单</a></li>
+                        <li><a href="javascript:void(0);">订单管理</a></li>
+                        <li><a href="javascript:void(0);">政策维护</a></li>
+                        <li><a href="javascript:void(0);">售价维护</a></li>
+                        <li><a href="javascript:void(0);">数据报表</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">酒店</a>
+                    <ol class="sub_menu jd">
+                        <li><a href="javascript:void(0);">查询预订</a></li>
+                        <li><a href="javascript:void(0);">订单管理</a></li>
+                        <li><a href="javascript:void(0);">酒店维护</a></li>
+                        <li><a href="javascript:void(0);">售价维护</a></li>
+                        <li><a href="javascript:void(0);">数据报表</a></li>
+                    </ol>
+                </li>
+                <li class="">
+                    <a href="javascript:void(0);">旅游</a>
+                    <ol class="sub_menu travel">
+                        <li><a href="javascript:void(0);">查询预订</a></li>
+                        <li><a href="javascript:void(0);">报名信息</a></li>
+                        <li><a href="javascript:void(0);">线路维护</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">票证管理</a>
+                    <ol class="sub_menu ticket">
+                        <li><a href="javascript:void(0);">行程单</a></li>
+                        <li><a href="javascript:void(0);">票证中心</a></li>
+                        <li><a href="javascript:void(0);">发票</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">财务管理</a>
+                    <ol class="sub_menu caiwu">
+                        <li><a href="javascript:void(0);">财务管理</a></li>
+                        <li><a href="javascript:void(0);">收银管理</a></li>
+                        <li><a href="javascript:void(0);">对账管理</a></li>
+                        <li><a href="javascript:void(0);">财务报表</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">客户管理</a>
+                    <ol class="sub_menu customer">
+                        <li><a href="javascript:void(0);">采购商</a></li>
+                        <li><a href="javascript:void(0);">分销商</a></li>
+                        <li><a href="javascript:void(0);">供应商</a></li>
+                        <li><a href="javascript:void(0);">大客户</a></li>
+                        <li><a href="javascript:void(0);">客户组管理</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">系统设置</a>
+                    <ol class="sub_menu system">
+                        <li><a href="javascript:void(0);">公告管理</a></li>
+                        <li><a href="javascript:void(0);">公司信息</a></li>
+                        <li><a href="javascript:void(0);">组织架构</a></li>
+                        <li><a href="javascript:void(0);">角色维护</a></li>
+                        <li><a href="javascript:void(0);">基础数据</a></li>
+                    </ol>
+                </li>
+                <div class="clear"></div>
+            </ul>
+            <div id="message">
+                <h3>
+                    <span>&nbsp;</span>
+                    <!--<a href="javascript:void(0);">消息</a>-->
+                    <em>10</em>
+                </h3>
+                <div id="message_pop">
+                    <div class="pop_head"></div>
+                    <div class="mesbox">
+                       <div class="switchover clearfix">
+                            <ul class="mesAndnotice">
+                                <li class="current_stateli"><a href="javascript:void(0);">消息</a></li>
+                                <li class="notice_li"><a href="javascript:void(0);">公告</a><em>&nbsp;</em></li>
+                            </ul>
+                            <div class="ck"><a href="javascript:void(0);">关闭</a></div>
+                        </div>
+                        <div class="mes_switchover">
+                                <ul class="show_content mes">
+                                    <li><a href="javascript:void(0);">[ 国际机票 ] 订单 <span>[ 1123432211111 ]</span> 出票退回，[ 退票原因 ]，请尽快处理</a></li>
+                                    <li><a href="javascript:void(0);">[ 国际机票 ] 订单 <span>[ 1123432211111 ]</span> 出票退回，[ 退票原因 ]，请尽快处理</a></li>
+                                    <li><a href="javascript:void(0);">[ 国际机票 ] 订单 <span>[ 1123432211111 ]</span> 出票退回，[ 退票原因 ]，请尽快处理</a></li>
+                                    <li class="last"><a href="javascript:void(0);">[ 国际机票 ] 订单 <span>[ 1123432211111 ]</span> 出票退回，[ 退票原因 ]，请尽快处理</a></li>
+                                    <!--<li>暂无最新消息!</li>-->
+                                </ul>
+                                <ul class="notice_content mes" style="display:none;">
+                                    <li><a href="javascript:void(0);"><i>&nbsp;</i><b>[ 国内机票 ] 新系统上线</b></a></li>
+                                    <li><a href="javascript:void(0);">[ 国际机票 ] 新系统上线</a></li>
+                                    <li><a href="javascript:void(0);">[ 酒店 ] 新系统上线</a></li>
+                                    <li><a href="javascript:void(0);">新系统上线</a></li>
+                                    <li><a href="javascript:void(0);">[ 客户管理 ] 功能修改国际机票新系统上线</a></li>
+                                    <li><a href="javascript:void(0);">[ 酒店 ] 新系统上线</a></li>
+                                    <li class="last"><a href="javascript:void(0);">新系统上线</a></li>
+                                </ul>
+                        </div>
+                        <div class="see_all clearfix"><a href="javascript:void(0);">查看全部</a></div>
+                    </div>
+                    <div class="pop_tail"></div>
+                </div>
+            </div>
+        </div>     
+        
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent"> <!--mainContent start-->
+            <div class="error_page">
+                <div class="error_content">
+                    <h4>:( 很抱歉，您所访问的页面不存在</h4>
+                    <p>如有疑问也可联系客服热线：400-720-6666</p>
+                    <p class="btn">
+                        <a href="javascript:void(0);" class="button_1_2">返回首页</a>
+                    </p>
+                </div>
+            </div>            
+            
+
+        </div> <!--mainContent end-->
+
+    </div>
+		
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+    <script type="text/javascript">
+    
+        $(function(){
+            init_header();
+        });
+    
+    </script>
+</body>
+</html>

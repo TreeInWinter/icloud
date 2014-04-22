@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 B2G 编辑员工信息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/b2g.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.b2g.css" />
+    <link rel="stylesheet" href="../../static/css/b2g_management.css" media="all" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/b2g/jquery-ui-1.10.3.custom.js"></script>
+    <script type="text/javascript" src="../../static/js/jquery.jscrollpane.js"></script>
+    <script type="text/javascript" src="../../static/js/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="../../static/js/b2g/common.js"></script>
+    <!--[if lte IE 9]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    
+    <style type="text/css">
+         .ac-floatlayer,.k-ie8 .ac-floatlayer{ border:0; background:#545960; padding:4px;}
+		 .cytab-morehotel{ width:430px;}
+		 .cytab-content li{ min-width:190px;}
+    </style>
+    
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="top-line"></div>
+    <header class="main-header">
+        <div class="header-content">
+            <a class="logo" href="/">天地行 B2G</a>
+            <nav class="main-nav">
+                <ul class="clearfix">
+                    <li class="first active"><a herf="#">行程预订</a></li>
+                    <li><a herf="#">行程管理</a></li>
+                    <li><a herf="#">数据服务</a></li>
+                    <li><a herf="#">创业维护</a></li>
+                    <li><a herf="#">系统设置</a></li>
+                </ul> 
+            </nav>
+        </div>
+    </header>
+    <!--
+    <div class="header-bar clearfix">
+        <div class="header-bar-content">
+            <i class="tips"></i><span>请先选择差旅人   * 默认状态下您为自己预订</span>
+            <div class="setuser">
+                <a href="javascript:void(0);">设置差旅人</a>
+            </div>
+            <div class="for_reason">
+                <span class="reason_checkbox checked"></span><label for="reason">因私</label><input type="checkbox" style="display:none;" id="reason" value="for_private" name="reason"/>
+            </div>
+        </div>
+    </div>
+    -->
+<section class="main-body clearfix">
+    <div class="main-body-content">
+        	
+            <div class="titTop clearfix">
+                <b class="editTith3">编辑员工信息</b>
+                <button type="button" class="commonBtn orangeBtn">编 辑</button>
+        	</div>  
+       
+      	 	<div class="infoBox">
+                <div class="infoCon">
+                   <div class="editboxTitle">
+                   	 <h4>用户基础信息</h4>
+                     <button type="button" class="commonBtn lightBlueBtn changBlueBtn">修改密码</button>
+                   </div>
+                    <table class="gray-dashed-bottom">
+                          <colgroup>
+                               <col width="115px"/>
+                               <col width="200px"/>
+                               <col width="60px"/>
+                               <col width="115px"/>
+                               <col width="200px"/>
+                               <col width="60px"/>
+                               <col width="85px"/>
+                               <col width="325px"/>
+                          </colgroup>
+                          <tbody>
+                          <tr>
+                          	<td class="tdTit"><em>*</em>用户名：</td>
+                            <td><input type="text" /></td>
+                            <td></td>
+                            <td class="tdTit"><em>*</em>性别：</td>
+                            <td><select data-role="dropdownlist" style="width:186px;">
+                                       <option>男</option>
+                                       <option>女</option>
+                                  </select>
+                            </td>
+                            <td></td>
+                            <td class="tdTit"><em>*</em>出生日期：</td>
+                            <td><input type="text" value="yy-mm-dd" /></td>
+                          </tr>
+                          <tr>
+                          	<td class="tdTit"><em>*</em>姓：</td>
+                            <td><input type="text" value="中文/英文" /></td>
+                            <td> </td>
+                            <td class="tdTit"><em>*</em>名：</td>
+                            <td><input type="text" value="中文/英文" /></td>
+                            <td> </td>
+                            <td class="tdTit"><em>*</em>国籍：</td>
+                            <td><input type="text" /></td>
+                          </tr>
+                           <tr>
+                          	<td class="tdTit">拼音姓：</td>
+                            <td><input type="text" /></td>
+                            <td></td>
+                            <td class="tdTit">拼音名：</td>
+                            <td><input type="text" /></td>
+                            <td></td>
+                            <td> </td>
+                            <td> </td>
+                          </tr>
+                          </tbody>
+                  </table> 
+                  <table>
+                          <colgroup>
+                               <col width="115px"/>
+                               <col width="200px"/>
+                               <col width="60px"/>
+                               <col width="115px"/>
+                               <col width="200px"/>
+                               <col width="60px"/>
+                               <col width="85px"/>
+                               <col width="325px"/>
+                          </colgroup>
+                          <tbody>
+                          <tr>
+                          	<td class="tdTit"><em>*</em>公司：</td>
+                            <td>苏宁</td>
+                            <td></td>
+                            <td class="tdTit">员工号：</td>
+                            <td><input type="text" /></td>
+                            <td></td>
+                            <td class="tdTit">员工级别：</td>
+                            <td>
+                                <select data-role="dropdownlist" style="width:186px;">
+                                     <option>第一级</option>
+                                     <option>第二级</option>
+                                     <option>第三级</option>
+                                </select>
+                            </td>
+                          </tr>
+                          <tr>
+                          	<td class="tdTit" style="vertical-align:top;"><em>*</em>职务：</td>                            
+                            <td colspan="7">
+                                <ul class="groupList clearfix">
+                                    <li class="firstGroupList">                                         
+                                          <label class="groupSet"><em>管理员</em></label>
+                                          <label class="groupSet"><em>商旅秘书</em></label>
+                                          <label class="groupSet"><em>管理员</em></label>
+                                          <label class="groupSet"><em>商旅秘书</em></label>
+                                          <label class="groupSet"><em>商旅秘书</em></label>
+                                          <label class="groupSet"><em>员工</em></label>
+                                          <label class="groupSet"><em>产品说这里会有10个字</em></label>                                          
+                                          <label class="groupSet"><em>商旅秘书</em></label>                                          
+                                          <label class="groupSet"><em>商旅秘书</em></label>
+                                          <label class="groupSet"><em>商旅秘书</em></label>
+                                          <label class="groupSet"><em>商旅秘书</em></label>
+                                          <label class="groupSet"><em>商旅秘书</em></label>
+                                          <label class="groupSet"><em>商旅秘书</em></label>
+                                          <label class="groupSet"><em>商旅秘书</em></label>
+                                    </li>
+                                    <li class="secondGroupList">                                    
+                                          <span id="sel_customerRole" class="morehotel">请选择</span>
+                                    </li>
+                                </ul>
+                            </td>                            
+                          </tr>
+                          <tr>
+                            <td class="tdTit" style="vertical-align:top;">用户角色：</td>
+                            <td colspan="7">
+                                  <ul class="groupList clearfix">
+                                    <li class="firstGroupList">                                         
+                                          <label class="groupSet"><em>管理员</em></label>
+                                          <label class="groupSet"><em>商旅秘书</em></label>
+                                          <label class="groupSet"><em>员工</em></label>
+                                          <label class="groupSet"><em>员工</em></label>
+                                          <label class="groupSet"><em>产品说这里会有10个字</em></label>
+                                    </li>
+                                    <li class="secondGroupList">                                    
+                                          <span id="sel_customerRole" class="morehotel">请选择</span>
+                                    </li>
+                                </ul>
+                            </td>                            
+                          </tr>
+                           <tr>
+                          	<td class="tdTit"><em>*</em>所属部门：</td>
+                            <td><input type="text" /></td>
+                            <td><span class="infoMore orgchart"></span></td>
+                            <td class="tdTit">办公电话：</td>
+                            <td colspan="4"><input type="text" style="width:515px;" /></td>
+                          </tr>
+                          <tr>
+                          	<td class="tdTit"><em>*</em>移动电话：</td>
+                            <td><input type="text" /></td>
+                            <td></td>
+                            <td class="tdTit">办公电话：</td>
+                            <td><input type="text" /></td>
+                            <td></td>
+                            <td class="tdTit"><em>*</em>邮箱地址：</td>
+                            <td><input type="text" /></td>
+                          </tr>
+                          </tbody>
+                  </table>
+                </div>
+    </div>
+                <!-- 紧急联系人 -->
+                <div class="infoBox">
+                  <div class="infoCon">
+                   <div class="editboxTitle">
+                   	   <h4>紧急联系人信息</h4>
+                       <!--<div class="editInfo-unfold" style="margin-right:40px;">
+                        <span class="editInfo-fold toggle_trigger" data-toggle='{"target":"#linkman-info","textFilter":"em","toggleClass":["editInfo-unfold","editInfo-fold"],"toggleText":["展开","收起"]}'><i></i><em>收起</em></span>
+                        <span class="editInfo-unfold" style="display:none"><i></i><em>展开</em></span>
+                       </div>-->
+                   </div>
+                    <table id="linkman-info">
+                          <colgroup>
+                               <col width="115px"/>
+                               <col width="180px"/>
+                               <col width="115px"/>
+                               <col width="180px"/>
+                               <col width="115px"/>
+                               <col width="180px"/>
+                               <col width="115px"/>
+                               <col width="220px"/>
+                          </colgroup>
+                          <tbody>
+                          <tr>
+                          	<td class="tdTit">姓名：</td>
+                            <td><input type="text" style="width:150px"/></td>
+                            <td class="tdTit">关系：</td>
+                            <td><input type="text"  style="width:150px"/></td>
+                            <td class="tdTit">电话：</td>
+                            <td><input type="text"  style="width:150px"/></td>
+                            <td class="tdTit">国籍：</td>
+                            <td><input type="text" id="ipt_nationality" name="" style="width:150px;padding:0;"/></td>
+                          </tr>
+                          </tbody>
+                    </table> 
+                </div>
+                </div>
+                
+                <!-- 证件信息 -->
+                <div class="infoBox">
+                  <div class="infoCon">
+                   <div class="editboxTitle">
+                   	   <h4>证件信息</h4>
+                       <!--<div class="editInfo-unfold" style="margin-right:40px;">
+                        <span class="editInfo-fold toggle_trigger" data-toggle='{"target":"#elsepapers","textFilter":"em","toggleClass":["editInfo-unfold","editInfo-fold"],"toggleText":["展开","收起"]}'><i></i><em>收起</em></span>
+                        <span class="editInfo-fold" style="display:none"><i></i><em>展开</em></span>
+                       </div> -->                   
+                   </div>
+                    <table border="0" cellpadding="0" cellspacing="0"  class="otherInfo" id="elsepapers">
+                          <colgroup>
+                               <col width="90px"/>
+                               <col width="320px"/>
+                               <col width="110px"/>
+                               <col width="240px"/>
+                               <col width="110px"/>
+                               <col width="260px"/>
+                          </colgroup>
+                          <tbody>
+                          <tr>
+                          	<td class="tdTit last">身份证号码：</td>
+                            <td class="last"><input type="text" /></td>
+                            <td class="tdTit last">身份证到期日：</td>
+                            <td class="last"><input type="text" class="datepicker dpChangeMonthYear" /></td>
+                            <td class="last"></td>
+                            <td class="last"></td>
+                          </tr>
+                          <tr>
+                          	<td class="tdTit">护照号码：</td>
+                            <td>
+                                <input type="text" />
+                            </td>
+                            <td class="tit">护照到期日：</td>
+                            <td><input type="text" class="datepicker dpChangeMonthYear" minDate="2014-01-01" maxDate="2030-12-31" /></td>
+                            <td class="tdTit">证件签发地：<div class="twofont">（2字码）</div></td>
+                            <td>
+                                <input type="text" />
+                            </td>
+                          </tr>
+                          <tr>
+                          	<td class="tdTit last">证件类型：</td>
+                            <td class="last">
+                                  <select data-role="dropdownlist" style="width:150px;">
+                                       <option>身份证</option>
+                                       <option>护照</option>
+                                  </select>
+                            </td>
+                            <td class="tit last">证件号码：</td>
+                            <td class="last"><input type="text" /></td>
+                            <td rowspan="2">
+                            <label class="editInfo-add"><i></i><em>增加</em></label>
+                            </td>
+                            <td class="last"></td>
+                          </tr>
+                          <tr>
+                          	<td class="tdTit">证件签发地：<div class="twofont">（2字码）</div></td>
+                            <td>
+                                <input type="text" />
+                            </td>
+                            <td class="tit">证件到期日：</td>
+                            <td><input type="text" class="datepicker dpChangeMonthYear" /></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                          	<td class="tdTit last">证件类型：</td>
+                            <td class="last">
+                                  <select data-role="dropdownlist" style="width:150px;">
+                                       <option>身份证</option>
+                                       <option>护照</option>
+                                  </select>
+                            </td>
+                            <td class="tit last">证件号码：</td>
+                            <td class="last"><input type="text" /></td>
+                            <td rowspan="2" class="last">
+                                <label class="editInfo-del"><i></i><em>删除</em></label>
+                            </td>
+                            <td class="last"></td>
+                          </tr>
+                          <tr>
+                          	<td class="tdTit last">证件签发地：<div class="twofont">（2字码）</div></td>
+                            <td class="last">
+                                <input type="text" />
+                            </td>
+                            <td class="tit last">证件到期日：</td>
+                            <td class="last"><input type="text" class="datepicker dpChangeMonthYear" /></td>
+                            <td class="last"></td>
+                          </tr>
+                          </tbody>
+                    </table> 
+                </div>
+                </div>
+                
+                <!-- 常旅卡信息 -->
+                <div class="infoBox">
+                  <div class="infoCon">
+                   <div class="editboxTitle">
+                   	   <h4>常旅卡信息</h4>
+                   </div>
+                    <table>
+                          <colgroup>
+                               <col width="110px"/>
+                               <col width="300px"/>
+                               <col width="110px"/>
+                               <col width="245px"/>
+                               <col width="370px"/>
+                          </colgroup>
+                          <tbody>
+                              <tr>
+                                <td class="tdTit">航空公司/联盟：</td>
+                                <td>
+                                    <select data-role="dropdownlist" style="width:160px;">
+                                       <option>中国国航</option>
+                                       <option>东方航空</option>
+                                       <option>西方航空</option>
+                                    </select>
+                                </td>
+                                <td class="tdTit">卡号：</td>
+                                <td ><input type="text" style="width:230px;" /></td>
+                                <td><label class="editInfo-add"><i></i><em>增加</em></label></td>
+                              </tr>
+                              <tr>
+                                <td class="tdTit">航空公司/联盟：</td>
+                                <td>
+                                    <select data-role="dropdownlist" style="width:160px;">
+                                       <option>中国国航</option>
+                                       <option>东方航空</option>
+                                       <option>西方航空</option>
+                                    </select>
+                                </td>
+                                <td class="tdTit">卡号：</td>
+                                <td><input type="text" style="width:230px;" /></td>
+                                <td><label class="editInfo-del"><i></i><em>删除</em></label></td>
+                              </tr>
+                          </tbody>
+                    </table> 
+                </div>
+                </div>
+                
+                <!-- 个人偏好信息 -->
+                <div class="infoBox">
+                  <div class="infoCon">
+                   <div class="editboxTitle">
+                   	   <h4>个人偏好信息</h4>
+                   </div>
+                    <table>
+                          <colgroup>
+                               <col width="110px"/>
+                               <col width="300px"/>
+                               <col width="110px"/>
+                               <col width="280px"/>
+                               <col width="90px"/>
+                               <col width="250px"/>
+                          </colgroup>
+                          <tbody>
+                              <tr>
+                                <td class="tdTit">座位偏好：</td>
+                                <td>
+                                    <select data-role="dropdownlist" style="width:160px;">
+                                       <option>靠窗</option>
+                                       <option>靠过道</option>
+                                       <option>中间位置</option>
+                                    </select>
+                                </td>
+                                <td class="tdTit">餐食偏好：</td>
+                                <td>
+                                    <select data-role="dropdownlist" style="width:160px;">
+                                       <option>中餐</option>
+                                       <option>西餐</option>
+                                       <option>米饭</option>
+                                       <option>面条</option>
+                                    </select>
+                                </td>
+                                <td class="tdTit">酒店偏好：</td>
+                                <td>
+                                    <select data-role="dropdownlist" style="width:160px;">
+                                       <option>五星级</option>
+                                    </select>
+                                </td>
+                              </tr>
+                          </tbody>
+                    </table> 
+                </div>
+                </div>
+                
+            <!-- 按钮 -->
+              <div class="editbuttonbox">
+                <button type="button" class="commonBtn lightRedBtn btnfontStyle" style="margin-right:12px">确 定</button>
+                <button type="button" class="commonBtn grayBtn btnfontStyle">取 消</button>
+            </div> 
+        </div>       
+    </section>  
+     <!-- 修改密码 -->
+       <div id="changBlueBtn-template" class="changepwdDiv">
+          <table>
+             <colgroup>
+              <col width="140px"/>
+              <col width="262px"/>
+              <col width="100px"/>
+             </colgroup>
+             <tbody>
+             <tr>
+              <td class="tdTit">请输入当前密码：</td>
+              <td><input type="text"  placeholder="密码为6位"  style="width:248px"/></td>
+              <td><span class="textright"></span></td>
+             </tr>
+              <tr>
+              <td class="tdTit">请输入新密码：</td>
+              <td><input type="password"  style="width:248px"/></td>
+              <td><span class="texterror"></span></td>
+             </tr>
+             <tr>
+              <td class="tdTit">确认新密码：</td>
+              <td><input type="password"  style="width:248px"/></td>
+              <td></td>
+             </tr>
+             <tr>
+              <td>&nbsp;</td>
+              <td colspan="2">
+                 <div class="pwd-tips"><p><i></i>定期更换密码可以让您的账户更加安全。</p>
+                      <ul>
+                        <li>请确保登录密码与支付密码不同，</li>
+                        <li>建议密码采用字母和数字混合，并不短于6位。</li>
+                      </ul>
+                 </div>
+              </td>
+             </tr>
+             </tbody>
+          </table>
+            <div class="buttonbox" style="padding:15px 0 20px 0">
+                 <button type="button" class="commonBtn lightRedBtn btnfontStyle" style="margin-right:12px">确 定</button>
+                <button type="button" class="commonBtn grayBtn btnfontStyle close">取 消</button>
+            </div>
+       </div> 
+    <!-- 部门组织架构树 -->
+      <div id="orgchart-template" class="orgchartDiv">
+         <p>
+            <label >部门名称：</label><input type="text"  placeholder="请输入部门名称"  style="width:376px"/>
+         </p>
+         <p><label>组织架构树：</label></p>
+         <div class="row treeview-white">
+                    <ul id="treeview" data-role="treeview">
+                        <li>
+                        苏宁公司
+                        <ul>
+                            <li>
+                            北京分部
+                            <ul>
+                                <li>总裁部
+                                    <ul>
+                                        <li>业务部</li>
+                                        <li>行政部</li>
+                                        <li rel="1112">采购部</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            </li>
+
+                            <li>
+                            南京分部 
+                            <ul>
+                                <li rel="1412">
+                                采购部 
+                                <ul>
+                                    <li>家电部</li>
+                                </ul>
+                                </li>
+                            </ul>
+                            </li>
+                            <li>业务部</li>
+                        </ul>
+                        </li>
+                    </ul>
+          </div>
+          <div class="buttonbox" style="padding:15px 0 20px 0">
+          <button type="button" class="commonBtn lightRedBtn btnfontStyle" style="margin-right:12px">确 定</button>
+          <button type="button" class="commonBtn grayBtn btnfontStyle close">取 消</button>
+          </div>
+      </div> 
+    
+    <footer class="main-footer">
+        <p class="copyright">Copyright &copy; 2013 天地行 All Rights Reserved.     沪ICP备08101503号</p>
+    </footer>
+</div>
+<script>
+          $(function(){
+				var hotelData = [{
+					name:'普通职工',
+					selected:false
+				},{
+					name:'普通职工',
+					selected:false
+				},{
+					name:'差旅秘书',
+					selected:false
+				},{
+					name:'差旅秘书',
+					selected:false
+				},{
+					name:'审批人',
+					selected:false
+				},{
+					name:'审批人',
+					selected:false
+				},{
+					name:'产品说这里会有10个字', 
+					selected:true
+				},{
+					name:'产品说这里会有10个字', 
+					selected:true
+				}];
+				var hotelLayer = FloatLayer({
+					trigger:'.morehotel', 
+					template:'#morehotel-template',
+					offsetY:65,
+					data:hotelData
+				});
+				
+		  });
+</script>
+    
+<script type="text/template" id="morehotel-template">
+    <div class="cytab cytab-morehotel">
+        <div class="cytab-title">
+            <span>请选择员工职务</span>
+            <i class="close">&nbsp;</i>
+        </div>
+
+        <div class="cytab-content">
+            <ul class="clearfix">
+                # for(var i=0;i<data.length;i++){#
+                <li>
+                    <label>
+                    <input # if(data[i].selected){#  checked  #}# type="checkbox" name="">
+                    <span class="morehotel-item morehotel-item#=i#">#= data[i].name#</span>
+                    </label>
+                </li>
+                #} #
+            </ul>
+            <div style="text-align:right">
+                 <button type="button" class="commonBtn lightRedBtn" style="font-size:16px;padding:5px 20px;">确  定</button>
+            </div>
+        </div>
+    </div>
+</script>
+
+
+<script>
+	$(function(){
+			  
+		$(".flight-item .linkA").kendoTooltip({
+			position:"bottom", //left right top
+			content:function(){
+				return "退票：仅退基建燃油费，机票款不退<br>废票：每张收取N元费用<br>更改：不得改期、升舱<br>签转：不允许签转<br>备注：";
+			},
+			offsetY:10
+			
+		});
+	});
+</script>
+
+<script type="text/html" id="datepicker-monthSelectTemplate">
+<div class="datepicker-monthSelectPanel">
+    <ul>
+        <li data-value="0">一月</li>
+        <li data-value="1">二月</li>
+        <li data-value="2">三月</li>
+        <li data-value="3">四月</li>
+        <li data-value="4">五月</li>
+        <li data-value="5">六月</li>
+    </ul>
+    <ul>
+        <li data-value="6">七月</li>
+        <li data-value="7">八月</li>
+        <li data-value="8">九月</li>
+        <li data-value="9">十月</li>
+        <li data-value="10">十一月</li>
+        <li data-value="11">十二月</li>
+    </ul>
+    <div class="clearfix"></div>
+</div>
+</script>
+
+<script type="text/html" id="datepicker-yearSelectTemplate">
+    <div class="datepicker-yearSelectPanel  horizontal-only">
+        <ul>
+            <li data-value="2010">2010</li>
+            <li data-value="2011">2011</li>
+            <li data-value="2012">2012</li>
+            <li data-value="2013">2013</li>
+            <li data-value="2014">2014</li>
+            <li data-value="2015">2015</li>
+            <li data-value="2016">2016</li>
+            <li data-value="2017">2017</li>
+            <li data-value="2018">2018</li>
+            <li data-value="2019">2019</li>
+            <li data-value="2020">2020</li>
+            <li data-value="2021">2021</li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+</script>
+
+<script>
+
+    $(function(){
+
+		new PopWindow('.changBlueBtn',{
+			title:'修改密码',
+			width:'580'
+		},"#changBlueBtn-template").init();
+		
+		new PopWindow('.orgchart',{
+			title:'部门组织架构树',
+			width:'580'
+		},"#orgchart-template").init();
+
+        $("#ipt_nationality").kendoAutoComplete({
+            dataSource:["新加坡","新西兰","新几内亚"]
+        })
+
+
+
+        /*new frequentFlyer({
+            template:"#sel_customerRoleTemplate",
+            trigger:"#sel_customerRole",
+            offsetX:0.5,
+            offsetY:31,
+            openEffect:"slideDown",
+            closeEffect:"slideUp",
+            css:{padding:0,"border-color":"#BCBCBC",background:"#ffffff",width:"142px"}
+        });*/
+		
+	});
+</script>
+</body>
+</html>

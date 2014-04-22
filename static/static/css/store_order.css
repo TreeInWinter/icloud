@@ -1,0 +1,127 @@
+@charset "utf-8";
+/* CSS Document */
+
+.normal_border {border:1px solid #e1e1e1;}
+
+.auth_to {padding:80px 0;margin:10px 0;text-align:center;color:#636363; background:#fff;}
+.auth_to .info {font-size:16px;margin-right:30px;}
+.auth_to strong {font-weight:bold;}
+
+.order{ margin:10px 0; border:1px solid #dcc791; background:#fafadb; padding:20px 10px 20px 25px; color:#636363; position:relative;}
+.present{ width:37%; float:left; border-right:1px dashed #dcc791;}
+.succeed{ margin-bottom:10px; height:40px; line-height:40px;}
+.succeed h3{ padding:0 15px 0 50px; background:url(../images/store/succeed.png) no-repeat left center; font-size:14px; font-weight:bold; float:left;}
+.succeed p{ float:left;}
+.ordernum,.money{ padding:5px 0;}
+.ordernum em,.money em,.overstriking i{ width:70px; display:inline-block;}
+.ordernum span{ color:#cf6b00; font-size:14px; margin-right:20px;}
+.money b{ color:#ff6500; font-size:16px;}
+.prompt{ float:left; line-height:20px; padding:0 0 0 20px; position:relative;}
+.prompt h3{ font-size:12px; font-weight:bold; margin-bottom:5px;}
+.prompt b{ color:#ff6500;}
+.prompt p{ width:573px; word-break:break-all;}
+.overstriking{ font-weight:bold;}
+.pay{ border:1px solid #e1e1e1; color:#636363; background:#fff;}
+#offline_payerInfo td{padding:10px 0 0}
+.gopay,.recharge{ margin:10px 15px 20px 10px;}
+.gopay td,.recharge td{ line-height:45px; padding-left:5px;}
+.gopay td:first-child,.recharge td:first-child{ text-align:right;}
+.gopay em,.recharge em{ color:#9d9d9d;}
+.recharge em strong{ background:url(../images/store/smallPicture.png) no-repeat 0 -58px; display:inline-block; width:16px; height:16px; vertical-align:middle; margin-right:5px;} 
+.gopay input,.recharge input{ width:180px; height:22px;}
+.gopay a,.recharge a{ font-size:14px;}
+.gopay b,.recharge b{ font-size:16px;}
+
+.offline,.on_line{ padding:20px 5px 25px;}
+.offline input[type="text"],.on_line input[type="text"]{ height:23px; line-height:23px;}
+.transfer{ line-height:28px;color:#888}
+.transfer h3{ font-size:13px; font-weight:bold;}
+.transfer p span{ color:#ff6500; font-weight:bold;}
+.transfer p b{ color:#888888;}
+.hornTip{ background:url(../images/store/horn.jpg) no-repeat left center; padding-left:18px;}
+.bank{ margin-top:10px; color:#444444;}
+.bank td{ height:30px; padding-bottom:5px; vertical-align:bottom; border-bottom:1px dashed #e1e1e1;}
+.bank a{ color:#57b2ff; vertical-align:bottom; display:inline-block; padding-left:30px; padding-top:8px;}
+.bank a:hover{ text-decoration:none; color:#ff6500;}
+.traffic{ background:url(../images/store/bank.jpg) no-repeat 0 0;}
+.industry{ background:url(../images/store/bank.jpg) no-repeat 0 -28px;}
+.industry1{ background:url(../images/store/bank.jpg) no-repeat 0 -28px;display:inline-block; width:32px; height:25px;vertical-align:middle}
+.build{ background:url(../images/store/bank.jpg) no-repeat 0 -56px;}
+.farming{ background:url(../images/store/bank.jpg) no-repeat 0 -82px;}
+.shbank{ background:url(../images/store/bank.jpg) no-repeat 0 -107px;}
+.cmb{ background:url(../images/store/bank.jpg) no-repeat 0 -135px;}
+.kuaiqian {width:58px; background:url(../images/store/bank2.jpg) no-repeat 0 0;}
+.alipay {width:58px;background:url(../images/store/bank2.jpg) no-repeat 0 -28px;}
+.offline .kuaiqian span,.offline .alipay span {position:relative;left:40px;}
+
+.terrace b,.tip div b{ width:80px; display:inline-block; text-align:right;}
+.terrace label{ width:175px; height:25px; padding:5px 0 5px 10px; border:1px solid #dddddd; vertical-align:middle; margin-right:45px; display:inline-block; line-height:25px;}
+.terrace label input{ height:25px; border:0; margin-right:5px; vertical-align:top;}
+.terrace .ico_alipay{ width:58px; height:18px; display:inline-block; vertical-align:middle; background:url(../images/store/payTerrace.jpg) no-repeat 0 0;}
+.terrace .ico_tenpay{width:61px; height:22px; display:inline-block; vertical-align:middle; background:url(../images/store/payTerrace.jpg) no-repeat 0 -24px;}
+.terrace .ico_chinapnr{width:91px; height:18px; display:inline-block; vertical-align:middle; background:url(../images/store/payTerrace.jpg) no-repeat 0 -51px;}
+.terrace div{ margin:0 0 20px 85px;}
+.terrace div:first-child{ margin-left:0;}
+.tip{ margin:25px 0;}
+.tip p{ margin-left:78px; line-height:20px;}
+.tip_p{ margin-top:10px; margin-bottom:10px;}
+.e-bank{ margin-left:80px;}
+.e-bank label{ height:23px; width:170px; padding:7px 0px 7px 10px; border:1px solid #dddddd; vertical-align:middle; margin:0 25px 20px 0; display:inline-block; line-height:23px;}
+.e-bank input{ height:23px; border:0; margin-right:5px; vertical-align:top;}
+.e-bank label:hover{ border:1px solid #f1634c;}
+.e-bank a{ font-size:14px;}
+.agriculture{ width:103px; height:20px; display:inline-block; background:url(../images/store/E-bank.jpg) no-repeat 0 0;}
+.commerce{ width:100px; height:20px; display:inline-block; background:url(../images/store/E-bank.jpg) no-repeat 0 -71px;}
+.construct{ width:102px; height:22px; display:inline-block; background:url(../images/store/E-bank.jpg) no-repeat 0 -272px;}
+.citic{ width:93px; height:22px; display:inline-block; background:url(../images/store/E-bank.jpg) no-repeat 0 -196px;}
+.postal{ width:107px; height:16px; display:inline-block; background:url(../images/store/E-bank.jpg) no-repeat 0 -25px;}
+.china{ width:100px; height:20px; display:inline-block; background:url(../images/store/E-bank.jpg) no-repeat 0 -96px;}
+.business{ width:85px; height:20px; display:inline-block; background:url(../images/store/E-bank.jpg) no-repeat 0 -148px;}
+.shenzhen{ width:103px; height:17px; display:inline-block; background:url(../images/store/E-bank.jpg) no-repeat 0 -223px;}
+.tsation{ width:78px; height:20px; display:inline-block; background:url(../images/store/E-bank.jpg) no-repeat 0 -46px;}
+.spdb{ width:72px; height:20px; display:inline-block; background:url(../images/store/E-bank.jpg) no-repeat 0 -123px;}
+.brighten{ width:106px; height:19px; display:inline-block; background:url(../images/store/E-bank.jpg) no-repeat 0 -173px;}
+.shanghai{ width:75px; height:21px; display:inline-block; background:url(../images/store/E-bank.jpg) no-repeat 0 -247px;}
+.look{ margin:20px 0;}
+.look a{ margin-right:10px; font-size:14px;}
+.distance{ margin:5px 0;}
+
+.back_search{ float:left; background:url(../images/store/leftarrows.png) left center; padding-left:20px;}
+.failure_details{ width:41%; float:left; border-right:1px dashed #dcc791;}
+.defeated{ margin-bottom:10px; height:40px; line-height:40px;}
+.defeated h3{ padding:0 15px 0 50px; background:url(../images/store/wrong.png) no-repeat left center; font-size:14px; font-weight:bold; float:left;}
+.defeated p{ float:left;}
+.failed_prompt{ width:55%; float:left; line-height:20px; margin-top:6%; padding:0 0 0 20px;}
+.failed_prompt h3{ font-size:12px; font-weight:bold; margin-bottom:5px;}
+.failed_prompt b{ color:#ff6500;}
+.failed_prompt p{ word-break:break-all;}
+
+.goAndSee a{ margin-right:20px; text-decoration:underline; color:#636363; font-size:14px;}
+.goAndSee a:hover{ color:#f1634c;}
+
+.pay_btn{ margin:0 0 0 85px;}
+
+.col-r{text-align:right}
+.important{color:#ff0000}
+
+
+/*支付确认*/
+.payconfirm_con{
+	margin:0 auto 23px auto;
+}
+.payconfirm_con p{
+	padding:15px 0;
+}
+.payconfirm_con p.con1{
+	text-align:center
+}
+.payconfirm_con p.con2{
+	padding:12px 0 0 98px;
+}
+.payconfirm_con p.con2 a{
+	margin-right:36px;
+	color:#636363;
+	text-decoration:underline
+}
+
+

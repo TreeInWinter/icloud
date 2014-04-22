@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>运营商 签证 订单详情 新建状态</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../../static/css/kendo.common.css" rel="stylesheet" type="text/css" />
+    <link href="../../../static/css/kendo.gray.css" rel="stylesheet" type="text/css" />
+    <link href="../../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+    <link href="../../../static/css/kendo.reset.css" rel="stylesheet" />
+    <link href="../../../static/css/visa.css" rel="stylesheet" type="text/css"/>
+    <script src="../../../static/js/jquery.min.js" type="text/javascript"></script>
+    <script src="../../../static/js/kendo.web.js" type="text/javascript"></script>
+    <!--[if lt IE 8]> 
+    <link rel="stylesheet" href="/static/css/ie.css" /> 
+    <script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+    <![endif]-->
+    <!-- @CLB@ -->
+    <script  src="../../../static/js/sync.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="extHeader">
+        <div></div>
+    </div>
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+				<li><a href="javascript:void(0);">旅游</a></li>
+				<li><a href="javascript:void(0);">签证</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">&nbsp;</a>
+                <span>&nbsp;</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent" style="overflow:hidden;">
+			<!-- start content -->
+            
+            <div class="actions block">
+                    <div class="col col-l sep-r">
+                        <button class="btns btn-return">返回</button>
+                    </div>
+                 <!--  <div class="col col-l">
+				   		<span class="page-title">新建订单</span>
+                     </div>-->
+                     <div class="col col-r sep-l">
+                           <button class="btns btn-blue ac-new">取消预订</button>
+						   <button class="btns btn-blue ac-new">修改</button>
+						   <button class="btns btn-blue ac-new">支付</button>
+                     </div>
+            </div>
+            <div class="panel" style="padding:0;width:100%">
+				<div class="panelLeftborder"></div>
+				<div class="panelRightborder"></div>
+				<div class="panelRelOrder" id="associatedOrder">
+				     <span style="float:left;padding:12px 5px 12px 15px">关联<br/>订单</span><span style="font-weight:bold;font-size:40px">0</span>
+				</div>
+				<div style="margin:0 7px;height:63px">
+					<div class="visaFlowLeft">
+						<div style="margin:3px 0 5px 0">
+							<span class="head visaOrderNun">订单号:</span>
+							<span class="visaFlowfont2">131112192536774</span>
+							<span class="visaFlowfont3">-订单类型：签证订单</span>
+						</div>
+						<div>
+						  <span>最后更新：<em class="visaFlowfont">创建订单</em>  更新时间：<em class="visaFlowfont">2013-06-15 11:23</em> 【更多操作日志】</span>
+						</div>
+					</div>
+					<div class="visaFlowRight">
+						<div class="hotelOrderStatusContainer" style="margin-left:20px">
+							<div class="status_ing statusContainer first">
+								<div class="statusDot"></div>
+								<div class="statusLineLeft statusLine"></div>
+								<div class="statusLineRight statusLine"></div>
+								创建
+							</div>
+							<div class="status_uncomplete statusContainer">
+								<div class="statusDot"></div>
+								<div class="statusLineLeft statusLine"></div>
+								<div class="statusLineRight statusLine"></div>
+								支付
+							</div>
+							<div class="status_uncomplete statusContainer">
+								<div class="statusDot"></div>
+								<div class="statusLineLeft statusLine"></div>
+								<div class="statusLineRight statusLine"></div>
+								受理
+							</div>
+							<div class="status_uncomplete statusContainer last">
+								<div class="statusDot"></div>
+								<div class="statusLineLeft statusLine"></div>
+								<div class="statusLineRight statusLine"></div>
+								完成
+							</div>
+						</div>
+						
+						<div class="hotelOrderStatusContainer">
+							<div class="status_uncomplete statusContainer first">
+								<div class="statusDot"></div>
+								<div class="statusLineLeft statusLine"></div>
+								<div class="statusLineRight statusLine"></div>
+								收银
+							</div>
+							<div class="status_uncomplete statusContainer last">
+								<div class="statusDot"></div>
+								<div class="statusLineLeft statusLine"></div>
+								<div class="statusLineRight statusLine"></div>
+								结算
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="panel">
+				<div class="panelTit">
+					订单信息
+				</div>
+				<div class="panelOrder clearfix">
+					<table>
+						<tr>
+							<th style="width:60px">客户名称</th>
+							<td style="width:170px">途牛</td>
+							<th style="width:60px">收款方式</th>
+							<td style="width:180px"></td>
+							<th style="width:60px">可用余额</th>
+							<td style="width:180px"><span style="color:#FF6700;font-size:14px">6870.00</span>元</td>
+							<th style="width:70px">旅游订单号</th>
+							<td style="">13800138000</td>
+						</tr>
+						<tr>
+						    <th style="width:60px">联系人</th>
+							<td>张大中</td>
+							<th>手机号码</th>
+							<td>13800138000</td>
+							<th>联系电话</th>
+							<td colspan="3">52800886</td>
+						</tr>
+						<tr>
+							<th>客户备注</th>
+							<td colspan="3"></td>
+							<th>内部备注</th>
+							<td colspan="3"></td>
+						</tr>
+					</table>
+				</div>
+				<div class="panelTit">
+					产品信息
+				</div>
+				<div class="panelTable clearfix">
+					<table>
+						<tr>
+							<th style="width:170px;">产品名称</th>
+							<th style="width:170px;">签证目的地</th>
+							<th style="width:170px;">签证类型</th>
+							<th style="width:170px;">是否需要面试</th>
+							<th style="width:170px;">价格</th>
+						</tr>
+						<tr>
+						    <td>美国个人旅游签证</td>
+							<td>美国</td>
+							<td>B1/B2 （旅游/商务/探亲）</td>
+							<td>需要面试</td>
+							<td><em class="price">￥1500.00</em>元/人</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			
+			<div class="enroll panel">  <!--enroll start-->
+                 <div class="ballNum">
+                     <label><span>签证团号：bm-131202-001</span></label>
+                     
+                 </div>
+                 
+					<div class="panelTit">游客信息</div>
+				    <div class="panelTable touristTable clearfix">
+					<table>
+						<tr>
+							<th style="width:65px;">中文姓名</th>
+							<th style="width:40px;">性别</th>
+							<th style="width:60px;">出生地</th>
+							<th style="width:60px;">出生日期</th>
+							<th style="width:60px;">护照号码</th>
+							<th style="width:60px;">护照有效期</th>
+							<th style="width:90px;">护照签发地</th>
+							<th style="width:60px;">送签城市</th>
+							<th style="width:60px;">手机号码</th>
+							<th style="width:70px;">身份证号码</th>
+							<th style="width:85px;">计划出行日期</th>
+							<th style="width:60px;">签证状态</th>
+						</tr>
+						<tr>
+							<td>张大国</td>
+							<td>F</td>
+							<td>上海</td>
+							<td>11/Aug/76</td>
+							<td>G23364650</td>
+							<td>31/Dec/14</td>
+							<td>上海</td>
+							<td>上海</td>
+							<td>13601123456</td>
+							<td>420325188808151538</td>
+							<td>2014-5-28</td>
+							<td>预约</td>
+						</tr>
+						<tr>
+							<td>张大国</td>
+							<td>F</td>
+							<td>上海</td>
+							<td>11/Aug/76</td>
+							<td>G23364650</td>
+							<td>31/Dec/14</td>
+							<td>上海</td>
+							<td>上海</td>
+							<td>13601123456</td>
+							<td>420325188808151538</td>
+							<td>2014-5-28</td>
+							<td>预约</td>
+						</tr>
+					</table>
+				</div>
+                	  
+                          
+            
+                 
+                 
+               
+                <!-- <div class="submit_btn">
+                      <a href="javascript:;" class="button_important adaptiveButton medium">
+                            <span class="left"></span>
+                            <span class="center" style="padding:0 25px;">提 交</span>
+                            <span class="right"></span>
+                     </a>
+                 </div>-->
+                 
+          </div>
+			<div class="write_message panel">
+                      <h3>销售人信息</h3>
+                      <table>
+                           <colgroup>
+                                <col width="83px"/>
+                           </colgroup>
+                           <tr>
+                               <td>销售人姓名：</td>
+                               <td>
+							     张三
+							   </td>
+                           </tr>
+                      </table>
+                 </div>
+              <!--应收合计-->
+				 <div class="block block5 block-calc">
+				  <div id="order_calc">
+					<ul class="flat-list">
+					  <li class="first">
+						<label> <span>应收合计</span>
+						  <input class="input-b" value="3000.00">
+						</label>
+					  </li>
+					  <li>
+						<label> <span style="margin:25px 0 0 0">=</span> </label>
+					  </li>
+					  <li>
+						<label> <span style="text-align:left">签证费用</span>
+						  <input value="1500.00">&nbsp;元/人</label>
+					  </li>
+					  <li>
+						<label> <span style="margin:25px 0 0 0">X</span> </label>
+					  </li>
+					  <li>
+						<label> <span style="text-align:left">人数</span>
+						  <input value="2">
+						  &nbsp;人 </label>
+					  </li>
+					</ul>
+				  </div>
+				</div>
+           
+            
+          
+              <!--<div class="grid-table-pagination page">
+                  <span class="grid-table-count">
+                      共 <em>132</em> 条记录
+                  </span>
+                  <span>
+                      <a href="#" class="prev">&nbsp;</a>
+                  </span>
+                  <span class="links">
+                      <a href="#">1</a>
+                      <a href="#">2</a>
+                      <a href="#" class="current">3</a>
+                      <a href="#">4</a>
+                      <a href="#">5</a>
+                      <a href="javascript:;">...</a>
+                      <a href="#">50</a>
+                  </span>
+                  <span>
+                      <a href="#" class="next">&nbsp;</a>
+                  </span>
+              </div>-->
+              
+            </div>
+          </div>
+ 
+    <!-- end of content -->
+    </div>
+    
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+    
+</body>
+</html>

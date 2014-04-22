@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 B2G 企业维护 消息通知设置</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/b2g.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.b2g.css" />
+    <link rel="stylesheet" href="../../static/css/b2g_management.css" media="all" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/b2g/common.js"></script>
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+    <!--[if lte IE 9]>
+    <script src="/static/js/html5.js"></script>
+    <script src="/static/js/vendor/IE7.min.js"></script>
+    <![endif]-->
+    <script>
+	$(function(){
+
+        $.role_ctoggle({evt:'change'});
+
+        $('.tmp-inner-table :checkbox').on('change',function(){
+            var that = $(this);
+            var td = that.closest('tr').find('td').last();
+            if(that.prop('checked')){
+                td.removeClass('disabled');
+                td.find('span').addClass('ac-tmp');
+            }else{
+                td.addClass('disabled');
+                td.find('span').removeClass('ac-tmp');
+            }
+        });
+
+        function Select_tempalte(){
+            this.detailTemplate = kendo.template($('#tmp-detail').html());
+            this.initPopup();
+        }
+
+        Select_tempalte.prototype = {
+            setPopDetail:function(data){
+                data = $.extend({
+                    'sys':'空',
+                    'sms':'空',
+                    'attachment':'/'
+                },data);
+                var html = this.detailTemplate(data);
+                this.detailContainer.html(html);
+            },
+            initPopup:function(){
+                var that = this;
+                that.popupWindow = new PopWindow('.ac-tmp .tmp-more',{
+                    title:'请选择模板',
+                    width:900,
+                    template:'#ac-tmp-template',
+                    open:function(e){
+                        // 打开的时候更新数据
+                        /* $.ajax({
+                        });*/
+                        that.trigger = e.sender.target;
+                        var tid = that.trigger.data('tid');
+
+                        if(!tid){
+                            throw Error('需要有data-tid属性');
+                        }else{
+                            that.radios.filter('#TID_'+tid).attr('checked',true).trigger('click').trigger('change');
+                        }
+
+                    }
+               }).init();
+
+               that.popup = that.popupWindow.element;
+               that.detailContainer = that.popup.find('.tmp-col2');
+               that.radios = that.popup.find('[type=radio]');
+
+               that.bindChangeDetail();
+               that.bindSave();
+            },
+            bindChangeDetail:function(){
+                var that = this;
+                that.radios.on('change',function(){
+                    var data = $(this).data();
+                    that.setPopDetail(data);
+                });
+            },
+            bindSave:function(){
+                //$.ajax();
+                var that = this;
+                that.popup.find('.btn-c1').on('click',function(){
+                    var tid = that.radios.filter(':checked').attr('value');
+                    that.trigger.data('tid',tid);
+                    that.popupWindow.close();
+                });
+            }
+        };
+
+        new Select_tempalte();
+
+})
+   </script>
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="top-line"></div>
+    <header class="main-header">
+        <div class="header-content">
+            <a class="logo" href="/">天地行 B2G</a>
+            <nav class="main-nav">
+                <ul class="clearfix">
+                    <li class="first"><a herf="#">行程预订</a></li>
+                    <li><a herf="#">行程管理</a></li>
+                    <li><a herf="#">数据服务</a></li>
+                    <li class="active"><a herf="#">企业维护</a></li>
+                    <li><a herf="#">系统设置</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+   
+    <div class="header-bar clearfix">
+        <div class="header-bar-content block-client">
+            <div class="block-clientBar">
+                <span>客户</span>
+                <select id="" style="width:160px;margin-left:5px;" data-role="dropdownlist" name="">
+                    <option value="">不夜城</option>
+                </select>
+                <span class="barBtns">
+                    <a href="javascript:void(0);" class="btn-color1 btn-color" >企业组织</a>&nbsp;<a href="javascript:void(0);" class="btn-color1 btn-color">企业成本中心</a>&nbsp;<a href="javascript:void(0);" class="btn-color1 btn-color">差旅政策</a>&nbsp;<a href="javascript:void(0);" class="btn-color1 btn-color">临 checked时差旅人</a>&nbsp;<a href="javascript:void(0);" class="btn-color2 btn-color">其他设置</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <section class="main-body clearfix">
+        <div class="main-body-content">
+            <div class="block block2">
+				<div class="block-header clearfix">
+                    <span class="tab-header">
+                        <a href="#" style="background:none;border:0;">审批设置</a>
+                        <a href="#" class="active">消息通知设置</a>
+                    </span>
+                </div>
+                
+                <div class="block-body clearfix tmp-body">
+                    <div class="row">
+                        <table class="tmp-header">
+                            <colgroup>
+                                <col width="165">
+                                <col width="365">
+                                <col width="300">
+                                <col>
+                            </colgroup>
+                            
+                            <tr>
+                            <th>流程状态</th>
+                            <th>通知方式</th>
+                            <th>接收对象</th>
+                            <th>模板名称</th>
+                            </tr>
+                        </table>
+
+                        <table class="tmp-table">
+                            <colgroup>
+                                <col width="165">
+                                <col width="365">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <td class="tmp-status">提交</td>
+                                <td>
+                                    <div class="tmp-options">
+                                        <label><input id="" type="checkbox" name="">系统消息</label>
+                                        <label><input id="" type="checkbox" name="">邮件</label>
+                                        <label><input id="" type="checkbox" name="">短信</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <table class="tmp-inner-table">
+                                        <colgroup>
+                                            <col width="300">
+                                            <col>
+                                        </colgroup>
+                                        <tr>
+                                            <td>
+                                                <label><input id="" type="checkbox" name="">预订人</label>
+                                            </td>
+                                            <td class="disabled"><span class="ac-tmp">CHALFE1009<i data-tid="15" class="icon tmp-more"></i></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input id="" type="checkbox" name="" checked>差旅人</label>
+                                            </td>
+                                            <td><span class="ac-tmp">CHALFE1009<i data-tid="123" class="icon tmp-more"></i></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input id="" type="checkbox" name="" checked>差旅联系人</label>
+                                            </td>
+                                            <td><span class="ac-tmp">CHALFE1009<i data-tid="1" class="icon tmp-more"></i></span></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="tmp-table">
+                            <colgroup>
+                                <col width="165">
+                                <col width="365">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <td class="tmp-status tmp-status-highlight">待审批</td>
+                                <td>
+                                    <div class="tmp-options">
+                                        <label><input id="" type="checkbox" name="">系统消息</label>
+                                        <label><input id="" type="checkbox" name="">邮件</label>
+                                        <label><input id="" type="checkbox" name="">短信</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <table class="tmp-inner-table">
+                                        <colgroup>
+                                            <col width="300">
+                                            <col>
+                                        </colgroup>
+                                        <tr>
+                                            <td>
+                                                <label><input id="" type="checkbox" name="">预订人</label>
+                                            </td>
+                                            <td class="disabled"><span>CHALFE1009<i class="icon tmp-more"></i></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input id="" type="checkbox" name="" checked>差旅人</label>
+                                            </td>
+                                            <td><span class="ac-tmp">CHALFE1009<i class="icon tmp-more"></i></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input id="" type="checkbox" name="" checked>差旅联系人</label>
+                                            </td>
+                                            <td><span class="ac-tmp">CHALFE1009<i class="icon tmp-more"></i></span></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="tmp-table">
+                            <colgroup>
+                                <col width="165">
+                                <col width="365">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <td class="tmp-status">审批通过</td>
+                                <td>
+                                    <div class="tmp-options">
+                                        <label><input id="" type="checkbox" name="">系统消息</label>
+                                        <label><input id="" type="checkbox" name="">邮件</label>
+                                        <label><input id="" type="checkbox" name="">短信</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <table class="tmp-inner-table">
+                                        <colgroup>
+                                            <col width="300">
+                                            <col>
+                                        </colgroup>
+                                        <tr>
+                                            <td>
+                                                <label><input id="" type="checkbox" name="">预订人</label>
+                                            </td>
+                                            <td class="disabled"><span>CHALFE1009<i class="icon tmp-more"></i></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input id="" type="checkbox" name="" checked>差旅人</label>
+                                            </td>
+                                            <td><span class="ac-tmp">CHALFE1009<i class="icon tmp-more"></i></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input id="" type="checkbox" name="" checked>差旅联系人</label>
+                                            </td>
+                                            <td><span class="ac-tmp">CHALFE1009<i class="icon tmp-more"></i></span></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="tmp-table">
+                            <colgroup>
+                                <col width="165">
+                                <col width="365">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <td class="tmp-status tmp-status-highlight">审批拒绝</td>
+                                <td>
+                                    <div class="tmp-options">
+                                        <label><input id="" type="checkbox" name="">系统消息</label>
+                                        <label><input id="" type="checkbox" name="">邮件</label>
+                                        <label><input id="" type="checkbox" name="">短信</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <table class="tmp-inner-table">
+                                        <colgroup>
+                                            <col width="300">
+                                            <col>
+                                        </colgroup>
+                                        <tr>
+                                            <td>
+                                                <label><input id="" type="checkbox" name="">预订人</label>
+                                            </td>
+                                            <td class="disabled"><span>CHALFE1009<i class="icon tmp-more"></i></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input id="" type="checkbox" name="" checked>差旅人</label>
+                                            </td>
+                                            <td><span class="ac-tmp">CHALFE1009<i class="icon tmp-more"></i></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input id="" type="checkbox" name="" checked>差旅联系人</label>
+                                            </td>
+                                            <td><span class="ac-tmp">CHALFE1009<i class="icon tmp-more"></i></span></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="tmp-table">
+                            <colgroup>
+                                <col width="165">
+                                <col width="365">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <td class="tmp-status">待付款</td>
+                                <td>
+                                    <div class="tmp-options">
+                                        <label><input id="" type="checkbox" name="">系统消息</label>
+                                        <label><input id="" type="checkbox" name="">邮件</label>
+                                        <label><input id="" type="checkbox" name="">短信</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <table class="tmp-inner-table">
+                                        <colgroup>
+                                            <col width="300">
+                                            <col>
+                                        </colgroup>
+                                        <tr>
+                                            <td>
+                                                <label><input id="" type="checkbox" name="">预订人</label>
+                                            </td>
+                                            <td class="disabled"><span>CHALFE1009<i class="icon tmp-more"></i></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input id="" type="checkbox" name="" checked>差旅人</label>
+                                            </td>
+                                            <td><span class="ac-tmp">CHALFE1009<i class="icon tmp-more"></i></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input id="" type="checkbox" name="" checked>差旅联系人</label>
+                                            </td>
+                                            <td><span class="ac-tmp">CHALFE1009<i class="icon tmp-more"></i></span></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="tmp-table">
+                            <colgroup>
+                                <col width="165">
+                                <col width="365">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <td class="tmp-status tmp-status-highlight">已完成</td>
+                                <td>
+                                    <div class="tmp-options">
+                                        <label><input id="" type="checkbox" name="">系统消息</label>
+                                        <label><input id="" type="checkbox" name="">邮件</label>
+                                        <label><input id="" type="checkbox" name="">短信</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <table class="tmp-inner-table">
+                                        <colgroup>
+                                            <col width="300">
+                                            <col>
+                                        </colgroup>
+                                        <tr>
+                                            <td>
+                                                <label><input id="" type="checkbox" name="">预订人</label>
+                                            </td>
+                                            <td class="disabled"><span>CHALFE1009<i class="icon tmp-more"></i></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input id="" type="checkbox" name="" checked>差旅人</label>
+                                            </td>
+                                            <td><span class="ac-tmp">CHALFE1009<i class="icon tmp-more"></i></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input id="" type="checkbox" name="" checked>差旅联系人</label>
+                                            </td>
+                                            <td><span class="ac-tmp">CHALFE1009<i class="icon tmp-more"></i></span></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="row">
+                        <div class="row-title">
+                            专项设置 
+                        </div>
+
+                        <div class="row-item">
+                        <h3>
+                            <label><input id="" data-role="ctoggle" data-target="#deadlineTable" type="checkbox" name="">机票deadline提醒设置</label>
+                        </h3>
+                        <table class="tmp-table" style="display:none;" id="deadlineTable">
+                            <colgroup>
+                                <col width="165">
+                                <col width="365">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <td class="tmp-status tmp-status-highlight">
+                                    起飞前
+                                    <input id="" style="width:40px;" type="text" name="">
+                                    天
+                                </td>
+                                <td>
+                                    <div class="tmp-options">
+                                        <label><input id="" type="checkbox" name="">系统消息</label>
+                                        <label><input id="" type="checkbox" name="">邮件</label>
+                                        <label><input id="" type="checkbox" name="">短信</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <table class="tmp-inner-table">
+                                        <colgroup>
+                                            <col width="300">
+                                            <col>
+                                        </colgroup>
+                                        <tr>
+                                            <td>
+                                                <label><input id="" type="checkbox" name="">预订人</label>
+                                            </td>
+                                            <td class="disabled"><span>CHALFE1009<i class="icon tmp-more"></i></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input id="" type="checkbox" name="" checked>差旅人</label>
+                                            </td>
+                                            <td><span class="ac-tmp">CHALFE1009<i class="icon tmp-more"></i></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input id="" type="checkbox" name="" checked>差旅联系人</label>
+                                            </td>
+                                            <td><span class="ac-tmp">CHALFE1009<i class="icon tmp-more"></i></span></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        </div>
+
+                        <div class="row-item">
+                        <h3>
+                            <label><input id="" data-role="ctoggle" data-target="#noshowTable" type="checkbox" name="">no show机票提醒设置</label>
+                        </h3>
+                        <table class="tmp-table" style="display:none;" id="noshowTable">
+                            <colgroup>
+                                <col width="165">
+                                <col width="365">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <td class="tmp-status tmp-status-highlight">
+                                    no show
+                                </td>
+                                <td>
+                                    <div class="tmp-options">
+                                        <label><input id="" type="checkbox" name="">系统消息</label>
+                                        <label><input id="" type="checkbox" name="">邮件</label>
+                                        <label><input id="" type="checkbox" name="">短信</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <table class="tmp-inner-table">
+                                        <colgroup>
+                                            <col width="300">
+                                            <col>
+                                        </colgroup>
+                                        <tr>
+                                            <td>
+                                                <label><input id="" type="checkbox" name="">预订人</label>
+                                            </td>
+                                            <td class="disabled"><span>CHALFE1009<i class="icon tmp-more"></i></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input id="" type="checkbox" name="" checked>差旅人</label>
+                                            </td>
+                                            <td><span class="ac-tmp">CHALFE1009<i class="icon tmp-more"></i></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label><input id="" type="checkbox" name="" checked>差旅联系人</label>
+                                            </td>
+                                            <td><span class="ac-tmp">CHALFE1009<i class="icon tmp-more"></i></span></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+                <div class="row-btns" style="margin:25px 0 40px 0;">
+                    <a href="javascript:;" class="btns btn-s2 btn-c1">保 存</a>
+                    <a href="javascript:;" class="btns btn-s2 btn-c5">取 消</a>
+                </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <p class="copyright">Copyright &copy; 2013 天地行 All Rights Reserved.     沪ICP备08101503号</p>
+    </footer>
+</div>
+
+
+
+<script type="text/x-kendo-template" id="ac-tmp-template">
+<div class="row">
+    <div class="search-wrapper">
+         <input placeholder="请输入模板名称" type="text" class="search-input" id="" name="">
+        <i class="icon icon-search">&nbsp;</i>
+    </div>
+</div>
+<div class="row clearfix">
+    <div class="col tmp-col1 tmp-list clearfix">
+        <ul>
+            <li>
+                <label>
+                    <input id="TID_1" value="1" data-sms="短信文字短信文字短信文字短信文字短信文字短信文字"
+                        data-sys="系系统消息系统消息系统消息系统消息统消息"
+                        data-attachment="http://www.baidu.com/hello.doc"
+                         id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字模板名称字段有十个字</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="TID_15" value="15" data-sms="2222222222短信文字短信文字短信文字短信文字短信文字短信文字"
+                        data-sys="22222222系系统消息系统消息系统消息系统消息统消息"
+                        data-attachment="http://www.baidu.com/hello.doc"
+                         id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="TID_123" value="123" data-sms="xalfdksajfldksajl2222222222短信文字短信文字短信文字短信文字短信文字短信文字"
+                        data-sys="fdasjfdlksajl22222222系系统消息系统消息系统消息系统消息统消息"
+                        data-attachment="http://www.baidu.com/hello.doc"
+                         id="" type="radio" name="xox">
+                    <span><s>已选中的模板XXX</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="" type="radio" name="xox">
+                    <span><s>模板XXX</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字</s></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input id="" type="radio" name="xox">
+                    <span><s>模板名称字段有十个字</s></span>
+                </label>
+            </li>
+        </ul>
+</div>
+<div class="col tmp-col2">
+</div>
+
+</div>
+
+    <div class="row row-btns">
+        <a href="javascript:;" class="btns btn-s2 btn-c1">确 定</a>
+        <a href="javascript:;" class="close btns btn-s2 btn-c5">取 消</a>
+    </div>
+</script>
+
+<script type="text/x-kendo-template" id="tmp-detail">
+    <h4>短信</h4>
+    <p>#= data.sms #</p>
+    <h4>系统消息</h4>
+    <p>#= data.sys #</p>
+    <h4>邮件</h4>
+    <a href="#= data.attachment #"><i class="icon icon-mail">&nbsp;</i>下载附件</a>
+</script>
+
+
+</body>
+</html>
+

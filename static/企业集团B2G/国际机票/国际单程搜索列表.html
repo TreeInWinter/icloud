@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 B2G 国际单程搜索列表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/b2g.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.b2g.css" />
+    <link rel="stylesheet" href="../../static/css/b2g_flight.css" media="all" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/suitabs.min.js"></script>
+    <script type="text/javascript" src="../../static/js/b2g/common.js"></script>
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+    <!--[if lte IE 9]>
+    <script src="/static/js/html5.js"></script>
+    <script src="/static/js/vendor/IE7.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="top-line"></div>
+    <header class="main-header">
+        <div class="header-content">
+            <a class="logo" href="/">天地行 B2G</a>
+            <nav class="main-nav">
+                <ul class="clearfix">
+                    <li class="first active"><a herf="#">行程预订</a></li>
+                    <li><a herf="#">行程管理</a></li>
+                    <li><a herf="#">数据服务</a></li>
+                    <li><a herf="#">创业维护</a></li>
+                    <li><a herf="#">系统设置</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="header-bar clearfix">
+        <div class="header-bar-content">
+            <i class="tips"></i><span>请先选择差旅人   * 默认状态下您为自己预订</span>
+            <div class="setuser">
+                <a href="javascript:void(0);">设置差旅人</a>
+            </div>
+            <div class="for_reason">
+                <span class="reason_checkbox checked"></span><label for="reason">因私</label><input type="checkbox" style="display:none;" id="reason" value="for_private" name="reason"/>
+            </div>
+        </div>
+    </div>
+    <section class="main-body clearfix">
+        <div class="main-body-content">
+        	<div class="titTop clearfix">
+                <h3 class="titleH3">上海到重庆机票 （单程）</h3>
+                <div class="flowImg">
+                        <em class="curFlowImg"><i></i>选择</em>
+                        <em>预订</em>
+                        <em>填写</em>
+                        <em>加入行程</em>
+                        <em class="lastFlowGray">提交行程</em>
+                </div>
+        	</div>
+
+      	 	<div class="seekCon">
+                <div class="againSeek">
+                    <table>
+                          <colgroup>
+                               <col width="210px"/>
+                               <col width="70px"/>
+                               <col width="210px"/>
+                               <col width="70px"/>
+                               <col width="210px"/>
+                               <col width="45px"/>
+                               <col width="190px"/>
+                               <col width="130px"/>
+                          </colgroup>
+                          <tr>
+                              <td rowspan="2">
+                                   <select data-role="dropdownlist" style="width:160px;" id="trip_type">
+                                         <option selected  value="one_way">单程</option>
+                                         <option value="round_trip">往返</option>
+                                   </select>
+                              </td>
+                              <td>出发城市：</td>
+                              <td><input type="text" value="北京（BJS）" /></td>
+                              <td>出发时间：</td>
+                              <td><input type="text" value="" class="datepicker"/></td>
+                              <td>舱位：</td>
+                              <td>
+                                  <select data-role="dropdownlist" style="width:150px;">
+                                       <option>不限</option>
+                                       <option>经济舱</option>
+                                       <option>商务舱</option>
+                                       <option>头等舱</option>
+                                  </select>
+                              </td>
+                              <td><button type="button" class="commonBtn lightBlueBtn" style="padding:7px 25px;">重新搜索</button></td>
+                          </tr>
+                          <tr>
+                              <td>到达城市：</td>
+                              <td><input type="text" value="纽约（NYC）"/></td>
+                              <td colspan="2"><label id="return_label"><em>返程时间：</em><input type="text" value="" class="datepicker grayed" id="return_date"  disabled="disabled" /></label></td>
+                              <td></td>
+                              <td></td>
+                              <td valign="bottom">
+                                  <label class="heiSeek toggle_trigger" data-toggle='{"target":"#unfoldCon","textFilter":"i","toggleClass":["heiSeek","putAway"],"toggleText":["高级搜索","收起"]}'><i>高级搜索</i> <em></em></label>
+                                  <label class="putAway" style="display:none;"><i>收起</i> <em></em></label>
+                              </td>
+                          </tr>
+                     </table>
+                </div>
+                <div class="unfoldCon" id="unfoldCon" style="display:none;">
+                     <b>起飞时间：</b>
+                     <select data-role="dropdownlist"  style="width:120px;">
+                          <option>不限</option>
+                          <option>00:00-06:00</option>
+                          <option selected>06:00-12:00</option>
+                          <option>12:00-18:00</option>
+                          <option>18:00-24:00</option>
+                     </select>
+                     <b style="margin-left:85px;">航空公司：</b>
+                     <select data-role="dropdownlist"  style="width:150px; margin-right:50px;">
+                          <option>中国国际航空 &nbsp; CA</option>
+                          <option>东方航空 &nbsp; MU</option>
+                          <option>南方航空</option>
+                          <option>新加坡航空</option>
+                          <option>香港航空</option>
+                     </select>
+                     <label><input type="radio" name="type" checked/>全部</label>
+                     <label><input type="radio" name="type"/>直飞</label>
+                     <label><input type="radio" name="type"/>中转</label>
+                </div>
+        </div>
+
+        <ul class="date clearfix">
+            <li>
+               <a href="#" style="width:35px; min-height:42px;"> <i class="highlightI"></i> </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>07-20 周一</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>07-20 周二</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>07-20 周三</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li class="current">
+                <a href="#">
+                    <div>07-20 周四</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>07-20 周五</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>07-20 周六</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>07-20 周日</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li style="border:0;" class="last_li">
+                <a href="#" style=" width:36px; padding:20px 0;">
+                     <span class="highlightSpan">&nbsp;</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="airport">
+             <em>起飞机场：</em>
+             <label><input type="checkbox"/>首都国际机场</label>
+             <em>降落机场：</em>
+             <label><input type="checkbox"/>全部</label>
+             <label><input type="checkbox"/>纽约肯尼迪机场</label>
+             <label><input type="checkbox"/>纽瓦克机场</label>
+             <label><input type="checkbox"/>拉瓜迪机场</label>
+        </div>
+        <div class="timePrice">
+             <label>起飞时间<em></em></label>
+             <label>降落时间<em></em></label>
+             <label>价格<em class="arrDown"></em></label>
+             <label>行程总时长<em></em></label>
+             <label class="currentCli">中转次数<em class="arrUpOrange"></em></label>
+        </div>
+
+        <div class="airContent">  <!--airContent start-->
+             <div class="module clearfix specialBg"> <!--module start-->
+                   <div class="airName">
+                           <div id="manyAirName">
+                                <div class="airMore"><i class="airLogo"></i></div>
+                                <div class="nameMany"><em>多家航空公司</em></div>
+                           </div>
+                   </div>
+                   <div class="centercon">
+                        <div class="transfTime">
+                             <b>07:20</b>
+                             <em>————</em>
+                             <i class="twiceTransfer">2程中转 </i>
+                             <em>————</em>
+                             <b>09:20</b>
+                             <span class="dayNumber" style="right:13%;">+1</span>
+                        </div>
+                        <ul class="place clearfix">
+                            <li>北京</li>
+                            <!--<li>上海</li>-->
+                            <li class="pullRight">纽约</li>
+                        </ul>
+                        <div class="airportName">
+                             <em>首都国际机场T2</em>
+                             <em>纽瓦克机场</em>
+                        </div>
+                        <div class="duration">
+                             <label class="spread" style="display:none;"><i>飞行计划</i> <em></em></label>
+                             <label class="paUp toggle_trigger" data-toggle='{"target":"#openCon","textFilter":"i","toggleClass":["spread","paUp"],"toggleText":["飞行计划","收起"]}'><i>收起</i> <em></em></label>
+                             <span style="color:#999999; font-size:14px;">总时长22小时55分钟</span>
+                        </div>
+                   </div>
+                   <div class="totalPrice">
+                        <div class="toPriceTop"><em>￥</em><b>5200</b></div>
+                        <div class="toPriceCenter">燃油 + 参考税： 0 +1344 元</div>
+                        <div class="toPriceBottom">
+                             <a href="javascript:void(0);" class="linkA">退改签限制</a>
+                             <!--<label class="exclMark transit"><i></i>过境签</label>-->
+                             <label class="exclMark difAir"><i></i>不同机场</label>
+                        </div>
+                   </div>
+                   <div class="moduleRight">
+                        <button type="button" class="commonBtn lightRedBtn">核算并预订</button>
+                        <em class="only">仅剩1张</em>
+                   </div>
+             </div> <!--module end-->
+             <div class="openCon clearfix" id="openCon">
+                   <em class="openArrow">&nbsp;</em>
+                   <ul class="airInfoList">
+                       <li>
+                           <div class="airInfoTitle">
+                                <code class="logo_MU"></code>
+                                <em class="airInfoName">中国国航</em>
+                                <label class="cabinType"><b>CA1835</b> &nbsp; 机型 777 &nbsp; 经济舱</label>
+                                <label class="airDuration"><em></em>飞行时长：2小时15分</label>
+                           </div>
+                           <div class="airInfoCont">
+                                  <em class="airLeftLine"></em>
+                                  <div class="takeOffArrive">
+                                       <p>起飞：12月01日 &nbsp; <b>08:00</b> &nbsp; 北京   首都国际机场 PEK</p>
+                                       <p>到达：12月01日 &nbsp; <b> 08:00 </b> &nbsp; 北京   首都国际机场 PEK</p>
+                                  </div>
+                                  <div class="tranTime">
+                                       <i class="tranImg"></i>
+                                       <span class="tran_air">上海中转 &nbsp; 虹桥机场  &nbsp; <em>不同机场</em></span>
+                                       <label class="stopTime">
+                                             <em></em>
+                                             <span>停留时长：6小时15分</span>
+                                       </label>
+                                  </div>
+                           </div>
+                       </li>
+                       <li>
+                           <div class="airInfoTitle">
+                                <code class="logo_MU"></code>
+                                <em class="airInfoName">中国国航</em>
+                                <label class="cabinType"><b>CA1835</b> &nbsp; 机型 777 &nbsp; 经济舱</label>
+                                <label class="airDuration"><em></em>飞行时长：2小时15分</label>
+                           </div>
+                           <div class="airInfoCont">
+                                  <div class="takeOffArrive">
+                                       <p>起飞：12月01日 &nbsp; <b>08:00</b> &nbsp; 北京   首都国际机场 PEK</p>
+                                       <p>到达：12月01日 &nbsp; <b> 08:00 </b> &nbsp; 北京   首都国际机场 PEK</p>
+                                  </div>
+                           </div>
+                       </li>
+                   </ul>
+             </div>
+
+             <div class="module clearfix"> <!--module start-->
+                   <div class="airName">
+                           <div id="manyAirName">
+                                <div class="airMore"><i class="airLogo"></i></div>
+                                <div class="nameMany"><em>多家航空公司</em></div>
+                           </div>
+                   </div>
+                   <div class="centercon">
+                        <div class="transfTime">
+                             <b>07:20</b>
+                             <em>————</em>
+                             <i class="oneTransfer">1程中转 </i>
+                             <em>————</em>
+                             <b>09:20</b>
+                        </div>
+                        <ul class="place clearfix">
+                            <li>北京</li>
+                            <li>上海</li>
+                            <li>纽约</li>
+                        </ul>
+                        <div class="airportName">
+                             <em>首都国际机场T2</em>
+                             <em>纽瓦克机场</em>
+                        </div>
+                        <div class="duration">
+                             <label class="spread"><i>飞行计划</i> <em></em></label>
+                             <label class="paUp" style="display:none;"><i>收起</i> <em></em></label>
+                             <span style="color:#999999; font-size:14px;">总时长22小时55分钟</span>
+                        </div>
+                   </div>
+                   <div class="totalPrice">
+                        <div class="toPriceTop"><em>￥</em><b>5200</b></div>
+                        <div class="toPriceCenter">燃油 + 参考税： 0 +1344 元</div>
+                        <div class="toPriceBottom">
+                             <a href="javascript:void(0);" class="linkA">退改签限制</a>
+                             <label class="exclMark difAir"><i></i>不同机场</label>
+                        </div>
+                   </div>
+                   <div class="moduleRight">
+                        <button type="button" class="commonBtn lightRedBtn">核算并预订</button>
+                        <em class="only">仅剩1张</em>
+                   </div>
+             </div> <!--module end-->
+
+             <div class="module clearfix specialBg"> <!--module start-->
+                   <div class="airName">
+                        <div class="airMore"><i class="logo_CA"></i></div>
+                        <div class="nameMany"><em style="border:none;">中国国航</em></div>
+                   </div>
+                   <div class="centercon">
+                        <div class="transfTime">
+                             <b>07:20</b>
+                             <em>————</em>
+                             <i class="twiceTransfer">2程中转 </i>
+                             <em>————</em>
+                             <b>09:20</b>
+                        </div>
+                        <ul class="place clearfix">
+                            <li>北京</li>
+                            <!--<li>上海</li>-->
+                            <li class="pullRight">纽约</li>
+                        </ul>
+                        <div class="airportName">
+                             <em>首都国际机场T2</em>
+                             <em>纽瓦克机场</em>
+                        </div>
+                        <div class="duration">
+                             <label class="spread"><i>飞行计划</i> <em></em></label>
+                             <label class="paUp" style="display:none;"><i>收起</i> <em></em></label>
+                             <span style="color:#999999; font-size:14px;">总时长22小时55分钟</span>
+                        </div>
+                   </div>
+                   <div class="totalPrice">
+                        <div class="toPriceTop"><em>￥</em><b>5200</b></div>
+                        <div class="toPriceCenter">燃油 + 参考税： 0 +1344 元</div>
+                        <div class="toPriceBottom">
+                             <a href="javascript:void(0);" class="linkA">退改签限制</a>
+                        </div>
+                   </div>
+                   <div class="moduleRight">
+                        <button type="button" class="commonBtn lightRedBtn">核算并预订</button>
+                        <em class="only">仅剩1张</em>
+                   </div>
+             </div> <!--module end-->
+
+             <div class="module clearfix"> <!--module start-->
+                   <div class="airName">
+                           <div id="manyAirName">
+                                <div class="airMore"><i class="airLogo"></i></div>
+                                <div class="nameMany"><em>多家航空公司</em></div>
+                           </div>
+                   </div>
+                   <div class="centercon">
+                        <div class="transfTime">
+                             <b>07:20</b>
+                             <em>————</em>
+                             <i class="oneTransfer">1程中转 </i>
+                             <em>————</em>
+                             <b>09:20</b>
+                        </div>
+                        <ul class="place clearfix">
+                            <li>北京</li>
+                            <li>上海</li>
+                            <li>纽约</li>
+                        </ul>
+                        <div class="airportName">
+                             <em>首都国际机场T2</em>
+                             <em>纽瓦克机场</em>
+                        </div>
+                        <div class="duration">
+                             <label class="spread"><i>飞行计划</i> <em></em></label>
+                             <label class="paUp" style="display:none;"><i>收起</i> <em></em></label>
+                             <span style="color:#999999; font-size:14px;">总时长22小时55分钟</span>
+                        </div>
+                   </div>
+                   <div class="totalPrice">
+                        <div class="toPriceTop"><em>￥</em><b>5200</b></div>
+                        <div class="toPriceCenter">燃油 + 参考税： 0 +1344 元</div>
+                        <div class="toPriceBottom">
+                             <a href="javascript:void(0);" class="linkA">退改签限制</a>
+                             <label class="exclMark difAir"><i></i>不同机场</label>
+                        </div>
+                   </div>
+                   <div class="moduleRight">
+                        <button type="button" class="commonBtn lightRedBtn">核算并预订</button>
+                        <em class="only">仅剩1张</em>
+                   </div>
+             </div> <!--module end-->
+
+             <div class="module clearfix specialBg"> <!--module start-->
+                   <div class="airName">
+                        <div class="airMore"><i class="logo_CA"></i></div>
+                        <div class="nameMany"><em style="border:none;">中国国航</em></div>
+                   </div>
+                   <div class="centercon">
+                        <div class="transfTime">
+                             <b>07:20</b>
+                             <em>————</em>
+                             <i class="twiceTransfer">2程中转 </i>
+                             <em>————</em>
+                             <b>09:20</b>
+                        </div>
+                        <ul class="place clearfix">
+                            <li>北京</li>
+                            <!--<li>上海</li>-->
+                            <li class="pullRight">纽约</li>
+                        </ul>
+                        <div class="airportName">
+                             <em>首都国际机场T2</em>
+                             <em>纽瓦克机场</em>
+                        </div>
+                        <div class="duration">
+                             <label class="spread"><i>飞行计划</i> <em></em></label>
+                             <label class="paUp" style="display:none;"><i>收起</i> <em></em></label>
+                             <span style="color:#999999; font-size:14px;">总时长22小时55分钟</span>
+                        </div>
+                   </div>
+                   <div class="totalPrice">
+                        <div class="toPriceTop"><em>￥</em><b>5200</b></div>
+                        <div class="toPriceCenter">燃油 + 参考税： 0 +1344 元</div>
+                        <div class="toPriceBottom">
+                             <a href="javascript:void(0);" class="linkA">退改签限制</a>
+                        </div>
+                   </div>
+                   <div class="moduleRight">
+                        <button type="button" class="commonBtn lightRedBtn">核算并预订</button>
+                        <em class="only">仅剩1张</em>
+                   </div>
+             </div> <!--module end-->
+
+             <div class="module clearfix"> <!--module start-->
+                   <div class="airName">
+                           <div id="manyAirName">
+                                <div class="airMore"><i class="airLogo"></i></div>
+                                <div class="nameMany"><em>多家航空公司</em></div>
+                           </div>
+                   </div>
+                   <div class="centercon">
+                        <div class="transfTime">
+                             <b>07:20</b>
+                             <em>————</em>
+                             <i class="oneTransfer">1程中转 </i>
+                             <em>————</em>
+                             <b>09:20</b>
+                        </div>
+                        <ul class="place clearfix">
+                            <li>北京</li>
+                            <li>上海</li>
+                            <li>纽约</li>
+                        </ul>
+                        <div class="airportName">
+                             <em>首都国际机场T2</em>
+                             <em>纽瓦克机场</em>
+                        </div>
+                        <div class="duration">
+                             <label class="spread"><i>飞行计划</i> <em></em></label>
+                             <label class="paUp" style="display:none;"><i>收起</i> <em></em></label>
+                             <span style="color:#999999; font-size:14px;">总时长22小时55分钟</span>
+                        </div>
+                   </div>
+                   <div class="totalPrice">
+                        <div class="toPriceTop"><em>￥</em><b>5200</b></div>
+                        <div class="toPriceCenter">燃油 + 参考税： 0 +1344 元</div>
+                        <div class="toPriceBottom">
+                             <a href="javascript:void(0);" class="linkA">退改签限制</a>
+                             <label class="exclMark difAir"><i></i>不同机场</label>
+                        </div>
+                   </div>
+                   <div class="moduleRight">
+                        <button type="button" class="commonBtn lightRedBtn">核算并预订</button>
+                        <em class="only">仅剩1张</em>
+                   </div>
+             </div> <!--module end-->
+
+             <div class="checkMore"><a href="javascript:void(0);">点击查看更多</a></div>
+             <div class="smallLoading"><em></em> <b>数据正在加载中……</b></div>
+        </div>  <!--airContent end-->
+
+
+	</div>
+    </section>
+    <footer class="main-footer">
+        <p class="copyright">Copyright &copy; 2013 天地行 All Rights Reserved.     沪ICP备08101503号</p>
+    </footer>
+</div>
+
+<!--<script type="text/x-kendo-template" id="transit">
+	<label class="floatTierCon"><b>请注意：</b><span>此行程需要过境日本转机，中国大陆公民过境日本，可能需要申请该国过境签证，请确认自己的签证无误后再出票。</span></label>
+</script>-->
+
+<script type="text/x-kendo-template" id="difAir">
+	<label class="floatTierCon"><b>请注意：</b><span>此行程需要在不同机场转机，请合理安排您的时间和行程。</span></label>
+</script>
+
+<script type="text/x-kendo-template" id="airLogo">
+	<table class="moreAirCon">
+	       <colgroup>
+                 <col width="30px"/>
+                 <col width="65px"/>
+                 <col width="70px"/>
+                 <col width="70px"/>
+           </colgroup>
+           <tr>
+               <td><code></code></td>
+               <td>中国国航</td>
+               <td><b>CA1835</b></td>
+               <td>机型 777</td>
+           </tr>
+           <tr>
+               <td><code></code></td>
+               <td>荷兰航空</td>
+               <td><b>MU5137</b></td>
+               <td>机型 333</td>
+           </tr>
+	</table>
+</script>
+
+<script type="text/x-kendo-template" id="oneTransfer">
+	<table class="transferList">
+	       <colgroup>
+                 <col width="40px"/>
+                 <col width="140px"/>
+                 <col width="140px"/>
+           </colgroup>
+           <tr>
+               <th>中转</th>
+               <td>香港（香港国际机场）</td>
+               <td>停留时长：2小时15分</td>
+           </tr>
+	</table>
+</script>
+
+<script type="text/x-kendo-template" id="twiceTransfer">
+	<table class="transferList">
+	       <colgroup>
+                 <col width="40px"/>
+                 <col width="140px"/>
+                 <col width="140px"/>
+           </colgroup>
+           <tr>
+               <th>中转</th>
+               <td>香港（香港国际机场）</td>
+               <td>停留时长：2小时15分</td>
+           </tr>
+		   <tr>
+               <th>经停</th>
+               <td>东京（东京国际机场）</td>
+               <td>停留时长：2小时15分</td>
+           </tr>
+	</table>
+</script>
+
+	<script>
+
+		$(function(){
+
+			$(".totalPrice .transit").kendoTooltip({
+					position:"bottom", //left right top
+					wrapperClass:"lineWeight",
+					width:200,
+					content:function(){
+						return $("#transit").html();
+					},
+					offsetY:10
+			});
+
+			$(".totalPrice .difAir").kendoTooltip({
+				position:"bottom", //left right top
+				wrapperClass:"lineWeight",
+				width:200,
+                content:{
+                    url :"/php/dirAir.php"
+				},
+				offsetY:10
+			});
+
+			$(".airName #manyAirName").kendoTooltip({
+				position:"bottom", //left right top
+				wrapperClass:"lineWeight",
+				content:function(){
+					return $("#airLogo").html();
+				},
+				offsetY:-20
+			});
+
+			$(".transfTime .dayNumber").kendoTooltip({
+				position:"bottom", //left right top
+				wrapperClass:"lineWeight",
+				content:function(){
+					return "到达时间为第2天，2013-12-24 09：20。";
+				},
+				offsetY:5
+			});
+
+			//中转浮层
+			$(".transfTime .oneTransfer").kendoTooltip({
+				position:"bottom", //left right top
+				wrapperClass:"lineWeight",
+				width:320,
+				content:function(){
+					return $("#oneTransfer").html();
+				},
+				offsetY:10
+			});
+
+			$(".transfTime .twiceTransfer").kendoTooltip({
+				position:"bottom", //left right top
+				wrapperClass:"lineWeight",
+				width:320,
+				content:function(){
+					return $("#twiceTransfer").html();
+				},
+				offsetY:10
+			});
+
+
+		});
+	</script>
+
+    <script>
+
+        $(function(){
+
+            $("#trip_type").change(function(){
+				console.log($(this).val());
+                if($(this).val() == "one_way"){
+                    $("#return_label input").addClass("grayed").prop("disabled",true);
+                }else{
+					$("#return_date").removeClass("grayed").prop("disabled",false);
+
+                }
+            });
+        });
+    </script>
+
+
+
+    <div class="workbench">
+        <div class="workbench-bg"></div>
+        <span class="wb-trigger-wrapper">
+            <span class="wb-trigger-bg"></span>
+            <span class="wb-trigger wb-icon"><i class="wb-icon wb-trigger-new">&nbsp;</i><i class="wb-icon wb-trigger-icon">&nbsp;</i></span>
+        </span>
+        <span class="wb-quick-actions wb-actions">
+            <a class="wb-preference" title="设置" href=""><i class="wb-icon wb-preference-icon">&nbsp;</i></a>
+            <a class="wb-logout" title="退出" href=""><i class="wb-icon wb-logout-icon">&nbsp;</i></a>
+        </span>
+        <div class="wb-inner">
+            <div class="wb-content">
+                <div class="wb-header">
+                    <span class="wb-avatar2 wb-icon">&nbsp;</span>
+                    <span class="wb-welcometext">
+                        上午好，
+                        <span class="wb-email">xiachen.pan@travelzen.com</span>
+                    </span>
+                    <span class="wb-actions">
+                        <a class="wb-preference" href=""><i class="wb-icon wb-preference-icon">&nbsp;</i>设置</a>
+                        <a class="wb-logout" href=""><i class="wb-icon wb-logout-icon">&nbsp;</i>退出</a>
+                    </span>
+                </div>
+                <div class="wb-block wb-links clearfix">
+                    <ul>
+                        <li class="wb-link-item">
+                        <a href="#" class="wb-link wb-link1">
+                            <span class="wb-icon wb-link-count">13</span>
+                            <span class="wb-icon wb-link-image">&nbsp;</span>
+                            <span class="wb-link-text">我的审批订单</span>
+                        </a>
+                        </li>
+                        <li class="wb-link-item">
+                        <a href="#" class="wb-link wb-link2">
+                            <span class="wb-icon wb-link-count">13</span>
+                            <span class="wb-icon wb-link-image">&nbsp;</span>
+                            <span class="wb-link-text">我的预订订单</span>
+                        </a>
+                        </li>
+                        <li class="wb-link-item">
+                        <a href="#" class="wb-link wb-link3">
+                            <span class="wb-icon wb-link-count">13</span>
+                            <span class="wb-icon wb-link-image">&nbsp;</span>
+                            <span class="wb-link-text">我的差率政策</span>
+                        </a>
+                        </li>
+                        <li class="wb-link-item">
+                        <a href="#" class="wb-link wb-link4">
+                            <span class="wb-icon wb-link-count">13</span>
+                            <span class="wb-icon wb-link-image">&nbsp;</span>
+                            <span class="wb-link-text">我的差旅秘书</span>
+                        </a>
+                        </li>
+                        <li class="wb-link-item">
+                        <a href="#" class="wb-link wb-link5">
+                            <span class="wb-icon wb-link-count">13</span>
+                            <span class="wb-icon wb-link-image">&nbsp;</span>
+                            <span class="wb-link-text">信用卡设置</span>
+                        </a>
+                        </li>
+                        <li class="wb-link-item">
+                        <a href="#" class="wb-link wb-link6">
+                            <span class="wb-icon wb-link-count">13</span>
+                            <span class="wb-icon wb-link-image">&nbsp;</span>
+                            <span class="wb-link-text">偏好设置</span>
+                        </a>
+                        </li>
+                        <li class="wb-link-item">
+                        <a href="#" class="wb-link wb-link7">
+                            <span class="wb-icon wb-link-count">13</span>
+                            <span class="wb-icon wb-link-image">&nbsp;</span>
+                            <span class="wb-link-text">代理审批人设置</span>
+                        </a>
+                        </li>
+                        <li class="wb-link-item">
+                        <a href="#" class="wb-link wb-link8">
+                            <span class="wb-icon wb-link-count">13</span>
+                            <span class="wb-icon wb-link-image">&nbsp;</span>
+                            <span class="wb-link-text">差旅状况分析</span>
+                        </a>
+                        </li>
+                        <li class="wb-link-item">
+                        <a href="#" class="wb-link wb-link9">
+                            <span class="wb-icon wb-link-count">13</span>
+                            <span class="wb-icon wb-link-image">&nbsp;</span>
+                            <span class="wb-link-text">临时差旅人维护</span>
+                        </a>
+                        </li>
+                        <li class="wb-link-item">
+                        <a href="#" class="wb-link wb-link10">
+                            <span class="wb-icon wb-link-count">13</span>
+                            <span class="wb-icon wb-link-image">&nbsp;</span>
+                            <span class="wb-link-text">noshow机票查询</span>
+                        </a>
+                        </li>
+                        <li class="wb-link-item">
+                        <a href="#" class="wb-link wb-link-add">
+                            <span class="wb-icon wb-link-image">&nbsp;</span>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="wb-block wb-tabs">
+                    <div class="wb-tab-header">
+                        <span class="wb-tab-header-item active" data-role="ctype" data-index="1" data-group="c1">提醒</span>
+                        <span class="wb-tab-header-item" data-role="ctype" data-index="2" data-group="c1">我的待办事项</span>
+                    </div>
+                    <div class="wb-tab-content">
+                        <div class="wb-tab wb-todolist" data-role="ctype-item" data-index="1" data-group="c1">
+                            <div class="wb-slides">
+                                <div class="wb-slide">
+                                    <ul>
+                                        <li class="wb-listitem">
+                                        <span class="wb-listitem-highfight">[行程预订]</span>
+                                        <span class="wb-listitem-text">您预订的行程订单（差旅人：素静静，潘小美）需要审批。您预订的行程订单（差旅人：素静静，潘小美）需要审批。</span>
+                                        <span class="wb-listitem-delete wb-icon">&nbsp;</span>
+                                        </li>
+                                        <li class="wb-listitem">
+                                        <span class="wb-listitem-highlight">[行程预订]</span>
+                                        <span class="wb-listitem-text">您预订的行程订单（差旅人：素静静，潘小美）需要审批。</span>
+                                        <span class="wb-listitem-delete wb-icon">&nbsp;</span>
+                                        </li>
+                                        <li class="wb-listitem">
+                                        <span class="wb-listitem-highlight">[行程预订]</span>
+                                        <span class="wb-listitem-text">您预订的行程订单（差旅人：素静静，潘小美）需要审批。</span>
+                                        <span class="wb-listitem-delete wb-icon">&nbsp;</span>
+                                        </li>
+                                        <li class="wb-listitem">
+                                        <span class="wb-listitem-highlight">[行程预订]</span>
+                                        <span class="wb-listitem-text">您预订的行程订单（差旅人：素静静，潘小美）需要审批。</span>
+                                        <span class="wb-listitem-delete wb-icon">&nbsp;</span>
+                                        </li>
+                                        <li class="wb-listitem">
+                                        <span class="wb-listitem-highlight">[行程预订]</span>
+                                        <span class="wb-listitem-text">您预订的行程订单（差旅人：素静静，潘小美）需要审批。</span>
+                                        <span class="wb-listitem-delete wb-icon">&nbsp;</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="wb-slide">
+                                    <ul>
+                                        <li class="wb-listitem">
+                                        <span class="wb-listitem-highlight">[行程预订]</span>
+                                        <span class="wb-listitem-text">您预订的行程订单（差旅人：素静静，潘小美）需要审批。</span>
+                                        <span class="wb-listitem-delete wb-icon">&nbsp;</span>
+                                        </li>
+                                        <li class="wb-listitem">
+                                        <span class="wb-listitem-highlight">[行程预订]</span>
+                                        <span class="wb-listitem-text">您预订的行程订单（差旅人：素静静，潘小美）需要审批。</span>
+                                        <span class="wb-listitem-delete wb-icon">&nbsp;</span>
+                                        </li>
+                                        <li class="wb-listitem">
+                                        <span class="wb-listitem-highlight">[行程预订]</span>
+                                        <span class="wb-listitem-text">您预订的行程订单（差旅人：素静静，潘小美）需要审批。</span>
+                                        <span class="wb-listitem-delete wb-icon">&nbsp;</span>
+                                        </li>
+                                        <li class="wb-listitem">
+                                        <span class="wb-listitem-highlight">[行程预订]</span>
+                                        <span class="wb-listitem-text">您预订的行程订单（差旅人：素静静，潘小美）需要审批。</span>
+                                        <span class="wb-listitem-delete wb-icon">&nbsp;</span>
+                                        </li>
+                                        <li class="wb-listitem">
+                                        <span class="wb-listitem-highlight">[行程预订]</span>
+                                        <span class="wb-listitem-text">您预订的行程订单（差旅人：素静静，潘小美）需要审批。</span>
+                                        <span class="wb-listitem-delete wb-icon">&nbsp;</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="wb-slide">
+                                    <ul>
+                                        <li class="wb-listitem">
+                                        <span class="wb-listitem-highlight">[行程预订]</span>
+                                        <span class="wb-listitem-text">您预订的行程订单（差旅人：素静静，潘小美）需要审批。</span>
+                                        <span class="wb-listitem-delete wb-icon">&nbsp;</span>
+                                        </li>
+                                        <li class="wb-listitem">
+                                        <span class="wb-listitem-highlight">[行程预订]</span>
+                                        <span class="wb-listitem-text">您预订的行程订单（差旅人：素静静，潘小美）需要审批。</span>
+                                        <span class="wb-listitem-delete wb-icon">&nbsp;</span>
+                                        </li>
+                                        <li class="wb-listitem">
+                                        <span class="wb-listitem-highlight">[行程预订]</span>
+                                        <span class="wb-listitem-text">您预订的行程订单（差旅人：素静静，潘小美）需要审批。</span>
+                                        <span class="wb-listitem-delete wb-icon">&nbsp;</span>
+                                        </li>
+                                        <li class="wb-listitem">
+                                        <span class="wb-listitem-highlight">[行程预订]</span>
+                                        <span class="wb-listitem-text">您预订的行程订单（差旅人：素静静，潘小美）需要审批。</span>
+                                        <span class="wb-listitem-delete wb-icon">&nbsp;</span>
+                                        </li>
+                                        <li class="wb-listitem">
+                                        <span class="wb-listitem-highlight">[行程预订]</span>
+                                        <span class="wb-listitem-text">您预订的行程订单（差旅人：素静静，潘小美）需要审批。</span>
+                                        <span class="wb-listitem-delete wb-icon">&nbsp;</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="wb-slide-trigger">
+                                    <span class="wb-slide-icon wb-icon">&nbsp;</span>
+                                    <span class="wb-slide-icon wb-icon">&nbsp;</span>
+                                    <span class="wb-slide-icon wb-icon">&nbsp;</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wb-tab wb-todolist" data-role="ctype-item" data-index="2" data-group="c1">
+                            <div class="wb-slides">
+                                <div class="wb-slide">
+                                    <ul>
+                                        <li class="wb-listitem">
+                                        <span class="wb-listitem-highlight">[行程预订]</span>
+                                        <span class="wb-listitem-text">您预订的行程订单（差旅人：素静静，潘小美）需要审批。</span>
+                                        <span class="wb-listitem-delete wb-icon">&nbsp;</span>
+                                        </li>
+                                        <li class="wb-listitem">
+                                        <span class="wb-listitem-highfight">[行程预订]</span>
+                                        <span class="wb-listitem-text">您预订的行程订单（差旅人：素静静，潘小美）需要审批。</span>
+                                        <span class="wb-listitem-delete wb-icon">&nbsp;</span>
+                                        </li>
+                                        <li class="wb-listitem">
+                                        <span class="wb-listitem-highlight">[行程预订]</span>
+                                        <span class="wb-listitem-text">您预订的行程订单（差旅人：素静静，潘小美）需要审批。</span>
+                                        <span class="wb-listitem-delete wb-icon">&nbsp;</span>
+                                        </li>
+                                        <li class="wb-listitem">
+                                        <span class="wb-listitem-highlight">[行程预订]</span>
+                                        <span class="wb-listitem-text">您预订的行程订单（差旅人：素静静，潘小美）需要审批。</span>
+                                        <span class="wb-listitem-delete wb-icon">&nbsp;</span>
+                                        </li>
+                                        <li class="wb-listitem">
+                                        <span class="wb-listitem-highlight">[行程预订]</span>
+                                        <span class="wb-listitem-text">您预订的行程订单（差旅人：素静静，潘小美）需要审批。</span>
+                                        <span class="wb-listitem-delete wb-icon">&nbsp;</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="wb-slide">
+                                    <ul>
+                                        <li class="wb-listitem">
+                                        <span class="wb-listitem-highlight">[行程预订]</span>
+                                        <span class="wb-listitem-text">您预订的行程订单（差旅人：素静静，潘小美）需要审批。</span>
+                                        <span class="wb-listitem-delete wb-icon">&nbsp;</span>
+                                        </li>
+                                        <li class="wb-listitem">
+                                        <span class="wb-listitem-highlight">[行程预订]</span>
+                                        <span class="wb-listitem-text">您预订的行程订单（差旅人：素静静，潘小美）需要审批。</span>
+                                        <span class="wb-listitem-delete wb-icon">&nbsp;</span>
+                                        </li>
+                                        <li class="wb-listitem">
+                                        <span class="wb-listitem-highlight">[行程预订]</span>
+                                        <span class="wb-listitem-text">您预订的行程订单（差旅人：素静静，潘小美）需要审批。</span>
+                                        <span class="wb-listitem-delete wb-icon">&nbsp;</span>
+                                        </li>
+                                        <li class="wb-listitem">
+                                        <span class="wb-listitem-highlight">[行程预订]</span>
+                                        <span class="wb-listitem-text">您预订的行程订单（差旅人：素静静，潘小美）需要审批。</span>
+                                        <span class="wb-listitem-delete wb-icon">&nbsp;</span>
+                                        </li>
+                                        <li class="wb-listitem">
+                                        <span class="wb-listitem-highlight">[行程预订]</span>
+                                        <span class="wb-listitem-text">您预订的行程订单（差旅人：素静静，潘小美）需要审批。</span>
+                                        <span class="wb-listitem-delete wb-icon">&nbsp;</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="wb-slide-trigger">
+                                    <span class="wb-slide-icon wb-icon">&nbsp;</span>
+                                    <span class="wb-slide-icon wb-icon">&nbsp;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wb-block wb-journey">
+                    <div class="wb-journey-header">我的行程</div>
+                    <div class="wb-slides">
+                        <div class="wb-slide">
+                            <ul>
+                                <li class="wb-journey-item wb-journey-flight">
+                                <div class="wb-journey-item-header">
+                                    <span class="wb-icon wb-journey-flight-icon">&nbsp;</span>
+                                    行程订单：CL124124124141
+                                </div>
+                                <table>
+                                    <colgroup>
+                                        <col width="220">
+                                        <col width="110">
+                                        <col width="140">
+                                    </colgroup>
+                                    <tr>
+                                        <td>
+                                            <div>
+                                            <span class="wb-flight-departure">上海</span>
+                                            <span class="wb-flight-stop">
+                                                <i class="wb-flight-stop-bar">&nbsp;</i>
+                                                <s class="wb-flight-stop-date">2013-12-17</s>
+                                                <s class="wb-flight-stop-box"><i>经停</i></s>
+                                                <s class="wb-flight-stop-place">东京</s>
+                                            </span>
+                                            <span class="wb-flight-arrival">西安</span>
+                                            </div>
+                                            <div>
+                                                <s class="wb-flight-stop-insurance">航空意外保</s>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="wb-flight-highlight">南方航空CZ6141</span>
+                                            <span class="wb-flight-text"><strong>起飞</strong> 07:41</span>
+                                            <span class="wb-flight-text"><strong>到达</strong> 17:41</span>
+                                        </td>
+                                        <td>
+                                            <span class="wb-flight-highlight">机型333（大）经济舱</span>
+                                            <span class="wb-flight-text">北京 首都机场</span>
+                                            <span class="wb-flight-text">纽约 牛哇可机场</span>
+                                        </td>
+                                        <td>
+                                            <span class="wb-journey-state">
+                                                <span class="wb-journey-state-box">
+                                                    <s>行程状态：</s>
+                                                    <em class="wb-journey-state-submited">已提交</em>
+                                                </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                </li>
+                                <li class="wb-journey-item wb-journey-hotel">
+                                <div class="wb-journey-item-header">
+                                    <span class="wb-icon wb-journey-hotel-icon">&nbsp;</span>
+                                    行程订单：CL124124124141
+                                </div>
+                                <table>
+                                    <colgroup>
+                                        <col width="280">
+                                        <col width="190">
+                                    </colgroup>
+                                    <tr>
+                                        <td>
+                                            <span class="wb-hotel-name">晋江之星（成都金山桥店）</span>
+                                            <span class="wb-hotel-address">上海闸北区光中西路55号</span>
+                                            <span class="wb-hotel-room">超大豪华房 大床</span>
+                                        </td>
+                                        <td>
+                                            <span class="wb-hotel-date">入住日期：2013-12-21</span>
+                                            <span class="wb-hotel-date">退房日期：2013-12-21</span>
+                                        </td>
+                                        <td>
+                                            <span class="wb-journey-state">
+                                                <span class="wb-journey-state-box">
+                                                    <s>行程状态：</s>
+                                                    <em class="wb-journey-state-refuse">已驳回</em>
+                                                </span>
+                                                <span class="wb-journey-state-text">
+                                                    <i class="wb-icon wb-bang">&nbsp;</i>与本人差旅政策不符合，驳回。
+                                                </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="wb-slide">
+                            <ul>
+                                <li class="wb-journey-item wb-journey-flight">
+                                <div class="wb-journey-item-header">
+                                    <span class="wb-icon wb-journey-flight-icon">&nbsp;</span>
+                                    行程订单：CL124124124141
+                                </div>
+                                <table class="wb-journey-flight-double">
+                                    <colgroup>
+                                        <col width="220">
+                                        <col width="110">
+                                        <col width="140">
+                                    </colgroup>
+                                    <tr>
+                                        <td>
+                                            <div>
+                                            <span class="wb-icon wb-arrow-green">&nbsp;</span>
+                                            <span class="wb-flight-departure">上海</span>
+                                            <span class="wb-flight-stop">
+                                                <i class="wb-flight-stop-bar">&nbsp;</i>
+                                                <s class="wb-flight-stop-date">2013-12-17</s>
+                                                <s class="wb-flight-stop-box"><i>经停</i></s>
+                                                <s class="wb-flight-stop-place">东京</s>
+                                            </span>
+                                            <span class="wb-flight-arrival">西安</span>
+                                            </div>
+                                            <div>
+                                                <s class="wb-flight-stop-insurance">航空意外保</s>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="wb-flight-highlight">南方航空CZ6141</span>
+                                            <span class="wb-flight-text"><strong>起飞</strong> 07:41</span>
+                                            <span class="wb-flight-text"><strong>到达</strong> 17:41</span>
+                                        </td>
+                                        <td>
+                                            <span class="wb-flight-highlight">机型333（大）经济舱</span>
+                                            <span class="wb-flight-text">北京 首都机场</span>
+                                            <span class="wb-flight-text">纽约 牛哇可机场</span>
+                                        </td>
+                                        <td style="vertical-align:middle;border-bottom:0;" rowspan="5">
+                                            <span class="wb-journey-state">
+                                                <span class="wb-journey-state-box">
+                                                    <s>行程状态：</s>
+                                                    <em class="wb-journey-state-submited">已提交</em>
+                                                </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div>
+                                            <span class="wb-icon wb-arrow-red">&nbsp;</span>
+                                            <span class="wb-flight-departure">上海</span>
+                                            <span class="wb-flight-stop">
+                                                <i class="wb-flight-stop-bar">&nbsp;</i>
+                                                <s class="wb-flight-stop-date">2013-12-17</s>
+                                                <s class="wb-flight-stop-box"><i>经停</i></s>
+                                                <s class="wb-flight-stop-place">东京</s>
+                                            </span>
+                                            <span class="wb-flight-arrival">西安</span>
+                                            </div>
+                                            <div>
+                                                <s class="wb-flight-stop-insurance">航空意外保</s>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="wb-flight-highlight">南方航空CZ6141</span>
+                                            <span class="wb-flight-text"><strong>起飞</strong> 07:41</span>
+                                            <span class="wb-flight-text"><strong>到达</strong> 17:41</span>
+                                        </td>
+                                        <td>
+                                            <span class="wb-flight-highlight">机型333（大）经济舱</span>
+                                            <span class="wb-flight-text">北京 首都机场</span>
+                                            <span class="wb-flight-text">纽约 牛哇可机场</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="wb-slide">
+                            <ul>
+                                <li class="wb-journey-item wb-journey-flight">
+                                <div class="wb-journey-item-header">
+                                    <span class="wb-icon wb-journey-flight-icon">&nbsp;</span>
+                                    行程订单：CL124124124141
+                                </div>
+                                <table>
+                                    <colgroup>
+                                        <col width="220">
+                                        <col width="110">
+                                        <col width="140">
+                                    </colgroup>
+                                    <tr>
+                                        <td>
+                                            <div>
+                                            <span class="wb-flight-departure">上海</span>
+                                            <span class="wb-flight-stop">
+                                                <i class="wb-flight-stop-bar">&nbsp;</i>
+                                                <s class="wb-flight-stop-date">2013-12-17</s>
+                                                <s class="wb-flight-stop-box"><i>1次中转</i></s>
+                                                <s class="wb-flight-stop-place">东京</s>
+                                            </span>
+                                            <span class="wb-flight-arrival">西安</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="wb-flight-highlight">南方航空CZ6141</span>
+                                            <span class="wb-flight-text">起飞 07:41</span>
+                                            <span class="wb-flight-text">到达 17:41</span>
+                                        </td>
+                                        <td>
+                                            <span class="wb-flight-highlight">机型333（大）经济舱</span>
+                                            <span class="wb-flight-text">北京 首都机场</span>
+                                            <span class="wb-flight-text">纽约 牛哇可机场</span>
+                                        </td>
+                                        <td>
+                                            <span class="wb-journey-state">
+                                                <span class="wb-journey-state-box">
+                                                    <s>行程状态：</s>
+                                                    <em class="wb-journey-state-submited">已提交</em>
+                                                </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                </li>
+                                <li class="wb-journey-item wb-journey-hotel">
+                                <div class="wb-journey-item-header">
+                                    <span class="wb-icon wb-journey-hotel-icon">&nbsp;</span>
+                                    行程订单：CL124124124141
+                                </div>
+                                <table>
+                                    <colgroup>
+                                        <col width="280">
+                                        <col width="190">
+                                    </colgroup>
+                                    <tr>
+                                        <td>
+                                            <span class="wb-hotel-name">晋江之星（成都金山桥店）</span>
+                                            <span class="wb-hotel-address">上海闸北区光中西路55号</span>
+                                            <span class="wb-hotel-room">超大豪华房 大床</span>
+                                        </td>
+                                        <td>
+                                            <span class="wb-hotel-date">入住日期：2013-12-21</span>
+                                            <span class="wb-hotel-date">退房日期：2013-12-21</span>
+                                        </td>
+                                        <td>
+                                            <span class="wb-journey-state">
+                                                <span class="wb-journey-state-box">
+                                                    <s>行程状态：</s>
+                                                    <em class="wb-journey-state-pass">已通过</em>
+                                                </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="wb-slide-trigger">
+                            <span class="wb-slide-icon wb-icon">&nbsp;</span>
+                            <span class="wb-slide-icon wb-icon">&nbsp;</span>
+                            <span class="wb-slide-icon wb-icon">&nbsp;</span>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <div class="shopcart">
+        <div class="sc-default clearfix">
+            <div class="sc-background"><i class="icon sc-ic7"></i></div>
+            <div class="sc-default-wrap">
+                <a href="javascript:;" class="sc-link">
+                    <i class="icon sc-ic6"></i>
+                    <span class="sc-name">行程购物车</span>
+                    <span class="sc-total-count">12</span>
+                </a>
+                <span class="sc-total">
+                    <span class="sc-total-money">￥1231123</span>
+                    <a href="#" class="sc-submit">提 交</a>
+                </span>
+            </div>
+        </div>
+        <div class="sc-active">
+        <h3 class="sc-title">最新加入行程</h3>
+        <ul class="sc-list">
+            <li class="sc-flight sc-flight-single">
+                 <i class="icon sc-ic1"></i>
+                 <i class="icon sc-ic3 close" data-uid="231"></i>
+                 <div class="row">
+                     <div class="col col1">
+                         <span class="sc-place"><b class="sc-start">胡知名市</b><b class="sc-sep">——</b><b class="sc-end">不宜诺斯爱丽丝</b></span>
+                           <span class="sc-date">2013-12-22</span>
+                     </div>
+                     <div class="col col2">
+                            <span class="sc-airline">CZ6437 南方航空</span>
+                            <span class="sc-cabin">经济藏</span>
+                     </div>
+                     <div class="col col3">
+                            <span class="sc-count">3</span>
+                            <span class="sc-money">￥1421</span>
+                     </div>
+                 </div>
+            </li>
+            <li class="sc-flight sc-flight-return sc-domestic">
+                 <i class="icon sc-ic1"></i>
+                 <i class="icon sc-ic3 close" data-uid="41321"></i>
+                 <div class="row">
+                     <i class="icon sc-ic4"></i>
+                     <div class="col col1">
+                         <span class="sc-place">
+                             <b class="sc-start">成都</b><b class="sc-sep">——</b><b class="sc-end">上海</b></span>
+                           <span class="sc-date">2013-12-22</span>
+                     </div>
+                     <div class="col col2">
+                            <span class="sc-airline">CZ6437 南方航空</span>
+                            <span class="sc-cabin">经济藏</span>
+                     </div>
+                     <div class="col col3">
+                            <span class="sc-count">3</span>
+                            <span class="sc-money">￥1421</span>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <i class="icon sc-ic5"></i>
+                     <div class="col col1">
+                         <span class="sc-place">
+                             <b class="sc-start">上海</b><b class="sc-sep">——</b><b class="sc-end">成都</b></span>
+                           <span class="sc-date">2013-12-22</span>
+                     </div>
+                     <div class="col col2">
+                            <span class="sc-airline">CZ6437 南方航空</span>
+                            <span class="sc-cabin">经济藏</span>
+                     </div>
+                     <div class="col col3">
+                            <span class="sc-count">3</span>
+                            <span class="sc-money">￥1421</span>
+                     </div>
+                 </div>
+            </li>
+            <li class="sc-hotel">
+                 <i class="icon sc-ic2"></i>
+                 <div class="row">
+                        <span class="sc-place">锦江之星（成都金山桥店）</span>
+                        <span class="sc-date"><b>2013-12-22 入房</b><b>2013-12-30 退房</b></span>
+                 </div>
+                 <div class="row">
+                     <span class="sc-room">超大豪华房【无早】</span><span class="sc-count">3</span>
+                     <span class="sc-money">￥1231</span>
+                    <i class="icon sc-ic3 close" data-uid="41321"></i>
+                 </div>
+                 <div class="row">
+                     <span class="sc-room">豪华房</span><span class="sc-count">1</span>
+                     <span class="sc-money">￥123</span>
+                    <i class="icon sc-ic3 close" data-uid="41321"></i>
+                 </div>
+            </li>
+            <li class="sc-hotel">
+                 <i class="icon sc-ic2"></i>
+                 <div class="row">
+                        <span class="sc-place">锦江之星（成都金山桥店）</span>
+                        <span class="sc-date"><b>2013-12-22 入房</b><b>2013-12-30 退房</b></span>
+                 </div>
+                 <div class="row">
+                     <span class="sc-room">超大豪华房【无早】</span><span class="sc-count">3</span>
+                     <span class="sc-money">￥1231</span>
+                    <i class="icon sc-ic3 close" data-uid="41321"></i>
+                 </div>
+                 <div class="row">
+                     <span class="sc-room">豪华房</span><span class="sc-count">1</span>
+                     <span class="sc-money">￥123</span>
+                    <i class="icon sc-ic3 close" data-uid="41321"></i>
+                 </div>
+            </li>
+            <li class="sc-hotel">
+                 <i class="icon sc-ic2"></i>
+                 <div class="row">
+                        <span class="sc-place">锦江之星（成都金山桥店）</span>
+                        <span class="sc-date"><b>2013-12-22 入房</b><b>2013-12-30 退房</b></span>
+                 </div>
+                 <div class="row">
+                     <span class="sc-room">超大豪华房【无早】</span><span class="sc-count">3</span>
+                     <span class="sc-money">￥1231</span>
+                    <i class="icon sc-ic3 close" data-uid="41321"></i>
+                 </div>
+                 <div class="row">
+                     <span class="sc-room">豪华房</span><span class="sc-count">1</span>
+                     <span class="sc-money">￥123</span>
+                    <i class="icon sc-ic3 close" data-uid="41321"></i>
+                 </div>
+            </li>
+            <li class="sc-flight sc-flight-return sc-international">
+                 <i class="icon sc-ic1"></i>
+                 <i class="icon sc-ic3 close" data-uid="41321"></i>
+                 <div class="col col3">
+                     <span class="sc-count">3</span>
+                     <span class="sc-money">￥1421</span>
+                 </div>
+                 <div class="row">
+                     <i class="icon sc-ic4"></i>
+                     <div class="col col1">
+                         <span class="sc-place">
+                             <b class="sc-start">胡知名市</b><b class="sc-sep">——</b><b class="sc-end">不宜诺斯爱丽丝</b></span>
+                           <span class="sc-date">2013-12-22</span>
+                     </div>
+                     <div class="col col2">
+                            <span class="sc-airline">CZ6437 南方航空</span>
+                            <span class="sc-cabin">经济藏</span>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <i class="icon sc-ic5"></i>
+                     <div class="col col1">
+                         <span class="sc-place">
+                             <b class="sc-start">胡知名市</b><b class="sc-sep">——</b><b class="sc-end">不宜诺斯爱丽丝</b></span>
+                           <span class="sc-date">2013-12-22</span>
+                     </div>
+                     <div class="col col2">
+                            <span class="sc-airline">CZ6437 南方航空</span>
+                            <span class="sc-cabin">经济藏</span>
+                     </div>
+                 </div>
+            </li>
+        </ul>
+        </div>
+    </div>
+
+
+
+<script type="text/x-kendo-template" id="delete-template">
+    <div class="row row-icontext">
+        <i class="icon icon3"></i>
+        确认要删除该订单吗？
+    </div>
+    <div class="row row-btns">
+        <a href="javascript:;" class="btns btn-s2 btn-c1 ac-delete" data-uid="#= data.uid #">确 定</a>
+        <a href="javascript:;" class="close btns btn-s2 btn-c5">取 消</a>
+    </div>
+</script>
+
+<script type="text/x-kendo-template" id="backChangeSign">
+	<div class="floatLayer">
+		 <p><b>退票：</b>仅退基建燃油费，机票款不退</p>
+		 <p><b>废票：</b>每张收取N元费用</p>
+		 <p><b>更改：</b>不得改期、升舱</p>
+		 <p><b>签转：</b>不允许签转</p>
+		 <p><b>备注：</b> </p>
+	</div>
+</script>
+
+<script>
+	$(function(){
+        $('.wb-trigger').on('click',function(){
+            var workbench = $('.workbench');
+            if(workbench.hasClass('expanded')){
+                workbench.animate({
+                    left:-740
+                },function(){
+                    workbench.removeClass('expanded');
+                }).animate({
+                    left:-660
+                });
+            }else{
+                workbench.addClass('expanded');
+                workbench.animate({
+                    left:0
+                },function(){
+                });
+            }
+        });
+
+        $('.wb-tabs .wb-slides').each(function(){
+            $(this).find(".wb-slide-icon").suiTabs({
+                type:"hover",
+                content:$(this).find('.wb-slide'),
+                effect:"slide",
+                nav:false,
+                width:630,
+                height:'auto',
+                pause:1000},function(a,b){
+            });
+        });
+
+        $('.wb-journey .wb-slides').each(function(){
+            $(this).find(".wb-slide-icon").suiTabs({
+                type:"hover",
+                content:$(this).find('.wb-slide'),
+                effect:"fadeM",
+                nav:false,
+                width:630,
+                height:'auto',
+                pause:1000},function(a,b){
+            });
+        });
+
+        $.role_ctype({
+            changeClass:'active'
+        });
+
+		$(document).click(function(e){
+			if($(e.target).closest('.shopcart').length!==1){
+				$('.sc-active').slideUp(100);
+				$('.sc-total').hide();
+			}
+		});
+
+		$('.sc-default').click(function(){
+			$('.sc-active').slideToggle(100);
+			$('.sc-background',this).css({'top':0});
+			$('.sc-total',this).toggle();
+		}).hover(function(){
+				  $('.sc-background',this).animate({'top':'-10px'},200)
+			   },function(){
+				  $('.sc-background',this).animate({'top':0},200)
+		});
+
+		var delete_window = new PopWindow('.shopcart .close',{
+			title:'删除订单',
+			width:500,
+			template:'#delete-template',
+			open:function(e){
+			   // 从购物车删除叉叉上获取单子的uid
+			   var uid = this.target.data('uid');
+			   // 在模板的确认按钮上获取这个uid
+			   this.data({'uid':uid});
+			}
+		}).init();
+
+
+		// 购物车确定删除订单
+		$('body').on('click','.ac-delete',function(){
+			alert('订单uid：'+$(this).data('uid'));
+		});
+
+
+        $(".toPriceBottom .linkA").kendoTooltip({
+				position:"bottom", //left right top
+				wrapperClass:"lineWeight",
+                width:300,
+				content:function(){
+					return $("#backChangeSign").html();
+				},
+				offsetY:10				
+		});
+		
+
+	});
+</script>
+</body>
+
+</html>
+
+

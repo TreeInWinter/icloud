@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>政策 国际政策 添加团队政策</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="../../static/css/common.css" rel="stylesheet" />
+	<link href="../../static/css/kendo.common.css" rel="stylesheet" />
+	<link href="../../static/css/kendo.gray.css" rel="stylesheet" />
+	<link href="../../static/css/b2b.css" rel="stylesheet" />
+    <link href="/static/css/kendo.reset.css" rel="stylesheet" />
+    <link href="../../static/css/guojitianjiaxiugai.css" rel="stylesheet"  type="text/css"/>
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<!-- @CLB@ -->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body>
+    <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">&nbsp;</a>
+                <span>&nbsp;</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent"> <!--mainContent开始-->
+        
+          <div class="tjxg_top">
+               <h2>返回</h2>
+               <p>添加政策</p>
+               <div class="lkfb">
+                   <label><input type="checkbox"/> 立刻发布</label>
+               </div>
+               <div class="tyxj_a">
+                 <a href="#" class="tyxj_a_1">关&nbsp;闭</a>
+                 <a href="#" class="tyxj_a_1">清&nbsp;除</a>                 
+                 <a href="#" class="tyxj_a_2">保&nbsp;存</a>
+                 <a href="#" class="tyxj_a_2">保存并继续</a>
+               </div>
+          </div>
+       <div class="middlecontent"> <!--middlecontent开始-->
+         <div class="mudong clearfix">
+            <p class="mudong_p_1"><strong>协议名称：</strong> <input type="text"/></p>
+         </div>
+         <div class="dijia clearfix"> 
+           <b>政策类型：</b>  
+           <label><input type="radio" value="单程" name="1_1" /> 普通政策</label>
+           <label><input type="radio" value="往返" checked="checked" name="1_1"  /> 团队政策</label>
+           <label><input type="radio" value="单程及往返" name="1_1"  /> 散客K位政策</label>
+         </div>
+         <div class="cjrq_tj clearfix">
+              <p class="clearfix"> <span class="cjrq_span">政策标签：</span> <a href="#" class="cjrq_a">添加</a> </p>
+         </div>           
+         <div class="pnr clearfix">
+            <b><em class="redFont">*</em>产品类型：</b>
+            <label><input type="radio"  name="2"/> <i>散拼团</i></label>
+            <label><input type="radio" checked="checked" name="2" /> <span>包机</span></label>
+            <label><input type="radio"  name="2" /> <em>包位</em></label>
+         </div> 
+         <div class="teamCont">
+              <b><em class="redFont">*</em>推荐等级：</b>
+              <select style="width:155px;" data-role="dropdownlist">
+                   <option>1</option>
+                   <option>2</option>
+                   <option>3</option>
+                   <option>4</option>
+                   <option>5</option>
+              </select>
+         </div>   
+         <div class="teamCont">
+              <b><em class="redFont">*</em>航空公司：</b>
+              <select style="width:155px;" id="sel_airlines"  class="sel_airlines">
+                    <option selected="selected" value="">全部</option>
+                    <option value="3u">3U （川航）</option>
+                    <option value="8L">8L （祥鹏）</option>
+                    <option value="BK">BK （奥凯）</option>
+                    <option value="CA">CA （国航）</option>
+                    <option value="CN">CN （大新华）</option>
+                    <option value="CZ">CZ （南航）</option>
+                    <option value="EU">EU （成都）</option>
+                    <option value="FM">FM （上航）</option>
+                    <option value="G5">G5 （华夏）</option>
+                    <option value="GS">GS （天津）</option>
+                    <option value="HO">HO （吉祥）</option>
+                    <option value="HU">HU （海航）</option>
+              </select>
+         </div>      
+         <div class="cjrq_tj clearfix">
+              <p class="clearfix"> <span class="cjrq_span"><em class="redFont">*</em>销售有效期：</span> <input class="cjrq_input_1" type="text" value="2013-06-01" /> <span class="cjrq_zhi">至</span> <input class="cjrq_input_2" type="text" value="2013-06-01" />  <a href="#" class="cjrq_a">添加</a> <label class="forEver"><input type="checkbox" />&nbsp;永久</label>
+              </p>
+              <div class="date_span">
+                  <span> 2013-06-01至2013-08-31 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>x</i> </span>
+                  <span> 2013-06-01至2013-08-31 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>x</i> </span>
+              </div>
+         </div>
+         <div style="clear:both;"></div>
+         
+         <div class="kpyxq clearfix">
+              <p> <span class="cjrq_span"><em class="redFont">*</em>出票有效期：</span> <input class="cjrq_input_1" type="text" value="2013-06-01" /> <span class="cjrq_zhi">至</span> <input class="cprq_jz" type="text" value="2013-06-01" /> 
+              </p>
+         </div>
+         <div class="tongzhi">
+             <b style="width:100px;">提前预订天数：</b>
+             <input type="text" value="7" />
+             <em style="color:#666666;">—</em>
+             <input type="text" value="14" />
+         </div>
+         <div class="tongzhi">             
+             <b style="width:105px;"><em class="redFont">*</em>最少成行人数：</b>
+             <input type="text" value="5" />
+         </div>
+         <div class="pnr clearfix">
+            <b><em class="redFont">*</em>票证类型：</b>
+            <label><input type="radio"  name="2"/> <em>BSP</em></label>
+            <label><input type="radio" checked="checked"  name="2" /> <em>B2B</em></label>
+            <label><input type="radio"  name="2" /> <em>CRS</em></label>
+            <label><input type="radio"  name="2" /> <em>境外电子</em></label>
+         </div>
+         <div class="cklx_div_1 clearfix">
+             <b><em class="redFont">*</em>乘客类型：</b> 
+              <div class="cklx_p">
+                  <p> <label><input type="checkbox" checked="" /> <span>成人</span></label>
+                      <label><input type="checkbox" checked="" /> <span>儿童</span></label>
+                      <label><input type="checkbox"/> <span>婴儿</span></label>
+                 </p> 
+             </div>        
+         </div>
+         <div class="cklx_div_1 clearfix">
+             <b><em class="redFont">*</em>乘客资质：</b> 
+              <div class="cklx_p">
+                  <p> <label><input type="checkbox" checked="" /> <span>一般成人</span></label>
+                      <label><input type="checkbox"/> <span>学生</span></label>
+                      <label><input type="checkbox"/> <span>青年</span></label>
+                      <label><input type="checkbox"/> <span>劳务</span></label>
+                      <label><input type="checkbox"/> <span>移民</span></label>
+                      <label><input type="checkbox"/> <span>海员</span></label>
+                      <label><input type="checkbox"/> <span>特殊身份</span></label>
+                      <label><input type="checkbox"/> <span>全部</span></label>
+                 </p> 
+             </div>        
+         </div>
+         
+         <p class="sf_p_1">&nbsp;</p>
+         
+         <div class="dijia clearfix airWay"> 
+               <b>航程类型：</b> 
+               <label><input type="radio" value="单程" checked="checked" name="airType" /> 单程</label>
+               <label><input type="radio" value="往返" name="airType" /> 往返</label>
+               <label><input type="radio" value="多程" name="airType" /> 多程</label>
+         </div>
+         <section> <!--单程-->
+              <div class="airTypeCont oneWay">
+                   <table>
+                        <colgroup>
+                              <col width="65"/>
+                              <col width="75"/>
+                              <col width="95"/>
+                              <col width="95"/>
+                              <col width="95"/>
+                              <col width="95"/>
+                              <col width="95"/>
+                              <col width="95"/>
+                              <col width="75"/>
+                              <col width="70"/>
+                              <col width="70"/>
+                        </colgroup>
+                        <thead>
+                             <tr>
+                                 <th> </th>
+                                 <th><em class="redFont">*</em>&nbsp;航班号</th>
+                                 <th><em class="redFont">*</em>&nbsp;出发机场</th>
+                                 <th><em class="redFont">*</em>&nbsp;到达机场</th>
+                                 <th><em class="redFont">*</em>&nbsp;出发时间</th>
+                                 <th><em class="redFont">*</em>&nbsp;到达时间</th>
+                                 <th><em class="redFont">*</em>&nbsp;机型</th>
+                                 <th><em class="redFont">*</em>&nbsp;旅行日期</th>
+                                 <th><em class="redFont">*</em>&nbsp;舱位</th>
+                                 <th><em class="redFont">*</em>&nbsp;舱位等级</th>
+                                 <th> </th>
+                             </tr>
+                        </thead>
+                        <tbody>
+                             <tr>
+                                  <td style="text-align:center;"><b class="nthNumber">1</b></td>
+                                  <td><input type="text" style="width:67px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:67px;"></td>
+                                  <td>
+                                      <select data-role="dropdownlist" style="width:65px;">
+                                           <option>经济舱</option>
+                                      </select>
+                                  </td>
+                                  <td>
+                                      <a href="javascript:void(0);" class="blueLink">添加航段</a>
+                                  </td>
+                             </tr>
+                             <tr>
+                                  <td style="text-align:center;"><b class="nthNumber">2</b></td>
+                                  <td><input type="text" style="width:67px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:67px;"></td>
+                                  <td>
+                                      <select data-role="dropdownlist" style="width:65px;">
+                                           <option>经济舱</option>
+                                      </select>
+                                  </td>
+                                  <td>
+                                      <a href="javascript:void(0);" class="blueLink">删除</a>
+                                  </td>
+                             </tr>
+                        </tbody>
+                  </table>
+              </div>
+         </section> 
+         
+         <section> <!--往返-->
+              <div class="airTypeCont goBack" style="display:none;">
+                   <table>
+                        <colgroup>
+                              <col width="65"/>
+                              <col width="75"/>
+                              <col width="95"/>
+                              <col width="95"/>
+                              <col width="95"/>
+                              <col width="95"/>
+                              <col width="95"/>
+                              <col width="95"/>
+                              <col width="75"/>
+                              <col width="70"/>
+                              <col width="70"/>
+                        </colgroup>
+                        <thead>
+                             <tr>
+                                 <th style="text-align:center;"><b>[ 去程 ]</b></th>
+                                 <th><em class="redFont">*</em>&nbsp;航班号</th>
+                                 <th><em class="redFont">*</em>&nbsp;出发机场</th>
+                                 <th><em class="redFont">*</em>&nbsp;到达机场</th>
+                                 <th><em class="redFont">*</em>&nbsp;出发时间</th>
+                                 <th><em class="redFont">*</em>&nbsp;到达时间</th>
+                                 <th><em class="redFont">*</em>&nbsp;机型</th>
+                                 <th><em class="redFont">*</em>&nbsp;旅行日期</th>
+                                 <th><em class="redFont">*</em>&nbsp;舱位</th>
+                                 <th><em class="redFont">*</em>&nbsp;舱位等级</th>
+                                 <th> </th>
+                             </tr>
+                        </thead>
+                        <tbody>
+                             <tr>
+                                  <td style="text-align:center;"><b class="nthNumber">1</b></td>
+                                  <td><input type="text" style="width:67px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:67px;"></td>
+                                  <td>
+                                      <select data-role="dropdownlist" style="width:65px;">
+                                           <option>经济舱</option>
+                                      </select>
+                                  </td>
+                                  <td>
+                                      <a href="javascript:void(0);" class="blueLink">添加航段</a>
+                                  </td>
+                             </tr>
+                             <tr>
+                                  <td style="text-align:center;"><b class="nthNumber">2</b></td>
+                                  <td><input type="text" style="width:67px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:67px;"></td>
+                                  <td>
+                                      <select data-role="dropdownlist" style="width:65px;">
+                                           <option>经济舱</option>
+                                      </select>
+                                  </td>
+                                  <td>
+                                      <a href="javascript:void(0);" class="blueLink">删除</a>
+                                  </td>
+                             </tr>
+                        </tbody>
+                  </table>
+                  <table>
+                        <colgroup>
+                              <col width="65"/>
+                              <col width="75"/>
+                              <col width="95"/>
+                              <col width="95"/>
+                              <col width="95"/>
+                              <col width="95"/>
+                              <col width="95"/>
+                              <col width="95"/>
+                              <col width="75"/>
+                              <col width="70"/>
+                              <col width="70"/>
+                        </colgroup>
+                        <thead>
+                             <tr>
+                                 <th style="text-align:center;"><b>[ 回程 ]</b></th>
+                                 <th><em class="redFont">*</em>&nbsp;航班号</th>
+                                 <th><em class="redFont">*</em>&nbsp;出发机场</th>
+                                 <th><em class="redFont">*</em>&nbsp;到达机场</th>
+                                 <th><em class="redFont">*</em>&nbsp;出发时间</th>
+                                 <th><em class="redFont">*</em>&nbsp;到达时间</th>
+                                 <th><em class="redFont">*</em>&nbsp;机型</th>
+                                 <th><em class="redFont">*</em>&nbsp;旅行日期</th>
+                                 <th><em class="redFont">*</em>&nbsp;舱位</th>
+                                 <th><em class="redFont">*</em>&nbsp;舱位等级</th>
+                                 <th> </th>
+                             </tr>
+                        </thead>
+                        <tbody>
+                             <tr>
+                                  <td style="text-align:center;"><b class="nthNumber">1</b></td>
+                                  <td><input type="text" style="width:67px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:67px;"></td>
+                                  <td>
+                                      <select data-role="dropdownlist" style="width:65px;">
+                                           <option>经济舱</option>
+                                      </select>
+                                  </td>
+                                  <td>
+                                      <a href="javascript:void(0);" class="blueLink">添加航段</a>
+                                  </td>
+                             </tr>
+                             <tr>
+                                  <td style="text-align:center;"><b class="nthNumber">2</b></td>
+                                  <td><input type="text" style="width:67px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:67px;"></td>
+                                  <td>
+                                      <select data-role="dropdownlist" style="width:65px;">
+                                           <option>经济舱</option>
+                                      </select>
+                                  </td>
+                                  <td>
+                                      <a href="javascript:void(0);" class="blueLink">删除</a>
+                                  </td>
+                             </tr>
+                        </tbody>
+                  </table>
+              </div>
+         </section> 
+         
+         <section> <!--多程-->
+              <div class="airTypeCont moreWay" style="display:none;">
+                   <table>
+                        <colgroup>
+                              <col width="65"/>
+                              <col width="75"/>
+                              <col width="95"/>
+                              <col width="95"/>
+                              <col width="95"/>
+                              <col width="95"/>
+                              <col width="95"/>
+                              <col width="95"/>
+                              <col width="75"/>
+                              <col width="70"/>
+                              <col width="70"/>
+                        </colgroup>
+                        <thead>
+                             <tr>
+                                 <th> </th>
+                                 <th><em class="redFont">*</em>&nbsp;航班号</th>
+                                 <th><em class="redFont">*</em>&nbsp;出发机场</th>
+                                 <th><em class="redFont">*</em>&nbsp;到达机场</th>
+                                 <th><em class="redFont">*</em>&nbsp;出发时间</th>
+                                 <th><em class="redFont">*</em>&nbsp;到达时间</th>
+                                 <th><em class="redFont">*</em>&nbsp;机型</th>
+                                 <th><em class="redFont">*</em>&nbsp;旅行日期</th>
+                                 <th><em class="redFont">*</em>&nbsp;舱位</th>
+                                 <th><em class="redFont">*</em>&nbsp;舱位等级</th>
+                                 <th> </th>
+                             </tr>
+                        </thead>
+                        <tbody>
+                             <tr>
+                                  <td style="text-align:center;"><b class="nthNumber">1</b></td>
+                                  <td><input type="text" style="width:67px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:67px;"></td>
+                                  <td>
+                                      <select data-role="dropdownlist" style="width:65px;">
+                                           <option>经济舱</option>
+                                      </select>
+                                  </td>
+                                  <td> </td>
+                             </tr>
+                             <tr>
+                                  <td style="text-align:center;"><b class="nthNumber">2</b></td>
+                                  <td><input type="text" style="width:67px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:67px;"></td>
+                                  <td>
+                                      <select data-role="dropdownlist" style="width:65px;">
+                                           <option>经济舱</option>
+                                      </select>
+                                  </td>
+                                  <td> </td>
+                             </tr>
+                             <tr>
+                                  <td style="text-align:center;"><b class="nthNumber">3</b></td>
+                                  <td><input type="text" style="width:67px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:67px;"></td>
+                                  <td>
+                                      <select data-role="dropdownlist" style="width:65px;">
+                                           <option>经济舱</option>
+                                      </select>
+                                  </td>
+                                  <td> </td>
+                             </tr>
+                             <tr>
+                                  <td style="text-align:center;"><b class="nthNumber">4</b></td>
+                                  <td><input type="text" style="width:67px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:67px;"></td>
+                                  <td>
+                                      <select data-role="dropdownlist" style="width:65px;">
+                                           <option>经济舱</option>
+                                      </select>
+                                  </td>
+                                  <td>
+                                      <a href="javascript:void(0);" class="blueLink">添加航段</a>
+                                  </td>
+                             </tr>
+                             <tr>
+                                  <td style="text-align:center;"><b class="nthNumber">5</b></td>
+                                  <td><input type="text" style="width:67px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:88px;"></td>
+                                  <td><input type="text" style="width:67px;"></td>
+                                  <td>
+                                      <select data-role="dropdownlist" style="width:65px;">
+                                           <option>经济舱</option>
+                                      </select>
+                                  </td>
+                                  <td>
+                                      <a href="javascript:void(0);" class="blueLink">删除</a>
+                                  </td>
+                             </tr>
+                        </tbody>
+                  </table>
+              </div>
+         </section> 
+         
+         <p class="sf_p_1">&nbsp;</p>
+         
+         <table class="priceList">
+             <colgroup>
+                 <col width="90"/>
+                 <col width="160"/>
+                 <col width="90"/>
+                 <col width="160"/>
+                 <col width="90"/>
+                 <col width="270"/>
+             </colgroup>
+             <tr>
+                 <td><b><em class="redFont">*</em> OFFICE：</b></td>
+                 <td><input type="text" style="width:90px;" value="SHA255" /></td>
+                 <td><b>PNR：</b></td>
+                 <td><input type="text" style="width:90px;" value="SHA255" /></td>
+                 <td></td>
+                 <td></td>
+             </tr>
+             <tr>
+                 <td><b><em class="redFont">*</em> 总库存：</b></td>
+                 <td><input type="text" style="width:90px;" value="15" /></td>
+                 <td><b>已用库存：</b></td>
+                 <td>9</td>
+                 <td></td>
+                 <td></td>
+             </tr>
+             <tr>
+                 <td><b><em class="redFont">*</em> 成人票价：</b></td>
+                 <td><input type="text" style="width:90px;" /></td>
+                 <td><b><em class="redFont">*</em> 成人税款：</b></td>
+                 <td><input type="text" style="width:90px;" /></td>
+                 <td><b><em class="redFont">*</em> 成人燃油：</b></td>
+                 <td><input type="text" style="width:90px;" /></td>
+             </tr>
+             <tr>
+                 <td><b><em class="redFont">*</em> 儿童票价：</b></td>
+                 <td><input type="text" style="width:90px;" /></td>
+                 <td><b><em class="redFont">*</em> 儿童税款：</b></td>
+                 <td><input type="text" style="width:90px;" /></td>
+                 <td><b><em class="redFont">*</em> 儿童燃油：</b></td>
+                 <td><input type="text" style="width:90px;" /></td>
+             </tr>
+             <tr>
+                 <td><b><em class="redFont">*</em> 婴儿票价：</b></td>
+                 <td><input type="text" style="width:90px;" /></td>          
+                 <td><b><em class="redFont">*</em> 婴儿税款：</b></td>
+                 <td><input type="text" style="width:90px;" /></td>
+                 <td><b><em class="redFont">*</em> 婴儿燃油：</b></td>
+                 <td><input type="text" style="width:90px;" /></td>
+             </tr>
+             <tr>
+                 <td><b>&nbsp;&nbsp;服务费：</b></td>
+                 <td><input type="text" value="0" style="width:90px;" /></td>
+                 <td> </td>
+                 <td> </td>
+                 <td> </td>
+                 <td> </td>
+             </tr>
+         </table>
+         <table class="textRegionCont">
+             <colgroup>
+                  <col width="95"/>
+                  <col width="390"/>
+                  <col width="95"/>
+                  <col width="340"/>
+             </colgroup>
+             <tr>
+                 <td><label><input type="checkbox"/><b>&nbsp;允许退票：</b></label></td>
+                 <td><textarea>默认不允许</textarea></td>
+                 <td><label><input type="checkbox"/><b>&nbsp;允许改签：</b></label></td>
+                 <td><textarea>默认不允许</textarea></td>
+             </tr>
+             <tr>
+                 <td><b>行李额说明：</b></td>
+                 <td><textarea>默认不允许</textarea></td>
+                 <td><b>备注：</b></td>
+                 <td><textarea>默认不允许</textarea></td>
+             </tr>
+         </table>
+         
+         <div class="tishi_bottom">
+            <span>&nbsp;</span>
+            <p>提示：点击“保存”完成发布（或提交审核），点击“保存并继续”完成发布（或提交审核），保留在当前页面，页面内容不清除，点击清除恢复空白页面。</p>
+         </div>
+         
+      </div> <!--middlecontent结束-->
+      </div><!--mainContent结束-->
+
+    </div>
+		
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+			$(function(){
+			   $(".airWay").find("input[type='radio']").each(function (index) {
+					$(this).click(function () {
+						//console.log(index);
+						switch (index) {
+							case 0:
+								$(".oneWay").show();
+								$(".goBack").hide();
+								$(".moreWay").hide();
+								break;
+							case 1:
+								$(".oneWay").hide();
+								$(".goBack").show();
+								$(".moreWay").hide();
+								break;
+							case 2:
+								$(".oneWay").hide();
+								$(".goBack").hide();
+								$(".moreWay").show();
+								break;
+							default:
+								break;
+						}
+					});
+				});
+			});
+	</script>
+    
+    <script>
+		$(function(){
+			
+			var selc = $(".sel_airlines").kendoComboBox({filter: "contains", suggest: true, index: 3 });
+				   
+		    kendo.init('body')
+		})
+	
+	</script>
+    
+</body>
+</html>

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 服务中心 航司热线</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+     
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_ucenter.css" media="screen" />
+
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.store.css" />
+    
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>    
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>    
+
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+    
+    <script type="text/javascript" src="../../static/js/store/store.js"></script>
+</head>
+<body>
+
+<div class="main-wrapper">
+<header class="main-header">
+    <a class="logo" href="/"><h1>天地行</h1></a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first active"><a herf="#">首页</a></li>
+            <li><a herf="#">国内机票</a></li>
+            <li><a herf="#">国际机票</a></li>
+            <li><a herf="#">酒店</a></li>
+        </ul> 
+    </nav>
+    <nav class="main-links">
+        <ul class="clearfix">
+            <li class="first"><a href="#">订单管理</a></li>
+            <li><a href="#">分销管理</a></li>
+            <li><a href="#">电子钱包</a></li>
+            <li><a href="#">统计报表</a></li>
+            <li><a href="#">客服服务</a></li>
+            <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+            <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+</header>
+<section class="main-body clearfix">
+    <aside class="us-nav">
+        <nav>
+            <h3>服务中心</h3>
+            <!--<div class="us-bind"><a href="#">手机已绑定</a>&#12288;<a class="text1" href="#"><i class="ucnav_03"></i>邮箱未绑定</a></div>-->
+            <dl>
+                <dt><i class="sercenav_01"></i>联系方式</dt>
+                <dd><a href="#">平台热线</a></dd>
+                <dd><a class="current" href="#">航司热线</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="sercenav_02"></i>建议反馈</dt>
+                <dd><a href="#">建议反馈</a></dd>
+            </dl>
+
+            <!--<dl>
+                <dt><i class="sercenav_03"></i>购物指南</dt>
+                <dd><a href="#">如何黑屏预订</a></dd>
+                <dd><a href="#">如何白屏预订</a></dd>
+                <dd><a href="#">关于购物流程</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="sercenav_04"></i>支付方式</dt>
+                <dd><a href="#">账户余额支付</a></dd>
+                <dd><a href="#">在线支付</a></dd>
+                <dd><a href="#">电子钱包充值</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="sercenav_05"></i>系统设置</dt>
+                <dd><a href="#">信息维护</a></dd>
+                <dd><a href="#">管理组织架构</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="sercenav_06"></i>工具使用</dt>
+                <dd><a href="#">添加常旅客</a></dd>
+            </dl>-->
+        </nav>
+    </aside>
+    <main class="us-content">
+        <h1 class="us-title">航司热线</h1>
+        <div class="us-body">
+             <ul class="tab_change clearfix">
+                   <li class="currentState"><em><a href="#">国内航空公司</a></em></li>
+                   <li><em><a href="#">国外航空公司</a></em></li>         
+             </ul>
+             <div class="airLine"> <!--airLine start-->
+                  <div class="alcontent clearfix">
+                       <h4>A</h4>
+                       <ul>
+                           <li>
+                                <small><em class="BK"></em></small>
+                                <i>
+                                       <div>奥凯</div>
+                                       <div><b>4000-668-866</b></div>
+                                </i>
+                           </li>
+                       </ul>
+                  </div>
+                  <div class="alcontent clearfix">
+                       <h4>C</h4>
+                       <ul>
+                           <li>
+                                <small><em class="EU"></em></small>
+                                <i>
+                                       <div>成都航空</div>
+                                       <div><b>028-6666-8888</b></div>
+                                </i>
+                           </li>
+                           <li>
+                                <small><em class="SA"></em></small>
+                                <i>
+                                       <div>春秋</div>
+                                       <div><b>95524</b></div>
+                                </i>
+                           </li>
+                           <li>
+                                <small><em class="U3"></em></small>
+                                <i>
+                                       <div>川航</div>
+                                       <div><b>028-8888-8888</b></div>
+                                </i>
+                           </li>
+                       </ul>
+                  </div>
+                  <div class="alcontent clearfix">
+                       <h4>D</h4>
+                       <ul>
+                           <li>
+                                <small><em class="MU"></em></small>
+                                <i>
+                                       <div>东航</div>
+                                       <div><b>95530</b></div>
+                                </i>
+                           </li>
+                       </ul>
+                  </div>
+                  <div class="alcontent clearfix">
+                       <h4>G</h4>
+                       <ul>
+                           <li>
+                                <small><em class="CA"></em></small>
+                                <i>
+                                       <div>国航</div>
+                                       <div><b>95583</b></div>
+                                </i>
+                           </li>
+                       </ul>
+                  </div>
+                  <div class="alcontent clearfix">
+                       <h4>H</h4>
+                       <ul>
+                           <li>
+                                <small><em class="HU"></em></small>
+                                <i>
+                                       <div>海航</div>
+                                       <div><b>950718</b></div>
+                                </i>
+                           </li>
+                           <li>
+                                <small><em class="NS"></em></small>
+                                <i>
+                                       <div>河北航空</div>
+                                       <div><b>0311-96699</b></div>
+                                </i>
+                           </li>
+                           <li>
+                                <small><em class="G5"></em></small>
+                                <i>
+                                       <div>华夏</div>
+                                       <div><b>4006-066-633</b></div>
+                                </i>
+                           </li>
+                       </ul>
+                  </div>
+                  <div class="alcontent clearfix">
+                       <h4>J</h4>
+                       <ul>
+                           <li>
+                                <small><em class="HO"></em></small>
+                                <i>
+                                       <div>吉祥</div>
+                                       <div><b>95520</b></div>
+                                </i>
+                           </li>
+                       </ul>
+                  </div>
+                  <div class="alcontent clearfix">
+                       <h4>K</h4>
+                       <ul>
+                           <li>
+                                <small><em class="KY"></em></small>
+                                <i>
+                                       <div>昆明航空</div>
+                                       <div><b>4008-876-737</b></div>
+                                </i>
+                           </li>
+                       </ul>
+                  </div>
+                  <div class="alcontent clearfix">
+                       <h4>N</h4>
+                       <ul>
+                           <li>
+                                <small><em class="CZ"></em></small>
+                                <i>
+                                       <div>南航</div>
+                                       <div><b>95539</b></div>
+                                </i>
+                           </li>
+                       </ul>
+                  </div>
+                  <div class="alcontent clearfix">
+                       <h4>S</h4>
+                       <ul>
+                           <li>
+                                <small><em class="SC"></em></small>
+                                <i>
+                                       <div>山航</div>
+                                       <div><b>4006-096-777</b></div>
+                                </i>
+                           </li>
+                           <li>
+                                <small><em class="ZH"></em></small>
+                                <i>
+                                       <div>深航</div>
+                                       <div><b>95080</b></div>
+                                </i>
+                           </li>
+                           <li>
+                                <small><em class="SD"></em></small>
+                                <i>
+                                       <div>首都航空</div>
+                                       <div><b>010-9507-1999</b></div>
+                                </i>
+                           </li>
+                       </ul>
+                  </div>
+                  <div class="alcontent clearfix">
+                       <h4>T</h4>
+                       <ul>
+                           <li>
+                                <small><em class="GS"></em></small>
+                                <i>
+                                       <div>天津航空</div>
+                                       <div><b>950710</b></div>
+                                </i>
+                           </li>
+                       </ul>
+                  </div>
+                  <div class="alcontent clearfix">
+                       <h4>X</h4>
+                       <ul>
+                           <li>
+                                <small><em class="PN"></em></small>
+                                <i>
+                                       <div>西部航空</div>
+                                       <div><b>95071095</b></div>
+                                </i>
+                           </li>
+                           <li>
+                                <small><em class="TV"></em></small>
+                                <i>
+                                       <div>西藏航空</div>
+                                       <div><b>4008-089-188</b></div>
+                                </i>
+                           </li>
+                           <li>
+                                <small><em class="MF"></em></small>
+                                <i>
+                                       <div>厦航</div>
+                                       <div><b>95557</b></div>
+                                </i>
+                           </li>
+                           <li>
+                                <small><em class="L8"></em></small>
+                                <i>
+                                       <div>祥鹏</div>
+                                       <div><b>95071950</b></div>
+                                </i>
+                           </li>
+                           <li>
+                                <small><em class="JR"></em></small>
+                                <i>
+                                       <div>幸福航空</div>
+                                       <div><b>4008-680-000</b></div>
+                                </i>
+                           </li>
+                       </ul>
+                  </div>                     
+             </div> <!--airLine end-->
+             
+             <div class="airLine" style="display:none;"> <!--airLine start-->
+                  <div class="alcontent clearfix">
+                       <h4>A</h4>
+                       <ul>
+                           <li>
+                                <small><em class="AA"></em></small>
+                                 <i>
+                                       <div><b>AA</b> &nbsp;&nbsp; 美国航空</div>
+                                       <div><b>4008-215-858</b></div>
+                                </i>
+                           </li>
+                           <li>
+                                <small><em class="AF"></em></small>
+                                <i>
+                                       <div><b>AF</b> &nbsp;&nbsp; 法国航空</div>
+                                       <div><b>4008-808-606</b></div>
+                                </i>
+                           </li>
+                       </ul>
+                  </div>
+                  <div class="alcontent clearfix">
+                       <h4>B</h4>
+                       <ul>
+                           <li>
+                                <small><em class="BA"></em></small>
+                                <i>
+                                       <div><b>BA</b> &nbsp;&nbsp; 英国航空</div>
+                                       <div><b>108004400031</b></div>
+                                </i>
+                           </li>
+                           <li>
+                                <small><em class="BR"></em></small>
+                                <i>
+                                       <div><b>BR</b> &nbsp;&nbsp; 长荣航空</div>
+                                       <div><b>4008-865-889</b></div>
+                                </i>
+                           </li>
+                       </ul>
+                  </div>
+                  <div class="alcontent clearfix">
+                       <h4>C</h4>
+                       <ul>
+                           <li>
+                                <small><em class="CI"></em></small>
+                                <i>
+                                       <div><b>CI</b> &nbsp;&nbsp; 中华航空</div>
+                                       <div><b>021-2220-3333</b></div>
+                                </i>
+                           </li>
+                       </ul>
+                  </div>
+                  <div class="alcontent clearfix">
+                       <h4>D</h4>
+                       <ul>
+                           <li>
+                                <small><em class="DL"></em></small>
+                                <i>
+                                       <div><b>DL</b> &nbsp;&nbsp; 达美航空</div>
+                                       <div><b>4001-202-364</b></div>
+                                </i>
+                           </li>
+                       </ul>
+                  </div>
+                  <div class="alcontent clearfix">
+                       <h4>E</h4>
+                       <ul>
+                           <li>
+                                <small><em class="EK"></em></small>
+                                <i>
+                                       <div><b>EK</b> &nbsp;&nbsp; 阿联酋航空</div>
+                                       <div><b>4008-822-380</b></div>
+                                </i>
+                           </li>
+                           <li>
+                                <small><em class="EY"></em></small>
+                                <i>
+                                       <div><b>EY</b> &nbsp;&nbsp; 阿联酋阿提哈德</div>
+                                       <div><b>4008-822-070</b></div>
+                                </i>
+                           </li>
+                       </ul>
+                  </div>
+                  <div class="alcontent clearfix">
+                       <h4>J</h4>
+                       <ul>
+                           <li>
+                                <small><em class="JL"></em></small>
+                                <i>
+                                       <div><b>JL</b> &nbsp;&nbsp; 日本航空</div>
+                                       <div><b>4008-880-808</b></div>
+                                </i>
+                           </li>
+                       </ul>
+                  </div>
+                  <div class="alcontent clearfix">
+                       <h4>K</h4>
+                       <ul>
+                           <li>
+                                <small><em class="KE"></em></small>
+                                <i>
+                                       <div><b>KE</b> &nbsp;&nbsp; 大韩航空</div>
+                                       <div><b>4006-588-888</b></div>
+                                </i>
+                           </li>
+                       </ul>
+                  </div>
+                  <div class="alcontent clearfix">
+                       <h4>L</h4>
+                       <ul>
+                           <li>
+                                <small><em class="LH"></em></small>
+                                <i>
+                                       <div><b>LH</b> &nbsp;&nbsp; 汉莎航空</div>
+                                       <div><b>021-5352-3999</b></div>
+                                </i>
+                           </li>
+                       </ul>
+                  </div>
+                  <div class="alcontent clearfix">
+                       <h4>N</h4>
+                       <ul>
+                           <li>
+                                <small><em class="NH"></em></small>
+                                <i>
+                                       <div><b>NH</b> &nbsp;&nbsp; 全日空</div>
+                                       <div><b>4008-828-888</b></div>
+                                </i>
+                           </li>
+                       </ul>
+                  </div>
+                  <div class="alcontent clearfix">
+                       <h4>O</h4>
+                       <ul>
+                           <li>
+                                <small><em class="OZ"></em></small>
+                                <i>
+                                       <div><b>OZ</b> &nbsp;&nbsp; 韩亚航空</div>
+                                       <div><b>4006-508-000</b></div>
+                                </i>
+                           </li>
+                       </ul>
+                  </div>
+                  <div class="alcontent clearfix">
+                       <h4>Q</h4>
+                       <ul>
+                           <li>
+                                <small><em class="QF"></em></small>
+                                <i>
+                                       <div><b>QF</b> &nbsp;&nbsp; 澳大利亚航空</div>
+                                       <div><b>8008-190-089</b></div>
+                                </i>
+                           </li>
+                       </ul>
+                  </div>
+                  <div class="alcontent clearfix">
+                       <h4>V</h4>
+                       <ul>
+                           <li>
+                                <small><em class="VS"></em></small>
+                                <i>
+                                       <div><b>VS</b> &nbsp;&nbsp; 维珍航空</div>
+                                       <div><b>021-5353-4605</b></div>
+                                </i>
+                           </li>
+                       </ul>
+                  </div>
+             </div> <!--airLine end-->
+        </div>
+    </main>
+</section>
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+
+<script>
+    $(function(){
+        $(".tab_change li").each(function(index){
+            $(this).click(function(){
+                $(".us-body .airLine").hide();
+                $(".us-body .airLine:eq(" + index + ")").show();
+                $(".tab_change li").removeClass("currentState");
+                $(this).addClass("currentState");
+            });
+
+        });
+
+    });
+</script>
+
+</body>
+</html>
+

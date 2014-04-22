@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 B2G 国际往返搜索列表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/b2g.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.b2g.css" />
+    <link rel="stylesheet" href="../../static/css/b2g_flight.css" media="all" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/b2g/common.js"></script>
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+    <!--[if lte IE 9]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="top-line"></div>
+    <header class="main-header">
+        <div class="header-content">
+            <a class="logo" href="/">天地行 B2G</a>
+            <nav class="main-nav">
+                <ul class="clearfix">
+                    <li class="first active"><a herf="#">行程预订</a></li>
+                    <li><a herf="#">行程管理</a></li>
+                    <li><a herf="#">数据服务</a></li>
+                    <li><a herf="#">创业维护</a></li>
+                    <li><a herf="#">系统设置</a></li>
+                </ul> 
+            </nav>
+        </div>
+    </header>
+    <div class="header-bar clearfix">
+        <div class="header-bar-content">
+            <i class="tips"></i><span>请先选择差旅人   * 默认状态下您为自己预订</span>
+            <div class="setuser">
+                <a href="javascript:void(0);">设置差旅人</a>
+            </div>
+            <div class="for_reason">
+                <span class="reason_checkbox checked"></span><label for="reason">因私</label><input type="checkbox" style="display:none;" id="reason" value="for_private" name="reason"/>
+            </div>
+        </div>
+    </div>
+    <section class="main-body clearfix">
+        <div class="main-body-content">
+        	<div class="titTop clearfix">
+                <h3 class="titleH3">北京到纽约 （往返）</h3>
+                <div class="flowImg">
+                        <em class="curFlowImg"><i></i>选择</em>
+                        <em>预订</em>
+                        <em>填写</em>
+                        <em>加入行程</em>
+                        <em class="lastFlowGray">提交行程</em>
+                </div>
+        	</div>  
+       
+      	 	<div class="seekCon">
+                <div class="againSeek">
+                    <table>
+                          <colgroup>
+                               <col width="210px"/>
+                               <col width="70px"/>
+                               <col width="210px"/>
+                               <col width="70px"/>
+                               <col width="210px"/>
+                               <col width="45px"/>
+                               <col width="190px"/>
+                               <col width="130px"/>
+                          </colgroup>
+                          <tr>
+                              <td rowspan="2">
+                                   <select data-role="dropdownlist" style="width:160px;" id="trip_type">
+                                         <option value="one_way">单程</option>
+                                         <option value="round_trip" selected>往返</option>
+                                   </select>
+                              </td>
+                              <td>出发城市：</td>
+                              <td><input type="text" value="上海" /></td>
+                              <td>出发时间：</td>
+                              <td><input type="text" value="" class="datepicker"/></td>
+                              <td>舱位：</td>
+                              <td>
+                                  <select data-role="dropdownlist"  style="width:150px;">
+                                       <option>不限</option>
+                                       <option>经济舱</option>
+                                       <option>商务舱</option>
+                                       <option>头等舱</option>
+                                  </select>
+                              </td>
+                              <td><button type="button" class="commonBtn lightBlueBtn" style="padding:7px 25px;">重新搜索</button></td>
+                          </tr>
+                          <tr>
+                              <td>到达城市：</td>
+                              <td><input type="text" value="重庆"/></td>
+                              <td colspan="2"><label id="return_label"><em>返程时间：</em><input type="text" value="" class="datepicker" id="return_date" /></label></td>
+                              <td></td>
+                              <td></td>
+                              <td valign="bottom">
+                                  <label class="heiSeek toggle_trigger" data-toggle='{"target":"#unfoldCon","textFilter":"i","toggleClass":["heiSeek","putAway"],"toggleText":["高级搜索","收起"]}'><i>高级搜索</i> <em></em></label>
+                                  <label class="putAway" style="display:none;"><i>收起</i> <em></em></label>
+                              </td>
+                          </tr>
+                     </table> 
+                </div>
+                <div class="unfoldCon" id="unfoldCon" style="display:none;">                    
+                     <b>起飞时间：</b>
+                     <select data-role="dropdownlist"  style="width:120px;">
+                          <option>不限</option>
+                          <option>00:00-06:00</option>
+                          <option selected>06:00-12:00</option>
+                          <option>12:00-18:00</option>
+                          <option>18:00-24:00</option>
+                     </select>
+                     <b style="margin-left:85px;">航空公司：</b>
+                     <select data-role="dropdownlist"  style="width:150px; margin-right:50px;">
+                          <option>中国国际航空 &nbsp; CA</option>
+                          <option>东方航空 &nbsp; MU</option>
+                          <option>南方航空</option>
+                          <option>新加坡航空</option>
+                          <option>香港航空</option>
+                     </select>
+                     <label><input type="radio" name="type" checked/>全部</label>
+                     <label><input type="radio" name="type"/>直飞</label>
+                     <label><input type="radio" name="type"/>中转</label>
+                </div>
+        </div>   
+    
+        <ul class="date clearfix">
+            <li>
+               <a href="#" style="width:35px; min-height:42px;"> <i class="highlightI"></i> </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>07-20 周一</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>07-20 周二</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>07-20 周三</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li class="current">
+                <a href="#">
+                    <div>07-20 周四</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>07-20 周五</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>07-20 周六</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>07-20 周日</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li style="border:0;" class="last_li">
+                <a href="#" style=" width:36px; padding:20px 0;">
+                     <span class="highlightSpan">&nbsp;</span>
+                </a>
+            </li>
+        </ul>
+        
+        <div class="timePrice">
+             <label>起飞时间<em></em></label>
+             <label>降落时间<em></em></label>
+             <label>价格<em class="arrDown"></em></label>
+             <label>行程总时长<em></em></label>
+             <label class="currentCli">中转次数<em class="arrUpOrange"></em></label>
+        </div>
+        
+        <div class="airContent">  <!--airContent start-->
+             <div class="module interModule specialBg clearfix"> <!--module start-->
+                  <div class="airModuleLeft clearfix">
+                           <div class="moduleLeft clearfix">
+                                   <div class="airName clearfix">
+                                        <div class="goBack">
+                                             <b>去</b><br/><em class="goArrow"></em>
+                                        </div>
+                                        <div class="goBackLogo">
+                                                <div id="manyAirName">
+                                                    <div class="airMore"><i class="airLogo"></i></div>
+                                                    <div class="nameMany"><em>多家航空公司</em></div>
+                                                </div>
+                                        </div>
+                                   </div>
+                                   <div class="interCentercon leftIntent">
+                                        <div class="transfTime">
+                                             <b>07:20</b>
+                                             <em>———</em>
+                                             <i class="twiceTransfer">&nbsp;2程中转&nbsp;</i>
+                                             <em>———</em>
+                                             <b>09:20</b>
+                                             <span class="interDayNumber">+1</span>
+                                        </div>
+                                        <ul class="interPlace clearfix">
+                                            <li>北京</li>
+                                            <!--<li>上海</li>-->
+                                            <li class="pullRight">纽约</li>
+                                        </ul>
+                                        <div class="interAirportName">
+                                             <em>首都国际机场T2</em>
+                                             <em>纽瓦克机场</em>
+                                        </div>
+                                   </div>
+                                   <div class="flyTime">
+                                    <span class="zongTime">总时长22小时55分钟</span>
+                                    <span style="margin-left:-50px;">
+                                    <label class="spread manyCon" style="margin-right:10px;"><i>飞行计划</i><em></em>
+									</label>
+                                    </span>
+                                   </div>
+                           </div>
+                           <div class="moduleLeft lastModuleLeft clearfix">
+                                   <div class="airName clearfix">
+                                        <div class="goBack">
+                                             <b>返</b><br/><em class="backArrow"></em>
+                                        </div>
+                                        <div class="goBackLogo">
+                                                <div class="airMore"><i class="logo_CA"></i></div>
+                                                <div class="airInfoName"><em>中国国航  中国国航中国国航中国国</em></div> 
+                                        </div>
+                                   </div>
+                                   <div class="interCentercon leftIntent">
+                                        <div class="transfTime">
+                                             <b>07:20</b>
+                                             <em>———</em>
+                                             <i class="oneTransfer">&nbsp;1程中转&nbsp;</i>
+                                             <em>———</em>
+                                             <b>09:20</b>
+                                        </div>
+                                        <ul class="interPlace clearfix">
+                                            <li>北京</li>
+                                            <li>上海</li>
+                                            <li>纽约</li>
+                                        </ul>
+                                        <div class="interAirportName">
+                                             <em>首都国际机场T2</em>
+                                             <em>纽瓦克机场</em>
+                                        </div>
+                                   </div>
+                                   <div class="flyTime">
+                                    <span class="zongTime">总时长22小时55分钟</span>
+                                    <span style="margin-left:-50px;">
+                                     <label class="spread manyCon" style="margin-right:10px;"><i>飞行计划</i><em></em>
+									</label>
+                                    </span>
+                                   </div>
+                           </div>
+                    </div>
+                    <div class="airModuleRight">
+                           <div class="totalPrice distMargin">
+                                <div class="toPriceTop"><i>往返票价：</i><em>￥</em><b>5200</b></div>
+                                <div class="toPriceCenter" style="margin:10px 10px 0 0;">燃油 + 参考税： 1710 +1344 元</div>                                <div style="margin-top:10px;"><a href="javascript:void(0);" class="linkA">退改签限制</a></div>
+                           </div>
+                           <div class="moduleRight interModuleRight">
+                                <button type="button" class="commonBtn lightRedBtn">核算并预订</button>
+                                <em class="only">仅剩1张</em>
+                           </div> 
+                    </div>                  
+             </div> <!--module end-->
+             
+             <div class="module interModule clearfix"> <!--module start-->
+                   <div class="airModuleLeft clearfix">
+                           <div class="moduleLeft clearfix">
+                                   <div class="airName clearfix">
+                                        <div class="goBack">
+                                             <b>去</b><br/><em class="goArrow"></em>
+                                        </div>
+                                        <div class="goBackLogo">
+                                                <div id="manyAirName">
+                                                    <div class="airMore"><i class="airLogo"></i></div>
+                                                    <div class="nameMany"><em>多家航空公司</em></div>
+                                                </div>
+                                        </div>
+                                   </div>
+                                   <div class="interCentercon leftIntent">
+                                        <div class="transfTime">
+                                             <b>07:20</b>
+                                             <em>———</em>
+                                             <i class="twiceTransfer">&nbsp;2程中转&nbsp;</i>
+                                             <em>———</em>
+                                             <b>09:20</b>
+                                        </div>
+                                        <ul class="interPlace clearfix">
+                                            <li>北京</li>
+                                            <!--<li>上海</li>-->
+                                            <li class="pullRight">纽约</li>
+                                        </ul>
+                                        <div class="interAirportName">
+                                             <em>首都国际机场T2</em>
+                                             <em>纽瓦克机场</em>
+                                        </div>
+                                   </div>
+                                   <div class="flyTime">
+                                    <span class="zongTime">总时长22小时55分钟</span>
+                                    <span style="margin-left:-50px;">
+                                    <label class="spread manyCon" style="margin-right:10px;"><i>飞行计划</i><em></em>
+									</label>
+                                    </span>
+                                   </div>
+                           </div>
+                           <div class="moduleLeft lastModuleLeft clearfix">
+                                   <div class="airName clearfix">
+                                        <div class="goBack">
+                                             <b>返</b><br/><em class="backArrow"></em>
+                                        </div>
+                                        <div class="goBackLogo">
+                                                <div class="airMore"><i class="logo_CA"></i></div>
+                                                <div class="airInfoName"><em>中国国航</em></div>
+                                        </div>
+                                   </div>
+                                   <div class="interCentercon leftIntent">
+                                        <div class="transfTime">
+                                             <b>07:20</b>
+                                             <em>———</em>
+                                             <i class="oneTransfer">&nbsp;1程中转&nbsp;</i>
+                                             <em>———</em>
+                                             <b>09:20</b>
+                                        </div>
+                                        <ul class="interPlace clearfix">
+                                            <li>北京</li>
+                                            <li>上海</li>
+                                            <li>纽约</li>
+                                        </ul>
+                                        <div class="interAirportName" style="margin-bottom:0;">
+                                             <em>首都国际机场T2</em>
+                                             <em>纽瓦克机场</em>
+                                        </div>
+                                   </div>
+                                   <div class="flyTime">
+                                    <span class="zongTime">总时长22小时55分钟</span>
+                                    <span style="margin-left:-50px;">
+                                    <label class="spread manyCon" style="margin-right:10px;"><i>飞行计划</i><em></em>
+									</label>
+                                    </span>
+                                   </div>
+                           </div>
+                    </div>
+                    <div class="airModuleRight">
+                           <div class="totalPrice distMargin">
+                                <div class="toPriceTop"><i>往返票价：</i><em>￥</em><b>5200</b></div>
+                                <div class="toPriceCenter" style="margin:10px 10px 0 0;">燃油 + 参考税： 1710 +1344 元</div>                               <div style="margin-top:10px;"><a href="javascript:void(0);" class="linkA">退改签限制</a></div>
+                           </div>
+                           <div class="moduleRight interModuleRight">
+                                <button type="button" class="commonBtn lightRedBtn">核算并预订</button>
+                                <em class="only">仅剩1张</em>
+                           </div> 
+                    </div>                  
+             </div> <!--module end-->
+             
+             <div class="module interModule specialBg clearfix"> <!--module start-->
+                   <div class="airModuleLeft clearfix">
+                           <div class="moduleLeft clearfix">
+                                   <div class="airName clearfix">
+                                        <div class="goBack">
+                                             <b>去</b><br/><em class="goArrow"></em>
+                                        </div>
+                                        <div class="goBackLogo">
+                                                <div id="manyAirName">
+                                                    <div class="airMore"><i class="airLogo"></i></div>
+                                                    <div class="nameMany"><em>多家航空公司</em></div>
+                                                </div>
+                                        </div>
+                                   </div>
+                                   <div class="interCentercon leftIntent">
+                                        <div class="transfTime">
+                                             <b>07:20</b>
+                                             <em>———</em>
+                                             <i class="twiceTransfer">&nbsp;2程中转&nbsp;</i>
+                                             <em>———</em>
+                                             <b>09:20</b>
+                                        </div>
+                                        <ul class="interPlace clearfix">
+                                            <li>北京</li>
+                                            <!--<li>上海</li>-->
+                                            <li class="pullRight">纽约</li>
+                                        </ul>
+                                        <div class="interAirportName" style="margin-bottom:0;">
+                                             <em>首都国际机场T2</em>
+                                             <em>纽瓦克机场</em>
+                                        </div>
+                                   </div>
+                                   <div class="flyTime">
+                                    <span class="zongTime">总时长22小时55分钟</span>
+                                    <span style="margin-left:-50px;">
+                                    <label class="spread manyCon" style="margin-right:10px;"><i>飞行计划</i><em></em>
+									</label>
+                                    </span>
+                                   </div>
+                           </div>
+                           <div class="moduleLeft lastModuleLeft clearfix">
+                                   <div class="airName clearfix">
+                                        <div class="goBack">
+                                             <b>返</b><br/><em class="backArrow"></em>
+                                        </div>
+                                        <div class="goBackLogo">
+                                                <div class="airMore"><i class="logo_CA"></i></div>
+                                                <div class="airInfoName"><em>中国国航</em></div>
+                                        </div>
+                                   </div>
+                                   <div class="interCentercon leftIntent">
+                                        <div class="transfTime">
+                                             <b>07:20</b>
+                                             <em>———</em>
+                                             <i class="oneTransfer">&nbsp;1程中转&nbsp;</i>
+                                             <em>———</em>
+                                             <b>09:20</b>
+                                        </div>
+                                        <ul class="interPlace clearfix">
+                                            <li>北京</li>
+                                            <li>上海</li>
+                                            <li>纽约</li>
+                                        </ul>
+                                        <div class="interAirportName" style="margin-bottom:0;">
+                                             <em>首都国际机场T2</em>
+                                             <em>纽瓦克机场</em>
+                                        </div>
+                                   </div>
+                                   <div class="flyTime">
+                                    <span class="zongTime">总时长22小时55分钟</span>
+                                    <span style="margin-left:-50px;">
+                                    <label class="spread manyCon" style="margin-right:10px;"><i>飞行计划</i><em></em>
+									</label>
+                                    </span>
+                                   </div>
+                           </div>
+                    </div>
+                    <div class="airModuleRight">
+                           <div class="totalPrice distMargin">
+                                <div class="toPriceTop"><i>往返票价：</i><em>￥</em><b>5200</b></div>
+                                <div class="toPriceCenter" style="margin:10px 10px 0 0;">燃油 + 参考税： 1710 +1344 元</div>                                <div style="margin-top:10px;"><a href="javascript:void(0);" class="linkA">退改签限制</a></div>
+                           </div>
+                           <div class="moduleRight interModuleRight">
+                                <button type="button" class="commonBtn lightRedBtn">核算并预订</button>
+                                <em class="only">仅剩1张</em>
+                           </div> 
+                    </div>                  
+             </div> <!--module end-->
+             
+             <div class="module interModule clearfix"> <!--module start-->
+                   <div class="airModuleLeft clearfix">
+                           <div class="moduleLeft clearfix">
+                                   <div class="airName clearfix">
+                                        <div class="goBack">
+                                             <b>去</b><br/><em class="goArrow"></em>
+                                        </div>
+                                        <div class="goBackLogo">
+                                                <div id="manyAirName">
+                                                    <div class="airMore"><i class="airLogo"></i></div>
+                                                    <div class="nameMany"><em>多家航空公司</em></div>
+                                                </div>
+                                        </div>
+                                   </div>
+                                   <div class="interCentercon leftIntent">
+                                        <div class="transfTime">
+                                             <b>07:20</b>
+                                             <em>———</em>
+                                             <i class="oneTransfer">&nbsp;1程中转&nbsp;</i>
+                                             <em>———</em>
+                                             <b>09:20</b>
+                                        </div>
+                                        <ul class="interPlace clearfix">
+                                            <li>北京</li>
+                                            <li>上海</li>
+                                            <li>纽约</li>
+                                        </ul>
+                                        <div class="interAirportName" style="margin-bottom:0;">
+                                             <em>首都国际机场T2</em>
+                                             <em>纽瓦克机场</em>
+                                        </div>
+                                   </div>
+                                   <div class="flyTime">
+                                    <span class="zongTime">总时长22小时55分钟</span>
+                                    <span style="margin-left:-50px;">
+                                    <label class="spread manyCon" style="margin-right:10px;"><i>飞行计划</i><em></em>
+									</label>
+                                    </span>
+                                   </div>
+                           </div>
+                           <div class="moduleLeft lastModuleLeft clearfix">
+                                   <div class="airName clearfix">
+                                        <div class="goBack">
+                                             <b>返</b><br/><em class="backArrow"></em>
+                                        </div>
+                                        <div class="goBackLogo">
+                                                <div class="airMore"><i class="logo_CA"></i></div>
+                                                <div class="airInfoName"><em>中国国航</em></div>
+                                        </div>
+                                   </div>
+                                   <div class="interCentercon leftIntent">
+                                        <div class="transfTime">
+                                             <b>07:20</b>
+                                             <em>———</em>
+                                             <i class="twiceTransfer">&nbsp;2程中转&nbsp;</i>
+                                             <em>———</em>
+                                             <b>09:20</b>
+                                        </div>
+                                        <ul class="interPlace clearfix">
+                                            <li>北京</li>
+                                            <!--<li>上海</li>-->
+                                            <li class="pullRight">纽约</li>
+                                        </ul>
+                                        <div class="interAirportName" style="margin-bottom:0;">
+                                             <em>首都国际机场T2</em>
+                                             <em>纽瓦克机场</em>
+                                        </div>
+                                   </div>
+                                   <div class="flyTime">
+                                    <span class="zongTime">总时长22小时55分钟</span>
+                                    <span style="margin-left:-50px;">
+                                    <label class="spread manyCon" style="margin-right:10px;"><i>飞行计划</i><em></em>
+									</label>
+                                    </span>
+                                   </div>
+                           </div>
+                    </div>
+                    <div class="airModuleRight">
+                           <div class="totalPrice distMargin">
+                                <div class="toPriceTop"><i>往返票价：</i><em>￥</em><b>5200</b></div>
+                                <div class="toPriceCenter" style="margin:10px 10px 0 0;">燃油 + 参考税： 1710 +1344 元</div>                                <div style="margin-top:10px;"><a href="javascript:void(0);" class="linkA">退改签限制</a></div>
+                           </div>
+                           <div class="moduleRight interModuleRight">
+                                <button type="button" class="commonBtn lightRedBtn">核算并预订</button>
+                                <em class="only">仅剩1张</em>
+                           </div> 
+                    </div>                   
+             </div> <!--module end-->
+             
+             <div class="checkMore"><a href="javascript:void(0);">点击查看更多</a></div>
+             <div class="smallLoading"><em></em> <b>数据正在加载中……</b></div>
+        </div>  <!--airContent end-->
+    
+        
+	</div>
+    </section>
+    <footer class="main-footer">
+        <p class="copyright">Copyright &copy; 2013 天地行 All Rights Reserved.     沪ICP备08101503号</p>
+    </footer>
+</div>
+
+<!--<script type="text/x-kendo-template" id="transit">	
+	<label class="floatTierCon"><b>请注意：</b><span>此行程需要过境日本转机，中国大陆公民过境日本，可能需要申请该国过境签证，请确认自己的签证无误后再出票。</span></label>
+</script>-->
+
+<script type="text/x-kendo-template" id="manyCon">
+ <div class="openCon noBorder">
+       <!--<em class="openArrow">&nbsp;</em>-->
+       <ul class="airInfoList">
+           <li>
+               <div class="airInfoTitle">
+                    <code></code>
+                    <em class="airInfoName">中国国航</em>
+                    <label class="cabinType"><b>CA1835</b> &nbsp; 机型 777 &nbsp; 经济舱</label>
+                    <label class="airDuration"><em></em>飞行时长：2小时15分</label>
+               </div>
+               <div class="airInfoCont">
+                      <em class="airLeftLine"></em>
+                      <div class="takeOffArrive resestDistance">
+                           <p>起飞：12月01日 &nbsp; <b>08:00</b> &nbsp; 北京   首都国际机场 PEK</p>
+                           <p>到达：12月01日 &nbsp; <b> 08:00 </b> &nbsp; 北京   首都国际机场 PEK</p>
+                      </div>
+                      <div class="tranTime resestDistance">
+                           <i class="tranImg"></i>
+                           <span class="tran_air">上海中转 &nbsp; 虹桥机场  &nbsp; <em>不同机场</em></span>
+                           <label class="stopTime">
+                                 <em></em>
+                                 <span>停留时长：6小时15分</span>
+                           </label>
+                      </div>
+               </div>
+           </li>
+           <li>
+               <div class="airInfoTitle">
+                    <code></code>
+                    <em class="airInfoName">中国国航</em>
+                    <label class="cabinType"><b>CA1835</b> &nbsp; 机型 777 &nbsp; 经济舱</label>
+                    <label class="airDuration"><em></em>飞行时长：2小时15分</label>
+               </div>
+               <div class="airInfoCont">
+                      <div class="takeOffArrive resestDistance">
+                           <p>起飞：12月01日 &nbsp; <b>08:00</b> &nbsp; 北京   首都国际机场 PEK</p>
+                           <p>到达：12月01日 &nbsp; <b> 08:00 </b> &nbsp; 北京   首都国际机场 PEK</p>
+                      </div>
+               </div>
+           </li>
+       </ul>
+ </div>
+</script>
+
+<script type="text/x-kendo-template" id="oneCon">
+ <div class="openCon noBorder">
+       <!--<em class="openArrow">&nbsp;</em>-->
+       <ul class="airInfoList">
+           <li>
+               <div class="airInfoTitle">
+                    <code></code>
+                    <em class="airInfoName">中国国航</em>
+                    <label class="cabinType"><b>CA1835</b> &nbsp; 机型 777 &nbsp; 经济舱</label>
+                    <label class="airDuration"><em></em>飞行时长：2小时15分</label>
+               </div>
+               <div class="airInfoCont">
+                      <div class="takeOffArrive resestDistance">
+                           <p>起飞：12月01日 &nbsp; <b>08:00</b> &nbsp; 北京   首都国际机场 PEK</p>
+                           <p>到达：12月01日 &nbsp; <b> 08:00 </b> &nbsp; 北京   首都国际机场 PEK</p>
+                      </div>
+               </div>
+           </li>
+       </ul>
+ </div>
+</script>
+
+<script type="text/x-kendo-template" id="difAir">
+	<label class="floatTierCon"><b>请注意：</b><span>此行程需要在不同机场转机，请合理安排您的时间和行程。</span></label>
+</script>
+
+<script type="text/x-kendo-template" id="airLogo">
+	<table class="moreAirCon">
+	       <colgroup>
+                 <col width="30px"/>
+                 <col width="65px"/>
+                 <col width="70px"/>
+                 <col width="70px"/>
+           </colgroup>
+           <tr>
+               <td><code></code></td>
+               <td>中国国航</td>
+               <td><b>CA1835</b></td>
+               <td>机型 777</td>
+           </tr>
+           <tr>
+               <td><code></code></td>
+               <td>荷兰航空</td>
+               <td><b>MU5137</b></td>
+               <td>机型 333</td>
+           </tr>
+	</table>	
+</script>	
+
+<script type="text/x-kendo-template" id="oneTransfer">
+	<table class="transferList">
+	       <colgroup>
+                 <col width="40px"/>
+                 <col width="140px"/>
+                 <col width="140px"/>
+           </colgroup>
+           <tr>
+               <th>中转</th>
+               <td>香港（香港国际机场）</td>
+               <td>停留时长：2小时15分</td>
+           </tr>
+	</table>	
+</script>
+
+<script type="text/x-kendo-template" id="twiceTransfer">
+	<table class="transferList">
+	       <colgroup>
+                 <col width="40px"/>
+                 <col width="140px"/>
+                 <col width="140px"/>
+           </colgroup>
+           <tr>
+               <th>中转</th>
+               <td>香港（香港国际机场）</td>
+               <td>停留时长：2小时15分</td>
+           </tr>
+		   <tr>
+               <th>经停</th>
+               <td>东京（东京国际机场）</td>
+               <td>停留时长：2小时15分</td>
+           </tr>
+	</table>	
+</script>
+
+<script type="text/x-kendo-template" id="backChangeSign">
+	<div class="floatLayer">
+		 <p><b>退票：</b>仅退基建燃油费，机票款不退</p>
+		 <p><b>废票：</b>每张收取N元费用</p>
+		 <p><b>更改：</b>不得改期、升舱</p>
+		 <p><b>签转：</b>不允许签转</p>
+		 <p><b>备注：</b> </p>
+	</div>
+</script>
+
+
+	<script>
+		
+		$(function(){
+				  
+			$(".flyTime .manyCon").kendoTooltip({
+				wrapperClass:"green",
+				position:"bottom", //left right top
+				content:function(){
+					return $("#manyCon").html();
+				},
+				offsetY:5
+			});
+			
+			$(".flyTime .oneCon").kendoTooltip({
+				wrapperClass:"green",
+				position:"bottom", //left right top
+				content:function(){
+					return $("#oneCon").html();
+				},
+				offsetY:5
+			});
+			
+			$(".totalPrice .difAir").kendoTooltip({
+				position:"bottom", //left right top
+				wrapperClass:"lineWeight",
+				width:200,
+				content:function(){
+					return $("#difAir").html();
+				},
+				offsetY:10				
+			});
+			
+			$(".airName #manyAirName").kendoTooltip({
+				position:"bottom", //left right top
+				wrapperClass:"lineWeight",
+				content:function(){
+					return $("#airLogo").html();
+				},
+				offsetY:-20				
+			});
+			
+			$(".transfTime .dayNumber").kendoTooltip({
+				position:"bottom", //left right top
+				wrapperClass:"lineWeight",
+				content:function(){
+					return "到达时间为第2天，2013-12-24 09：20。";
+				},
+				offsetY:5				
+			});
+			
+			$(".transfTime .oneTransfer").kendoTooltip({
+				position:"bottom", //left right top
+				wrapperClass:"lineWeight",
+				width:320,
+				content:function(){
+					return $("#oneTransfer").html();
+				},
+				offsetY:10				
+			});
+			
+			$(".transfTime .twiceTransfer").kendoTooltip({
+				position:"bottom", //left right top
+				wrapperClass:"lineWeight",
+				width:320,
+				content:function(){
+					return $("#twiceTransfer").html();
+				},
+				offsetY:10				
+			});
+			
+			$(".totalPrice .linkA").kendoTooltip({
+				position:"bottom", //left right top
+				wrapperClass:"lineWeight",
+                width:300,
+				content:function(){
+					return $("#backChangeSign").html();
+				},
+				offsetY:10				
+			});
+			
+		});
+	</script>
+    
+    <script>
+
+        $(function(){
+
+            $("#trip_type").change(function(){
+				console.log($(this).val());
+                if($(this).val() == "one_way"){
+                    $("#return_label input").addClass("grayed").prop("disabled",true);                    
+                }else{
+					$("#return_date").removeClass("grayed").prop("disabled",false);
+
+                }
+            });
+        });
+    </script>
+    
+    
+    
+</body>
+
+</html>
+
+

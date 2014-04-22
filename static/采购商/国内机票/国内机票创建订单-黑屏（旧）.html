@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 国内机票创建订单-黑屏</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+     
+    <link href="../../static/css/coin-slider-styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_flight.css" media="screen" />
+    
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+	<link rel="stylesheet" href="../../static/css/kendo.store.css" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+	<script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+    
+    <script type="text/javascript" src="../../static/js/store/store.js"></script>
+</head>
+<body>
+
+<div class="main-wrapper">
+<header class="main-header">
+    <a class="logo" href="/"><h1>天地行</h1></a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first active"><a herf="#">首页</a></li>
+            <li><a herf="#">国内机票</a></li>
+            <li><a herf="#">国际机票</a></li>
+            <li><a herf="#">酒店</a></li>
+        </ul> 
+    </nav>
+    <nav class="main-links">
+        <ul class="clearfix">
+            <li class="first"><a href="#">订单管理</a></li>
+            <li><a href="#">分销管理</a></li>
+            <li><a href="#">电子钱包</a></li>
+            <li><a href="#">统计报表</a></li>
+            <li><a href="#">客服服务</a></li>
+            <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+            <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+</header>
+<section class="main-body clearfix">
+
+    <div class="flow clearfix">
+       <h3>返回搜索结果页</h3>
+       <ul>
+          <li class="current_li">创建订单</li>
+          <li>支付</li>
+          <li style="margin-right:0;">出票</li> 
+          <div style="width:65px;" class="line"></div> 
+       </ul>
+    </div>
+    <div class="departure">
+        <div class="chief"> <h3>航班信息</h3> </div>
+        <table cellpadding="0" cellspacing="0" class="route">
+             <colgroup>
+                 <col width="90px"/>
+                 <col width="70px"/>
+                 <col width="85px"/>
+                 <col width="115px"/>
+                 <col width="80px"/>
+                 <col width="135px"/>
+                 <col width="105px"/>
+                 <col width="50px"/>
+                 <col width="95px"/>
+                 <col width="50px"/>
+             </colgroup>        
+            <thead>
+                <tr>
+                    <th>行程</th>
+                    <th>PNR</th>
+                    <th>大编码</th>
+                    <th>航班号</th>
+                    <th>机型</th>
+                    <th>起降时间</th>
+                    <th>起降机场</th>
+                    <th>经停</th>
+                    <th>舱位等级</th>
+                    <th>航位</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>北京-上海</td>
+                    <td>JZ4W50</td>
+                    <td>MJWN9N</td>
+                    <td><i class="aviation_icon">东方航空<br>MU5183</i></td>
+                    <td>大型机<br>333</td>
+                    <td>2013-09-09 08：20<br>2013-09-01 10：20</td>
+                    <td>首都机场T3<br>虹桥机场T2</td>
+                    <td>武汉</td>
+                    <td>特价经济航</td>
+                    <td>G</td>
+                </tr>
+                <tr class="dashed_top">
+                    <td>北京-上海</td>
+                    <td>JZ4W50</td>
+                    <td>MJWN9N</td>
+                    <td><i class="aviation_icon">东方航空<br>MU5183</i></td>
+                    <td>大型机<br>333</td>
+                    <td>2013-09-09 08：20<br>2013-09-01 10：20</td>
+                    <td>首都机场T3<br>虹桥机场T2</td>
+                    <td>武汉</td>
+                    <td>特价经济航</td>
+                    <td>G</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="quote">
+       <ul class="message_ul clearfix">
+           <li class="message_li"><em><a href="#">成人报价信息</a></em></li>
+           <li><em><a href="#">儿童报价信息</a></em></li>
+           <li><em><a href="#">婴儿报价信息</a></em></li>           
+       </ul>
+       <table cellpadding="0" cellspacing="0" class="fare">
+             <colgroup>
+                 <col width="25px"/>
+                 <col width="80px"/>
+                 <col width="70px"/>
+                 <col width="75px"/>
+                 <col width="165px"/>
+                 <col width="160px"/>
+                 <col width="160px"/>
+                 <col width="100px"/>
+             </colgroup>        
+            <thead>
+                <tr>
+                    <th> </th>
+                    <th>应收票款</th>
+                    <th>票款</th>
+                    <th>机建/燃油</th>
+                    <th>返点</th>
+                    <th>出票时间</th>
+                    <th>退废票时间</th>
+                    <th>出票效率</th>
+                    <th>出票类型</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="currentTr">
+                    <td><input type="radio" name="fee" checked="checked" /></td>
+                    <td class="fontWeight"><em>2147</em></td>
+                    <td class="fontWeight"><em>2260</em></td>
+                    <td class="fontWeight">300</td>
+                    <td class="fontWeight"><b>7.2% + 51=76</b></td>
+                    <td>00:00-23:59</td>
+                    <td>00:00-23:59</td>
+                    <td>90%</td>
+                    <td>B2B[自动出票]</td>
+                </tr>  
+                <tr class="remarkCont">
+                    <td></td>
+                    <td colspan="10">
+                        <div class="beizhu clearfix">
+                             <b>政策备注：</b>
+                             <div>(不管任何原因)签转到其他航空公司、跨月签转以及有政策航班改到无政策航班，需收回代理费1</div>
+                        </div>                    
+                    </td>
+                </tr>                  
+                <tr class="dashed_top">
+                    <td><input type="radio" name="fee" /></td>
+                    <td class="fontWeight"><em>2147</em></td>
+                    <td class="fontWeight"><em>2260</em></td>
+                    <td class="fontWeight">300</td>
+                    <td class="fontWeight"><b>7.2% + 51=76</b></td>
+                    <td>工作日：08:25-20:30<br>双休日：08:30-18:30</td>
+                    <td>工作日：08:25-20:30<br>双休日：08:30-18:30</td>
+                    <td>90%</td>
+                    <td>B2B[自动出票]</td>
+                </tr>
+                <tr class="remarkCont" style="display:none;">
+                    <td></td>
+                    <td colspan="10">
+                        <div class="beizhu clearfix">
+                             <b>政策备注：</b>
+                             <div>(不管任何原因)签转到其他航空公司、跨月签转以及有政策航班改到无政策航班，需收回代理费2</div>
+                        </div>                    
+                    </td>
+                </tr>                  
+                <tr class="dashed_top">
+                    <td><input type="radio" name="fee" /></td>
+                    <td class="fontWeight"><em>2147</em></td>
+                    <td class="fontWeight"><em>2260</em></td>
+                    <td class="fontWeight">300</td>
+                    <td class="fontWeight"><b>7.2% + 51=76</b></td>
+                    <td>工作日：08:25-20:30<br>双休日：08:30-18:30</td>
+                    <td>工作日：08:25-20:30<br>双休日：08:30-18:30</td>
+                    <td>90%</td>
+                    <td>B2B[自动出票]</td>
+                </tr>
+                <tr class="remarkCont" style="display:none;">
+                    <td></td>
+                    <td colspan="10">
+                        <div class="beizhu clearfix">
+                             <b>政策备注：</b>
+                             <div>(不管任何原因)签转到其他航空公司、跨月签转以及有政策航班改到无政策航班，需收回代理费3</div>
+                        </div>                    
+                    </td>
+                </tr>                  
+                <tr class="dashed_top">
+                    <td><input type="radio" name="fee" /></td>
+                    <td class="fontWeight"><em>2147</em></td>
+                    <td class="fontWeight"><em>2260</em></td>
+                    <td class="fontWeight">300</td>
+                    <td class="fontWeight"><b>7.2% + 51=76</b></td>
+                    <td>工作日：08:25-20:30<br>双休日：08:30-18:30</td>
+                    <td>工作日：08:25-20:30<br>双休日：08:30-18:30</td>
+                    <td>90%</td>
+                    <td>B2B[自动出票]</td>
+                </tr>
+                <tr class="remarkCont" style="display:none;">
+                    <td></td>
+                    <td colspan="10">
+                        <div class="beizhu clearfix">
+                             <b>政策备注：</b>
+                             <div>(不管任何原因)签转到其他航空公司、跨月签转以及有政策航班改到无政策航班，需收回代理费4</div>
+                        </div>                    
+                    </td>
+                </tr>                  
+            </tbody>
+        </table>
+        <div class="rule dashed_top">
+            <h3>退改签规定</h3>
+            <p><b>【更改条件】</b>同等舱位免费更改。</p>
+            <p><b>【退票条件】</b>起飞前2小时（含）以外办理退票按订座舱位公布运价收取40％的退票费，2小时以内及起飞后退票按订座舱位公布运价收取50％的 退票费。退票费低于50元时按50元收取。</p>        
+            <p><b>【签转条件】</b>不得签转。</p>
+            <p><span>【补充规则】</span>(不管任何原因）签转到其他航空公司、跨月签转以及有政策航班改到无政策航班，需收回代理费。</p>
+        </div>  
+    </div>
+    
+    <div class="departure" style="padding-bottom:0;">
+        <div class="chief"> <h3>旅客信息</h3> </div>
+        <div class="save">
+           <span>共<em>7</em>名乘客</span>
+           <label>
+               <input type="checkbox" checked="" />保存到常旅客
+           </label>
+        </div>
+        <table cellpadding="0" cellspacing="0" class="route traveller">
+             <colgroup>
+                 <col width="120px"/>
+                 <col width="93px"/>
+                 <col width="95px"/>
+                 <col width="97px"/>
+                 <col width="120px"/>
+                 <col width="175px"/>
+                 <col width="120px"/>
+             </colgroup>        
+            <thead>
+                <tr>
+                    <th>旅客类型</th>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>国籍</th>
+                    <th>证件类型</th>
+                    <th>证件号码</th>
+                    <th>出生日期</th>
+                    <th>联系电话</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>成人</td>
+                    <td>白展堂</td>
+                    <td>男</td>
+                    <td>中国</td>
+                    <td>身份证</td>
+                    <td>231005197008214579</td>
+                    <td>1970-08-21</td>
+                    <td>13811234567</td>
+                </tr>
+                <tr class="dashed_top">
+                    <td>儿童</td>
+                    <td>小白</td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td>1970-08-21</td>
+                    <td> </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="departure">
+        <div class="chief"> <h3>备注</h3> </div>
+        <textarea class="remark"> </textarea>
+    </div>
+    
+    <div class="departure clearfix">
+        <div class="chief"> <h3>结算信息</h3> </div>
+        <div class="accounts">
+           <span>票款合计</span>
+           <em>￥220.00</em>
+           <span>+  税款合计(机建/燃油)</span>
+           <em>￥2260.00</em>
+           <span>=</span>
+           <i>应收合计</i>
+           <b>￥2580.00</b>
+           <a class="adaptiveButton brightRed_btn">
+              <span class="left"></span>
+              <span class="center" style="padding:0 20px;">提交订单</span>
+              <span class="right"></span>
+           </a>
+        </div>
+    </div>
+           
+    
+    <script>
+	
+	$(function(){
+		
+        $(".fare tbody tr").each(function(index){
+            var that = this;
+			$(this).click(function(){
+                console.log(index);
+                $(".fare input[name=fee]").prop("checked",false);
+                $("input[name=fee]:eq(0)",this).prop("checked",true);
+
+				$(".fare .remarkCont").hide();
+                $(".fare tbody tr").removeClass("currentTr");
+
+				$(this).addClass("currentTr");
+				$(this).closest('tr').next(".remarkCont").show();
+			});
+
+            $("input[name=fee]").click(function(){
+
+                $(this).closest("tr").trigger("click");
+
+            });
+		});
+	});
+	</script>
+</section>
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+</body>
+</html>

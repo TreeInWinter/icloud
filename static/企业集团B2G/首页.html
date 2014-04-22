@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 B2G 首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../static/css/b2g.css" media="all" />
+    <link rel="stylesheet" href="../static/css/kendo.common.css" />
+    <link rel="stylesheet" href="../static/css/kendo.b2g.css" />
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../static/js/global.js"></script>
+    <script type="text/javascript" src="../static/js/b2g/common.js"></script>
+    <script type="text/javascript" src="/static/js/jquery-ui-1.10.3.custom.js"></script>
+    <script type="text/javascript" src="../static/js/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="../static/js/jquery.jscrollpane.js"></script>
+    <!--[if lte IE 9]>
+    <script src="../static/js/html5.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        #ipt_customer:focus{border:none;box-shadow: none}
+    </style>
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="top-line"></div>
+    <header class="main-header">
+        <div class="header-content">
+            <a class="logo" href="/">天地行 B2G</a>
+            <nav class="main-nav">
+                <ul class="clearfix">
+                    <li class="first active"><a herf="#">行程预订</a></li>
+                    <li><a herf="#">行程管理</a></li>
+                    <li><a herf="#">数据服务</a></li>
+                    <li><a herf="#">企业维护</a></li>
+                    <li class="last"><a herf="#">系统设置</a></li>
+                </ul>
+            </nav>
+        </div>
+    <div class="header-bar clearfix">
+        <div class="header-bar-content">
+            <i class="tips"></i><span>请先选择差旅人   * 默认状态下您为自己预订</span>
+            <span data-template="touruserHeadTemplate" data-bind="source:touruser_total"></span>
+            <div class="setuser" id="settour">
+                <a href="javascript:void(0);">设置差旅人</a>
+            </div>
+            <div class="for_reason">
+                <span class="reason_checkbox"></span><label for="reason">因私</label><input type="checkbox" style="display:none;" id="reason" value="for_private" name="reason"/>
+            </div>
+        </div>
+    </div>
+</header>
+    <section class="main-body clearfix">
+        <div class="index_mainPanel">
+            <div class="wrap1200 index_mainContainer">
+                <div class="index_bookingContainer">
+                    <ul class="index_bookingLeftMenu">
+                        <li>机票预订</li>
+                        <li>酒店预订</li>
+                        <li>手机版</li>
+                    </ul>
+                    <div class="index_bookingContentContainer">
+                        <ul class="ul_itemNav" id="flight_tab">
+                            <li class="current">国内机票</li>
+                            <li>国际机票</li>
+                        </ul>
+                        <div class="ticketBookingContentContainer">
+                            <div class="searchContainer">
+                                <table class="tbl_comm">
+                                    <colgroup>
+                                        <col width="100">
+                                        <col width="200">
+                                        <col width="100">
+                                    </colgroup>
+                                    <tr>
+                                        <td>航程类型</td>
+                                        <td colspan="3">
+                                            <label style="margin-right: 8px"><input type="radio" name="tripType" id=""/>单程</label>
+                                            <label style="margin-right: 8px"><input type="radio" name="tripType" id=""/>往返</label>
+                                            <label><input type="radio" name="tripType" id=""/>联程</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>出发城市</td>
+                                        <td><input type="text" style="width:150px;" name="" id=""/></td>
+                                        <td>出发日期</td>
+                                        <td><input type="text" style="width:150px;" name="" id="departure_date"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>到达城市</td>
+                                        <td><input type="text" style="width:150px;" name=""/></td>
+                                        <td>返回日期</td>
+                                        <td><input type="text" style="width:150px;" name="" id="return_date"/></td>
+                                    </tr>
+                                </table>
+
+                                <div class="xchange" style="top:55px;left:222px;">
+                                    <b></b>
+                                    <a href="javascript:void(0);">换</a>
+                                    <i></i>
+                                </div>
+                            </div>
+                            <ul class="ul_itemNav" style="position: static;margin-top: 10px">
+                                <li class="current">高级搜索</li>
+                            </ul>
+                            <div class="advancedSearchContainer domestic_advancedSearch">
+                                <table class="tbl_comm">
+                                    <colgroup>
+                                        <col width="100">
+                                        <col width="200">
+                                        <col width="100">
+                                    </colgroup>
+                                    <tr>
+                                        <td>舱位等级</td>
+                                        <td><select data-role="dropdownlist" name="" id="" style="width:150px">
+                                                <option selected="" value="经济舱">经济舱</option>
+                                                <option value="头等舱">头等舱</option>
+                                                <option value="商务舱">商务舱</option>
+                                        </select></td>
+                                        <td>航空公司</td>
+                                        <td><select  data-role="dropdownlist" name="" id="" style="width:150px">
+                                                <option value="东方航空">东方航空</option>
+                                                <option value="南方航空">南方航空</option>
+                                                <option selected="" value="新加坡航空">新加坡航空</option>
+                                        </select></td>
+                                    </tr>
+                                    <tr>
+                                        <td>起飞时间</td>
+                                        <td><select  data-role="dropdownlist" name="" id="" style="width:150px">
+
+                                                <option value="不限">不限</option>
+                                                <option value="00:00-06.00">00:00-06.00</option>
+                                                <option selected="" value="06:00-12:00">06:00-12:00</option>
+                                                <option value="12:00-18:00">12:00-18:00</option>
+                                                <option value="18:00-24:00">18:00-24:00</option>
+                                        </select>
+
+                                        </td>
+                                        <td></td>
+                                        <td style="text-align: right"><button type="button" class="commonBtn lightRedBtn" style="font-size: 14px">搜 索</button></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="ticketBookingContentContainer" style="display:none;">
+                            <div class="searchContainer">
+                                <table class="tbl_comm">
+                                    <colgroup>
+                                        <col width="100">
+                                        <col width="200">
+                                        <col width="100">
+                                    </colgroup>
+                                    <tr>
+                                        <td>航程类型</td>
+                                        <td colspan="3">
+                                            <label style="margin-right: 8px"><input type="radio" name="tripType" id=""/>单程</label>
+                                            <label style="margin-right: 8px"><input type="radio" name="tripType" id=""/>往返</label>
+                                            <label><input type="radio" name="tripType" id=""/>联程</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>出发城市</td>
+                                        <td><input type="text" style="width:150px;" name="" id=""/></td>
+                                        <td>出发日期</td>
+                                        <td><input type="text" style="width:150px;" name="" id=""/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>到达城市</td>
+                                        <td><input type="text" style="width:150px;" name="" id=""/></td>
+                                        <td>返回日期</td>
+                                        <td><input type="text" style="width:150px;" name="" id=""/></td>
+                                    </tr>
+                                </table>
+                                <div class="xchange" style="top:55px;left:222px;">
+                                    <b></b>
+                                    <a href="javascript:void(0);">换</a>
+                                    <i></i>
+                                </div>
+                            </div>
+                            <ul class="ul_itemNav"  style="position: static;margin-top: 10px">
+                                <li class="current">高级搜索</li>
+                            </ul>
+                            <div class="advancedSearchContainer">
+                                <table class="tbl_comm">
+                                    <colgroup>
+                                        <col width="100">
+                                        <col width="200">
+                                        <col width="100">
+                                    </colgroup>
+                                    <tr>
+                                        <td>舱位等级</td>
+                                        <td><select data-role="dropdownlist" name="" id="" style="width:150px">
+                                                <option selected="" value="经济舱">经济舱</option>
+                                                <option value="头等舱">头等舱</option>
+                                                <option value="商务舱">商务舱</option>
+                                        </select></td>
+                                        <td>乘客类型</td>
+                                        <td><select  data-role="dropdownlist" name="" id="" style="width:150px">
+                                                <option selected="" value="成人">成人</option>
+                                                <option value="儿童">儿童</option>
+                                        </select></td>
+                                    </tr>
+                                    <tr>
+                                        <td>航空公司</td>
+                                        <td><select  data-role="dropdownlist" name="" id="" style="width:150px">
+                                                <option value="东方航空">东方航空</option>
+                                                <option value="南方航空">南方航空</option>
+                                                <option selected="" value="新加坡航空">新加坡航空</option>
+                                        </select></td>
+                                        <td colspan="2">
+                                            <label style="margin-right: 8px;"><input type="radio" name="flight_type" value="all"/>全部</label>
+                                            <label style="margin-right: 8px;"><input type="radio" name="flight_type" value="non_stop"/>直飞</label>
+                                            <label><input type="radio" name="flight_type" value="with_stop"/>中转</label> 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>起飞时间</td>
+                                        <td><select  data-role="dropdownlist" name="" id="" style="width:150px">
+
+                                                <option value="不限">不限</option>
+                                                <option value="00:00-06.00">00:00-06.00</option>
+                                                <option selected="" value="06:00-12:00">06:00-12:00</option>
+                                                <option value="12:00-18:00">12:00-18:00</option>
+                                                <option value="18:00-24:00">18:00-24:00</option>
+                                        </select>
+
+                                        </td>
+                                        <td></td>
+                                        <td style="text-align: right"><button type="button" class="commonBtn lightRedBtn">搜 索</button></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="index_bookingContentContainer">
+                        <ul class="ul_itemNav" id="hotel_tab">
+                            <li class="current">国内酒店</li>
+                            <li>国际酒店</li>
+                        </ul>
+                        <div class="ticketBookingContentContainer">
+                            <div class="searchContainer">
+                                <table class="tbl_comm">
+                                    <colgroup>
+                                        <col width="70">
+                                        <col width="200">
+                                        <col width="70">
+                                    </colgroup>
+                                    <tr>
+                                        <td>入住城市</td>
+                                        <td><input type="text" style="width:150px;" name="" id="" placeholder="中文"/></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>入住日期</td>
+                                        <td><input type="text" style="width:150px;" name="" id="" placeholder="yyyy-mm-dd"/></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>退房日期</td>
+                                        <td><input type="text" style="width:150px;" name="" id="" placeholder="yyyy-mm-dd"/></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <ul class="ul_itemNav" style="position: static;margin-top: 10px">
+                                <li class="current">高级搜索</li>
+                            </ul>
+                            <div class="advancedSearchContainer domestic_advancedSearch">
+                                <table class="tbl_comm">
+                                    <colgroup>
+                                        <col width="70">
+                                        <col width="200">
+                                        <col width="70">
+                                    </colgroup>
+                                    <tr>
+                                        <td>酒店级别</td>
+                                        <td><select data-role="dropdownlist" name="" id="" style="width:150px">
+                                            <option selected="" value="经济舱">四星/高档</option>
+                                            <option value="头等舱">头等舱</option>
+                                            <option value="商务舱">商务舱</option>
+                                        </select></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>关键词</td>
+                                        <td><input type="text" style="width:150px;" name="" id="bsarea" placeholder="酒店品牌/位置"/></td>
+                                        <td></td>
+                                        <td style="text-align: right"><button type="button" class="commonBtn lightRedBtn" style="font-size: 14px">搜 索</button></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="ticketBookingContentContainer" style="display:none;">
+                            <div class="searchContainer">
+                                <table class="tbl_comm">
+                                    <colgroup>
+                                        <col width="70">
+                                        <col width="180">
+                                        <col width="70">
+                                    </colgroup>
+                                    <tr>
+                                        <td>入住城市</td>
+                                        <td><input type="text" style="width:150px;" name="" id="" placeholder="中文/英文"/></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>入住日期</td>
+                                        <td><input type="text" style="width:150px;" name="" id="" placeholder="yyyy-mm-dd"/></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>退房日期</td>
+                                        <td><input type="text" style="width:150px;" name="" id="" placeholder="yyyy-mm-dd"/></td>
+                                        <td>预定间数</td>
+                                        <td><select data-role="dropdownlist" name="" id="" style="width:150px">
+                                            <option selected="" value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <ul class="ul_itemNav" style="position: static;margin-top: 10px">
+                                <li class="current">高级搜索</li>
+                            </ul>
+                            <div class="advancedSearchContainer domestic_advancedSearch">
+                                <table class="tbl_comm">
+                                    <colgroup>
+                                        <col width="70">
+                                        <col width="200">
+                                        <col width="70">
+                                    </colgroup>
+                                    <tr>
+                                        <td>酒店名称</td>
+                                        <td><input type="text" style="width:150px;" name="" id="" placeholder="中文/英文"/></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td style="text-align: right"><button type="button" class="commonBtn lightRedBtn" style="font-size: 14px">搜 索</button></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="index_bookingContentContainer">3</div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="index_ad"><img src="../static/images/b2g/index_ad.jpg" alt=""/></div>
+            </div>
+        </div>
+
+        <div class="wrap1200 specialPanel">
+            <div class="index_commonPanel specialTicket">
+                <div class="title">
+                    特价国内机票
+                    <ul class="specialPanelCityNav_domesticTicket">
+                        <li class="current">上海</li>
+                        <li>北京</li>
+                        <li>重庆</li>
+                        <li>南京</li>
+                        <li>杭州</li>
+                    </ul>
+                </div>
+                <div class="panelContentContainer specialDomesticTicket">
+                    <ul>
+                        <li>
+                            <div class="voyage">上海-九江</div>
+                            <div class="voyageDate">10-06</div>
+                            <div class="voyagePrice">￥<span>160</span></div>
+                        </li>
+                        <li class="highlight">
+                            <div class="voyage">上海-九江</div>
+                            <div class="voyageDate">10-06</div>
+                            <div class="voyagePrice">￥<span>160</span></div>
+                        </li>
+                        <li>
+                            <div class="voyage">上海-九江</div>
+                            <div class="voyageDate">10-06</div>
+                            <div class="voyagePrice">￥<span>160</span></div>
+                        </li>
+                        <li>
+                            <div class="voyage">上海-九江</div>
+                            <div class="voyageDate">10-06</div>
+                            <div class="voyagePrice">￥<span>160</span></div>
+                        </li>
+                        <li>
+                            <div class="voyage">上海-九江</div>
+                            <div class="voyageDate">10-06</div>
+                            <div class="voyagePrice">￥<span>160</span></div>
+                        </li>
+                        <li>
+                            <div class="voyage">上海-九江</div>
+                            <div class="voyageDate">10-06</div>
+                            <div class="voyagePrice">￥<span>160</span></div>
+                        </li>
+                        <li>
+                            <div class="voyage">上海-九江</div>
+                            <div class="voyageDate">10-06</div>
+                            <div class="voyagePrice">￥<span>160</span></div>
+                        </li>
+                        <li>
+                            <div class="voyage">上海-九江</div>
+                            <div class="voyageDate">10-06</div>
+                            <div class="voyagePrice">￥<span>160</span></div>
+                        </li>
+                        <li>
+                            <div class="voyage">上海-九江</div>
+                            <div class="voyageDate">10-06</div>
+                            <div class="voyagePrice">￥<span>160</span></div>
+                        </li>
+                        <li>
+                            <div class="voyage">上海-九江</div>
+                            <div class="voyageDate">10-06</div>
+                            <div class="voyagePrice">￥<span>160</span></div>
+                        </li>
+                        <li>
+                            <div class="voyage">上海-九江</div>
+                            <div class="voyageDate">10-06</div>
+                            <div class="voyagePrice">￥<span>160</span></div>
+                        </li>
+                        <li>
+                            <div class="voyage">上海-九江</div>
+                            <div class="voyageDate">10-06</div>
+                            <div class="voyagePrice">￥<span>160</span></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panelContentContainer specialDomesticTicket">
+                    <ul>
+                        <li>
+                            <div class="voyage">北京-九江</div>
+                            <div class="voyageDate">10-06</div>
+                            <div class="voyagePrice">￥<span>160</span></div>
+                        </li>
+                        <li class="highlight">
+                            <div class="voyage">北京-九江</div>
+                            <div class="voyageDate">10-06</div>
+                            <div class="voyagePrice">￥<span>160</span></div>
+                        </li>
+                        <li>
+                            <div class="voyage">北京-九江</div>
+                            <div class="voyageDate">10-06</div>
+                            <div class="voyagePrice">￥<span>160</span></div>
+                        </li>
+                        <li>
+                            <div class="voyage">北京-九江</div>
+                            <div class="voyageDate">10-06</div>
+                            <div class="voyagePrice">￥<span>160</span></div>
+                        </li>
+                        <li>
+                            <div class="voyage">北京-九江</div>
+                            <div class="voyageDate">10-06</div>
+                            <div class="voyagePrice">￥<span>160</span></div>
+                        </li>
+                        <li>
+                            <div class="voyage">北京-九江</div>
+                            <div class="voyageDate">10-06</div>
+                            <div class="voyagePrice">￥<span>160</span></div>
+                        </li>
+                        <li>
+                            <div class="voyage">北京-九江</div>
+                            <div class="voyageDate">10-06</div>
+                            <div class="voyagePrice">￥<span>160</span></div>
+                        </li>
+                        <li>
+                            <div class="voyage">北京-九江</div>
+                            <div class="voyageDate">10-06</div>
+                            <div class="voyagePrice">￥<span>160</span></div>
+                        </li>
+                        <li>
+                            <div class="voyage">北京-九江</div>
+                            <div class="voyageDate">10-06</div>
+                            <div class="voyagePrice">￥<span>160</span></div>
+                        </li>
+                        <li>
+                            <div class="voyage">北京-九江</div>
+                            <div class="voyageDate">10-06</div>
+                            <div class="voyagePrice">￥<span>160</span></div>
+                        </li>
+                        <li>
+                            <div class="voyage">北京-九江</div>
+                            <div class="voyageDate">10-06</div>
+                            <div class="voyagePrice">￥<span>160</span></div>
+                        </li>
+                        <li>
+                            <div class="voyage">北京-九江</div>
+                            <div class="voyageDate">10-06</div>
+                            <div class="voyagePrice">￥<span>160</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="index_commonPanel specialHotel">
+                <div class="title">
+                    特价酒店
+                    <ul class="specialPanelCityNav_hotel">
+                        <li>上海</li>
+                        <li>北京</li>
+                        <li class="current">重庆</li>
+                        <li>南京</li>
+                        <li>杭州</li>
+                    </ul>
+                </div>
+                <div class="panelContentContainer specialHotelContent">
+                    <ul>
+                        <li>
+                            <div class="specialHotelBasicInfo">
+                                <span class="hotelName">【静安区】桔子酒店精选（上海静安店）</span><span class="hotelPriceContainer">￥<span class="hotelPrice">160</span>起</span>
+                            </div>
+                            <div class="specialHotelDetailInfo">
+                                <div class="hotelImage"><img src="../static/images/b2g/hotelImage.jpg" alt=""/></div>
+                                <div class="hotelDesc">
+                                    <div>长寿路商业区 静安区</div>
+                                    <div><span class="hotelScore">4.6</span>分 | 800人点评</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="specialHotelBasicInfo">
+                                <span class="hotelName">【静安区】桔子酒店精选（上海静安店）</span><span class="hotelPriceContainer">￥<span class="hotelPrice">160</span>起</span>
+                            </div>
+                            <div class="specialHotelDetailInfo">
+                                <div class="hotelImage"><img src="../static/images/b2g/hotelImage.jpg" alt=""/></div>
+                                <div class="hotelDesc">
+                                    <div>长寿路商业区 静安区</div>
+                                    <div><span class="hotelScore">4.6</span>分 | 800人点评</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="specialHotelBasicInfo">
+                                <span class="hotelName">【静安区】桔子酒店精选（上海静安店）</span><span class="hotelPriceContainer">￥<span class="hotelPrice">160</span>起</span>
+                            </div>
+                            <div class="specialHotelDetailInfo">
+                                <div class="hotelImage"><img src="../static/images/b2g/hotelImage.jpg" alt=""/></div>
+                                <div class="hotelDesc">
+                                    <div>长寿路商业区 静安区</div>
+                                    <div><span class="hotelScore">4.6</span>分 | 800人点评</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="specialHotelBasicInfo">
+                                <span class="hotelName">【静安区】桔子酒店精选（上海静安店）</span><span class="hotelPriceContainer">￥<span class="hotelPrice">160</span>起</span>
+                            </div>
+                            <div class="specialHotelDetailInfo">
+                                <div class="hotelImage"><img src="../static/images/b2g/hotelImage.jpg" alt=""/></div>
+                                <div class="hotelDesc">
+                                    <div>长寿路商业区 静安区</div>
+                                    <div><span class="hotelScore">4.6</span>分 | 800人点评</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panelContentContainer specialHotelContent">
+                    <ul>
+                        <li>
+                            <div class="specialHotelBasicInfo">
+                                <span class="hotelName">【静安区】桔子酒店精选（北京静安店）</span><span class="hotelPriceContainer">￥<span class="hotelPrice">160</span>起</span>
+                            </div>
+                            <div class="specialHotelDetailInfo">
+                                <div class="hotelImage"><img src="../static/images/b2g/hotelImage.jpg" alt=""/></div>
+                                <div class="hotelDesc">
+                                    <div>长寿路商业区 静安区</div>
+                                    <div><span class="hotelScore">4.6</span>分 | 800人点评</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="specialHotelBasicInfo">
+                                <span class="hotelName">【静安区】桔子酒店精选（北京静安店）</span><span class="hotelPriceContainer">￥<span class="hotelPrice">160</span>起</span>
+                            </div>
+                            <div class="specialHotelDetailInfo">
+                                <div class="hotelImage"><img src="../static/images/b2g/hotelImage.jpg" alt=""/></div>
+                                <div class="hotelDesc">
+                                    <div>长寿路商业区 静安区</div>
+                                    <div><span class="hotelScore">4.6</span>分 | 800人点评</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="specialHotelBasicInfo">
+                                <span class="hotelName">【静安区】桔子酒店精选（北京静安店）</span><span class="hotelPriceContainer">￥<span class="hotelPrice">160</span>起</span>
+                            </div>
+                            <div class="specialHotelDetailInfo">
+                                <div class="hotelImage"><img src="../static/images/b2g/hotelImage.jpg" alt=""/></div>
+                                <div class="hotelDesc">
+                                    <div>长寿路商业区 静安区</div>
+                                    <div><span class="hotelScore">4.6</span>分 | 800人点评</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="specialHotelBasicInfo">
+                                <span class="hotelName">【静安区】桔子酒店精选（北京静安店）</span><span class="hotelPriceContainer">￥<span class="hotelPrice">160</span>起</span>
+                            </div>
+                            <div class="specialHotelDetailInfo">
+                                <div class="hotelImage"><img src="../static/images/b2g/hotelImage.jpg" alt=""/></div>
+                                <div class="hotelDesc">
+                                    <div>长寿路商业区 静安区</div>
+                                    <div><span class="hotelScore">4.6</span>分 | 800人点评</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+ 
+    </section>
+    
+  <!-- 设置差旅人 内容 -->
+    <div id="settour-template" style="padding:20px;">
+        <div class="settour">
+            <h4>选择差旅人</h4>
+
+            <div style="padding-left:16px;letter-spacing:-4px">
+                <select name="for_reason" style="width:142px;height:34px;letter-spacing:0">
+                    <option value="差旅人">差旅人</option>
+                    <option value="临时差旅人">临时差旅人</option>
+                </select>
+                <input id="ipt_customer" type="text" style="width:514px;border-left:none;letter-spacing:0;vertical-align:top"/>
+                <div class="addtemptour-button nb" id="btn_addProvisionalCustomer"><i></i>增加</div>
+            </div>
+            <table class="travelTable">
+                <colgroup>
+                    <col width="100px"/>
+                    <col width="500px"/>
+                </colgroup>
+                <tbody>
+                <tr class="hide travelerContainer">
+                    <td style="padding-left:26px">差旅人：</td>
+                    <td>
+                        <ul id="tagWrapper" data-template="touruserTemplate" data-bind="source:touruser"></ul>
+                    </td>
+                </tr>
+                <tr class="hide temp_travelerContainer">
+                    <td style="padding-left:26px">临时差旅人：</td>
+                    <td><ul id="tagWrapper_provisionalCustomers" data-template="touruserTemplate" data-bind="source:touruser_tmp"></ul></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div id="provisionalCustomerContainer">
+
+            </div>
+
+            <div class="buttonbox">
+                <button type="button" id="btn_saveTourUsers" class="commonBtn lightRedBtn" style="margin-right:5px">提 交</button>
+                <button type="button" class="commonBtn grayBtn close">取 消</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="text/html" id="touruserHeadTemplate">
+        <span class="touruser" ><span data-bind="text:this"></span></span>
+    </script>
+
+    <script type="text/html" id="touruserTemplate">
+        <li class="touruser-button" ><span data-bind="text:this"></span><span class="k-icon touruser-icon">&nbsp;</span></li>
+    </script>
+
+    <script type="text/html" id="provisionalCustomerTemplate">
+        <h4>请输入临时差旅人信息</h4>
+        <table class="addtour-info">
+            <tbody>
+            <tr>
+                <th><em>*</em>姓：</th>
+                <td><input name="" id="pc_cnName" type="text" style="width:103px;" placeholder="中文/英文"></td>
+                <th><em>*</em>名：</th>
+                <td><input name="" type="text" style="width:140px;" placeholder="中文/英文"></td>
+                <th><em>*</em>性别：</th>
+                <td colspan="3"><select name="" style="width:42px;">
+                    <option value="男">男</option>
+                    <option value="女">女</option>
+                </select>
+                </td>
+            </tr>
+            <tr>
+                <th><em>*</em>拼音姓：</th>
+                <td><input name="" id="pc_cnName" type="text" style="width:103px;" placeholder="中文/英文"></td>
+                <th><em>*</em>拼音名：</th>
+                <td><input name="" type="text" style="width:140px;" placeholder="中文/英文"></td>
+                </td>
+                <th><em>*</em>国籍：</th>
+                <td colspan="3"><input name="" id="ipt_nationality" type="text" style="width:168px;"></td>
+            </tr>
+            <tr>
+                <th><em>*</em>手机号码：</th>
+                <td>
+				  <div class="mobileBlock invalid">
+				    <input type="text" style="width:103px;"/>
+					<div class="verify">请输入正确的手机号码</div> 
+				  </div>
+				</td>
+                <th><em>*</em>出生日期：</th>
+                <td><input name="" type="text" style="width:140px"></td>
+                <th><em>*</em>电子邮箱：</th>
+                <td colspan="3"><input name="" type="text" style="width:168px"></td>
+            </tr>
+            <tr>
+                <th><em>*</em>证件类型：</th>
+                <td><select name="" id="sel_certificateType" style="width:103px;">
+                    <option value="身份证">身份证</option>
+                    <option value="军官证">军官证</option>
+                    <option value="国外护照">国外护照</option>
+                </select></td>
+                <th><em>*</em>证件号码：</th>
+                <td><input name="" type="text" style="width:140px"></td>
+                <th>证件有效期：</th>
+                <td colspan="3"><input type="text" class="datepicker dpChangeMonthYear" style="width:168px;" /></td>
+            </tr>
+            <tr id="certificateState" style="display:none;">
+                <th><em>*</em>发证国家：</th>
+                <td colspan="7"><input name="" type="text" style="width:103px;"></td>
+            </tr>
+            </tbody>
+        </table>
+		  <div style="text-align:right;padding-right:10px;margin-top:5px;">
+		     <div class="addtemptour-button" id="btn_saveProvisionalCustomer"><i></i>添加</div>
+             <span class="fold-button">
+			   <a href="javascript:;" id="btn_hideProvisionalCustomerContainer">收起</a>
+			 </span>
+		  </div>
+    </script>
+
+    <footer class="main-footer">
+        <p class="copyright">Copyright &copy; 2013 天地行 All Rights Reserved.     沪ICP备08101503号</p>
+    </footer>
+</div>
+
+<script type="text/javascript">
+    $(function(){
+
+        $( "#departure_date" ).datepicker({
+            css : {"z-index":2000},
+            numberOfMonths:[1,2],
+            minDate :new Date(),
+            showButtonPanel :true,
+            onSelect:function(dateText,inst){
+                //console.log(dateText);
+                //console.log(inst);
+                var date = new Date(inst.selectedYear,inst.selectedMonth,inst.selectedDay);
+
+                $( "#return_date" ).datepicker( "option", "minDate", date);
+                $( "#return_date" ).datepicker( "setDate", dateText);
+            }
+        });
+
+        $( "#return_date" ).datepicker({
+            numberOfMonths:[1,2],
+            minDate :new Date(),
+            showButtonPanel :true
+        });
+
+
+        /*国内国际机票切换*/
+        $("#flight_tab li").click(function(){
+            var i=$(this).index();
+            $(this).addClass("current").siblings().removeClass("current");
+            $(this).parents(".index_bookingContentContainer").find(".ticketBookingContentContainer").hide();
+            $(this).parents(".index_bookingContentContainer").find(".ticketBookingContentContainer:eq(" + i + ")").show();
+        })
+
+        /*国内国际机票切换*/
+
+        /*国内国际酒店切换*/
+        $("#hotel_tab li").click(function(){
+            var i=$(this).index();
+            $(this).addClass("current").siblings().removeClass("current");
+            $(this).parents(".index_bookingContentContainer").find(".ticketBookingContentContainer").hide();
+            $(this).parents(".index_bookingContentContainer").find(".ticketBookingContentContainer:eq(" + i + ")").show();
+        })
+
+        /*国内国际酒店切换*/
+
+        /*国内国际机票切换*/
+        $(".index_bookingLeftMenu li").click(function(){
+            var i=$(this).index();
+            $(this).addClass("current").siblings().removeClass("current");
+            var showContents=$(".index_bookingLeftMenu").siblings("div.index_bookingContentContainer");
+            showContents.eq(i).show().siblings("div.index_bookingContentContainer").hide();
+        })
+        $(".index_bookingLeftMenu li:first").trigger("click");
+        /*国内国际机票切换*/
+
+        /*特价国内机票切换*/
+        $(".specialPanelCityNav_domesticTicket li").click(function(){
+            var i=$(this).index();
+            $(this).addClass("current").siblings().removeClass("current");
+            var showContents=$("div.specialDomesticTicket");
+            showContents.eq(i).show().siblings("div.specialDomesticTicket").hide();
+        });
+        $(".specialPanelCityNav_domesticTicket li:first").trigger("click");
+        /*特价国内机票切换*/
+
+        /*特价国内机票切换*/
+        $(".specialPanelCityNav_hotel li").click(function(){
+            var i=$(this).index();
+            $(this).addClass("current").siblings().removeClass("current");
+            var showContents=$("div.specialHotelContent");
+            showContents.eq(i).show().siblings("div.specialHotelContent").hide();
+        });
+        $(".specialPanelCityNav_hotel li:first").trigger("click");
+        /*特价国内机票切换*/
+
+        $(".specialHotelContent li").click(function(){
+            $(".specialHotelContent .specialHotelDetailInfo").hide();
+            $(".specialHotelDetailInfo",this).show();
+        })
+
+        $("#ipt_note").keyup(function(){
+            var charNum=$(this).val().length;
+            if(charNum>100)
+            {
+                $(this).val($(this).val().substr(0,100));
+                $(".charNum").text(100);
+            }
+            else
+            {
+                $(".charNum").text(charNum);
+            }
+        })
+		
+		
+		var bsareaData = [{
+				bsgroup:'热门商圈',
+				bsitems:['八万人体育场地区','宝钢工业园区','北外滩','曹杨、真如地区','漕河泾开发区','长风公园地区','长寿路商业区','崇明、长兴岛、横...','打浦桥地区','大宁国际商业区','滴水湖临港地区']
+			},{
+				bsgroup:'行政区',
+				bsitems:['奉贤开发区','顾村公园地区','北外滩','曹杨、真如地区','虹口足球场地区','长寿路商业区','崇明、长兴岛、横...','嘉定工业区','江湾、五角场商业区','滴水湖临港地区','金山枫泾古镇地区','静安寺地区']
+			},{
+				bsgroup:'机场火车站',
+				bsitems:['南汇及野生动物园','南京西路商业区','南外滩地区','彭浦地区、浦东机场区域','浦东金桥地区','浦东陆家嘴金融...','浦东世博园区','浦东外高桥地区','浦东新国际博览中心','浦东张江地区','浦江镇地区']
+			},{
+				bsgroup:'地铁线',
+				bsitems:['七浦路商业区','青浦城区','人民广场地区','上海火车南站地区','上海火车站地区','佘山、松江大学城','四川北路商业区','外滩地区','莘庄、七宝']
+			},{
+				bsgroup:'下辖市/县',
+				bsitems:['崇明']
+			}];
+		
+		var bsareaLayer = FloatLayer({
+			trigger:'#bsarea',
+			template:'#bsarea-template',
+			offsetY:63,
+			data:bsareaData
+		});
+		
+		$(".bsarea-item").click(function(){
+			$("#bsarea").val($(this).text());bsareaLayer.close();
+		})
+		
+    })
+</script>
+
+<script>
+
+    $(function(){
+
+        model=kendo.observable({
+            touruser:[],
+            touruser_tmp:[],
+            touruser_total:[]
+        })
+
+        kendo.bind($("body"),model);
+
+
+		new PopWindow('.header-bar-content .setuser',{
+			title:'设置差旅人',
+			width:'750'
+		},"#settour-template").init();
+		
+		var dropdownlist = $("select[name=for_reason]").kendoDropDownList({
+            change:function(){$("#btn_addProvisionalCustomer").toggle();}
+		}).data("kendoAutoComplete");
+
+        $("#btn_addProvisionalCustomer").click(function(){
+            $("#provisionalCustomerContainer").html($("#provisionalCustomerTemplate").html());
+            initDatePicker($(".addtour-info .datepicker"));
+        })
+
+        $("#customers").focusin(function(){
+            $("#destinationContainer").slideDown();
+            $(this).addClass("on");
+        })
+
+        $("#customers").focusout(function(){
+            $("#destinationContainer").slideUp();
+            $(this).removeClass("on");
+        })
+
+        $("#destinationContainer li").click(function(){
+            $("#customers").val($(this).text());
+            $(this).addClass("current").siblings().removeClass("current");
+        })
+
+        $("body").delegate("#btn_saveProvisionalCustomer","click",function(){
+//            $("#tagWrapper_provisionalCustomers").append('<li class="touruser-button" ><span>'+ $("#pc_cnName").val() + '</span><span class="k-icon touruser-icon">&nbsp;</span></li>');
+
+            model.touruser_tmp.push($("#pc_cnName").val());
+            $("#provisionalCustomerContainer").html("");
+            $(".temp_travelerContainer").show();
+        })
+
+        $("body").delegate("#btn_hideProvisionalCustomerContainer","click",function(){
+            $("#provisionalCustomerContainer").html("");
+        })
+
+        $("body").delegate(".touruser-icon","click",function(){
+            if($(this).closest("#tagWrapper").length>0)
+            {
+                model.touruser.splice($(this).closest("li").index(),1);
+            }
+            else
+            {
+                model.touruser_tmp.splice($(this).closest("li").index(),1);
+            }
+        })
+
+
+
+//        function setUser(e){
+//            var item = e.item;
+//            var text = item.text();
+//            $("#userWrapper").append('<li class="tourobj-button"><span>'+ item.text() + '</span><span class="">&nbsp;</span></li>');
+//        }
+
+        var customerData=[{name:"潘晓梅",phone:"18651668596",mail:"82494586@qq.com"},{name:"潘晓梅",phone:"18651668596",mail:"82494586@qq.com"},{name:"潘晓梅",phone:"18651668596",mail:"82494586@qq.com"},{name:"潘晓梅",phone:"18651668596",mail:"82494586@qq.com"}]
+
+        $("#ipt_customer").kendoAutoComplete({
+            minLength: 1,
+            dataTextField: "phone",
+            template: '<span style="padding-right:10px">#: name #</span><span style="padding-right:10px;color:red;">#: phone #</span><span>#: mail #</span>',
+            dataSource: customerData,
+            select:function(e){
+                console.dir(e);
+                if($("select[name=for_reason]").val()=="差旅人")
+                {
+                    model.touruser.push($("span",e.item).eq(0).text());
+                    $(".travelerContainer").show();
+                }
+                else
+                {
+                    model.touruser_tmp.push($("span",e.item).eq(0).text());
+                    $(".temp_travelerContainer").show();
+                }
+            },
+            close:function(){
+                $("#ipt_customer").val("");
+            },
+            height: 370
+        }).data("kendoAutoComplete");
+
+        $("#btn_saveTourUsers").click(function () {
+            model.touruser_total.splice(0,model.touruser_total.length);
+            for(var i=0;i<model.touruser.length;i++)
+            {
+                model.touruser_total.push(model.touruser[i]);
+            }
+            for(var i=0;i<model.touruser_tmp.length;i++)
+            {
+                model.touruser_total.push(model.touruser_tmp[i]);
+            }
+            $(this).closest(".k-window").find(".k-i-close").trigger("click");
+        });
+		
+		$("body").delegate("#sel_certificateType","change",function(){
+			if($(this).val()=="国外护照")
+			{
+				$("#certificateState").show();	
+			}
+			else
+			{
+				$("#certificateState").hide();
+			}
+		})
+		 $("#ipt_nationality").kendoAutoComplete({
+            dataSource:["新加坡","新西兰","新几内亚"]
+        })
+
+     });
+
+</script>
+<script type="text/x-kendo-template" id="city_popup">
+<div id="gn-tabstrip" class="tcy_tabstrip">
+<span class="tcy_title">
+    热门城市/国家（支持中文名/拼音/英文名/三字码）
+</span>
+<ul>
+<li id="hot_city" class="k-state-active">热门</li>
+# for (var i=0; i<data.group.length; i++ ) { #
+<li>#= data.group[i] #</li>
+# } #
+</ul>
+<div id="hot_city_tab">
+<ul class="tcy_list clearfix">
+
+# for(var j=0;j<hotcitylist.length;j++){ #
+# var citylist_item = hotcitylist[j] #
+<li class="item" title="#= citylist_item.code #" data-code="#= citylist_item.code #">#= citylist_item.name #</li>
+# } #
+</ul>
+</div>
+
+# for(var i=0;i<data.citylist.length;i++){ #
+# var citylist_item = data.citylist[i] #
+<div class="city_tab">
+<ul class="tcy_list clearfix">
+  # for(var k=0;k<data.group[i].length;k++){ #
+    <li class="tcy_list_sep">#= data.group[i].split('')[k] #</li>
+    # for(var j=0;j<citylist_item.value.length;j++){ #
+        # var citylist_value_item = citylist_item.value[j]; #
+        # if(citylist_value_item.py.slice(0,1) == data.group[i].split('')[k]) {#
+            <li class="item" title="#= citylist_value_item.code #" data-code="#= citylist_value_item.code #">#= citylist_value_item.name #</li>
+        # } #
+    # } #
+  # } #
+</ul>
+</div>
+
+# } #
+</div>
+</script>
+
+
+<script type="text/tempalte" id="bsarea-template">
+    <div class="cytab cytab-bsarea">
+        <div class="cytab-title">
+            <span>可直接选择地理位置</span>
+            <i class="close">&nbsp;</i>
+        </div>
+        
+        <div class="cytab-content">
+        # for (var i=0;i<data.length;i++) {#
+            <div class="cytab-group clearfix">
+            <span class="group-name">#= data[i].bsgroup #</span>
+            <ul>
+            # for (var j=0;j<data[i].bsitems.length;j++) {#
+                <li>   
+                    <a href="javascript:;" class="bsarea-item bsarea-item#=i#">#= data[i].bsitems[j] # </a>
+                </li>
+            # } #
+            </ul>
+            </div>
+        #}#
+        </div>
+    </div>
+</script>
+
+</body>
+</html>
+

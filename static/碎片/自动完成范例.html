@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+	<link href="../static/css/kendo.common.css" rel="stylesheet" />
+	<link href="../static/css/kendo.gray.css" rel="stylesheet" />
+	<link href="../static/css/common.css" rel="stylesheet" />
+	<link href="../static/css/b2b.css" rel="stylesheet" />
+    <link href="../static/css/kendo.reset.css" rel="stylesheet" />
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/js/kendo.web.min.js"></script>
+
+    <style>
+
+        p {margin:10px;}
+    </style>
+</head>
+<body>
+
+
+
+    <div style="position:relative;top:200px;left:200px;">
+        <p>
+        <!--<input class="city_autocmp" type="text" value="中国" />-->
+
+        <!--
+        <select class="city_autocmp" name="city1">
+            <option value="cn">中国航空</option>
+        </select>
+        -->
+        <input class="city_autocmp" type="hidden" id="city1" value="cn" name="city1"/></p>
+
+        <!--
+        <p><input class="city_autocmp" type="text" id="city2" value="cn" name="city2"/></p>
+        <p><input class="city_autocmp" type="text" id="city3" value="cn" name="city3"/></p>
+        <p><input class="city_autocmp" type="text" id="city4" value="cn" name="city4"/></p>
+        -->
+
+    </div>
+    <script>
+
+
+
+        $(function(){
+            var dataSource = new kendo.data.DataSource({
+                type : "odata",
+                serverFiltering : true,
+                serverPaging : true,
+                pageSize : 10,
+                transport : {
+                    read : {
+                        url : '/php/city.php',
+                        type : "GET"
+                    }
+                }
+            });
+
+
+            $(".city_autocmp").each(function(index){
+                $(this).kendoComboBox({
+                    text: "美国航空",
+                    value: "AA",
+                    selectedtemp : false,
+                    minLength : 1,
+                    dataTextField : "cnName",
+                    dataValueField : "airLineCode",
+                    animation : false,
+                    filter : "contains",
+                    template : '<span >${data.airLineCode}</span><span>(${data.cnName})</span>',
+                    dataSource : dataSource,
+                    highlightFirst : true,
+                    placeholder : "编号/中文",
+                    dataBound:function(e){
+                        //$("input[name=city" + (index + 1) + "_input]").val("阿联酋航空");
+
+                        console.log("combobox dataBound");
+                    },
+                    select : function(t) {
+                        /*
+                        if (typeof (that.attr("Linkage")) != "undefined") {
+                            selectFunction = window[that.attr("Linkage")](t.item[0].children[0].innerHTML);
+                        }
+                        // t.preventDefault();
+                        t.sender.value(t.item[0].children[0].innerHTML);
+                        this.selectedtemp = true;
+                        */
+                    },
+                    close : function(e) {
+                        /*
+                        if (!this.selectedtemp) {
+                            if (this.list[0].childNodes[0].childNodes[0] != null) {
+                                e.sender.value(this.list[0].childNodes[0].childNodes[0].lastChild.innerHTML.substring(1, this.list[0].childNodes[0].childNodes[0].lastChild.innerHTML.length - 1));
+                                } else {
+                                e.sender.value('');
+                            }
+                            } else {
+                            this.selectedtemp = false;
+                        }
+                        */
+                    }
+
+                }).data("kendoComboBox");
+            });
+
+            //$("input[name=city_input]").val("阿联酋航空");
+        });
+
+    </script>
+
+</body>
+</html>

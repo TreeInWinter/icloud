@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>基础数据 舱位折扣</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.gray.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.reset.css" rel="stylesheet" type="text/css"/>
+    <link href="../../static/css/cabinseat.css" rel="stylesheet" type="text/css"/>
+    <script src="../../static/js/jquery.min.js" type="text/javascript"></script>
+    <script src="../../static/js/kendo.web.js" type="text/javascript"></script>
+
+    <script src="../../static/js/hotel.js" type="text/javascript"></script>
+     
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<!-- @CLB@ -->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body>
+    <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">&nbsp;</a>
+                <span>&nbsp;</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent">
+        
+        <div class="right_side">  <!--right start-->   
+        <div class="query">
+          <table cellpadding="0" cellspacing="0" class="query_tab">
+            <tr>
+              <td class="list_1">国别</td>
+              <td class="list_2"> <select><option>全部</option></select> </td>
+              <td class="list_3">航司代码</td>
+              <td class="list_4"> <input type="text" value="MU"/> </td>
+              <td class="list_5">中文名称</td>
+              <td class="list_6"> <input type="text" value="东方航空"/> </td>
+              <td class="list_9"><a href="#" class="query_a">查 询</a></td>
+            </tr>          
+          </table>          
+        </div>
+        
+        <!--<div class="addition">
+          <a href="javascript:void(0);" class="addition_a popwin"  data='{"url":"舱位折扣添加弹层.html","width":570,"height":400,"title":"添加舱位信息"}' id="add_city_code">添加</a>
+          <a href="#" class="addition_a_1">删除</a>
+          <span>|</span>
+          <a href="#">Excel导入</a>
+          <a href="#">导出到Excel</a>
+          <a href="#">更新JS</a>
+        </div>-->
+        <div class="qx">
+                  <div class="xuanze">
+                      <button class="btns btn-ac-blue popwin"  data='{"url":"舱位折扣添加弹层.html","width":570,"height":400,"title":"添加舱位信息"}' id="add_city_code">添加</button>
+                      <button class="btns btn-ac-blue">删除</button>
+                      <button class="btns btn-ac-blue">Excel导入</button>
+                      <button class="btns btn-ac-blue">导出到Excel</button>
+                      <button class="btns btn-ac-blue">更新JS</button>
+                  </div>
+                  <!--<div class="qx_right">
+                      <button class="btns btn-ac-blue">导出Excel</button>
+                      <button class="btns btn-ac-blue">模版导出</button>
+                      <button class="btns btn-ac-blue">导入说明【模版下载】</button>
+                  </div>-->
+              </div>
+              
+        <div class="right_tab"> <!--table滚动开始-->
+        <table cellpadding="0" cellspacing="0" class="discount_tab">
+          <tr>
+             <th class="th_left"><input type="checkbox" /></th>
+             <th>航空公司</th>
+             <th>舱位级别</th>
+             <th>舱位代码</th>
+             <th>舱位拓展</th>
+             <th>舱位折扣</th>
+             <th>可销售</th>
+             <th>可申请</th>
+             <th>开始日期</th>
+             <th>结束日期</th>
+             <th>备注</th>
+             <th>更新时间</th>
+             <th>航线</th>
+             <th>操作</th>
+          </tr>
+          <tr>
+             <td><input type="checkbox" checked="checked" /></td>
+             <td>MU</td>
+             <td>头等舱</td>
+             <td>F</td>
+             <td>&nbsp;</td>
+             <td>200</td>
+             <td>Y</td>
+             <td>N</td>
+             <td>2007-08-02</td>
+             <td>2050-01-01</td>
+             <td>&nbsp;</td>
+             <td>2013-06-08 16:18</td>
+             <td>&nbsp;</td>
+             <td class="last_td"><a href="#">修改</a></td>
+          </tr>
+          <tr>
+             <td><input type="checkbox" /></td>
+             <td>MU</td>
+             <td>公务舱</td>
+             <td>C</td>
+             <td>&nbsp;</td>
+             <td>150</td>
+             <td>Y</td>
+             <td>N</td>
+             <td>2007-08-02</td>
+             <td>2050-01-01</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+             <td class="last_td"><a href="#">修改</a></td>
+          </tr>
+          <tr>
+             <td><input type="checkbox" /></td>
+             <td>MU</td>
+             <td>标准经济舱</td>
+             <td>J</td>
+             <td>&nbsp;</td>
+             <td>130</td>
+             <td>Y</td>
+             <td>N</td>
+             <td>2007-08-02</td>
+             <td>2050-01-01</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+             <td class="last_td"><a href="#">修改</a></td>
+          </tr>
+          <tr class="fourth_bg">
+             <td><input type="checkbox" /></td>
+             <td>MU</td>
+             <td>折扣经济舱</td>
+             <td>Y</td>
+             <td>B1</td>
+             <td>100</td>
+             <td>Y</td>
+             <td>N</td>
+             <td>2007-08-02</td>
+             <td>2050-01-01</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+             <td class="last_td"><a href="#">修改</a></td>
+          </tr>
+          <tr>
+             <td><input type="checkbox" /></td>
+             <td>MU</td>
+             <td>折扣经济舱</td>
+             <td>G</td>
+             <td>&nbsp;</td>
+             <td>95</td>
+             <td>G</td>
+             <td>N</td>
+             <td>2007-08-02</td>
+             <td>2050-01-01</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+             <td class="last_td"><a href="#">修改</a></td>
+          </tr>
+          <tr>
+             <td><input type="checkbox" /></td>
+             <td>MU</td>
+             <td>折扣经济舱</td>
+             <td>H</td>
+             <td>&nbsp;</td>
+             <td>85</td>
+             <td>Y</td>
+             <td>N</td>
+             <td>2007-08-02</td>
+             <td>2050-01-01</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+             <td class="last_td"><a href="#">修改</a></td>
+          </tr>
+          <tr>
+             <td><input type="checkbox" /></td>
+             <td>MU</td>
+             <td>折扣经济舱</td>
+             <td>J</td>
+             <td>&nbsp;</td>
+             <td>80</td>
+             <td>Y</td>
+             <td>N</td>
+             <td>2007-08-02</td>
+             <td>2050-01-01</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+             <td class="last_td"><a href="#">修改</a></td>
+          </tr>
+          <tr>
+             <td><input type="checkbox" /></td>
+             <td>MU</td>
+             <td>折扣经济舱</td>
+             <td>J</td>
+             <td>&nbsp;</td>
+             <td>75</td>
+             <td>Y</td>
+             <td>N</td>
+             <td>2007-08-02</td>
+             <td>2050-01-01</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+             <td class="last_td"><a href="#">修改</a></td>
+          </tr>
+          <tr>
+             <td><input type="checkbox" /></td>
+             <td>MU</td>
+             <td>折扣经济舱</td>
+             <td>I</td>
+             <td>&nbsp;</td>
+             <td>70</td>
+             <td>Y</td>
+             <td>N</td>
+             <td>2007-08-02</td>
+             <td>2050-01-01</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+             <td class="last_td"><a href="#">修改</a></td>
+          </tr>
+          <tr>
+             <td><input type="checkbox" /></td>
+             <td>MU</td>
+             <td>折扣经济舱</td>
+             <td>K</td>
+             <td>&nbsp;</td>
+             <td>65</td>
+             <td>Y</td>
+             <td>N</td>
+             <td>2007-08-02</td>
+             <td>2050-01-01</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+             <td class="last_td"><a href="#">修改</a></td>
+          </tr>          
+        </table>
+        </div> <!--table滚动结束-->
+                    
+                    <div class="grid-table-pagination">
+                          <span class="grid-table-count">
+                              共 <em>132</em> 条记录
+                          </span>
+                          <span>
+                              <a href="#" class="prev">&nbsp;</a>
+                          </span>
+                          <span class="links">
+                              <a href="#">1</a>
+                              <a href="#">2</a>
+                              <a href="#" class="current">3</a>
+                              <a href="#">4</a>
+                              <a href="#">5</a>
+                              <a href="javascript:;">...</a>
+                              <a href="#">50</a>
+                          </span>
+                          <span>
+                              <a href="#" class="next">&nbsp;</a>
+                          </span>
+                      </div>
+           
+            </div> <!--right end-->
+            
+        <div style="clear:both;"></div>
+        
+    </div> <!-- 舱位代码结束 -->
+	</div>
+    
+    
+   
+    <div id="window"></div>
+    
+    
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+</body>
+</html>

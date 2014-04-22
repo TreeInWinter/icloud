@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="/static/css/kendo.common.css" />
+<link rel="stylesheet" href="/static/css/common.css" />
+<link rel="stylesheet" href="/static/css/b2b.css" />
+<script type="text/javascript" src="/static/js/vendor/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/kendo.web.js"></script>
+<script type="text/javascript" src="/static/js/global.js"></script>
+</head>
+<body style="padding:100px;"> 
+
+<h1>未指定三字码，在输入框后增加一个_code suffix的隐藏域，类选择器</h1>
+<input type="text" name="ssss" class="allcity" style="width:180px" />
+<input type="text" class="allcity" style="width:180px" />
+<input type="text" class="allcity" style="width:180px" />
+<input type="text" class="allcity" style="width:180px" />
+<hr />
+
+
+<h1>指定三字码元素，类选择器</h1>
+<label>出发城市</label>
+<input type="text" id="depCity" style="width:180px" />
+<input name="" id="id_dep" type="hidden" />
+
+<br>
+<br>
+<br>
+
+<h1>未指定三字码元素，远程autocomplete数据</h1>
+<label>到达城市</label>
+<input type="text" name="sssbb" id="arrCity" style="width:180px" />
+<input name="" id="arr_dep" type="hidden" />
+
+<br>
+<br>
+<br>
+
+<h1>国际城市</h1>
+<label>出发城市</label>
+<input type="text" id="depCity2" style="width:180px" />
+<input name="" id="id_dep2" type="hidden" />
+
+
+<script type="text/x-kendo-template" id="city_popup_intl">
+<div class="tcy_tabstrip gj-tabstrip">
+<span class="tcy_title">
+    热门城市/国家（支持中文名/拼音/英文名/三字码）
+</span>
+<ul>
+<li id="hot_city" class="k-state-active">热门</li>
+# for (var i=0; i<data.group.length; i++ ) { #
+<li>#= data.group[i] #</li>
+# } #
+</ul>
+<div id="hot_city_tab">
+<ul class="tcy_list clearfix">
+
+# for(var j=0;j<hotcitylist.length;j++){ #
+# var citylist_item = hotcitylist[j] #
+<li class="item" title="#= citylist_item.code #" data-code="#= citylist_item.code #">#= citylist_item.name #</li>
+# } #
+</ul>
+</div>
+
+# for(var i=0;i<data.citylist.length;i++){ #
+# var citylist_item = data.citylist[i] #
+<div class="city_tab">
+<ul class="tcy_list clearfix">
+  # for(var k=0;k<data.group[i].length;k++){ #
+    # for(var j=0;j<citylist_item.value.length;j++){ #
+        # var citylist_value_item = citylist_item.value[j]; #
+        # if(citylist_value_item.py.slice(0,1) == data.group[i].split('')[k]) {#
+            <li class="item" title="#= citylist_value_item.code #" data-code="#= citylist_value_item.code #">#= citylist_value_item.name #</li>
+        # } #
+    # } #
+  # } #
+</ul>
+</div>
+
+# } #
+</div>
+</script>
+
+<script type="text/x-kendo-template" id="city_popup">
+<div class="tcy_tabstrip gn-tabstrip ">
+<span class="tcy_title">
+    热门城市/国家（支持中文名/拼音/英文名/三字码）
+</span>
+<ul>
+<li id="hot_city" class="k-state-active">热门</li>
+# for (var i=0; i<data.group.length; i++ ) { #
+<li>#= data.group[i] #</li>
+# } #
+</ul>
+<div id="hot_city_tab">
+<ul class="tcy_list clearfix">
+
+# for(var j=0;j<hotcitylist.length;j++){ #
+# var citylist_item = hotcitylist[j] #
+<li class="item" title="#= citylist_item.code #" data-code="#= citylist_item.code #">#= citylist_item.name #</li>
+# } #
+</ul>
+</div>
+
+# for(var i=0;i<data.citylist.length;i++){ #
+# var citylist_item = data.citylist[i] #
+<div class="city_tab">
+<ul class="tcy_list clearfix">
+  # for(var k=0;k<data.group[i].length;k++){ #
+    <li class="tcy_list_sep">#= data.group[i].split('')[k] #</li>
+    # for(var j=0;j<citylist_item.value.length;j++){ #
+        # var citylist_value_item = citylist_item.value[j]; #
+        # if(citylist_value_item.py.slice(0,1) == data.group[i].split('')[k]) {#
+            <li class="item" title="#= citylist_value_item.code #" data-code="#= citylist_value_item.code #">#= citylist_value_item.name #</li>
+        # } #
+    # } #
+  # } #
+</ul>
+</div>
+
+# } #
+</div>
+</script>
+
+
+<script type="text/javascript" charset="utf-8">
+
+CityAutocomplete({
+    template: "#city_popup",
+    input: ".allcity",
+    // 以@分割热门非热门，以;分割条目，以|分割三字码拼音和中文
+    url:'/static/js/data.txt',
+    group: ["热门","GHJ", "ABCDEF", "KLMN", "PQSTW", "XYZ"]
+});
+
+CityAutocomplete({
+    template: "#city_popup",
+    input: "#depCity",
+    // 以@分割热门非热门，以;分割条目，以|分割三字码拼音和中文
+    url:'/static/js/data.txt',
+    group: ["热门","GHJ", "ABCDEF", "KLMN", "PQSTW", "XYZ"]
+});
+
+CityAutocomplete({
+    template: "#city_popup_intl",
+    input: "#depCity2",
+    // 以@分割热门非热门，以;分割条目，以|分割三字码拼音和中文
+    url:'/static/js/data_international.txt',
+    group: ["热门","亚洲","欧洲", "大洋洲", "北美洲", "南美洲","非洲"]
+});
+
+
+CityAutocomplete({
+    template: "#city_popup",
+    input: "#arrCity",
+    codeEle: '#id_arr',
+    // 以@分割热门非热门，以;分割条目，以|分割三字码拼音和中文
+    url:'/static/js/data.txt',
+    autocomplete:{
+        dataSource:{
+            transport:{
+                read:{
+                
+                } 
+            } 
+        },
+        placeholder:'三字吗/城市'
+    },
+    group: ["热门","ABCDEF","GHJ", "KLMN", "PQSTW", "XYZ"]
+});
+
+
+
+</script>
+
+
+</body>
+</html>
+

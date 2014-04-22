@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="../static/css/kendo.common.css" rel="stylesheet" />
+	<link href="../static/css/kendo.gray.css" rel="stylesheet" />
+	<link href="../static/css/common.css" rel="stylesheet" />
+	<link href="../static/css/b2b.css" rel="stylesheet" />
+    <link href="../static/css/kendo.reset.css" rel="stylesheet" />
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/js/kendo.web.js"></script>
+    <style>
+        body {background:#fff;}
+
+        p {margin: 10px;}
+    </style>
+</head>
+<body>
+
+    <div style="position:relative;left:200px;top:200px;">
+        <div>
+            <p>
+            <label for="categories">订单类型:</label><input id="orderType" style="width: 300px" />
+            </p>
+            <p>
+            <label for="products">订单状态:</label><input id="orderStat" style="width: 300px" />
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function getDS(url,dataType, dataKey){
+            var a = {
+                transport: {
+                    read: url ,
+                    cache : true,
+                    dataType: dataType
+                },
+                schema:{
+                    data : dataKey
+                }
+            };
+
+            return a;
+        }
+
+
+        function changeSub(e){
+            var c = $("#orderType").data('kendoDropDownList');
+            var d = $("#orderStat").data('kendoDropDownList');
+            d.options.autoBind = true;
+            d.setDataSource(getDS("/php/orderStat.php?orderType=" + c.value() ,"json","flowOrderStat"));
+        }
+        
+        $(function(){
+            $("#orderType").kendoDropDownList({
+                dataTextField : "orderTypeValue",
+                dataValueField : "orderTypeKey",
+                change: function(e){
+                    changeSub(e);
+                },
+                dataSource: {
+                    transport: {
+                        read: "/php/orderType.php",
+                        cache: true,
+                        dataType:"json"
+                    },
+                    schema:{
+                        data :"flowOrderTypes"
+                    }
+                },
+                dataBound:function(e){
+                    console.log("orderType dataBound");
+                    console.log(e);
+                }
+            });
+
+            $("#orderStat").kendoDropDownList({
+                autoBind: false,
+                dataTextField: "orderStatValue",
+                dataValueField: "orderStatKey"
+            });
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 用户中心 国内订单详情-申请退废后</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />     
+    <link href="../../static/css/coin-slider-styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_flight.css" media="screen" />    
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+	<link rel="stylesheet" href="../../static/css/kendo.store.css" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+	<script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>    
+
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    
+    <script type="text/javascript" src="../../static/js/store/store.js"></script>
+</head>
+<body>
+
+<div class="main-wrapper">
+<header class="main-header">
+    <a class="logo" href="/"><h1>天地行</h1></a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first active"><a herf="#">首页</a></li>
+            <li><a herf="#">国内机票</a></li>
+            <li><a herf="#">国际机票</a></li>
+            <li><a herf="#">酒店</a></li>
+        </ul> 
+    </nav>
+    <nav class="main-links">
+        <ul class="clearfix">
+            <li class="first"><a href="#">订单管理</a></li>
+            <li><a href="#">分销管理</a></li>
+            <li><a href="#">电子钱包</a></li>
+            <li><a href="#">统计报表</a></li>
+            <li><a href="#">客服服务</a></li>
+            <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+            <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+</header>
+<section class="main-body clearfix">
+
+    <div class="position clearfix">
+         <ul class="pos_ul clearfix">
+             <li> <a href="#">用户中心</a> <em> > </em></li>
+             <li> <a href="#">国内机票订单</a> <em> > </em></li>
+             <li> <a href="#">订单详情</a> </li>
+         </ul>   
+         <!--<div class="pos_btn">
+              <a class="adaptiveButton brightRed_btn">
+                  <span class="left"></span>
+                  <span class="center center_1">改 签</span>
+                  <span class="right"></span>
+             </a>
+             <a class="adaptiveButton brightRed_btn ac_intiback">
+                  <span class="left"></span>
+                  <span class="center" style="padding:0 15px;">退废票</span>
+                  <span class="right"></span>
+             </a>
+         </div>-->
+    </div>
+        
+    <div class="order">  <!--order start-->
+         <table cellpadding="0" cellspacing="0" class="order_list">
+               <colgroup>
+                    <col width="160px"/>
+                    <col width="160px"/>
+                    <col width="160px"/>
+                    <col width="160px"/>
+                    <col width="160px"/>
+               </colgroup>
+               <tr>
+                  <th>订单号</th>
+                  <th>下单时间</th>
+                  <th>订单金额</th>
+                  <th>关联订单</th>
+                  <th>支付方式</th>
+                  <th>订单状态</th>
+               </tr>
+               <tr>
+                  <td>30312103112266</td>
+                  <td>2013-08-08</td>
+                  <td>￥2580.00</td>
+                  <td>
+                      <div><a href="#">30312103112266</a></div>
+                      <div><a href="#">30312103112266</a></div>
+                  </td>
+                  <td>天地行账户余额</td>
+                  <td><em>已退废票</em></td>
+               </tr>
+         </table>
+         <div class="order_trace clearfix">
+                 <div class="trace">订单跟踪：</div>
+                 <table cellpadding="0" cellspacing="0" class="trace_list">
+                     <colgroup>
+                          <col width="265px"/>
+                          <col width="200px"/>
+                          <col width="330px"/>
+                     </colgroup>
+                     <tr>
+                         <th>处理时间</th>
+                         <th>操作员</th>
+                         <th>处理信息</th>
+                         <th><a href="#">查看全部</a></th>
+                     </tr>
+                     <tr class="examine">
+                         <td>2013-11-16 07:20:15</td>
+                         <td>客服</td>
+                         <td>退废票成功</td>
+                         <td> </td>
+                     </tr>
+                     <tr>
+                         <td>2013-11-15 16:00:21</td>
+                         <td>客服</td>
+                         <td>退废票中</td>
+                         <td> </td>
+                     </tr>
+                      <tr>
+                         <td>2013-11-15 16:00:21</td>
+                         <td>用户</td>
+                         <td>申请退废票</td>
+                         <td> </td>
+                     </tr>
+                 </table>  
+         </div>       
+    </div>  <!--order end-->
+    
+    <div class="departure">
+        <div class="chief"> <h3>客票信息</h3> </div>        
+        <table cellpadding="0" cellspacing="0" class="route">
+             <colgroup> 
+                 <col width="95px"/>
+                 <col width="115px"/>
+                 <col width="125px"/>
+                 <col width="110px"/>                 
+                 <col width="115px"/>
+                 <col width="120px"/>
+                 <col width="100px"/>
+                 <col width="110px"/>
+                 <col width="50px"/>
+             </colgroup>        
+            <thead>
+                <tr>              
+                    <th>PNR</th>
+                    <th>姓名</th>
+                    <th>证件号码</th>
+                    <th>旅客类型</th>
+                    <th>票号</th>
+                    <th>票序号</th>
+                    <th>行程单号</th>
+                    <th>联系电话</th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HX21RP</td>
+                    <td>ZHANG/YU</td>
+                    <td>A123456</td>
+                    <td>成人</td>
+                    <td>7919128790933</td>
+                    <td>C1</td>
+                    <td>未打印</td>
+                    <td>13811234567</td>
+                    <td> </td>
+                </tr>
+                <tr class="dashed_top">
+                    <td>HX21RP</td>
+                    <td>ZHANG/YU</td>
+                    <td>A123456</td>
+                    <td>儿童</td>
+                    <td>7919128790933</td>
+                    <td>A1</td>
+                    <td>未打印</td>
+                    <td>13811234567</td>
+                    <td><b style="font-size:14px;">已退</b></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+        
+    <div class="departure">
+        <div class="chief"> <h3>旅客信息</h3> </div>        
+        <table cellpadding="0" cellspacing="0" class="route traveller">
+             <colgroup> 
+                 <col width="110px"/>
+                 <col width="90px"/>
+                 <col width="90px"/>
+                 <col width="100px"/>                 
+                 <col width="115px"/>
+                 <col width="170px"/>
+                 <col width="150px"/>
+                 <col width="120px"/>
+             </colgroup>        
+            <thead>
+                <tr>              
+                    <th>旅客类型</th>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>国籍</th>
+                    <th>证件类型</th>
+                    <th>证件号码</th>
+                    <th>出生日期</th>
+                    <th>联系电话</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>成人</td>
+                    <td>白展堂</td>
+                    <td>男</td>
+                    <td>中国</td>
+                    <td>身份证</td>
+                    <td>231005197008214579</td>
+                    <td>1970-08-21</td>
+                    <td>13811234567</td>
+                </tr>
+                <tr class="dashed_top">
+                    <td>儿童</td>
+                    <td>小白</td>
+                    <td>男</td>
+                    <td>中国</td>
+                    <td> </td>
+                    <td> </td>
+                    <td>1970-08-21</td>
+                    <td> </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>    
+    
+    <div class="departure">
+        <div class="chief"> <h3>航班信息</h3> </div>
+        <table cellpadding="0" cellspacing="0" class="route">
+             <colgroup>
+                 <col width="140px"/>
+                 <col width="150px"/>
+                 <col width="100px"/>
+                 <col width="160px"/>
+                 <col width="140px"/>
+                 <col width="75px"/>
+                 <col width="115px"/>
+                 <col width="65px"/>
+             </colgroup>        
+            <thead>
+                <tr>
+                    <th>航班号</th>
+                    <th>实际承运</th>
+                    <th>机型</th>
+                    <th>起降时间</th>
+                    <th>起降机场</th>
+                    <th>经停</th>
+                    <th>航位等级</th>
+                    <th>航位</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><i class="aviation_icon">东方航空<br>MU5183</i></td>
+                    <td>MU5183</td>
+                    <td>大型机<br>333</td>
+                    <td>2013-09-09 08：20<br>2013-09-01 10：20</td>
+                    <td>首都机场T3<br>虹桥机场T2</td>
+                    <td>武汉</td>
+                    <td>特价经济航</td>
+                    <td>G</td>
+                </tr>
+                <tr class="dashed_top">
+                    <td><i class="aviation_icon">东方航空<br>MU5183</i></td>
+                    <td>MU5183</td>
+                    <td>大型机<br>333</td>
+                    <td>2013-09-09 08：20<br>2013-09-01 10：20</td>
+                    <td>戴高乐机场<br>虹桥机场T2</td>
+                    <td>武汉</td>
+                    <td>特价经济航</td>
+                    <td>G</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="departure">
+       <div class="chief"> <h3>报价信息</h3> </div>
+       <table cellpadding="0" cellspacing="0" class="fare" style="margin:10px 0 0 0; width:100%;">
+             <colgroup>
+                 <col width="80px"/>
+                 <col width="80px"/>
+                 <col width="80px"/>
+                 <col width="55px"/>
+                 <col width="90px"/>
+                 <col width="60px"/>
+                 <col width="78px"/>
+                 <col width="145px"/>
+                 <col width="145px"/>
+                 <col width="130px"/>
+             </colgroup>        
+            <thead>
+                <tr>
+                    <th>PNR</th>
+                    <th>大编码</th>
+                    <th>旅客类型</th>
+                    <th>人数</th>
+                    <th>应收票款</th>
+                    <th>票款</th>
+                    <th>机建燃油</th>
+                    <th>返点</th>
+                    <th>出票时间</th>
+                    <th>退废票时间</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>JZ4W50</td>
+                    <td>MJWM9N</td>
+                    <td>成人</td>
+                    <td>5</td>
+                    <td>2147</td>
+                    <td>2260</td>
+                    <td>300</td>
+                    <td><b class="ora">7.2% + 51=<em>76.00</em></b></td>
+                    <td>工作日：08:25-20:30<br>双休日：08:30-18:30</td>
+                    <td>工作日：08:25-20:30<br>双休日：08:30-18:30</td>
+                </tr>
+                <tr class="dashed_top">
+                    <td>JZ4W50</td>
+                    <td>MJWM9N</td>
+                    <td>儿童</td>
+                    <td>5</td>
+                    <td>2147</td>
+                    <td>2260</td>
+                    <td>300</td>
+                    <td><b class="ora">7.2% + 51=<em>76.00</em></b></td>
+                    <td>工作日：08:25-20:30<br>双休日：08:30-18:30</td>
+                    <td>工作日：08:25-20:30<br>双休日：08:30-18:30</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="departure">
+        <div class="chief"> <h3>备注</h3> </div>
+        <p class="write_note">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+    </div>
+    
+    <div class="departure clearfix">
+        <div class="chief"> <h3>结算信息</h3> </div>
+        <div class="accounts" style="float:none;">
+           <span>票款合计</span>
+           <em>￥220.00</em>
+           <span>+  税款合计(机建/燃油)</span>
+           <em>￥2260.00</em>
+           <span>=</span>
+           <i>应收合计</i>
+           <b>￥2580.00</b>
+        </div>
+    </div>
+    
+    <div class="chief clearfix toggle_trigger" toggle='{"target":"#tuipiao_list","filter":".flexible i","toggleClass":["downArrow","upArrow"]}' style="border:1px solid #e4e4e4; background:#f8f8f8;">
+             <h3 style="float:left; margin-left:10px;">退废票信息</h3> 
+             <div class="flexible">
+                  <em>退废票成功<i class="downArrow"></i></em>                  
+             </div>
+    </div> 
+    <div class="departure" id="tuipiao_list" style=" border-top:0; margin-top:0;">   
+            <table class="intiMes">
+                 <colgroup>
+                      <col width="13%"/>
+                      <col width="85%"/>
+                 </colgroup>
+                 <tr>
+                     <th>退废票订单号：</th>
+                     <td>131031140019205</td>
+                 </tr>
+                 <tr>
+                     <th>退废票PNR：</th>
+                     <td>HGVWGF</td>
+                 </tr>
+                 <tr>
+                     <th>退废票类型：</th>
+                     <td>退票</td>
+                 </tr>
+                 <tr>
+                     <th class="ticketmes">退废票航班信息：</th>
+                     <td> </td>
+                 </tr>
+                 <tr>
+                     <td colspan="2" style="padding:5px 0;">
+                         <table cellpadding="0" cellspacing="0" class="route intiMesTab">
+                                 <colgroup>
+                                     <col width="150px"/>
+                                     <col width="110px"/>
+                                     <col width="150px"/>
+                                     <col width="150px"/>
+                                     <col width="140px"/>
+                                     <col width="135px"/>
+                                     <col width="95px"/>
+                                 </colgroup>        
+                                <thead>
+                                    <tr>
+                                        <th>航班号</th>
+                                        <th>机型</th>
+                                        <th>起降时间</th>
+                                        <th>起降机场</th>
+                                        <th>经停</th>
+                                        <th>航位等级</th>
+                                        <th>航位</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><i class="aviation_icon">东方航空<br>MU5183</i></td>
+                                        <td>大型机 333</td>
+                                        <td>2013-09-09 08：20<br>2013-09-01 10：20</td>
+                                        <td>首都机场T3<br>虹桥机场T2</td>
+                                        <td>武汉</td>
+                                        <td>特价经济航</td>
+                                        <td>G</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                     </td>
+                 </tr>
+                 <tr>
+                     <th>退票原因：</th>
+                     <td>民航原因</td>
+                 </tr>
+                 <tr>
+                     <th>附件：</th>
+                     <td>
+                         <div class="psr_files nofloat clearfix">
+                                <a href="#">学生组-某在在.jpg</a>
+                                <a href="#">学生组-某在在.jpg</a>
+                                <a href="#">学生组-某在在.jpg</a>
+                         </div>
+                     </td>
+                 </tr>
+                 <tr>
+                     <th>备注信息：</th>
+                     <td>xxxxxxxxx</td>
+                 </tr>
+                 <tr>
+                     <th class="ticketmes">退废客票信息：</th>
+                     <td> </td>
+                 </tr>
+                 <tr>
+                     <td colspan="2" style="padding:5px 0;">
+                         <table cellpadding="0" cellspacing="0" class="route intiMesTab">
+                                 <colgroup> 
+                                     <col width="75px"/>
+                                     <col width="80px"/>
+                                     <col width="90px"/>
+                                     <col width="75px"/>                 
+                                     <col width="95px"/>
+                                     <col width="85px"/>
+                                     <col width="90px"/>
+                                     <col width="70px"/>
+                                     <col width="65px"/>
+                                     <col width="60px"/>
+                                     <col width="65px"/>
+                                     <col width="50px"/>
+                                     <col width="55px"/>
+                                 </colgroup>        
+                                <thead>
+                                    <tr>              
+                                        <th>PNR</th>
+                                        <th>姓名</th>
+                                        <th>证件号码</th>
+                                        <th>旅客类型</th>
+                                        <th>票号</th>
+                                        <th>票序号</th>
+                                        <th>行程单号</th>
+                                        <th>退票费</th>
+                                        <th>票款</th>
+                                        <th>税款</th>
+                                        <th>附加费</th>
+                                        <th>佣金</th>
+                                        <th>服务费</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>HX21RP</td>
+                                        <td>ZHANG/YU</td>
+                                        <td>A123456</td>
+                                        <td>成人</td>
+                                        <td>7919128790933</td>
+                                        <td>1234567</td>
+                                        <td>未打印</td>
+                                        <td>5500</td>
+                                        <td>5500</td>
+                                        <td>1000</td>
+                                        <td>5%</td>
+                                        <td>3%</td>
+                                        <td>20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                     </td>
+                 </tr>             
+            </table>
+            <div class="accounts marem" style="float:none;">
+               <strong>结算信息：</strong>
+               <span>退票费合计</span>
+               <em>￥590</em>
+               <span> + &nbsp;票款款合计</span>
+               <em>￥300</em>
+               <span> + &nbsp;税款合计</span>
+               <em>￥50</em>
+               <span> + &nbsp;附加费合计</span>
+               <em>￥50</em>
+               <span> + &nbsp;服务费合计</span>
+               <em>￥50</em>
+               <span> - &nbsp;返点合计</span>
+               <em>￥76</em>
+               <span> = &nbsp;</span>
+               <i>应收合计</i>
+               <b>￥916 </b>
+            </div>
+    </div>
+    
+</section>
+
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html" charset="utf-8">
+    <title>树形初始化 checkbox</title>
+    <link href="../../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.gray.css" rel="stylesheet" type="text/css" />
+    <script src="../../static/js/jquery.min.js" type="text/javascript"></script>
+    <script src="../../static/js/kendo.web.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <div id="treeview"></div>                         
+
+
+    <script type="text/javascript">
+    $(function() {
+			  $("#treeview").kendoTreeView({
+				checkboxes: {
+                    template: "<input type='checkbox' name='checkedFiles#= item.id #' # if (item.checked){ # checked=\"checked\" # } #  value='true' />"
+				},
+
+		    dataSource: [{
+			id: 1, text: "不夜城集团", expanded: true,checked:true, items: [
+			    {
+				id: 2, text: "不夜城国旅", expanded: true, checked:true,items: [
+				    { id: 3, text: "国内机票部", expanded: true, checked:true,items: [
+				    { id: 4, text: "退票部", expanded: true, items: [
+						{ id: 23, text: "退票部一组"},
+					    { id: 24, text: "退票部二组"}										  
+				      ]
+					  },
+					{ id: 14, text: "出票部", expanded: true, checked:true,items: [
+				    { id: 15, text: "出票一组",checked:false },
+					{ id: 16, text: "出票二组",checked:true }
+				         ] 
+					     }
+				    ]
+					},
+				    { id: 17, text: "国际机票部", expanded: true, items: [				   
+					{ id: 18, text: "退票部" }
+				    ]
+					},
+				    { id: 19, text: "洒店部", expanded: true, items: [				   
+					{ id: 20, text: "酒店一部" }
+				    ]
+					},
+					{ id: 21, text: "财务部", expanded: true, items: [				   
+					{ id: 22, text: "财务一部"}
+				    ]
+					}
+				]
+			    },
+			    {
+				id: 6, text: "北京爱特博", expanded: true, items: [
+				    { id: 7, text: "mockup.jpg" },
+				    { id: 8, text: "Research.pdf" },
+				]
+			    },
+			    {
+				id: 9, text: "广州长荣", expanded: true,  items: [
+				    { id: 10, text: "February.pdf"},
+				    { id: 11, text: "March.pdf"  },
+				    { id: 12, text: "April.pdf" }
+				]
+			    }
+			]
+		    }]
+		});
+    });
+    </script>
+</body>
+</html>

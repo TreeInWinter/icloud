@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>签证 产品管理 新建产品</title>
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/b2b.css">
+    <link rel="stylesheet" href="/static/css/kendo.common.css">
+    <link rel="stylesheet" href="/static/css/kendo.gray.css">
+<link href="/static/css/kendo.reset.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/visa.css">
+</head>
+<body>
+    <div class="main">
+        <div class="actions block">
+            <!--修改右边菜单在没有返回按钮情况下靠左变贴齐 2013.10.21-->
+            <div class="col col-l sep-r" style="margin-right:10px">
+                <button class="btns btn-return">返回</button>
+            </div>
+            <div class="col col-l">
+                <a class="page-title" href="#">新建产品</a>
+            </div>
+            <div class="col col-r sep-l">
+                <a class="button_4_3" href="#" style="color:#ffffff;margin-top:4px;">提交</a>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panelTitle-visa">产品信息</div>
+            <div class="clearfix">
+                <table class="tbl_visaCommon">
+                    <tr>
+                        <th><em class="important">*</em>产品名称：</th>
+                        <td><input type="text" name="" id=""/></td>
+                    </tr>
+                    <tr>
+                        <th><em class="important">*</em>签证目的地：</th>
+                        <td><select data-role="dropdownlist"><option>美国</option><option>加拿大</option></select></td>
+                    </tr>
+                    <tr>
+                        <th><em class="important">*</em>签证类型：</th>
+                        <td><select data-role="dropdownlist"><option>B1/B2（旅游/商务/探亲）</option><option>其他</option></select></td>
+                    </tr>
+                    <tr>
+                        <th><em class="important">*</em>是否需要面试：</th>
+                        <td><select data-role="dropdownlist"><option>需要面试</option><option>无需面试</option></select></td>
+                    </tr>
+                    <tr>
+                        <th><em class="important">*</em>底价：</th>
+                        <td>
+                            <input type="text" name="" id="" style=" width:135px;"/> 元
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="vertical-align:top; padding-top:5px;"><em class="important">*</em>所需材料：</th>
+                        <td>
+                            <div class="material">
+                                   <ul class="clearfix firstMaterialList">
+                                       <li> 
+                                           <label><input type="checkbox"/>护照原件（可自带）</label> 
+                                       </li>
+                                       <li> 
+                                           <label><input type="checkbox"/>护照复印件</label> 
+                                       </li>
+                                       <li> 
+                                           <label><input type="checkbox"/>身份证复印件</label> 
+                                       </li>
+                                       <li> 
+                                           <label><input type="checkbox"/>实体照（或电子照）2张</label> 
+                                       </li>
+                                       <li> 
+                                           <label><input type="checkbox"/>DS160表格</label> 
+                                       </li>
+                                       <li> 
+                                           <label><input type="checkbox"/>加拿大表明表</label> 
+                                       </li>
+                                   </ul>
+                                   <ul class="clearfix">
+                                       <li> 
+                                           <label><input type="checkbox"/>银行个人账户进出记录单</label> 
+                                       </li>
+                                       <li> 
+                                           <label><input type="checkbox"/>在职证明中英文</label> 
+                                       </li>
+                                       <li> 
+                                           <label><input type="checkbox"/>在读证明中英文</label> 
+                                       </li>
+                                       <li> 
+                                           <label><input type="checkbox"/>退休证</label> 
+                                       </li>
+                                       <li> 
+                                           <label><input type="checkbox"/>结/离婚证复印件</label> 
+                                       </li>
+                                       <li> 
+                                           <label><input type="checkbox"/>房产证复印件</label> 
+                                       </li>
+                                       <li> 
+                                           <label><input type="checkbox"/>企业营业执照复印件</label> 
+                                       </li>
+                                       <li> 
+                                           <label><input type="checkbox"/>组织机构代码证复印件</label> 
+                                       </li>
+                                       <li> 
+                                           <label><input type="checkbox"/>车产证复印件</label> 
+                                       </li>
+                                       <li> 
+                                           <label><input type="checkbox"/>存款证明</label> 
+                                       </li>
+                                       <li> 
+                                           <label><input type="checkbox"/>户口本复印件</label> 
+                                       </li>
+                                       <li> 
+                                           <label><input type="checkbox"/>税单</label> 
+                                       </li>
+                                   </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+<div id="window"></div>
+
+    <script type="text/javascript" src="../../../static/js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="../../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../../static/js/visa.js"></script>
+<!--[if lt IE 8]>
+<link rel="stylesheet" href="/static/css/ie.css" />
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script>
+<![endif]-->
+</body>
+</html>
+

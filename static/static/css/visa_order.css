@@ -1,0 +1,468 @@
+@charset "utf-8";
+/* CSS Document */
+/*订单管理*/
+.visa_div {
+	background: #fff;
+	padding: 10px 10px 10px 15px;
+	margin-bottom: 10px;
+	border-left: 1px solid #dfe3e5;
+	border-right: 1px solid #dfe3e5;
+	border-bottom: 2px solid #ccd0d2;
+}
+.visa_table {
+	position: relative;
+}
+.visa_table td {
+	height: 36px;
+}
+.visa_table .showy {
+	color: #ff0000;
+	vertical-align: middle;
+	margin-right: 3px;
+}
+.visa_table td input, .visa_table td select {
+	border: 1px solid #d3d3d3;
+}
+.visa_table td input {
+	padding-left: 3px;
+	height: 20px;
+	line-height: 20px;
+}
+.visa_table td select {
+	height: 22px;
+	line-height: 22px;
+}
+.visa_table td label {
+	margin-right: 20px;
+}
+.visa_table td label input {
+	border: 0;
+	vertical-align: middle;
+	margin-right: 2px;
+}
+.tgrid .line_left {
+	border-left: 1px solid #e0e0e0;
+}
+.tgrid .line_right {
+	border-right: 1px solid #e0e0e0;
+}
+.tgrid tbody tr:hover {
+	background: #ffffdb;
+}
+.tgrid {
+	background: #fff;
+	border-collapse: collapse;
+}
+.tgrid th {
+	text-align: left;
+	padding-left: 5px;
+	height: 25px;
+}
+.tgrid .thCenter, .tgrid .tdCenter {
+	text-align: center;
+}
+.tgrid tbody a {
+	color: #0066cc;
+	margin-right: 3px;
+}
+.tgrid tbody a:hover {
+	color: #0066cc;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.tgrid tbody td {
+	text-align: left;
+	height: 25px;
+	padding: 3px 3px 3px 5px;
+}
+.tgrid thead th {
+	font-weight: 500;
+}
+.tgrid tbody a {
+	margin-right: 10px;
+}
+.tgrid .price, .panelTable .price {
+	color: #ff6c00;
+}
+/*新建订单*/
+.panelTit {
+	font-weight: bold;
+	font-size: 14px;
+	margin: 10px 0;
+}
+.panelOrder {
+	margin: 0 0 10px 0;
+}
+.panelOrder th {
+	font-weight: normal;
+}
+.panelOrder th, .panelOrder td {
+	padding: 6px 0;
+}
+.panelOrder td {
+	color: #666;
+}
+.panelTable {
+	border-left: 1px solid #d5d5d5;
+	width: 100%;
+}
+.panelTable th, .panelTable td {
+	border-top: 1px solid #d5d5d5;
+	border-right: 1px solid #d5d5d5;
+	text-align: left;
+	padding: 7px 0 7px 12px;
+}
+.touristTable th, .touristTable td, .cancelOrder th, .cancelOrder td {
+	padding: 7px 0 7px 5px;
+}
+.panelTable td {
+	border-bottom: 1px solid #d5d5d5;
+	color: #666;
+}
+.panelTable th {
+	font-weight: normal;
+	background: #f5f5f5;
+}
+.cancelOrder th {
+	text-align: right;
+	font-weight: normal;
+}
+input[type=text] {
+	width: 138px;
+	height: 20px
+}
+select {
+	width: 150px
+}
+.visaFlowLeft {
+	width: 452px;
+	float: left;
+	border-right: 1px dashed #FADBD3;
+	height: 53px;
+	background: #FFFBF5;
+	padding: 10px 0 0 20px;
+}
+.visaFlowRight {
+	width: 388px;
+	margin-left: 453px;
+	height: 63px;
+}
+.panelLeftborder {
+	width: 7px;
+	background: #FE7218;
+	float: left;
+	height: 63px;
+}
+.panelRightborder {
+	width: 7px;
+	background: #439CD3;
+	float: right;
+	height: 63px;
+}
+.panelRelOrder {
+	width: 77px;
+	background: #cff3fc;
+	float: right;
+	height: 63px;
+}
+.visaFlowfont {
+	color: #f25601;
+}
+.visaFlowfont2 {
+	color: #FF4200;
+	font-weight: bold;
+	font-size: 16px;
+}
+.visaFlowfont3 {
+	color: #888986;
+	padding-left: 20px
+}
+.visaOrderNun {
+	font-size: 14px;
+	font-weight: bold;
+}
+.hotelOrderStatusContainer {
+	float: left;
+	padding: 20px 10px
+}
+.statusContainer {
+	float: left;
+	position: relative;
+	padding: 15px 10px 5px
+}
+.statusContainer.first .statusLineLeft {
+	display: none
+}
+.statusContainer.last .statusLineRight {
+	display: none
+}
+.statusDot {
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	left: 50%;
+	margin-left: -5px;
+	z-index: 2;
+	top: 0
+}
+.statusLine {
+	z-index: 1
+}
+.status_ing {
+	color: #ff6600
+}
+.status_ing .statusDot {
+	background: url('../images/hotel_order_status_dot_ing.gif') no-repeat
+}
+.status_ing .statusLineLeft {
+	width: 50%;
+	position: absolute;
+	top: 4px;
+	left: 0;
+	border-top: 2px solid #00a000
+}
+.status_ing .statusLineRight {
+	width: 50%;
+	position: absolute;
+	top: 4px;
+	right: 0;
+	border-top: 2px solid #e9e9e9
+}
+.status_complete {
+	color: #00a000
+}
+.status_complete .statusDot {
+	background: url('../images/hotel_order_status_dot_complete.gif') no-repeat
+}
+.status_complete .statusLineLeft {
+	width: 50%;
+	position: absolute;
+	top: 4px;
+	left: 0;
+	border-top: 2px solid #00a000
+}
+.status_complete .statusLineRight {
+	width: 50%;
+	position: absolute;
+	top: 4px;
+	right: 0;
+	border-top: 2px solid #00a000
+}
+.status_uncomplete {
+	color: #666666
+}
+.status_uncomplete .statusDot {
+	background: url('../images/hotel_order_status_dot_uncomplete.gif') no-repeat
+}
+.status_uncomplete .statusLineLeft {
+	width: 50%;
+	position: absolute;
+	top: 4px;
+	left: 0;
+	border-top: 2px solid #e9e9e9
+}
+.status_uncomplete .statusLineRight {
+	width: 50%;
+	position: absolute;
+	top: 4px;
+	right: 0;
+	border-top: 2px solid #e9e9e9
+}
+/*.priceDetail_otherToolTip{cursor:pointer}*/
+.hotelOrderStatusContainer .exception {
+	color: #ff0000
+}
+.hotelOrderStatusContainer .exception .statusDot {
+	background: url('../images/hotel_order_status_dot_exception.gif') no-repeat;
+}
+.complete {
+	font-weight: bold;
+	color: #00a000
+}
+.ing {
+	font-weight: bold;
+	color: #ff6600
+}
+.fieldName {
+	background: #f5f5f5;
+	color: #333
+}
+/*.liuzhangInfoContainer{display: none;margin-top: 10px}*/
+
+.enroll {
+	background: #fff;
+	border: 1px solid #e0e0e0;
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+}
+.write {
+	padding: 15px 25px 0;
+}
+.ballNum {
+	padding: 0 0 0 0px;
+	margin-bottom: 10px;
+}
+.ballNum input {
+	padding: 0 0 0 3px;
+}
+.ballNum em {
+	color: #ff0000;
+}
+.tourist {
+	border: 1px solid #e0e0e0;
+	color: #333333;
+	padding: 15px 15px 0px;
+}
+.tourist_mes {
+	padding-bottom: 15px;
+}
+.tourist_mes b {
+	font-size: 14px;
+	margin-right: 25px;
+}
+.tourist_mes a, .del a {
+	color: #0066cc;
+}
+.tourist_mes a:hover, .del a:hover {
+	text-decoration: underline;
+}
+.newly {
+	border-bottom: 1px dashed #c1c1c1;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+}
+.del {
+	margin-bottom: 15px;
+}
+.del em {
+	background: url(../images/tourist.png) no-repeat left center;
+	margin-right: 10px;
+	padding-left: 20px;
+}
+.newly_list th, .newly_list td {
+	line-height: 30px;
+}
+.newly_list th {
+	font-weight: normal;
+	text-align: right;
+}
+.newly_list td input {
+	width: 127px;
+	border: 1px solid #d7d7d7;
+	padding-left: 3px;
+	line-height: 20px;
+	height: 20px;
+}
+.newly_list td select {
+	border: 1px solid #d7d7d7;
+	line-height: 22px;
+	height: 22px;
+	margin-right: 3px;
+}
+.newly_list th em {
+	color: #ff0000;
+	vertical-align: middle;
+	font-weight: bold;
+}
+.newly.newly_last {
+	border-bottom: 0;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+.write_message {
+	padding: 15px;
+	margin: 10px 25px;
+}
+.write_message h3 {
+	font-size: 14px;
+	margin-bottom: 10px;
+	color: #333;
+}
+.write_message table em {
+	color: #ff0000;
+	font-weight: bold;
+}
+.write_message table td {
+	line-height: 30px;
+}
+.write_message table td input {
+	width: 115px;
+	line-height: 20px;
+	height: 20px;
+	padding-left: 3px;
+}
+.write_message table td select {
+	line-height: 22px;
+	height: 22px;
+}
+.submit_btn {
+	margin: 20px 0 40px 25px;
+}
+.block-calc {
+	background-color: #D9FFFA;
+}
+.block-calc input {
+	padding: 0 5px;
+	font-size: 14px;
+	border: 0;
+	width: 117px;
+	height: 27px;
+	line-height: 27px \9;
+	background: url(../images/order_r11_c8.png) no-repeat;
+	border-right: 1px solid #cfcfcf;
+}
+.block-calc .input-b {
+	line-height: 49px \9;
+	padding: 0 5px;
+	font-size: 30px;
+	font-weight: bold;
+	border: 0;
+	width: 173px;
+	height: 49px;
+	color: #f60;
+	background: url(../images/order_r10_c4.png) no-repeat;
+}
+.block-calc span {
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 4px;
+}
+.block-calc .first span {
+	font-size: 16px;
+	width: 35px;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 5px 0 0;
+}
+.block-calc .flat-list {
+	padding: 15px;
+}
+.block-calc li {
+	margin-right: 10px;
+}
+.block-calc-readonly input {
+	background: none !important;
+	border: none;
+	text-align: center;
+}
+.bar {
+ *zoom:1;
+	border-left: 1px solid #ccc;
+	height: 10px;
+	display: inline-block;
+	vertical-align: middle;
+}
+i.star {
+	vertical-align: middle;
+	color: red;
+}
+.block5 {
+	height: 100%;
+	overflow: hidden;
+	padding-bottom: 10px
+}
+.tgrid tbody a.highlight-orange {
+	color: #F25601;
+}

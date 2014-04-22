@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>机票 国内机票 退票 未提交</title>
+        <meta charset="utf-8" />
+<link href="/static/css/kendo.common.css" rel="stylesheet" />
+<link href="/static/css/kendo.gray.css" rel="stylesheet" />
+<link href="/static/css/common.css" rel="stylesheet" />
+<link href="/static/css/b2b.css" rel="stylesheet" />
+<link href="/static/css/kendo.reset.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="/static/css/global.css" />
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/kendo.web.js"></script>
+<script type="text/javascript" src="/static/js/plugins/jquery.fixedBar.js"></script>
+<script type="text/javascript">
+$(function(){
+    $('.actions').fixedBar();
+    var lensf = function (){
+        $.each($('.instr'),function(){
+            var that = $(this);
+            if(that.find('.highlight-fl').size()>0){
+                var ele = that.find('.highlight');
+                var len = ele.size();
+                var wid = ele.width()*len + 15;
+                that.find('.line').prepend('<div style="background-color:#FF6608;height:2px;width:'+wid+'px" />')
+            }
+        });
+    }
+    lensf();
+});
+</script>
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+<!-- @CLB@ --></head><body>  <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">消息</a>
+                <span>New</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent">
+<link href="/static/css/order.css" rel="stylesheet"><div class="actions block">
+    <div class="col col-l sep-r">
+        <button class="btns btn-return">返回</button>
+    </div>
+    <div class="col col-r sep-l">
+        <button class="btns btn-blue">取消订单</button>
+        <button class="btns btn-blue">修改</button>
+        <button class="btns btn-blue">提交申请</button>
+    </div>
+</div>
+
+<div class="block block0 clearfix">
+    <div class="col col-l">
+        <div class="row">
+            <span class="text1">订单号：<strong>1234567890</strong></span>&nbsp;
+            <!--<span class="text2"> - 订单类型：国内机票 </span>-->
+        </div>
+        <div class="row"></div>
+    </div>
+    <div class="col col-r">
+        <ul class="flat-list">
+            <li>
+            <div class="instr clearfix">
+                <span class="first highlight-fl">创建</span>
+                <span>审核</span>
+                <span>退票</span>
+                <span>完成</span>
+                <span class="last">取消</span>
+                <em class="line">&nbsp;</em>
+            </div> 
+            </li>
+            <li>
+            <div class="instr clearfix">
+                <span class="first">收款</span>
+                <span class="last">结算</span>
+                <em class="line">&nbsp;</em>
+            </div>
+            </li>
+            <li class="count" id="child_order_trigger"><span>关联订单</span><strong>3</strong>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- 订单信息 -->
+<div class="block block1 block-module">
+    <div class="block-title">订单信息</div>
+    <ul class="flat-list">
+        <li>
+        <label class="vertical-head">客户名称</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">结算方式</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">可用余额</label>
+        <span><strong style="color:#FF6608;">222.00</strong>元</span>
+        </li>
+        <li>
+        <label class="vertical-head">操作员</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">联系人</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">联系电话</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">手机号码</label>
+        <span>xxx</span>
+        </li>
+        <li>&nbsp;</li>
+        <li>
+        <label class="vertical-head">三方协议编号</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">客户订单编号</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">外部订单号</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">关联订单号</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">建单营业点</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">出票营业点</label>
+        <span>xxx</span>
+        </li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li class="col-wide">
+        <label class="vertical-head">客户备注</label>
+        <textarea disabled name=""></textarea>
+        </li>
+        <li class="col-wide">
+        <label style="vertical-align:top" class="vertical-head">内部备注</label>
+        <textarea disabled name=""></textarea>
+        </li>
+    </ul>
+</div>
+
+
+<div class="block block2 block-module">
+    <div class="block-title">
+        <span class="block-title-orange">航班信息</span>
+        <!--
+        <span class="block-module-action">
+            <button class="btns btn-ac-blue">删除所选</button> 
+        </span>
+        -->
+    </div> 
+    <div class="row">
+        <div id="flight_info_grid">
+            <table class="grid-table">
+                <tr class="thead">
+                    <td>航空公司</td><td>共享</td><td>航班号</td><td>机型</td><td>舱位</td><td>舱位等级</td><td>离港机场</td><td>到港机场</td><td>离港时间</td><td>到港时间</td><td>订座</td><td>基建</td><td>燃油</td>
+                </tr>
+                <tr>
+                    <td>东方航空</td>
+                    <td>HO</td>
+                    <td>CZ3609</td>
+                    <td>空客A380</td>
+                    <td>W</td>
+                    <td>经济仓(7.5折)</td>
+                    <td>上海浦东 PVG T3</td>
+                    <td>上海浦东 PEK T2</td>
+                    <td> 2013-06-22 20:35 </td>
+                    <td> 2013-06-22 23:25 </td>
+                    <td> HK </td>
+                    <td> 50 </td>
+                    <td> 10 </td>
+                </tr>
+                <tr>
+                    <td>东方航空</td>
+                    <td>HO</td>
+                    <td>CZ3609</td>
+                    <td>空客A380</td>
+                    <td>W</td>
+                    <td>经济仓(7.5折)</td>
+                    <td>上海浦东 PVG T3</td>
+                    <td>上海浦东 PEK T2</td>
+                    <td> 2013-06-22 20:35 </td>
+                    <td> 2013-06-22 23:25 </td>
+                    <td> HK </td>
+                    <td> 50 </td>
+                    <td> 10 </td>
+                </tr>
+            </table> 
+        </div>
+    </div>
+</div>
+
+<div class="block block3 block-module">
+    <div class="block-title"><span>退改签规定</span>
+        <!--
+        <span class="block-module-action">
+        </span>
+        -->
+    </div>
+    <div>
+        <div class="row row3">
+            【<span>更改条件</span>】同等舱位免费更改。<br>
+            【<span>退票条件</span>】起飞前2小时（含）以外办理退票按订座舱位公布运价收取40％的退票费，2小时以内及起飞后退票按订座舱位公布运价收取50％的退票费。退票费低于50元时按50元收取。<br>
+            【<span>签转条件</span>】不得签转。<br><br>
+            <h3>政策说明</h3>
+            【<span>退改签补充规则</span>】（不管任何原因）签转到其他航空公司、跨月签转以及有政策航班改到无政策航班，需收回代理费。
+        </div>
+    </div>
+</div>
+
+<div class="block block7 block-module">
+    <div class="block-title"><span class="block-title-orange">客票信息</span>
+        <!--
+        <span class="block-module-action">
+            <button class="btns btn-ac-blue">删除所选</button> 
+        </span>
+        -->
+    </div> 
+    <div class="row">
+        <div id="passenger_info_grid">
+            <table class="grid-table">
+                <tr class="thead">
+                    <td>PNR</td>
+                    <td>票号</td>
+                    <td>旅客类型</td>
+                    <td>姓名</td>
+                    <td>性别</td>
+                    <td>证件号码</td>
+                    <td>证件类型</td>
+                    <td>票面价</td>
+                    <td>佣金</td>
+                    <td>税款</td>
+                    <td>附加费</td>
+                    <td>合计</td>
+                    <td>行程单号</td>
+                    <td>联系电话</td>
+                </tr> 
+                <tr>
+                    <td>HFJDD2</td>
+                    <td>781-2108936418</td>
+                    <td>成人</td>
+                    <td>周林</td>
+                    <td>男</td>
+                    <td>身份证</td>
+                    <td>21321321321</td>
+                    <td>590</td>
+                    <td>32</td>
+                    <td>100</td>
+                    <td>0</td>
+                    <td>658</td>
+                    <td>未打印</td>
+                    <td>13800138000</td>
+                </tr>
+                <tr>
+                    <td>HFJDD2</td>
+                    <td>781-2108936418</td>
+                    <td>成人</td>
+                    <td>周林</td>
+                    <td>男</td>
+                    <td>身份证</td>
+                    <td>21321321321</td>
+                    <td>590</td>
+                    <td>32</td>
+                    <td>100</td>
+                    <td>0</td>
+                    <td>658</td>
+                    <td>未打印</td>
+                    <td>13800138000</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="block block8 block-module clearfix" style="min-height:60px">
+    <div class="block-title"><span>退票信息</span>
+        <!--
+        <span class="block-module-action">
+        </span>
+        -->
+    </div> 
+    <div class="row row1"> 
+        <table style="float:none;width:100%;">
+            <tr>
+                <td style="width:60px">退票类型</td>
+                <td style="width:120px"><em>废票</em></td>
+                <td style="width:60px">退票原因</td>
+                <td style="width:120px"><em>当日作废</em></td>
+                <td style="width:60px;">退票备注</td>
+                <td style="width:120px"><span>原PNR是 JY3RD</span></td>
+                <td style="width:60px">附件</td>
+                <td><span><a href="javascript:void(0);">123.jpg</a></span></td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+<div class="block block5 block-calc tuipiao">
+    <div id="order_calc">
+        <ul class="flat-list">
+            <li class="first">
+            <label>
+                <span>应收合计</span> 
+                <input value="-1202.00" style="color:#ff3300;" class="input-b"> 
+            </label>
+            </li> 
+            <li>
+            <label>
+                <span>= 票款合计</span>
+                <input value="-1180.00">
+            </label>
+            </li>
+            <li>
+            <label>
+                <span>+ 税款合计</span>
+                <input value="200.00">
+            </label>
+            </li>
+            <li>
+            <label>
+                <span>+ 退票费 </span>
+                <input value="4.00">
+            </label>
+            </li>
+            <li>
+            <label>
+                <span>+ 附加费</span>
+                <input value="0.00">
+            </label>
+            </li>
+            <li>
+            <label>
+                <span>- 佣金 </span>
+                <input value="0.00">
+            </label>
+            </li>
+            <li>
+            <label>
+                <span>+ 服务费</span>
+                <input value="0.00">
+            </label>
+            </li>
+        </ul> 
+    </div>
+</div>
+        </div>
+    </div>
+		
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+<script type="text/javascript">
+    $(function(){
+
+
+    })
+</script>
+<script type="text/javascript" src="/运营商/child_orders.js"></script>
+</body>
+</html>

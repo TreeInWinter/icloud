@@ -1,0 +1,302 @@
+@charset "utf-8";
+/* CSS Document */
+
+.seek{ padding:15px 10px; border:1px solid #e1e1e1; background:#f8f8f8; color:#636363; background:#fff;}
+.seek input{ width:180px; height:22px; line-height:22px; padding-left:3px; border:1px solid #abadb3;}
+.seek a{ font-size:14px;}
+.airLline{ margin-top:10px; border:1PX solid #e1e1e1; color:#636363; position:relative; background:#fff;}
+.air_line{ margin-top:15px; color:#636363; position:relative; border-bottom:1px dashed #e4e4e4; background:#fff;}
+.airline_tab,.air_line_tab{ width:100%;}
+.airline_tab th,.air_line_tab th{ color:#404040; padding:15px 0; background:#f8f8f8; border-bottom:1px solid #e1e1e1;}
+.airline_tab th:first-child,.airline_tab td:first-child,.air_line_tab th:first-child,.air_line_tab td:first-child{ padding-left:10px;}
+.airline_tab td{ padding:10px 0;}
+.air_line_tab td{ padding:15px 0;}
+.airline_tab td h3,.air_line_tab td h3{ margin-bottom:10px; font-weight:bold;}
+.airline_tab td p,.airline_tab td div{ line-height:20px;}
+.airline_tab td i,.air_line_tab td i{ color:#ff6500;}
+.airline_tab td em,.air_line_tab td em{ width:14px; margin-left:3px; display:inline-block; background:url(../images/store/smallPicture.png) no-repeat 0 -58px;}
+.airline_tab tbody tr:hover{ background:#fff6f0;}
+.air_line_tab td li{ float:left; line-height:22px;}
+.location_1{ position:absolute; top:380px; right:400px;}
+
+.k_place{ border:1px solid #e1e1e1; color:#797979; background:#fff;}
+.k_place h2{ padding:10px; font-size:14px; font-weight:bold; border-bottom:1px solid #e1e1e1; background:#f8f8f8;}
+.apply_message,.message{ margin:12px; color:#636363;}
+.mes_h3{ border-bottom:1px solid #e1e1e1;}
+.mes_h3 h3{ width:10%; padding:10px; font-size:14px; font-weight:bold; color:#f1634c; border-bottom:1px solid #f1634c; margin-bottom:-1px;}
+.mes_tab{ margin-top:20px;}
+.mes_tab td{ line-height:30px;}
+.mes_tab td:first-child{ text-align:right; padding-right:7px;}
+.mes_tab td em,.submitAsk td em{ color:#ff0000;}
+.mes_tab td span{ display:inline-block; line-height:30px;}
+.mes_tab td input{ height:22px; line-height:22px; width:160px; border:1px solid #abadb3; padding-left:3px; vertical-align:middle;}
+.mes_tab td strong{ color:#8d8d8d;}
+.journey label{ margin-right:20px;}
+.journey label input{ width:auto; height:auto; vertical-align:middle; border:0;}
+.mes_tab td i{ height:22px; line-height:22px; margin-bottom:5px; color:#a4a4a4; padding:0px 7px; display:inline-block; border:1px solid #cccccc; cursor:pointer;}
+.mes_tab td i:hover{ background:#ff6500; color:#fff; border:1px solid #ff6500;}
+.mes_tab td textarea{ width:600px; height:100px; padding:3px; resize:none; margin-top:5px; color:#636363;}
+.contacts{ padding:10px 0;}
+.submitAsk,.personMes{ margin:20px 0px; color:#636363;}
+.submitAsk td,.personMes td{ line-height:35px;}
+.submitAsk td input,.personMes td input{ height:22px; line-height:22px; border:1px solid #abadb3; padding-left:3px; vertical-align:middle;}
+.submitAsk td a{ margin-top:20px; font-size:14px;}
+.submitAsk td span{ display:inline-block; line-height:35px;}
+.submitAsk th { 
+	text-align:right;
+}
+.submitAsk em { 
+	color:red;
+}
+.personMes td:first-child{ text-align:right;}
+.distan td{ padding:20px 0;}
+.floating p{ line-height:22px; padding-right:20px;}
+.floating .float_i{ left:90%;}
+
+.selRangeType {
+	margin:0 40px 30px 40px;
+	font-size:14px;
+}
+.enquiryInfor, .pnrImportInfor {
+	border:2px solid #fbd79e;
+	/*background:#fffdf3;*/
+	background:#fff;
+	margin:0 40px 10px 40px;
+	padding:20px;
+}
+.enquiryInforTit {
+	font-size:14px;
+	font-weight:bold;
+}
+.pnrImportInfor input { 
+    border:1px solid #ccc; 
+	height:22px; 
+	line-height:22px; 
+	padding-left:3px;
+}
+.enquiryInfor-gray {
+	border:1px solid #d2d2d2;
+	margin:0 40px 10px 40px;
+	padding:20px;
+	cursor:pointer;
+	font-size:14px;
+	font-weight:bold;
+}
+.pnrImport {
+	/*border:1px dotted #d2d2d2;*/
+	border:1px solid #d2d2d2;
+	margin:0 40px;
+	padding:20px;
+	cursor:pointer;
+	font-size:14px;
+}
+.pnr_arrowDown, .enq_arrowDown {
+	background:url(../images/store/icon_pnrarrow.png) no-repeat 0 0;
+	width:11px;
+	height:6px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-left:10px;
+	cursor:pointer;
+}
+.fillEnquiry th { 
+   height:35px; 
+   text-align:right;
+}
+.fillEnquiry td { 
+   height:35px;
+}
+.fillEnquiry td input[type=text] { 
+    
+   height:22px; 
+   line-height:22px; 
+   padding-left:3px;
+ }
+.fillEnquiry i { 
+   width:25px; 
+   height:10px; 
+   border-top:1px solid #cccccc;
+   border-right:1px solid #cccccc; 
+   display:inline-block;
+}
+.fillEnquiry em { 
+   padding:3px; 
+   height:13px; 
+   line-height:13px; 
+   display:inline-block; 
+   border:1px solid #cccccc; 
+   float:right; 
+   margin-left:15px; 
+   cursor:pointer;
+}
+.fillEnquiry em:hover { 
+   background:#ff6500; 
+   color:#fff; 
+   border:1px solid #ff6500;
+}
+.fillEnquiry .bottomLine { 
+   width:25px; 
+   height:10px; 
+   border-bottom:1px solid #cccccc; 
+   border-right:1px solid #cccccc; 
+   display:inline-block;
+}
+.fillEnquiry strong {
+	color:red;
+	vertical-align:middle;
+	margin-right:3px;
+}
+.fillEnquiry td input[type=text] { 
+    width:190px; 
+	border:1px solid #ABADB3; 
+	height:23px; 
+	line-height:23px; 
+	padding-left:3px;
+}
+.fillEnquiry {
+	margin:10px 0 0 0;
+}
+
+.brand{ width:160px; line-height:22px; margin-right:20px; border:1px solid #abadb3;}
+.price{ width:18px; display:inline-block; text-align:center;}
+
+.original{ margin:20px 0 10px 10px;}
+.original span{ vertical-align:middle;}
+.original span em{ color:#f1634c;}
+.original input{ vertical-align:middle; border:1px solid #abadb3; height:22px; line-height:22px; padding-left:3px; width:185px;}
+.original i{ color:#8d8d8d; vertical-align:middle;}
+.dotted_line {height:0px;vertical-align:middle;display:inline-block;border-top:1px dotted #e4e4e4;}
+.or{ margin-bottom:20px;}
+.type{ margin-bottom:10px;}
+.type em,.voyage strong,.multipass em,.inquire em,.fare span em{ color:#ef482d;}
+
+.type input{ border:0; height:15px; vertical-align:middle; margin-right:2px;}
+.type label{ margin-right:30px;}
+.oneway .muted {color:#636363;}
+.voyage,.multipass{ margin:10px 0 15px;}
+.voyage th { 
+   height:35px; 
+   text-align:right;
+}
+.voyage td{ height:35px;}
+.voyage td input[type=text]{ width:190px; border:1px solid #ccc; height:22px; line-height:22px; padding-left:3px;}
+.voyage i{ width:25px; height:10px; border-top:1px solid #cccccc; border-right:1px solid #cccccc; display:inline-block;}
+.voyage em{ padding:3px; height:13px; line-height:13px; display:inline-block; border:1px solid #cccccc; float:right; margin-left:15px; cursor:pointer;}
+.voyage em:hover{ background:#ff6500; color:#fff; border:1px solid #ff6500;}
+.voyage span{ width:25px; /*height:10px;*/ border-bottom:1px solid #cccccc; border-right:1px solid #cccccc; display:inline-block;}
+.multipass input{ width:130px; border:1px solid #ccc; height:22px; line-height:22px; padding-left:3px;}
+.multipass td{ height:25px;}
+.constant{ height:auto;}
+.save{ width:auto; float:left; vertical-align:bottom; padding:45px 0 10px 0;}
+.guest{ width:auto; vertical-align:bottom;}
+.save em,.guest em{ color:#ff6500;}
+.save label,.guest label{ margin-left:20px;}
+.save label input,.guest label input{ border:0; vertical-align:middle; margin-right:5px;}
+.route{ width:100%; margin-top:15px;}
+.route th{ background:#f8f8f8; border-bottom:1px solid #e4e4e4; padding:13px 0; color:#404040;}
+.route th:first-child,.route td:first-child{ padding-left:10px;}
+.route td{ padding:10px 0; line-height:22px; border-bottom:1px dashed #e4e4e4;}
+.route a{ text-decoration:none;}
+.route input{ border:0; vertical-align:middle; margin-right:3px;}
+.distance{ padding:0 2px;}
+.delete{ width:9px; height:9px; display:inline-block; background:url(../images/store/sign.png) no-repeat left center;}
+.add{ width:10px; height:10px; display:inline-block; background:url(../images/store/sign.png) no-repeat -14px 0;}
+.route input{ height:22px; line-height:22px; vertical-align:middle; border:1px solid #abadb3; padding-left:3px;}
+.route select{ height:24px; vertical-align:middle; color:#636363;}
+.remark{ margin:15px 0;}
+.remark span{ width:70px; display:inline-block; text-align:right; vertical-align:top;}
+.remark textarea{ width:600px; height:100px; resize:none; padding:3px; color:#636363;}
+.pass_enger{ margin-top:-10px;}
+.pass_enger span{ width:60px; display:inline-block; text-align:right; padding-right:7px;}
+.pass_enger select{ width:192px; height:24px; line-height:24px;}
+
+
+.rangeDetails {
+	margin:0px 0 0 0;
+}
+.rangeDetails select { 
+     width:220px; 
+	 height:24px; 
+}
+.rangeDetails label { 
+     margin-right:20px; 
+}
+.rangeDetailsRow {
+	padding:0 0 15px 10px;
+}
+.rangeDetailsRow span {
+	
+}
+.rangeDetailsRow em {
+	color:red;
+}
+.rangeDetailsRow textarea {
+	border:1px solid #ABADB3; 
+	width:598px; 
+	height:36px; 
+	color:#636363;
+	padding:5px; 
+	font-size:14px;
+}
+.rangeDetailsRow .rowTitle {
+	display:inline-block;
+	width:100px;
+	font-weight:bold;
+	text-align:right;
+}
+
+.inquire{ padding:10px 0 5px;}
+.inquire input{ width:160px; height:22px; line-height:22px; padding-left:3px; border:1px solid #abadb3;}
+.airway select{ width:220px; height:24px; margin-right:40px;}
+.airway label{ margin-right:20px;}
+.airway .air { width:68px; display:inline-block; text-align:right;}
+.fare{ width:auto; padding:10px 0 20px;}
+.fare label{ margin-right:7px;}
+.fare label input{ vertical-align:middle; line-height:24px;}
+.fare select{ margin-left:-7px; width:120px; height:24px;}
+.ke{ float:left; width:auto;}
+
+.mes_content{ padding:10px; border:1px solid #e1e1e1; color:#636363; margin-bottom:10px; background:#fff;}
+.tab_list{ border:1px solid #e1e1e1; width:100%; border-collapse:collapse; margin-bottom:10px; color:#636363; background:#fff;}
+.tab_list td{ padding:18px 2px;}
+.tab_list th{ border-bottom:1px solid #e1e1e1; font-weight:500; padding:15px 2px; background:#f8f8f8; color:#404040;}
+.tab_list td:first-child,.tab_list th:first-child{ padding-left:15px;}
+.tab_list tbody td a{ color:#cf6b00;}
+.tab_list tbody td i{ color:#f1634c;}
+.tab_list tbody td h4{ font-size:12px; font-weight:bold; color:#636363; margin-bottom:10px;}
+.airLine{ width:93%;}
+.airLine li{ float:left; line-height:20px;}
+.promptImg{ width:14px; height:15px; background:url(../images/store/smallPicture.png) no-repeat 0 -58px; vertical-align:middle; display:inline-block; margin-left:5px;}
+.rangeType{ margin-left:10px;}
+.journey{ margin-top:10px;}
+.journey td,.passengerType td{ line-height:30px;}
+.journey th,.passengerType th{ text-align:right; line-height:30px; padding-right:10px;}
+.journey th b{ font-size:16px; color:#ef482d;}
+.passenger_mes{ margin-top:10px;}
+.passenger_mes td{ height:40px;}
+.pasMesCon{ width:100%;}
+.pasMesCon th{ height:40px; background:#f8f8f8; color:#404040; border-bottom:1px solid #e1e1e1;}
+.pasMesCon td:first-child,.pasMesCon th:first-child{ padding-left:10px;}
+.pasMesCon td{ border-bottom:1px dashed #e1e1e1;}
+.passengerType{ margin-left:10px;}
+
+.subMes{ margin:15px 10px;}
+.subMes td{ height:30px; padding-left:5px;}
+.subMes th{ text-align:right;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

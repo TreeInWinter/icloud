@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 B2G 首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" href="../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../static/css/b2g.css" media="all" />
+    <link rel="stylesheet" href="../static/css/kendo.common.css" />
+    <link rel="stylesheet" href="../static/css/kendo.b2g.css" />
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../static/js/global.js"></script>
+    <script type="text/javascript" src="../static/js/b2g/common.js"></script>
+    <script src="../static/js/jquery-ui-1.10.3.custom.js"></script>
+    <!--[if lte IE 9]>
+    <script src="../static/js/html5.js"></script>
+    <![endif]-->
+ <!-- 酒店设施样式 -->
+<style type="text/css">
+.icon-list {
+    height:36px;
+    overflow:hidden;
+}
+.icon-list span {
+    float:left;
+    width:36px;
+    height:36px;
+    margin-right:3px;
+    background:url(../static/images/b2g/icon-facility.png) no-repeat;
+	cursor:pointer;
+}
+.icon-list .ico-wifi {
+    background-position: 0 0;
+}
+.icon-list .ico-free-wifi {
+    background-position: 0 -37px;
+}
+.icon-list .ico-broadband {
+    background-position: 0 -74px;
+}
+.icon-list .ico-free-broadband {
+    background-position: 0 -111px;
+}
+.icon-list .ico-park {
+    background-position: 0 -148px;
+}
+.icon-list .ico-free-park {
+    background-position: 0 -185px;
+}
+.icon-list .ico-gym {
+    background-position: 0 -222px;
+}
+.icon-list .ico-breakfast {
+    background-position: 0 -259px;
+}
+.icon-list .ico-indoorswim {
+    background-position: 0 -296px;
+}
+.icon-list .ico-outdoorswim {
+    background-position: 0 -333px;
+}
+.icon-list .ico-business {
+    background-position: 0 -370px;
+}
+.icon-list .ico-meeting {
+    background-position: 0 -407px;
+}
+.icon-list .ico-pickup {
+    background-position: 0 -444px;
+}
+.icon-list .ico-free-pickup {
+    background-position: 0 -481px;
+}
+<!-- 银行卡样式 -->
+.icon-list-card {
+	height:auto;
+    overflow:hidden;
+}
+.icon-list-card span {
+    background:url(../static/images/b2g/bank_icon.png) no-repeat 0 0;
+	vertical-align:middle;
+	display:inline-block;
+	margin-right:5px;
+	height:20px;
+}
+.icon-list-card .shyh {
+	background-position: 0 0;
+	width:20px;
+}
+.icon-list-card .zgyz {
+	background-position: 0 -20px;
+	width:21px;
+}
+.icon-list-card .nbyh {
+	background-position: 0 -40px;
+	width:20px;
+}
+.icon-list-card .nh {
+	background-position: 0 -60px;
+	width:20px;
+}
+.icon-list-card .dlk {
+	background-position: 0 -80px;
+	width:32px;
+}
+.icon-list-card .jcb {
+	background-position: 0 -100px;
+	width:27px;
+}
+.icon-list-card .zs {
+	background-position: 0 -120px;
+	width:20px;
+}
+.icon-list-card .jsyh {
+	background-position: 0 -140px;
+	width:19px;
+}
+.icon-list-card .gh {
+	background-position: 0 -160px;
+	width:20px;
+}
+.icon-list-card .zgyh {
+	background-position: 0 -180px;
+	width:20px;
+}
+.icon-list-card .jtyh {
+	background-position: 0 -200px;
+	width:19px;
+}
+.icon-list-card .zx {
+	background-position: 0 -220px;
+	width:20px;
+}
+.icon-list-card .gf {
+	background-position: 0 -240px;
+	width:23px;
+}
+.icon-list-card .ms {
+	background-position: 0 -260px;
+	width:26px;
+}
+.icon-list-card .xy {
+	background-position: 0 -280px;
+	width:32px;
+}
+.icon-list-card .pf {
+	background-position: 0 -300px;
+	width:24px;
+}
+.icon-list-card .gd {
+	background-position: 0 -320px;
+	width:48px;
+}
+.icon-list-card .pa {
+	background-position: 0 -340px;
+	width:48px;
+}
+.icon-list-card .sz {
+	background-position: 0 -360px;
+	width:20px;
+}
+.icon-list-card .bj {
+	background-position: 0 -380px;
+	width:20px;
+}
+.icon-list-card .hx {
+	background-position: 0 -400px;
+	width:21px;
+}
+.icon-list-card .visa {
+	background-position: 0 -420px;
+	width:65px;
+}
+.icon-list-card .mastercard {
+	background-position: 0 -440px;
+	width:33px;
+}
+.icon-list-card .amex {
+	background-position: 0 -460px;
+	width:20px;
+}
+</style>
+
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="top-line"></div>
+    <header class="main-header">
+        <div class="header-content">
+            <a class="logo" href="/">天地行 B2G</a>
+            <nav class="main-nav">
+                <ul class="clearfix">
+                    <li class="first active"><a herf="#">行程预订</a></li>
+                    <li><a herf="#">行程管理</a></li>
+                    <li><a herf="#">数据服务</a></li>
+                    <li><a herf="#">创业维护</a></li>
+                    <li><a herf="#">系统设置</a></li>
+                </ul> 
+            </nav>
+        </div>
+    </header>
+    <div class="header-bar clearfix">
+        <div class="header-bar-content">
+            <i class="tips"></i><span>请先选择差旅人   * 默认状态下您为自己预订</span>
+            <div class="setuser" id="settour">
+                <a href="javascript:void(0);">设置差旅人</a>
+            </div>
+            <div class="for_reason">
+                <span class="reason_checkbox"></span><label for="reason">因私</label><input type="checkbox" style="display:none;" id="reason" value="for_private" name="reason"/>
+            </div>
+        </div>
+    </div>
+
+    <section class="main-body clearfix">
+        <div class="main-body-content">
+
+
+                        <div class="logo_3U"></div>
+                        <div class="logo_8C"></div>
+                        <div class="logo_8L"></div>
+                        <div class="logo_BK"></div>
+                        <div class="logo_CA"></div>
+                        <div class="logo_CN"></div>
+                        <div class="logo_CZ"></div>
+                        <div class="logo_EU"></div>
+                        <div class="logo_FM"></div>
+                        <div class="logo_G5"></div>
+                        <div class="logo_GS"></div>
+                        <div class="logo_HO"></div>
+                        <div class="logo_HU"></div>
+                        <div class="logo_KN"></div>
+                        <div class="logo_MF"></div>
+                        <div class="logo_MU"></div>
+                        <div class="logo_NS"></div>
+                        <div class="logo_PN"></div>
+                        <div class="logo_SC"></div>
+                        <div class="logo_ZH"></div>
+                        <div class="logo_VD"></div>
+                        <div class="logo_JR"></div>
+                        <div class="logo_9W"></div>
+                        <div class="logo_AA"></div>
+                        <div class="logo_AB"></div>
+                        <div class="logo_AC"></div>
+                        <div class="logo_AF"></div>
+                        <div class="logo_AI"></div>
+                        <div class="logo_AY"></div>
+                        <div class="logo_AZ"></div>
+                        <div class="logo_BA"></div>
+                        <div class="logo_BD"></div>
+                        <div class="logo_BI"></div>
+                        <div class="logo_BR"></div>
+                        <div class="logo_CI"></div>
+                        <div class="logo_CO"></div>
+                        <div class="logo_CX"></div>
+                        <div class="logo_DL"></div>
+                        <div class="logo_EK"></div>
+                        <div class="logo_ET"></div>
+                        <div class="logo_FT"></div>
+                        <div class="logo_GA"></div>
+                        <div class="logo_JK"></div>
+                        <div class="logo_JL"></div>
+                        <div class="logo_JP"></div>
+                        <div class="logo_KA"></div>
+                        <div class="logo_KE"></div>
+                        <div class="logo_KL"></div>
+                        <div class="logo_KQ"></div>
+                        <div class="logo_LA"></div>
+                        <div class="logo_LH"></div>
+                        <div class="logo_LO"></div>
+                        <div class="logo_LX"></div>
+                        <div class="logo_LY"></div>
+                        <div class="logo_MA"></div>
+                        <div class="logo_MH"></div>
+                        <div class="logo_NH"></div>
+                        <div class="logo_NW"></div>
+                        <div class="logo_NX"></div>
+                        <div class="logo_NZ"></div>
+                        <div class="logo_OK"></div>
+                        <div class="logo_OS"></div>
+                        <div class="logo_OZ"></div>
+                        <div class="logo_PG"></div>
+                        <div class="logo_PR"></div>
+                        <div class="logo_QF"></div>
+                        <div class="logo_QR"></div>
+                        <div class="logo_SK"></div>
+                        <div class="logo_SN"></div>
+                        <div class="logo_SQ"></div>
+                        <div class="logo_SU"></div>
+                        <div class="logo_TG"></div>
+                        <div class="logo_TK"></div>
+                        <div class="logo_UA"></div>
+                        <div class="logo_UL"></div>
+                        <div class="logo_UN"></div>
+                        <div class="logo_VN"></div>
+                        <div class="logo_VS"></div>
+                        <div class="logo_VV"></div>
+                        <div class="logo_HX"></div>
+                        <div class="logo_UO"></div>
+                        <div class="logo_JD"></div>
+                        <div class="logo_EY"></div>
+                        <div class="logo_US"></div>
+                        <div class="logo_KY"></div>
+                        <div class="logo_AE"></div>
+                        <div class="logo_GE"></div>
+                        <div class="logo_B7"></div>
+                        <div class="logo_MI"></div>
+                        <div class="logo_IY"></div>
+                        <div class="logo_AM"></div>
+                        <div class="logo_MS"></div>
+                        <div class="logo_3K"></div>
+                        <div class="logo_JQ"></div>
+                        <div class="logo_BL"></div>
+                        <div class="logo_VF"></div>
+                        <div class="logo_HY"></div>
+                        <div class="logo_TV"></div>
+                        <div class="logo_AS"></div>
+                        <div class="logo_HA"></div>
+                        <div class="logo_S7"></div>
+                        <div class="logo_OM"></div>
+                        <div class="logo_SA"></div>
+                        <div class="logo_9C"></div>
+                        <div class="logo_MK"></div>
+                        <div class="logo_MD"></div>
+                        <div class="logo_WS"></div>
+                        <div class="logo_FE"></div>
+<br/>
+            <!-- 酒店设施图标 -->
+               <div class="icon-list">
+                   <span class="ico-free-wifi" title="免费wifi"></span>
+                   <span class="ico-wifi" title="收费wifi"></span>
+                   <span class="ico-broadband" title="收费宽带"></span>
+                   <span class="ico-free-broadband" title="免费宽带"></span>
+                   <span class="ico-park" title="收费停车场"></span>
+                   <span class="ico-free-park" title="免费停车场"></span>
+                   <span class="ico-gym" title="健身房"></span>
+                   <span class="ico-breakfast" title="餐厅"></span>
+                   <span class="ico-indoorswim" title="室内游泳池"></span>
+                   <span class="ico-outdoorswim" title="室外游泳池"></span>
+                   <span class="ico-business" title="商务中心"></span>
+                   <span class="ico-meeting" title="会议室"></span>
+                   <span class="ico-pickup" title="收费接机服务"></span>
+                   <span class="ico-free-pickup" title="免费接机服务"></span>
+                </div>
+				<br/>
+			   <!-- 银行卡图标 -->
+               <div class="icon-list-card">
+			       <span class="shyh" title="上海银行"></span>
+				   <span class="zgyz" title="中国邮政"></span>
+				   <span class="nbyh" title="宁波银行"></span>
+				   <span class="nh" title="农行"></span>
+				   <span class="dlk" title="大来卡"></span>
+				   <span class="jcb" title="jcb卡"></span>
+                   <span class="zs" title="招商银行"></span>
+                   <span class="jsyh" title="建设银行"></span>
+				   <span class="gh" title="工商银行"></span>
+				   <span class="zgyh" title="中国银行"></span>
+				   <span class="jtyh" title="交通银行"></span>
+				   <span class="zx" title="中信银行"></span>
+				   <span class="gf" title="广发银行"></span>
+				   <span class="ms" title="民生银行"></span>
+                   <span class="xy" title="兴业银行"></span>
+                   <span class="pf" title="浦发银行"></span>
+				   <span class="gd" title="光大银行"></span>
+				   <span class="pa" title="平安银行"></span>
+				   <span class="sz" title="深圳银行"></span>
+				   <span class="bj" title="北京银行"></span>
+				   <span class="hx" title="华夏银行"></span>
+				   <span class="visa" title="VISA"></span>
+                   <span class="mastercard" title="mastercard"></span>
+                   <span class="amex" title="AMEX"></span>
+                </div><br/ >
+            <label>input type="text"<input type="text" name="name" class="datepicker" style="width:160px;"/></label>
+            <label>input type="text"<input type="text" name="name" class="datepicker dpSingle" /></label>
+            <label>input type="pasword"<input type="password" name="name" /></label>
+
+            <label>失效的输入框text<input type="text" name="name" class="grayed" readonly value="aaaa" /></label>
+            <label>失效的输入框password<input type="password" name="name" class="grayed" value="asd" readonly/></label>
+            <br/>
+            <label><input type="radio" name="sex" value="male" />男</label> 
+            <label><input type="radio" name="sex" value="female"/>女</label> 
+
+            <br/>
+            <br/>
+            <br/>
+            <label><i class="hitext"> * </i><span class="text">出发城市</span><input class="city_ac" id="depCity" type="text" name="" /></label>
+
+            <br/>
+            <br/>
+            <button type="button" class="commonBtn lightRedBtn morehotel">更多酒店<span>222</span></button>
+            <button type="button" class="commonBtn lightRedBtn morehotel">更多酒店<span>222</span></button>
+            <button type="button" class="commonBtn lightRedBtn morehotel">更多酒店<span>222</span></button>
+            <br/>
+            <br/>
+            <button type="button" class="commonBtn lightRedBtn" id="bsarea">商圈</button>
+            <br/>
+            <br/>
+            <button type="button" class="commonBtn lightRedBtn" id="district">行政区</button>
+            <br/>
+            <br/>
+            <button type="button" class="commonBtn lightRedBtn" id="conveyance">交通</button>
+            <br/>
+            <br/>
+            <button type="button" class="commonBtn lightRedBtn">提 交</button>
+            <br/>
+            <br/>
+            <button type="button" class="commonBtn grayBtn">取 消</button>
+            <br/>
+            <br/>
+            <button type="button" class="commonBtn orangeBtn">搜 索</button>
+            <br/>
+            <br/>
+            <button type="button" class="commonBtn lightBlueBtn">提 交</button>
+            <br/>
+            <br/>
+            <button type="button" class="commonBtn smallBlueBtn">修改航班</button>
+            <br/>
+            <br/>
+            <button type="button" class="commonBtn lightBlueBtn" id="win1">弹窗来咯1</button>
+            <br/>
+            <br/>
+            <button type="button" class="commonBtn lightBlueBtn" id="win2">弹窗来咯2</button>
+            <br/>
+            <br/>
+            <button type="button" class="commonBtn lightBlueBtn" id="ajax1">异步请求 加载中 机票</button>
+            <br/>
+            <br/>
+            <button type="button" class="commonBtn lightBlueBtn" id="ajax2">异步请求 加载中 酒店</button>
+            <br/>
+            <br/>
+            <button type="button" class="commonBtn orangeBtn" id="toLoadContent">加 载</button>
+            <button type="button" class="commonBtn orangeBtn" id="toLoadSuccess">成功提示</button>
+            <br/>
+            <br/>
+            <!-- 加载 内容 -->
+            <div class="toLoadHint clearfix">
+                  <em></em>
+                  <i class="toLoadCharacter">正在提交，请稍后</i>
+            </div>
+            
+            
+            
+            <br/>
+            <br/>
+            <!-- 提交成功 内容 -->
+            <div class="submitSuccess">
+                 <em class="successPic"></em>
+                 <i class="successHint">行程订单已提交成功</i>
+            </div>
+            
+            <br/>
+            <br/>
+           
+            
+            <div class="smallLoading"><em></em> <b>数据正在加载中……</b></div>
+            <br/>
+            <br/>
+            
+            <div class="demo">
+                <h2>选择差旅目的地</h2>
+                <select name="for_reason">
+                    <option value="开会01">开会01</option>
+                    <option value="开会01">开会02</option>
+                    <option value="开会01">开会03</option>
+                    <option value="开会01">开会04</option>
+                    <option value="开会01">开会05</option>
+                    <option value="开会01">开会06</option>
+                    <option value="开会01">开会07</option>
+                </select>
+
+                <ul id="tagWrapper"></ul>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <input type="text" name="range" range="{min:3,max:10}" aria-invalid="true" class="k-invalid"/><span class="k-widget k-tooltip k-tooltip-validation k-invalid-msg" data-for="range" role="alert" ><span class="k-icon k-warning"> </span> 最小3  最大 10</span>
+            <br/>
+            <br/>
+            <br/>
+            <button type="button" class="commonBtn lightBlueBtn disable">不可点</button>
+            <br/>
+            <br/>
+
+            <div class="demo">
+                <h2>选择差旅人</h2>
+                <input id="customers" type="text" style="width: 500px;"/>
+
+                <br/>
+                <br/>
+                <ul id="userWrapper" class="selectarea">
+
+                </ul>
+            </div>
+
+
+            <br/>
+            <br/>
+
+
+            <div class="flowImg">
+                <em class="curFlowImg"><i></i>选择</em>
+                <em>预订</em>
+                <em>填写</em>
+                <em>加入行程</em>
+                <em class="lastFlowGray">提交行程</em>
+            </div>
+            <br>
+            <div class="flowImg">
+                <em class="firstFlow">选择</em>
+                <em class="curMidFlow"><i></i>预订</em>
+                <em>填写</em>
+                <em>加入行程</em>
+                <em class="lastFlowGray">提交行程</em>
+            </div>
+            <br>
+            <div class="flowImg">
+                <em class="firstFlow">选择</em>
+                <em>预订</em>
+                <em>填写</em>
+                <em>加入行程</em>
+                <em class="curLastFlow"><i></i>提交行程</em>
+            </div>
+
+
+
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+
+
+            <div class="map">
+                <h1 style="font-size:30px;">用于酒店的交互</h1>
+                <div id="map_container" style="height:400px;width:800px;"></div>
+            </div>
+
+
+
+            <div style="background:#fff;" class="scollpage">
+                <style scoped>
+                    table {width:100%;}
+                    table td {padding:5px;border:1px solid #cccccc;border-width:1px 0 1px 0;}
+                </style>
+                <table id="demo_scoll_content">
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                        </tr>
+                        <tr>
+                            <td>02</td>
+                        </tr>
+                        <tr>
+                            <td>03</td>
+                        </tr>
+                        <tr>
+                            <td>04</td>
+                        </tr>
+                        <tr>
+                            <td>05</td>
+                        </tr>
+                        <tr>
+                            <td>06</td>
+                        </tr>
+                        <tr>
+                            <td>07</td>
+                        </tr>
+                        <tr>
+                            <td>08</td>
+                        </tr>
+                        <tr>
+                            <td>09</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                        </tr>
+                        <tr>
+                            <td>33</td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                        </tr>
+                        <tr>
+                            <td>35</td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                        </tr>
+                        <tr>
+                            <td>39</td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>41</td>
+                        </tr>
+                        <tr>
+                            <td>42</td>
+                        </tr>
+                        <tr>
+                            <td>43</td>
+                        </tr>
+                        <tr>
+                            <td>44</td>
+                        </tr>
+                        <tr>
+                            <td>45</td>
+                        </tr>
+                        <tr>
+                            <td>46</td>
+                        </tr>
+                        <tr>
+                            <td>47</td>
+                        </tr>
+                        <tr>
+                            <td>48</td>
+                        </tr>
+                        <tr>
+                            <td>49</td>
+                        </tr>
+                        <tr>
+                            <td>50</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="display:none;" id="scroll_Loading" class="smallLoading"><em></em> <b>数据正在加载中……</b></div>
+            </div>
+            
+            
+            
+            
+        </div>
+    </section>
+    <footer class="main-footer">
+        <p class="copyright">Copyright &copy; 2013 天地行 All Rights Reserved.     沪ICP备08101503号</p>
+    </footer>
+</div>
+
+<div id="test_win1">
+    这里是测试窗口1
+</div>
+
+<div id="test_win2">
+    这里是测试窗口2
+</div>
+
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=qkNnEXk6nC3jcPTM8mv3dcE8&callback=initialize"></script>
+<script>
+
+    /**
+     * 地图初始化
+     */
+
+
+    function initialize(){
+        var map = new BMap.Map('map_container');  
+        map.enableScrollWheelZoom();
+        map.centerAndZoom(new BMap.Point(116.404, 39.915), 14);  
+        map.addControl(new BMap.NavigationControl());
+        map.addControl(new BMap.MapTypeControl({mapTypes: [BMAP_NORMAL_MAP,BMAP_HYBRID_MAP]}));
+
+
+        /* Marker */
+        var myIcon = new BMap.Icon("ico_map_point.gif", new BMap.Size(21, 31));  
+        var label = new BMap.Label("A");
+        label.setStyle({"text-indent":"5px", background:"transparent",color:"#e9e9eb",border:0});
+        var marker = new BMap.Marker(new BMap.Point(116.400, 39.900), {icon: myIcon});    
+        marker.setLabel(label);
+
+        map.addOverlay(marker);    
+
+    }
+
+
+    $(function(){
+
+
+        $("#demo_scoll_content").scrollPagination({
+            'contentPage': '/php/data_row.php', 
+            'debug':true,
+            'contentData': {username:"test",page:1,page_size:10}, 
+            'scrollTarget': $(window),
+            'heightOffset': 10, // it gonna request when scroll is 10 pixels before the page ends
+            'beforeLoad': function(){ // before load function, you can display a preloader div
+                $('#scroll_Loading').show();	
+            },
+            'afterLoad': function(data) {
+
+                var i = 0;
+                $('#scroll_Loading').hide();
+
+                $(data).fadeInWithDelay();
+
+                if ($(data).size() == 0){ 
+                    $('#nomoreresults').fadeIn();
+                    $('#demo_scroll_content').stopScrollPagination();
+                }
+            }
+
+        });
+
+
+
+        var win1 = new PopWindow('#win1',{
+            title:"测试窗口1",
+            width:600,
+            height:500
+        },"#test_win1").init();
+        var win2 = new PopWindow('#win2',{
+            title:"测试窗口2",
+            width:600,
+            height:500
+        },"#test_win2").init();
+		
+		$('#toLoadContent').on('click',function(){
+		   $('.lightboxToLoadContent').show();
+		});
+		
+		$('#toLoadSuccess').on('click',function(){
+		   $('.lightboxToLoadSuccess').show().delay(2000).fadeOut();
+		});
+		
+
+
+        $("#ajax1").click(function(){
+            $.loadingbar({debug:true,showClose:false,text:"正在努力加载数据",autoHide:false});
+            $.ajax({ url: encodeURI("/碎片/城市选择-国内.html")});
+        });
+
+        $("#ajax2").click(function(){
+            $.loadingbar({debug:true,showClose:false,text:"正在努力加载数据",autoHide:false,wrapperClass:"hotel"});
+            $.ajax({ url: encodeURI("/碎片/城市选择-国内.html")});
+        });
+
+
+
+        var dropdownlist = $("select[name=for_reason]").kendoDropDownList({
+
+            select:function(e){
+                var item = e.item;
+                
+                $("#tagWrapper").append('<li class="k-button"><span>'+ item.text() + '</span><span class="k-icon k-delete">&nbsp;</span></li>');
+            }
+
+		}).data("kendoAutoComplete");
+
+
+
+        function setUser(e){
+            var item = e.item;
+            var text = item.text();
+            $("#userWrapper").append('<li class="k-button"><span>'+ item.text() + '</span><span class="k-icon k-delete">&nbsp;</span></li>');
+        }
+
+        var autocomplete = $("#customers").kendoAutoComplete({
+		    minLength: 1,
+		    dataTextField: "ContactName",
+		    template: '<img src=\"http://proto.b2b.com/kendoui.web/examples/content/web/Customers/${data.CustomerID}.jpg\" alt=\"${data.CustomerID}\" />' +
+			    '<h3>${ data.ContactName }</h3>' +
+			    '<p>${ data.CompanyName }</p>',
+		    dataSource: {
+			    transport: {
+                    read:{
+                        dataType: "jsonp",
+                        url: "http://demos.kendoui.com/service/Customers"
+                    }
+                }
+		    },
+            select:setUser,
+		    height: 370
+		}).data("kendoAutoComplete");
+
+    });
+
+</script>
+
+
+<script type="text/x-kendo-template" id="city_popup">
+<div id="gn-tabstrip" class="tcy_tabstrip">
+<span class="tcy_title">
+    热门城市/国家（支持中文名/拼音/英文名/三字码）
+</span>
+<ul>
+<li id="hot_city" class="k-state-active">热门</li>
+# for (var i=0; i<data.group.length; i++ ) { #
+<li>#= data.group[i] #</li>
+# } #
+</ul>
+<div id="hot_city_tab">
+<ul class="tcy_list clearfix">
+
+# for(var j=0;j<hotcitylist.length;j++){ #
+# var citylist_item = hotcitylist[j] #
+<li class="item" title="#= citylist_item.code #" data-code="#= citylist_item.code #">#= citylist_item.name #</li>
+# } #
+</ul>
+</div>
+
+# for(var i=0;i<data.citylist.length;i++){ #
+# var citylist_item = data.citylist[i] #
+<div class="city_tab">
+<ul class="tcy_list clearfix">
+  # for(var k=0;k<data.group[i].length;k++){ #
+    <li class="tcy_list_sep">#= data.group[i].split('')[k] #</li>
+    # for(var j=0;j<citylist_item.value.length;j++){ #
+        # var citylist_value_item = citylist_item.value[j]; #
+        # if(citylist_value_item.py.slice(0,1) == data.group[i].split('')[k]) {#
+            <li class="item" title="#= citylist_value_item.code #" data-code="#= citylist_value_item.code #">#= citylist_value_item.name #</li>
+        # } #
+    # } #
+  # } #
+</ul>
+</div>
+
+# } #
+</div>
+</script>
+
+
+<script type="text/javascript" charset="utf-8">
+
+    /*
+CityAutocomplete({
+    template: "#city_popup",
+    input: ".allcity",
+    // 以@分割热门非热门，以;分割条目，以|分割三字码拼音和中文
+    url:'/static/js/data.txt',
+    group: ["热门","GHJ", "ABCDEF", "KLMN", "PQSTW", "XYZ"]
+});
+*/
+
+CityAutocomplete({
+    template: "#city_popup",
+    input: "#depCity",
+    // 以@分割热门非热门，以;分割条目，以|分割三字码拼音和中文
+    url:'/static/js/data.txt',
+    group: ["热门","GHJ", "ABCDEF", "KLMN", "PQSTW", "XYZ"]
+    // group: ["热门城市","欧洲", "亚洲/大洋洲", "美洲", "非洲"]
+});
+
+
+CityAutocomplete({
+    template: "#city_popup",
+    input: "#arrCity",
+    codeEle: '#id_arr',
+    // 以@分割热门非热门，以;分割条目，以|分割三字码拼音和中文
+    url:'/static/js/data.txt',
+    autocomplete:{
+        dataSource:{
+            transport:{
+                read:{
+                
+                } 
+            } 
+        },
+        placeholder:'三字吗/城市'
+    },
+    group: ["热门","ABCDEF","GHJ", "KLMN", "PQSTW", "XYZ"]
+});
+
+
+
+</script>
+
+
+<script>
+$(function(){
+    var hotelData = [{
+        name:'如家',
+        selected:false
+    },{
+        name:'如家',
+        selected:false
+    },{
+        name:'如家',
+        selected:false
+    },{
+        name:'如家',
+        selected:false
+    },{
+        name:'如家',
+        selected:false
+    },{
+        name:'如家',
+        selected:false
+    },{
+        name:'汉庭', 
+        selected:true
+    }];
+    var hotelLayer = FloatLayer({
+        trigger:'.morehotel', 
+        template:'#morehotel-template',
+        offsetY:70,
+        data:hotelData
+    });
+
+    var bsareaData = [{
+        bsgroup:'ABCDE',
+        bsitems:['八万人体育场地区','八万人体育场地区','八万人体育场地区','八万人体育场地区','八万人体育场地区','八万人体育场地区']
+    },{
+        bsgroup:'FGHTJK',
+        bsitems:['八万人体育场地区','八万人体育场地区','八万人体育场地区','八万人体育场地区','八万人体育场地区','八万人体育场地区']
+    }];
+
+var bsareaLayer = FloatLayer({
+    trigger:'#bsarea',
+    template:'#bsarea-template',
+    offsetY:70,
+    data:bsareaData
+});
+
+var districtData = ['长宁','长宁','长宁','长宁','长宁','长宁','长宁','长宁','长宁'];
+var districtLayer = FloatLayer({
+    trigger:'#district',
+    template:'#district-template',
+    offsetY:70,
+    data:districtData
+});
+
+var conveyanceData = [
+	{
+		lineName:"1号线",
+		stationName:["莘庄","外环路","莲花路","锦江乐园","上海南站","漕宝路","上海体育馆","徐家汇","衡山路","常熟路","陕西南路","黄陂南路","人民广场","新闸路","汉中路","上海火车站","中山北路","延长路","上海马戏城","汶水路","彭浦新村","共康路","通河新村","呼兰路","共富新村","宝安公路","友谊西路","富 锦 路"]
+	},
+	{
+		lineName:"2号线",
+		stationName:["浦东国际机场","海天三路","远东大道","凌空路","川沙","华夏东路","创新中路","唐镇","广兰路","金科路","张江高科","龙阳路","世纪公园","上海科技馆","世纪大道","东昌路","陆家嘴","南京东路","人民广场","南京西路","静安寺","江苏路","中山公园","娄山关路 ","威宁路 ","北新泾 ","淞虹路","虹桥2号航站楼","虹桥火车站","徐泾东"]
+	},
+	{
+		lineName:"3号线",
+		stationName:["上海南站","石龙路","龙漕路","漕溪路","宜山路","虹桥路","延安西路","中山公园","金沙江路","曹杨路","镇坪路","中潭路","上海站","宝山路","东宝兴路","虹口足球场","赤峰路","大柏树","江湾镇","殷高西路","长江南路","淞发路","张华浜","淞滨路","水产路","宝杨路","友谊路","铁力路","江杨北路"]
+	},
+	{
+		lineName:"4号线",
+		stationName:["宜山路","上海体育馆","上海体育场","东安路","大木桥路","鲁班路","西藏南路","南浦大桥","塘桥","蓝村路","浦电路","世纪大道","浦东大道","杨树浦路","大连路","临平路","海伦路","宝山路","上海火车站","中潭路","镇坪路","曹杨路","中山公园","延安西路","虹桥路"]
+	},
+	{
+		lineName:"5号线",
+		stationName:["莘庄","春申路","银都路","颛桥","北桥","剑川路","东川路","金平路","华宁路","文井路","闵行开发区"]
+	},
+	{
+		lineName:"6号线",
+		stationName:["港城路","外高桥保税区北","航津路","外高桥保税区南","洲海路","五洲大道","东靖路","巨峰路","五莲路","博兴路","金桥路","云山路","德平路","北洋泾路","民生路","源深体育中心","世纪大道","浦电路","蓝村路","上海儿童医学中心","临沂新村","高科西路","东明路","高青路","华夏西路","上南路","灵岩南路","东方体育中心"]
+	},
+	{
+		lineName:"7号线",
+		stationName:["往美兰湖↓","往花木路↑","往上海大学↓","花木路","龙阳路","芳华路","锦绣路","杨高南路","高科西路","云台路","耀华路","长清路","后滩","龙华中路","东安路","肇嘉浜路","常熟路","静安寺","昌平路","长寿路","镇坪路","岚皋路","新村路","大华三路","行知路","大场镇","场中路","上大路","南陈路","上海大学","顾村公园","刘行","潘广路","罗南新村","美兰湖"]
+	},
+	{
+		lineName:"8号线",
+		stationName:["往沈杜公路↑","往市光路↓","沈杜公路","联航路","江月路","浦江镇","芦恒路","凌兆新村","东方体育中心","杨思","成山路","耀华路","中华艺术宫","西藏南路","陆家浜路","老西门","大世界","人民广场","曲阜路","中兴路","西藏北路","虹口足球场","曲阳路","四平路","鞍山新村","江浦路","黄兴路","延吉中路","黄兴公园","翔殷路","嫩江路","市光路"]
+	},
+	{
+		lineName:"9号线",
+		stationName:["首班车发车时刻","末班车发车时刻","往杨高中路 ↑","往","杨高中路","世纪大道","商城路","小南门","陆家浜","马当路","打浦桥","嘉善路","肇嘉浜路","徐家汇","宜山路","桂林路","漕河泾开发区","合川路","星中路","七宝","中春路","九亭","泗泾","佘山","洞泾","松江大学城","松江新城","松江体育中心","醉白池","松江南站"]
+	},
+	{
+		lineName:"10号线",
+		stationName:["新江湾城","殷高东路","三门路","江湾体育场","五角场","国权路","同济大学 ","四平路","邮电新村","海伦路","四川北路 ","天潼路","南京东路","豫园","老西门","新天地","陕西南路","上海图书馆","交通大学","虹桥路","宋园路","伊犁路","水城路","龙溪路","虹桥1号航站楼","虹桥2号航站楼","虹桥火车站","龙柏新村","紫藤路","航中路"]
+	},
+	{
+		lineName:"11号线",
+		stationName:["罗山路","御桥","浦三路","三林东","三林","东方体育中心","龙耀路","云锦路","龙华","上海游泳馆","徐家汇","交通大学","江苏路","隆德路","曹杨路","枫桥路","真如","上海西站","李子园","祁连山路","武威路","桃浦新村","南翔","马陆","嘉定新城","白银路","嘉定西站","嘉定北站","上海赛车场","昌吉东路","上海汽车城","安亭","兆丰路","光明路","花桥"]
+	},
+	{
+		lineName:"13号线",
+		stationName:["金运路","金沙江西路","丰庄"," 祁连山南路","真北路","大渡河路（暂未开通）","金沙江路 "]
+	}
+];
+
+
+var conveyanceLayer = FloatLayer({
+    trigger:'#conveyance',
+    template:'#conveyance-template',
+    offsetY:70,
+    async:true
+});
+
+// 异步加载，可替换成$.ajax.
+setTimeout(function(){
+    conveyanceLayer.data(conveyanceData);
+    conveyanceLayer.open();
+},3000);
+
+//tab切换
+$.role_ctype({ changeClass:"active"});
+
+})
+</script>
+
+<script type="text/template" id="morehotel-template">
+    <div class="cytab cytab-morehotel">
+        <div class="cytab-title">
+            <span>更多品牌酒店</span>
+            <i class="close">&nbsp;</i>
+        </div>
+
+        <div class="cytab-content">
+            <ul class="clearfix">
+                # for(var i=0;i<data.length;i++){#
+                <li>
+                    <label>
+                    <input # if(data[i].selected){#  checked  #}# type="checkbox" name="">
+                    <span class="morehotel-item morehotel-item#=i#">#= data[i].name#</span>
+                    </label>
+                </li>
+                #} #
+            </ul>
+        <div style="text-align:right">
+            <button type="button" class="commonBtn lightRedBtn" style="font-size:16px;padding:5px 20px;">确  定</button>
+        </div>
+</div>
+
+
+</div>
+</script>
+
+<script type="text/tempalte" id="bsarea-template">
+    <div class="cytab cytab-bsarea">
+        <div class="cytab-title">
+            <span>可直接选择地理位置</span>
+            <i class="close">&nbsp;</i>
+        </div>
+        
+        <div class="cytab-content">
+        # for (var i=0;i<data.length;i++) {#
+            <div class="cytab-group clearfix">
+            <span class="group-name">#= data[i].bsgroup #</span>
+            <ul>
+            # for (var j=0;j<data[i].bsitems.length;j++) {#
+                <li>   
+                    <a href="javascript:;" class="bsarea-item bsarea-item#=i#">#= data[i].bsitems[j] # </a>
+                </li>
+            # } #
+            </ul>
+            </div>
+        #}#
+        </div>
+    </div>
+</script>
+
+<script type="text/tempalte" id="district-template">
+    <div class="cytab cytab-district">
+        <div class="cytab-title">
+            <span>行政区</span>
+            <i class="close">&nbsp;</i>
+        </div>
+        
+        <div class="cytab-content clearfix">
+            <ul>
+            # for (var i=0;i<data.length;i++) {#
+                <li>   
+                    <a href="javascript:;" class="district-item district-item#=i#">#= data[i] # </a>
+                </li>
+            # } #
+            </ul>
+        </div>
+    </div>
+</script>
+
+
+<script type="text/tempalte" id="conveyance-template">
+    <div class="cytab cytab-conveyance">
+        <div class="cytab-title">
+            <span>交通路线</span>
+            <i class="close">&nbsp;</i>
+        </div>
+        <div class="cytab-control">
+            <ul>
+        # for (var i=0;i<data.length;i++) {#
+                <li class="#if(i==0){#active#}#" data-group="cytab" data-index="#= i#" data-role="ctype">#= data[i].lineName#</li> 
+        # } #
+            </ul>
+        </div>
+        
+        <div class="cytab-content" style="padding-left:100px;">
+        # for (var i=0;i<data.length;i++) {#
+        <div class="clearfix cytab-tab #if(i==0){#active#}#" data-role="ctype-item" data-group="cytab" data-index="#= i#">
+            <ul>
+            # for (var j=0;j<data[i].stationName.length;j++) {#
+                <li>   
+                    <a href="javascript:;" class="station-item station-item#=i+'_'+j#">#= data[i].stationName[j] # </a>
+                </li>
+            # } #
+            </ul>
+        </div>
+        # } #
+        </div>
+    </div>
+</script>
+
+
+<div class="lightbox lightboxToLoadContent toloadLightbox" style="position: fixed;">        
+    <table cellspacing="0" class="ct">
+        <tbody>
+            <tr>
+                <td class="ct_content">
+                    <div class="loading_box ">
+                            <div class="lightbox-content">
+                                   <!--span class="loading_close" style="display: none;">×</span-->                         
+                                    <div class="toLoadHint clearfix">
+                                          <em></em>
+                                          <i class="toLoadCharacter">正在提交，请稍后</i>
+                                    </div>
+                        
+                           </div>
+                    </div>
+                 </td>
+            </tr>
+         </tbody>
+     </table>        
+ </div>
+ 
+ 
+ 
+ <div class="lightbox lightboxToLoadSuccess toloadLightbox" style="position: fixed;">       
+      <table cellspacing="0" class="ct">
+          <tbody>
+              <tr>
+                  <td class="ct_content">
+                      <div class="loading_box ">
+                              <div class="lightbox-content">                          
+                                  <!--span class="loading_close" style="display: none;">×</span-->                         
+                                  <div class="submitSuccess">
+                                         <em class="successPic"></em>
+                                         <i class="successHint">行程订单已提交成功</i>
+                                  </div>
+                            
+                             </div>
+                     </div>
+                 </td>
+             </tr>
+         </tbody>
+     </table>
+ </div>
+
+ 
+
+</body>
+</html>
+
+ 

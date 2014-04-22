@@ -1,0 +1,13 @@
+#customerAdd ul {width:700px;border:1px solid red;}
+#customerAdd ul li {display:block;float:left;width:300px;}
+
+#customerEdit {display:none; width:200px; height:500px;padding:5px;}
+#customerEdit label {
+	display:inlin-block;
+	color: #ec67ee;
+}
+
+#customerEdit input {
+	width:200px;
+	font-size:3em;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>天地行</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="/static/css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link href="/static/css/b2b.css" rel="stylesheet">
+	<script src="/static/js/jquery.min.js"></script>
+	<script src="/static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="/static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+
+</head>
+<body>
+    <p>
+
+    日历样式 右侧如果需要一个日历图标(蓝色)的，只需加上 添加一个 class="datepicker" <br/>
+    日历样式 右侧如果需要一个日历图标(橙色)的，只需加上 添加一个 class="datepicker orange" <br/>
+    如果原来的页面中以及有那个图标了就用在加上面的class 保持原来的就可以 <br/>
+
+    </p>
+    <h1>单日历示例,可选择年和月份</h1>
+    <label>选择日期<input type="text" id="singleMonth" style="width:220px" value="2012-02-02 09:20:33" class="datepicker singleMonth" /></label>
+
+    <h1>双日历示例</h1>
+    <label>选择日期<input type="text" id="doubleMonth" class="datepicker doubleMonth"/></label>
+
+    <h1>机票示例</h1>
+    <form action="" methon="get" id="flightForm">
+        <label for="">类型
+            <select id="tripType" name="tripType">
+                <option value="oneWay">单程</option>
+                <option value="roundTrip" selected>往返</option>
+            </select>
+        </label>
+        <label>去程日期<input type="text" id="departure_date" name="departure_date" class="datepicker doubleMonth"/></label>
+        <label>返程日期<input type="text" id="return_date" name="return_date" class="datepicker orange doubleMonth"/></label>
+    </form>
+
+    <h1>酒店示例</h1>
+    <form action="" methon="get" id="hotelForm">
+        <label>入住日期<input type="text" id="checkin_date" name="checkin_date" class="datepicker doubleMonth"/></label>
+    </form>
+    <script type="text/javascript">
+
+        $.datepicker.regional[ "zh-CN" ];
+        $(function(){
+            $( "#singleMonth" ).datepicker({
+                yearRange: "1950:" + ((new Date()).getFullYear() + 30),
+                changeMonth: true,
+                changeYear: true,
+                changeTime: true,
+                timeFormat : "hh:mm:ss",
+			    numberOfMonths:[1,1],
+                showButtonPanel :true
+		    });
+            $( "#doubleMonth" ).datepicker({
+                numberOfMonths:[1,2],
+                showButtonPanel :true
+		    });
+
+            $( "#departure_date" ).datepicker({
+                css : {"z-index":2000},
+                numberOfMonths:[1,2],
+                minDate :new Date(),
+                showButtonPanel :true,
+                onSelect:function(dateText,inst){
+                    //console.log(dateText);
+                    //console.log(inst);
+                    var date = new Date(inst.selectedYear,inst.selectedMonth,inst.selectedDay);
+
+                    $( "#return_date" ).datepicker( "option", "minDate", date);
+                    $( "#return_date" ).datepicker( "setDate", dateText);
+                }
+		    });
+            $( "#return_date" ).datepicker({
+                numberOfMonths:[1,2],
+                minDate :new Date(),
+                showButtonPanel :true
+		    });
+
+            $("#tripType").change(function(){
+                if($(this).val() == "roundTrip"){
+                   $("#flightForm label:eq(2)").show(); 
+                }else{
+                  $("#flightForm label:eq(2)").hide(); 
+                }
+            });
+
+            $( "#checkin_date" ).datepicker({
+                numberOfMonths:[1,2],
+                minDate :new Date(),
+                showButtonPanel :true
+		    });
+
+        });
+    </script>
+
+
+</body>

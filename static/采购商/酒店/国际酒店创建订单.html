@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>采购商 国际酒店创建订单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_hotel.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.store.css" />
+
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/store/store.js"></script>
+
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+	 <script>
+		$(function(){
+			kendo.init('body');
+			lensf();
+		})
+    </script>
+	
+	
+
+</head>
+<body>
+<div class="main-wrapper">
+<header class="main-header">
+    <a class="logo" href="/"><h1>天地行</h1></a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first"><a herf="#">首页</a></li>
+            <li><a herf="#">国内机票</a></li>
+            <li><a herf="#">国际机票</a></li>
+            <li class="active"><a herf="#">酒店</a></li>
+        </ul> 
+    </nav>
+    <nav class="main-links">
+        <ul class="clearfix">
+            <li class="first"><a href="#">订单管理</a></li>
+            <li><a href="#">分销管理</a></li>
+            <li><a href="#">电子钱包</a></li>
+            <li><a href="#">统计报表</a></li>
+            <li><a href="#">客服服务</a></li>
+            <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+            <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+</header>
+<section class="main-body clearfix">
+
+<!--
+<ul class="bread_crumbs">
+    <li><a class="home" href="javascript:void(0)">主页</a></li>
+    <li class="last"><a href="javascript:void(0)">酒店</a></li>
+</ul>
+-->
+
+
+<div class="flow clearfix">
+	<h3>返回搜索结果页</h3>
+	
+			<div class="instr pull-right">
+				<span class="highlight-fl">创建订单</span>
+				<span>支付</span>
+				<span style="margin-right:0px;">确认</span>
+			</div>
+        <!--<div class="instr pull-right">
+            <span class="travel-instr">创建订单</span>
+            <span class="highlight-fl">支付</span>
+            <span style="margin-right:0px;">确认</span>
+            </div>-->
+		<!--<div class="instr pull-right">
+				<span class="travel-instr">创建订单</span>
+				<span class="travel-instr">支付</span>
+				<span class="highlight-fl" style="margin-right:0px;">确认</span>
+			</div> -->
+	     
+</div>
+
+<div class="create_order">
+    <aside class="pull-left gray-border side_info orange-border-top" style="width:180px;">
+        <figure>
+            <img src="../../static/images/store/odds_show1.jpg" width="160" height="120" alt="上海宝华国际酒店" title="上海宝华国际酒店" />
+            <figcaption style="text-align:left;">芝加哥丽思卡尔顿酒店
+[四季酒店]
+</figcaption>
+        </figure>
+
+        <table style="margin:0 0 10px 3px;">
+            <colgroup>
+                <col width="23%"/>
+                <col width="77%"/>
+            </colgroup>
+            <tbody>
+                <tr>
+                    <td valign="top">地址：</td>
+                    <td>1881 SUMAS WAY  , ABBOTSFORD , V2S 4L5</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td valign="top">房型：</td>
+                    <td>Classic Room, 1
+            King Bed - _Non-
+            Refundable</td>
+                </tr>
+                <tr>
+                    <td valign="top">介绍：</td>
+                    <td>此客房配有阳台。收
+      费的有线和无线上网
+      可让您随时与世界各
+      地保持联系，液晶电
+      视供您娱乐休闲。提
+      供咖啡/泡茶用具。私
+      人浴室带淋浴/盆浴组
+      合，以及吹风机。其
+      中一些便利设施包括
+      空调可放入便携式电
+      脑的保险箱和书桌。
+      此客房为不可吸烟客
+      房。</td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </aside>
+
+    <div class="pull-right" id="h_order_info" style="width:80%">
+        <div class="row gray-border">
+            <h3 class="title"><strong>预订信息</strong></h3>
+            <section class="row checkin_info font_Color">
+                <div id="frequentFlyerContainer">
+                    <div id="ffc_title"><label for="ffc_input">选择常旅客</label></div>
+                    <div><input type="text" placeholder="请输入姓名搜索" id="ffc_input" name=""></div>
+                </div>
+                <table>
+                    <colgroup>
+                        <col width="115px"/>
+                    </colgroup>
+                    
+                    <tbody>
+                        <tr>
+                            <th>房型：</th>
+                            <td>Classic Room, 1 King Bed - _Non-Refundable</td>
+                        </tr>
+                        <tr>
+                            <th>入住日期</th>
+                            <td><span>2013-08-15</span> 至 <span>2013-08-22</span> <a href="javascript:void(0)" class="t_orange" id="change_date" style="display:none">修改</a></td>
+                        </tr>
+                        <tr>
+                            <th><!--<em>*</em>-->预订房间：</th>
+                            <td><span class="txt_l9">2间</span>
+                                <select  style="width:80px;display:none" name="checkin_room_count" id="booking_room_count">
+                                    <option value="1">1</option>
+                                    <option value="2" selected="">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <span style="position:relative;left:-35px;display:none">间</span>
+                               <!-- <label>预订房间&gt;5间可以申请<a class="t_orange" href="javascript:void(0);">团队预订</a>,价格优惠哦</label>-->
+                            </td>
+                        </tr>
+						 <tr>
+                            <th>客人国籍：</th>
+                            <td>中国</td>
+                        </tr>
+                        <tr>
+                            <th style="vertical-align:top;"><!--<em>*</em>-->入住人信息：</th>
+                            <td>旅客姓名应该和所持护照上的拼写一致。（例如：HAN/MEIMEI）。
+                                <div class="passenger">
+									<div class="passengerBlock">
+									<p class="passengerRowTitle"><span class="spanLeft">房间</span><span class="spanCenter">姓/名</span><span class="spanRight">主要旅客</span></p>
+									<p class="passengerRow">
+									<span class="spanLeft"><em>*</em>单人间</span><span class="spanCenter"><input type="text" value="" placeholder="姓名1" style="height:23px;" class="gray-border"/></span><span class="spanRight"><input type="radio" value=""/></span>
+									</p>
+									<p class="passengerRow">
+									<span class="spanLeft"><em>*</em>单人间</span><span class="spanCenter"><input type="text" value="" placeholder="姓名1" style="height:23px;" class="gray-border"/></span><span class="spanRight"><input type="radio" value=""/></span>
+									</p>
+                                </div>
+								</div>
+                                <!-- 常旅客 -->
+                                <div class="travelBlock"><label><input type="checkbox" style="vertical-align:middle;" name="save_passenger" checked="checked"/>保存到常旅客</label></div>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="vertical-align:top;">房费信息：</th>
+                            <td>
+
+                           
+							<div class="layerGrayContainer">
+							
+							<p class="abroadhotelPriceBlock"><span>2014/05/01 周六   至  2014/05/04 周二</span><span style="float:right;"><i>1</i>间</span></p>
+								<table class="abroadhotelSalePriceTbl">
+									<thead>
+									<tr>
+										<th class="first"><b>第一周</b></th>
+										<th class="weekend">周六</th>
+										<th class="weekend">周日</th>
+										<th>周一</th>
+										<th>周二</th>
+										<th>周三</th>
+										<th>周四</th>
+										<th class="last">周五</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td class="first">
+											<div><b>价格</b></div>
+											<div><b>早餐</b></div>
+											<div><b>宽带</b></div>
+										</td>
+										<td>
+											<div class="price">600.10</div>
+											<div>2份</div>
+											<div>包含</div>
+										</td>
+										<td>
+											<div class="price">600.10</div>
+											<div>2份</div>
+											<div>包含</div>
+										</td>
+										<td>
+											<div class="price">600.10</div>
+											<div>2份</div>
+											<div>包含</div>
+										</td>
+										<td>
+											<div class="price">-</div>
+											<div>-</div>
+											<div>-</div>
+										</td>
+										<td>
+											<div class="price">-</div>
+											<div>-</div>
+											<div>-</div>
+										</td>
+										<td>
+											<div class="price">-</div>
+											<div>-</div>
+											<div>-</div>
+										</td>
+										<td class="last">
+											<div class="price">-</div>
+											<div>-</div>
+											<div>-</div>
+										</td>
+									</tr>
+									</tbody>
+								</table>
+								<div class="totlePriceBlock">
+								<span style="text-decoration:line-through;margin-right:15px;">原价：1800.30</span>
+								<span style="font-weight:bold;">总价：<span class="totlePrice"><em>650.10</em>元</span></span>
+								</div>
+							
+						 </div>
+                               
+							 
+                               
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        
+
+        <div class="row gray-border contacts">
+            <h3 class="title"><strong>联系人信息</strong></h3>
+            <section>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th><em>*</em>确认方式：</th>
+                            <td>
+                                <select data-role="dropdownlist" style="width:160px" name="">
+                                    <option value="短信确认" selected="">短信确认</option>
+                                    <option value="传真确认">传真确认</option>
+                                    <option value="Email确认">Email确认</option>
+                                </select>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><em>*</em>联系人方式：</th>
+                            <td><input type="text" name="" class="gray-border" style="width:160px;"/></td>
+                        </tr>
+                        <tr>
+                            <th>手机：</th>
+                            <td><input type="text" name="" class="gray-border" style="width:160px;"/></td>
+                        </tr>
+                        <tr>
+                            <th>固定电话：</th>
+                            <td>
+                                <input type="text" name="" class="gray-border" style="width:50px;" placeholder="区号"/>
+                                <span>-</span>
+                                <input type="text" name="" class="gray-border" style="width:140px;" placeholder="电话号码"/>
+                                <span>-</span>
+                                <input type="text" name="" class="gray-border" style="width:50px;" placeholder="分机号"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><em>*</em>Email：</th>
+                            <td><input type="text" name="" class="gray-border" style="width:160px;"/></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            
+            </section>
+        </div>
+
+        <div class="row gray-border">
+            <h3 class="title"><strong>备注</strong></h3>
+            <section>
+			 	<span style="vertical-align:top">采购商备注：</span>
+                <textarea name="" cols="60" rows="8" placeholder="请填写您的其他预订需求。" class="gray-border"></textarea> 
+            </section>
+        </div>
+
+        <div class="row gray-border">
+            <h3 class="title"><strong>酒店规定</strong></h3>
+            <section>
+                <table class="hotel_rule gray-text">
+                    <colgroup>
+                        <col width="100px;"/>
+                        <col />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>入住时间：</th>
+                            <td>14:00以后</td>
+                        </tr>
+                        <tr>
+                            <th>退房时间：</th>
+                            <td>2:00之前</td>
+                        </tr>
+                        <tr>
+                            <th style="vertical-align:top;">变更/取消：</th>
+                            <td style="line-height:20px;">入住前1天12点之前变更或取消，不收取任何费用；<br/>
+                                前1天的12点之后变更或取消，酒店将扣除首晚房费。
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <div class="row gray-border booking" style="margin-bottom:0;padding-bottom:0;">
+            <section style="padding:10px 0 0 0;">
+                <div class="gray-text" style="margin-bottom: 30px;line-height: 22px; padding:0 10px;"><span class="t_orange">温馨提示:</span>此酒店预订我们将于支付后2个工作小时内尽快给予确认。如订房无法确认，我们将全额返还相关款项到您的支付账户，非工作日，工作时间预订的订单，我们将于工作日尽快确认。</div>
+
+                
+
+                <div class="summary summaryBg">
+                    <div class="summaryTotal clearfix">
+					<span>房费合计</span><span class="t_orange">￥220.00</span><em> + </em><span>增值服务费用合计</span>
+					<span class="t_orange">￥2260.00 </span><em> = </em><strong>费用总计</strong><span class="t_orange">￥2580.00 </span>
+					</div>
+					<a class="pull-right adaptiveButton brightRed_btn">
+                    <span class="left"></span>
+                    <span style="padding:0 10px;" class="center">提交订单</span>
+                    <span class="right"></span>
+                	</a>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</div>
+
+    </section>
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+<!--模板文件-->
+<script id="ffcTemplate" type="text/x-kendo-template">
+    <ul class="ul_ffc" data-role="panelbar">
+        # for(var i=0;i<data.length;i++){ #
+        <li>
+            #= data[i].categories #
+            # for(var j=0;j<data[i].customers.length;j++){ #
+            <div class="item"><label><input type="checkbox" value="#=data[i].customers[j].id #"> #= data[i].customers[j].name #</label></div>
+            # } #
+        </li>
+        # } #
+    </ul>
+</script>
+
+<script id="ffcsTemplate" type="text/x-kendo-template">
+    <ul class="ul_ffc">
+        # for(var i=0;i<data.length;i++){ #
+        <li style="padding:5px">
+            <label><input type="checkbox" value="#=data[i].id #"> #= data[i].name #</label>
+        </li>
+        # } #
+    </ul>
+</script>
+
+<script id="edit-booking-date-template" type="text/x-kendo-template">
+    <ul class="change_date" style="width:230px;">
+        <li><label>入住日期:<input type="text" value="" class="datepicker gray-border" /></label></li>
+        <li><label>离店日期:<input type="text" value="" class="datepicker gray-border" /></label></li>
+        <li style="padding-left:50px;">
+            <a class="adaptiveButton mediumOrange_btn">
+                <span class="left"></span>
+                <span class="center center_1">预订</span>
+                <span class="right"></span>
+            </a>
+            <a style="margin-left:20px;" href="javascript:void(0);">取消</a>
+        </li>
+    </ul>
+</script>
+
+<!--模板文件-->
+<script type="text/javascript" src="../../static/js/store/freq_traveler.js"></script>
+
+<script>
+
+var view = {
+    price:[30,70,30],                       //每列的单价
+    unit_degree:["people","room","room"],   //计算价格时的粒度 到人 还是到 房间
+    unit: [1,1,1],                          //份数
+    booking_room:2,                         //预订的房间数
+    people_num:2,                           //入住的人数
+    trigger:".addon",
+    rowShow:"input[name='sub_total']",      //行小计
+    totalShow:"input[name='total']",        //总计
+    
+    init:function(){
+        //empty
+        this.col_enable = []; 
+
+        for(var i = 0; i < this.price.length; i++){
+            this.col_enable[i] = false;
+        }
+        this.rowSubTotal = [];
+        this.total = 0;
+    },
+    refresh:function(){
+        var self = this;
+        $(this.trigger + " tbody > tr").each(function(index){
+            self.rowTotal(index,this);
+            $(self.rowShow,this).val(self.rowSubTotal[index]);
+        });
+
+        $(this.trigger + " " + this.totalShow).val(this.allRowTotal());
+    },
+    rowTotal:function(index,tr){
+        this.rowSubTotal[index] = 0;
+        for(var i = 0 ; i < this.price.length ; i++){
+            if(this.unit_degree[i] == "room"){
+                this.rowSubTotal[index] += (this.col_enable[i] == true ? this.price[i] * this.unit[i] * this.booking_room : 0);
+            }else{
+                this.rowSubTotal[index] += (this.col_enable[i] == true ? this.price[i] * this.unit[i] * this.people_num * this.booking_room : 0);
+            }
+        }
+    },
+    allRowTotal:function(){
+        this.total = 0;
+        for(var i = 0; i < this.rowSubTotal.length; i++){
+            this.total += this.rowSubTotal[i];
+        }
+        
+        return this.total;
+    }
+};
+
+view.init();
+
+$(function(){
+    var change_date = new PopWindow("#change_date",{
+        title:"修改入住日期",
+        width:425,
+        template:"#edit-booking-date-template",
+        open:function(){
+            $(".change_date .datepicker").datepicker({
+                css : {"z-index": 20000},
+                showDay:true,
+                numberOfMonths:[1,2],
+                minDate :new Date(),
+                firstDay:0,
+                showButtonPanel :true
+            });
+        }
+    }).init();
+
+    
+    $(".op input[type='checkbox']",$(".addon")).click(function(){
+        var that=$(this);
+        var col_index = parseInt($(this).closest("th").index());
+        var check_status = $(this).prop("checked");
+        var table = $(this).closest("table");
+
+        view.col_enable[col_index - 1] = check_status;
+        
+        $("tbody tr",table).each(function(){
+            if(check_status){
+                $("td:eq(" + col_index + ") .acell",this).show();
+                that.parent().siblings().show();
+            }else{
+                $("td:eq(" + col_index + ") .acell",this).hide();
+                that.parent().siblings().hide();
+            }
+        });
+
+        view.refresh();
+    });
+
+    $("body").delegate("#booking_room_count","change",function(){
+        $(".addon input[name='num_of_room']").val($(this).val());
+        view.booking_room = parseInt($(this).val());
+
+        view.refresh();
+
+    });
+
+    $("body").delegate(".add_up,.minus","click",function(){
+        var col_index = $(this).closest("th").index();
+
+        var input = $(this).closest("span").find("input");
+        var num = parseInt(input.val());
+
+        if($(this).hasClass("add_up")){
+            if(num < 100) num += 1;
+        }else{
+            if(num > 1) num -= 1;
+        }
+        input.val(num);
+
+        view.people_num = num;
+
+        $("input[name='num_of_person']",$(".addon")).val(num);
+        view.refresh();
+    });
+
+
+});
+</script>
+</body>
+</html>

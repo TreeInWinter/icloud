@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>运营商 国内机票 平台建单 制单详情-单页</title>
+<meta charset="utf-8" />
+<link href="../../..//static/css/kendo.common.css" rel="stylesheet" />
+<link href="../../../static/css/kendo.gray.css" rel="stylesheet" />
+<link href="../../../static/css/common.css" rel="stylesheet" />
+<link href="../../../static/css/b2b.css" rel="stylesheet" />
+<link href="../../../static/css/kendo.reset.css" rel="stylesheet" />
+<link href="../../../static/css/order.css" rel="stylesheet">
+
+<script type="text/javascript" src="../../../static/js/jquery.min.js"></script>
+<script type="text/javascript" src="../../../static/js/kendo.web.js"></script>
+<script type="text/javascript" src="../../../static/js/plugins/jquery.fixedBar.js"></script>
+<script type="text/javascript" src="../../../static/js/global.js"></script>
+<script type="text/javascript" src="../../../static/js/flight.js"></script>
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+<!-- @CLB@ -->
+</head>
+<body>  <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">消息</a>
+                <span>New</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+      <div id="mainContent">
+<div class="actions block">
+    <div class="col col-l sep-r">
+        <button class="btns btn-return">返回</button>
+    </div>
+    <div class="col col-r sep-l">
+                   <a href="制单详情-单页-可编辑.html" class="button_secondary adaptiveButton small">
+                        <span class="left"></span>
+                        <span class="center">手动制单</span>
+                        <span class="right"></span>
+                    </a>
+                    <a href="javascript:;" class="button_secondary adaptiveButton small">
+                        <span class="left"></span>
+                        <span class="center">收银</span>
+                        <span class="right"></span>
+                    </a>
+    </div>
+</div>
+<div class="block block0 clearfix">
+    <div class="col col-l">
+        <div class="row">
+            <span class="text1">订单号：<strong>12311321983921</strong></span>&nbsp;
+            <span class="text2"> - 订单类型：国内机票 </span>
+        </div>
+        <div class="row">
+            <span>最后更新：<em>航班号更改为CZ3609</em></span>&nbsp;&nbsp;<span>更新时间：<em>2013-06-15 11:23 </em></span>&nbsp;&nbsp;<span><a href="#">【更多操作日志】</a></span>
+        </div>
+    </div>
+    <div class="col col-r">
+        <ul class="flat-list">
+            <li>
+            <div class="instr clearfix">
+                <span class="">创建</span>
+                <span class="">审核</span>
+                <span class="">支付</span>
+                <span class="highlight-fl">出票</span>
+                <span>派送</span>
+                <span>完成</span>
+                <span>取消</span>
+            </div> 
+            </li>
+            <li>
+            <div class="instr clearfix">
+                <span>收款</span>
+                <span>结算</span>
+            </div>
+            </li>
+            <li class="count"><span>附属订单</span><strong>3</strong>
+            </li>
+        </ul>
+    </div>
+</div>
+    
+
+
+<!-- 订单信息 -->
+<div class="block block1 block-module create-detail">
+    <div class="block-title">订单信息</div>
+    <ul class="flat-list">
+        <li>
+        <label class="vertical-head">PNR</label>
+        <span>12RTY3</span>
+        </li>
+        <li>
+        <label class="vertical-head">订单号</label>
+        <span>1234123423</span>
+        </li>
+        <li>
+        <label class="vertical-head">平台订单号</label>
+        <span><!--<strong style="color:#FF6608;">222.00</strong>元-->12341234233423</span>
+        </li>
+        <li>
+        <label class="vertical-head">客户名称</label>
+        <span>广州长融51book</span>
+        </li>
+        <li>
+        <label class="vertical-head">支付平台</label>
+        <span>支付宝</span>
+        </li>
+        <li>
+        <label class="vertical-head">出票日期</label>
+        <span>2013-12-31   12：36：41</span>
+        </li>
+        <li>
+        <label class="vertical-head">制单状态</label>
+        <span>OA已制单</span>
+        </li>
+        <li>
+        <label class="vertical-head">收银状态</label>
+        <span>已收银</span>
+        </li>
+        <li>
+        <label class="vertical-head">出发日期</label>
+        <span>2013-12-31   12：36：41</span>
+        </li>
+        <li style="width:600px">
+        <label class="vertical-head" style="vertical-align:top;">备注</label>
+        <textarea disabled name="" ></textarea>
+        </li>
+        <li>
+        <label class="vertical-head">导入状态</label>
+        <span>导入正常</span>
+        </li>
+       
+    </ul>
+</div>
+
+
+<div class="block block2 block-module">
+    <div class="block-title">
+        <span class="block-title-orange">航班信息</span>
+        <!--<span class="block-module-action">
+            <button class="btns btn-ac-blue">刷新</button> 
+        </span>-->
+    </div> 
+    <div class="row">
+        <div id="flight_info_grid">
+            <table class="grid-table">
+                <tr class="thead">
+                    <td>离港机场</td><td>到港机场</td><td>航班号</td><td>舱位</td><td>机型</td><td>离港时间</td><td>到港时间</td>
+                </tr>
+                <tr>
+                    <td>PEK T3</td>
+                    <td>PVG T2</td>
+                    <td>CZ3609</td>
+                    <td>W</td>
+                    <td>777</td>
+                    <td>2013-06-22 20:35</td>
+                    <td>2013-06-22 23:25</td>
+                </tr>
+                <tr>
+                     <td>PEK T3</td>
+                    <td>PVG T2</td>
+                    <td>CZ3609</td>
+                    <td>W</td>
+                    <td>777</td>
+                    <td>2013-06-22 20:35</td>
+                    <td>2013-06-22 23:25</td>
+                </tr>
+            </table> 
+        </div>
+    </div>
+</div>
+
+<div class="block block7 block-module">
+    <div class="block-title"><span class="block-title-orange">客票信息</span>
+       <!-- <span class="block-module-action">
+            <button class="ac-btn1 btns btn-ac-blue">添加客票</button> 
+            <button class="ac-btn2 btns btn-ac-blue">复制客票</button> 
+            <button class="ac-btn3 btns btn-ac-blue">删除所选</button> 
+            <button class="ac-btn4 btns btn-ac-blue">删除未选</button> 
+            <button class="ac-btn5 btns btn-ac-blue">提取行程单</button> 
+        </span>-->
+    </div> 
+    <!-- <label id="save_as_frequent"> -->
+    <!--      <input type="checkbox">自动保存到长旅客  -->
+    <!-- </label> -->
+    <div class="row">
+    <div id="passenger_info_grid">
+        <table class="grid-table">
+            <colgroup>
+                <col width="70">
+                <col width="70">
+                <col width="150">
+                <col width="80">
+                <col width="70">
+                <col width="70">
+                <col width="60">
+                <col width="60">
+                <col width="60">
+            </colgroup>
+            
+            <thead>
+            <tr class="thead">
+              <td>姓名</td>
+              <td>旅客类型</td>
+              <td>票号</td>
+              <td>结算价</td>
+              <td>佣金率</td>
+              <td>手续费</td>
+              <td>票面价</td>
+              <td>机建</td>
+              <td>燃油</td>
+            </tr> 
+            <tr>
+              <td>周霖</td>
+              <td>成人</td>
+              <td>7812117773347</td>
+              <td>770.00</td>
+              <td>50.00</td>
+              <td>120.00</td>
+              <td>883.440</td>
+              <td>0.070</td>
+              <td>2.660</td>
+            </tr>
+            <tr>
+              <td>周霖</td>
+              <td>成人</td>
+              <td>7812117773347</td>
+              <td>770.00</td>
+              <td>50.00</td>
+              <td>120.00</td>
+              <td>883.440</td>
+              <td>0.070</td>
+              <td>2.660</td>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+       
+    </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+		
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 B2G 邮件模板 机票行程单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/b2g.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.b2g.css" />
+    <link rel="stylesheet" href="../../static/css/b2g_EmailTemplate.css" media="all" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/b2g/common.js"></script>
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+    <!--[if lte IE 9]>
+    <script src="/static/js/html5.js"></script>
+    <![endif]-->
+    
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="top-line"></div>
+    <header class="main-header">
+        <div class="header-content">
+            <a class="logo" href="/">天地行 B2G</a>
+            <h2 class="headTitle">机票行程单</h2>
+        </div>
+    </header>
+
+    <section class="main-body clearfix">
+        <div class="main-body-content">
+             <section>
+                   <div class="mainContent"> <!--mainContent start-->
+                          <table class="orderInfo">
+                              <colgroup>
+                                   <col width="70%"/>
+                                   <col width="30%"/>
+                              </colgroup>
+                              <tr>
+                                  <td><h4>中国上海市闸北区</h4></td>
+                                  <td style="text-align:right;">
+                                      <h4>订单号：</h4>1710131004961
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td><h4>广中西路555号宝华国际广场16楼</h4></td>
+                                  <td style="text-align:right;">
+                                      <h4>日期：</h4>2013年10月21日
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td><h4>邮编：200072</h4></td>
+                                  <td style="text-align:right;"> </td>
+                              </tr>
+                          </table>
+                          
+                          <div class="statusContent">
+                               <h3 class="guestTitle">乘机人</h3>
+                               <table class="orderInfo">
+                                      <colgroup>
+                                           <col width="70%"/>
+                                           <col width="30%"/>
+                                      </colgroup>
+                                      <tr>
+                                          <td>LIAO YUANCHUANG  先生 ([常旅卡][卡号])</td>
+                                          <td style="text-align:right;">票号：15616131</td>
+                                      </tr>
+                               </table>                          
+                          </div>
+                          
+                          <div class="commonModel">
+                               <table class="tabList">
+                                    <colgroup>
+                                         <col width="95"/>
+                                         <col width="75"/>
+                                         <col width="230"/>
+                                         <col width="190"/>
+                                         <col width="130"/>
+                                    </colgroup>
+                                    <tr>
+                                        <th>日期</th>
+                                        <th>时间</th>
+                                        <th>城市/机场</th>
+                                        <th>航班信息/飞行时长/服务</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2" style="vertical-align:top;">2013-12-17</td>
+                                        <td rowspan="2" style="vertical-align:top;" class="rightBorder">12:30</td>
+                                        <td>
+                                            <div>离港：</div>
+                                            <div class="grayFont">[$City]([$三字码])</div>
+                                            <div class="grayFont">[$airport][$Terminal]</div>
+                                        </td>
+                                        <td>
+                                            <div>航班信息：</div>
+                                            <div class="grayFont">[$航班号]</div>
+                                            <div class="grayFont">[$舱位等级]</div>
+                                        </td>
+                                        <td>
+                                            <div>行李额：</div>
+                                            <div class="grayFont">[$限制行李额]</div>
+                                            <div>&nbsp;</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div>到港：</div>
+                                            <div class="grayFont">[$City]([$三字码])</div>
+                                            <div class="grayFont">[$airport][$Terminal]</div>
+                                        </td>
+                                        <td>
+                                            <div>飞行时长：</div>
+                                            <div class="grayFont">[$飞行时长]</div>
+                                            <div class="grayFont">[$中转信息]</div>
+                                        </td>
+                                        <td>
+                                            <div> </div>
+                                            <div> </div>
+                                            <div> </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5">中国航空预订编号：[$PNR]</td>
+                                    </tr>
+                               </table>
+                          </div>
+                          
+                          <div class="commonModel">
+                               <h3 class="titleName">规定和限制</h3>
+                               <table class="conditionList">
+                                    <tr>
+                                        <td><b>更改条件：</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>[$改签条件]</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>退票条件：</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>[$退票条件]</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>签转條件：</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>[$签转条件]</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>订舱：</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>[$舱位]</td>
+                                    </tr>
+                                    <tr>
+                                        <td>不同的航空公司可能存在不同的行李额要求，具体还请参考各航空公司关于行李额要求的信息。</td>
+                                    </tr>
+                               </table>
+                          </div>
+                                            
+                   </div> <!--mainContent end-->
+             </section>
+             
+             <section>
+                   <div class="emailFoot"> <!--emailFoot start-->
+                         <div class="footCont">
+                              <p>关于订单的任何疑问，或需要更改/取消您的行程等， 请登录商旅系统或联系我们真旅的客服中心。</p>
+                              <p>电邮: <a href="javascript:void(0);">service@travelzen.com</a> &nbsp; 电话: 400-720-6666</p>
+                         </div>
+                   </div>  <!--emailFoot end--> 
+                                 
+             </section>
+             
+        </div>        
+    </section>
+    <!--<footer class="main-footer">
+        <p class="copyright">Copyright &copy; 2013 天地行 All Rights Reserved.     沪ICP备08101503号</p>
+    </footer>-->
+</div>
+
+</body>
+</html>
+

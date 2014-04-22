@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="/static/css/kendo.common.min.css" />
+<link rel="stylesheet" href="/static/css/kendo.gray.css" />
+<link rel="stylesheet" href="/static/css/common.css" />
+<link rel="stylesheet" href="/static/css/b2b.css" />
+<script type="text/javascript" src="/static/js/vendor/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/kendo.web.js"></script>
+<script type="text/javascript" src="/static/js/global.js"></script>
+</head>
+<body> 
+
+<style type="text/css">
+#location-layer{
+    width:586px;
+}
+#location-layer .row-title{
+    float:left;
+    padding:5px 10px;
+    width:50px;
+}
+#location-layer .row{
+    padding:10px 0;
+    border-bottom:1px solid #ccc;
+}
+#location-layer .item{
+    width:110px;
+}
+</style>
+
+<div style="margin:100px;">
+<a href="javascript:;" class="ac-show-location">点我显示浮层</a>
+</div>
+
+<script type="text/x-kendo-template" id="ac-show-location-template">
+<div class="tcy_tabstrip" id="location-layer" data-animation="false" data-role="tabstrip">
+<span class="tcy_title">
+可直接选择地理位置
+</span>
+        <ul class="tab-head-list">
+            <li class="k-state-active">
+            商业区 
+            </li>
+            <li>
+            行政区
+            </li>
+        </ul>
+        <div class="tcy-tabitem">
+            <div class="row clearfix">
+            <span class="row-title">ABCDE</span>
+            <ul class="tcy_list clearfix">
+            <li class="item" title="PEK" data-code="PEK">#=data.name1#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name1#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name1#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name1#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name1#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name1#</li>
+            </ul>
+            </div>
+            <div class="row clearfix">
+            <span class="row-title">ABCDE</span>
+            <ul class="tcy_list clearfix">
+            <li class="item" title="PEK" data-code="PEK">#=data.name1#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name1#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name1#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name1#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name1#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name1#</li>
+            </ul>
+            </div>
+            <div class="row clearfix">
+            <span class="row-title">ABCDE</span>
+            <ul class="tcy_list clearfix">
+            <li class="item" title="PEK" data-code="PEK">#=data.name1#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name1#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name1#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name1#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name1#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name1#</li>
+            </ul>
+            </div>
+            <div class="row clearfix">
+            <span class="row-title">ABCDE</span>
+            <ul class="tcy_list clearfix">
+            <li class="item" title="PEK" data-code="PEK">#=data.name1#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name1#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name1#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name1#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name1#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name1#</li>
+            </ul>
+            </div>
+        </div>
+        <div class="tcy-tabitem">
+            <div class="row clearfix">
+            <span class="row-title">ABCDE</span>
+            <ul class="tcy_list clearfix">
+            <li class="item" title="PEK" data-code="PEK">#=data.name2#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name2#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name2#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name2#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name2#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name2#</li>
+            </ul>
+            </div>
+            <div class="row clearfix">
+            <span class="row-title">ABCDE</span>
+            <ul class="tcy_list clearfix">
+            <li class="item" title="PEK" data-code="PEK">#=data.name2#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name2#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name2#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name2#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name2#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name2#</li>
+            </ul>
+            </div>
+            <div class="row clearfix">
+            <span class="row-title">ABCDE</span>
+            <ul class="tcy_list clearfix">
+            <li class="item" title="PEK" data-code="PEK">#=data.name2#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name2#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name2#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name2#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name2#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name2#</li>
+            </ul>
+            </div>
+            <div class="row clearfix">
+            <span class="row-title">ABCDE</span>
+            <ul class="tcy_list clearfix">
+            <li class="item" title="PEK" data-code="PEK">#=data.name2#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name2#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name2#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name2#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name2#</li>
+            <li class="item" title="PEK" data-code="PEK">#=data.name2#</li>
+            </ul>
+            </div>
+        </div>
+</div>
+</script>
+<script type="text/javascript">
+$(function(){
+
+    var layer = FloatLayer({
+        data:{
+            name1:'八万人体育场地区',
+            name2:'虹口足球场地区'
+        },
+        trigger: '.ac-show-location',
+        template:  '#ac-show-location-template'
+    });
+    console.dir(layer);
+
+})
+</script>
+
+
+
+</body>
+</html>
+

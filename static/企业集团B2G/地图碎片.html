@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta content="text/html" charset="utf-8">
+    <link rel="stylesheet" href="../static/css/b2g.css"/>
+    <style type="text/css">
+        img{max-width: none}
+        #mapResultPanel{position: absolute;left:800px;top:0;overflow-x: hidden;overflow-y: auto;height: 400px;background: #ffffff;width:250px}
+        .ico_map_point{background: url("../static/images/b2g/ico_map_point.gif") no-repeat center;width:21px;height:40px;display: inline-block;line-height: 30px;font-size: 13px;color: #ffffff;font-weight: bold;text-align: center;float:left}
+        .POI_Name{color:#0065CB;font-size: 14px;}
+        .POI_desc{color:#939494;font-size: 12px;margin-top:3px}
+        .POI_type{background: #EAEAEA;height: 41px;border-bottom: 1px solid #C9C9C9}
+        .POI_type ul{margin-left: 7px}
+        .POI_type li{float: left;line-height: 40px;padding:0 15px;border:1px solid #EAEAEA;border-bottom: 1px solid #C9C9C9;cursor: pointer;font-size: 14px;color: #656565}
+        .POI_type li.current{border:1px solid #C9C9C9;border-bottom:1px solid #ffffff;background: #ffffff;color: #333333}
+        #r-result{background-color: #ffffff;clear: both}
+        #r-result li{padding:10px;border-bottom: 1px solid #E9E9E9;cursor: pointer}
+        .hotelInfo{padding:5px 5px 5px 15px}
+        .mrp_hotelName{font-size: 18px;color:#222426}
+        .hotelInfo div{margin:5px 0}
+        .mapContainer{position: relative}
+
+        .hotelStarLevel,.hotelStarLevel span{background:url("../static/images/b2g/star.png") 0 -13px no-repeat;width:89px;height:12px;vertical-align:middle;float:left;margin:2px 10px 0 0}
+        .hotelStarLevel span{background-position:0 0;margin-top: 0}
+        .hotelStar5 span{width:68px;}
+        .hotelStar4_5 span{width:62px}
+        .hotelStar4 span{width:54px}
+        .hotelStar3_5 span{width:48px}
+        .hotelStar3 span{width:40px}
+        .hotelStar2_5 span{width:34px}
+        .hotelStar2 span{width:26px}
+        .hotelStar1_5 span{width:20px}
+        .hotelStar1 span{width:12px}
+    </style>
+</head>
+<body>
+<div class="mapContainer">
+    <div id="map_container" style="height:400px;width:800px;"></div>
+    <div id="mapResultPanel">
+        <div class="hotelInfo">
+            <div class="mrp_hotelName">上海宝华国际酒店</div>
+            <div class="mrp_hotelLevel"><span class="hotelStarLevel hotelStar5"><span></span></span>[ 五星/豪华 ]</div>
+            <div class="address"><span style="color: #333333">地址：</span>上海市虹口区西江湾路718号....</div>
+        </div>
+
+        <div class="POI_type">
+            <ul>
+                <li class="current" data-source="p">机场车站</li>
+                <li data-source="r">地铁站</li>
+            </ul>
+        </div>
+        <div id="r-result">
+            <ul>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script type="text/html" id="POI_panelTemplate">
+    <li>
+        <span class="ico_map_point">#= data[0] #</span><div style="margin-left:25px"><div class="POI_Name">#= data[1] #</div><div class="POI_desc">（直线距离约4公里）</div></div>
+    </li>
+</script>
+
+
+
+<script type="text/html" id="hotelTipTemplate">
+    <ul>
+        <li class="hotelName">上海威斯汀大饭店</li>
+        <li class="hotelLevel">（五星/豪华）</li>
+        <li class="hotelAddress">地址：上海市虹口区西江湾路718号……</li>
+    </ul>
+</script>
+
+<!--qkNnEXk6nC3jcPTM8mv3dcE8是测试用key，正式版请替换-->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=qkNnEXk6nC3jcPTM8mv3dcE8&callback=initialize"></script>
+
+<script type="text/javascript" src="../static/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../static/js/kendo.web.js"></script>
+
+<script>
+
+    /**
+     * 地图初始化
+     */
+
+    var p=[{name:"上海站",x:"121.461788",y:"31.255773"},{name:"上海南站",x:"121.43595",y:"31.159479"}];
+    var r=[{name:"4号线大连路站",x:"121.518422",y:"31.264385"},{name:"4号线中山公园站",x:"121.429479",y:"31.222088"}]
+    var points=[],markers=[],label_txt=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"],map;
+
+
+    $(function(){
+        $("body").delegate("#r-result li","mouseenter",function(){
+            map.panTo(points[$(this).index()], 17);
+        })
+        $(".POI_type li").click(function(){
+            $(this).addClass("current").siblings().removeClass("current");
+            switch ($(this).attr("data-source"))
+            {
+                case "p":
+                    makePOI(p);break;
+                case "r":
+                    makePOI(r);break;
+            }
+        })
+    })
+
+    function initialize(){
+
+        map = new BMap.Map('map_container');
+        map.enableScrollWheelZoom();
+        map.addControl(new BMap.NavigationControl());
+        map.addControl(new BMap.MapTypeControl({mapTypes: [BMAP_NORMAL_MAP,BMAP_HYBRID_MAP]}));
+
+        makePOI(p);
+    }
+
+    function makePOI(p)
+    {
+        map.clearOverlays();
+        var ul_result=$("#r-result ul");
+        ul_result.html("");
+        var POI_panelTemplate=kendo.template($("#POI_panelTemplate").html());
+        for(var i=0;i< p.length;i++)
+        {
+            points[i]=new BMap.Point(p[i].x,p[i].y);
+            markers[i]=new BMap.Marker(points[i]);
+            var label=new BMap.Label(label_txt[i]);
+            label.setStyle({padding:"1px 5px",border:"0",backgroundColor:"transplant",fontWeight:"bold",color:"#ffffff",fontSize:"14px",display:"inline-block"})
+            markers[i].setLabel(label);
+            map.addOverlay(markers[i]);
+            ul_result.append(POI_panelTemplate([label_txt[i],p[i].name]));
+        }
+
+        var point=new BMap.Point(121.493447,31.238106);
+        var marker=new BMap.Marker(point);
+        var infoWindow=new BMap.InfoWindow($("#hotelTipTemplate").html());
+        map.centerAndZoom(point, 17);
+        map.addOverlay(marker);
+        marker.openInfoWindow(infoWindow);
+        marker.addEventListener("click",function(){
+            this.openInfoWindow(infoWindow);
+
+        })
+    }
+
+
+
+    // 复杂的自定义覆盖物
+    function ComplexCustomOverlay(point, text, mouseoverText){
+        this._point = point;
+        this._text = text;
+        this._overText = mouseoverText;
+    }
+    ComplexCustomOverlay.prototype = new BMap.Overlay();
+    ComplexCustomOverlay.prototype.initialize = function(map){
+        this._map = map;
+        var div = this._div = document.createElement("div");
+        div.style.position = "absolute";
+        div.style.zIndex = BMap.Overlay.getZIndex(this._point.lat);
+        div.style.backgroundImage = "../static/images/b2g/ico_map_point.gif";
+        div.style.border = "1px solid #BC3B3A";
+        div.style.color = "white";
+        div.style.height = "30px";
+        div.style.width = "21px";
+        div.style.lineHeight = "18px";
+        div.style.whiteSpace = "nowrap";
+        div.style.MozUserSelect = "none";
+        div.style.fontSize = "12px"
+        var span = this._span = document.createElement("span");
+        div.appendChild(span);
+        span.appendChild(document.createTextNode(this._text));
+
+        mp.getPanes().labelPane.appendChild(div);
+
+        return div;
+    }
+    ComplexCustomOverlay.prototype.draw = function(){
+        var map = this._map;
+        var pixel = map.pointToOverlayPixel(this._point);
+        this._div.style.left = pixel.x - parseInt(this._arrow.style.left) + "px";
+        this._div.style.top  = pixel.y - 30 + "px";
+    }
+    var txt = "上海站";
+
+    //        var myCompOverlay = new ComplexCustomOverlay(new BMap.Point(116.407845,39.914101), "银湖海岸城",mouseoverTxt);
+    //
+    //        mp.addOverlay(myCompOverlay);
+</script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+/* 
+    Document   : flight
+    Created on : 2013-5-10, 10:40:25
+    Author     : 234
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.searchresult_thead{
+	background-color: #f3f3f3;
+    margin: 5px 0;
+    padding: 0 10px;
+	padding-top: 3px;
+	color: #999999;
+	height: 22px;
+	vertical-align: middle;
+}
+
+.text_show {
+    font-size: 18px;
+    font-weight: 700;
+	float:left;
+	padding-right: 10px;
+}
+.bookingBtn{padding-right: 5px; vertical-align:middle;}
+.flight_row{
+	_border-bottom: 1px dotted #CCCCCC;
+	border-bottom: 1px dashed #CCCCCC;
+}
+
+.flight_item{padding: 5px 0px 0px 5px; border-top: 1px solid #aeaeae;margin-top: 2px;}
+.flight_item td{padding-bottom: 10px;vertical-align: top;}
+.flight_item_selected{background: none repeat scroll 0 0 transparent;border-top: 0;margin-top: 0;padding-bottom: 5px;padding: 5px 10px;}
+.base_price {
+    color: #E56700;
+    font-family: arial;
+    font-style: normal;
+    text-decoration: none;
+}
+.biglight .base_price strong {
+    font-size: 20px;
+}
+.base_txtdiv {
+   *z-index:5;
+    color: #0085CA;
+    cursor: pointer;
+}
+.base_txtdiv:hover{text-decoration: underline;}
+.text_low {
+	float:left;
+    color: #666666;
+}
+.base_price strong {
+    font-family: sans-serif;
+}
+.daydiff{cursor: pointer;}
+
+
+.icon_remark_white {
+    border: 1px solid #bcbcbc;
+    padding: 1px 3px;
+    color: #666666;
+    background-color: #F3F3F3;
+    text-align: center;
+    cursor: pointer;
+    float:left;
+}
+.icon_remark_white1{
+    border: 1px solid #bcbcbc;
+	padding: 1px 4px;
+    color: #666666;
+	background-color: #F3F3F3;
+	text-align: center;
+	cursor: pointer;
+	float:left;
+}
+.icon_remark_red {
+    border: 1px solid #bcbcbc;
+    padding: 1px 3px;
+    color: red;
+    background-color: #F3F3F3;
+    margin-bottom: 2px;
+    text-align: center;
+    cursor: pointer;
+    float:left;
+}
+.top_class{
+    cursor: pointer;
+padding: 0px 5px;
+    border: 1px solid #358fdc;
+    color: white;
+    background-color:#6cabf3;
+text-align: center;
+}
+.corporate{
+cursor: pointer;
+padding: 0px 2px;
+border: 1px solid #358fdc;
+color: white;
+background-color:#6cabf3;
+text-align: center;
+}
+div[role="button"] {
+    cursor: pointer;
+}
+.top_price{
+    cursor: pointer;
+text-align: center;
+    padding: 0px 2px;
+    border: 1px solid #358fdc;
+    color: white;
+    background-color:#6cabf3;
+float:right;}
+div[role="button"] {
+    cursor: pointer;
+}
+
+.txt_blue {
+    color: #0085CA;
+    font-family: Arial,Helvetica,sans-serif;
+}
+.show_flight{color: #0085CA;
+    cursor: pointer;
+	text-align: right;
+	*padding-right: 15px;
+    }
+.show_flight:hover{text-decoration: underline;}
+.show_flight_grey{color: #666666;
+	text-align: right;
+	*padding-right: 15px;
+}
+.white_arrow {
+    background-image: url("../../images/flight/white_arrow1.gif");
+    background-repeat: no-repeat;
+    height: 7px;
+    width:20px;
+    overflow: hidden;
+    position: absolute;
+    z-index:100;
+    margin-left: 180px;
+	top: -6px;
+}
+				
+#refund_box{ box-shadow: 3px 3px 8px #333333;}
+
+.arrive_time{ float:left; padding-right:25px;}
+
+.no_border td{ border:0; padding:0px;}
+
+
+.arrow_down_top {
+    background-image: url(../../images/sprite_hotel.png);
+    background-position: -10px 0;
+    float: right;
+    height: 10px;
+    margin-right: 2px;
+    margin-top: 3px;
+    width: 9px;
+    *margin-top: -15px;
+}
+.arrow_up_top {
+    background-image: url(../../images/sprite_hotel.png);
+    float: right;
+    height: 10px;
+    margin-right: 2px;
+    margin-top: 3px;
+    width: 9px;
+    *margin-top: -15px;
+}
+
+#wrap{white-space:normal; width:200px; }
+.btn_close {
+    color: #0085CA;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+/***************************************************************/
+/* Button Settings                                             */
+/***************************************************************/
+
+.btn_grey {
+	cursor:pointer;
+	display:inline-block;
+}
+.btn_grey div.left {
+	background:url(../../images/button/button.png) no-repeat 0 0px;
+	height:25px;
+	width:10px;
+	float:left;
+}
+.btn_grey div.middle {
+	background:url(../../images/button/button.png) repeat-x 0 -25px;
+	height:25px;
+	float:left;
+	line-height:25px;
+}
+.btn_grey div.right {
+	background:url(../../images/button/button.png) no-repeat 0 -50px;
+	height:25px;
+	width:10px;
+	float:left;
+}
+.btn_grey:hover div.left {
+	background:url(../../images/button/button.png) no-repeat 0 -75px;
+	height:25px;
+	width:10px;
+	float:left;
+}
+.btn_grey:hover div.middle {
+	background:url(../../images/button/button.png) repeat-x 0 -100px;
+	height:25px;
+	float:left;
+	line-height:25px;
+}
+.btn_grey:hover div.right {
+	background:url(../../images/button/button.png) no-repeat 0 -125px;
+	height:25px;
+	width:10px;
+	float:left;
+}
+.btn_orange {
+    *padding-left: 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+.btn_orange div.left {
+    background: url(../../images/button/button.png) no-repeat scroll 0 -413px transparent;
+    float: left;
+    height: 25px;
+    width: 10px;
+}
+.btn_orange div.middle {
+    background: url(../../images/button/button.png) repeat-x scroll 0 -438px transparent;
+    color: #FFFFFF;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+}
+.btn_orange div.right {
+    background: url(../../images/button/button.png) no-repeat scroll 0 -463px transparent;
+    float: left;
+    height: 25px;
+    width: 10px;
+}
+.btn_orange:hover div.left {
+    background: url(../../images/button/button.png) no-repeat scroll 0 -488px transparent;
+}
+.btn_orange:hover div.middle {
+    background: url(../../images/button/button.png) repeat-x scroll 0 -513px transparent;
+}
+.btn_orange:hover div.right {
+    background: url(../../images/button/button.png) no-repeat scroll 0 -538px transparent;
+}
+.btn_orange_m {
+    *padding-left: 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+.btn_orange_m div.left {
+    background: url(../../images/button/button_m.png) no-repeat scroll 0 0px transparent;
+    float: left;
+    height: 28px;
+    width: 10px;
+}
+.btn_orange_m div.middle {
+    background: url(../../images/button/button_m.png) repeat-x scroll 0 -31px transparent;
+    color: #FFFFFF;
+    float: left;
+    height: 28px;
+    line-height: 28px;
+}
+.btn_orange_m div.right {
+    background: url(../../images/button/button_m.png) no-repeat scroll 0 -62px transparent;
+    float: left;
+    height: 28px;
+    width: 10px;
+}
+.btn_orange_m:hover div.left {
+    background: url(../../images/button/button_m.png) no-repeat scroll 0 -93px transparent;
+}
+.btn_orange_m:hover div.middle {
+    background: url(../../images/button/button_m.png) repeat-x scroll 0 -124px transparent;
+}
+.btn_orange_m:hover div.right {
+    background: url(../../images/button/button_m.png) no-repeat scroll 0 -155px transparent;
+}
+
+
+#UpdateTvlrBtn {
+    margin: 0 auto;
+    position: relative;
+    vertical-align: bottom;
+    width: 69px;
+}
+
+.airline_txt{font-size:15px; font-weight:bold;padding-right: 5px;}
+.airline_txt_en{font-size:13px; font-weight:bold;line-height:15px;}
+/*******domestic flight table setting**********/
+
+.flight_info{
+    padding-top: 5px;
+    text-align: center;
+    vertical-align: middle;
+    width: 63px;
+}
+.img_load {
+    height: 29px;
+}
+
+.en_txt{font-size:11px}
+.flight_time{padding-top:10px;}
+

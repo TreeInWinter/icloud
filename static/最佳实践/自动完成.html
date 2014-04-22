@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<!-- Common Kendo UI Web CSS -->
+	<link href="/static/css/kendo.common.min.css" rel="stylesheet" />
+	<!-- Default Kendo UI Web theme CSS -->
+	<link href="/static/css/kendo.default.min.css" rel="stylesheet" />
+	<!-- jQuery JavaScript -->
+	<script src="/static/js/jquery.min.js"></script>
+	<!-- Kendo UI Web combined JavaScript -->
+	<script src="/static/js/kendo.web.js"></script>
+	
+	<script src="/最佳实践/formatPage.js"></script>
+    </head>
+    <body>
+	
+	<h1>数据 Apples , Oranges ,Grapes ,'靴子'(不支持拼音)</h1>
+	<input id="autocomplete" />
+	<script>
+	$(function() {
+	    // Initialize the Kendo DatePicker by calling the kendoDatePicker jQuery plugin
+	    $("#autocomplete").kendoAutoComplete(["Apples", "Oranges", "Grapes" , "靴子"]);
+	    
+	    //Example - get reference to a Kendo UI widget ,获得引用
+	    var autocomplete = $("#autocomplete").data("kendoAutoComplete");
+	    
+	    //设置值
+	    autocomplete.value("Cherries");
+	    //取回值
+	    var value = autocomplete.value();
+	    //alert(value); // Displays "Cherries"
+	});
+	
+	</script>
+	<hr/>
+	
+	
+	<h1>数据改变事件,在输入框中输入改变数据，转移焦点</h1>
+	<input id="autocomplete2" />
+	<script>
+	$(function() {
+	    // Initialize the Kendo DatePicker by calling the kendoDatePicker jQuery plugin
+	    $("#autocomplete2").kendoAutoComplete(
+		{
+		    change:autocomplete_change
+		}
+	    );
+		
+	    //用bind 会触发两次， 分别在捕获以及冒泡阶段
+	    //$("#autocomplete2").bind("change",autocomplete_change);
+	    function autocomplete_change(e) {
+		var autocomplete = this;
+		var value = autocomplete.value();
+		alert(value); // Displays the value of the AutoComplete widget
+	    }
+
+	});
+	
+	</script>
+	
+	<hr/>
+	
+	<h1>Javascript 数组数据源,搜索美国州名(英文)</h1>
+	<h2>美国州:</h2>
+        <input id="states" />
+	<script>
+	    $(document).ready(function() {
+
+		var data = [
+			"Alabama",
+			"Alaska",
+			"American Samoa",
+			"Arizona",
+			"Arkansas",
+			"California",
+			"Colorado",
+			"Connecticut",
+			"Delaware",
+			"District of Columbia",
+			"Florida",
+			"Georgia",
+			"Guam",
+			"Hawaii",
+			"Idaho",
+			"Illinois",
+			"Indiana",
+			"Iowa",
+			"Kansas",
+			"Kentucky",
+			"Louisiana",
+			"Maine",
+			"Maryland",
+			"Massachusetts",
+			"Michigan",
+			"Minnesota",
+			"Mississippi",
+			"Missouri",
+			"Montana",
+			"Nebraska",
+			"Nevada",
+			"New Hampshire",
+			"New Jersey",
+			"New Mexico",
+			"New York",
+			"North Carolina",
+			"North Dakota",
+			"Northern Marianas Islands",
+			"Ohio",
+			"Oklahoma",
+			"Oregon",
+			"Pennsylvania",
+			"Puerto Rico",
+			"Rhode Island",
+			"South Carolina",
+			"South Dakota",
+			"Tennessee",
+			"Texas",
+			"Utah",
+			"Vermont",
+			"Virginia",
+			"Virgin Islands",
+			"Washington",
+			"West Virginia",
+			"Wisconsin",
+			"Wyoming"
+		    ];
+
+		$("#states").kendoAutoComplete({
+		    dataSource: data,
+		    placeholder: "请选择州..."
+		});
+	    });
+	</script>
+	
+	<hr/>
+	
+	<h1>自定义行模版</h1>
+	
+	<h2>Customers</h2>
+	<input id="customers" style="width: 400px;"/>
+	<style type="text/css">
+	    #customers-list .k-item {
+                    overflow: hidden; /* clear floated images */
+                }
+                #customers-list img {
+                    -moz-box-shadow: 0 0 2px rgba(0,0,0,.4);
+                    -webkit-box-shadow: 0 0 2px rgba(0,0,0,.4);
+                    box-shadow: 0 0 2px rgba(0,0,0,.4);
+                    float: left;
+                    margin: 5px 20px 5px 0px;
+                }
+                #customers-list h3 {
+                    margin: 30px 0 10px 0;
+                    font-size: 2em;
+                }
+                #customers-list p {
+                    margin: 0;
+                }
+	    </style>
+	<script>
+	    $(document).ready(function() {
+		var autocomplete = $("#customers").kendoAutoComplete({
+		    minLength: 1,
+		    dataTextField: "ContactName",
+		    template: '<img src=\"/kendoui.web/examples/content/web/Customers/${data.CustomerID}.jpg\" alt=\"${data.CustomerID}\" />' +
+			    '<h3>${ data.ContactName }</h3>' +
+			    '<p>${ data.CompanyName }</p>',
+		    dataSource: {
+			transport: {
+			    read:{
+				dataType: "jsonp",
+				url: "http://demos.kendoui.com/service/Customers"
+			    }
+			}
+		    },
+		    height: 370,
+		}).data("kendoAutoComplete");
+	    });
+	</script>
+	
+	<hr/>
+	<h1>服务器数据</h1>
+	<h2>Products</h2>
+	<input id="products" style="width: 250px" />
+	<script>
+	    $(document).ready(function() {
+		$("#products").kendoAutoComplete({
+		    dataTextField: "ProductName",
+		    filter: "contains",
+		    minLength: 3,
+		    dataSource: {
+			type: "odata",
+			serverFiltering: true,
+			serverPaging: true,
+			pageSize: 20,
+			transport: {
+			    read: "http://demos.kendoui.com/service/Northwind.svc/Products"
+			}
+		    }
+		});
+	    });
+	</script>
+    </body>
+</html>

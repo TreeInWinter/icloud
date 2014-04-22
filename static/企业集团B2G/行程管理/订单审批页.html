@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 B2G 行程管理 订单审批页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/b2g.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.b2g.css" />
+    <link rel="stylesheet" href="../../static/css/b2g_journey.css" />
+
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/b2g/common.js"></script>
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+    <!--[if lte IE 9]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+   
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="top-line"></div>
+    <header class="main-header">
+        <div class="header-content">
+            <a class="logo" href="/">天地行 B2G</a>
+            <nav class="main-nav">
+                <ul class="clearfix">
+                    <li class="first"><a herf="#">行程预订</a></li>
+                    <li class="active"><a herf="#">行程管理</a></li>
+                    <li><a herf="#">数据服务</a></li>
+                    <li><a herf="#">创业维护</a></li>
+                    <li><a herf="#">系统设置</a></li>
+                </ul> 
+            </nav>
+        </div>
+    </header>
+    
+<section class="main-body clearfix">
+    <div class="main-body-content">
+        
+      <!-- 订单详情内容 开始 -->
+       <div class="checkJourney color_white">
+         <div class="journeyTit">行程订单编号：<em>1248745157974432141</em> <em class="reason">因公出行</em></div>
+         <table width="100%" class="orderBrief">
+                <colgroup>
+                   <col width="180px">
+                   <col width="180px">
+                   <col width="240px">
+                   <col width="300px">
+                   <col width="200px">
+                </colgroup>
+                <tbody>
+                 <tr>
+                   <td class="tdFirst"><span>预订人：<em>潘小美</em></span></td>
+                   <td><span>订单金额：￥<em class="pricefont">688</em></span></td>
+                   <td><span>创建时间:<em class="timefont">2014-01-04 14:11</em></span></td>
+                   <td><span>因公开会    公司在北京召开经理会</span></td>
+                   <td align="center"><span class="orgfont">待审批</span></td>
+                 </tr>
+                 <tr>
+                   <td class="tdFirst tdNoborder"><span class="font16">费用分摊：</span></td>
+                   <td class="tdNoborder"><span>技术部（js001)</span></td>
+                   <td class="tdNoborder"><span>比例：100%</span></td>
+                   <td class="tdNoborder"><span>金额：￥<em class="pricefont">688</em></span></td>
+                   <td align="center" class="tdNoborder"><span class="grayfont">默认分摊方式</span></td>
+                 </tr>
+                </tbody>
+          </table>
+      </div>
+       
+       <!-- 子订单 1 -->
+       <div class="tipsItem">
+      <!-- <div class="tipsBar">
+        <span>提示：尊敬的用户，由于该行程订单内差旅人的审批路径差异，系统已经将该订单拆分成不同子订单分开送审，请知悉 。</span><em>不再提醒</em>
+       </div>-->
+       <div class="checkJourney color_white" style="padding:0;border-top:none">
+       <div class="suborderTit"><span class="waitApprove">待<b class="bHoverOn">李大川</b>或<b class="bHoverOn">王小二</b>审批</span>子订单编号：<em>XC19830610-1</em></div>
+       <div class="orderTracking">
+         <div class="trackingFlow">
+           <ul><!--订单退回-->
+              <li><i class="flow-normal"></i><span class="font-normal">提交订单</span></li>
+              <li class="bgborder"><i class="all-border"></i></li>
+              <li><i class="flow-abnormal"></i><span class="font-abnormal">退回</span></li>
+			  <!--订单成功-->
+			  <!--<li><i class="flow-normal"></i><span class="font-normal">提交订单</span></li>
+              <li class="bgborder"><i class="all-border"></i></li>
+              <li><i class="flow-normal"></i><span class="font-normal">完成</span></li>-->
+           </ul>
+         </div>
+         <div class="returnReason">
+           <b>退回原因：</b>这里控制最多50字，这里原因文字原因文字原因文字原因文字原因文字原因文字原因文字原因文字原因文字原因文字原因文字原因文字原因文字原因文字原因文字....
+         </div>        
+         <div class="trackingBtn" style="margin-right:130px;">
+            <span class="trackingBtn-unfold toggle_trigger" data-toggle='{"target":"#flowDetail-info01","textFilter":"em","toggleClass":["trackingBtn-unfold","trackingBtn-fold"],"toggleText":["订单跟踪","收起"]}'><em>订单跟踪</em><i></i></span>
+            <span class="trackingBtn-fold"  style="display:none"><em>收起</em><i></i></span>
+          </div>
+          
+          <div class="trackingMark">
+           <span class="colorMark orangeMark"><i class="qxicon"></i>退回</span>
+          </div>
+         
+       </div>
+          <!-- 收起的内容 -->
+          <div class="flowDetail" id="flowDetail-info01" style="display:none">
+              <table class="">
+                <colgroup>
+                   <col width="360px">
+                   <col width="580px">
+                   <col width="130px">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>处理时间</th>
+                    <th>处理信息</th>
+                    <th>操作人</th>
+                  </tr>
+                </thead>
+                <tbody>
+                 <tr>
+                   <td>2014-01-04  14:23:33</td>
+                   <td>订单提交</td>
+                   <td>潘小美</td>
+                 </tr>
+                 <tr>
+                   <td>2014-01-04  14:23:33</td>
+                   <td>订单按审批路径拆分完毕,进入待审批状态</td>
+                   <td>真旅差旅系统</td>
+                 </tr>
+                 <tr>
+                   <td>2014-01-04  14:23:33</td>
+                   <td>审批通过,进入下一级待审批状态 </td>
+                   <td>付丽红</td>
+                 </tr>
+                 <tr>
+                   <td>2014-01-04  14:23:33</td>
+                   <td>审批通过,进入下一级待审批状态 </td>
+                   <td>王小光</td>
+                 </tr>
+                 <tr>
+                   <td>2014-01-04  14:23:33</td>
+                   <td>审批通过,进入待支付状态</td>
+                   <td>田笑丽</td>
+                 </tr>
+                 <tr>
+                   <td>2014-01-04  14:23:33</td>
+                   <td>按月结算客户,自动进入订单处理状态</td>
+                   <td>真旅差旅系统</td>
+                 </tr>
+                </tbody>
+          </table>
+          </div>
+        <!-- 收起的内容 结束-->
+       
+       
+       
+       
+       
+          <div class="airticket_info" style="border-top:2px solid #ededed;">
+            <div class="airticket-place">
+                <span>2013-12-17</span>
+                <span><strong>北京</strong><em>——</em><strong>西安</strong></span>
+            </div>
+            
+            <div class="airplane-info">
+              <span style="margin-top:-5px;"><i class="logo_MU" title="南方航空"></i><em>南方航空</em><em>CZ6437</em><em>机型</em><em>333（大）</em><em>经济舱</em></span>
+              <span class="flightTime"><b>起飞：</b><em>07:40</em><em>北京</em><em>首都机场</em></span>
+              <span class="flightTime"><b>到达：</b><em>10:25</em><em>纽约</em><em>纽瓦克机场</em></span>
+            </div>
+            
+            <div class="airplane-price">
+             <span><em>单程票价：</em><em style="color:#f94037">￥</em><em class="red-price">688</em></span>
+             <span><em>机建 + 燃油：</em><em>50+120</em><em>元</em></span>
+            </div>
+            
+            <div class="airplane-number">
+             <span>X<em class="number">3</em>张</span>
+            </div>
+            
+            <div class="ticket-state">
+              <button type="button" class="BlueBtn"><i class="haveTicket"></i>有票</button>
+            </div>
+           
+         </div>  
+           
+           <!-- 乘机人信息 -->
+         <div class="guest-info">
+            <div class="guest-infoLeft">
+              <span>乘机人信息：</span><span>航空意外险：￥20/份</span>
+            </div>
+            <div class="guest-infoRight">
+                <ul class="guestUlRow guestUl-last">
+                  <li class="liHoverOn"><span>李大川【技术部】</span><span>保险 X 1<em class="free-send">免费赠送</em></span></li>
+                  <li class="liHoverOn end">
+                     <span class="remarkBack">不符合差旅政策</span>
+                     <span>王小二【技术部】</span><span>保险 X 1</span>
+                  </li>
+                </ul>
+            </div>
+           </div>  
+        
+       </div>
+       
+       <!-- 酒店信息 -->
+      <div class="journey_hotel-info">
+        <div class="hotel-detail">
+          <div class="hotelPic">
+            <div class="hotelPicBox">
+             <a href="javascript:void(0)" target="_blank"><img src="../../static/images/b2g/hotelsidePic01.jpg" width="100px" height="70px" alt="上海宝华国际酒店" title="上海宝华国际酒店"/></a>
+            </div>
+          </div>
+          
+          <div class="hoteTextTit">
+             <h4>上海宝华国际酒店</h4>
+             <span>上海市虹口区西江湾路718号（近广中路）</span>
+          </div>
+          
+          <div class="hoteText">
+             <span><b>入住日期：</b>2013-12-16</span>
+             <span><b>退房日期：</b>2013-12-17</span>
+          </div>
+          
+          <div class="room-number">
+             <span>X<em class="number">3</em>张</span>
+          </div>
+          
+        </div>
+        
+        <div class="room-detail-item">
+           <table class="">
+                <colgroup>
+                   <col width="220px">
+                   <col width="500px">
+                   <col width="125px">
+                   <col width="99px">
+                   <col width="85px">
+                   <col width="101px">
+                </colgroup>
+                <tbody>
+                 <tr>
+                   <td class="tdFirst"><span>超大豪华房 [ 含早 ] <em>大床</em></span></td>
+                   <td><span>李大川 [技术部]，王叔叔  [卫生部]</span></td>
+                   <td><span style="color:#f94037">￥<em class="red-price">6200</em></span></td>
+                   <td>X 1</td>
+                   <td>
+                     <label class="mark-room"><span class="haveroom"><i></i>有房</span></label>
+                   </td>
+                   <td><label class="editInfo-del"><i></i><em>删除</em></label></td>
+                 </tr>
+                </tbody>
+          </table>
+        </div>
+        
+        <div class="room-detail-item">
+           <table class="">
+                <colgroup>
+                   <col width="220px">
+                   <col width="500px">
+                   <col width="125px">
+                   <col width="99px">
+                   <col width="85px">
+                   <col width="101px">
+                </colgroup>
+                <tbody>
+                 <tr>
+                   <td class="tdFirst"><span>超大豪华房 [ 含早 ] <em>大床</em></span></td>
+                   <td><span>房间1: 李大川 [技术部]，房间2:  王叔叔  [临时]，王叔叔  [临时]</span></td>
+                   <td><span style="color:#f94037">￥<em class="red-price">6200</em></span></td>
+                   <td>X 1</td>
+                   <td>
+                     <label class="mark-room"><span class="noroom"><i></i>无房</span></label>
+                   </td>
+                   <td><label class="editInfo-del"><i></i><em>删除</em></label></td>
+                 </tr>
+                </tbody>
+          </table>
+        </div>
+        
+         <div class="room-detail-item">
+           <table class="">
+                <colgroup>
+                   <col width="220px">
+                   <col width="500px">
+                   <col width="125px">
+                   <col width="99px">
+                   <col width="85px">
+                   <col width="101px">
+                </colgroup>
+                <tbody>
+                 <tr>
+                   <td class="tdFirst"><span>超大豪华房 [ 含早 ] <em>大床</em></span></td>
+                   <td><span>李大川 [技术部]，王叔叔  [卫生部]，王叔叔  [卫生部]，王叔叔  [卫生部]</span>
+                   <span>李大川 [技术部]，王叔叔  [卫生部]，王叔叔  [卫生部]，王叔叔  [卫生部]</span>
+                   </td>
+                   <td><span style="color:#f94037">￥<em class="red-price">6200</em></span></td>
+                   <td>X 1</td>
+                   <td>
+                     <label class="mark-room"><span class="haveroom"><i></i>有房</span></label>
+                   </td>
+                   <td><label class="editInfo-del"><i></i><em>删除</em></label></td>
+                 </tr>
+                </tbody>
+          </table>
+        </div>
+        
+      </div>
+       
+     </div>  
+       
+       
+      <!-- 子订单 2 -->
+       <div class="tipsItem"> 
+       
+       <div class="checkJourney color_white" style="padding:0;border-top:none">
+       <div class="suborderTit"><span class="waitApprove">待<b class="bHoverOn">李大川</b>或<b class="bHoverOn">王小二</b>审批</span>子订单编号：<em>XC19830610-1</em></div>
+       <div class="orderTracking">
+         <div class="trackingFlow">
+           <ul><!--审批通过-->
+              <li><i class="flow-normal"></i><span class="font-normal">提交订单</span></li>
+              <li class="bgborder"><i class="all-border"></i></li>
+              <li><i class="flow-normal"></i><span class="font-normal">审批</span></li>
+              <li class="bgborder"><i class="half-border"></i></li>
+              <li><i class="flow-unhappen"></i><span>付款</span></li>
+              <li class="bgborder"></li>
+              <li><i class="flow-unhappen"></i><span>完成</span></li>
+           </ul>
+         </div>
+         
+         <div class="trackingBtn" style="margin-right:130px;">
+           <span class="trackingBtn-fold toggle_trigger" data-toggle='{"target":"#flowDetail-info02","textFilter":"em","toggleClass":["trackingBtn-unfold","trackingBtn-fold"],"toggleText":["订单跟踪","收起"]}'><em>收起</em><i></i></span>
+           <span class="trackingBtn-unfold" style="display:none"><em>订单跟踪</em><i></i></span>
+         </div>
+         
+           <div class="trackingMark">
+           <span class="colorMark blueMark"><i class="tgicon"></i>通过</span>
+          </div>
+         
+       </div>
+        <!-- 收起的内容 -->
+          <div class="flowDetail" id="flowDetail-info02">
+              <table class="">
+                <colgroup>
+                   <col width="360px">
+                   <col width="580px">
+                   <col width="130px">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>处理时间</th>
+                    <th>处理信息</th>
+                    <th>操作人</th>
+                  </tr>
+                </thead>
+                <tbody>
+                 <tr>
+                   <td>2014-01-04  14:23:33</td>
+                   <td>订单提交</td>
+                   <td>潘小美</td>
+                 </tr>
+                 <tr>
+                   <td>2014-01-04  14:23:33</td>
+                   <td>订单按审批路径拆分完毕,进入待审批状态</td>
+                   <td>真旅差旅系统</td>
+                 </tr>
+                 <tr>
+                   <td>2014-01-04  14:23:33</td>
+                   <td>审批通过,进入下一级待审批状态 </td>
+                   <td>付丽红</td>
+                 </tr>
+                 <tr>
+                   <td>2014-01-04  14:23:33</td>
+                   <td>审批通过,进入下一级待审批状态 </td>
+                   <td>王小光</td>
+                 </tr>
+                 <tr>
+                   <td>2014-01-04  14:23:33</td>
+                   <td>审批通过,进入待支付状态</td>
+                   <td>田笑丽</td>
+                 </tr>
+                 <tr>
+                   <td>2014-01-04  14:23:33</td>
+                   <td>按月结算客户,自动进入订单处理状态</td>
+                   <td>真旅差旅系统</td>
+                 </tr>
+                </tbody>
+          </table>
+          </div>
+        <!-- 收起的内容 结束-->
+        
+          <div class="airticket_info" style="border-top:2px solid #ededed;">
+            <div class="airticket-place">
+                <span>2013-12-17</span>
+                <span><strong>纽约</strong><em>—</em><i class="transfer oneTransfer">1程中转</i><em>—</em><strong>北京</strong></span>
+				<span>香港</span>
+            </div>
+            
+            <div class="airplane-info">
+              <span style="margin-top:-5px;" id="manyAirName"><i class="airLogo" title="多家航空公司"></i><em>多家航空公司</em><em>CZ6437</em><em>机型</em><em>333（大）</em><em>经济舱</em></span>
+              <span class="flightTime"><b>起飞：</b><em>07:40</em><em>北京</em><em>首都机场</em></span>
+              <span class="flightTime"><b>到达：</b><em>10:25</em><em>纽约</em><em>纽瓦克机场</em></span>
+            </div>
+            
+            <div class="airplane-price">
+             <span><em>单程票价：</em><em style="color:#f94037">￥</em><em class="red-price">688</em></span>
+             <span><em>机建 + 燃油：</em><em>50+120</em><em>元</em></span>
+            </div>
+            
+            <div class="airplane-number">
+             <span>X<em class="number">3</em>张</span>
+            </div>
+            
+            <div class="ticket-state">
+              <button type="button" class="BlueBtn"><i class="haveTicket"></i>有票</button>
+            </div>
+           
+         </div>  
+           
+           <!-- 乘机人信息 -->
+         <div class="guest-info">
+            <div class="guest-infoLeft">
+              <span>乘机人信息：</span><span>航空意外险：￥20/份</span>
+            </div>
+            <div class="guest-infoRight">
+                <ul class="guestUlRow guestUl-last">
+                  <li class="liHoverOn"><span>李大川【技术部】</span><span>保险 X 1</span></li>
+                  <li class="liHoverOn"><span>李大川【技术部】</span><span>保险 X 1</span></li>
+                  <li class="liHoverOn end">
+                     <span>王小二【技术部】</span><span>保险 X 1</span>
+                  </li>
+                </ul>
+            </div>
+            </div>
+           </div>  
+        
+       </div>
+       
+       <div class="relate-order">
+       <button type="button" class="commonBtn lightBlueBtn commonBtn-journey" >查看关联子订单</button>
+       </div>
+         
+       </div>
+  
+         
+        
+            
+    </section>
+    
+    <footer class="main-footer">
+     <!-- 结算总价 -->
+      <div class="totalPrice" id="totalP">
+       <div class="totalPriceBar">
+        <div class="totalPriceLeft">
+           <span>总价：<em>￥</em><em class="redPrice">688</em></span>
+           <span>行程订单编号：<em>XC19830610</em></span>
+        </div>
+        <div class="totalPriceRight">
+        <button type="button" class="commonBtn lightRedBtn btn-fontsize ac-return" style="margin-right:30px; ">退 回</button>
+        <button type="button" class="commonBtn lightBlueBtn btn-fontsize" >通 过</button>
+<!--        <button type="button" class="commonBtn deepGreenBtn btn-fontsize disable" >通 过</button>
+-->        </div>
+       </div>
+      </div>
+      
+    <!--<div class="totalPrice" id="totalP">
+       <div class="totalPriceBar">
+        <div class="totalPriceLeft">
+           <span class="redFont">总价：<em>￥</em><em class="redPrice">688</em></span>
+           <span>行程订单编号：<em>XC19830610</em></span>
+        </div>
+        <div class="totalPriceRight">
+             <button type="button" class="commonBtn orangeBtn btn-fontsize" >关 闭</button>
+        </div>
+       </div>
+      </div>-->
+        <p class="copyright">Copyright &copy; 2013 天地行 All Rights Reserved.     沪ICP备08101503号</p>
+    </footer>
+</div>
+    	 	
+     <!-- 个人信息名片 不符合-->
+     <script id="personBoxTemplate" type="text/html" >
+	  <div class="personalBox">
+       <div class="personalBox-left">
+          <p>姓名：<em>王小二</em></p>
+          <p>部门：<em>技术部</em></p>
+          <p>身份证号码：<em>32083919880902788</em></p>
+          <p>移动电话：<em>13918786997</em></p>
+          <p style="color:red;">*违背差旅政策原因</p>
+          <p>陪同领导出行，房型不合适</p>
+       </div>
+       <div class="personalBox-right">
+         <div class="picarea">
+		   <span class="boyPic"></span>
+         </div>
+       </div>
+	   </div>
+     </script>
+     
+      <!-- 个人信息名片 审批人approver-->
+     <script id="approverBoxTemplate" type="text/html" >
+	  <div class="personalBox">
+       <div class="personalBox-left">
+          <p>姓名：<em>王小二</em></p>
+          <p>部门：<em>技术部</em></p>
+          <p>身份证号码：<em>32083919880902788</em></p>
+          <p>移动电话：<em>13918786997</em></p>
+       </div>
+       <div class="personalBox-right">
+         <div class="picarea">
+		   <span class="boyPic"></span>
+         </div>
+       </div>
+	   </div>
+     </script>    
+     
+     
+     <!-- 个人信息名片 符合-->
+    <script id="personBoxTemplate" type="text/html" >
+//	  <div class="personalBox">
+//       <div class="personalBox-left">
+//          <p>姓名：<em>王小二</em></p>
+//          <p>部门：<em>技术部</em></p>
+//          <p>身份证号码：<em>32083919880902788</em></p>
+//          <p>移动电话：<em>13918786997</em></p>
+//          <p>陪同领导出行，房型不合适</p>
+//       </div>
+//       <div class="personalBox-right">
+//         <div class="picarea">
+//		   <span class="girlPic"></span>
+//         </div>
+//       </div>
+//	   </div>
+//     </script>    
+    
+     
+<script type="text/x-kendo-template" id="ac-return-template">		
+		<h3 class="remarkTitle">备注</h3>
+		<div class="remContent">
+		     <textarea>请输入原因……</textarea>
+			 <em>0/50</em>
+		</div>
+		<div class="row row-btns">
+			<a href="javascript:;" class="btns btn-s2 btn-c1" style="font-size:16px;">提 &nbsp; 交</a>
+		</div>
+</script>
+
+<script type="text/javascript">
+
+        $(function(){
+			
+			new PopWindow('.ac-return',{
+				title:'退回订单',
+				template:'#ac-return-template',
+				width:500
+			}).init();
+			
+        });
+</script>
+<!--关联子订单-->
+ 
+<div  id="relate-order" style="display:none">
+ <div class="tipsItem" style="margin-top:-10px">
+   <div class="checkJourney color_white" style="padding:0;">
+   <div class="suborderTit"><span class="waitApprove">待<strong>李大川</strong>或<strong>王小二</strong>审批</span>子订单编号：<em>XC19830610-1</em></div>
+   <div class="orderTracking">
+     <div class="trackingFlow">
+       <ul>
+          <li><i class="bground"></i><span class="liFirst">提交订单</span></li>
+          <li><i class="bgborder"></i></li>
+          <li class="current"><i class="current"></i><span class="currentFont currentSize">退回</span></li>
+       </ul>
+     </div>
+     <div class="returnReason">
+       <b>退回原因：</b>这里控制最多50字，这里原因文字原因文字原因文字原因文字原因文字原因文字原因文字原因文字原因文字原因文字原因文字原因文字原因文字原因文字原因文字....
+     </div>        
+      
+      <div class="trackingMark">
+       <span class="colorMark orangeMark"><i class="qxicon"></i>退回</span>
+      </div>
+     
+   </div>
+   
+      <div class="airticket_info" style="border-top:2px solid #ededed;">
+        <div class="airticket-place">
+            <span><strong>北京</strong><em>——</em><strong>西安</strong></span>
+            <span>2013-12-17</span>
+        </div>
+        
+        <div class="airplane-info">
+          <span style="margin-top:-5px;"><i class="logo_MU" title="南方航空"></i><em>南方航空</em><em>CZ6437</em><em>机型</em><em>333（大）</em><em>经济舱</em></span>
+          <span class="flightTime"><b>起飞：</b><em>07:40</em><em>北京</em><em>首都机场</em></span>
+          <span class="flightTime"><b>到达：</b><em>10:25</em><em>纽约</em><em>纽瓦克机场</em></span>
+        </div>
+        
+        <div class="airplane-price">
+         <span><em>单程票价：</em><em style="color:#f94037">￥</em><em class="red-price">688</em></span>
+         <span><em>机建 + 燃油：</em><em>50+120</em><em>元</em></span>
+        </div>
+        
+        <div class="airplane-number">
+         <span>X<em class="number">3</em>张</span>
+        </div>
+        
+        <div class="ticket-state">
+          <button type="button" class="BlueBtn"><i class="haveTicket"></i>有票</button>
+        </div>
+       
+     </div>  
+       
+       <!-- 乘机人信息 -->
+     <div class="guest-info">
+        <div class="guest-infoLeft">
+          <span>乘机人信息：</span><span>航空意外险：￥20/份</span>
+        </div>
+        <div class="guest-infoRight">
+            <ul class="guestUlRow guestUl-last">
+              <li class=""><span>李大川【技术部】</span><span>保险 X 1<em class="free-send">免费赠送</em></span></li>
+              <li class="end">
+                 <span class="remarkBack">不符合差旅政策</span>
+                 <span>王小二【技术部】</span><span>保险 X 1</span>
+              </li>
+            </ul>
+        </div>
+       </div>
+   </div>
+  </div>
+<!--第二个订单-->
+  <div class="tipsItem">
+   <div class="checkJourney color_white" style="padding:0;">
+   <div class="suborderTit"><span class="waitApprove">待<strong>李大川</strong>或<strong>王小二</strong>审批</span>子订单编号：<em>XC19830610-1</em></div>
+   <div class="orderTracking">
+     <div class="trackingFlow">
+         <ul>
+              <li><i class="bground"></i><span class="liFirst">提交订单</span></li>
+              <li><i class="bgborder"></i></li>
+              <li><i class="flow-normal"></i><span class="currentFontt-pass currentSize">审批</span></li>
+              <li><i class="bgborder"></i></li>
+              <li><i class="bground"></i><span>付款</span></li>
+              <li><i class="bgborder"></i></li>
+              <li><i class="bground"></i><span>完成</span></li>
+              
+           </ul>
+     </div>
+          
+      
+      <div class="trackingMark">
+       <span class="colorMark greenMark"><i class="tgicon"></i>通过</span>
+      </div>
+     
+   </div>
+   
+      <div class="airticket_info" style="border-top:2px solid #ededed;">
+        <div class="airticket-place">
+            <span><strong>北京</strong><em>——</em><strong>西安</strong></span>
+            <span>2013-12-17</span>
+        </div>
+        
+        <div class="airplane-info">
+          <span style="margin-top:-5px;"><i class="logo_MU" title="南方航空"></i><em>南方航空</em><em>CZ6437</em><em>机型</em><em>333（大）</em><em>经济舱</em></span>
+          <span class="flightTime"><b>起飞：</b><em>07:40</em><em>北京</em><em>首都机场</em></span>
+          <span class="flightTime"><b>到达：</b><em>10:25</em><em>纽约</em><em>纽瓦克机场</em></span>
+        </div>
+        
+        <div class="airplane-price">
+         <span><em>单程票价：</em><em style="color:#f94037">￥</em><em class="red-price">688</em></span>
+         <span><em>机建 + 燃油：</em><em>50+120</em><em>元</em></span>
+        </div>
+        
+        <div class="airplane-number">
+         <span>X<em class="number">3</em>张</span>
+        </div>
+        
+        <div class="ticket-state">
+          <button type="button" class="BlueBtn"><i class="haveTicket"></i>有票</button>
+        </div>
+       
+     </div>  
+       
+       <!-- 乘机人信息 -->
+     <div class="guest-info">
+        <div class="guest-infoLeft">
+          <span>乘机人信息：</span><span>航空意外险：￥20/份</span>
+        </div>
+        <div class="guest-infoRight">
+            <ul class="guestUlRow guestUl-last">
+              <li class=""><span>李大川【技术部】</span><span>保险 X 1<em class="free-send">免费赠送</em></span></li>
+              <li class="end">
+                 <span class="remarkBack">不符合差旅政策</span>
+                 <span>王小二【技术部】</span><span>保险 X 1</span>
+              </li>
+            </ul>
+        </div>
+       </div>
+   </div>
+  </div>
+  
+  
+</div>
+<!--关联子订单 结束-->
+
+
+
+<script type="text/javascript">
+
+        $(function(){
+			new PopWindow('.relate-order',{
+				title:'关联子订单',
+				width:1000
+			},"#relate-order").init();
+        });
+</script>
+
+
+
+<script>
+	$(function(){
+			  
+		$(".flight-item .linkA").kendoTooltip({
+			position:"bottom", //left right top
+			content:function(){
+				return "退票：仅退基建燃油费，机票款不退<br>废票：每张收取N元费用<br>更改：不得改期、升舱<br>签转：不允许签转<br>备注：";
+			},
+			offsetY:10
+			
+		});
+		$(".airplane-info #manyAirName").kendoTooltip({
+				position:"bottom", //left right top
+				wrapperClass:"lineWeight",
+				content:function(){
+					return $("#airLogo").html();
+				},
+				offsetY:8,
+				offsetX:-83,				
+			});
+	    $(".airticket-place .oneTransfer").kendoTooltip({
+				position:"bottom", //left right top
+				wrapperClass:"lineWeight",
+				width:320,
+				content:function(){
+					return $("#oneTransfer").html();
+				},
+				offsetY:10				
+			});
+			
+			$(".airticket-place .twiceTransfer").kendoTooltip({
+				position:"bottom", //left right top
+				wrapperClass:"lineWeight",
+				width:320,
+				content:function(){
+					return $("#twiceTransfer").html();
+				},
+				offsetY:10				
+			});
+	});
+	
+	$('#totalP').fixedBar({
+            inverse:true
+        });
+</script>
+<script type="text/x-kendo-template" id="oneTransfer">
+	<table class="transferList">
+	       <colgroup>
+                 <col width="40px"/>
+                 <col width="140px"/>
+                 <col width="140px"/>
+           </colgroup>
+           <tr>
+               <th>中转</th>
+               <td>香港（香港国际机场）</td>
+               <td>停留时长：2小时15分</td>
+           </tr>
+	</table>	
+</script>
+
+<script type="text/x-kendo-template" id="twiceTransfer">
+	<table class="transferList">
+	       <colgroup>
+                 <col width="40px"/>
+                 <col width="140px"/>
+                 <col width="140px"/>
+           </colgroup>
+           <tr>
+               <th>中转</th>
+               <td>香港（香港国际机场）</td>
+               <td>停留时长：2小时15分</td>
+           </tr>
+		   <tr>
+               <th>经停</th>
+               <td>东京（东京国际机场）</td>
+               <td>停留时长：2小时15分</td>
+           </tr>
+	</table>	
+</script>
+<script type="text/x-kendo-template" id="airLogo">
+	<table class="moreAirCon">
+	       <colgroup>
+                 <col width="30px"/>
+                 <col width="65px"/>
+                 <col width="70px"/>
+                 <col width="70px"/>
+           </colgroup>
+           <tr>
+               <td><code></code></td>
+               <td>中国国航</td>
+               <td><b>CA1835</b></td>
+               <td>机型 777</td>
+           </tr>
+           <tr>
+               <td><code></code></td>
+               <td>荷兰航空</td>
+               <td><b>MU5137</b></td>
+               <td>机型 333</td>
+           </tr>
+	</table>	
+</script>	
+
+<script>
+
+    $(function(){
+		
+			var layer = FloatLayer({
+                trigger: $('.liHoverOn'),
+				type:"hover",
+                offsetY:80,
+				offsetX:0,
+                template:'#personBoxTemplate'
+            });
+			
+			var layer = FloatLayer({
+                trigger: $('.bHoverOn'),
+				type:"hover",
+                offsetY:18,
+				offsetX:0,
+                template:'#approverBoxTemplate'
+            });
+		
+	});
+</script>
+
+</body>
+</html>

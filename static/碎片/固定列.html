@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>表格浮动</title>
+        <link rel="stylesheet" href="/static/css/kendo.common.css" />
+        <link rel="stylesheet" href="/static/css/kendo.gray.css" />
+        <link rel="stylesheet" href="/static/css/kendo.reset.css" />
+
+        <link href="/static/css/common.css" rel="stylesheet" type="text/css" />
+        <link href="/static/css/b2b.css" rel="stylesheet" type="text/css" />
+
+        <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/static/js/kendo.web.js"></script>
+        <script type="text/javascript" src="/static/js/global.js"></script>
+        <script type="text/javascript" src="/static/js/fixcol.js"></script>
+
+        <style type="text/css">
+            .priror {position:relative;}
+        </style>
+        <script type="text/javascript">
+            $(function(){
+                f = new FixCol({wrapClass:".scroll",hightlightClick:true,width:100});
+                f2 = new FixCol({wrapClass:".scroll2",hightlightClick:true,width:100,autoWrap:true});
+
+                window.test_resize = function(){
+                    f.resize();
+                };
+
+                $(".scroll2 a").click(function(){
+                    console.log("click scroll2 a ");
+                });
+
+
+
+new GridTable('#g2 .grid-table',{
+dataSource: [
+{
+            c1:222,
+            c2:333,
+            c3:"11,321,321.00",
+            c4:"xxx",
+            c5:"xxx",
+            c6:"2013-12-12",
+            c7:"张三",
+            c8:"2013-12-12",
+            c9:"张三"
+            },
+{
+            c1:222,
+            c2:333,
+            c3:"11,321,321.00",
+            c4:"xxx",
+            c5:"xxx",
+            c6:"2013-12-12",
+            c7:"张三",
+            c8:"2013-12-12",
+            c9:"张三"
+            },
+{
+            c1:222,
+            c2:333,
+            c3:"11,321,321.00",
+            c4:"xxx",
+            c5:"xxx",
+            c6:"2013-12-12",
+            c7:"张三",
+            c8:"2013-12-12",
+            c9:"张三"
+            },
+{
+            c1:222,
+            c2:333,
+            c3:"11,321,321.00",
+            c4:"xxx",
+            c5:"xxx",
+            c6:"2013-12-12",
+            c7:"张三",
+            c8:"2013-12-12",
+            c9:"张三"
+            },
+{
+            c1:222,
+            c2:333,
+            c3:"11,321,321.00",
+            c4:"xxx",
+            c5:"xxx",
+            c6:"2013-12-12",
+            c7:"张三",
+            c8:"2013-12-12",
+            c9:"张三"
+            },
+{
+            c1:222,
+            c2:333,
+            c3:"11,321,321.00",
+            c4:"xxx",
+            c5:"xxx",
+            c6:"2013-12-12",
+            c7:"张三",
+            c8:"2013-12-12",
+            c9:"张三"
+            },
+{
+            c1:222,
+            c2:333,
+            c3:"11,321,321.00",
+            c4:"xxx",
+            c5:"xxx",
+            c6:"2013-12-12",
+            c7:"张三",
+            c8:"2013-12-12",
+            c9:"张三"
+            },
+{
+            c1:222,
+            c2:333,
+            c3:"11,321,321.00",
+            c4:"xxx",
+            c5:"xxx",
+            c6:"2013-12-12",
+            c7:"张三",
+            c8:"2013-12-12",
+            c9:"张三"
+            },
+{
+            c1:222,
+            c2:333,
+            c3:"11,321,321.00",
+            c4:"xxx",
+            c5:"xxx",
+            c6:"2013-12-12",
+            c7:"张三",
+            c8:"2013-12-12",
+            c9:"张三"
+            },
+{
+            c1:222,
+            c2:333,
+            c3:"11,321,321.00",
+            c4:"xxx",
+            c5:"xxx",
+            c6:"2013-12-12",
+            c7:"张三",
+            c8:"2013-12-12",
+            c9:"张三"
+            },
+{
+            c1:222,
+            c2:333,
+            c3:"11,321,321.00",
+            c4:"xxx",
+            c5:"xxx",
+            c6:"2013-12-12",
+            c7:"张三",
+            c8:"2013-12-12",
+            c9:"张三"
+            },
+{
+            c1:222,
+            c2:333,
+            c3:"11,321,321.00",
+            c4:"xxx",
+            c5:"xxx",
+            c6:"2013-12-12",
+            c7:"张三",
+            c8:"2013-12-12",
+            c9:"张三"
+            },
+{
+            c1:222,
+            c2:333,
+            c3:"11,321,321.00",
+            c4:"xxx",
+            c5:"xxx",
+            c6:"2013-12-12",
+            c7:"张三",
+            c8:"2013-12-12",
+            c9:"张三"
+            },
+{
+            c1:222,
+            c2:333,
+            c3:"11,321,321.00",
+            c4:"xxx",
+            c5:"xxx",
+            c6:"2013-12-12",
+            c7:"张三",
+            c8:"2013-12-12",
+            c9:"张三"
+            },
+{
+            c1:222,
+            c2:333,
+            c3:"11,321,321.00",
+            c4:"xxx",
+            c5:"xxx",
+            c6:"2013-12-12",
+            c7:"张三",
+            c8:"2013-12-12",
+            c9:"张三"
+            },
+{
+            c1:222,
+            c2:333,
+            c3:"11,321,321.00",
+            c4:"xxx",
+            c5:"xxx",
+            c6:"2013-12-12",
+            c7:"张三",
+            c8:"2013-12-12",
+            c9:"张三"
+            },
+{
+            c1:222,
+            c2:333,
+            c3:"11,321,321.00",
+            c4:"xxx",
+            c5:"xxx",
+            c6:"2013-12-12",
+            c7:"张三",
+            c8:"2013-12-12",
+            c9:"张三"
+            },
+{
+            c1:222,
+            c2:333,
+            c3:"11,321,321.00",
+            c4:"xxx",
+            c5:"xxx",
+            c6:"2013-12-12",
+            c7:"张三",
+            c8:"2013-12-12",
+            c9:"张三"
+            },
+{
+            c1:222,
+            c2:333,
+            c3:"11,321,321.00",
+            c4:"xxx",
+            c5:"xxx",
+            c6:"2013-12-12",
+            c7:"张三",
+            c8:"2013-12-12",
+            c9:"张三"
+            },
+{
+            c1:222,
+            c2:333,
+            c3:"11,321,321.00",
+            c4:"xxx",
+            c5:"xxx",
+            c6:"2013-12-12",
+            c7:"张三",
+            c8:"2013-12-12",
+            c9:"张三"
+            },
+{
+            c1:222,
+            c2:333,
+            c3:"11,321,321.00",
+            c4:"xxx",
+            c5:"xxx",
+            c6:"2013-12-12",
+            c7:"张三",
+            c8:"2013-12-12",
+            c9:"张三"
+            }
+], 
+
+columns: [
+            { width:300 },
+            { width:180 },
+            { width:180 },
+            { width:120 },
+            { width:120 },
+            { width:180 },
+            { width:180 }
+        ],
+
+    scrollable:true,
+    //height:300,
+    dataBound:function(){
+        console.log('bind');
+        $("a",this.tbody).click(function(){
+            console.log("click GridTable a ");
+        });
+        var m = new FixCol({wrapClass:"#g2",scrollClass:".k-grid-content",hightlightClick:true,width:100,autoWrap:true});
+    },
+        rowTemplate: kendo.template($("#block2-grid-row-template").html())
+    }).init(); 
+
+
+
+                    $("#grid").kendoGrid({
+                        dataSource: {
+                            type: "odata",
+                            transport: {
+                                read: "http://demos.kendoui.com/service/Northwind.svc/Orders"
+                            },
+                            schema: {
+                                model: {
+                                    fields: {
+                                        OrderID: { type: "number" },
+                                        ShipCountry: { type: "string" },
+                                        ShipCity: { type: "string" },
+                                        ShipName: { type: "string" },
+                                        OrderDate: { type: "date" },
+                                        ShippedDate: { type: "date" }
+                                    }
+                                }
+                            },
+                            pageSize: 15
+                        },
+                        dataBound:function(){
+                            console.log('bind2');
+                            var m2 = new FixCol({wrapClass:"#grid",scrollClass:".k-grid-content",hightlightClick:true,width:100,autoWrap:true});
+                        },
+                        height: 430,
+                        sortable: true,
+                        scrollable: true,
+                        //resizable: true,
+                        pageable: true,
+                        columns: [
+                            {
+                                field: "OrderDate",
+                                title: "Order Date",
+                                width: 110,
+                                format: "{0:MM/dd/yyyy}"
+                            },
+                            {
+                                field: "OrderDate",
+                                title: "Order Date222",
+                                width: 110,
+                                format: "{0:MM/dd/yyyy}"
+                            },
+                            {
+                                field: "OrderDate",
+                                title: "Order Date333",
+                                width: 110,
+                                format: "{0:MM/dd/yyyy}"
+                            },
+                            {
+                                field: "OrderDate",
+                                title: "Order Date444",
+                                width: 300,
+                                format: "{0:MM/dd/yyyy}"
+                            },
+                            {
+                                field: "ShipCountry",
+                                title: "Ship Country",
+                                width: 110
+                            },
+                            {
+                                field: "ShipCity",
+                                title: "Ship City",
+                                width: 110
+                            },
+                            {
+                                field: "ShipName",
+                                title: "Ship Name",
+                                width: 200
+                            },
+                            {
+                                field: "ShippedDate",
+                                title: "Shipped Date",
+                                format: "{0:MM/dd/yyyy}",
+                                width: 120 
+                            },
+                            {
+                                field: "OrderID",
+                                title: "ID",
+                                width: 100
+                            }
+                        ]
+                    });
+            });
+
+            
+        </script> 
+    </head>
+    <body style="background-color:#fff;">
+
+        <h1>测试表格</h1>
+        <h1>测试表格</h1>
+        <h1>测试表格</h1>
+        <h1>测试表格</h1>
+        <h1>测试表格</h1>
+        <h1>测试表格</h1>
+
+        <div id="container" style="margin-top:0px;">
+            <div id="mainContent">
+                <pre>
+                    <code>
+    引用  &lt;script type="text/javascript" src="http://static.b2b.com/js/fixcol.js"&gt;&lt;/script&gt;
+    defaults : {
+		wrapClass: ".scroll",  // 包裹元素
+        scrollClass: "",       // 滚动元素 ，如果包裹元素和滚动元素为同一个，可以设置为空
+        autoWrap : true,//自动包裹,默认true ,则自动产生包裹元素最后列的元素 div 中
+		hightlightClick: false,    //是否启用 行鼠标点击 高亮并选中，默认将选择改行中的 checkbox , 如果希望覆盖默认选择中行为，则传如自定义函数即可
+        hightlightCallback:function(event){
+            $("input[type='checkbox']",event.currentTarget).each(function(){
+                $(this).prop("checked",!$(this).prop("checked"));
+            });
+        },
+        width:80, // 固定列宽度
+
+        //奇偶数 换色，一般不需要配置
+        rowBgColor:{
+            thead:{
+               even:"#e4e4e4",
+               odd:"#e4e4e4"
+            },
+            tbody:{
+                even: "#ffffff",
+                odd:"#f0f0f0"
+            }
+        },
+        //固定列做边框色值
+        borderLeft:"1px solid #E0E0E0"
+	}
+
+    调用范例:
+            var f = new FixCol({wrapClass:".scroll",hightlightClick:true,width:100});
+            var f2 = new FixCol({wrapClass:".scroll2",hightlightClick:true,width:100,autoWrap:true});
+            var m = new FixCol({wrapClass:"#g2",scrollClass:".k-grid-content",hightlightClick:true,width:100,autoWrap:true});
+                    </code>
+                </pre>
+                <h2>示例1 HTML 页面表格</h2>
+                <button type="submit" name="a" onclick="test_resize();">重新适应</button>
+                <div class="scroll" style="position:relative;">
+                    <table style="width:120%;" class="tgrid">
+                        <thead>
+                            <tr>
+                                <th class="line_left"><input type="checkbox" name="checkall"></th>
+                                <th>订单号</th>
+                                <th>PNR</th>
+                                <th width="75px">预定时间</th>
+                                <th>效率</th>
+                                <th>航班号</th>
+                                <th>客户名称</th>
+                                <th>旅客</th>
+                                <th>航程</th>
+                                <th width="75px">起飞时间</th>
+                                <th>应收合计</th>
+                                <th>票款</th>
+                                <th>税款</th>
+                                <th>返点</th>
+                                <th>供应商</th>
+                                <th>订单来源</th>
+                                <th>业务类型</th>
+                                <th>处理人</th>
+                                <th>流程状态</th>
+                                <th class="line_right">
+                                    操作
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="pink_bg">
+                                <td><input type="checkbox" name="rule"></td>
+                                <td>
+                                    <div class="priror">
+                                        <a href="#">030312103112260001</a> <i class="position_red">&nbsp;</i>
+                                    </div>
+                                </td>
+                                <td><div class="priror"><span>JY4WF</span> <i class="position_red">&nbsp;</i>
+                                </div></td>
+                                <td>2010-09-01<br>20:00</td>
+                                <td> </td>
+                                <td>CZ3524</td>
+                                <td>华敏票务</td>
+                                <td>成人</td>
+                                <td>单程</td>
+                                <td>2010-08-12<br>14:00</td>
+                                <td>5500.00</td>
+                                <td>4500.00</td>
+                                <td>500.00</td>
+                                <td>5%+100</td>
+                                <td>不夜城</td>
+                                <td>采购白屏</td>
+                                <td>普通</td>
+                                <td>张三</td>
+                                <td>提交</td>
+                                <td>
+                                    <div class="fixable">
+                                        <a href="javascript:void(0);">受理</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hui_bg">
+                                <td><input type="checkbox" name="rule"></td>
+                                <td><a href="#">030312103112260001</a></td>
+                                <td>JY4WF</td>
+                                <td>2010-09-01<br>20:00</td>
+                                <td> </td>
+                                <td>CZ3524</td>
+                                <td>华敏票务</td>
+                                <td>成人</td>
+                                <td>单程</td>
+                                <td>2010-08-12<br>14:00</td>
+                                <td>5500.00</td>
+                                <td>4500.00</td>
+                                <td>500.00</td>
+                                <td>5%+100</td>
+                                <td>不夜城</td>
+                                <td>采购白屏</td>
+                                <td>普通</td>
+                                <td>张三</td>
+                                <td>提交</td>
+                                <td>
+                                    <div class="fixable">
+                                        <a href="javascript:void(0);">取消受理</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="rule"></td>
+                                <td><a href="#">030312103112260001</a></td>
+                                <td>JY4WF</td>
+                                <td>2010-09-01<br>20:00</td>
+                                <td> </td>
+                                <td>CZ3524</td>
+                                <td>华敏票务</td>
+                                <td>成人</td>
+                                <td>单程</td>
+                                <td>2010-08-12<br>14:00</td>
+                                <td>5500.00</td>
+                                <td>4500.00</td>
+                                <td>500.00</td>
+                                <td>5%+100</td>
+                                <td>不夜城</td>
+                                <td>采购白屏</td>
+                                <td>普通</td>
+                                <td>张三</td>
+                                <td>提交</td>
+                                <td>
+                                    <div class="fixable">
+                                        <a href="javascript:void(0);">受理</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hui_bg">
+                                <td><input type="checkbox" name="rule"></td>
+                                <td><a href="#">030312103112260001</a></td>
+                                <td>JY4WF</td>
+                                <td>2010-09-01<br>20:00</td>
+                                <td> </td>
+                                <td>CZ3524</td>
+                                <td>华敏票务</td>
+                                <td>成人</td>
+                                <td>单程</td>
+                                <td>2010-08-12<br>14:00</td>
+                                <td>5500.00</td>
+                                <td>4500.00</td>
+                                <td>500.00</td>
+                                <td>5%+100</td>
+                                <td>不夜城</td>
+                                <td>采购白屏</td>
+                                <td>普通</td>
+                                <td>张三</td>
+                                <td>提交</td>
+                                <td>
+                                    <div class="fixable">
+                                        <a href="javascript:void(0);">受理</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="rule"></td>
+                                <td><a href="#">030312103112260001</a></td>
+                                <td>JY4WF</td>
+                                <td>2010-09-01<br>20:00</td>
+                                <td> </td>
+                                <td>CZ3524</td>
+                                <td>华敏票务</td>
+                                <td>成人</td>
+                                <td>单程</td>
+                                <td>2010-08-12<br>14:00</td>
+                                <td>5500.00</td>
+                                <td>4500.00</td>
+                                <td>500.00</td>
+                                <td>5%+100</td>
+                                <td>不夜城</td>
+                                <td>采购白屏</td>
+                                <td>普通</td>
+                                <td>张三</td>
+                                <td>提交</td>
+                                <td>
+                                    <div class="fixable">
+                                        <a href="javascript:void(0);">受理</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hui_bg">
+                                <td><input type="checkbox" name="rule"></td>
+                                <td><a href="#">030312103112260001</a></td>
+                                <td>JY4WF</td>
+                                <td>2010-09-01<br>20:00</td>
+                                <td> </td>
+                                <td>CZ3524</td>
+                                <td>华敏票务</td>
+                                <td>成人</td>
+                                <td>单程</td>
+                                <td>2010-08-12<br>14:00</td>
+                                <td>5500.00</td>
+                                <td>4500.00</td>
+                                <td>500.00</td>
+                                <td>5%+100</td>
+                                <td>不夜城</td>
+                                <td>采购白屏</td>
+                                <td>普通</td>
+                                <td>张三</td>
+                                <td>提交</td>
+                                <td>
+                                    <div class="fixable">
+                                        <a href="javascript:void(0);">受理</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="rule"></td>
+                                <td><a href="#">030312103112260001</a></td>
+                                <td>JY4WF</td>
+                                <td>2010-09-01<br>20:00</td>
+                                <td> </td>
+                                <td>CZ3524</td>
+                                <td>华敏票务</td>
+                                <td>成人</td>
+                                <td>单程</td>
+                                <td>2010-08-12<br>14:00</td>
+                                <td>5500.00</td>
+                                <td>4500.00</td>
+                                <td>500.00</td>
+                                <td>5%+100</td>
+                                <td>不夜城</td>
+                                <td>采购白屏</td>
+                                <td>普通</td>
+                                <td>张三</td>
+                                <td>提交</td>
+                                <td>
+                                    <div class="fixable">
+                                        <a href="javascript:void(0);">受理</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hui_bg">
+                                <td><input type="checkbox" name="rule"></td>
+                                <td><a href="#">030312103112260001</a></td>
+                                <td>JY4WF</td>
+                                <td>2010-09-01<br>20:00</td>
+                                <td> </td>
+                                <td>CZ3524</td>
+                                <td>华敏票务</td>
+                                <td>成人</td>
+                                <td>单程</td>
+                                <td>2010-08-12<br>14:00</td>
+                                <td>5500.00</td>
+                                <td>4500.00</td>
+                                <td>500.00</td>
+                                <td>5%+100</td>
+                                <td>不夜城</td>
+                                <td>采购白屏</td>
+                                <td>普通</td>
+                                <td>张三</td>
+                                <td>提交</td>
+                                <td>
+                                    <div class="fixable">
+                                        <a href="javascript:void(0);">受理</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="rule"></td>
+                                <td><a href="#">030312103112260001</a></td>
+                                <td>JY4WF</td>
+                                <td>2010-09-01<br>20:00</td>
+                                <td> </td>
+                                <td>CZ3524</td>
+                                <td>华敏票务</td>
+                                <td>成人</td>
+                                <td>单程</td>
+                                <td>2010-08-12<br>14:00</td>
+                                <td>5500.00</td>
+                                <td>4500.00</td>
+                                <td>500.00</td>
+                                <td>5%+100</td>
+                                <td>不夜城</td>
+                                <td>采购白屏</td>
+                                <td>普通</td>
+                                <td>张三</td>
+                                <td>提交</td>
+                                <td>
+                                    <div class="fixable">
+                                        <a href="javascript:void(0);">受理</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hui_bg">
+                                <td><input type="checkbox" name="rule"></td>
+                                <td><a href="#">030312103112260001</a></td>
+                                <td>JY4WF</td>
+                                <td>2010-09-01<br>20:00</td>
+                                <td> </td>
+                                <td>CZ3524</td>
+                                <td>华敏票务</td>
+                                <td>成人</td>
+                                <td>单程</td>
+                                <td>2010-08-12<br>14:00</td>
+                                <td>5500.00</td>
+                                <td>4500.00</td>
+                                <td>500.00</td>
+                                <td>5%+100</td>
+                                <td>不夜城</td>
+                                <td>采购白屏</td>
+                                <td>普通</td>
+                                <td>张三</td>
+                                <td>提交</td>
+                                <td>
+                                    <div class="fixable">
+                                        <a href="javascript:void(0);">受理</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+                <h2>示例 2 自动包裹</h2>
+                <div class="scroll2" style="position:relative;overflow-x:scroll;overflow-y:hidden;">
+                    <table class="tgrid" style="width:1200px;">
+                        <tbody>
+                            <tr class="pink_bg">
+                                <td><input type="checkbox" name="rule"></td>
+                                <td>
+                                    <div class="priror">
+                                        <a href="#">030312103112260001</a> <i class="position_red">&nbsp;</i>
+                                    </div>
+                                </td>
+                                <td><div class="priror"><span>JY4WF</span> <i class="position_red">&nbsp;</i>
+                                </div></td>
+                                <td>2010-09-01<br>20:00</td>
+                                <td> </td>
+                                <td>CZ3524</td>
+                                <td>华敏票务</td>
+                                <td>成人</td>
+                                <td>单程</td>
+                                <td>2010-08-12<br>14:00</td>
+                                <td>5500.00</td>
+                                <td>4500.00</td>
+                                <td>500.00</td>
+                                <td>5%+100</td>
+                                <td>不夜城</td>
+                                <td>采购白屏</td>
+                                <td>普通</td>
+                                <td>张三</td>
+                                <td>提交</td>
+                                <td>
+                                        <a href="javascript:void(0);">受理</a>
+                                </td>
+                            </tr>
+                            <tr class="hui_bg">
+                                <td><input type="checkbox" name="rule"></td>
+                                <td><a href="#">030312103112260001</a></td>
+                                <td>JY4WF</td>
+                                <td>2010-09-01<br>20:00</td>
+                                <td> </td>
+                                <td>CZ3524</td>
+                                <td>华敏票务</td>
+                                <td>成人</td>
+                                <td>单程</td>
+                                <td>2010-08-12<br>14:00</td>
+                                <td>5500.00</td>
+                                <td>4500.00</td>
+                                <td>500.00</td>
+                                <td>5%+100</td>
+                                <td>不夜城</td>
+                                <td>采购白屏</td>
+                                <td>普通</td>
+                                <td>张三</td>
+                                <td>提交</td>
+                                <td>
+                                        <a href="javascript:void(0);">取消受理</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="rule"></td>
+                                <td><a href="#">030312103112260001</a></td>
+                                <td>JY4WF</td>
+                                <td>2010-09-01<br>20:00</td>
+                                <td> </td>
+                                <td>CZ3524</td>
+                                <td>华敏票务</td>
+                                <td>成人</td>
+                                <td>单程</td>
+                                <td>2010-08-12<br>14:00</td>
+                                <td>5500.00</td>
+                                <td>4500.00</td>
+                                <td>500.00</td>
+                                <td>5%+100</td>
+                                <td>不夜城</td>
+                                <td>采购白屏</td>
+                                <td>普通</td>
+                                <td>张三</td>
+                                <td>提交</td>
+                                <td>
+                                        <a href="javascript:void(0);">受理</a>
+                                </td>
+                            </tr>
+                            <tr class="hui_bg">
+                                <td><input type="checkbox" name="rule"></td>
+                                <td><a href="#">030312103112260001</a></td>
+                                <td>JY4WF</td>
+                                <td>2010-09-01<br>20:00</td>
+                                <td> </td>
+                                <td>CZ3524</td>
+                                <td>华敏票务</td>
+                                <td>成人</td>
+                                <td>单程</td>
+                                <td>2010-08-12<br>14:00</td>
+                                <td>5500.00</td>
+                                <td>4500.00</td>
+                                <td>500.00</td>
+                                <td>5%+100</td>
+                                <td>不夜城</td>
+                                <td>采购白屏</td>
+                                <td>普通</td>
+                                <td>张三</td>
+                                <td>提交</td>
+                                <td>
+                                        <a href="javascript:void(0);">受理</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="rule"></td>
+                                <td><a href="#">030312103112260001</a></td>
+                                <td>JY4WF</td>
+                                <td>2010-09-01<br>20:00</td>
+                                <td> </td>
+                                <td>CZ3524</td>
+                                <td>华敏票务</td>
+                                <td>成人</td>
+                                <td>单程</td>
+                                <td>2010-08-12<br>14:00</td>
+                                <td>5500.00</td>
+                                <td>4500.00</td>
+                                <td>500.00</td>
+                                <td>5%+100</td>
+                                <td>不夜城</td>
+                                <td>采购白屏</td>
+                                <td>普通</td>
+                                <td>张三</td>
+                                <td>提交</td>
+                                <td>
+                                        <a href="javascript:void(0);">受理</a>
+                                </td>
+                            </tr>
+                            <tr class="hui_bg">
+                                <td><input type="checkbox" name="rule"></td>
+                                <td><a href="#">030312103112260001</a></td>
+                                <td>JY4WF</td>
+                                <td>2010-09-01<br>20:00</td>
+                                <td> </td>
+                                <td>CZ3524</td>
+                                <td>华敏票务</td>
+                                <td>成人</td>
+                                <td>单程</td>
+                                <td>2010-08-12<br>14:00</td>
+                                <td>5500.00</td>
+                                <td>4500.00</td>
+                                <td>500.00</td>
+                                <td>5%+100</td>
+                                <td>不夜城</td>
+                                <td>采购白屏</td>
+                                <td>普通</td>
+                                <td>张三</td>
+                                <td>提交</td>
+                                <td>
+                                        <a href="javascript:void(0);">受理</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="rule"></td>
+                                <td><a href="#">030312103112260001</a></td>
+                                <td>JY4WF</td>
+                                <td>2010-09-01<br>20:00</td>
+                                <td> </td>
+                                <td>CZ3524</td>
+                                <td>华敏票务</td>
+                                <td>成人</td>
+                                <td>单程</td>
+                                <td>2010-08-12<br>14:00</td>
+                                <td>5500.00</td>
+                                <td>4500.00</td>
+                                <td>500.00</td>
+                                <td>5%+100</td>
+                                <td>不夜城</td>
+                                <td>采购白屏</td>
+                                <td>普通</td>
+                                <td>张三</td>
+                                <td>提交</td>
+                                <td>
+                                        <a href="javascript:void(0);">受理</a>
+                                </td>
+                            </tr>
+                            <tr class="hui_bg">
+                                <td><input type="checkbox" name="rule"></td>
+                                <td><a href="#">030312103112260001</a></td>
+                                <td>JY4WF</td>
+                                <td>2010-09-01<br>20:00</td>
+                                <td> </td>
+                                <td>CZ3524</td>
+                                <td>华敏票务</td>
+                                <td>成人</td>
+                                <td>单程</td>
+                                <td>2010-08-12<br>14:00</td>
+                                <td>5500.00</td>
+                                <td>4500.00</td>
+                                <td>500.00</td>
+                                <td>5%+100</td>
+                                <td>不夜城</td>
+                                <td>采购白屏</td>
+                                <td>普通</td>
+                                <td>张三</td>
+                                <td>提交</td>
+                                <td>
+                                        <a href="javascript:void(0);">受理</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="rule"></td>
+                                <td><a href="#">030312103112260001</a></td>
+                                <td>JY4WF</td>
+                                <td>2010-09-01<br>20:00</td>
+                                <td> </td>
+                                <td>CZ3524</td>
+                                <td>华敏票务</td>
+                                <td>成人</td>
+                                <td>单程</td>
+                                <td>2010-08-12<br>14:00</td>
+                                <td>5500.00</td>
+                                <td>4500.00</td>
+                                <td>500.00</td>
+                                <td>5%+100</td>
+                                <td>不夜城</td>
+                                <td>采购白屏</td>
+                                <td>普通</td>
+                                <td>张三</td>
+                                <td>提交</td>
+                                <td>
+                                        <a href="javascript:void(0);">受理</a>
+                                </td>
+                            </tr>
+                            <tr class="hui_bg">
+                                <td><input type="checkbox" name="rule"></td>
+                                <td><a href="#">030312103112260001</a></td>
+                                <td>JY4WF</td>
+                                <td>2010-09-01<br>20:00</td>
+                                <td> </td>
+                                <td>CZ3524</td>
+                                <td>华敏票务</td>
+                                <td>成人</td>
+                                <td>单程</td>
+                                <td>2010-08-12<br>14:00</td>
+                                <td>5500.00</td>
+                                <td>4500.00</td>
+                                <td>500.00</td>
+                                <td>5%+100</td>
+                                <td>不夜城</td>
+                                <td>采购白屏</td>
+                                <td>普通</td>
+                                <td>张三</td>
+                                <td>提交</td>
+                                <td>
+                                        <a href="javascript:void(0);">受理</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <h2>示例3 动态表格 GridTable 封装</h2>
+                <script type="text/x-kendo-template" id="block2-grid-row-template">
+                    <tr>
+                        <td>#= data.c1 #</td>
+                        <td>#= data.c2 #</td>
+                        <td>#= data.c2 #</td>
+                        <td>#= data.c2 #</td>
+                        <td><span class="text1">#= data.c3 #</span></td>
+                        <td>#= data.c4 #</td>
+                        <td><a href="javascript:void(0)">#= data.c1 #</a></td>
+                    </tr>
+                </script>
+
+                <div id="g2">
+                    <table class="grid-table" >
+                        <tr class="thead">
+                            <th >订单号</th> 
+                            <th >客户名称</th> 
+                            <th >交易日期</th> 
+                            <th >交易类型</th>
+                            <th >交易金额</th>
+                            <th >交易状态</th>
+                            <th >摘要</th>
+                        </tr>
+                    </table>
+                </div>
+
+
+                <h2>原生的 kendo grid table</h2>
+
+                <div id="grid"></div>
+
+            </div>
+        </div>
+
+
+    </body>
+</html>
+

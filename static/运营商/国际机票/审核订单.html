@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>机票 国际机票 审核订单</title>
+        <meta charset="utf-8" />
+        <link href="/static/css/common.css" rel="stylesheet" />
+        <link href="/static/css/b2b.css" rel="stylesheet" />
+        <link href="/static/css/kendo.common.css" rel="stylesheet" />
+        <link href="/static/css/kendo.gray.css" rel="stylesheet" />
+
+<link href="/static/css/kendo.reset.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/static/css/global.css" />
+        <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/static/js/kendo.web.js"></script>
+        <script type="text/javascript" src="/static/js/plugins/jquery.fixedBar.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                    $('.actions').fixedBar();
+                    var lensf = function (){
+                    $.each($('.instr'),function(){
+                        var that = $(this);
+                        if(that.find('.highlight-fl').size()>0){
+                        var ele = that.find('.highlight');
+                        var len = ele.size();
+                        var wid = ele.width()*len + 15;
+                        that.find('.line').prepend('<div style="background-color:#FF6608;height:2px;width:'+wid+'px" />')
+                        }
+                        });
+                    }
+                    lensf();
+                    });
+                </script>
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+                    <!-- @CLB@ --></head><body>  <div id="extHeader">
+                    <div></div>
+                </div>
+
+                <div id="container">
+                    <div class="header">
+                        <h1></h1>
+                        <div>
+                            <span>你好,${name}</span>
+                            <a href="javascript:void(0);">退出</a>
+                        </div>
+                        <ul id="top_menu">
+                            <li><a href="javascript:void(0);">国内机票</a></li>
+                            <li><a href="javascript:void(0);">国际机票</a></li>
+                            <li><a href="javascript:void(0);">酒店</a></li>
+                            <li><a href="javascript:void(0);">票证中心</a></li>
+                            <li><a href="javascript:void(0);">财务管理</a></li>
+                            <li><a href="javascript:void(0);">客户管理</a></li>
+                            <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+                        </ul>
+                        <ol class="sub_menu">
+                            <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                            <li><a href="javascript:void(0);">公司信息</a></li>
+                            <li><a href="javascript:void(0);">组织架构</a></li>
+                            <li><a href="javascript:void(0);">角色维护</a></li>
+                            <li><a href="javascript:void(0);">基础数据</a></li>
+                        </ol>
+                        <div id="message">
+                            <a href="javascript:void(0);">消息</a>
+                            <span>New</span>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div id="sub_menu_bar"></div>
+                    <div id="mainContent">
+                        <link href="/static/css/order.css" rel="stylesheet">
+                        <script src="/static/js/revieworder.js"></script>
+                        <div class="actions block">
+                            <div class="col col-l sep-r">
+                                <button class="btns btn-return">返回</button>
+                            </div>
+                            <div class="col col-r sep-l">
+                                <button class="btns btn-blue">保存</button>
+                                <button class="btns btn-blue">退回</button>
+                                <button class="btns btn-blue">审核通过</button>
+                            </div>
+                        </div>
+
+                        <div class="block block0 clearfix">
+                            <div class="col col-l">
+                                <div class="row">
+                                    <span class="text1">订单号：<strong>12311321983921</strong></span>&nbsp;
+                                    <span class="text2"> - 订单类型：国际机票</span>
+                                </div>
+                                <div class="row">
+                                    <span>最后更新：<em>航班号更改为CZ3609</em></span>&nbsp;&nbsp;<span>更新时间：<em>2013-06-15 11:23 </em></span>&nbsp;&nbsp;<span><a href="#">【更多操作日志】</a></span>
+                                </div>
+                            </div>
+                            <div class="col col-r">
+                                <ul class="flat-list">
+                                    <li>
+                                    <div class="instr clearfix">
+                                        <span class="highlight first">创建</span>
+                                        <span class="highlight highlight-fl">审核</span>
+                                        <span>支付</span>
+                                        <span>出票</span>
+                                        <span>派送</span>
+                                        <span>完成</span>
+                                        <span class="last">取消</span>
+                                        <em class="line">&nbsp;</em>
+                                    </div> 
+                                    </li>
+                                    <li>
+                                    <div class="instr clearfix">
+                                        <span class="first">收款</span>
+                                        <span class="last">结算</span>
+                                        <em class="line">&nbsp;</em>
+                                    </div>
+                                    </li>
+                                    <li class="count"><span>附属订单</span><strong>3</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 订单信息 -->
+                        <div class="block block1 block-module">
+                            <div class="block-title">订单信息</div>
+                            <ul class="flat-list">
+                                <li>
+                                <label class="vertical-head">客户名称</label>
+                                <span>xxx</span>
+                                </li>
+                                <li>
+                                <label class="vertical-head">结算方式</label>
+                                <span><select name=""><option value="">账户余额</option></select></span>
+                                </li>
+                                <li>
+                                <label class="vertical-head">可用余额</label>
+                                <span><strong style="color:#FF6608;">222.00</strong>元</span>
+                                </li>
+                                <li>
+                                <label class="vertical-head">操作员</label>
+                                <span>xxx</span>
+                                </li>
+                                <li>
+                                <label class="vertical-head">联系人</label>
+                                <span>xxx</span>
+                                </li>
+                                <li>
+                                <label class="vertical-head">联系电话</label>
+                                <span>xxx</span>
+                                </li>
+                                <li>
+                                <label class="vertical-head">手机号码</label>
+                                <span>xxx</span>
+                                </li>
+                                <li>&nbsp;</li>
+                                <li>
+                                <label class="vertical-head">三方协议编号</label>
+                                <span>xxx</span>
+                                </li>
+                                <li>
+                                <label class="vertical-head">客户订单编号</label>
+                                <span>xxx</span>
+                                </li>
+                                <li>
+                                <label class="vertical-head">外部订单号</label>
+                                <span>xxx</span>
+                                </li>
+                                <li>
+                                <label class="vertical-head">关联订单号</label>
+                                <span>xxx</span>
+                                </li>
+                                <li>
+                                <label class="vertical-head">建单营业点</label>
+                                <span>xxx</span>
+                                </li>
+                                <li>
+                                <label class="vertical-head">出票营业点</label>
+                                <span>xxx</span>
+                                </li>
+                                <li>&nbsp;</li>
+                                <li>&nbsp;</li>
+                                <li class="col-wide">
+                                <label class="vertical-head">客户备注</label>
+                                <textarea name="">客户填写的备注</textarea>
+                                </li>
+                                <li class="col-wide">
+                                <label style="vertical-align:top" class="vertical-head">内部备注</label>
+                                <textarea name=""></textarea>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="block block2 block-module">
+                            <div class="block-title">
+                                <span class="block-title-orange">航班信息</span>
+                                <span class="block-module-action">
+                                    <button class="btns btn-ac-blue" id="add_flight">添加航班</button> 
+                                    <button class="btns btn-ac-blue" id="copy_flight">复制航班</button> 
+                                </span>
+                            </div> 
+                            <div class="row">
+                                <div id="flight_info_grid">
+                                    <table class="grid-table gj">
+                                        <tr class="thead">
+                                            <td><input type="checkbox" name="flight_all"/></td><td>PNR</td><td>大编码</td><td>新PNR</td><td>新大编码</td><td>离港机场</td><td>到港机场</td><td>航班号</td><td>舱位</td><td>机型</td><td>离港时间</td><td>到港时间</td><td>订座</td><td>预定OFFICE</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="flight"/></td>
+                                            <td><input style="width:55px;" value="JZ4W50"/></td>
+                                            <td><input style="width:55px;" value="MJWM9N"/></td>
+                                            <td><input style="width:55px" /></td>
+                                            <td><input style="width:55px" /></td>
+                                            <td><input style="width:50px;" value="PEK T3"/></td>
+                                            <td><input style="width:50px;" value="PVG T2"/></td>
+                                            <td><input style="width:50px;" value="CZ3609"/></td>
+                                            <td><input style="width:25px;" value="W"/></td>
+                                            <td><input style="width:40px;" value="777"/></td>
+                                            <td><input style="width:105px;" value="2013-06-22 20:35"/></td>
+                                            <td><input style="width:105px;" value="2013-06-22 23:25"/></td>
+                                            <td><input style="width:30px;" value="HK"/></td>
+                                            <td><input style="width:65px;" value="SHA255"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="flight"/></td>
+                                            <td><input style="width:55px;" value="JZ4W50"/></td>
+                                            <td><input style="width:55px;" value="MJWM9N"/></td>
+                                            <td><input style="width:55px" /></td>
+                                            <td><input style="width:55px" /></td>
+                                            <td><input style="width:50px;" value="PEK T3"/></td>
+                                            <td><input style="width:50px;" value="PVG T2"/></td>
+                                            <td><input style="width:50px;" value="CZ3609"/></td>
+                                            <td><input style="width:25px;" value="W"/></td>
+                                            <td><input style="width:40px;" value="777"/></td>
+                                            <td><input style="width:105px;" value="2013-06-22 20:35"/></td>
+                                            <td><input style="width:105px;" value="2013-06-22 23:25"/></td>
+                                            <td><input style="width:30px;" value="HK"/></td>
+                                            <td><input style="width:65px;" value="SHA255"/></td>
+                                        </tr>
+                                    </table> 
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block block3 block-module">
+                            <div class="block-title"><span class="block-title-blue">报价信息</span>
+                                <span class="block-module-action">
+                                    <button class="btns btn-ac-blue">运价重置</button> 
+                                </span>
+                            </div>
+                            <div>
+                                <div class="row">
+                                    <table class="grid-table gj">
+                                        <tr class="thead">
+                                            <td style="width: 66px;">旅客类型</td>
+                                            <td style="width:60px;">人数</td>
+                                            <td style="width: 95px;">应收票款</td>
+                                            <td style="width: 104px;">票款</td>
+                                            <td style="width:100px;">税款</td>
+                                            <td>代理费</td>
+                                            <td>奖励扣率</td>
+                                            <td>奖励金额</td>
+                                            <td>开票费</td>
+                                            <td>政策编号</td>
+                                        </tr>
+                                        <tr>
+                                            <td> ADT </td>
+                                            <td> 2 </td>
+                                            <td> 2147 </td>
+                                            <td><input type="text" name="" value="2260" style="width: 100px;"></td>
+                                            <td><input type="text" name="" value="320" style=" width: 100px; "></td>
+                                            <td><input type="text" name="" value="5%" style=" width: 78px; "></td>
+                                            <td><input type="text" name="" value="5%" style=" width: 78px; "></td>
+                                            <td><input type="text" name="" value="10" style=" width: 80px; "></td>
+                                            <td> 0.00 </td>
+                                            <td> 111112 </td>
+                                        </tr>
+
+                                    </table> 
+                                </div>
+                                <div class="row row2">
+                                    <h3>退改签规定</h3>
+                                    【<span>更改条件</span>】同等舱位免费更改。<br>
+                                    【<span>退票条件</span>】起飞前2小时（含）以外办理退票按订座舱位公布运价收取40％的退票费，2小时以内及起飞后退票按订座舱位公布运价收取50％的退票费。退票费低于50元时按50元收取。<br>
+                                    【<span>签转条件</span>】不得签转。<br><br>
+                                    <h3>政策说明</h3>
+                                    【<span>退改签补充规则</span>】（不管任何原因）签转到其他航空公司、跨月签转以及有政策航班改到无政策航班，需收回代理费。
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="block block4 block-module">
+                            <div class="block-title"><span class="block-title-orange">旅客信息</span></div> 
+                            <!-- <label id="save_as_frequent"> -->
+                                <!--      <input type="checkbox">自动保存到长旅客  -->
+                                <!-- </label> -->
+                            <div class="row">
+                                <div id="passenger_info_grid" style="overflow-x:auto;">
+                                    <table class="grid-table gj" style="table-layout:fixed;">
+                                        <tr class="thead">
+                                            <td style="width: 15px;"><input type="checkbox" name="traveler_all"></td>
+                                            <td style="width: 60px;">姓名</td>
+                                            <td style="width: 50px;">性别</td>
+                                            <td style="width: 50px;">证件类型</td>
+                                            <td style="width: 98px;">证件号码</td>
+                                            <td style="width: 40px;">国籍</td>
+                                            <td style="width: 100px;">常旅卡号</td>
+                                            <td style="width:60px;">旅客类型</td>
+                                            <td style="width:60px;">出生日期</td>
+                                            <td style="width:60px;">联系电话</td>
+                                        </tr> 
+                                        <tr>
+                                            <td><input type="checkbox" name="traveler[]" id=""></td>
+                                            <td><input type="text" style="width:80px;" name="name" value="zhou/lin"></td>
+                                            <td><select name="sex" id="">
+                                                    <option value="">男</option>
+                                                    <option value="">女</option>
+                                            </select></td>
+                                            <td><select name="id_type" id="">
+                                                    <option value="">身份证</option>
+                                                    <option value="">护照</option>
+                                                    <option value="">其他</option>
+                                            </select></td>
+                                            <td><input type="text" value="21321321321" name=""></td>
+                                            <td><input type="text" value="中国" name="" style="width: 50px;"></td>
+                                            <td><input type="text" value="12314" name=""></td>
+                                            <td><select name="traveler_type" id="">
+                                                    <option value="">成人</option>
+                                                    <option value="">儿童</option>
+                                            </select></td>
+                                            <td><input type="text" style="width:80px;" name="" value="1978-08-09"></td>
+                                            <td><input type="text" style="width:80px;" name="" value="13800138000"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block block5 block-calc">
+                            <div id="order_calc">
+                                <ul class="flat-list">
+                                    <li class="first">
+                                    <label>
+                                        <span>应收合计</span> 
+                                        <input value="2580.00" class="input-b"> 
+                                    </label>
+                                    </li> 
+                                    <li>
+                                    <label>
+                                        <span>票款合计</span>
+                                        <input value="320.00">
+                                    </label>
+                                    </li>
+                                    <li>
+                                    <label>
+                                        <span>税款合计(机建/燃油)</span>
+                                        <input>
+                                    </label>
+                                    </li>
+                                    <li>
+                                    <label>
+                                        <span>附加费</span>
+                                        <input>
+                                    </label>
+                                    </li>
+                                    <li>
+                                    <label>
+                                        <span>客户返佣</span>
+                                        <input>
+                                    </label>
+                                    </li>
+                                    <li>
+                                    <label>
+                                        <span>服务费</span>
+                                        <input>
+                                    </label>
+                                    </li>
+                                </ul> 
+                            </div>
+                        </div>
+
+                        <div class="block block6 block-module">
+                            <div class="block-title">配送信息</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="extFooter">
+                    <div>
+                        <p>
+                        <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                        <a href="javascript:void(0);">微博</a>&nbsp;|
+                        <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                        <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+                        </p>
+                        <p>客户服务热线:400-720-6666</p>
+                    </div>
+                </div>
+        </body></html>

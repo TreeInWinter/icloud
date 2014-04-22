@@ -1,0 +1,148 @@
+@charset "utf-8";
+/* CSS Document */
+
+.firstModuleContent{ margin:10px 0;}
+.firstModuleContent .salePriceFlight{ float:left; margin-right:10px; padding:8px 0 8px 8px; width:708px; border:1px solid #d7d7d7; background:#fff; height:435px;}
+.firstModuleContent .serviceCommitment{ float:left; width:250px; background:#f6f6f6; border:1px solid #d7d7d7; height:450px;}
+.salePriceFlight .salePriceTitle{ margin:5px 8px 8px; font-size:14px; font-weight:bold;}
+.salePriceTitle h3{ float:left; font-size:20px; font-weight:bold; color:#333333;}
+.salePriceTitle .airWay{ float:left; color:#5b5b5b; margin-left:20px;}
+.salePriceTitle .airWay li{ float:left; min-width:45px; padding:3px; text-align:center; margin:0 10px; cursor:pointer;}
+.salePriceTitle .airWay li:hover{ color:#333333;}
+.salePriceTitle .airWay .current{ background:#ef4423; color:#fff;}
+.salePriceTitle .airWay .current:hover{ color:#fff;}
+.salePriceTitle .more{ float:right; margin-right:10px; color:#5b5b5b; cursor:pointer; font-size:12px; line-height:25px;}
+.salePriceTitle .more:hover{ color:#ef4423; text-decoration:none;}
+.flightInfoList li{ float:left; width:115px; padding:10px; background:#efefef; margin:8px 6px 0 0;}
+.flightInfoList li:hover{ background:#feecd9;}
+.flightInfoList .place{ color:#4e4e4e; font-size:14px; font-weight:bold; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.flightInfoList .place .goBackPic{ display:inline-block; width:11px; height:7px; background:url(../../images/store/smallPic.png) no-repeat -61px -40px; vertical-align:middle;}
+.flightInfoList .place .connector{ font-size:12px; font-weight:500; color:#999999;}
+.flightInfoList .priceNumber{ color:#ef4423; font-size:16px; margin:10px 0; font-weight:bold;}
+.flightInfoList .priceNumber em{ font-size:14px; font-family: 微软雅黑;}
+.flightInfoList .dateTime{ color:#c2c2c2; text-align:right;} 
+.serviceCommitment .serviceTitle{ color:#333333; font-weight:bold; font-size:20px; padding:10px 8px 0;}
+.serviceCommitment .commitmentContent{ margin:10px 0 0 0; padding:0 0 10px 5px; border-bottom:1px dashed #cccccc;}
+.serviceCommitment .commitmentContent li{ float:left; padding:8px 0 8px 3px; color:#333333; font-size:14px; font-weight:bold; width:78px; position:relative;}
+.serviceCommitment .commitmentContent .fadinShallowOut{ position:absolute;height:75%; width:100%;top:0;left:0;background:#ffffff; filter:alpha(opacity=20); opacity:0; cursor:pointer;}
+.serviceCommitment .commitmentContent figure a{ display:inline-block;}
+.serviceCommitment .commitmentContent figure p{ margin-top:10px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.serviceCommitment .WeChat{ padding:10px 15px;}
+.serviceCommitment .WeChat li{ float:left;}
+.serviceCommitment .WeChat li:first-child{ margin-right:20px;}
+.commonModule{ padding:8px; background:#fff; border:1px solid #d7d7d7; margin:10px 0;}
+.commonModule .showPic li{ float:left;}
+.commonModule .showPic li:first-child{ margin-right:6px;}
+.commonModule .showPic li a{ display:inline-block; position:relative;}
+.commonModule .showPic li a:hover .bgShade{ width:100%; height:100%; background:#000; filter:alpha(opacity=20); opacity:0.2; display:inline-block; position:absolute; top:0; left:0;}
+.commonModule .bottomPic{ margin-top:10px; width:582px;}
+.commonModule .bottomPic a{ width:285px;}
+.commonModule .bottomPic img{ width:285px; height:120px;}
+.commonModule .bottomPic a:first-child{ margin-right:8px;}
+.commonModule .rigtPic a{ width:373px;}
+.commonModule .rigtPic a:first-child{ margin-bottom:10px;}
+.logo_HO, .logo_ho {
+	background:url(../../images/airline_logo.png) no-repeat 0 -310px;
+	width:28px;
+	height:28px;
+	display:inline-block;
+	vertical-align:middle;
+}
+.logo_GS, .logo_gs {
+	background:url(../../images/airline_logo.png) no-repeat 0 -282px;
+	width:28px;
+	height:28px;
+	display:inline-block;
+	vertical-align:middle;
+}
+.logo_PN, .logo_pn {
+	background:url(../../images/airline_logo.png) no-repeat 0 -478px;
+	width:31px;
+	height:28px;
+	display:inline-block;
+	vertical-align:middle;
+}
+.logo_8L, .logo_8l {
+	background:url(../../images/airline_logo.png) no-repeat 0 -56px;
+	width:20px;
+	height:28px;
+	display:inline-block;
+	vertical-align:middle;
+}
+.logo_CZ, .logo_cz {
+	background:url(../../images/airline_logo.png) no-repeat 0 -168px;
+	width:32px;
+	height:28px;
+	display:inline-block;
+	vertical-align:middle;
+}
+.logo_MU, .logo_mu {
+	background:url(../../images/airline_logo.png) no-repeat 0 -422px;
+	width:28px;
+	height:28px;
+	display:inline-block;
+	vertical-align:middle;
+}
+.logo_HU, .logo_hu {
+	background:url(../../images/airline_logo.png) no-repeat 0 -338px;
+	width:32px;
+	height:28px;
+	display:inline-block;
+	vertical-align:middle;
+}
+.logo_VD, .logo_vd {
+	background:url(../../images/airline_logo.png) no-repeat 0 -562px;
+	width:28px;
+	height:28px;
+	display:inline-block;
+	vertical-align:middle;
+}
+.logo_3U, .logo_3u {
+	background:url(../../images/airline_logo.png) no-repeat 0 0;
+	width:28px;
+	height:28px;
+	display:inline-block;
+	vertical-align:middle;
+}
+.logo_9C, .logo_9c {
+	background:url(../../images/airline_logo.png) no-repeat 0 -2889px;
+	width:28px;
+	height:28px;
+	display:inline-block;
+	vertical-align:middle;
+}
+.logo_SC, .logo_sc {
+	background:url(../../images/airline_logo.png) no-repeat 0 -506px;
+	width:28px;
+	height:28px;
+	display:inline-block;
+	vertical-align:middle;
+}
+.logo_BK, .logo_bk {
+	background:url(../../images/airline_logo.png) no-repeat 0 -84px;
+	width:26px;
+	height:28px;
+	display:inline-block;
+	vertical-align:middle;
+}
+.logo_EU, .logo_eu {
+	background:url(../../images/airline_logo.png) no-repeat 0 -197px;
+	width:28px;
+	height:29px;
+	display:inline-block;
+	vertical-align:middle;
+}
+.logo_CA, .logo_ca {
+	background:url(../../images/airline_logo.png) no-repeat 0 -112px;
+	width:25px;
+	height:28px;
+	display:inline-block;
+	vertical-align:middle;
+}
+.aiRcompanyRecommend li{ float:left; margin:2px; background:#f2f2f2; min-width:119px; padding:7px; text-align:center;}
+.commonModule .titleFont{ font-size:20px; font-weight:bold; color:#333333; margin:7px 0;}
+.commonModule .aiRcompanyRecommend em{ color:#787878; margin-left:8px;}
+
+
+
+

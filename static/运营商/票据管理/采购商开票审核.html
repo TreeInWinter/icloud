@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>票据管理 采购商开票审核</title>
+<meta charset="utf-8" />
+<link href="/static/css/kendo.common.css" rel="stylesheet" />
+<link href="/static/css/kendo.gray.css" rel="stylesheet" />
+<link href="/static/css/common.css" rel="stylesheet" /> <link href="/static/css/b2b.css" rel="stylesheet" />
+<link href="/static/css/kendo.reset.css" rel="stylesheet" />
+
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script src="http://static.travelzensh.com/js/jquery-ui-1.10.3.custom.js"></script>
+<script type="text/javascript" src="/static/js/kendo.web.js"></script>
+<script type="text/javascript" src="/static/js/global.js"></script>
+
+<!--[if lt IE 9]>
+        <link rel="stylesheet" href="/static/css/ie.css" />
+        <script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script>
+        <![endif]-->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+<!-- @CLB@ -->
+</head>
+<body>
+<div id="extHeader">
+    <div></div>
+</div>
+
+<div id="container">
+    <div class="header">
+        <h1></h1>
+        <div>
+            <span>你好,${name}</span>
+            <a href="javascript:void(0);">退出</a>
+        </div>
+        <ul id="top_menu">
+            <li><a href="javascript:void(0);">国内机票</a></li>
+            <li><a href="javascript:void(0);">国际机票</a></li>
+            <li><a href="javascript:void(0);">酒店</a></li>
+            <li><a href="javascript:void(0);">票证中心</a></li>
+            <li><a href="javascript:void(0);">财务管理</a></li>
+            <li><a href="javascript:void(0);">客户管理</a></li>
+            <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+        </ul>
+        <ol class="sub_menu">
+            <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+            <li><a href="javascript:void(0);">公司信息</a></li>
+            <li><a href="javascript:void(0);">组织架构</a></li>
+            <li><a href="javascript:void(0);">角色维护</a></li>
+            <li><a href="javascript:void(0);">基础数据</a></li>
+        </ol>
+        <div id="message">
+            <a href="javascript:void(0);">消息</a>
+            <span>New</span>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="sub_menu_bar"></div>
+    <div id="mainContent">
+        <div class="actions block">
+            <div class="col col-l">
+                <a class="item" href="采购商开票申请.html">采购商开票申请</a>
+                <a class="item highlight" href="采购商开票审核.html">采购商开票审核</a>
+            </div>
+        </div>
+
+        <div class="block1 block block-query clearfix">
+            <div class="col col-l">
+                <table>
+                    <colgroup>
+                        <col width="80">
+                        <col width="170">
+                        <col width="80">
+                        <col width="170">
+                        <col width="80">
+                    </colgroup>
+                    <tr>
+                        <th>发票号</th>
+                        <td>
+                            <input type="text" name="" style="width:145px">
+                        </td>
+                        <th>客户名称</th>
+                        <td><input type="text" name="" style="width:120px" value="全部">
+                            <button class="btns btn-search">查询</button>
+                        </td>
+                        <th>入住日期</th>
+                        <td><input style="width:95px;" type="text" name="" class="datepicker">
+                            至
+                            <input style="width:95px;" type="text" name="" class="datepicker orange"></td>
+
+                    </tr>
+                    <tr>
+                        <th>申请状态</th>
+                        <td>
+                            <select name="" data-role="dropdownlist" style="width:147px;">
+                                <option value="">全部</option>
+                            </select>
+                        </td>
+                        <th>申请单号</th>
+                        <td>
+                            <input type="text" name="" style="width:145px">
+                        </td>
+                        <th>申请日期</th>
+                        <td><input style="width:95px;" type="text" name="" class="datepicker">
+                            至
+                            <input style="width:95px;" type="text" name="" class="datepicker orange"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col col-r">
+                <button style="margin-top:10px;" class="btns button_2_1">查 询</button>
+            </div>
+        </div>
+
+        <div class="block2 block block-query-result">
+            <div class="block-header clearfix">
+                <span style="float:left">
+                <button class="btns btn-ac-blue">导出Excel</button>
+                </span>
+                <span style="float:right">
+                </span>
+            </div>
+            <table>
+                <colgroup>
+                  <col width="80">
+                  <col width="110">
+                  <col width="80">
+                  <col width="80">
+                  <col width="80">
+                  <col width="">
+                  <col width="80">
+                  <col width="80">
+                  <col width="70">
+                  <col width="80">
+                </colgroup>
+                <tr>
+                    <th style="text-align:center;">操作</th>
+                    <th>申请单号</th>
+                    <th>客户名称</th>
+                    <th>申请时间</th>
+                    <th>申请状态</th>
+                    <th>发票抬头</th>
+                    <th>开票时间</th>
+                    <th>开票金额</th>
+                    <th>发票号</th>
+                    <th>提交人</th>
+                </tr>
+            </table>
+
+
+<script type="text/x-kendo-template" id="ac-order-template">
+    <div class="row">
+    <table class="cv-table">
+
+        <tr>
+            <th>申请单号：</th>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <th><u>*</u>发票号：</th>
+            <td><input type="text" name="" style="width:150px"></td>
+        </tr>
+
+        <tr>
+            <th>客户名称：</th>
+            <td>#= data.c2 #</td>
+        </tr>
+
+        <tr>
+            <th>发票抬头：</th>
+            <td>上海长寿国际旅行社有限公司</td>
+        </tr>
+
+        <tr>
+            <th>开票总金额：</th>
+            <td><strong style="font:bold 14px arial;color:red">￥#= data.c11 #</strong></td>
+        </tr>
+
+        <tr>
+            <th>经营项目：</th>
+            <td>
+                <div class="row">
+                    <span style="width:70px;display:inline-block;">房费</span>
+                    <span>金额：<b style="font-family:arial">￥</b></span>
+                    <span>25000</span>
+                </div>
+                <div class="row">
+                    <span style="width:70px;display:inline-block;">会务费</span>
+                    <span>金额：<b style="font-family:arial">￥</b></span>
+                    <span>25000</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>开票日期：</th>
+            <td><input type="text" name="" style="width:100px;" value="2014-02-12" class="datepicker"></td>
+        </tr>
+        <tr>
+            <th>是否邮寄：</th>
+            <td>
+                需邮寄
+            </td>
+        <tr>
+        <tr>
+            <th>邮寄信息：</th>
+            <td style="line-height:24px;">
+                上海闸北去光中西路555号 宝华国际广场16楼<br>
+            电话：18710330133
+            </td>
+        </tr>
+        <tr>
+            <th>相关订单：</th>
+            <td>
+                <a href="..." target="_blank">下载详情</a>
+            </td>
+        </tr><tr>
+            <th>备注：</th>
+            <td>
+                xxxx
+            </td>
+        </tr>
+
+    </table>
+    </div>
+    <div class="row" style="text-align:right;">
+        <button class="btns button_1_2 close">开票完成</button>
+        <button class="btns button_1_2 ac-refuse">拒绝开票</button>
+        <button class="btns button_2_2 close">关 闭</button>
+    </div>
+
+</script>
+<script type="text/x-kendo-template" id="ac-view-template">
+    <div class="row" style="position:relative;">
+        #if (data.c5 == "已开票") {#
+            <div class="order-ctip pass-ctip">
+            <span>已开票</span>
+            </div>
+        #}#
+        #if (data.c5 == "已拒绝") {#
+            <div class="order-ctip error-ctip">
+            <span>已拒绝</span>
+            <p>拒绝原因：发票抬头与客户名称不符合！</p>
+            </div>
+        #}#
+    <table class="cv-table">
+        <tr>
+            <th>申请单号：</th>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <th>发票号：</th>
+            <td>NO12991</td>
+        </tr>
+
+        <tr>
+            <th>客户名称：</th>
+            <td>#= data.c2 #</td>
+        </tr>
+
+        <tr>
+            <th>发票抬头：</th>
+            <td>上海长寿国际旅行社有限公司</td>
+        </tr>
+
+        <tr>
+            <th>开票总金额：</th>
+            <td><strong style="font:bold 14px arial;color:red">￥#= data.c11 #</strong></td>
+        </tr>
+
+        <tr>
+            <th>经营项目：</th>
+            <td>
+                <div class="row">
+                    <span style="width:70px;display:inline-block;">房费</span>
+                    <span>金额：<b style="font-family:arial">￥</b></span>
+                    <span>25000</span>
+                </div>
+                <div class="row">
+                    <span style="width:70px;display:inline-block;">会务费</span>
+                    <span>金额：<b style="font-family:arial">￥</b></span>
+                    <span>25000</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>开票日期：</th>
+            <td>2012-02-12</td>
+        </tr>
+        <tr>
+            <th>是否邮寄：</th>
+            <td>
+                需邮寄
+            </td>
+        <tr>
+        <tr>
+            <th>邮寄信息：</th>
+            <td style="line-height:24px;">
+                上海闸北去光中西路555号 宝华国际广场16楼<br>
+            电话：18710330133
+            </td>
+        </tr>
+        <tr>
+            <th>相关订单：</th>
+            <td>
+                <a href="..." target="_blank">下载详情</a>
+            </td>
+        </tr><tr>
+            <th>备注：</th>
+            <td>
+                xxxx
+            </td>
+        </tr>
+
+    </table>
+    </div>
+    <div class="row" style="text-align:right;">
+        <button class="btns button_2_2 close">关 闭</button>
+    </div>
+
+</script>
+
+
+<script type="text/x-kendo-template" id="ac-refuse-template">
+    <div class="row">
+        <span style="font-size:14px">请输入拒绝原因：</span>
+    </div>
+    <div class="row">
+        <textarea style="width:414px;height:60px;"></textarea>
+        </div>
+    <div class="row" style="text-align:right;">
+        <button class="btns button_1_2 ac-submit">提 交</button>
+        <button class="btns button_2_2 close">关 闭</button>
+    </div>
+</script>
+
+<script type="text/x-kendo-template" id="block2-grid-row-template">
+    <tr>
+        <td style="text-align:center;">
+            # if (data.c5=="待开票") {# 
+            <a class="ac-order" href="javascript:;">开票</a> &nbsp;&nbsp;
+            # } #
+            <a class="ac-view" href="javascript:;">查看</a></td>
+        <td>1</td>
+        <td>#= c2 #</td>
+        <td>2012-09-20 14:20:00</td>
+        <td>#= c5 #</td>
+        <td style="white-space:normal;word-break:break-all">上海长寿国际旅行社有限公司</td>
+        <td>2012-09-20 14:20:00</td>
+        <td>#= c10 #</td>
+        <td style="white-space:normal;word-break:break-all">NO2313,NO2314</td>
+        <td>上海大酒店</td>
+    </tr>
+</script>
+
+<script>
+$(function(){
+    kendo.init('body');
+
+    new PopWindow('.ac-refuse',{
+        title:'操作提示',
+        width:470,
+        template:'#ac-refuse-template'
+    }).init();
+
+    // 初始化开票窗口
+    var win_order = new PopWindow({
+        titile:'开票',
+        template:'#ac-order-template'
+    }).init();
+    // 开票窗口填数据
+    $('body').on('click','.ac-order',function(){
+        var row_data = kgrid._data[$(this).closest('tr').index()].toJSON();
+        win_order.data(row_data);
+        win_order.show(); 
+    });
+
+    // 初始化查看窗口
+    var win_view = new PopWindow({
+        title:'开票信息',
+        template:'#ac-view-template'
+    }).init();
+    // 查看窗口填数据
+    $('body').on('click','.ac-view',function(){
+        var row_data = kgrid._data[$(this).closest('tr').index()].toJSON();
+        win_view.data(row_data);
+        win_view.show(); 
+    });
+
+    var kgrid = new GridTable('.block2 table',{
+         scrollable:true,
+         resizable:true,
+         dataSource: [{
+            c1:false,
+            c2:'携程',
+            c3:"11,321.00",
+            c4:"CZ3211",
+            c5:"待开票",
+            c6:"张三",
+            c7:"成人",
+            c8:"2013-12-12 20:00",
+            c9:'zhangzz',
+            c10:15000,
+            c11:0
+        },{
+            c1:true,
+            c2:'客户名称',
+            c3:"11,321.00",
+            c4:"CZ3211",
+            c5:"已开票",
+            c6:"张三",
+            c7:"成人",
+            c8:"2013-12-12 20:00",
+            c9:'zhangzz',
+            c10:25000,
+            c11:30
+        },{
+            c1:false,
+            c2:'亿龙',
+            c3:"11,321.00",
+            c4:"CZ3211",
+            c5:"已拒绝",
+            c6:"张三",
+            c7:"成人",
+            c8:"2013-12-12 20:00",
+            c9:'zhangzz',
+            c10:95000,
+            c11:90
+        },{
+            c1:false,
+            c2:'亿龙',
+            c3:"11,321.00",
+            c4:"CZ3211",
+            c5:"已拒绝",
+            c6:"张三",
+            c7:"成人",
+            c8:"2013-12-12 20:00",
+            c9:'zhangzz',
+            c10:5000,
+            c11:0
+        },{
+            c1:true,
+            c2:'客户名称',
+            c3:"11,321.00",
+            c4:"CZ3211",
+            c5:"已拒绝",
+            c6:"张三",
+            c7:"成人",
+            c8:"2013-12-12 20:00",
+            c9:'zhangzz',
+            c10:5000,
+            c11:0
+        },{
+            c1:true,
+            c2:'客户名称',
+            c3:"11,321.00",
+            c4:"CZ3211",
+            c5:"已拒绝",
+            c6:"张三",
+            c7:"成人",
+            c8:"2013-12-12 20:00",
+            c9:'zhangzz',
+            c10:5000,
+            c11:0
+        }],
+        rowTemplate: kendo.template($("#block2-grid-row-template").html()),
+        dataBound:function(e){
+        }
+    }).init();
+
+
+});
+</script>
+
+
+        </div>
+
+
+
+    </div>
+
+</div>
+
+<div id="extFooter">
+    <div>
+        <p>
+        <a href="javascript:void(0);">关于我们</a>&nbsp;|
+        <a href="javascript:void(0);">微博</a>&nbsp;|
+        <a href="javascript:void(0);">服务条款</a>&nbsp;|
+        <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+        </p>
+        <p>客户服务热线:400-720-6666</p>
+    </div>
+</div>
+</body>
+</html>

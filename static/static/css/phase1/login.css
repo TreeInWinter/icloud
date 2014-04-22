@@ -1,0 +1,113 @@
+/* 
+    Document   : login
+    Created on : 2013-5-10, 9:59:38
+    Author     : 234
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body {background:url("../images/bg.jpg") no-repeat scroll center top transparent;}
+#container {margin:0 auto;width:960px;text-align:left;}
+.login_header h1 {width:192px;height:74px; background:url(../images/logo.gif) no-repeat left top;float:left;position:relative;}
+.nav {
+    float: right;
+    margin-top: 40px;
+    width: 500px;
+}
+
+.nav li {
+    float: left;
+    list-style: none outside none;
+    margin-left: 10px;
+}
+.nav li a {
+    color: #333333;
+    display: inline-block;
+    font: bold 14px "微软雅黑","宋体";
+    padding-top: 6px;
+    text-align: center;
+    width: 100px;
+}
+.nav li a:hover {
+    color: #106FCE;
+    display: inline-block;
+    padding-top: 6px;
+    text-align: center;
+    width: 100px;
+}
+.nav li a.current {
+    color: #106FCE;
+    display: inline-block;
+    padding-top: 6px;
+    text-align: center;
+    width: 100px;
+}
+
+
+.banner {
+    background: url("../images/login/bannerleft01.jpg") no-repeat scroll left center #1675B1;
+    float: left;
+    height: 255px;
+    margin-top: 5px;
+    z-index:1;
+    padding: 5px;
+    width: 625px;
+	
+}
+
+.login{ float:right; width:290px; height:229px; color:#fff; background:url(../images/login/loginbg01.jpg) no-repeat -30px 0px; margin-top:5px; padding-left:35px; padding-top:36px;}
+.account,.password{ font:bold 14px "宋体"; margin:3px;}
+.accountinput{ width:166px; height:28px;line-height:28px;font-size:14px;background:url(../images/login/zhanghaobg.jpg) no-repeat; border:none; font-family:Arial; vertical-align:middle; padding-left:35px;}
+.passinput{ width:166px; height:28px;line-height:28px;font-size:14px;background:url(../images/login/passbg.jpg) no-repeat; border:none; font-family:Arial;vertical-align:middle;padding-left:35px}
+.yzminput{ width:109px; height:28px;line-height:28px;font-size:14px;background:url(../images/login/yzmbg.jpg) no-repeat; border:none; font-family:Arial;vertical-align:middle;padding-left:15px}
+.remember{ font-size:12px; margin-left:65px;}
+.remember input{ vertical-align:middle;}
+.login-btn{ margin:15px 0 10px 65px;}
+.fgline{ margin-left:40px; margin-top:20px;}
+.cgs-gys-btn{margin:25px 0 10px 65px;}
+.space10{ width:10px; display:inline-block;}
+
+.flexslider {
+    border-radius: 5px 5px 5px 5px;
+    position: relative;
+}
+.flexslider {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.bottom{ height:60px;background-color:#f4f4f4;padding-top:10px; margin-top:5px;}
+
+.cooperation {margin-top:20px;}
+.cooperation a{
+    display:block;
+    _display:inline;
+    float:left;
+    width:132px;
+    height:41px;
+    margin-right:5px;
+    background:url(http://img.cache.10106266.com.cn/public/sep.png) no-repeat 100% 50%;
+    padding-right:2px;
+}
+.cooperation_a a{
+    width:112px;
+    height:47px;
+}
+.cooperation .last{
+    background:none;
+}
+.cooperation_a{
+    height:47px;
+    padding:1px 0 1px 66px;
+    float:left;
+    border:1px solid #feb648;
+    margin-right:10px;
+    background:url(http://img.cache.10106266.com.cn/public/co1.png) no-repeat 0 50%;
+}
+.cooperation_b{
+    height:41px;
+    padding:4px 0 4px 66px;
+    float:left;
+    border:1px solid #c3cace;
+    background:url(http://img.cache.10106266.com.cn/public/co2.png) no-repeat 0 50%;
+}

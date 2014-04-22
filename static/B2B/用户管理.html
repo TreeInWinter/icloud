@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>角色管理</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<link href="/static/css/phase1/b2b_common.css" rel="stylesheet" />
+	<link href="/static/css/phase1/user.css" rel="stylesheet" />
+	
+	<!-- Common Kendo UI Web CSS -->
+	<link href="/static/css/kendo.common.css" rel="stylesheet" />
+	<link href="/static/css/kendo.default.css" rel="stylesheet" />
+	
+
+    </head>
+    <body>
+	
+	<div id="container">
+		<div class="top_header">
+			<h1></h1>
+			<div class="profile">
+				<span>欢迎 <a href="javascript:void(0);">吕小名</a></span>
+				<span><a href="登陆.html">退出</a></span>
+
+			</div>
+		
+	    </div>
+		<div class="clear"></div>
+	    <ul id="menu">
+			<li>
+				<a href="国内机票搜索页.html">国内机票</a>
+			</li>
+			<li>
+				<a href="javascript:void(0);">国际机票</a>
+			</li>
+			<li>
+				<a href="javascript:void(0);">酒店</a>
+				<ul>
+					<li><a href="国内酒店搜索页.html">国内酒店</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);">PNR操作</a>
+				<ul>
+					<li><a href="PNR导入生成预订单.html">PNR导入生成预订单</a></li>
+					<li><a href="黑屏指令粘贴生成预订单.html">黑屏指令粘贴生成预订单</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);">订单管理</a>
+				<ul>
+					<li><a href="订单列表.html">订单列表</a></li>
+					<li><a href="手工录入订单.html">手工录入订单</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);">客户管理</a>
+				<ul>
+					<li>供应商</li>
+					<li><a href="采购商.html">采购商</a></li>
+				</ul>
+			</li>
+			<li class="k-state-selected">
+				<a href="javascript:void(0);">系统管理</a>
+				<ul>
+					<li>政策管理</li>
+					<li class="k-state-selected"><a href="用户管理.html">用户管理</a></li>
+					<li><a href="角色管理.html">角色管理</a></li>
+				</ul>
+			</li>
+		</ul>
+		<div class="breadcrum"> &gt;&gt; <a href="用户管理.html">用户管理</a> </div>
+		
+		<div class="tabstrip">
+			<ul>
+				<li class="k-state-active">用户查询</li>
+				<li>添加用户</li>
+			</ul>
+			<div>
+				<form name="userSearch" action="用户管理.html" method="get">
+					<table>
+						<tr>
+							<td>用户名称：</td>
+							<td><input  name="roleName" type="text" class="k-textbox"></td>
+							<td>用户状态：</td>
+							<td><select name="status">
+									<option value="">启用</option>
+									<option value="">停用</option>
+								</select></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<div style="text-align:center;margin:20px 0"><input type="submit" class="button_main_m" name="submit" value="查询"/></div>
+							</td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<div>
+				<form name="role" action="" method="post" >
+					<table>
+						<tr>
+							<td><span class="redImportant">*</span>组织架构：</td>
+							<td>
+								<input type="text" name="office" class="k-textbox"/>
+							</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><span class="redImportant">*</span>用户名称：</td>
+							<td><input  name="roleName" type="text" class="k-textbox"></td>
+							<td>状态：</td>
+							<td><select name="status">
+									<option value="">启用</option>
+									<option value="">停用</option>
+								</select></td>
+						</tr>
+						<tr>
+							<td><span class="redImportant">*</span>登陆账号：</td>
+							<td><input  name="roleName" type="text" class="k-textbox"></td>
+							<td><span class="redImportant">*</span>登陆密码：</td>
+							<td><input type="password" value="" name="password" class="k-textbox"/></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<div style="text-align:center;margin:20px 0"><input type="submit" class="button_main_m" name="submit" value="添加"/></div>
+							</td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		<script type="text/x-kendo-template" id="userButton">
+			<ul>
+				<li><a href="javascript:alert('#=OrderID#');">编辑</a>&nbsp;<a href="javascript:userDetail('#=OrderID#');">挂载角色</a>&nbsp;<a href="javascript:alert('#=OrderID#');">停用</a></li>
+			</ul>
+		</script>
+		<div id="userDetail"></div>
+		<div id="userList"></div>
+	</div>
+	<!-- jQuery JavaScript -->
+	<script src="/static/js/jquery.min.js"></script>
+	<!-- Kendo UI Web combined JavaScript -->
+
+	<script src="/static/js/kendo.web.js"></script>
+	<script src="/static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+	<script src="/static/js/phase1/common.js"></script>
+	<script src="/static/js/phase1/user.js"></script>
+	
+    </body>
+</html>

@@ -1,0 +1,536 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 重置页面头部*/
+body {
+	background: #f9f9f9;
+}
+body {
+	font-family: "Microsoft YaHei", "Helvetica Neue Light", "Helvetica Neue", "Helvetica, Arial", "Lucida Grande", "sans-serif";
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+input, button {
+	font-family: "Microsoft YaHei";
+}
+.main-header {
+	height: 54px;
+	z-index: 2;
+}
+.main-nav {
+	top: 0px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.main-nav li {
+	background: none;
+	display: block;
+	float: left;
+	width: auto;
+	height: 50px;
+	line-height: 50px;
+}
+.main-nav a {
+	position: relative;
+	display: block;
+	height: 100%;
+	width: 145px;
+	font-size: 16px;
+}
+.main-nav a i {
+	position: absolute;
+	top: 50%;
+	right: -2px;
+	margin-top: -8px;
+	height: 16px;
+	border-right: 1px solid #f4563c;
+	border-left: 1px solid #d83920;
+}
+.main-nav a:hover i {
+	display: none;
+}
+.main-nav .last i {
+	display: none;
+}
+.main-header .phone {
+	height: 30px;
+	top: 10px;
+}
+.main-header .QQ {
+	top: 13px
+}
+.landing_logo {
+	background: url(../images/login/landing_logo.png) no-repeat;
+	width: 105px;
+	height: 36px;
+	display: inline-block;
+	margin-top: 5px;
+}
+.main-nav {
+	left: 200px;
+}
+.main-wrapper {
+	background: url(../../images/store/landing_bg.png) repeat-x;
+}
+/* 重置页面头部*/
+
+
+
+.login_page {
+	min-height: 0px;
+	position: relative;
+}
+.loginBox {
+	overflow: hidden;
+	z-index: 9;
+	position: absolute;
+	width: 330px;
+	top: -450px;
+	right: 0px;
+}
+.login_panel {
+	width: 330px;
+	margin: 0 auto;
+	background: #000000;
+ 	filter:progid:DXImageTransform.Microsoft.Gradient(startColorstr=#CCFFFFFF, endColorstr=#CCFFFFFF);
+	background: rgba(0,0,0,0.5);
+	position: relative;
+	top: -9px;
+}
+.login_panel .tab_change {
+	background: transparent;
+	position: relative;
+	top: 9px;
+	border: none;
+}
+.login_panel .tab_change li {
+	width: 50%;
+	padding: 0px;
+	text-align: center;
+	cursor: pointer;
+	background: rgba(248,248,248,0.8);
+	border-bottom: 1px solid #e1e1e1;
+}
+.login_panel .tab_change li a {
+	display: block;
+	padding: 10px 0;
+	position: relative;
+	top: -1px;
+	text-decoration: none;
+}
+.login_panel .tab_change li a:visited {
+	outline: none;
+}
+.login_panel .tab_change li a:active {
+	outline: none;
+}
+.login_panel .tab_change .current {
+	border-top: 2px solid #f1634c;
+	background: none;
+	border-bottom: none;
+}
+.login_panel .tab_change .current .bl {
+	border-left: 1px solid #e1e1e1;
+}
+.login_panel .tab_change .current .br {
+	border-right: 1px solid #e1e1e1;
+}
+.login_panel .input_area {
+	padding: 20px 25px 20px 25px;
+	width: 280px;
+}
+.login_panel .tt {
+	position: relative;
+	margin: 0 0 10px 0;
+	font-size: 18px;
+	color: #fff;
+}
+/*.row .text1 p a { 
+	table-layout: fixed; 
+	word-break: break-all; 
+	word-wrap:break-word;
+}*/
+
+.login_panel .row {
+	margin: 0 0 15px 0;
+	position: relative;
+	vertical-align: middle;
+	padding: 0 5px;
+}
+.login_panel .row em {
+	color: #cccccc;
+	position: absolute;
+	right: 6%;
+	top: 25%;
+	font-size: 18px;
+}
+.login_panel .row em.error {
+	color: #ff5400;
+}
+.login_panel .row em.pass {
+	color: #00cc00;
+}
+/*.login_panel .muted {
+	color:#cccccc;
+}*/
+.login_panel .small em {
+	right: 10%;
+}
+.login_panel .large {
+	height: 40px;
+	width: 270px;
+	background: #f8f8f8;
+}
+.login_panel .large {
+	background-position: 0 -20px;
+}
+.login_panel .small {
+	width: 131px;
+	height: 40px;
+	background: #f8f8f8;
+}
+.login_panel .large.large_error {
+	background-position: 0 -94px;
+}
+.login_panel .small.small_error {
+	background-position: 0 -131px;
+}
+.login_panel .cover {
+	position: absolute;
+	left: 26px;
+	top: 10px;
+	color: #c3c3c3;
+	font-size: 13px;
+}
+.login_panel .username {
+	width: 18px;
+	background: url(../../images/store/store_login.png) no-repeat -20px 0;
+}
+.login_panel .psw {
+	width: 18px;
+	background: url(../../images/store/store_login.png) no-repeat -40px 0;
+}
+.login_panel .company_name {
+	width: 18px;
+	background: url(../images/store/store_login.png) no-repeat -63px 0;
+}
+.login_panel .username, .login_panel .psw, .login_panel .company_name {
+	height: 16px;
+	width: 16px;
+	top: 10px;
+	position: relative;
+	display: block;
+	float: left;
+}
+.login_panel input {
+	font-family: "Microsoft YaHei"
+}
+.login_panel input[type=text], .login_panel input[type=password] {
+	font-size: 14px;
+	vertical-align: middle;
+	margin: 10px 0 0 5px;
+	color: #646464;
+	border: none;
+	background: transparent;
+}
+.login_panel .first {
+}
+.login_panel .tips {
+	padding: 6px 0;
+	border: 1px solid #ffc9cf;
+	background-color: #ffe3e6;
+}
+.login_panel .tips span {
+	color: #646464;
+	position: relative;
+	padding-left: 5px;
+	display: block;
+}
+.login_panel .tips i {
+	background: url(../../images/login/store/tip_close.png) no-repeat 0 0;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+	float: left;
+}
+.login_panel .authcode {
+	position: absolute;
+	right: -139px;
+	top: 0;
+	width: 99px;
+	height: 40px;
+}
+.login_panel .autologin {
+	color: #fff;
+	font-size: 14px;
+	float: left;
+}
+.login_panel .forget {
+	float: right;
+	color: #fff;
+	font-size: 14px;
+}
+.login_panel .forget a, .registerRow a {
+	color: #fff;
+	text-decoration: none;
+}
+.login_panel .forget a:hover, .registerRow a:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+.login_btns {
+	padding: 15px;
+ 	filter:progid:DXImageTransform.Microsoft.Gradient(startColorstr=#99ebebeb, endColorstr=#99ebebeb);
+	background: rgba(235,235,235,0.6);
+}
+.login_btn {
+	color: #fff;
+	font-size: 18px;
+	width: 280px;
+	height: 45px;
+	cursor: pointer;
+	border: 0px;
+	background: #e94749;
+}
+.login_btn:hover {
+	background: #fa595b;
+}
+.registerRow {
+	text-align: right;
+	font-size: 16px;
+	color: #fff;
+}
+/*content*/
+.loginCon {
+	padding: 20px 0;
+}
+.loginConTit {
+	padding: 0 0 20px 0;
+	border-bottom: 1px solid #e5e5e5;
+	position: relative;
+	height: auto;
+	overflow: hidden;
+}
+.conTitLeft {
+	float: left;
+	width: 688px;
+}
+.conTitLeft h2 {
+	font-size: 36px;
+	color: #2f374c;
+	padding: 0 0 10px 0;
+}
+.conTitLeft p {
+	font-size: 14px;
+	color: #797979;
+}
+.conTitRight {
+	float: right;
+}
+.registerBtn {
+	width: 230px;
+	height: 60px;
+	text-align: center;
+	color: #fff;
+	font-size: 28px;
+	background: #576b8f;
+	border: none;
+	font-family: "Microsoft YaHei";
+	margin: 13px 0 0 0;
+	cursor: pointer;
+}
+.registerBtn:hover {
+	background: #63789e;
+}
+.servicesList {
+	padding: 15px 0;
+}
+.servicesList li {
+	float: left;
+	width: 290px;
+	height: 110px;
+	padding: 15px;
+	position: relative;
+	cursor: pointer;
+	margin: 0 10px 10px 0;
+}
+.servicesList li:hover {
+	background: #efefef;
+}
+.servicesList li dt {
+	float: left;
+	margin: 5px 10px 0 0;
+	display: inline;
+}
+.servicesList .approve {
+	background: url(../../images/login/store/icon_approve.png) no-repeat 0 top;
+	width: 80px;
+	height: 70px;
+}
+.servicesList .lowPrice {
+	background: url(../../images/login/store/icon_lowPrice.png) no-repeat 0 top;
+	width: 76px;
+	height: 75px;
+}
+.servicesList .safetyPay {
+	background: url(../../images/login/store/icon_safetyPay.png) no-repeat 0 top;
+	width: 74px;
+	height: 67px;
+}
+.servicesList .ticketAssure {
+	background: url(../../images/login/store/icon_ticketAssure.png) no-repeat 0 top;
+	width: 80px;
+	height: 65px;
+}
+.servicesList .fastRefund {
+	background: url(../../images/login/store/icon_fastRefund.png) no-repeat 0 top;
+	width: 79px;
+	height: 62px;
+}
+.servicesList .goldService {
+	background: url(../../images/login/store/icon_goldService.png) no-repeat 0 top;
+	width: 72px;
+	height: 71px;
+}
+.servicesList .servicesType {
+	font-size: 26px;
+	color: #636363;
+	margin: 0 0 6px 0;
+}
+.servicesList .servicesCon {
+	font-size: 12px;
+	color: #949494;
+	margin: 0 0 6px 0;
+	line-height: 20px;
+}
+.servicesList .ddBtn {
+	padding: 0 0 0 90px;
+}
+.servicesList button {
+	border: none;
+	background: #8b9dbc;
+	width: 102px;
+	height: 28px;
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+	cursor: pointer;
+}
+.servicesList button:hover {
+	background: #98aac9;
+}
+.servicesList button {
+	display: none;
+}
+.servicesList li:hover button {
+	display: inline;
+}
+/*footer*/
+.main-footer {
+	color: #666;
+	background-color: #ececec;
+	height: 270px;
+	border-top: 1px solid #dcdcdc;
+}
+.partnerBlock {
+	padding: 20px 0;
+	border-bottom: 1px solid #dedede;
+	height: auto;
+	overflow: hidden;
+}
+.partnerBlock h4 {
+	font-size: 18px;
+	color: #5f5f5f;
+	padding-bottom: 20px;
+}
+.partnerBlock ul {
+}
+.partnerBlock li {
+	float: left;
+	margin-right: 10px;
+	width: 88px;
+	cursor: pointer;
+}
+.partnerBlock .images01, .partnerBlock .images02 {
+	background: url(../../images/login/store/partnerLogo.png) no-repeat 0 0;
+	border: none;
+	width: 88px;
+	height: 31px;
+	display: inline-block;
+	vertical-align: middle
+}
+.partnerBlock .images02 {
+	background-position: 0 -33px;
+}
+.partnerBlock .images01:hover {
+	background-position: -90px 0;
+}
+.partnerBlock .images02:hover {
+	background-position: -90px -33px;
+}
+.helpInfo {
+	padding: 20px 0 0 90px;
+}
+.helpInfo div {
+	float: left;
+	margin-right: 110px;
+}
+.helpInfo .freshman {
+	float: left;
+}
+.helpInfo h5 {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.helpInfo .freshman h5 i, .helpInfo .payType h5 i, .helpInfo .storeServices h5 i, .helpInfo .aboutUs h5 i {
+	background: url(../../images/login/store/icon_bottom.png) no-repeat 0 0;
+	width: 22px;
+	height: 31px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 15px;
+}
+.helpInfo .payType h5 i {
+	background-position: 0 -33px;
+	width: 35px;
+	height: 21px;
+}
+.helpInfo .storeServices h5 i {
+	background-position: 0 -56px;
+	width: 32px;
+	height: 26px;
+}
+.helpInfo .aboutUs h5 i {
+	background-position: 0 -83px;
+	width: 29px;
+	height: 28px;
+}
+.helpInfo .freshman p, .helpInfo .payType p, .helpInfo .storeServices p, .helpInfo .aboutUs p {
+	font-size: 12px;
+	margin-bottom: 8px;
+	padding: 0 0 0 37px;
+}
+.helpInfo .payType p {
+	padding: 0 0 0 51px;
+}
+.helpInfo .storeServices p {
+	padding: 0 0 0 47px;
+}
+.helpInfo .aboutUs p {
+	padding: 0 0 0 47px;
+}
+.main-footer center {
+	margin-top: 20px;
+}
+.main-footer a {
+	color: inherit;
+}
+.main-footer .bar {
+	margin: 0 5px;
+}
+

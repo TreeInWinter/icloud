@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* CSS Document */
+
+.inquire_div{ background:#fff; padding:15px 10px; margin-bottom:10px;}
+.inquire_tab td input,.uploading td input{ padding-left:3px; height:20px; line-height:20px;}
+.inquire_tab td select,.uploading td select{ height:22px; line-height:22px;}
+.cjrq_input_1{ width:98px; background:url(../images/jisuanqi_1.png) no-repeat 98% center;}
+.cjrq_input_2{ width:98px; background:url(../images/jisuanqi_2.png) no-repeat 98% center;}
+.politics{ padding:0px 10px; background:#fff; color:#333 !important; border-bottom:3px solid #ff7702;}
+.tgrid .line_left{ border-left:1px solid #e0e0e0;}
+.tgrid .line_right{ border-right:1px solid #e0e0e0;}
+.hui_bg,.hui_bg tr{ background:#f0f0f0;}
+.tgrid tbody tr:hover{ background:#ffffdb;}
+.tgrid{ background:#fff;}
+.tgrid th{ text-align:left; padding-left:5px; height:30px;} 
+.tgrid tbody a{ color:#0066cc; margin-right:3px;}
+.tgrid tbody a:hover{ color:#0066cc;text-decoration:underline; cursor:pointer;}
+.tgrid tbody td{ text-align:left; height:30px; padding:3px 3px 3px 5px;}
+.tgrid thead th{ font-weight:500;}
+.btn_size{ font-size:14px; font-weight:bold; float:right; margin-top:25px; margin-right:20px;}
+.btn_size a{ margin-left:5px;}
+.thickness {}
+.uploading{ width:99%;}
+.uploading td{ line-height:30px;}
+.uploading td:first-child{ font-weight:bold; text-align:right;}
+.uploading .k-upload-button {background:url(../images/button/80X25.png) no-repeat left top !important ;width:86px;height:26px;}
+.uploading .k-upload-button span {color:#fff;}
+.uploading .k-upload {float:left;}
+
+.announce td{ padding:10px 0 5px 0;}
+.announce textarea{ width:580px; height:120px; overflow-y:scroll; overflow-x:hidden;}
+.announce td:first-child{ text-align:left;}
+.k-editor{ width:98%; height:180px;}
+.k-editor .k-editable-area{ border-style:none; border-top:1px solid #cdcdcd;}
+.k-editor-button{ margin-left:3px;}
+.k-editor-button .k-tool-icon{ border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px;}
+.k-editor-button .k-state-active{ border:1px solid #ff6742; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px;}
+
+.block-header .adaptiveButton{
+vertical-align:middle;
+}
+.block-header strong{
+font-size:14px;
+margin-right:10px;
+}
+.block-header{
+margin-bottom:20px;
+}
+.vertical-head{
+font-weight:bold;
+display:inline-block;
+width:65px;
+}
+
+.advertising{ background:#fff; padding:20px;}
+.advertising_title,.url{ margin:10px 0;}
+.advertising_title input{ width:360px; height:20px; line-height:20px; padding-left:3px;}
+.url input{ width:400px; height:20px; line-height:20px; padding-left:3px;}
+.issue_date{ margin-bottom:20px;}
+.issue_date input{ width:110px; height:20px; line-height:20px; padding-left:3px;}
+.location{ width:80%; padding:15px 20px 20px; border:1px solid #d7d7d7;}
+.advertise{ margin-bottom:20px;}
+.advertise select{ width:100px; height:22px; line-height:22px;}
+.advertise span em{ color:#ff6600;}
+.advertise a{ margin-left:20px;}
+.adimg{ margin:5px 0 15px;}
+.adimg img{ border:1px solid #d7d7d7; padding:2px;}
+.move_left{ float:left;}
+.move_right{ float:right; margin-right:20px;}
+.move_right div{ margin-bottom:7px;}
+.move_right a{ color:#fff;}
+.add{ border-bottom:1px solid #d7d7d7; padding-bottom:40px; margin-bottom:40px;}
+.add_upload{ text-align:center; width:80%; border:1px solid #d7d7d7; margin-bottom:30px;}
+.add_upload a{ font-size:200px; color:#eeeeee;}
+
+
+
+
+
+
+
+

@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta content="text/html" charset="utf-8">
+    <link rel="stylesheet" href="../../../static/css/common.css">
+    <link rel="stylesheet" href="../../../static/css/b2b.css">
+    <link rel="stylesheet" href="../../../static/css/kendo.common.css">
+    <link rel="stylesheet" href="../../../static/css/kendo.gray.css">
+    <link href="../../../static/css/kendo.reset.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../static/css/hotel.css">
+    <link rel="stylesheet" href="../../../static/css/hotel_order_create.css">
+    <style type="text/css">
+        .fieldName{background:#f5f5f5;color:#333}
+        .bookingProduct td{border:1px solid #e0e0e0;border-top-color:#eaeef0;border-bottom-color:#eaeef0;color:#666}
+        .editable.disable{border:none;cursor:default;}
+
+        .k-popup .k-list .k-state-hover{text-decoration:none}
+        .optgroup{background-color:#fff;color:#333;text-decoration:none;font-weight:bold}
+        .option{text-decoration:none;padding-left:5px}
+    </style>
+</head>
+<body>
+<div id="container" style="margin-top:0">
+<div id="mainContent">
+<div class="actions block">
+    <div class="col col-l sep-r">
+        <button class="btns btn-return">返回</button>
+    </div>
+    <div class="col col-l">
+        <span class="page-title">
+            上海 宝华国际酒店 商务标准房 2013/7/4 - 2013/7/9
+        </span>
+    </div>
+    <div class="col col-r sep-l">
+        <a href="javascript:;" class="button_secondary adaptiveButton small btn_modifyCurrent" id="btn_modifyOrder" data='{"target":".modifyOrder","cancel":true,"cancelButton":"#btn_modifyOrder_cancel","saveButton":"#btn_modifyOrder_save"}' style="margin:0">
+            <span class="left"></span>
+            <span class="center">修改预订</span>
+            <span class="right"></span>
+        </a>
+        <a href="javascript:;" class="button_secondary adaptiveButton small" id="btn_modifyOrder_save" style="display:none">
+            <span class="left"></span>
+            <span class="center">保 存</span>
+            <span class="right"></span>
+        </a>
+        <a href="javascript:;" class="button_secondary adaptiveButton small" id="btn_modifyOrder_cancel" style="display:none">
+            <span class="left"></span>
+            <span class="center">取 消</span>
+            <span class="right"></span>
+        </a>
+        <a href="javascript:;" class="button_secondary adaptiveButton small" style="margin:0">
+            <span class="left"></span>
+            <span class="center">取消预订</span>
+            <span class="right"></span>
+        </a>
+        <a href="javascript:;" class="button_secondary adaptiveButton small popwin" data='{"content":"$(\"#confirmBookingPopWin\").html()","width":468,"height":128,"title":"提示","contentFunction":true}' style="margin:0">
+            <span class="left"></span>
+            <span class="center">确认预订</span>
+            <span class="right"></span>
+        </a>
+    </div>
+</div>
+<div class="panel" style="padding:0;width:100%">
+    <div style="width:7px;background:#FE7218;float:left;height:63px"></div>
+    <div style="width:7px;background:#439CD3;float:right;height:63px"></div>
+    <div style="width:77px;background:#cff3fc;float:right;height:63px" id="associatedOrder">
+        <span style="float:left;padding:10px 16px 12px 7px">关联<br/>订单</span><span style="font-weight:bold;font-size:36px;line-height:57px;color:#111">1</span>
+    </div>
+    <div style="margin:0 7px;height:63px">
+        <div style="width:452px;float:left;border-right:1px dashed #FADBD3;height:53px;background:#FFFBF5;padding:10px 0 0 20px">
+            <div style="margin-bottom:5px">
+                <span class="head" style="font-size:14px">订单号:</span><span
+                    style="color:#FF4200;font-weight: bold;font-size:16px">12345678</span>
+                <span style="color:#888986;padding-left:20px">-订单类型：酒店</span>
+            </div>
+            <div style="color:#444444">
+                <span>最后更新：</span><span style="color:#FF4200;">客户账户余额扣款成功</span>
+                <span style="padding-left:10px">更新时间：</span><span style="color:#FF4200;">2013/7/12 10:50</span>
+                <span style="padding-left:10px">【更多操作日志】</span>
+            </div>
+        </div>
+        <div style="width:388px;margin-left:453px;height:63px">
+            <div class="hotelOrderStatusContainer" style="margin-left:20px">
+                <div class="status_complete statusContainer first">
+                    <div class="statusDot"></div>
+                    <div class="statusLineLeft statusLine"></div>
+                    <div class="statusLineRight statusLine"></div>
+                    创建
+                </div>
+                <div class="status_complete statusContainer">
+                    <div class="statusDot"></div>
+                    <div class="statusLineLeft statusLine"></div>
+                    <div class="statusLineRight statusLine"></div>
+                    支付
+                </div>
+                <div class="status_ing statusContainer">
+                    <div class="statusDot"></div>
+                    <div class="statusLineLeft statusLine"></div>
+                    <div class="statusLineRight statusLine"></div>
+                    确认
+                </div>
+                <div class="status_uncomplete statusContainer last">
+                    <div class="statusDot"></div>
+                    <div class="statusLineLeft statusLine"></div>
+                    <div class="statusLineRight statusLine"></div>
+                    完成
+                </div>
+            </div>
+            <div class="hotelOrderStatusContainer">
+                <div class="status_complete statusContainer first last">
+                    <div class="statusDot"></div>
+                    <div class="statusLineLeft statusLine"></div>
+                    <div class="statusLineRight statusLine"></div>
+
+                </div>
+            </div>
+            <div class="hotelOrderStatusContainer">
+                <div class="status_uncomplete statusContainer first exception">
+                    <div class="statusDot"></div>
+                    <div class="statusLineLeft statusLine"></div>
+                    <div class="statusLineRight statusLine"></div>
+                    收银
+                </div>
+                <div class="status_uncomplete statusContainer last">
+                    <div class="statusDot"></div>
+                    <div class="statusLineLeft statusLine"></div>
+                    <div class="statusLineRight statusLine"></div>
+                    结算
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel">
+    <div class="panelTitle">
+        订单信息
+    </div>
+    <div style="float:right">
+        <span class="unimportantText">订单创建时间：</span>
+        <span>2013/7/12 10：40</span>
+        <span class="unimportantText">建单员：</span>
+        <span>刘伟</span>
+        <span class="unimportantText">跟单员：</span>
+        <span>刘伟</span>
+    </div>
+    <div class="clearfix">
+        <table>
+            <tr>
+                <td class="txt_l3">支付状态</td>
+                <td><span class="complete">已支付</span></td>
+                <td class="txt_l3">确认状态</td>
+                <td><span class="complete">已确认</span></td>
+                <td class="txt_l3">完成状态</td>
+                <td colspan="3"><span class="ing">未完成</span></td>
+            </tr>
+            <tr>
+                <td style="width:60px" class="txt_l3">客户名称</td>
+                <td style="width:150px" class="txt_l6">青空旅行社</td>
+                <td style="width:60px" class="txt_l3">结算方式</td>
+                <td style="width:150px" class="txt_l6">账户余额</td>
+                <td style="width:60px" class="txt_l3">余额</td>
+                <td style="width:150px" class="txt_l6"><span style="color:#FF6700;font-size:14px">120000.00</span>元</td>
+                <td style="width:60px" class="txt_l3">联系人</td>
+                <td class="txt_l6">张三</td>
+            </tr>
+            <tr>
+                <td class="txt_l3">电话</td>
+                <td class="txt_l6">123456789</td>
+                <td class="txt_l3">手机</td>
+                <td class="txt_l6">123456789</td>
+                <td class="txt_l3">传真</td>
+                <td class="txt_l6">123456789</td>
+                <td class="txt_l3">E-Mail</td>
+                <td class="txt_l6">2136542@21.165</td>
+            </tr>
+            <tr>
+                <td class="txt_l3">三方协议号</td>
+                <td class="txt_l6">/</td>
+                <td class="txt_l3">接口订单号</td>
+                <td class="txt_l6">/</td>
+                <td class="txt_l3">外部订单号</td>
+                <td class="txt_l6">/</td>
+                <td class="txt_l3">关联订单号</td>
+                <td class="txt_l6">/</td>
+            </tr>
+            <tr>
+                <td class="txt_l3">采购备注</td>
+                <td colspan="3" class="txt_l6">无</td>
+                <td class="txt_l3">内部备注</td>
+                <td colspan="3" class="txt_l6">无</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="panel">
+    <div class="panelTitle">交易信息</div>
+    <table class="tbl_common">
+        <thead>
+            <tr>
+                <td>开始时间</td>
+                <td>客户名称</td>
+                <td>支付渠道</td>
+                <td>支付方式</td>
+                <td>账户</td>
+                <td>支付金额</td>
+                <td>交易状态</td>
+                <td>交易号</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2013/7/12 10:40</td>
+                <td>青空旅行社</td>
+                <td>天地行</td>
+                <td>账户余额</td>
+                <td>客户ID</td>
+                <td>3780.00元</td>
+                <td>未支付</td>
+                <td>/</td>
+            </tr>
+            <tr>
+                <td>2013/7/12 10:40</td>
+                <td>青空旅行社</td>
+                <td>天地行</td>
+                <td>账户余额</td>
+                <td>客户ID</td>
+                <td>3780.00元</td>
+                <td>未支付</td>
+                <td>/</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="panel">
+<div id="originalOrder">
+<div class="panelTitle">原预定产品</div>
+<div class="clearfix">
+    <table style="width:100%" class="bookingProduct">
+        <tr>
+            <td style="width:60px" class="fieldName">支付类型</td>
+            <td style="width:150px">预付酒店</td>
+            <td style="width:60px" class="fieldName">城市</td>
+            <td style="width:150px">上海</td>
+            <td style="width:60px" class="fieldName">酒店名称</td>
+            <td style="width:150px">宝华国际酒店</td>
+            <td style="width:60px" class="fieldName">地址</td>
+            <td>上海市闸北区广中西路</td>
+        </tr>
+        <tr>
+            <td style="width:60px" class="fieldName">房型</td>
+            <td style="width:150px">标准房</td>
+            <td style="width:60px" class="fieldName">加床</td>
+            <td style="width:150px">不可加床</td>
+            <td style="width:60px" class="fieldName">房型</td>
+            <td style="width:150px">大床 1800*2200mm</td>
+            <td style="width:60px" class="fieldName">入住人数</td>
+            <td>2人</td>
+        </tr>
+        <tr>
+            <td style="width:60px" class="fieldName">价格计划</td>
+            <td style="width:150px">含早</td>
+            <td style="width:60px" class="fieldName">价格说明</td>
+            <td colspan="5">2013-04-11~2013-12-31，此期间预订入住，每房每晚可获赠10元房费抵扣。</td>
+        </tr>
+        <tr>
+            <td style="width:60px" class="fieldName">入住日期</td>
+            <td style="width:150px">2013-07-04</td>
+            <td style="width:60px" class="fieldName">离店日期</td>
+            <td style="width:150px">2013-07-04</td>
+            <td style="width:60px" class="fieldName">间数</td>
+            <td style="width:150px">1</td>
+            <td style="width:60px" class="fieldName">夜数</td>
+            <td>4</td>
+        </tr>
+    </table>
+</div>
+<div style="margin:30px 0 10px">
+    <span class="head">原费用明细</span>
+
+        <span style="float:right">
+            结算点位：人名币
+            <span class="important">*预付费用不包含客人在酒店的自行消费的各项杂费。</span>
+        </span>
+</div>
+<div class="clearfix">
+<div class="hfee">
+<div class="room_info">
+    <div class="top_head"></div>
+    <div class="fee_room col1">
+        <h3>房型</h3>
+        <ul class="daylist">
+            <li class="day">标准商务房</li>
+            <li class="day"></li>
+            <li class="day"></li>
+            <li class="day summary_prev"></li>
+            <li class="day summary last">小计</li>
+        </ul>
+    </div>
+    <div class="fee_room col2">
+        <span class="line line_right"></span>
+        <span class="line line_left"></span>
+
+        <h3>日期</h3>
+        <ul class="daylist">
+            <li class="day">7/4 四</li>
+            <li class="day">7/5 五</li>
+            <li class="day weekend">7/6 六</li>
+            <li class="day weekend">7/7 日</li>
+            <li class="day summary last">4间夜</li>
+        </ul>
+    </div>
+</div>
+<div class="fee_list" id="tbl_priceDetail">
+    <div class="wrapdata">
+        <div class="fee_head clearfix">
+            <span class="first">房费(不含服务费)</span>
+            <span>增值服务费</span>
+        </div>
+        <ul class="fee_detail_head clearfix">
+            <li><em>数量</em></li>
+            <li><em>底价</em></li>
+            <li><em>加价</em></li>
+            <li><em>卖价</em></li>
+            <li><em>早餐</em></li>
+            <li><em>宽带</em></li>
+            <li><em>其他</em></li>
+            <li class="yellow">
+                <label><b>早餐</b></label>
+
+                <div>
+                    <span>￥30x2</span>
+                </div>
+            </li>
+            <li class="yellow">
+                <label><b>儿童早餐</b></label>
+
+                <div>
+                    <span>￥30</span>
+                </div>
+            </li>
+            <li class="yellow">
+                <label><b>晚餐</b></label>
+
+                <div>
+                    <span>￥30</span>
+                </div>
+            </li>
+            <li class="yellow">
+                <label><b>宽带</b></label>
+
+                <div>
+                    <span>￥30</span>
+                </div>
+            </li>
+            <li class="yellow">
+                <label><b>司陪房</b></label>
+
+                <div>
+                    <span>￥200</span>
+                </div>
+            </li>
+            <li class="yellow">
+                <label><b>机场接送</b></label>
+
+                <div>
+                    <span>￥150</span>
+                </div>
+            </li>
+            <li class="last yellow">
+                <label><b>加床</b></label>
+
+            </li>
+        </ul>
+        <ul class="fee_row clearfix">
+            <li>1</li>
+            <li>
+                <input style="width:50px;" type="text" value="780" class="qt editable disable"/>
+            </li>
+            <li>100</li>
+            <li>
+                <input style="width:50px;" type="text" value="880" class="qt editable disable"/>
+            </li>
+            <li>单早
+            </li>
+            <li>有
+            </li>
+            <li class="other">
+                <a class="priceDetail_otherToolTip">/</a>
+            </li>
+            <li>60</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="last"></li>
+        </ul>
+        <ul class="fee_row clearfix">
+            <li>1</li>
+            <li>
+                <input style="width:50px;" type="text" value="780" class="qt editable disable"/>
+            </li>
+            <li>100</li>
+            <li>
+                <input style="width:50px;" type="text" value="880" class="qt editable disable"/>
+            </li>
+            <li>单早
+            </li>
+            <li>无
+            </li>
+            <li class="other">
+                <a class="priceDetail_otherToolTip">/</a>
+            </li>
+            <li>60</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="last"></li>
+        </ul>
+        <ul class="fee_row clearfix">
+            <li>1</li>
+            <li>
+                <input style="width:50px;" type="text" value="780" class="qt editable disable"/>
+            </li>
+            <li>100</li>
+            <li>
+                <input style="width:50px;" type="text" value="880" class="qt editable disable"/>
+            </li>
+            <li>单早
+            </li>
+            <li>无
+            </li>
+            <li class="other">
+                <a class="priceDetail_otherToolTip">/</a>
+            </li>
+            <li>60</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="last"></li>
+        </ul>
+        <ul class="fee_row clearfix">
+            <li>1</li>
+            <li>
+                <input style="width:50px;" type="text" value="780" class="qt editable disable"/>
+            </li>
+            <li>100</li>
+            <li>
+                <input style="width:50px;" type="text" value="880" class="qt editable disable"/>
+            </li>
+            <li>单早
+            </li>
+            <li>无
+            </li>
+            <li class="other">
+                <a class="priceDetail_otherToolTip">/</a>
+            </li>
+            <li>60</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="last"></li>
+        </ul>
+        <!-- 小计 -->
+        <ul class="fee_row summary last clearfix">
+            <li></li>
+            <li>3400.00</li>
+            <li>400</li>
+            <li></li>
+            <li>
+            </li>
+            <li>
+            </li>
+            <li class="other">
+            </li>
+            <li>60</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="last"></li>
+        </ul>
+    </div>
+</div>
+<div class="subtotal">
+    <div class="top_head"></div>
+    <h3>每日合计</h3>
+    <ul class="daylist">
+        <li class="day">940</li>
+        <li class="day">940</li>
+        <li class="day">940</li>
+        <li class="day">940</li>
+        <li class="summary last">3780.00</li>
+    </ul>
+</div>
+
+<div class="fee_total summary" style="clear:both;">
+    <span>合计</span>
+    <strong class="qt">￥3780.00</strong>
+</div>
+</div>
+</div>
+<div style="margin:10px 0 5px"><span class="head">备注说明</span></div>
+<div><textarea name="" id="" style="width:99%;height:38px;padding:0" readonly="readonly"></textarea></div>
+</div>
+
+<div class="panelTitle">
+    预定产品
+    <span style="font:12px normal"><a class="button_5 btn_expand" href="javascript:;" data='{"target":"#originalOrder","changeText":"展开原预定︾"}'>收起原预定︽</a></span>
+</div>
+<span style="color:#FF6700;float:right">酒店确认码：xxxxxx</span>
+<div class="clearfix">
+    <table class="bookingProduct" style="width:100%">
+        <tr>
+            <td style="width:60px" class="fieldName">支付类型</td>
+            <td style="width:150px">预付酒店</td>
+            <td style="width:60px" class="fieldName">城市</td>
+            <td style="width:150px">上海</td>
+            <td style="width:60px" class="fieldName">酒店名称</td>
+            <td style="width:150px">宝华国际酒店</td>
+            <td style="width:60px" class="fieldName">地址</td>
+            <td>上海市闸北区广中西路</td>
+        </tr>
+        <tr>
+            <td style="width:60px" class="fieldName">房型</td>
+            <td style="width:150px">标准房</td>
+            <td style="width:60px" class="fieldName">加床</td>
+            <td style="width:150px">不可加床</td>
+            <td style="width:60px" class="fieldName">房型</td>
+            <td style="width:150px">大床 1800*2200mm</td>
+            <td style="width:60px" class="fieldName">入住人数</td>
+            <td>2人</td>
+        </tr>
+        <tr>
+            <td style="width:60px" class="fieldName">价格计划</td>
+            <td style="width:150px">含早</td>
+            <td style="width:60px" class="fieldName">价格说明</td>
+            <td colspan="5">2013-04-11~2013-12-31，此期间预订入住，每房每晚可获赠10元房费抵扣。</td>
+        </tr>
+        <tr>
+            <td style="width:60px" class="fieldName">入住日期</td>
+            <td style="width:150px">2013-07-04</td>
+            <td style="width:60px" class="fieldName">离店日期</td>
+            <td style="width:150px">2013-07-04</td>
+            <td style="width:60px" class="fieldName">间数</td>
+            <td style="width:150px"><select name="" id="" data-role="dropdownlist">
+                <option>1</option>
+            </select></td>
+            <td style="width:60px" class="fieldName">夜数</td>
+            <td>4</td>
+        </tr>
+    </table>
+</div>
+<div style="margin:30px 0 10px">
+    <span class="head">费用明细</span>
+        <span style="float:right;padding-left:10px;border-left:1px solid #ccc;margin-left:10px">
+            <a class="button_5 btn_modifyCurrent" href="javascript:;" data='{"target":".modifyable","cancel":true,"cancelButton":"#btn_cost_cancel","saveButton":"#btn_cost_save"}'>确认成本</a>
+            <a class="button_5" href="javascript:;" id="btn_cost_save" style="display:none">确认</a>
+            <a class="button_5" href="javascript:;" id="btn_cost_cancel" style="display:none">取消</a>
+        </span>
+
+        <span style="float:right">
+            结算点位：人名币
+            <span class="important">*预付费用不包含客人在酒店的自行消费的各项杂费。</span>
+        </span>
+</div>
+<div class="clearfix">
+<div class="hfee">
+<div class="room_info">
+    <div class="top_head"></div>
+    <div class="fee_room col1">
+        <h3>房型</h3>
+        <ul class="daylist">
+            <li class="day">标准商务房</li>
+            <li class="day"></li>
+            <li class="day"></li>
+            <li class="day summary_prev"></li>
+            <li class="day summary last">小计</li>
+        </ul>
+    </div>
+    <div class="fee_room col2">
+        <span class="line line_right"></span>
+        <span class="line line_left"></span>
+
+        <h3>日期</h3>
+        <ul class="daylist">
+            <li class="day">7/4 四</li>
+            <li class="day">7/5 五</li>
+            <li class="day weekend">7/6 六</li>
+            <li class="day weekend">7/7 日</li>
+            <li class="day summary last">4间夜</li>
+        </ul>
+    </div>
+</div>
+<div class="fee_list" id="tbl_priceDetail">
+<div class="wrapdata modifyable">
+<div class="fee_head clearfix">
+    <span class="first">房费(不含服务费)</span>
+    <span>增值服务费</span>
+</div>
+<ul class="fee_detail_head clearfix">
+    <li><em>数量</em></li>
+    <li><em>底价</em></li>
+    <li><em>加价</em></li>
+    <li><em>卖价</em></li>
+    <li><em>早餐</em></li>
+    <li><em>宽带</em></li>
+    <li><em>其他</em></li>
+    <li class="yellow">
+        <label><input type="checkbox"><b>早餐</b></label>
+
+        <div>
+            <span>￥30</span>
+            <select name="" style="width:40px">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div>
+    </li>
+    <li class="yellow">
+        <label><input type="checkbox"><b>儿童早餐</b></label>
+
+        <div>
+            <span>￥30</span>
+            <select name="" style="width:40px">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div>
+    </li>
+    <li class="yellow">
+        <label><input type="checkbox"><b>晚餐</b></label>
+
+        <div>
+            <span>￥30</span>
+            <select name="" style="width:40px">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div>
+    </li>
+    <li class="yellow">
+        <label><input type="checkbox"><b>宽带</b></label>
+
+        <div>
+            <span>￥30</span>
+            <select name="" style="width:40px">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div>
+    </li>
+    <li class="yellow">
+        <label><input type="checkbox"><b>司陪房</b></label>
+
+        <div>
+            <span>￥200</span>
+            <select name="" style="width:40px">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div>
+    </li>
+    <li class="yellow">
+        <label><input type="checkbox"><b>机场接送</b></label>
+
+        <div>
+            <span>￥150</span>
+            <select name="" style="width:40px">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div>
+    </li>
+    <li class="last yellow">
+        <label><input type="checkbox"><b>加床</b></label>
+
+        <div>
+            <select name="" style="width:40px">
+                <option value="加床200">加床200</option>
+            </select>
+        </div>
+    </li>
+</ul>
+<ul class="fee_row clearfix">
+    <li>1</li>
+    <li>
+        <input style="width:50px;" type="text" value="780" class="qt editable disable"/>
+    </li>
+    <li>100</li>
+    <li>
+        <input style="width:50px;" type="text" value="880" class="qt editable disable"/>
+    </li>
+    <li>
+        <select name="" style="width:60px">
+            <option value="单早">单早</option>
+        </select>
+    </li>
+    <li>
+        <select name="" style="width:60px">
+            <option value="有">有</option>
+            <option value="无">无</option>
+        </select>
+    </li>
+    <li class="other">
+        <a class="priceDetail_otherToolTip">/</a>
+    </li>
+    <li>60</li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li class="last"></li>
+</ul>
+<ul class="fee_row clearfix">
+    <li>1</li>
+    <li>
+        <input style="width:50px;" type="text" value="780" class="qt editable disable"/>
+    </li>
+    <li>100</li>
+    <li>
+        <input style="width:50px;" type="text" value="880" class="qt editable disable"/>
+    </li>
+    <li>
+        <select name="" style="width:60px">
+            <option value="单早">单早</option>
+        </select>
+    </li>
+    <li>
+        <select name="" style="width:60px">
+            <option value="有">有</option>
+            <option value="无">无</option>
+        </select>
+    </li>
+    <li class="other">
+        <a class="priceDetail_otherToolTip">/</a>
+    </li>
+    <li>60</li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li class="last"></li>
+</ul>
+<ul class="fee_row clearfix">
+    <li>1</li>
+    <li>
+        <input style="width:50px;" type="text" value="780" class="qt editable disable"/>
+    </li>
+    <li>100</li>
+    <li>
+        <input style="width:50px;" type="text" value="880" class="qt editable disable"/>
+    </li>
+    <li>
+        <select name="" style="width:60px">
+            <option value="单早">单早</option>
+        </select>
+    </li>
+    <li>
+        <select name="" style="width:60px">
+            <option value="有">有</option>
+            <option value="无">无</option>
+        </select>
+    </li>
+    <li class="other">
+        <a class="priceDetail_otherToolTip">/</a>
+    </li>
+    <li>60</li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li class="last"></li>
+</ul>
+<ul class="fee_row clearfix">
+    <li>1</li>
+    <li>
+        <input style="width:50px;" type="text" value="780" class="qt editable disable"/>
+    </li>
+    <li>100</li>
+    <li>
+        <input style="width:50px;" type="text" value="880" class="qt editable disable"/>
+    </li>
+    <li>
+        <select name="" style="width:60px">
+            <option value="单早">单早</option>
+        </select>
+    </li>
+    <li>
+        <select name="" style="width:60px">
+            <option value="有">有</option>
+            <option value="无">无</option>
+        </select>
+    </li>
+    <li class="other">
+        <a class="priceDetail_otherToolTip">/</a>
+    </li>
+    <li>60</li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li class="last"></li>
+</ul>
+<!-- 小计 -->
+<ul class="fee_row summary last clearfix">
+    <li></li>
+    <li>3400.00</li>
+    <li>400</li>
+    <li></li>
+    <li>
+    </li>
+    <li>
+    </li>
+    <li class="other">
+    </li>
+    <li>60</li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li class="last"></li>
+</ul>
+</div>
+</div>
+<div class="subtotal">
+    <div class="top_head"></div>
+    <h3>每日合计</h3>
+    <ul class="daylist">
+        <li class="day">940</li>
+        <li class="day">940</li>
+        <li class="day">940</li>
+        <li class="day">940</li>
+        <li class="summary last">3780.00</li>
+    </ul>
+</div>
+
+<div class="fee_total summary" style="clear:both;">
+    <span>合计</span>
+    <strong class="qt">￥3780.00</strong>
+</div>
+</div>
+</div>
+<div style="margin:10px 0 5px"><span class="head">备注说明</span></div>
+<div><textarea name="" id="" style="width:99%;height:38px;padding:0"></textarea></div>
+
+<div style="margin-top:12px">
+    <table class="tbl_orderPrice">
+        <tr>
+            <td rowspan="2" style="background:#D0F1FF;width:143px;height:60px;text-align:center;vertical-align:middle">
+                <span class="head">订单金额</span></td>
+            <td style="background:#E1F5FF;padding-left:30px;width:115px;height:16px">应收</td>
+            <td style="background:#E1F5FF;padding-left:30px;width:115px">房费</td>
+            <td style="background:#E1F5FF;padding-left:30px;width:115px">增值服务</td>
+            <td style="background:#E1F5FF;padding-left:30px;width:115px">加价</td>
+            <td style="background:#E1F5FF;padding-left:30px">变更费用</td>
+        </tr>
+        <tr>
+            <td style="padding-left:30px;color:#FF6603;font-size:20px;font-weight:bold"><span
+                    style="font-size:18px;font-family:arial">￥</span>37800.00
+            </td>
+            <td style="padding-left:30px;font-size:16px;vertical-align:middle">3140.00</td>
+            <td style="padding-left:30px;font-size:16px;vertical-align:middle">240.00</td>
+            <td style="padding-left:30px;font-size:16px;vertical-align:middle">400.00</td>
+            <td style="padding-left:30px;font-size:16px;vertical-align:middle">0</td>
+        </tr>
+    </table>
+</div>
+
+<div style="margin-top:16px">
+    <table class="tbl_common modifyOrder">
+        <thead>
+        <tr>
+            <td style="font-weight:bold;text-align:center;width:146px">酒店规定</td>
+            <td style="font-weight:bold;">内容</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td style="text-align:center" class="txt_l3">宾客类型</td>
+            <td><input style="width:98%" type="text" class="editable disable" value="中宾-除新疆，西藏地区客；港澳台；外宾。"></td>
+        </tr>
+        <tr>
+            <td style="text-align:center" class="txt_l3">入住证件</td>
+            <td>
+                <textarea name="" id="" class="editable disable" style="width:98%;height:55px;">中宾-除新疆，西藏地区客；港澳台；外宾。<br/>中宾-除新疆，西藏地区客；港澳台；外宾。<br/>中宾-除新疆，西藏地区客；港澳台；外宾。</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:center" class="txt_l3">入住时间</td>
+            <td><input type="text" class="editable disable" value="14:00以后"></td>
+        </tr>
+        <tr>
+            <td style="text-align:center" class="txt_l3">退房时间</td>
+            <td><input type="text" class="editable disable" value="12:00之前"></td>
+        </tr>
+        <tr>
+            <td style="text-align:center" class="txt_l3">变更/取消</td>
+            <td>
+                <textarea name="" id="" class="editable disable" style="width:98%;height:55px;">中宾-除新疆，西藏地区客；港澳台；外宾。<br/>中宾-除新疆，西藏地区客；港澳台；外宾。<br/>中宾-除新疆，西藏地区客；港澳台；外宾。</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:center" class="txt_l3">其他规定</td>
+            <td>
+                <textarea name="" id="" class="editable disable" style="width:98%;height:55px;">中宾-除新疆，西藏地区客；港澳台；外宾。<br/>中宾-除新疆，西藏地区客；港澳台；外宾。<br/>中宾-除新疆，西藏地区客；港澳台；外宾。</textarea>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+
+<div class="panel">
+    <div class="panelTitle">发票信息</div>
+    <div style="float:left">不开发票</div>
+    <div style="float:right;margin-right:1%"><a href="javascript:;" class="button_5 popwin" data='{"url":"补开发票申请.html","width":468,"height":250,"title":"补开发票申请"}'>补开发票</a></div>
+    <div style="float:right;margin-right:1%">发票金额：<span class="qt">3780.00</span>元</div>
+    <table class="tbl_common" id="tbl_invoic">
+        <thead>
+        <tr>
+            <td style="width:157px;">发票内容</td>
+            <td style="">发票抬头</td>
+            <td>收件人</td>
+            <td>电话</td>
+            <td style="">邮寄地址</td>
+            <td style="">邮编</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><select name="" id="" disabled="disabled">
+                <option>房费</option>
+                <option>住宿费</option>
+                <option>会议费</option>
+            </select></td>
+            <td><input type="text" name="" id="" style="width:90%" disabled="disabled"/></td>
+            <td><input type="text" name="" id="" style="width:90%" disabled="disabled"/></td>
+            <td><input type="text" name="" id="" style="width:90%" disabled="disabled"/></td>
+            <td><input type="text" name="" id="" style="width:90%" disabled="disabled"/></td>
+            <td><input type="text" name="" id="" style="width:90%" disabled="disabled"/></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="panel">
+    <div class="panelTitle">客人信息</div>
+    <span class="important" style="float:right;margin-right:1%">*每间房至少填写1人。</span>
+        <table class="tbl_common modifyOrder">
+            <thead>
+            <tr>
+                <td></td>
+                <td>联系人</td>
+                <td>手机号码</td>
+                <td>固定电话</td>
+                <td>传真</td>
+                <td>Email</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td rowspan="2" style="text-align:center;vertical-align: middle">房间 1</td>
+                <td><input type="text" class="editable disable" value="奥大风"></td>
+                <td><input type="text" class="editable disable" value="123456789"></td>
+                <td><input type="text" class="editable disable" value="021-123456"></td>
+                <td><input type="text" class="editable disable" value="021-123456789"></td>
+                <td><input type="text" class="editable disable" value=""></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="editable disable" value="奥大风"></td>
+                <td><input type="text" class="editable disable" value="123456789"></td>
+                <td><input type="text" class="editable disable" value="021-123456"></td>
+                <td><input type="text" class="editable disable" value="021-123456789"></td>
+                <td><input type="text" class="editable disable" value=""></td>
+            </tr>
+            </tbody>
+        </table>
+</div>
+
+<div class="panel">
+    <div class="panelTitle">确认方式</div>
+    <div>
+        <label><input type="checkbox" name="" id=""/>短信</label>
+        <label style="margin-left:15px"><input type="checkbox" name="" id=""/>传真</label>
+        <label style="margin-left:15px"><input type="checkbox" name="" id=""/>Email</label>
+    </div>
+        <table class="tbl_common modifyOrder">
+            <thead>
+            <tr>
+                <td>联系人</td>
+                <td>手机号码</td>
+                <td>固定电话</td>
+                <td>传真</td>
+                <td>Email</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><input type="text" class="editable disable" value="张三"></td>
+                <td><input type="text" class="editable disable" value="123456789"></td>
+                <td><input type="text" class="editable disable" value="123456789"></td>
+                <td><input type="text" class="editable disable" value="123456789"></td>
+                <td><input type="text" class="editable disable" value="163546@5456.com"></td>
+            </tr>
+            </tbody>
+        </table>
+</div>
+<div class="panel">
+    <div class="panelTitle">供应商</div>
+    <div style="margin-top:10px;border:1px solid #D5D5D5;margin-right:1%" class="clearfix">
+        <div style="padding:5px 10px">
+            <span>签约经理：liuwei</span>
+            <span style="padding-left:30px">结算提醒：----</span>
+            <a class="button_5 popwin" href="javascript:;" style="margin-left:20px" data='{"content":"$(\".modifyjsPopWin:eq(0)\").html()","width":468,"height":128,"title":"修改结算提醒","contentFunction":true}' >修改</a>
+        </div>
+    </div>
+    <div>
+        <table class="tbl_common">
+            <thead>
+            <tr>
+                <td>酒店名称</td>
+                <td>预定联系人</td>
+                <td>部门</td>
+                <td>手机</td>
+                <td>工作时段</td>
+                <td>电话</td>
+                <td>传真</td>
+                <td>Email</td>
+                <td>QQ</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><input type="text" class="editable disable" value="沃达丰" style="width:80px"></td>
+                <td><input type="text" class="editable disable" value="阿斯顿" style="width:80px"></td>
+                <td><input type="text" class="editable disable" value="酒店预订部" style="width:80px"></td>
+                <td><input type="text" class="editable disable" value="123456898755" style="width:80px"></td>
+                <td><input type="text" class="editable disable" value="一、二、三 8:00-18:00" style="width:80px"></td>
+                <td><input type="text" class="editable disable" value="沃达丰" style="width:80px"></td>
+                <td><input type="text" class="editable disable" value="021-1234567" style="width:80px"></td>
+                <td><input type="text" class="editable disable" value="564sdf@die.com" style="width:80px"></td>
+                <td><input type="text" class="editable disable" value="12345678" style="width:80px"></td>
+            </tr>
+            </tbody>
+            <thead>
+            <tr>
+                <td>供应商名称</td>
+                <td colspan="2">开户名</td>
+                <td colspan="2">开户银行</td>
+                <td colspan="4">账号</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><input type="text" class="editable disable" value="宝华国际酒店" style="width:80px"></td>
+                <td colspan="2"><input type="text" class="editable disable" value="刘伟" style="width:160px"></td>
+                <td colspan="2"><input type="text" class="editable disable" value="招商银行" style="width:160px"></td>
+                <td colspan="4"><input type="text" class="editable disable" value="6225 224 22458 24512" style="width:160px"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="panel">
+    <div class="panelTitle" style="border-right:2px solid #cfcfcf">留账信息</div>
+    <span><a class="button_5 popwin" href="javascript:;" style="vertical-align:middle" data='{"content":"$(\"#popWin_lz\").html()","width":580,"height":200,"title":"修改结算提醒","contentFunction":true}'>添加留账</a></span>
+    <table class="tbl_common">
+        <thead>
+            <tr>
+                <td>酒店/供应商名称</td>
+                <td>留账笔数</td>
+                <td>留账金额</td>
+                <td>到期时间</td>
+                <td>操作</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>宝华国际酒店</td>
+                <td>4</td>
+                <td><span class="qt" style="font-weight:bold">3200.00</span></td>
+                <td>2013/12/31</td>
+                <td><a class="button_5" href="javascript:;" id="btn_viewDetail">查看详情</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="panel">
+    <div style="margin-bottom:10px;">
+        <span class="head">文件发送</span>
+        <select id="ddl_sendFile">
+            <optgroup label="至客户">
+                <option>收据电邮</option>
+                <option>入住单电邮</option>
+                <option>酒店确认短信</option>
+                <option>预定失败短信</option>
+                <option>预定失败电邮</option>
+                <option>付款失败电邮</option>
+                <option>付款失败短信</option>
+                <option>授权书电邮</option>
+                <option>未收到授权书电邮</option>
+            </optgroup>
+            <optgroup label="至客人">
+                <option>酒店入住单（住客）</option>
+                <option>酒店确认短信（住客）</option>
+            </optgroup>
+            <optgroup label="至供应商">
+                <option>酒店预订单</option>
+                <option>付款存根</option>
+            </optgroup>
+            <optgroup label="至供应商">
+                <option>付款申请单</option>
+            </optgroup>
+        </select>
+        <span>收件人：</span><input type="text" name="" id="" style="width:312px"> <select data-role="dropdownlist"><option>简体中午</option></select>
+        <a href="javascript:;" class="button_unimportant adaptiveButton small" style="margin:0">
+            <span class="left"></span>
+            <span class="center">重发</span>
+            <span class="right"></span>
+        </a>
+    </div>
+    <table class="tbl_common">
+        <thead>
+        <tr>
+            <td>信息服务商</td>
+            <td>文件类型</td>
+            <td>收件人</td>
+            <td>发送状态</td>
+            <td>提交时间</td>
+            <td>发送时间</td>
+            <td>内容</td>
+            <td>操作人</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>信息服务商</td>
+            <td>酒店预订单</td>
+            <td>啊四轮</td>
+            <td>成功</td>
+            <td>2013/7/4 10:55</td>
+            <td>2013/7/4 10:55</td>
+            <td><a href="javascript:;" class="button_5">查看</a> <a href="javascript:;" class="button_5" style="margin-left:10px">下载</a> </td>
+            <td>自动</td>
+        </tr>
+        <tr>
+            <td>信息服务商</td>
+            <td>酒店预订单</td>
+            <td>啊四轮</td>
+            <td>成功</td>
+            <td>2013/7/4 10:55</td>
+            <td>2013/7/4 10:55</td>
+            <td><a href="javascript:;" class="button_5">查看</a> <a href="javascript:;" class="button_5" style="margin-left:10px">下载</a> </td>
+            <td>自动</td>
+        </tr>
+        <tr>
+            <td>信息服务商</td>
+            <td>酒店预订单</td>
+            <td>啊四轮</td>
+            <td>成功</td>
+            <td>2013/7/4 10:55</td>
+            <td>2013/7/4 10:55</td>
+            <td><a href="javascript:;" class="button_5">查看</a> <a href="javascript:;" class="button_5" style="margin-left:10px">下载</a> </td>
+            <td>自动</td>
+        </tr>
+        <tr>
+            <td>信息服务商</td>
+            <td>酒店预订单</td>
+            <td>啊四轮</td>
+            <td>成功</td>
+            <td>2013/7/4 10:55</td>
+            <td>2013/7/4 10:55</td>
+            <td><a href="javascript:;" class="button_5">查看</a> <a href="javascript:;" class="button_5" style="margin-left:10px">下载</a> </td>
+            <td>自动</td>
+        </tr>
+        <tr>
+            <td>信息服务商</td>
+            <td>酒店预订单</td>
+            <td>啊四轮</td>
+            <td>成功</td>
+            <td>2013/7/4 10:55</td>
+            <td>2013/7/4 10:55</td>
+            <td><a href="javascript:;" class="button_5">查看</a> <a href="javascript:;" class="button_5" style="margin-left:10px">下载</a> </td>
+            <td>自动</td>
+        </tr>
+        <tr>
+            <td colspan="8" style="text-align:right;vertical-align:bottom">
+                <span style="color:#FF6C00;vertical-align:bottom">1</span> / 14
+                <a href="javascript:;" class="pagesLeft" style="margin-left:5px">&nbsp;</a>
+                <a href="javascript:;" class="pagesRight enable" style="margin-right:10px">&nbsp;</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="panel">
+    <div class="panelTitle" style="border: 0">
+        操作日志
+    </div>
+    <div class="panelContent clearfix">
+        <table class="operation_records">
+            <thead>
+            <tr>
+                <td style="width:130px">日期</td>
+                <td style="width:100px">操作人员</td>
+                <td style="width:300px">操作项目</td>
+                <td style="width:300px">操作内容</td>
+                <td style="width:100px">操作类型</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>20130606 14:55</td>
+                <td>liuwei</td>
+                <td>增加行政商务套房</td>
+                <td>增加行政商务套房</td>
+                <td>新增</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+</div>
+
+<div id="window"></div>
+
+
+<div style="width:88px;border:1px solid #ccc;position:absolute;display:none" id="otherToolTipPanel">
+    <div style="text-align:left;padding:5px;background:#fff">
+        <label><input type="checkbox" id="ottt_spf" value="司陪房" onclick="javascript:this.stopPropagation();">司陪房</label><br/>
+        <label><input type="checkbox" id="ottt_jcjs" value="机场接送">机场接送</label>
+    </div>
+    <div style="text-align:center;height:22px;width:100%;line-height:22px;cursor:pointer;background:#ccc"
+         id="btn_otherToolTipOK">确定
+    </div>
+
+</div>
+
+<div id="child_orders" class="child_order" style="display:none;position:absolute;z-index:2;">
+    <ul class="clearfix title">
+        <li class="first">
+            <span>原订单号: 123456789 <strong style="margin-left:20px;">2580</strong></span>
+        </li>
+        <li class="last"><em>关联订单</em><strong>1</strong></li>
+    </ul>
+
+    <div class="history_list">
+        <ul>
+            <li>
+                <h3>2013/07/03 13:00</h3>
+                <span><b></b></span>
+                <div class="item">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th style="width:60px;">变更单</th>
+                            <th style="width: 160px;">121246545645546465</th>
+                            <th style="width:60px;">操作人</th>
+                            <th style="width:100px">王小二</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td colspan="2">城市 | 酒店名称酒店名称酒店名称</td>
+                            <td colspan="2" rowspan="2"><strong>-1290.00</strong></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">房型名称 | 价格计划</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">入住日期~离店日期 间数</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </li>
+            <li>
+                <h3>2013/07/03 13:00</h3>
+                <span><b></b></span>
+                <div class="item">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th style="width:60px;">变更单</th>
+                            <th style="width: 160px;">121246545645546465</th>
+                            <th style="width:60px;">操作人</th>
+                            <th style="width:100px">王小二</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td colspan="2">城市 | 酒店名称酒店名称酒店名称</td>
+                            <td colspan="2" rowspan="2"><strong>-1290.00</strong></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">房型名称 | 价格计划</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">入住日期~离店日期 间数</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </li>
+            <li>
+                <h3>2013/07/03 13:00</h3>
+                <span></span>
+                <div class="item last">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th style="width:60px;">变更单</th>
+                            <th style="width: 160px;">121246545645546465</th>
+                            <th style="width:60px;">操作人</th>
+                            <th style="width:100px">王小二</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td colspan="2">城市 | 酒店名称酒店名称酒店名称</td>
+                            <td colspan="2" rowspan="2"><strong>-1290.00</strong></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">房型名称 | 价格计划</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">入住日期~离店日期 间数</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="totalPrice">
+        合计金额： <strong>￥2830.00</strong>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="../../../static/js/jquery.min.js"></script>
+<script type="text/javascript" src="../../../static/js/kendo.web.js"></script>
+<script type="text/javascript" src="../../../static/js/scrollFix.js"></script>
+<script type="text/javascript" src="../../../static/js/jquery.nicescroll.min.js"></script>
+<script type="text/javascript" src="../../../static/js/hotel.js"></script>
+<script type="text/javascript" src="../../../static/js/json2.js"></script>
+
+<div id="popWin_tbl_lzxxxq">
+    <table class="tgrid operate" style="width:100%;" cellpadding="0" cellspacing="0">
+        <thead>
+        <tr>
+            <th>订单号</th>
+            <th>客户</th>
+            <th>城市</th>
+            <th>酒店/供应商</th>
+            <th>酒店确认</th>
+            <th>留账金额</th>
+            <th>添加日期</th>
+            <th>留账有效期</th>
+            <th>签约经理</th>
+            <th>备注</th>
+            <th>留账余额</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>12345678</td>
+            <td>青空旅行社</td>
+            <td>上海</td>
+            <td>宝华国际酒店</td>
+            <td>刘伟</td>
+            <td>200.00</td>
+            <td>2013/08/31</td>
+            <td>2013/08/31</td>
+            <td>李四</td>
+            <td>酒店留账</td>
+            <td>200.00</td>
+        </tr>
+        <tr>
+            <td>12345678</td>
+            <td>青空旅行社</td>
+            <td>上海</td>
+            <td>宝华国际酒店</td>
+            <td>刘伟</td>
+            <td>200.00</td>
+            <td>2013/08/31</td>
+            <td>2013/08/31</td>
+            <td>李四</td>
+            <td>酒店留账</td>
+            <td>200.00</td>
+        </tr>
+        <tr>
+            <td>12345678</td>
+            <td>青空旅行社</td>
+            <td>上海</td>
+            <td>宝华国际酒店</td>
+            <td>刘伟</td>
+            <td>200.00</td>
+            <td>2013/08/31</td>
+            <td>2013/08/31</td>
+            <td>李四</td>
+            <td>酒店留账</td>
+            <td>200.00</td>
+        </tr>
+        <tr>
+            <td>12345678</td>
+            <td>青空旅行社</td>
+            <td>上海</td>
+            <td>宝华国际酒店</td>
+            <td>刘伟</td>
+            <td>200.00</td>
+            <td>2013/08/31</td>
+            <td>2013/08/31</td>
+            <td>李四</td>
+            <td>酒店留账</td>
+            <td>200.00</td>
+        </tr>
+        <tr>
+            <td>合计</td>
+            <td colspan="10" style="text-align:right;font-size:14px"><span class="important">3200.00</span></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <div class="grid-table-pagination">
+                  <span class="grid-table-count">
+                      共 <em>132</em> 条记录
+                  </span>
+                  <span>
+                      <a href="#" class="prev">&nbsp;</a>
+                  </span>
+                  <span class="links">
+                      <a href="#">1</a>
+                      <a href="#">2</a>
+                      <a href="#" class="current">3</a>
+                      <a href="#">4</a>
+                      <a href="#">5</a>
+                      <a href="javascript:;">...</a>
+                      <a href="#">50</a>
+                  </span>
+                  <span>
+                      <a href="#" class="next">&nbsp;</a>
+                  </span>
+    </div>
+</div>
+
+<div id="popWin_lz" style="display:none">
+    <table class="bookingProduct">
+        <tr>
+            <td class="fieldName" width="60">订单号</td>
+            <td width="84">12345678</td>
+            <td class="fieldName" width="64">客户名称</td>
+            <td width="104">青空旅行社</td>
+            <td class="fieldName" width="63">联系人</td>
+            <td width="105">张三</td>
+        </tr>
+        <tr>
+            <td class="fieldName">城市</td>
+            <td>上海</td>
+            <td class="fieldName">酒店/供应商</td>
+            <td>宝华国际酒店</td>
+            <td class="fieldName">签约经理</td>
+            <td>李四</td>
+        </tr>
+        <tr>
+            <td class="fieldName">留账金额</td>
+            <td><span class="qt">1000.00</span></td>
+            <td class="fieldName">酒店/供应商联系人</td>
+            <td><input type="text" name="" id="" style="width:94px"></td>
+            <td class="fieldName">留账有效期</td>
+            <td>2013/08/31 星期五</td>
+        </tr>
+        <tr>
+            <td class="fieldName">备注</td>
+            <td colspan="5"><input type="text" name="" id="" style="width:460px"></td>
+        </tr>
+    </table>
+    <div style="text-align:right;margin-top:10px">
+        <a href="javascript:;" class="button_important adaptiveButton small" style="margin:0">
+            <span class="left"></span>
+            <span class="center">提 交</span>
+            <span class="right"></span>
+        </a>
+        <a href="javascript:;" class="button_unimportant adaptiveButton small" style="margin:0">
+            <span class="left"></span>
+            <span class="center">取 消</span>
+            <span class="right"></span>
+        </a>
+    </div>
+</div>
+
+<script type="text/html" id="confirmBookingPopWin">
+    <div style="width:400px;padding:0 25px;text-align:left">
+        <div><label><input type="radio" name="jdqrm">酒店确认码：</label><input type="text" style="width:268px"></div>
+        <div style="margin:5px 0;"><label><input type="radio" name="jdqrm">酒店无确认码</label></div>
+        <div style="text-align:right;margin-top:10px">
+            <a href="javascript:;" class="button_important adaptiveButton medium popwin" data='{"content":"$(\".modifyjsPopWin:eq(0)\").html()","width":468,"height":128,"title":"修改结算提醒","contentFunction":true}' style="margin:0">
+                <span class="left"></span>
+                <span class="center">确 定</span>
+                <span class="right"></span>
+            </a>
+            <a href="javascript:;" class="button_unimportant adaptiveButton medium" style="margin:0">
+                <span class="left"></span>
+                <span class="center">取 消</span>
+                <span class="right"></span>
+            </a>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" class="modifyjsPopWin">
+    <div id="checkoutContainer" style="padding:0 25px;text-align:center;">
+        <div style="text-align:left;margin-bottom:5px">
+            <label><input type="radio" name="checkoutType" id="" onclick="changeCheckoutTypeContainerInputstate(true);" checked="checked">现结</label>
+            <input class="datePicker" type="text" name="" id="ipt_checkoutDate" style="width:120px;vertical-align:middle">
+            <select style="width:130px;height:22px;vertical-align:middle;margin-left:10px" id="sel_checkoutTimeInterval"><option>选择时间</option></select>
+        </div>
+        <div style="text-align:left;margin-bottom:5px">
+            <label><input type="radio" name="checkoutType" id="" onclick="changeCheckoutTypeContainerInputstate(false);">周结</label>
+            <label style="margin-left:30px"><input type="radio" name="checkoutType" id="" onclick="changeCheckoutTypeContainerInputstate(false);">半月结</label>
+            <label style="margin-left:30px"><input type="radio" name="checkoutType" id="" onclick="changeCheckoutTypeContainerInputstate(false);">月结</label>
+        </div>
+    </div>
+    <div style="text-align:right;margin:20px 20px 0 0">
+        <a href="javascript:;" class="button_important adaptiveButton medium" style="margin:0">
+            <span class="left"></span>
+            <span class="center">保 存</span>
+            <span class="right"></span>
+        </a>
+        <a href="javascript:;" class="button_unimportant adaptiveButton medium" style="margin:0">
+            <span class="left"></span>
+            <span class="center">取 消</span>
+            <span class="right"></span>
+        </a>
+    </div>
+</script>
+
+
+
+<script type="text/javascript">
+    $(function () {
+        var ottElement = null;
+
+        var hzScroll = $(".fee_list").niceScroll({touchbehavior:false, cursorcolor:"#b8bdc1", cursoropacitymax:0.6, cursorwidth:8});
+
+        $("body").delegate(".priceDetail_otherToolTip","click",function(){
+            var left=$(this).offset().left;
+            var top=$(this).offset().top;
+            var h=$(this).outerHeight();
+            $("#otherToolTipPanel").css({left:left,top:top+h,display:'block'});
+            var p=$(this).parent();
+            $("#otherToolTipPanel :checkbox").prop("checked",false);
+            $(".priceDetail_otherToolTip",p).each(function(i,j){
+                $("input[value='"+ j.innerText+"']","#otherToolTipPanel").prop("checked",true);
+            })
+            ottElement=$(this).parent();
+            return false;
+        })
+
+        $("#btn_otherToolTipOK").click(function(){
+            ottElement.html("");
+            $("#otherToolTipPanel :checked").each(function(i,j){
+                ottElement.append('<div><a class="priceDetail_otherToolTip" href="javascript:;">'+ j.value+'</a></div>');
+            })
+            $("#otherToolTipPanel").hide();
+            return false;
+        })
+
+        $("#otherToolTipPanel").click(function(e){e.stopPropagation();});
+        $("body").click(function(){$("#otherToolTipPanel").hide();})
+
+        $(".editable.disable").prop("readonly",true);
+
+        $(".btn_modifyCurrent").click(function(){
+            var opt= $.parseJSON($(this).attr("data"));
+            var tar=$(opt.target);
+            var modifyButton=$(this);
+            if(opt.cancel)
+            {
+                $(opt.cancelButton+','+opt.saveButton).show();
+                modifyButton.hide();
+
+                var arr_tmp=[];
+                tar.each(function(){
+                    arr_tmp.push($(this).clone(true,true));
+                });
+                $(opt.cancelButton).data("oldValue",arr_tmp);
+
+                $(opt.cancelButton).click(function(){
+                    var i=0;
+                    var that=$(this);
+                    tar.each(function(){
+                        $(this).replaceWith(that.data("oldValue")[i]);
+                        i++
+                    })
+                    $(this).unbind("click");
+                    $(opt.cancelButton+','+opt.saveButton).hide();
+                    modifyButton.show();
+                });
+
+                $(opt.saveButton).click(function(){
+                    $("input,textarea",tar).addClass("disable").prop("readonly",true);
+                    $(this).unbind("click");
+                    $(opt.cancelButton+','+opt.saveButton).hide();
+                    modifyButton.show();
+                })
+            }
+            $("input,textarea",tar).removeClass("disable").removeProp("readonly");
+        });
+
+        var data=[
+            {"tf":"至客户","v":"0","click":false},
+            {"tf":"收据电邮","v":"1","click":true},
+            {"tf":"入住单电邮","v":"2","click":true},
+            {"tf":"酒店确认短信","v":"3","click":true},
+            {"tf":"预定失败短信","v":"4","click":true},
+            {"tf":"预定失败电邮","v":"5","click":true},
+            {"tf":"付款失败电邮","v":"6","click":true},
+            {"tf":"付款失败短信","v":"7","click":true},
+            {"tf":"授权书电邮","v":"8","click":true},
+            {"tf":"未收到授权书电邮","v":"9","click":true},
+            {"tf":"至客人","v":"1","click":false},
+            {"tf":"酒店入住单（住客）","v":"1","click":true},
+            {"tf":"酒店确认短信（住客）","v":"1","click":true},
+            {"tf":"至供应商","v":"1","click":false},
+            {"tf":"酒店预订单","v":"1","click":true},
+            {"tf":"付款存根","v":"1","click":true},
+            {"tf":"至供应商","v":"1","click":true},
+            {"tf":"付款申请单","v":"1","click":true}
+        ];
+
+
+
+        var sendFileDDL=$("#ddl_sendFile").kendoDropDownList({
+            dataTextField:"tf",
+            dataValueField:"v",
+            template:$("#ddlTemplate").html(),
+            dataSource:data
+        }).data("kendoDropDownList");
+        sendFileDDL.select(1);
+
+        $(".btn_expand").click(function(){
+            var data= $.parseJSON($(this).attr("data"));
+            $(data.target).slideToggle();
+            var tmp=$(this).text();
+            $(this).text(data.changeText);
+            data.changeText=tmp;
+            $(this).attr("data", JSON.stringify(data));
+        });
+
+        $("#associatedOrder").mouseenter(function(){
+            var that=$(this);
+            $("#child_orders").css({top:that.offset().top-1,left:that.offset().left+that.outerWidth()-$("#child_orders").outerWidth()+8,display:"block"});
+            $("#child_orders").one("mouseleave",function(){
+                $(this).hide();
+            })
+        })
+
+        $("#child_orders div.item").each(function(){
+            $(this).hover(function(){
+                $(this).css({"background-color":"#ffffdb","border-color":"#cccccc"});
+            },function(){
+                if($(this).hasClass("last")){
+                    $(this).css({"background-color":"#fff5f5","border-color":"#FF4E00"});
+                }else{
+                    $(this).css({"background-color":"#ffffff","border-color":"#B8F1FF"});
+                }
+            });
+        });
+
+        kendo.init($("body"));
+
+        var lzxqPopWin=$('#popWin_tbl_lzxxxq').kendoWindow({visible:false,modal:true,animation:false,width:900,height:330,title:false}).data("kendoWindow");
+        $("#btn_viewDetail").click(function(){
+            lzxqPopWin.center().open();
+            return false;
+        })
+        $("body").delegate(".k-overlay","click",function(){
+            lzxqPopWin.close();
+        })
+    })
+</script>
+
+<script type="text/x-kendo-template" id="ddlTemplate">
+    # if(data.click){ #
+    <span class="option">${data.tf}</span>
+    # }else{ #
+    <span onclick="javascript:return false;" class="optgroup">${data.tf}</span>
+    # } #
+</script>
+</body>
+</html>

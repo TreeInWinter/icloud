@@ -1,0 +1,1900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 国内机票搜索结果页-单程</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_flight.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.store.css" />
+    <link rel="stylesheet" href="http://static.travelzensh.com/css/flight_logo.css">
+
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/store/store.js"></script>
+
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+</head>
+<body>
+
+<div class="main-wrapper">
+<header class="main-header">
+    <a class="logo" href="/"><h1>天地行</h1></a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first"><a herf="#">首页</a></li>
+            <li class="active"><a herf="#">国内机票</a></li>
+            <li><a herf="#">国际机票</a></li>
+            <li><a herf="#">酒店</a></li>
+        </ul>
+    </nav>
+    <nav class="main-links">
+        <ul class="clearfix">
+            <li class="first"><a href="#">订单管理</a></li>
+            <li><a href="#">分销管理</a></li>
+            <li><a href="#">电子钱包</a></li>
+            <li><a href="#">统计报表</a></li>
+            <li><a href="#">客服服务</a></li>
+            <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+            <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+</header>
+<section class="main-body clearfix">
+
+    <div class="flight_search separate10">
+       <ul class="clearfix condition">
+           <li class="condition_topleft">
+           <label><input id="" type="radio" name="xx" checked>单程</label>
+           <label><input id="" type="radio" name="xx">往返</label>
+           </li>
+           <li class="condition_topright">
+               <a class="adaptiveButton brightRed_btn">
+                   <span class="left"></span>
+                   <span class="center">搜 索</span>
+                   <span class="right"></span>
+               </a>
+
+               <div style="top:10px;left:314px;" class="xchange">
+                   <b></b>
+                   <a href="javascript:void(0);">换</a>
+                   <i></i>
+               </div>
+                <table class="time_city" id="one_and_round">
+                    <colgroup>
+                        <col width="70">
+                        <col width="312">
+                        <col width="70">
+                    </colgroup>
+                    <tr>
+                        <td><label for="departure_city"><em>*</em><span>出发城市</span></label></td>
+                        <td><input type="text" style="width:210px" class="gray-border" value="" id="departure_city" name="departure_city"/></td>
+                        <td><label for="departure_date"><em>*</em><span>出发日期</span></label></td>
+                        <td><input type="text" style="width:210px;" class="gray-border datepicker" value="" name="departure_date" id="departure_date"/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="arrive_city"><em>*</em><span>到达城市</span></label></td>
+                        <td><input type="text" style="width:210px" class="gray-border" value="" name="arrive_city" id="arrive_city"/></td>
+                        <td><label id="return_label" class="muted" for="return_date"><em>*</em><span>返程日期</span></label></td>
+                        <td><input type="text" style="width:210px;" class="gray-border datepicker disabled_input" value="" disabled="disabled" name="return_date" id="return_date"/></td>
+                    </tr>
+                </table>
+
+           </li>
+       </ul>
+    </div>
+
+   <div class="time">  <!--time开始-->
+        <ul class="date clearfix">
+            <li>
+               <a href="#" class="flight_arrow flight_prev_arrow"> <i>&nbsp;</i> </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>07-20 周一</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>07-20 周二</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>07-20 周三</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li class="current">
+                <a href="#">
+                    <div>07-20 周四</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>07-20 周五</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>07-20 周六</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>07-20 周日</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li style="border:0;" class="last_li">
+                <a href="#" class="flight_arrow flight_next_arrow">
+                     <i>&nbsp;</i>
+                </a>
+            </li>
+        </ul>
+        <div class="caption clearfix">
+           <h3>上海→香港 &nbsp; &nbsp;出发日期：2013-07-29</h3>
+           <p>
+              <span>当前共有<em>40</em>条航班记录，最低价<em> ￥809</em></span>
+              <i>9/25</i>
+              <strong><a href="#">下一页</a></strong>
+           </p>
+       </div>
+
+       <div class="flight_filter clearfix">
+           <table style="width:100%;">
+           <tr>
+           <td class="filter_item" width="40"><span class="chosen_text">筛选：</span></td>
+           <td class="filter_item">
+               <table class="flight_dropdownlist_group">
+                   <tr>
+                       <td>
+                            <span class="hyper-link"><u>航空公司</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text hyper-airline">
+                                        <ul>
+                                            <li>
+                                            <label><input id="" type="checkbox" name="">东方航空</label>
+                                            </li>
+                                            <li>
+                                            <label><input id="" type="checkbox" name="">东方航空</label>
+                                            </li>
+                                            <li>
+                                            <label><input id="" type="checkbox" name="">东方航空</label>
+                                            </li>
+                                            <li>
+                                            <label><input id="" type="checkbox" name="">东方航空</label>
+                                            </li>
+                                            <li>
+                                            <label><input id="" type="checkbox" name="">东方航空</label>
+                                            </li>
+                                            <li>
+                                            <label><input id="" type="checkbox" name="">东方航空</label>
+                                            </li>
+                                            <li>
+                                            <label><input id="" type="checkbox" name="">东方航空</label>
+                                            </li>
+                                            <li>
+                                            <label><input id="" type="checkbox" name="">东方航空</label>
+                                            </li>
+                                            <li>
+                                            <label><input id="" type="checkbox" name="">东方航空</label>
+                                            </li>
+                                            <li>
+                                            <label><input id="" type="checkbox" name="">东方航空</label>
+                                            </li>
+                                            <li>
+                                            <label><input id="" type="checkbox" name="">东方航空</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                            </span>
+                       </td>
+                       <td>
+                           <span class="hyper-link"><u>起飞时间</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">全部</a>
+                                    </div>
+                            </span>
+                       </td>
+                       <td>
+                           <span class="hyper-link"><u>机型</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">全部</a>
+                                    </div>
+                            </span>
+                       </td>
+                       <td>
+                           <span class="hyper-link"><u>舱位</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">全部</a>
+                                    </div>
+                            </span>
+                       </td>
+                       <td>
+                            <span class="hyper-link"><u>起飞机场</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">全部</a>
+                                    </div>
+                            </span>
+                       </td>
+                   </tr>
+               </table>
+           </td>
+           <td class="filter_item" style="text-align:right;">
+               <span class="chosen_text">排序：</span>
+               <span class="sorttab">
+                   起降时间
+                   <i>&nbsp;</i>
+               </span>
+               <span class="sorttab descend">
+                   结算价
+                   <i>&nbsp;</i>
+               </span>
+           </td>
+           </tr>
+           </table>
+
+       </div>
+
+       <div class="flight_filter clearfix">
+           <span class="chosen_text">已选：</span>
+           <span class="chosen_items">
+               <i class="chosen_item">经济舱<s class="chosen_delete">×</s></i>
+               <i class="chosen_item">东方航空<s class="chosen_delete">×</s></i>
+           </span>
+           <a class="chosen_empty" href="javascript:;">清空筛选条件</a>
+       </div>
+
+
+
+    </div> <!--time结束-->
+
+    <div class="flight_result_list clearfix">  <!--flight_number start-->
+       <div class="information">
+           <table class="information_header">
+               <colgroup>
+                   <col width="40">
+                   <col width="110">
+                   <col width="70">
+                   <col width="80">
+                   <col width="90">
+                   <col width="70">
+                   <col width="80">
+                   <col width="165">
+                   <col>
+               </colgroup>
+               <tbody>
+               <tr>
+                   <td>
+                       <div class="pubFlights_EU fico">&nbsp;</div>
+                   </td>
+                   <td>
+                       <div>成都航空</div>
+
+                       <div>EU6678</div>
+
+                   </td>
+                   <td>
+                       <div class="flight_time">20:30</div>
+                   </td>
+                   <td>
+                       <div>浦东国际机场T2</div>
+                   </td>
+                   <td style="text-align:center;">
+
+                       <div class="flight_type flight_type_exist flightStop" temp="EU6678"><em></em><s><u>经停</u></s></div>
+
+                   </td>
+                   <td>
+                       <div class="flight_time">00:10</div>
+                   </td>
+                   <td>
+                       <div>双流国际机场T2</div>
+                   </td>
+                   <td style="text-align:right;">机建/燃油：50/120</td>
+                   <td>&nbsp;</td>
+               </tr>
+               </tbody>
+           </table>
+           <table class="information_detail">
+               <colgroup>
+                   <col width="150">
+                   <col width="70">
+                   <col width="105">
+                   <col width="65">
+                   <col width="120">
+                   <col width="120">
+                   <col width="100">
+                   <col width="60">
+                   <col width="70">
+               </colgroup>
+               <tbody>
+
+
+               <tr id="flight_0_cabin_0">
+
+                   <td>&nbsp;</td>
+                   <td>折扣经济舱Q</td>
+                   <td>
+                       <div style="text-align:center">
+
+                           <i class="flight_abundant">9张</i>
+
+                       </div>
+                   </td>
+                   <td>
+                       <span class="darkOrange tgq">退改签</span>
+                   </td>
+                   <td>
+                       <s class="cell_name">票面价</s><span class="money"><u>￥</u>890</span>
+                   </td>
+                   <td>
+                       <span class="percent">0% <s>+</s> <u>￥</u><s>0</s></span>
+                   </td>
+                   <td style="text-align:right;padding-right:25px;"><span class="price"><u>￥</u>
+
+                           890
+                   </span></td>
+                   <td>优惠0</td>
+                   <td>
+                       <a class="adaptiveButton brightRed_btn medium">
+                           <span class="left"></span>
+
+                           <span class="center" style="padding:0 15px;" onclick="order('#form_0_0')">预订</span>
+
+                           <span class="right"></span>
+                       </a>
+                   </td>
+                   <td>
+
+                       <a class="more-cabin" href="javascript:;" data-role="ctoggle" data-text="展开舱位|收起舱位"><b>展开舱位</b><i>&nbsp;</i></a>
+
+                       <form id="form_0_0">
+                           <input type="hidden" name="singleSearch" value="1">
+                           <input type="hidden" name="fromCitySearch" value="SHA">
+                           <input type="hidden" name="fromCityNameSearch" value="上海">
+                           <input type="hidden" name="fromDateSearch" value="2014-03-24">
+                           <input type="hidden" name="returnCitySearch" value="CTU">
+                           <input type="hidden" name="returnCityNameSearch" value="成都">
+                           <input type="hidden" name="returnDateSearch" value="">
+                           <input type="hidden" name="flightCompanySearch" value="">
+                           <input type="hidden" name="redisKey" value="">
+                           <input type="hidden" name="currentPage" value="1">
+                           <input type="hidden" name="pageSize" value="20">
+                           <input type="hidden" name="sort" value="2">
+                           <input type="hidden" name="sortAsc" value="1">
+                           <input type="hidden" name="airLineInfo.airLine" value="EU">
+                           <input type="hidden" name="airLineInfo.airLineName" value="成都航空">
+                           <input type="hidden" name="airLineInfo.flightNo" value="EU6678">
+                           <input type="hidden" name="airLineInfo.planeCode" value="319">
+                           <input type="hidden" name="airLineInfo.planeName" value="">
+                           <input type="hidden" name="airLineInfo.planeStyle" value="">
+                           <input type="hidden" name="airLineInfo.fromCity" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromCityName" value="">
+                           <input type="hidden" name="airLineInfo.fromAirPort" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromAirPortName" value="浦东国际机场">
+                           <input type="hidden" name="airLineInfo.fromTower" value="T2">
+                           <input type="hidden" name="airLineInfo.arriCity" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriCityName" value="">
+                           <input type="hidden" name="airLineInfo.arriAirPort" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriAirPortName" value="双流国际机场">
+                           <input type="hidden" name="airLineInfo.arriTower" value="T2">
+                           <input type="hidden" name="airLineInfo.fromDate" value="2014-03-24">
+                           <input type="hidden" name="airLineInfo.fromTime" value="20:30">
+                           <input type="hidden" name="airLineInfo.arriDate" value="2014-03-25">
+                           <input type="hidden" name="airLineInfo.arriTime" value="00:10">
+                           <input type="hidden" name="airLineInfo.airPortFee" value="50">
+                           <input type="hidden" name="airLineInfo.fuelTax" value="120">
+                           <input type="hidden" name="airLineInfo.yprice" value="1610">
+                           <input type="hidden" name="airLineInfo.fprice" value="3220">
+                           <input type="hidden" name="airLineInfo.cprice" value="0">
+                           <input type="hidden" name="airLineInfo.stop" value="0">
+
+                           <input type="hidden" name="airLineInfo.isCodeShare" value="false">
+
+                           <input type="hidden" name="airLineInfo.codeShareAirLine" value="">
+                           <input type="hidden" name="airLineInfo.codeShareAirNo" value="">
+                           <input type="hidden" name="airLineInfo.cabinList[0].classCode" value="Q">
+                           <input type="hidden" name="airLineInfo.cabinList[0].childFare" value="0">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].specialPrice" value="false">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].classStep" value="Y">
+                           <input type="hidden" name="airLineInfo.cabinList[0].stepName" value="折扣经济舱">
+                           <input type="hidden" name="airLineInfo.cabinList[0].fare" value="890">
+                           <input type="hidden" name="airLineInfo.cabinList[0].rebate" value="55">
+                           <input type="hidden" name="airLineInfo.cabinList[0].settlementPrice" value="890">
+                           <input type="hidden" name="airLineInfo.cabinList[0].seat" value="A">
+                       </form>
+                   </td>
+               </tr>
+
+
+               <tr id="flight_0_cabin_1" style="display: none" class="more_cabin_item">
+
+                   <td>&nbsp;</td>
+                   <td>折扣经济舱L</td>
+                   <td>
+                       <div style="text-align:center">
+
+                           <i class="flight_lack">1张</i>
+
+                       </div>
+                   </td>
+                   <td>
+                       <span class="darkOrange tgq">退改签</span>
+                   </td>
+                   <td>
+                       <s class="cell_name">票面价</s><span class="money"><u>￥</u>970</span>
+                   </td>
+                   <td>
+                       <span class="percent">0% <s>+</s> <u>￥</u><s>0</s></span>
+                   </td>
+                   <td style="text-align:right;padding-right:25px;"><span class="price"><u>￥</u>
+
+                           970
+                   </span></td>
+                   <td>优惠0</td>
+                   <td>
+                       <a class="adaptiveButton brightRed_btn medium">
+                           <span class="left"></span>
+
+                           <span class="center" style="padding:0 15px;" onclick="order('#form_0_1')">预订</span>
+
+                           <span class="right"></span>
+                       </a>
+                   </td>
+                   <td>
+
+                       <form id="form_0_1">
+                           <input type="hidden" name="singleSearch" value="1">
+                           <input type="hidden" name="fromCitySearch" value="SHA">
+                           <input type="hidden" name="fromCityNameSearch" value="上海">
+                           <input type="hidden" name="fromDateSearch" value="2014-03-24">
+                           <input type="hidden" name="returnCitySearch" value="CTU">
+                           <input type="hidden" name="returnCityNameSearch" value="成都">
+                           <input type="hidden" name="returnDateSearch" value="">
+                           <input type="hidden" name="flightCompanySearch" value="">
+                           <input type="hidden" name="redisKey" value="">
+                           <input type="hidden" name="currentPage" value="1">
+                           <input type="hidden" name="pageSize" value="20">
+                           <input type="hidden" name="sort" value="2">
+                           <input type="hidden" name="sortAsc" value="1">
+                           <input type="hidden" name="airLineInfo.airLine" value="EU">
+                           <input type="hidden" name="airLineInfo.airLineName" value="成都航空">
+                           <input type="hidden" name="airLineInfo.flightNo" value="EU6678">
+                           <input type="hidden" name="airLineInfo.planeCode" value="319">
+                           <input type="hidden" name="airLineInfo.planeName" value="">
+                           <input type="hidden" name="airLineInfo.planeStyle" value="">
+                           <input type="hidden" name="airLineInfo.fromCity" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromCityName" value="">
+                           <input type="hidden" name="airLineInfo.fromAirPort" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromAirPortName" value="浦东国际机场">
+                           <input type="hidden" name="airLineInfo.fromTower" value="T2">
+                           <input type="hidden" name="airLineInfo.arriCity" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriCityName" value="">
+                           <input type="hidden" name="airLineInfo.arriAirPort" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriAirPortName" value="双流国际机场">
+                           <input type="hidden" name="airLineInfo.arriTower" value="T2">
+                           <input type="hidden" name="airLineInfo.fromDate" value="2014-03-24">
+                           <input type="hidden" name="airLineInfo.fromTime" value="20:30">
+                           <input type="hidden" name="airLineInfo.arriDate" value="2014-03-25">
+                           <input type="hidden" name="airLineInfo.arriTime" value="00:10">
+                           <input type="hidden" name="airLineInfo.airPortFee" value="50">
+                           <input type="hidden" name="airLineInfo.fuelTax" value="120">
+                           <input type="hidden" name="airLineInfo.yprice" value="1610">
+                           <input type="hidden" name="airLineInfo.fprice" value="3220">
+                           <input type="hidden" name="airLineInfo.cprice" value="0">
+                           <input type="hidden" name="airLineInfo.stop" value="0">
+
+                           <input type="hidden" name="airLineInfo.isCodeShare" value="false">
+
+                           <input type="hidden" name="airLineInfo.codeShareAirLine" value="">
+                           <input type="hidden" name="airLineInfo.codeShareAirNo" value="">
+                           <input type="hidden" name="airLineInfo.cabinList[0].classCode" value="L">
+                           <input type="hidden" name="airLineInfo.cabinList[0].childFare" value="0">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].specialPrice" value="false">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].classStep" value="Y">
+                           <input type="hidden" name="airLineInfo.cabinList[0].stepName" value="折扣经济舱">
+                           <input type="hidden" name="airLineInfo.cabinList[0].fare" value="970">
+                           <input type="hidden" name="airLineInfo.cabinList[0].rebate" value="60">
+                           <input type="hidden" name="airLineInfo.cabinList[0].settlementPrice" value="970">
+                           <input type="hidden" name="airLineInfo.cabinList[0].seat" value="A">
+                       </form>
+                   </td>
+               </tr>
+
+
+               <tr id="flight_0_cabin_2" style="display: none" class="more_cabin_item">
+
+                   <td>&nbsp;</td>
+                   <td>折扣经济舱G</td>
+                   <td>
+                       <div style="text-align:center">
+
+                           <i class="flight_lack">1</i>
+
+                       </div>
+                   </td>
+                   <td>
+                       <span class="darkOrange tgq">退改签</span>
+                   </td>
+                   <td>
+                       <s class="cell_name">票面价</s><span class="money"><u>￥</u>1130</span>
+                   </td>
+                   <td>
+                       <span class="percent">0% <s>+</s> <u>￥</u><s>0</s></span>
+                   </td>
+                   <td style="text-align:right;padding-right:25px;"><span class="price"><u>￥</u>
+
+                           1130
+                   </span></td>
+                   <td>优惠0</td>
+                   <td>
+                       <a class="adaptiveButton brightRed_btn medium">
+                           <span class="left"></span>
+
+                           <span class="center" style="padding:0 15px;" onclick="order('#form_0_2')">预订</span>
+
+                           <span class="right"></span>
+                       </a>
+                   </td>
+                   <td>
+
+                       <form id="form_0_2">
+                           <input type="hidden" name="singleSearch" value="1">
+                           <input type="hidden" name="fromCitySearch" value="SHA">
+                           <input type="hidden" name="fromCityNameSearch" value="上海">
+                           <input type="hidden" name="fromDateSearch" value="2014-03-24">
+                           <input type="hidden" name="returnCitySearch" value="CTU">
+                           <input type="hidden" name="returnCityNameSearch" value="成都">
+                           <input type="hidden" name="returnDateSearch" value="">
+                           <input type="hidden" name="flightCompanySearch" value="">
+                           <input type="hidden" name="redisKey" value="">
+                           <input type="hidden" name="currentPage" value="1">
+                           <input type="hidden" name="pageSize" value="20">
+                           <input type="hidden" name="sort" value="2">
+                           <input type="hidden" name="sortAsc" value="1">
+                           <input type="hidden" name="airLineInfo.airLine" value="EU">
+                           <input type="hidden" name="airLineInfo.airLineName" value="成都航空">
+                           <input type="hidden" name="airLineInfo.flightNo" value="EU6678">
+                           <input type="hidden" name="airLineInfo.planeCode" value="319">
+                           <input type="hidden" name="airLineInfo.planeName" value="">
+                           <input type="hidden" name="airLineInfo.planeStyle" value="">
+                           <input type="hidden" name="airLineInfo.fromCity" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromCityName" value="">
+                           <input type="hidden" name="airLineInfo.fromAirPort" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromAirPortName" value="浦东国际机场">
+                           <input type="hidden" name="airLineInfo.fromTower" value="T2">
+                           <input type="hidden" name="airLineInfo.arriCity" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriCityName" value="">
+                           <input type="hidden" name="airLineInfo.arriAirPort" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriAirPortName" value="双流国际机场">
+                           <input type="hidden" name="airLineInfo.arriTower" value="T2">
+                           <input type="hidden" name="airLineInfo.fromDate" value="2014-03-24">
+                           <input type="hidden" name="airLineInfo.fromTime" value="20:30">
+                           <input type="hidden" name="airLineInfo.arriDate" value="2014-03-25">
+                           <input type="hidden" name="airLineInfo.arriTime" value="00:10">
+                           <input type="hidden" name="airLineInfo.airPortFee" value="50">
+                           <input type="hidden" name="airLineInfo.fuelTax" value="120">
+                           <input type="hidden" name="airLineInfo.yprice" value="1610">
+                           <input type="hidden" name="airLineInfo.fprice" value="3220">
+                           <input type="hidden" name="airLineInfo.cprice" value="0">
+                           <input type="hidden" name="airLineInfo.stop" value="0">
+
+                           <input type="hidden" name="airLineInfo.isCodeShare" value="false">
+
+                           <input type="hidden" name="airLineInfo.codeShareAirLine" value="">
+                           <input type="hidden" name="airLineInfo.codeShareAirNo" value="">
+                           <input type="hidden" name="airLineInfo.cabinList[0].classCode" value="G">
+                           <input type="hidden" name="airLineInfo.cabinList[0].childFare" value="0">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].specialPrice" value="false">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].classStep" value="Y">
+                           <input type="hidden" name="airLineInfo.cabinList[0].stepName" value="折扣经济舱">
+                           <input type="hidden" name="airLineInfo.cabinList[0].fare" value="1130">
+                           <input type="hidden" name="airLineInfo.cabinList[0].rebate" value="70">
+                           <input type="hidden" name="airLineInfo.cabinList[0].settlementPrice" value="1130">
+                           <input type="hidden" name="airLineInfo.cabinList[0].seat" value="A">
+                       </form>
+                   </td>
+               </tr>
+
+
+               <tr id="flight_0_cabin_3" style="display: none" class="more_cabin_item">
+
+                   <td>&nbsp;</td>
+                   <td>折扣经济舱H</td>
+                   <td>
+                       <div style="text-align:center">
+
+                           <i class="flight_lack">1</i>
+
+                       </div>
+                   </td>
+                   <td>
+                       <span class="darkOrange tgq">退改签</span>
+                   </td>
+                   <td>
+                       <s class="cell_name">票面价</s><span class="money"><u>￥</u>1290</span>
+                   </td>
+                   <td>
+                       <span class="percent">0% <s>+</s> <u>￥</u><s>0</s></span>
+                   </td>
+                   <td style="text-align:right;padding-right:25px;"><span class="price"><u>￥</u>
+
+                           1290
+                   </span></td>
+                   <td>优惠0</td>
+                   <td>
+                       <a class="adaptiveButton brightRed_btn medium">
+                           <span class="left"></span>
+
+                           <span class="center" style="padding:0 15px;" onclick="order('#form_0_3')">预订</span>
+
+                           <span class="right"></span>
+                       </a>
+                   </td>
+                   <td>
+
+                       <form id="form_0_3">
+                           <input type="hidden" name="singleSearch" value="1">
+                           <input type="hidden" name="fromCitySearch" value="SHA">
+                           <input type="hidden" name="fromCityNameSearch" value="上海">
+                           <input type="hidden" name="fromDateSearch" value="2014-03-24">
+                           <input type="hidden" name="returnCitySearch" value="CTU">
+                           <input type="hidden" name="returnCityNameSearch" value="成都">
+                           <input type="hidden" name="returnDateSearch" value="">
+                           <input type="hidden" name="flightCompanySearch" value="">
+                           <input type="hidden" name="redisKey" value="">
+                           <input type="hidden" name="currentPage" value="1">
+                           <input type="hidden" name="pageSize" value="20">
+                           <input type="hidden" name="sort" value="2">
+                           <input type="hidden" name="sortAsc" value="1">
+                           <input type="hidden" name="airLineInfo.airLine" value="EU">
+                           <input type="hidden" name="airLineInfo.airLineName" value="成都航空">
+                           <input type="hidden" name="airLineInfo.flightNo" value="EU6678">
+                           <input type="hidden" name="airLineInfo.planeCode" value="319">
+                           <input type="hidden" name="airLineInfo.planeName" value="">
+                           <input type="hidden" name="airLineInfo.planeStyle" value="">
+                           <input type="hidden" name="airLineInfo.fromCity" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromCityName" value="">
+                           <input type="hidden" name="airLineInfo.fromAirPort" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromAirPortName" value="浦东国际机场">
+                           <input type="hidden" name="airLineInfo.fromTower" value="T2">
+                           <input type="hidden" name="airLineInfo.arriCity" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriCityName" value="">
+                           <input type="hidden" name="airLineInfo.arriAirPort" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriAirPortName" value="双流国际机场">
+                           <input type="hidden" name="airLineInfo.arriTower" value="T2">
+                           <input type="hidden" name="airLineInfo.fromDate" value="2014-03-24">
+                           <input type="hidden" name="airLineInfo.fromTime" value="20:30">
+                           <input type="hidden" name="airLineInfo.arriDate" value="2014-03-25">
+                           <input type="hidden" name="airLineInfo.arriTime" value="00:10">
+                           <input type="hidden" name="airLineInfo.airPortFee" value="50">
+                           <input type="hidden" name="airLineInfo.fuelTax" value="120">
+                           <input type="hidden" name="airLineInfo.yprice" value="1610">
+                           <input type="hidden" name="airLineInfo.fprice" value="3220">
+                           <input type="hidden" name="airLineInfo.cprice" value="0">
+                           <input type="hidden" name="airLineInfo.stop" value="0">
+
+                           <input type="hidden" name="airLineInfo.isCodeShare" value="false">
+
+                           <input type="hidden" name="airLineInfo.codeShareAirLine" value="">
+                           <input type="hidden" name="airLineInfo.codeShareAirNo" value="">
+                           <input type="hidden" name="airLineInfo.cabinList[0].classCode" value="H">
+                           <input type="hidden" name="airLineInfo.cabinList[0].childFare" value="0">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].specialPrice" value="false">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].classStep" value="Y">
+                           <input type="hidden" name="airLineInfo.cabinList[0].stepName" value="折扣经济舱">
+                           <input type="hidden" name="airLineInfo.cabinList[0].fare" value="1290">
+                           <input type="hidden" name="airLineInfo.cabinList[0].rebate" value="80">
+                           <input type="hidden" name="airLineInfo.cabinList[0].settlementPrice" value="1290">
+                           <input type="hidden" name="airLineInfo.cabinList[0].seat" value="A">
+                       </form>
+                   </td>
+               </tr>
+
+
+               <tr id="flight_0_cabin_4" style="display: none" class="more_cabin_item">
+
+                   <td>&nbsp;</td>
+                   <td>折扣经济舱T</td>
+                   <td>
+                       <div style="text-align:center">
+
+                           <i class="flight_lack">1</i>
+
+                       </div>
+                   </td>
+                   <td>
+                       <span class="darkOrange tgq">退改签</span>
+                   </td>
+                   <td>
+                       <s class="cell_name">票面价</s><span class="money"><u>￥</u>1450</span>
+                   </td>
+                   <td>
+                       <span class="percent">0% <s>+</s> <u>￥</u><s>0</s></span>
+                   </td>
+                   <td style="text-align:right;padding-right:25px;"><span class="price"><u>￥</u>
+
+                           1450
+                   </span></td>
+                   <td>优惠0</td>
+                   <td>
+                       <a class="adaptiveButton brightRed_btn medium">
+                           <span class="left"></span>
+
+                           <span class="center" style="padding:0 15px;" onclick="order('#form_0_4')">预订</span>
+
+                           <span class="right"></span>
+                       </a>
+                   </td>
+                   <td>
+
+                       <form id="form_0_4">
+                           <input type="hidden" name="singleSearch" value="1">
+                           <input type="hidden" name="fromCitySearch" value="SHA">
+                           <input type="hidden" name="fromCityNameSearch" value="上海">
+                           <input type="hidden" name="fromDateSearch" value="2014-03-24">
+                           <input type="hidden" name="returnCitySearch" value="CTU">
+                           <input type="hidden" name="returnCityNameSearch" value="成都">
+                           <input type="hidden" name="returnDateSearch" value="">
+                           <input type="hidden" name="flightCompanySearch" value="">
+                           <input type="hidden" name="redisKey" value="">
+                           <input type="hidden" name="currentPage" value="1">
+                           <input type="hidden" name="pageSize" value="20">
+                           <input type="hidden" name="sort" value="2">
+                           <input type="hidden" name="sortAsc" value="1">
+                           <input type="hidden" name="airLineInfo.airLine" value="EU">
+                           <input type="hidden" name="airLineInfo.airLineName" value="成都航空">
+                           <input type="hidden" name="airLineInfo.flightNo" value="EU6678">
+                           <input type="hidden" name="airLineInfo.planeCode" value="319">
+                           <input type="hidden" name="airLineInfo.planeName" value="">
+                           <input type="hidden" name="airLineInfo.planeStyle" value="">
+                           <input type="hidden" name="airLineInfo.fromCity" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromCityName" value="">
+                           <input type="hidden" name="airLineInfo.fromAirPort" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromAirPortName" value="浦东国际机场">
+                           <input type="hidden" name="airLineInfo.fromTower" value="T2">
+                           <input type="hidden" name="airLineInfo.arriCity" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriCityName" value="">
+                           <input type="hidden" name="airLineInfo.arriAirPort" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriAirPortName" value="双流国际机场">
+                           <input type="hidden" name="airLineInfo.arriTower" value="T2">
+                           <input type="hidden" name="airLineInfo.fromDate" value="2014-03-24">
+                           <input type="hidden" name="airLineInfo.fromTime" value="20:30">
+                           <input type="hidden" name="airLineInfo.arriDate" value="2014-03-25">
+                           <input type="hidden" name="airLineInfo.arriTime" value="00:10">
+                           <input type="hidden" name="airLineInfo.airPortFee" value="50">
+                           <input type="hidden" name="airLineInfo.fuelTax" value="120">
+                           <input type="hidden" name="airLineInfo.yprice" value="1610">
+                           <input type="hidden" name="airLineInfo.fprice" value="3220">
+                           <input type="hidden" name="airLineInfo.cprice" value="0">
+                           <input type="hidden" name="airLineInfo.stop" value="0">
+
+                           <input type="hidden" name="airLineInfo.isCodeShare" value="false">
+
+                           <input type="hidden" name="airLineInfo.codeShareAirLine" value="">
+                           <input type="hidden" name="airLineInfo.codeShareAirNo" value="">
+                           <input type="hidden" name="airLineInfo.cabinList[0].classCode" value="T">
+                           <input type="hidden" name="airLineInfo.cabinList[0].childFare" value="0">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].specialPrice" value="false">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].classStep" value="Y">
+                           <input type="hidden" name="airLineInfo.cabinList[0].stepName" value="折扣经济舱">
+                           <input type="hidden" name="airLineInfo.cabinList[0].fare" value="1450">
+                           <input type="hidden" name="airLineInfo.cabinList[0].rebate" value="90">
+                           <input type="hidden" name="airLineInfo.cabinList[0].settlementPrice" value="1450">
+                           <input type="hidden" name="airLineInfo.cabinList[0].seat" value="A">
+                       </form>
+                   </td>
+               </tr>
+
+
+               <tr id="flight_0_cabin_5" style="display: none" class="more_cabin_item">
+
+                   <td>&nbsp;</td>
+                   <td>标准经济舱Y</td>
+                   <td>
+                       <div style="text-align:center">
+
+                           <i class="flight_lack">1</i>
+
+                       </div>
+                   </td>
+                   <td>
+                       <span class="darkOrange tgq">退改签</span>
+                   </td>
+                   <td>
+                       <s class="cell_name">票面价</s><span class="money"><u>￥</u>1610</span>
+                   </td>
+                   <td>
+                       <span class="percent">0% <s>+</s> <u>￥</u><s>0</s></span>
+                   </td>
+                   <td style="text-align:right;padding-right:25px;"><span class="price"><u>￥</u>
+
+                           1610
+                   </span></td>
+                   <td>优惠0</td>
+                   <td>
+                       <a class="adaptiveButton brightRed_btn medium">
+                           <span class="left"></span>
+
+                           <span class="center" style="padding:0 15px;" onclick="order('#form_0_5')">预订</span>
+
+                           <span class="right"></span>
+                       </a>
+                   </td>
+                   <td>
+
+                       <form id="form_0_5">
+                           <input type="hidden" name="singleSearch" value="1">
+                           <input type="hidden" name="fromCitySearch" value="SHA">
+                           <input type="hidden" name="fromCityNameSearch" value="上海">
+                           <input type="hidden" name="fromDateSearch" value="2014-03-24">
+                           <input type="hidden" name="returnCitySearch" value="CTU">
+                           <input type="hidden" name="returnCityNameSearch" value="成都">
+                           <input type="hidden" name="returnDateSearch" value="">
+                           <input type="hidden" name="flightCompanySearch" value="">
+                           <input type="hidden" name="redisKey" value="">
+                           <input type="hidden" name="currentPage" value="1">
+                           <input type="hidden" name="pageSize" value="20">
+                           <input type="hidden" name="sort" value="2">
+                           <input type="hidden" name="sortAsc" value="1">
+                           <input type="hidden" name="airLineInfo.airLine" value="EU">
+                           <input type="hidden" name="airLineInfo.airLineName" value="成都航空">
+                           <input type="hidden" name="airLineInfo.flightNo" value="EU6678">
+                           <input type="hidden" name="airLineInfo.planeCode" value="319">
+                           <input type="hidden" name="airLineInfo.planeName" value="">
+                           <input type="hidden" name="airLineInfo.planeStyle" value="">
+                           <input type="hidden" name="airLineInfo.fromCity" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromCityName" value="">
+                           <input type="hidden" name="airLineInfo.fromAirPort" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromAirPortName" value="浦东国际机场">
+                           <input type="hidden" name="airLineInfo.fromTower" value="T2">
+                           <input type="hidden" name="airLineInfo.arriCity" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriCityName" value="">
+                           <input type="hidden" name="airLineInfo.arriAirPort" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriAirPortName" value="双流国际机场">
+                           <input type="hidden" name="airLineInfo.arriTower" value="T2">
+                           <input type="hidden" name="airLineInfo.fromDate" value="2014-03-24">
+                           <input type="hidden" name="airLineInfo.fromTime" value="20:30">
+                           <input type="hidden" name="airLineInfo.arriDate" value="2014-03-25">
+                           <input type="hidden" name="airLineInfo.arriTime" value="00:10">
+                           <input type="hidden" name="airLineInfo.airPortFee" value="50">
+                           <input type="hidden" name="airLineInfo.fuelTax" value="120">
+                           <input type="hidden" name="airLineInfo.yprice" value="1610">
+                           <input type="hidden" name="airLineInfo.fprice" value="3220">
+                           <input type="hidden" name="airLineInfo.cprice" value="0">
+                           <input type="hidden" name="airLineInfo.stop" value="0">
+
+                           <input type="hidden" name="airLineInfo.isCodeShare" value="false">
+
+                           <input type="hidden" name="airLineInfo.codeShareAirLine" value="">
+                           <input type="hidden" name="airLineInfo.codeShareAirNo" value="">
+                           <input type="hidden" name="airLineInfo.cabinList[0].classCode" value="Y">
+                           <input type="hidden" name="airLineInfo.cabinList[0].childFare" value="0">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].specialPrice" value="false">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].classStep" value="Y">
+                           <input type="hidden" name="airLineInfo.cabinList[0].stepName" value="标准经济舱">
+                           <input type="hidden" name="airLineInfo.cabinList[0].fare" value="1610">
+                           <input type="hidden" name="airLineInfo.cabinList[0].rebate" value="100">
+                           <input type="hidden" name="airLineInfo.cabinList[0].settlementPrice" value="1610">
+                           <input type="hidden" name="airLineInfo.cabinList[0].seat" value="A">
+                       </form>
+                   </td>
+               </tr>
+
+
+               <tr id="flight_0_cabin_6" style="display: none" class="more_cabin_item">
+
+                   <td>&nbsp;</td>
+                   <td>标准头等舱F</td>
+                   <td>
+                       <div style="text-align:center">
+
+                           <i class="flight_lack">1</i>
+
+                       </div>
+                   </td>
+                   <td>
+                       <span class="darkOrange tgq">退改签</span>
+                   </td>
+                   <td>
+                       <s class="cell_name">票面价</s><span class="money"><u>￥</u>3220</span>
+                   </td>
+                   <td>
+                       <span class="percent">0% <s>+</s> <u>￥</u><s>0</s></span>
+                   </td>
+                   <td style="text-align:right;padding-right:25px;"><span class="price"><u>￥</u>
+
+                           3220
+                   </span></td>
+                   <td>优惠0</td>
+                   <td>
+                       <a class="adaptiveButton brightRed_btn medium">
+                           <span class="left"></span>
+
+                           <span class="center" style="padding:0 15px;" onclick="order('#form_0_6')">预订</span>
+
+                           <span class="right"></span>
+                       </a>
+                   </td>
+                   <td>
+
+                       <form id="form_0_6">
+                           <input type="hidden" name="singleSearch" value="1">
+                           <input type="hidden" name="fromCitySearch" value="SHA">
+                           <input type="hidden" name="fromCityNameSearch" value="上海">
+                           <input type="hidden" name="fromDateSearch" value="2014-03-24">
+                           <input type="hidden" name="returnCitySearch" value="CTU">
+                           <input type="hidden" name="returnCityNameSearch" value="成都">
+                           <input type="hidden" name="returnDateSearch" value="">
+                           <input type="hidden" name="flightCompanySearch" value="">
+                           <input type="hidden" name="redisKey" value="">
+                           <input type="hidden" name="currentPage" value="1">
+                           <input type="hidden" name="pageSize" value="20">
+                           <input type="hidden" name="sort" value="2">
+                           <input type="hidden" name="sortAsc" value="1">
+                           <input type="hidden" name="airLineInfo.airLine" value="EU">
+                           <input type="hidden" name="airLineInfo.airLineName" value="成都航空">
+                           <input type="hidden" name="airLineInfo.flightNo" value="EU6678">
+                           <input type="hidden" name="airLineInfo.planeCode" value="319">
+                           <input type="hidden" name="airLineInfo.planeName" value="">
+                           <input type="hidden" name="airLineInfo.planeStyle" value="">
+                           <input type="hidden" name="airLineInfo.fromCity" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromCityName" value="">
+                           <input type="hidden" name="airLineInfo.fromAirPort" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromAirPortName" value="浦东国际机场">
+                           <input type="hidden" name="airLineInfo.fromTower" value="T2">
+                           <input type="hidden" name="airLineInfo.arriCity" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriCityName" value="">
+                           <input type="hidden" name="airLineInfo.arriAirPort" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriAirPortName" value="双流国际机场">
+                           <input type="hidden" name="airLineInfo.arriTower" value="T2">
+                           <input type="hidden" name="airLineInfo.fromDate" value="2014-03-24">
+                           <input type="hidden" name="airLineInfo.fromTime" value="20:30">
+                           <input type="hidden" name="airLineInfo.arriDate" value="2014-03-25">
+                           <input type="hidden" name="airLineInfo.arriTime" value="00:10">
+                           <input type="hidden" name="airLineInfo.airPortFee" value="50">
+                           <input type="hidden" name="airLineInfo.fuelTax" value="120">
+                           <input type="hidden" name="airLineInfo.yprice" value="1610">
+                           <input type="hidden" name="airLineInfo.fprice" value="3220">
+                           <input type="hidden" name="airLineInfo.cprice" value="0">
+                           <input type="hidden" name="airLineInfo.stop" value="0">
+
+                           <input type="hidden" name="airLineInfo.isCodeShare" value="false">
+
+                           <input type="hidden" name="airLineInfo.codeShareAirLine" value="">
+                           <input type="hidden" name="airLineInfo.codeShareAirNo" value="">
+                           <input type="hidden" name="airLineInfo.cabinList[0].classCode" value="F">
+                           <input type="hidden" name="airLineInfo.cabinList[0].childFare" value="0">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].specialPrice" value="false">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].classStep" value="F">
+                           <input type="hidden" name="airLineInfo.cabinList[0].stepName" value="标准头等舱">
+                           <input type="hidden" name="airLineInfo.cabinList[0].fare" value="3220">
+                           <input type="hidden" name="airLineInfo.cabinList[0].rebate" value="150">
+                           <input type="hidden" name="airLineInfo.cabinList[0].settlementPrice" value="3220">
+                           <input type="hidden" name="airLineInfo.cabinList[0].seat" value="A">
+                       </form>
+                   </td>
+               </tr>
+
+               </tbody>
+           </table>
+       </div>
+
+       <div class="information">
+           <table class="information_header">
+               <colgroup>
+                   <col width="40">
+                   <col width="110">
+                   <col width="70">
+                   <col width="80">
+                   <col width="90">
+                   <col width="70">
+                   <col width="80">
+                   <col width="165">
+                   <col>
+               </colgroup>
+               <tbody>
+               <tr>
+                   <td>
+                       <div class="pubFlights_EU fico">&nbsp;</div>
+                   </td>
+                   <td>
+                       <div>成都航空</div>
+
+                       <div>EU6678</div>
+
+                   </td>
+                   <td>
+                       <div class="flight_time">20:30</div>
+                   </td>
+                   <td>
+                       <div>浦东国际机场T2</div>
+                   </td>
+                   <td style="text-align:center;">
+
+                       <div class="flight_type flight_type_none flightStop" temp="EU6678"><em></em></div>
+
+                   </td>
+                   <td>
+                       <div class="flight_time">00:10</div>
+                   </td>
+                   <td>
+                       <div>双流国际机场T2</div>
+                   </td>
+                   <td style="text-align:right;">机建/燃油：50/120</td>
+                   <td>&nbsp;</td>
+               </tr>
+               </tbody>
+           </table>
+           <table class="information_detail">
+               <colgroup>
+                   <col width="150">
+                   <col width="70">
+                   <col width="105">
+                   <col width="65">
+                   <col width="120">
+                   <col width="120">
+                   <col width="100">
+                   <col width="60">
+                   <col width="70">
+               </colgroup>
+               <tbody>
+
+
+               <tr id="flight_0_cabin_0">
+
+                   <td>&nbsp;</td>
+                   <td>折扣经济舱Q</td>
+                   <td>
+                       <div style="text-align:center">
+
+                           <i class="flight_lack">1</i>
+
+                       </div>
+                   </td>
+                   <td>
+                       <span class="darkOrange tgq">退改签</span>
+                   </td>
+                   <td>
+                       <s class="cell_name">票面价</s><span class="money"><u>￥</u>890</span>
+                   </td>
+                   <td>
+                       <span class="percent">0% <s>+</s> <u>￥</u><s>0</s></span>
+                   </td>
+                   <td style="text-align:right;padding-right:25px;"><span class="price"><u>￥</u>
+
+                           890
+                   </span></td>
+                   <td>优惠0</td>
+                   <td>
+                       <a class="adaptiveButton brightRed_btn medium">
+                           <span class="left"></span>
+
+                           <span class="center" style="padding:0 15px;" onclick="order('#form_0_0')">预订</span>
+
+                           <span class="right"></span>
+                       </a>
+                   </td>
+                   <td>
+
+                       <a class="more-cabin" href="javascript:;" data-role="ctoggle" data-text="展开舱位|收起舱位"><b>展开舱位</b><i>&nbsp;</i></a>
+
+                       <form id="form_0_0">
+                           <input type="hidden" name="singleSearch" value="1">
+                           <input type="hidden" name="fromCitySearch" value="SHA">
+                           <input type="hidden" name="fromCityNameSearch" value="上海">
+                           <input type="hidden" name="fromDateSearch" value="2014-03-24">
+                           <input type="hidden" name="returnCitySearch" value="CTU">
+                           <input type="hidden" name="returnCityNameSearch" value="成都">
+                           <input type="hidden" name="returnDateSearch" value="">
+                           <input type="hidden" name="flightCompanySearch" value="">
+                           <input type="hidden" name="redisKey" value="">
+                           <input type="hidden" name="currentPage" value="1">
+                           <input type="hidden" name="pageSize" value="20">
+                           <input type="hidden" name="sort" value="2">
+                           <input type="hidden" name="sortAsc" value="1">
+                           <input type="hidden" name="airLineInfo.airLine" value="EU">
+                           <input type="hidden" name="airLineInfo.airLineName" value="成都航空">
+                           <input type="hidden" name="airLineInfo.flightNo" value="EU6678">
+                           <input type="hidden" name="airLineInfo.planeCode" value="319">
+                           <input type="hidden" name="airLineInfo.planeName" value="">
+                           <input type="hidden" name="airLineInfo.planeStyle" value="">
+                           <input type="hidden" name="airLineInfo.fromCity" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromCityName" value="">
+                           <input type="hidden" name="airLineInfo.fromAirPort" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromAirPortName" value="浦东国际机场">
+                           <input type="hidden" name="airLineInfo.fromTower" value="T2">
+                           <input type="hidden" name="airLineInfo.arriCity" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriCityName" value="">
+                           <input type="hidden" name="airLineInfo.arriAirPort" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriAirPortName" value="双流国际机场">
+                           <input type="hidden" name="airLineInfo.arriTower" value="T2">
+                           <input type="hidden" name="airLineInfo.fromDate" value="2014-03-24">
+                           <input type="hidden" name="airLineInfo.fromTime" value="20:30">
+                           <input type="hidden" name="airLineInfo.arriDate" value="2014-03-25">
+                           <input type="hidden" name="airLineInfo.arriTime" value="00:10">
+                           <input type="hidden" name="airLineInfo.airPortFee" value="50">
+                           <input type="hidden" name="airLineInfo.fuelTax" value="120">
+                           <input type="hidden" name="airLineInfo.yprice" value="1610">
+                           <input type="hidden" name="airLineInfo.fprice" value="3220">
+                           <input type="hidden" name="airLineInfo.cprice" value="0">
+                           <input type="hidden" name="airLineInfo.stop" value="0">
+
+                           <input type="hidden" name="airLineInfo.isCodeShare" value="false">
+
+                           <input type="hidden" name="airLineInfo.codeShareAirLine" value="">
+                           <input type="hidden" name="airLineInfo.codeShareAirNo" value="">
+                           <input type="hidden" name="airLineInfo.cabinList[0].classCode" value="Q">
+                           <input type="hidden" name="airLineInfo.cabinList[0].childFare" value="0">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].specialPrice" value="false">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].classStep" value="Y">
+                           <input type="hidden" name="airLineInfo.cabinList[0].stepName" value="折扣经济舱">
+                           <input type="hidden" name="airLineInfo.cabinList[0].fare" value="890">
+                           <input type="hidden" name="airLineInfo.cabinList[0].rebate" value="55">
+                           <input type="hidden" name="airLineInfo.cabinList[0].settlementPrice" value="890">
+                           <input type="hidden" name="airLineInfo.cabinList[0].seat" value="A">
+                       </form>
+                   </td>
+               </tr>
+
+
+               <tr id="flight_0_cabin_1" style="display: none" class="more_cabin_item">
+
+                   <td>&nbsp;</td>
+                   <td>折扣经济舱L</td>
+                   <td>
+                       <div style="text-align:center">
+
+                           <i class="flight_lack">1</i>
+
+                       </div>
+                   </td>
+                   <td>
+                       <span class="darkOrange tgq">退改签</span>
+                   </td>
+                   <td>
+                       <s class="cell_name">票面价</s><span class="money"><u>￥</u>970</span>
+                   </td>
+                   <td>
+                       <span class="percent">0% <s>+</s> <u>￥</u><s>0</s></span>
+                   </td>
+                   <td style="text-align:right;padding-right:25px;"><span class="price"><u>￥</u>
+
+                           970
+                   </span></td>
+                   <td>优惠0</td>
+                   <td>
+                       <a class="adaptiveButton brightRed_btn medium">
+                           <span class="left"></span>
+
+                           <span class="center" style="padding:0 15px;" onclick="order('#form_0_1')">预订</span>
+
+                           <span class="right"></span>
+                       </a>
+                   </td>
+                   <td>
+
+                       <form id="form_0_1">
+                           <input type="hidden" name="singleSearch" value="1">
+                           <input type="hidden" name="fromCitySearch" value="SHA">
+                           <input type="hidden" name="fromCityNameSearch" value="上海">
+                           <input type="hidden" name="fromDateSearch" value="2014-03-24">
+                           <input type="hidden" name="returnCitySearch" value="CTU">
+                           <input type="hidden" name="returnCityNameSearch" value="成都">
+                           <input type="hidden" name="returnDateSearch" value="">
+                           <input type="hidden" name="flightCompanySearch" value="">
+                           <input type="hidden" name="redisKey" value="">
+                           <input type="hidden" name="currentPage" value="1">
+                           <input type="hidden" name="pageSize" value="20">
+                           <input type="hidden" name="sort" value="2">
+                           <input type="hidden" name="sortAsc" value="1">
+                           <input type="hidden" name="airLineInfo.airLine" value="EU">
+                           <input type="hidden" name="airLineInfo.airLineName" value="成都航空">
+                           <input type="hidden" name="airLineInfo.flightNo" value="EU6678">
+                           <input type="hidden" name="airLineInfo.planeCode" value="319">
+                           <input type="hidden" name="airLineInfo.planeName" value="">
+                           <input type="hidden" name="airLineInfo.planeStyle" value="">
+                           <input type="hidden" name="airLineInfo.fromCity" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromCityName" value="">
+                           <input type="hidden" name="airLineInfo.fromAirPort" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromAirPortName" value="浦东国际机场">
+                           <input type="hidden" name="airLineInfo.fromTower" value="T2">
+                           <input type="hidden" name="airLineInfo.arriCity" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriCityName" value="">
+                           <input type="hidden" name="airLineInfo.arriAirPort" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriAirPortName" value="双流国际机场">
+                           <input type="hidden" name="airLineInfo.arriTower" value="T2">
+                           <input type="hidden" name="airLineInfo.fromDate" value="2014-03-24">
+                           <input type="hidden" name="airLineInfo.fromTime" value="20:30">
+                           <input type="hidden" name="airLineInfo.arriDate" value="2014-03-25">
+                           <input type="hidden" name="airLineInfo.arriTime" value="00:10">
+                           <input type="hidden" name="airLineInfo.airPortFee" value="50">
+                           <input type="hidden" name="airLineInfo.fuelTax" value="120">
+                           <input type="hidden" name="airLineInfo.yprice" value="1610">
+                           <input type="hidden" name="airLineInfo.fprice" value="3220">
+                           <input type="hidden" name="airLineInfo.cprice" value="0">
+                           <input type="hidden" name="airLineInfo.stop" value="0">
+
+                           <input type="hidden" name="airLineInfo.isCodeShare" value="false">
+
+                           <input type="hidden" name="airLineInfo.codeShareAirLine" value="">
+                           <input type="hidden" name="airLineInfo.codeShareAirNo" value="">
+                           <input type="hidden" name="airLineInfo.cabinList[0].classCode" value="L">
+                           <input type="hidden" name="airLineInfo.cabinList[0].childFare" value="0">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].specialPrice" value="false">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].classStep" value="Y">
+                           <input type="hidden" name="airLineInfo.cabinList[0].stepName" value="折扣经济舱">
+                           <input type="hidden" name="airLineInfo.cabinList[0].fare" value="970">
+                           <input type="hidden" name="airLineInfo.cabinList[0].rebate" value="60">
+                           <input type="hidden" name="airLineInfo.cabinList[0].settlementPrice" value="970">
+                           <input type="hidden" name="airLineInfo.cabinList[0].seat" value="A">
+                       </form>
+                   </td>
+               </tr>
+
+
+               <tr id="flight_0_cabin_2" style="display: none" class="more_cabin_item">
+
+                   <td>&nbsp;</td>
+                   <td>折扣经济舱G</td>
+                   <td>
+                       <div style="text-align:center">
+
+                           <i class="flight_lack">1</i>
+
+                       </div>
+                   </td>
+                   <td>
+                       <span class="darkOrange tgq">退改签</span>
+                   </td>
+                   <td>
+                       <s class="cell_name">票面价</s><span class="money"><u>￥</u>1130</span>
+                   </td>
+                   <td>
+                       <span class="percent">0% <s>+</s> <u>￥</u><s>0</s></span>
+                   </td>
+                   <td style="text-align:right;padding-right:25px;"><span class="price"><u>￥</u>
+
+                           1130
+                   </span></td>
+                   <td>优惠0</td>
+                   <td>
+                       <a class="adaptiveButton brightRed_btn medium">
+                           <span class="left"></span>
+
+                           <span class="center" style="padding:0 15px;" onclick="order('#form_0_2')">预订</span>
+
+                           <span class="right"></span>
+                       </a>
+                   </td>
+                   <td>
+
+                       <form id="form_0_2">
+                           <input type="hidden" name="singleSearch" value="1">
+                           <input type="hidden" name="fromCitySearch" value="SHA">
+                           <input type="hidden" name="fromCityNameSearch" value="上海">
+                           <input type="hidden" name="fromDateSearch" value="2014-03-24">
+                           <input type="hidden" name="returnCitySearch" value="CTU">
+                           <input type="hidden" name="returnCityNameSearch" value="成都">
+                           <input type="hidden" name="returnDateSearch" value="">
+                           <input type="hidden" name="flightCompanySearch" value="">
+                           <input type="hidden" name="redisKey" value="">
+                           <input type="hidden" name="currentPage" value="1">
+                           <input type="hidden" name="pageSize" value="20">
+                           <input type="hidden" name="sort" value="2">
+                           <input type="hidden" name="sortAsc" value="1">
+                           <input type="hidden" name="airLineInfo.airLine" value="EU">
+                           <input type="hidden" name="airLineInfo.airLineName" value="成都航空">
+                           <input type="hidden" name="airLineInfo.flightNo" value="EU6678">
+                           <input type="hidden" name="airLineInfo.planeCode" value="319">
+                           <input type="hidden" name="airLineInfo.planeName" value="">
+                           <input type="hidden" name="airLineInfo.planeStyle" value="">
+                           <input type="hidden" name="airLineInfo.fromCity" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromCityName" value="">
+                           <input type="hidden" name="airLineInfo.fromAirPort" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromAirPortName" value="浦东国际机场">
+                           <input type="hidden" name="airLineInfo.fromTower" value="T2">
+                           <input type="hidden" name="airLineInfo.arriCity" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriCityName" value="">
+                           <input type="hidden" name="airLineInfo.arriAirPort" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriAirPortName" value="双流国际机场">
+                           <input type="hidden" name="airLineInfo.arriTower" value="T2">
+                           <input type="hidden" name="airLineInfo.fromDate" value="2014-03-24">
+                           <input type="hidden" name="airLineInfo.fromTime" value="20:30">
+                           <input type="hidden" name="airLineInfo.arriDate" value="2014-03-25">
+                           <input type="hidden" name="airLineInfo.arriTime" value="00:10">
+                           <input type="hidden" name="airLineInfo.airPortFee" value="50">
+                           <input type="hidden" name="airLineInfo.fuelTax" value="120">
+                           <input type="hidden" name="airLineInfo.yprice" value="1610">
+                           <input type="hidden" name="airLineInfo.fprice" value="3220">
+                           <input type="hidden" name="airLineInfo.cprice" value="0">
+                           <input type="hidden" name="airLineInfo.stop" value="0">
+
+                           <input type="hidden" name="airLineInfo.isCodeShare" value="false">
+
+                           <input type="hidden" name="airLineInfo.codeShareAirLine" value="">
+                           <input type="hidden" name="airLineInfo.codeShareAirNo" value="">
+                           <input type="hidden" name="airLineInfo.cabinList[0].classCode" value="G">
+                           <input type="hidden" name="airLineInfo.cabinList[0].childFare" value="0">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].specialPrice" value="false">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].classStep" value="Y">
+                           <input type="hidden" name="airLineInfo.cabinList[0].stepName" value="折扣经济舱">
+                           <input type="hidden" name="airLineInfo.cabinList[0].fare" value="1130">
+                           <input type="hidden" name="airLineInfo.cabinList[0].rebate" value="70">
+                           <input type="hidden" name="airLineInfo.cabinList[0].settlementPrice" value="1130">
+                           <input type="hidden" name="airLineInfo.cabinList[0].seat" value="A">
+                       </form>
+                   </td>
+               </tr>
+
+
+               <tr id="flight_0_cabin_3" style="display: none" class="more_cabin_item">
+
+                   <td>&nbsp;</td>
+                   <td>折扣经济舱H</td>
+                   <td>
+                       <div style="text-align:center">
+
+                           <i class="flight_lack">1</i>
+
+                       </div>
+                   </td>
+                   <td>
+                       <span class="darkOrange tgq">退改签</span>
+                   </td>
+                   <td>
+                       <s class="cell_name">票面价</s><span class="money"><u>￥</u>1290</span>
+                   </td>
+                   <td>
+                       <span class="percent">0% <s>+</s> <u>￥</u><s>0</s></span>
+                   </td>
+                   <td style="text-align:right;padding-right:25px;"><span class="price"><u>￥</u>
+
+                           1290
+                   </span></td>
+                   <td>优惠0</td>
+                   <td>
+                       <a class="adaptiveButton brightRed_btn medium">
+                           <span class="left"></span>
+
+                           <span class="center" style="padding:0 15px;" onclick="order('#form_0_3')">预订</span>
+
+                           <span class="right"></span>
+                       </a>
+                   </td>
+                   <td>
+
+                       <form id="form_0_3">
+                           <input type="hidden" name="singleSearch" value="1">
+                           <input type="hidden" name="fromCitySearch" value="SHA">
+                           <input type="hidden" name="fromCityNameSearch" value="上海">
+                           <input type="hidden" name="fromDateSearch" value="2014-03-24">
+                           <input type="hidden" name="returnCitySearch" value="CTU">
+                           <input type="hidden" name="returnCityNameSearch" value="成都">
+                           <input type="hidden" name="returnDateSearch" value="">
+                           <input type="hidden" name="flightCompanySearch" value="">
+                           <input type="hidden" name="redisKey" value="">
+                           <input type="hidden" name="currentPage" value="1">
+                           <input type="hidden" name="pageSize" value="20">
+                           <input type="hidden" name="sort" value="2">
+                           <input type="hidden" name="sortAsc" value="1">
+                           <input type="hidden" name="airLineInfo.airLine" value="EU">
+                           <input type="hidden" name="airLineInfo.airLineName" value="成都航空">
+                           <input type="hidden" name="airLineInfo.flightNo" value="EU6678">
+                           <input type="hidden" name="airLineInfo.planeCode" value="319">
+                           <input type="hidden" name="airLineInfo.planeName" value="">
+                           <input type="hidden" name="airLineInfo.planeStyle" value="">
+                           <input type="hidden" name="airLineInfo.fromCity" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromCityName" value="">
+                           <input type="hidden" name="airLineInfo.fromAirPort" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromAirPortName" value="浦东国际机场">
+                           <input type="hidden" name="airLineInfo.fromTower" value="T2">
+                           <input type="hidden" name="airLineInfo.arriCity" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriCityName" value="">
+                           <input type="hidden" name="airLineInfo.arriAirPort" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriAirPortName" value="双流国际机场">
+                           <input type="hidden" name="airLineInfo.arriTower" value="T2">
+                           <input type="hidden" name="airLineInfo.fromDate" value="2014-03-24">
+                           <input type="hidden" name="airLineInfo.fromTime" value="20:30">
+                           <input type="hidden" name="airLineInfo.arriDate" value="2014-03-25">
+                           <input type="hidden" name="airLineInfo.arriTime" value="00:10">
+                           <input type="hidden" name="airLineInfo.airPortFee" value="50">
+                           <input type="hidden" name="airLineInfo.fuelTax" value="120">
+                           <input type="hidden" name="airLineInfo.yprice" value="1610">
+                           <input type="hidden" name="airLineInfo.fprice" value="3220">
+                           <input type="hidden" name="airLineInfo.cprice" value="0">
+                           <input type="hidden" name="airLineInfo.stop" value="0">
+
+                           <input type="hidden" name="airLineInfo.isCodeShare" value="false">
+
+                           <input type="hidden" name="airLineInfo.codeShareAirLine" value="">
+                           <input type="hidden" name="airLineInfo.codeShareAirNo" value="">
+                           <input type="hidden" name="airLineInfo.cabinList[0].classCode" value="H">
+                           <input type="hidden" name="airLineInfo.cabinList[0].childFare" value="0">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].specialPrice" value="false">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].classStep" value="Y">
+                           <input type="hidden" name="airLineInfo.cabinList[0].stepName" value="折扣经济舱">
+                           <input type="hidden" name="airLineInfo.cabinList[0].fare" value="1290">
+                           <input type="hidden" name="airLineInfo.cabinList[0].rebate" value="80">
+                           <input type="hidden" name="airLineInfo.cabinList[0].settlementPrice" value="1290">
+                           <input type="hidden" name="airLineInfo.cabinList[0].seat" value="A">
+                       </form>
+                   </td>
+               </tr>
+
+
+               <tr id="flight_0_cabin_4" style="display: none" class="more_cabin_item">
+
+                   <td>&nbsp;</td>
+                   <td>折扣经济舱T</td>
+                   <td>
+                       <div style="text-align:center">
+
+                           <i class="flight_lack">1</i>
+
+                       </div>
+                   </td>
+                   <td>
+                       <span class="darkOrange tgq">退改签</span>
+                   </td>
+                   <td>
+                       <s class="cell_name">票面价</s><span class="money"><u>￥</u>1450</span>
+                   </td>
+                   <td>
+                       <span class="percent">0% <s>+</s> <u>￥</u><s>0</s></span>
+                   </td>
+                   <td style="text-align:right;padding-right:25px;"><span class="price"><u>￥</u>
+
+                           1450
+                   </span></td>
+                   <td>优惠0</td>
+                   <td>
+                       <a class="adaptiveButton brightRed_btn medium">
+                           <span class="left"></span>
+
+                           <span class="center" style="padding:0 15px;" onclick="order('#form_0_4')">预订</span>
+
+                           <span class="right"></span>
+                       </a>
+                   </td>
+                   <td>
+
+                       <form id="form_0_4">
+                           <input type="hidden" name="singleSearch" value="1">
+                           <input type="hidden" name="fromCitySearch" value="SHA">
+                           <input type="hidden" name="fromCityNameSearch" value="上海">
+                           <input type="hidden" name="fromDateSearch" value="2014-03-24">
+                           <input type="hidden" name="returnCitySearch" value="CTU">
+                           <input type="hidden" name="returnCityNameSearch" value="成都">
+                           <input type="hidden" name="returnDateSearch" value="">
+                           <input type="hidden" name="flightCompanySearch" value="">
+                           <input type="hidden" name="redisKey" value="">
+                           <input type="hidden" name="currentPage" value="1">
+                           <input type="hidden" name="pageSize" value="20">
+                           <input type="hidden" name="sort" value="2">
+                           <input type="hidden" name="sortAsc" value="1">
+                           <input type="hidden" name="airLineInfo.airLine" value="EU">
+                           <input type="hidden" name="airLineInfo.airLineName" value="成都航空">
+                           <input type="hidden" name="airLineInfo.flightNo" value="EU6678">
+                           <input type="hidden" name="airLineInfo.planeCode" value="319">
+                           <input type="hidden" name="airLineInfo.planeName" value="">
+                           <input type="hidden" name="airLineInfo.planeStyle" value="">
+                           <input type="hidden" name="airLineInfo.fromCity" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromCityName" value="">
+                           <input type="hidden" name="airLineInfo.fromAirPort" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromAirPortName" value="浦东国际机场">
+                           <input type="hidden" name="airLineInfo.fromTower" value="T2">
+                           <input type="hidden" name="airLineInfo.arriCity" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriCityName" value="">
+                           <input type="hidden" name="airLineInfo.arriAirPort" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriAirPortName" value="双流国际机场">
+                           <input type="hidden" name="airLineInfo.arriTower" value="T2">
+                           <input type="hidden" name="airLineInfo.fromDate" value="2014-03-24">
+                           <input type="hidden" name="airLineInfo.fromTime" value="20:30">
+                           <input type="hidden" name="airLineInfo.arriDate" value="2014-03-25">
+                           <input type="hidden" name="airLineInfo.arriTime" value="00:10">
+                           <input type="hidden" name="airLineInfo.airPortFee" value="50">
+                           <input type="hidden" name="airLineInfo.fuelTax" value="120">
+                           <input type="hidden" name="airLineInfo.yprice" value="1610">
+                           <input type="hidden" name="airLineInfo.fprice" value="3220">
+                           <input type="hidden" name="airLineInfo.cprice" value="0">
+                           <input type="hidden" name="airLineInfo.stop" value="0">
+
+                           <input type="hidden" name="airLineInfo.isCodeShare" value="false">
+
+                           <input type="hidden" name="airLineInfo.codeShareAirLine" value="">
+                           <input type="hidden" name="airLineInfo.codeShareAirNo" value="">
+                           <input type="hidden" name="airLineInfo.cabinList[0].classCode" value="T">
+                           <input type="hidden" name="airLineInfo.cabinList[0].childFare" value="0">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].specialPrice" value="false">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].classStep" value="Y">
+                           <input type="hidden" name="airLineInfo.cabinList[0].stepName" value="折扣经济舱">
+                           <input type="hidden" name="airLineInfo.cabinList[0].fare" value="1450">
+                           <input type="hidden" name="airLineInfo.cabinList[0].rebate" value="90">
+                           <input type="hidden" name="airLineInfo.cabinList[0].settlementPrice" value="1450">
+                           <input type="hidden" name="airLineInfo.cabinList[0].seat" value="A">
+                       </form>
+                   </td>
+               </tr>
+
+
+               <tr id="flight_0_cabin_5" style="display: none" class="more_cabin_item">
+
+                   <td>&nbsp;</td>
+                   <td>标准经济舱Y</td>
+                   <td>
+                       <div style="text-align:center">
+
+                           <i class="flight_lack">1</i>
+
+                       </div>
+                   </td>
+                   <td>
+                       <span class="darkOrange tgq">退改签</span>
+                   </td>
+                   <td>
+                       <s class="cell_name">票面价</s><span class="money"><u>￥</u>1610</span>
+                   </td>
+                   <td>
+                       <span class="percent">0% <s>+</s> <u>￥</u><s>0</s></span>
+                   </td>
+                   <td style="text-align:right;padding-right:25px;"><span class="price"><u>￥</u>
+
+                           1610
+                   </span></td>
+                   <td>优惠0</td>
+                   <td>
+                       <a class="adaptiveButton brightRed_btn medium">
+                           <span class="left"></span>
+
+                           <span class="center" style="padding:0 15px;" onclick="order('#form_0_5')">预订</span>
+
+                           <span class="right"></span>
+                       </a>
+                   </td>
+                   <td>
+
+                       <form id="form_0_5">
+                           <input type="hidden" name="singleSearch" value="1">
+                           <input type="hidden" name="fromCitySearch" value="SHA">
+                           <input type="hidden" name="fromCityNameSearch" value="上海">
+                           <input type="hidden" name="fromDateSearch" value="2014-03-24">
+                           <input type="hidden" name="returnCitySearch" value="CTU">
+                           <input type="hidden" name="returnCityNameSearch" value="成都">
+                           <input type="hidden" name="returnDateSearch" value="">
+                           <input type="hidden" name="flightCompanySearch" value="">
+                           <input type="hidden" name="redisKey" value="">
+                           <input type="hidden" name="currentPage" value="1">
+                           <input type="hidden" name="pageSize" value="20">
+                           <input type="hidden" name="sort" value="2">
+                           <input type="hidden" name="sortAsc" value="1">
+                           <input type="hidden" name="airLineInfo.airLine" value="EU">
+                           <input type="hidden" name="airLineInfo.airLineName" value="成都航空">
+                           <input type="hidden" name="airLineInfo.flightNo" value="EU6678">
+                           <input type="hidden" name="airLineInfo.planeCode" value="319">
+                           <input type="hidden" name="airLineInfo.planeName" value="">
+                           <input type="hidden" name="airLineInfo.planeStyle" value="">
+                           <input type="hidden" name="airLineInfo.fromCity" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromCityName" value="">
+                           <input type="hidden" name="airLineInfo.fromAirPort" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromAirPortName" value="浦东国际机场">
+                           <input type="hidden" name="airLineInfo.fromTower" value="T2">
+                           <input type="hidden" name="airLineInfo.arriCity" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriCityName" value="">
+                           <input type="hidden" name="airLineInfo.arriAirPort" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriAirPortName" value="双流国际机场">
+                           <input type="hidden" name="airLineInfo.arriTower" value="T2">
+                           <input type="hidden" name="airLineInfo.fromDate" value="2014-03-24">
+                           <input type="hidden" name="airLineInfo.fromTime" value="20:30">
+                           <input type="hidden" name="airLineInfo.arriDate" value="2014-03-25">
+                           <input type="hidden" name="airLineInfo.arriTime" value="00:10">
+                           <input type="hidden" name="airLineInfo.airPortFee" value="50">
+                           <input type="hidden" name="airLineInfo.fuelTax" value="120">
+                           <input type="hidden" name="airLineInfo.yprice" value="1610">
+                           <input type="hidden" name="airLineInfo.fprice" value="3220">
+                           <input type="hidden" name="airLineInfo.cprice" value="0">
+                           <input type="hidden" name="airLineInfo.stop" value="0">
+
+                           <input type="hidden" name="airLineInfo.isCodeShare" value="false">
+
+                           <input type="hidden" name="airLineInfo.codeShareAirLine" value="">
+                           <input type="hidden" name="airLineInfo.codeShareAirNo" value="">
+                           <input type="hidden" name="airLineInfo.cabinList[0].classCode" value="Y">
+                           <input type="hidden" name="airLineInfo.cabinList[0].childFare" value="0">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].specialPrice" value="false">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].classStep" value="Y">
+                           <input type="hidden" name="airLineInfo.cabinList[0].stepName" value="标准经济舱">
+                           <input type="hidden" name="airLineInfo.cabinList[0].fare" value="1610">
+                           <input type="hidden" name="airLineInfo.cabinList[0].rebate" value="100">
+                           <input type="hidden" name="airLineInfo.cabinList[0].settlementPrice" value="1610">
+                           <input type="hidden" name="airLineInfo.cabinList[0].seat" value="A">
+                       </form>
+                   </td>
+               </tr>
+
+
+               <tr id="flight_0_cabin_6" style="display: none" class="more_cabin_item">
+
+                   <td>&nbsp;</td>
+                   <td>标准头等舱F</td>
+                   <td>
+                       <div style="text-align:center">
+
+                           <i class="flight_lack">1</i>
+
+                       </div>
+                   </td>
+                   <td>
+                       <span class="darkOrange tgq">退改签</span>
+                   </td>
+                   <td>
+                       <s class="cell_name">票面价</s><span class="money"><u>￥</u>3220</span>
+                   </td>
+                   <td>
+                       <span class="percent">0% <s>+</s> <u>￥</u><s>0</s></span>
+                   </td>
+                   <td style="text-align:right;padding-right:25px;"><span class="price"><u>￥</u>
+
+                           3220
+                   </span></td>
+                   <td>优惠0</td>
+                   <td>
+                       <a class="adaptiveButton brightRed_btn medium">
+                           <span class="left"></span>
+
+                           <span class="center" style="padding:0 15px;" onclick="order('#form_0_6')">预订</span>
+
+                           <span class="right"></span>
+                       </a>
+                   </td>
+                   <td>
+
+                       <form id="form_0_6">
+                           <input type="hidden" name="singleSearch" value="1">
+                           <input type="hidden" name="fromCitySearch" value="SHA">
+                           <input type="hidden" name="fromCityNameSearch" value="上海">
+                           <input type="hidden" name="fromDateSearch" value="2014-03-24">
+                           <input type="hidden" name="returnCitySearch" value="CTU">
+                           <input type="hidden" name="returnCityNameSearch" value="成都">
+                           <input type="hidden" name="returnDateSearch" value="">
+                           <input type="hidden" name="flightCompanySearch" value="">
+                           <input type="hidden" name="redisKey" value="">
+                           <input type="hidden" name="currentPage" value="1">
+                           <input type="hidden" name="pageSize" value="20">
+                           <input type="hidden" name="sort" value="2">
+                           <input type="hidden" name="sortAsc" value="1">
+                           <input type="hidden" name="airLineInfo.airLine" value="EU">
+                           <input type="hidden" name="airLineInfo.airLineName" value="成都航空">
+                           <input type="hidden" name="airLineInfo.flightNo" value="EU6678">
+                           <input type="hidden" name="airLineInfo.planeCode" value="319">
+                           <input type="hidden" name="airLineInfo.planeName" value="">
+                           <input type="hidden" name="airLineInfo.planeStyle" value="">
+                           <input type="hidden" name="airLineInfo.fromCity" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromCityName" value="">
+                           <input type="hidden" name="airLineInfo.fromAirPort" value="PVG">
+                           <input type="hidden" name="airLineInfo.fromAirPortName" value="浦东国际机场">
+                           <input type="hidden" name="airLineInfo.fromTower" value="T2">
+                           <input type="hidden" name="airLineInfo.arriCity" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriCityName" value="">
+                           <input type="hidden" name="airLineInfo.arriAirPort" value="CTU">
+                           <input type="hidden" name="airLineInfo.arriAirPortName" value="双流国际机场">
+                           <input type="hidden" name="airLineInfo.arriTower" value="T2">
+                           <input type="hidden" name="airLineInfo.fromDate" value="2014-03-24">
+                           <input type="hidden" name="airLineInfo.fromTime" value="20:30">
+                           <input type="hidden" name="airLineInfo.arriDate" value="2014-03-25">
+                           <input type="hidden" name="airLineInfo.arriTime" value="00:10">
+                           <input type="hidden" name="airLineInfo.airPortFee" value="50">
+                           <input type="hidden" name="airLineInfo.fuelTax" value="120">
+                           <input type="hidden" name="airLineInfo.yprice" value="1610">
+                           <input type="hidden" name="airLineInfo.fprice" value="3220">
+                           <input type="hidden" name="airLineInfo.cprice" value="0">
+                           <input type="hidden" name="airLineInfo.stop" value="0">
+
+                           <input type="hidden" name="airLineInfo.isCodeShare" value="false">
+
+                           <input type="hidden" name="airLineInfo.codeShareAirLine" value="">
+                           <input type="hidden" name="airLineInfo.codeShareAirNo" value="">
+                           <input type="hidden" name="airLineInfo.cabinList[0].classCode" value="F">
+                           <input type="hidden" name="airLineInfo.cabinList[0].childFare" value="0">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].specialPrice" value="false">
+
+                           <input type="hidden" name="airLineInfo.cabinList[0].classStep" value="F">
+                           <input type="hidden" name="airLineInfo.cabinList[0].stepName" value="标准头等舱">
+                           <input type="hidden" name="airLineInfo.cabinList[0].fare" value="3220">
+                           <input type="hidden" name="airLineInfo.cabinList[0].rebate" value="150">
+                           <input type="hidden" name="airLineInfo.cabinList[0].settlementPrice" value="3220">
+                           <input type="hidden" name="airLineInfo.cabinList[0].seat" value="A">
+                       </form>
+                   </td>
+               </tr>
+
+               </tbody>
+           </table>
+       </div>
+
+       <div class="paging clearfix">  <!--当前选中 start-->
+        <ul>
+             <li><a href="#">上一页</a></li>
+             <li><a href="#">1</a></li>
+             <li><a href="#">2</a></li>
+             <li><a href="#">3</a></li>
+             <li><a href="#">4</a></li>
+             <li><a href="#">5</a></li>
+             <li> <span>...</span> </li>
+             <li><a href="#" class="present">58</a></li>
+             <li><a href="#">59</a></li>
+             <li><a href="#">60</a></li>
+             <li><a href="#">下一页</a></li>
+        </ul>
+        <div>
+           <span>共<em>132</em>条记录 &nbsp;&nbsp;&nbsp;共14页</span>
+        </div>
+     </div> <!--当前选中 end-->
+    </div>  <!--flight_number end-->
+
+
+    <script type="text/x-kendo-template" id="floating_template">
+          <div class="floating">
+              <p><b>退票规则：</b>收取5%退票费</p>
+              <p><b>更改规则：</b>1、升舱换开以各代。 2、升舱补差建议联系国航客服用信用卡支付差价，或者提交升舱补差，以供应商审核后为准。</p>
+              <p>签转规则：免费变更</p>
+              <p><b>备注：</b>升舱： 代理人可办理。：此升舱客规仅供参考，以代理人权限为准，升舱换开前请咨询客服或者提交改签申请待审核后再做处理。
+</p>
+          </div>
+
+    </script>
+
+<script type="text/x-kendo-template" id="wayPointCont">
+    <table class="wayPointContent">
+         <colgroup>
+            <col width="140"/>
+            <col width="80"/>
+            <col width="80"/>
+         </colgroup>
+         <tr>
+             <th>中转城市</th>
+             <th>到达时间</th>
+             <th>起飞时间</th>
+         </tr>
+         <tr>
+             <td>九华山</td>
+             <td>9：00</td>
+             <td>12：00</td>
+         </tr>
+    </table>
+</script>
+
+</section>
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号
+    </center>
+</footer>
+</div>
+
+   <script>
+
+		$(function(){
+
+			$(".information .flightStop").kendoTooltip({
+				position:"bottom", //left right top
+				content:function(){
+					return $("#wayPointCont").html();
+				},
+                wrapperClass:'shadow_box'
+			});
+
+			$(".information .tgq").kendoTooltip({
+				position:"bottom",
+				content:function(){
+					return $("#floating_template").html();
+				},
+                width: 300,
+                wrapperClass:'shadow_box'
+			});
+
+		});
+	</script>
+
+    <script>
+
+        $(function(){
+            $('body').on('click','.more-cabin',function(){
+                $(this).closest('tr').siblings('.more_cabin_item').toggle();
+            });
+
+            $.role_ctoggle();
+
+            $('.adaptiveButton.brightRed_btn').on('click',function(){
+                $.get('//fafds.com/fdafd.html');
+            });
+            $.loadingbar({
+                showClose: false,
+                text:'正在为您查询，请稍候…',
+            });
+
+            $("#trip_type").change(function(){
+                if($(this).val() == "one_way"){
+                    $("#return_label label").addClass("muted");
+                    $("#return_date").prop("disabled",true);
+                }else{
+                    $("#return_label label").removeClass("muted");
+                    $("#return_date").prop("disabled",false);
+
+                }
+            });
+        });
+
+    </script>
+
+</body>
+</html>

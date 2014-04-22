@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>政策 国际政策 售价维护 设置规则</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="../../static//css/kendo.common.min.css" />
+    <link rel="stylesheet" href="../../static//css/kendo.gray.css" />
+    <link rel="stylesheet" href="../../static//css/global.css" />
+    <link rel="stylesheet" href="../../static//css/common.css" />
+    <link rel="stylesheet" href="../../static//css/b2b.css" />
+    <link rel="stylesheet" href="../../static//css/kendo.reset.css">
+    <link rel="stylesheet" href="../../static//css/finance.css">
+    <script type="text/javascript" src="../../static/js/vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/plugins/jquery.fixedBar.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/flight.js"></script>
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/css/ie.css" />
+    <script type="text/javascript" src="/js/vendor/IE7.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        .block1 .flat-list li{width:310px}
+        .flat-list input[type=checkbox]{margin-right:5px}
+        .flat-list label{margin-right:5px;width:100px;display:inline-block}
+    </style>
+
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body>
+<div id="container" style="margin:0 auto">
+    <div class="actions block">
+        <div class="col col-l sep-r">
+            <button class="btns btn-return">返回</button>
+        </div>
+        <span style="font-size:14px;color:#686868;font-weight:bold;padding-left:20px">设置规则</span>
+        <div class="col col-r sep-l fixedButton">
+            <a href="javascript:;" class="button_secondary adaptiveButton small" style="margin-top:3px">
+                <span class="left"></span>
+                <span class="center">取消</span>
+                <span class="right"></span>
+            </a>
+            <a href="javascript:;" class="button_important adaptiveButton small" style="margin-top:3px">
+                <span class="left"></span>
+                <span class="center">保存</span>
+                <span class="right"></span>
+            </a>
+        </div>
+    </div>
+    <div class="block block1 block-module" style="padding:10px;position:relative">
+        <ul class="flat-list">
+            <li><label><input type="checkbox" name="" id="">留点</label><input type="text" name="" id="" value="1.5"></li>
+            <li><label><input type="checkbox" name="" id="">异地留点</label><input type="text" name="" id="" value="1.5"></li>
+            <li><label><input type="checkbox" name="" id="">最低返点</label><input type="text" name="" id="" value="1.5"></li>
+            <li><label><input type="checkbox" name="" id="">固定留点</label><input type="text" name="" id="" value="1.5"></li>
+            <li><label><input type="checkbox" name="" id="">异地固定返点</label><input type="text" name="" id="" value="1.5"></li>
+            <li><label><input type="checkbox" name="" id="">儿童最低返点</label><input type="text" name="" id="" value="1.5"></li>
+            <li><label><input type="checkbox" name="" id="">留钱</label><input type="text" name="" id="" value="1.5"></li>
+            <li><label><input type="checkbox" name="" id="">异地留钱</label><input type="text" name="" id="" value="1.5"></li>
+            <li><label><input type="checkbox" name="" id="">最低返钱</label><input type="text" name="" id="" value="1.5"></li>
+            <li><label><input type="checkbox" name="" id="">促销</label><input type="text" name="" id="" value="1.5"></li>
+            <li><label><input type="checkbox" name="" id="">异地促销</label><input type="text" name="" id="" value="1.5"></li>
+            <li><label><input type="checkbox" name="" id="">儿童最低返钱</label><input type="text" name="" id="" value="1.5"></li>
+        </ul>
+    </div>
+
+</div>
+<script type="text/javascript">
+    $(function(){
+        kendo.init($("body"));
+    })
+</script>
+</body>
+</html>

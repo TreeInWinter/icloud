@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>搜索查询</title>
+<link href="../static/css/common.css" type="text/css" rel="stylesheet"/>
+<link href="../static/css/b2b.css" type="text/css" rel="stylesheet"/>
+<link href="/static/css/kendo.common.min.css" rel="stylesheet" />
+<link href="/static/css/kendo.gray.css" rel="stylesheet" />
+<link href="/static/css/common.css" rel="stylesheet" />
+<link href="/static/css/b2b.css" rel="stylesheet" />
+<link href="/static/css/kendo.reset.css" rel="stylesheet" />
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/kendo.web.js"></script>
+</head>
+
+<body style="background-color:#fff;">
+
+
+        <script type="text/x-kendo-template" id="operator">
+
+            <a href="javascript:void(0);" class="disabled_btn">
+                <span class="left"></span>
+                <span class="center">受 理</span>
+                <span class="right"></span>
+            </a>
+            <a href="javascript:void(0);" class="button_secondary adaptiveButton small">
+                <span class="left"></span>
+                <span class="center" style="padding:0 5px;">取消受理</span>
+                <span class="right"></span>
+            </a>
+        </script>            
+
+<div id="container">
+
+	<div id="mainContent">
+    	<div>范例</div>
+        <div>范例</div>
+        <div>范例</div><div>范例</div><div>范例</div>
+        <div>范例</div>
+        <div>范例</div><div>范例</div><div>范例</div><div>范例</div><div>范例</div><div>范例</div>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        
+
+       <!-- 关键代码开始 -->
+       
+       <div class="seek">
+           <span class="left"></span>
+           <span class="center">
+              <em>请输入条件进行查询</em>   
+           </span>
+           <span class="right"></span>
+           <div class="clear"></div>
+       </div>
+       
+       <!-- 关键代码开始 -->
+       
+
+
+       <div id="example" >
+           <div id="grid"></div>
+
+       </div>
+       
+       
+       
+    </div>
+   
+</div>
+
+
+<script type="text/x-kendo-template" id="no_data_tpl">
+    <tr>
+        <td colspan="#=columns_length#">
+            <div class="seek">
+                <span class="left"></span>
+                <span class="center">
+                    <em>#=message#</em>   
+                </span>
+                <span class="right"></span>
+                <div class="clear"></div>
+            </div>
+        </td>
+    </tr>
+</script>
+
+<script type="text/javascript">
+
+    function kendoNoData(o){
+        if(0 == o.sender.dataSource.data().length){
+            var tpl = kendo.template($("#no_data_tpl").html());
+            var no_data = tpl({columns_length:o.sender.columns.length,message:"请输入条件进行查询"});
+            $(o.sender.tbody).html(no_data) ; 
+        }
+    }
+
+    $(function(){
+	$("#grid").kendoGrid({
+		dataSource: {
+			data: [],
+			schema: {
+				model: {
+					fields: {
+						ProductName: {
+							type: "string"
+						},
+						UnitPrice: {
+							type: "number"
+						},
+						UnitsInStock: {
+							type: "number"
+						},
+						Discontinued: {
+							type: "boolean"
+						}
+					}
+				}
+			},
+			pageSize: 6 
+
+		},
+		sortable: false,
+		scrollable: true,
+		resizable: false,
+		//height:400,
+		dataBound: function(e) {
+            console.log(e);
+
+            kendoNoData(e);
+		},
+		pageable: {
+			input: true,
+			numeric: false
+		},
+		columns: [
+		{
+			field: "ProductName ",
+			title: "ProductName",
+			width: "300px",
+            template:kendo.template("#=ProductName#<br/>asasas")
+
+		},
+             {
+			field: "UnitPrice",
+			title: "Unit Price",
+			format: "{0:c}",
+			width: "200px"
+		},
+		{
+			field: "UnitsInStock",
+			title: "Units In Stock",
+			width: "300px"
+		},
+		{
+			field: "Discontinued",
+                   width: "300px",
+                   template:kendo.template($("#operator").html())
+		}]
+
+	});
+
+    });
+
+</script>
+
+
+
+</body>
+</html>

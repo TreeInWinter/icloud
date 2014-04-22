@@ -1,0 +1,423 @@
+﻿ <!DOCTYPE html>
+<html>
+<head>
+	<title>基础数据 公共-行政区划</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.gray.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.reset.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/cabinseat.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/plugins/jquery.fixedBar.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/finance.js"></script> 
+    
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<script type="text/javascript" src="../../static/js/sync.js"></script>
+<!-- @CLB@ -->
+</head>
+<body>
+    <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">&nbsp;</a>
+                <span>&nbsp;</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent">
+            
+            <div class="topFixedToolsBar">
+                <div class="fixedMenu" style="font-size:12px;">
+                    <a href="#">国内机票</a>
+                    <a href="#">国际机票</a>
+                    <a href="#">酒店</a>
+                    <a href="#" class="code_a_1">公共</a>
+                    <a href="#">行政区划分</a>
+                </div>
+            </div>
+           
+            <div class="leftandright clearfix" style="height:auto; width:auto; background:#f6f6f6;"> <!--leftAndRight start-->
+               
+               <div class="testbox">  <!--left start-->
+                    <ul>
+                         <li><a class="MenuItem" href="节假日管理.html">节假日管理</a></li>
+                         <li class="lastBorder current"><a class="MenuItem" href="公共-行政区划.html">行政区划</a></li>
+                    </ul>
+               </div>  <!--left end-->
+               
+               <div class="pull-right rightCommonStyle"> <!--pull-right 开始-->
+                     <div class="boxshow">  
+                          <div class="right_side">  <!--right_side start-->  
+                          <h3 class="titleDivide">添加城市</h3>
+                          <div class="addContent">
+                               <ul class="addList clearfix">
+                                      <li>
+                                           <div>
+                                                <select data-role="dropdownlist">
+                                                      <option>省份</option>
+                                                      <option>江苏</option>
+                                                      <option>浙江</option>
+                                                      <option>安徽</option>
+                                                 </select>
+                                           </div>
+                                       </li>
+                                       <li>
+                                            <div class="clearfix">
+                                                 <label class="selectCity">
+                                                      <input type="text" value="城市"  class="morehotel" />
+                                                      <i></i>
+                                                 </label>
+                                                 <!--<div class="pull-left cityGroupList">
+                                                      <label class="groupSet"><em>南京</em> <i></i></label>
+                                                      <label class="groupSet"><em>无锡</em> <i></i></label>
+                                                      <label class="groupSet"><em>徐州</em> <i></i></label>
+                                                      <label class="groupSet"><em>常州</em> <i></i></label>
+                                                      <label class="groupSet"><em>苏州</em> <i></i></label>
+                                                      <label class="groupSet"><em>南通</em> <i></i></label>
+                                                      <label class="groupSet"><em>连云港</em> <i></i></label>
+                                                      <label class="groupSet"><em>淮安</em> <i></i></label>
+                                                      <label class="groupSet"><em>盐城</em> <i></i></label>
+                                                      <label class="groupSet"><em>扬州</em> <i></i></label>
+                                                      <label class="groupSet"><em>镇江</em> <i></i></label>
+                                                      <label class="groupSet"><em>泰州</em> <i></i></label>
+                                                      <label class="groupSet"><em>宿迁</em> <i></i></label>
+                                                 </div>
+                                                 <div class="pull-left">
+                                                      <a href="javascript:;" class="button_secondary adaptiveButton small morehotel">
+                                                            <span class="left"></span>
+                                                            <span class="center center_1">请选择城市</span>
+                                                            <span class="right"></span>
+                                                      </a>
+                                                 </div>-->
+                                            </div>                                           
+                                       </li>
+                                       <li>
+                                           <div>
+                                               <label>归属至</label>
+                                               <select data-role="dropdownlist">
+                                                     <option>大区</option>
+                                                     <option>华东</option>
+                                                     <option>华北</option>
+                                                     <option>华南</option>
+                                                     <option>西南</option>
+                                               </select>
+                                           </div>
+                                       </li>
+                                </ul>            
+                                <a href="javascript:;" class="button_important adaptiveButton medium">
+                                      <span class="left"></span>
+                                      <span class="center" style="padding:0 20px;">添 加</span>
+                                      <span class="right"></span>
+                                </a>
+                            </div>
+                            <h3 class="titleDivide">行政区划</h3>
+                            <table class="compartmentList">
+                                 <colgroup>
+                                      <col width="45px"/>
+                                      <col width="65px"/>
+                                      <col width="720px"/>
+                                 </colgroup>
+                                 <tr>
+                                     <th rowspan="3">
+                                         <div><b>华</b></div>
+                                         <div><b>东</b></div>
+                                     </th>
+                                     <th>江苏</th>
+                                     <td>
+                                         <ul class="cityList clearfix">
+                                             <li>南京</li>
+                                             <li>无锡</li>
+                                             <li>徐州</li>
+                                             <li>常州</li>
+                                             <li>苏州</li>
+                                             <li>南通</li>
+                                             <li>连云港</li>
+                                             <li>淮安</li>
+                                             <li>盐城</li>
+                                             <li>扬州</li>
+                                             <li>镇江</li>
+                                             <li>泰州</li>
+                                             <li>宿迁</li>
+                                             <li>南京</li>
+                                         </ul>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <th>上海</th>
+                                     <td>
+                                         <ul class="cityList clearfix">
+                                             <li>上海</li>
+                                         </ul>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <th>浙江</th>
+                                     <td>
+                                         <ul class="cityList clearfix">
+                                             <li>杭州</li>
+                                             <li>宁波</li>
+                                         </ul>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <th rowspan="3">
+                                         <div><b>华</b></div>
+                                         <div><b>南</b></div>
+                                     </th>
+                                     <th>江苏</th>
+                                     <td>
+                                         <ul class="cityList clearfix">
+                                             <li>南京</li>
+                                             <li>无锡</li>
+                                             <li>徐州</li>
+                                             <li>常州</li>
+                                             <li>苏州</li>
+                                             <li>南通</li>
+                                         </ul>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <th>上海</th>
+                                     <td>
+                                         <ul class="cityList clearfix">
+                                             <li>上海</li>
+                                         </ul>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <th>浙江</th>
+                                     <td>
+                                         <ul class="cityList clearfix">
+                                             <li>杭州</li>
+                                             <li>宁波</li>
+                                         </ul>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <th rowspan="3">
+                                         <div><b>西</b></div>
+                                         <div><b>南</b></div>
+                                     </th>
+                                     <th>江苏</th>
+                                     <td>
+                                         <ul class="cityList clearfix">
+                                             <li>南京</li>
+                                             <li>无锡</li>
+                                             <li>徐州</li>
+                                             <li>常州</li>
+                                             <li>苏州</li>
+                                             <li>南通</li>
+                                             <li>连云港</li>
+                                             <li>淮安</li>
+                                             <li>盐城</li>
+                                         </ul>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <th>上海</th>
+                                     <td>
+                                         <ul class="cityList clearfix">
+                                             <li>上海</li>
+                                         </ul>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <th>浙江</th>
+                                     <td>
+                                         <ul class="cityList clearfix">
+                                             <li>杭州</li>
+                                             <li>宁波</li>
+                                         </ul>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <th rowspan="3">
+                                         <div><b>西</b></div>
+                                         <div><b>北</b></div>
+                                     </th>
+                                     <th>江苏</th>
+                                     <td>
+                                         <ul class="cityList clearfix">
+                                             <li>南京</li>
+                                             <li>无锡</li>
+                                             <li>徐州</li>
+                                             <li>常州</li>
+                                             <li>苏州</li>
+                                             <li>南通</li>
+                                             <li>连云港</li>
+                                             <li>淮安</li>
+                                         </ul>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <th>上海</th>
+                                     <td>
+                                         <ul class="cityList clearfix">
+                                             <li>上海</li>
+                                         </ul>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <th>浙江</th>
+                                     <td>
+                                         <ul class="cityList clearfix">
+                                             <li>杭州</li>
+                                             <li>宁波</li>
+                                         </ul>
+                                     </td>
+                                 </tr>
+                            </table>       
+                              
+                            </div> <!--right_side end-->
+                        </div>   
+                     </div> <!--pull-right 结束-->
+               </div> <!--leftAndRight end-->
+           
+          </div> <!-- 内容结束 -->
+          
+    </div>
+    
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+    
+    <script>
+          $(function(){
+				var hotelData = [{
+					name:'南京',
+					selected:false
+				},{
+					name:'无锡',
+					selected:false
+				},{
+					name:'徐州',
+					selected:false
+				},{
+					name:'常州',
+					selected:false
+				},{
+					name:'苏州',
+					selected:false
+				},{
+					name:'南通',
+					selected:false
+				},{
+					name:'连云港', 
+					selected:true
+				},{
+					name:'淮安', 
+					selected:true
+				},{
+					name:'盐城', 
+					selected:true
+				},{
+					name:'扬州', 
+					selected:true
+				},{
+					name:'镇江', 
+					selected:true
+				},{
+					name:'泰州', 
+					selected:true
+				},{
+					name:'宿迁', 
+					selected:true
+				},{
+					name:'扬州', 
+					selected:true
+				},{
+					name:'镇江', 
+					selected:true
+				},{
+					name:'泰州', 
+					selected:true
+					
+				}];
+				var hotelLayer = FloatLayer({
+					trigger:'.morehotel', 
+					template:'#morehotel-template',
+					offsetY:53,
+					data:hotelData
+				});	
+				
+		  });
+    </script>
+    
+    <script type="text/template" id="morehotel-template">
+    <div class="cytab cytab-morehotel">
+        <div class="cytab-title">
+            
+            <i class="close">&nbsp;</i>
+        </div>
+
+        <div class="cytab-content">
+            <ul class="clearfix">
+                # for(var i=0;i<data.length;i++){#
+                <li>
+                    <label>
+                    <input # if(data[i].selected){#  checked  #}# type="checkbox" name="">
+                    <span class="morehotel-item morehotel-item#=i#">#= data[i].name#</span>
+                    </label>
+                </li>
+                #} #
+            </ul>
+			<div style="text-align:right">
+			    <label><input type="checkbox"/>&nbsp;全选</label>
+				<a href="javascript:;" class="button_important adaptiveButton medium">
+					  <span class="left"></span>
+					  <span class="center">确 定</span>
+					  <span class="right"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+	</script>
+    
+    <script type="text/javascript">
+		kendo.init($("body"))
+	</script>
+    
+</body>
+</html>

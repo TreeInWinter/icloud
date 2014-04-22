@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>系统设置 公司信息 B2B航司绑定设置</title>
+    <meta charset="utf-8"/>
+    <link href="/static/css/kendo.common.css" rel="stylesheet"/>
+    <link href="/static/css/kendo.gray.css" rel="stylesheet"/>
+    <link href="/static/css/common.css" rel="stylesheet"/>
+    <link href="/static/css/b2b.css" rel="stylesheet"/>
+    <link href="/static/css/kendo.reset.css" rel="stylesheet"/>
+    <link href="/static/css/systemSet.css" rel="stylesheet"/>
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="/static/js/plugins/jquery.fixedBar.js"></script>
+    <script type="text/javascript" src="/static/js/global.js"></script>
+
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/static/css/ie.css"/>
+    <script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="/static/js/supplier/supplier_sync.js"></script>
+    <!-- @CLB@ -->
+</head>
+<body>
+<div id="extHeader">
+    <div></div>
+</div>
+
+<div id="container">
+    <div class="header">
+        <h1></h1>
+
+        <div>
+            <span>你好,${name}</span>
+            <a href="javascript:void(0);">退出</a>
+        </div>
+        <ul id="top_menu">
+            <li><a href="javascript:void(0);">国内机票</a></li>
+            <li><a href="javascript:void(0);">国际机票</a></li>
+            <li><a href="javascript:void(0);">酒店</a></li>
+            <li><a href="javascript:void(0);">票证中心</a></li>
+            <li><a href="javascript:void(0);">财务管理</a></li>
+            <li><a href="javascript:void(0);">客户管理</a></li>
+            <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+        </ul>
+        <ol class="sub_menu">
+            <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+            <li><a href="javascript:void(0);">公司信息</a></li>
+            <li><a href="javascript:void(0);">组织架构</a></li>
+            <li><a href="javascript:void(0);">角色维护</a></li>
+            <li><a href="javascript:void(0);">基础数据</a></li>
+        </ol>
+        <div id="message">
+            <a href="javascript:void(0);">消息</a>
+            <span>New</span>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="sub_menu_bar"></div>
+    <div id="mainContent">
+        <div class="topFixedToolsBar">
+                <div class="fixedMenu" style="width:auto; font-size:12px;">
+                    <a href="#">基本信息</a>
+                    <a href="#" class="currentTerm">账户信息</a>
+                    <a href="#">OFFICE设置</a>
+                </div>               
+        </div>       
+            
+        <div class="setContent">
+             <ul id="rolemenu" class="clearfix">
+                    <li>
+                        <div class="mtab gray">
+                            <a href="B2B支付账户设置.html" for="fid1">B2B支付账号设置</a>
+                            <span class="rightCover"></span>
+                        </div>
+                    </li>
+                    <li class="current">
+                        <div class="mtab">
+                            <a href="B2B航司绑定设置.html" for="fid2">B2B航司绑定设置</a>
+                            <span class="rightCover"></span>
+                        </div>                    
+                    </li>
+                    <li>
+                        <div class="mtab gray">
+                            <a href="BSP支付账号设置.html" for="fid3">BSP支付账号设置</a>
+                            <span class="rightCover"></span>
+                        </div>                    
+                    </li>
+                    <li>
+                        <div class="mtab gray">
+                            <a href="BSP航司绑定设置.html" for="fid3">BSP航司绑定设置</a>
+                            <span class="rightCover"></span>
+                        </div>                    
+                    </li>
+             </ul>
+             <section>
+                 <div style="position:relative;">
+                      <div class="setBtn">
+                           <a href="javascript:;" class="button_secondary adaptiveButton small ac-addB2BAir">
+                                <span class="left"></span>
+                                <span class="center">添加航司绑定</span>
+                                <span class="right"></span>
+                           </a>                       
+                      </div>
+                      <table class="grayTitleTab">
+                           <colgroup>
+                                <col width="100" />
+                                <col width="70" />
+                                <col width="230" />
+                                <col width="150" />
+                                <col width="135" />
+                                <col width="160" />
+                                <col width="70" />
+                           </colgroup>
+                           <thead>
+                               <tr>
+                                   <th style="text-align:center;">操作</th>
+                                   <th style="text-align:center;">航空公司</th>
+                                   <th>支付账号</th>
+                                   <th>B2B账号</th>
+                                   <th>账号联系人</th>
+                                   <th>联系电话</th>
+                                   <th>状态</th>
+                               </tr>
+                           </thead>
+                           <tbody>
+                               <tr>
+                                   <td class="linkA" style="text-align:center;">
+                                       <a href="javascript:void(0);" class="ac-modified">启用</a>
+                                       <a href="javascript:void(0);">删除</a>
+                                   </td>
+                                   <td rowspan="4" style="text-align:center;">MU</td>
+                                   <td class="gray">zhifubao@zhifubao.com</td>
+                                   <td class="gray">BYCB2B</td>
+                                   <td class="gray">张三</td>
+                                   <td class="gray">139999999999</td>
+                                   <td class="gray">禁用</td>
+                               </tr>
+                               <tr>
+                                   <td class="linkA" style="text-align:center;">
+                                       <a href="javascript:void(0);" class="ac-modified">禁用</a>
+                                       <a href="javascript:void(0);">删除</a>
+                                   </td>
+                                   <td>huifu@huifu.com</td>
+                                   <td>BYCB2B</td>
+                                   <td>张三</td>
+                                   <td>139999999999</td>
+                                   <td>启用</td>
+                               </tr>
+                               <tr>
+                                   <td class="linkA" style="text-align:center;">
+                                       <a href="javascript:void(0);" class="ac-modified">启用</a>
+                                       <a href="javascript:void(0);">删除</a>
+                                   </td>
+                                   <td class="gray">zhifubao@zhifubao.com</td>
+                                   <td class="gray">BYCB2B</td>
+                                   <td class="gray">张三</td>
+                                   <td class="gray">139999999999</td>
+                                   <td class="gray">禁用</td>
+                               </tr>
+                               <tr>
+                                   <td class="linkA" style="text-align:center;">
+                                       <a href="javascript:void(0);" class="ac-modified">禁用</a>
+                                       <a href="javascript:void(0);">删除</a>
+                                   </td>
+                                   <td>zhifubao@zhifubao.com</td>
+                                   <td>BYCB2B</td>
+                                   <td>张三</td>
+                                   <td>139999999999</td>
+                                   <td>启用</td>
+                               </tr>
+                           </tbody>
+                  </table>                 
+                 </div>                  
+             </section>        
+        
+        </div>  
+            
+            <script type="text/javascript">
+
+                $(function () {
+                    new PopWindow('.ac-addB2BAir', {
+                        width: 570,
+                        title: '添加航司绑定',
+                        template: '#ac-addB2BAir-template'
+                    }).init();
+					
+					$("#rolemenu li").hover(function(){
+						if(!$(this).hasClass("current")){
+							$(".mtab",this).removeClass("gray");
+						}
+		
+					},function(){
+						if(!$(this).hasClass("current")){
+							$(".mtab",this).addClass("gray");
+						}
+					});
+					
+					
+					
+                });
+            </script>
+
+
+            <script type="text/x-kendo-template" id="ac-addB2BAir-template">
+                <table class="cv-table">
+				    <colgroup>
+					     <col width="90"/>
+						 <col width="185"/>
+						 <col width="75"/>
+						 <col width="160"/>
+					</colgroup>
+                    <tr>
+                        <th><em class="redFont">*</em>航空公司：</th>
+                        <td>
+                            <select data-role="dropdownlist" style="width:170px;">
+							    <option>请选择航空公司</option>
+							</select>
+                        </td>
+						<th></th>
+						<td></td>
+                    </tr>
+					<tr>
+                        <th><em class="redFont">*</em>支付账号：</th>
+                        <td colspan="3">
+                            <select data-role="dropdownlist" style="width:170px;">
+							    <option>请选择航空公司</option>
+							</select>
+						     <em>---</em>
+							 <select data-role="dropdownlist">
+							    <option>请选择航空公司</option>
+							</select>
+						</td>
+                    </tr>
+					<tr>
+                        <th><em class="redFont">*</em>B2B账号：</th>
+                        <td>
+                            <input type="text" style="width:170px;" />
+                        </td>
+						<th></th>
+						<td></td>
+                    </tr>
+					<tr>
+                        <th><em class="redFont">*</em>账号密码：</th>
+                        <td>
+                            <input type="password" style="width:170px;" />
+                        </td>
+						<th><em class="redFont">*</em>确认密码：</th>
+                        <td>
+                            <input type="password" style="width:150px;" />
+                        </td>
+                    </tr>
+					<tr>
+                        <th><em class="redFont">*</em>账号联系人：</th>
+                        <td>
+                            <input type="text" style="width:170px;" />
+                        </td>
+						<th><em class="redFont">*</em>联系电话：</th>
+                        <td>
+                            <input type="text" style="width:150px;" />
+                        </td>
+                    </tr>
+                </table>
+                <div class="row" style="text-align:right;padding-right:10px;">
+                    <button class="btns button_1_2">添 加</button>
+                    <button class="btns button_2_2">取 消</button>
+                </div>
+            </script>
+            
+    </div>
+
+</div>
+
+<div id="extFooter">
+    <div>
+        <p>
+            <a href="javascript:void(0);">关于我们</a>&nbsp;|
+            <a href="javascript:void(0);">微博</a>&nbsp;|
+            <a href="javascript:void(0);">服务条款</a>&nbsp;|
+            <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+        </p>
+
+        <p>客户服务热线:400-720-6666</p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 国际机票-K位申请创建订单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+     
+    <link href="../../static/css/coin-slider-styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_apply.css" media="screen" />
+    
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+	<link rel="stylesheet" href="../../static/css/kendo.store.css" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+	<script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>    
+
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+    
+    <script type="text/javascript" src="../../static/js/store/store.js"></script>
+</head>
+<body>
+
+<div class="main-wrapper">
+<header class="main-header">
+    <a class="logo" href="/"><h1>天地行</h1></a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first active"><a herf="#">首页</a></li>
+            <li><a herf="#">国内机票</a></li>
+            <li><a herf="#">国际机票</a></li>
+            <li><a herf="#">酒店</a></li>
+        </ul> 
+    </nav>
+    <nav class="main-links">
+        <ul class="clearfix">
+            <li class="first"><a href="#">订单管理</a></li>
+            <li><a href="#">分销管理</a></li>
+            <li><a href="#">电子钱包</a></li>
+            <li><a href="#">统计报表</a></li>
+            <li><a href="#">客服服务</a></li>
+            <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+            <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+</header>
+<section class="main-body clearfix">
+  
+  <div class="k_place">  <!-- k_place start -->
+      <h2>国际机票K位申请</h2>
+      <div class="apply_message">
+           <div class="mes_h3"> <h3>航程信息</h3> </div>
+            <table cellpadding="0" cellspacing="0" class="mes_tab">
+                <colgroup>
+                    <col width="105px" />
+                </colgroup>
+                <tr>
+                    <td>航空公司：</td>
+                    <td>中国国际航空（CA）</td>
+                </tr>
+                <tr>
+                    <td>适用航线：</td>
+                    <td>欧洲航线,美洲航线,西北亚线,澳洲航线,日本航线,韩国航线,东南亚航线,港澳航线</td>
+                </tr>
+                <tr>
+                    <td>政策有效期：</td>
+                    <td>2013-08-20 &nbsp; 至 &nbsp; 2013-10-20</td>
+                </tr>
+                <tr>
+                    <td>开票有效期：</td>
+                    <td>2013-08-20 &nbsp; 至 &nbsp; 2013-10-20</td>
+                </tr>
+                <tr>
+                    <td>通知日期：</td>
+                    <td>10至30分钟</td>
+                </tr>
+                <tr>
+                    <td>附加费：</td>
+                    <td><em>100</em></td>
+                </tr>
+                <tr>
+                    <td>行程方式：</td>
+                    <td class="journey">
+                        <label>
+                            <input type="radio" name="way" checked="" /> 单程
+                        </label>
+                        <label>
+                            <input type="radio" name="way" /> 往返
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><em>* </em>城市：</td>
+                    <td>
+                        <input type="text" value="城市/机场" />
+                        <span> ― </span>
+                        <i>换</i>
+                        <span> → </span>
+                        <input type="text" value="城市/机场" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>出发日期：</td>
+                    <td><input class="datepicker" type="text" value="2013-08-08" /></td>
+                </tr>
+                <tr>
+                    <td>航班号：</td>
+                    <td><input type="text" /></td>
+                </tr>
+                <tr>
+                    <td><em>原始</em>PNR：</td>
+                    <td>
+                        <input type="text" />
+                        <strong>自行定位的PNR，该PNR舱位高于申请K位舱位，并且QTE得出价格。</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top;">备注：</td>
+                    <td>
+                        <textarea>您可在此输入航程需求。</textarea>
+                    </td>
+                </tr>
+            </table>
+      </div>
+      
+      <div class="contacts">
+           <div class="mes_h3"> <h3>联系人信息</h3> </div>
+           <table cellpadding="0" cellspacing="0" class="submitAsk">
+               <colgroup>
+                   <col width="110px"/>
+               </colgroup>
+               <tr>
+                   <td><em> * </em>联系人姓名：</td>
+                   <td><input style="width:160px;" type="text" /></td>
+               </tr>
+               <tr>
+                   <td><em> * </em>联系人手机：</td>
+                   <td><input style="width:160px;" type="text" /></td>           
+               </tr>
+               <tr>
+                   <td> </td>
+                   <td>
+                       <a class="adaptiveButton brightRed_btn">
+                          <span class="left"></span>
+                          <span class="center center_1">提交申请</span>
+                          <span class="right"></span>
+                       </a>
+                   </td>
+               </tr>
+           </table>
+      </div>
+          
+  </div>  <!-- k_place end -->
+  
+</section>
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+
+</body>
+</html>

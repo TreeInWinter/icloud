@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>组织架构 组织架构和员工管理 添加部门谈层</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.common.css" rel="stylesheet" />
+    <link href="../../static/css/kendo.gray.css" rel="stylesheet" />
+    <link href="../../static/css/kendo.reset.css" rel="stylesheet" />
+    <link href="../../static/css/tianjiabumentishi.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+<!-- @CLB@ --></head>
+<body>
+    <div class="tianjiabumenneirong">
+        <div class="tianjiabumentishi">
+            <h3>
+                添加部门</h3>
+            <a href="#"></a>
+        </div>
+        <div class="bumenmingcheng">
+            <span>部门名称：</span>
+            <input type="text" />
+        </div>
+        <div class="shangjibumenneirong">
+            <div class="shangjibumen">
+                上级部门：</div>
+            <div class="shangjibumen_right">
+                <div class="shangjibumen_right_1">
+                    <!--此div为产生滚动条开始标签-->
+                    <!--<ul class="shangjibumen_ul" id="treeView">
+                        <li class="shangjibumen_ul_li"><span>不夜城集团</span>
+                            <ul class="erjicaidan">
+                                <li class="guolu_1"><span class="guolu_1_span">不夜城国旅</span>
+                                    <ul class="fenbumen">
+                                        <li class="guoneijibiao_1"><span class="guoneijibiao_1_span">国内机票部</span>
+                                            <ul class="tuipiaobumen">
+                                                <li class="tuipiao_1">退票部</li>
+                                                <li class="tuipiao_1">出票部</li>
+                                            </ul>
+                                        </li>
+                                        <li class="jiudianchaiwu">国内机票部</li>
+                                        <li class="jiudianchaiwu">酒店部</li>
+                                        <li class="jiudianchaiwu">财务部</li>
+                                    </ul>
+                                </li>
+                                <li class="beijingtebo">北京爱特博</li>
+                                <li class="beijingtebo">广州长荣</li>
+                            </ul>
+                        </li>
+                    </ul>-->
+                    <ul id="treeView">
+                        <li>不夜城集团
+                            <ul>
+                                <li>不夜城国旅
+                                    <ul>
+                                        <li>国内机票部
+                                            <ul>
+                                                <li>退票部
+                                                    <ul>
+                                                        <li>退票部一组</li>
+                                                        <li>退票部二组</li>
+                                                    </ul>
+                                                </li>
+                                                <li>出票部</li>
+                                            </ul>
+                                        </li>
+                                        <li>国际机票部</li>
+                                        <li>酒店部</li>
+                                        <li>财务部</li>
+                                    </ul>
+                                </li>
+                                <li>北京爱特博</li>
+                                <li>广州长荣</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!--此div为产生滚动条结束标签-->
+            </div>
+        </div>
+        <div class="tianjia_button">
+            <a class="tianjiaqueding_btn aa" href="#">确定 </a><a class="tianjiaquxiao_btn bb" href="#">取消</a>
+        </div>
+    </div>    
+</body>
+</html>
+
+<!--<script type="application/javascript">
+    $(function() {
+        $("#treeView").kendoTreeView();
+    })
+</script>-->
+
+<script>
+    $(function() {
+        $("#treeView").kendoTreeView();
+    })
+</script>

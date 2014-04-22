@@ -1,0 +1,39 @@
+.scene{
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+    min-height:700px;
+}
+.s0{
+    background-color:#272847;
+    background-image:url(../../images/store/jijiajiu/s0.jpg);
+    height: 631px;
+    min-height:400px;
+    background-position:50% 100%;
+}
+.s1{
+    background-color:#27264e;
+    background-image:url(../../images/store/jijiajiu/s1.jpg);
+}
+.s2{
+    background-color:#28599e;
+    background-image:url(../../images/store/jijiajiu/s2.jpg);
+}
+.s3{
+    background-color:#68c3c4;
+    position:relative;
+}
+.s3_0{
+    height:100%;
+    width:100%;
+    background-image:url(../../images/store/jijiajiu/s3.jpg);
+}
+.s3_1{
+    position:absolute;
+    bottom:0;
+    height:165px;
+    width:100%;
+    background-color:#4b9e9f;
+    background-image:url(../../images/store/jijiajiu/s3_1.jpg);
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html" charset="utf-8">
+    <title>酒店 酒店维护 新增酒店 备注信息</title>
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/b2b.css">
+    <link rel="stylesheet" href="/static/css/hotel.css">
+    <style type="text/css">
+        textarea{width:90%;padding:5px}
+        td{vertical-align:top}
+    </style>
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+<!-- @CLB@ --></head>
+<body style="background:#ffffff">
+<table>
+    <tr>
+        <td style="width:83px"><span class="head">内部备注：</span></td>
+        <td><textarea name="" id="" cols="30" rows="10" placeholder="只提供给内部人员查询酒店详情时显示"></textarea></td>
+    </tr>
+    <tr>
+        <td><span class="head">公开备注：</span></td>
+        <td><textarea name="" id="" cols="30" rows="10" placeholder="内部人员，和采购商均可以看见的备注信息"></textarea></td>
+    </tr>
+</table>
+<div style="text-align:right">
+    <a href="javascript:;" class="button_1_2">保&nbsp;存</a>
+    <a href="javascript:;" class="button_2_2 close">取&nbsp;消</a>
+</div>
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("a.close").click(function(){
+            window.parent.$("span.k-i-close").trigger("click")
+        })
+    });
+</script>
+</body>
+</html>

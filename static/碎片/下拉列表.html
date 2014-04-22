@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html" charset="utf-8">
+    <title>库存和房态</title>
+    <link rel="stylesheet" href="/static/css/kendo.common.css" />
+    <link rel="stylesheet" href="/static/css/kendo.gray.css" />
+    <link rel="stylesheet" href="/static/css/kendo.reset.css" />
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/b2b.css">
+	<script src="/static/js/jquery.min.js"></script>
+	<script src="/static/js/kendo.web.js"></script>
+</head>
+<body>
+
+    <h1>范例1</h1>
+    <select style="width:197px;" id="sel_airlines" class="sel_airlines">
+        <option selected="selected" value="">全部</option>
+        <option value="3u">3U （川航）</option>
+        <option value="8L">8L （祥鹏）</option>
+        <option value="BK">BK （奥凯）</option>
+        <option value="CA">CA （国航）</option>
+        <option value="CN">CN （大新华）</option>
+        <option value="CZ">CZ （南航）</option>
+        <option value="EU">EU （成都）</option>
+        <option value="FM">FM （上航）</option>
+        <option value="G5">G5 （华夏）</option>
+        <option value="GS">GS （天津）</option>
+        <option value="HO">HO （吉祥）</option>
+        <option value="HU">HU （海航）</option>
+        <option value="JD">JD （首都）</option>
+        <option value="JR">JR （幸福）</option>
+        <option value="KN">KN （中联）</option>
+        <option value="KY">KY （昆明）</option>
+        <option value="MF">MF （厦航）</option>
+        <option value="MU">MU （东航）</option>
+        <option value="NS">NS （河北）</option>
+        <option value="OZ">OZ （韩亚华空）</option>
+        <option value="PN">PN （西部）</option>
+        <option value="SC">SC （山航）</option>
+        <option value="TV">TV （西藏）</option>
+        <option value="VD">VD （河南）</option>
+        <option value="ZH">ZH （深航）</option>
+    </select>
+
+
+    <h1>范例2</h1>
+
+    <select class="hotel">
+        <optgroup value="至客户">至客户</optgroup>
+        <option value="">01</option>
+        <option value="">02</option>
+        <option value="">03</option>
+        <option value="">04</option>
+        <option value="">05</option>
+        <option value="">06</option>
+        <option value="">07</option>
+        <option value="">08</option>
+        <option value="">09</option>
+        <option value="">10</option>
+        <optgroup value="至客户2">至客户2</optgroup>
+
+        <option value="">a01</option>
+        <option value="">a02</option>
+        <option value="">a03</option>
+        <option value="">a04</option>
+        <option value="">a05</option>
+        <option value="">a06</option>
+        <option value="">a07</option>
+        <option value="">a08</option>
+        <option value="">a09</option>
+        <option value="">a10</option>
+        <optgroup value="至客户3">至客户3</optgroup>
+        <option value="">b01</option>
+        <option value="">b02</option>
+        <option value="">b03</option>
+        <option value="">b04</option>
+        <option value="">b05</option>
+        <option value="">b06</option>
+        <option value="">b07</option>
+        <option value="">b08</option>
+        <option value="">b09</option>
+        <option value="">b10</option>
+    </select>
+    
+<script type="text/javascript">
+
+    $.extend({
+        selectBox:function(selector){
+            $(selector).hide();
+            $("<div></div>").append("body");
+        }
+
+    });
+
+    $(function(){
+        //
+        var selc = $(".sel_airlines").kendoComboBox({filter: "contains", suggest: true, index: 3 });
+
+
+    });
+</script>
+</body>
+</html>

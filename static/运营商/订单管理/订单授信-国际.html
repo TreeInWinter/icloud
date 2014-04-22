@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>订单 订单管理 订单授信-国际</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.gray.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/kendo.reset.css" rel="stylesheet" />
+    <link href="../../static/css/xieyizhengche.css" rel="stylesheet" type="text/css"/>
+    <script src="../../static/js/jquery.min.js" type="text/javascript"></script>
+    <script src="../../static/js/kendo.web.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/static/js/scrollFix.js"></script>
+    <script type="text/javascript" src="../../static/js/public.js"></script>
+
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript">
+$(function(){
+    new Collpase({
+        limitHeight:140,
+        container:'.xyzc_div' 
+    }).init();
+}) 
+    </script>
+	<!--<link href="/static/css/common.css" rel="stylesheet" />
+	<link href="/static/css/b2b.css" rel="stylesheet" />
+    <link href="/static/css/zhuzhijiagou.css" rel="stylesheet" type="text/css" />   
+	<link href="/static/css/kendo.common.css" rel="stylesheet" />
+	<link href="/static/css/kendo.gray.css" rel="stylesheet" />
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/kendo.web.js"></script>-->
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<!-- @CLB@ -->
+    <style type="text/css">
+        .faburen input{width:100px}
+        .mu select,.cklx select{width:135px}
+    </style>
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body>
+    <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">&nbsp;</a>
+                <span>&nbsp;</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent" style="overflow:hidden;">
+			<!-- start zhuzhijiagou -->
+        
+            <div class="topFixedToolsBar">
+                <div class="fixedMenu" style="font-size:12px;">
+                    <a href="#">订单查询</a>
+                    <a href="#">审核</a>
+                    <a href="#">出票</a>
+                    <a href="#">改签</a>
+                    <a href="#">废票</a>
+                    <a href="#">退票</a>
+                    <a href="#" class="current">订单授权</a>
+                </div>
+            </div>
+
+            <div class="zhuzhijiagou">
+               <div class="xyzc_div" style="padding-bottom:10px;">
+               <table cellpadding="0" cellspacing="0" class="xyzc_tab1" style="height:auto;">
+                   <colgroup>
+                       <col width="55px"/>
+                       <col width="220px"/>
+                       <col width="55px"/>
+                       <col width="150px"/>
+                       <col width="40px"/>
+                       <col width="150px"/>
+                       <col width="55px"/>
+                       <col width="150px"/>
+                   </colgroup>
+                   <tr>
+                       <td>PNR</td>
+                       <td><input type="text" style="width:193px;" /></td>
+                       <td>订单号</td>
+                       <td><input type="text"/></td>
+                       <td>票号</td>
+                       <td><input type="text"/></td>
+                       <td>客户名称</td>
+                       <td class="faburen"><input type="text" value="携程"/> <button class="btns btn-search ac-search-user" role="window_trigger">查询</button></td>
+                       <td rowspan="2" style="vertical-align:middle">
+                           <a href="javascript:;" class="button_important adaptiveButton medium" style="margin-top:3px">
+                               <span class="left"></span>
+                               <span class="center">查询</span>
+                               <span class="right"></span>
+                           </a>
+                       </td>
+                   </tr>
+                  <tr>
+                     <td>创建日期</td>
+                     <td> <input type="text" class="cjrq_input_1 datePicker" style="width:88px" value="2013-09-10" /> 
+                          <span class="cjrq_span">-</span>
+                          <input type="text" class="cjrq_input_2 datePicker" style="width:88px" value="2013-09-10" />
+                     </td>
+                     <td>还款状态</td>
+                     <td> 
+                         <select style="width:135px;">
+                             <option>全部</option>
+                         </select>
+                     </td>
+                  </tr>
+               </table>              
+            </div>
+            
+              <div class="qx">
+                  <div class="xuanze">
+                      <label> <input type="checkbox" checked="" />全选</label>
+                      <button class="btns btn-ac-blue">延长还款日</button>
+                  </div>
+                  <div class="qx_right">
+                      <button class="btns btn-ac-blue">导出Excel</button>
+                  </div>
+              </div>
+                            
+              <table class="tgrid">
+                  <thead>
+                      <tr>
+                          <th class="th_left"> </th>
+                          <th>订单号</th>
+                          <th>PNR</th>
+                          <th>票号</th>
+                          <th>航程</th>
+                          <th>起飞时间</th>
+                          <th>应收款</th>
+                          <th>客户名称</th>
+                          <th>乘机人</th>
+                          <th style="width:95px;">还款状态</th>
+                          <th class="th_right">操作</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td> </td>
+                          <td>1234567890</td>
+                          <td>JY4WF</td>
+                          <td>1234567890</td>
+                          <td>SHAHKG</td>
+                          <td>
+                              <div>2013-09-12</div>
+                              <div>16:40</div>
+                          </td>
+                          <td>1290.00</td>
+                          <td>航班管家</td>
+                          <td>毛小病</td>
+                          <td>已还款</td>
+                          <td><a href="javascript:void(0);"> </a></td>
+                      </tr>
+                      <tr class="hui_bg">
+                          <td> </td>
+                          <td>1234567890</td>
+                          <td>JY4WF</td>
+                          <td>1234567890</td>
+                          <td>SHAHKG</td>
+                          <td>
+                              <div>2013-09-12</div>
+                              <div>16:40</div>
+                          </td>
+                          <td>1290.00</td>
+                          <td>航班管家</td>
+                          <td>毛小病</td>
+                          <td>已还款</td>
+                          <td><a href="javascript:void(0);"> </a></td>
+                      </tr>
+                      <tr>
+                          <td><input type="checkbox" /></td>
+                          <td>1234567890</td>
+                          <td>JY4WF</td>
+                          <td>1234567890</td>
+                          <td>SHAHKG</td>
+                          <td>
+                              <div>2013-09-12</div>
+                              <div>16:40</div>
+                          </td>
+                          <td>1290.00</td>
+                          <td>航班管家</td>
+                          <td>毛小病</td>
+                          <td>未还款</td>
+                          <td><a href="javascript:void(0);">延长还款日</a></td>
+                      </tr>
+                      <tr class="hui_bg">
+                          <td><input type="checkbox" /></td>
+                          <td>1234567890</td>
+                          <td>JY4WF</td>
+                          <td>1234567890</td>
+                          <td>SHAHKG</td>
+                          <td>
+                              <div>2013-09-12</div>
+                              <div>16:40</div>
+                          </td>
+                          <td>1290.00</td>
+                          <td>航班管家</td>
+                          <td>毛小病</td>
+                          <td>未还款</td>
+                          <td><a href="javascript:void(0);">延长还款日</a></td>
+                      </tr>
+                      <tr>
+                          <td> </td>
+                          <td>1234567890</td>
+                          <td>JY4WF</td>
+                          <td>1234567890</td>
+                          <td>SHAHKG</td>
+                          <td>
+                              <div>2013-09-12</div>
+                              <div>16:40</div>
+                          </td>
+                          <td>1290.00</td>
+                          <td>航班管家</td>
+                          <td>毛小病</td>
+                          <td>已还款</td>
+                          <td><a href="javascript:void(0);"> </a></td>
+                      </tr>
+                      <tr class="hui_bg">
+                          <td><input type="checkbox" /></td>
+                          <td>1234567890</td>
+                          <td>JY4WF</td>
+                          <td>1234567890</td>
+                          <td>SHAHKG</td>
+                          <td>
+                              <div>2013-09-12</div>
+                              <div>16:40</div>
+                          </td>
+                          <td>1290.00</td>
+                          <td>航班管家</td>
+                          <td>毛小病</td>
+                          <td>未还款</td>
+                          <td><a href="javascript:void(0);">延长还款日</a></td>
+                      </tr>
+                      <tr>
+                          <td><input type="checkbox" /></td>
+                          <td>1234567890</td>
+                          <td>JY4WF</td>
+                          <td>1234567890</td>
+                          <td>SHAHKG</td>
+                          <td>
+                              <div>2013-09-12</div>
+                              <div>16:40</div>
+                          </td>
+                          <td>1290.00</td>
+                          <td>航班管家</td>
+                          <td>毛小病</td>
+                          <td>未还款</td>
+                          <td><a href="javascript:void(0);">延长还款日</a></td>
+                      </tr>
+                      <tr class="hui_bg">
+                          <td><input type="checkbox" /></td>
+                          <td>1234567890</td>
+                          <td>JY4WF</td>
+                          <td>1234567890</td>
+                          <td>SHAHKG</td>
+                          <td>
+                              <div>2013-09-12</div>
+                              <div>16:40</div>
+                          </td>
+                          <td>1290.00</td>
+                          <td>航班管家</td>
+                          <td>毛小病</td>
+                          <td>未还款</td>
+                          <td><a href="javascript:void(0);">延长还款日</a></td>
+                      </tr>
+                      <tr>
+                          <td> </td>
+                          <td>1234567890</td>
+                          <td>JY4WF</td>
+                          <td>1234567890</td>
+                          <td>SHAHKG</td>
+                          <td>
+                              <div>2013-09-12</div>
+                              <div>16:40</div>
+                          </td>
+                          <td>1290.00</td>
+                          <td>航班管家</td>
+                          <td>毛小病</td>
+                          <td>等待还款</td>
+                          <td><a href="javascript:void(0);"> </a></td>
+                      </tr>
+                      <tr class="hui_bg">
+                          <td> </td>
+                          <td>1234567890</td>
+                          <td>JY4WF</td>
+                          <td>1234567890</td>
+                          <td>SHAHKG</td>
+                          <td>
+                              <div>2013-09-12</div>
+                              <div>16:40</div>
+                          </td>
+                          <td>1290.00</td>
+                          <td>航班管家</td>
+                          <td>毛小病</td>
+                          <td>未还款/已废票</td>
+                          <td><a href="javascript:void(0);"> </a></td>
+                      </tr>
+              </tbody>
+          </table>
+
+              <div class="grid-table-pagination page">
+                  <span class="grid-table-count">
+                      共 <em>132</em> 条记录
+                  </span>
+                  <span>
+                      <a href="#" class="prev">&nbsp;</a>
+                  </span>
+                  <span class="links">
+                      <a href="#">1</a>
+                      <a href="#">2</a>
+                      <a href="#" class="current">3</a>
+                      <a href="#">4</a>
+                      <a href="#">5</a>
+                      <a href="javascript:;">...</a>
+                      <a href="#">50</a>
+                  </span>
+                  <span>
+                      <a href="#" class="next">&nbsp;</a>
+                  </span>
+              </div>
+           
+          </div>
+        </div>
+        <!-- end of zhuzhijiagou -->
+    </div>
+	
+    <div id="add_department"></div>
+    <div id="add_employe"></div>
+    
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+    
+    <script type="application/javascript">
+        $(function(){
+                //浮动条
+                $(".topFixedToolsBar").scrollFix("top","top");
+                $("input[name='checkall']").click(function(){
+                    var check_status = $(this).prop("checked");
+                    console.log(check_status);
+                    $("input[name='rule']").prop("checked",check_status);
+
+                    });
+
+                });
+	
+	</script>
+</body>
+</html>

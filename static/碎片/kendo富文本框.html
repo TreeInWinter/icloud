@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>消息函数兼容性测试</title>
+    <link rel="stylesheet" href="/static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="/static/css/kendo.gray.css" />
+    <link rel="stylesheet" href="/static/css/b2b.css" />
+    <link rel="stylesheet" href="/static/css/kendo.reset.css" />
+
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="/static/js/global.js"></script>
+    <script type="text/javascript" src="/static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <!--
+    <script type="text/javascript" src="jquery.stream-1.2.js"></script>
+    -->
+
+</head>
+<body>
+    
+    <textarea id="editor"></textarea>
+
+    <script type="text/javascript">
+    
+var edit = $("#editor").kendoEditor({
+    tools: [
+        "bold",
+        "italic",
+        "underline",
+        "strikethrough",
+        "fontName",
+        "fontSize",
+        "foreColor",
+        "backColor",
+        "justifyLeft",
+        "justifyCenter",
+        "justifyRight",
+        "justifyFull",
+        "insertUnorderedList",
+        "insertOrderedList",
+        "indent",
+        "outdent",
+        "formatBlock",
+        "createLink",
+        "unlink",
+        "insertImage",
+        /*
+        "subscript",
+        "superscript",
+        "viewHtml",
+        */
+        {
+          name: "custom",
+                template: "<input type='file' id='upload' value='上传图片'>"
+        }
+  ]
+      /*
+      ,
+  imageBrowser: {
+    transport: {
+      //read: "imagebrowser/read",
+        uploadUrl: "http://www.mediasite.com/test_upload.php",
+        imageUrl: "/content/images/{0}"
+      } 
+  }*/
+});
+
+
+
+$("#upload").kendoUpload({
+        showFileList:false,
+        localization:{ 
+            select: '上传图片' 
+        }, 
+        async: {
+            saveUrl: "save"
+        },
+        select: onSelect,
+        upload: onUpload,
+        complete: onComplete,
+        success: onSuccess,
+        error: onError
+    });
+    
+    function onSelect(e) {
+        $.each(e.files, function (index, value) {
+            console.log("Name: " + value.name);
+            console.log("Size: " + value.size + " bytes");
+            console.log("Extension: " + value.extension);
+        });
+    };
+
+
+    function onError(e){
+        // Array with information about the uploaded files
+        var files = e.files;
+
+        var editor = $("#editor").data("kendoEditor");
+        var newNode = $("<img src='http://proto.b2b.com/static/images/logo.png'/>");
+
+        var sel = editor.getSelection();
+        console.log(sel.focusOffset);
+        console.log(sel.focusNode);
+        if($("p:eq(" + sel.focusOffset + ")" ,editor.body).length){
+            $("p:eq(" + sel.focusOffset + ")" ,editor.body).append(newNode);
+        }else{
+            $(editor.body).append(newNode);
+        }
+        editor.update();
+        if (e.operation == "upload") {
+            alert("Failed to upload " + files.length + " files");
+        }
+    }
+
+    function onSuccess(e) {
+        // Array with information about the uploaded files
+
+        var files = e.files;
+        if (e.operation == "upload") {
+            alert("Successfully uploaded " + files.length + " files");
+        }
+
+        var serverData = e.response;
+        console.log(serverData);
+
+        var editor = $("#editor").data("kendoEditor");
+        editor.body.appendChild($("<img src='http://proto.b2b.com/static/images/logo.png'/>"));
+
+    }
+
+    function onUpload(e) {
+        // Array with information about the uploaded files
+        var files = e.files;
+
+        // Check the extension of each file and abort the upload if it is not .jpg
+        $.each(files, function () {
+            if (this.extension.toLowerCase() != ".jpg") {
+                alert("Only .jpg files can be uploaded")
+                e.preventDefault();
+            }
+        });
+    }
+
+
+    function onComplete(e) {
+        // The upload is now idle
+    }
+
+
+    $(function(){
+        kendo.culture('zh-CN');
+    });
+
+    </script>
+
+</body>
+</html>

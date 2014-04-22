@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 B2G 个人中心 我的资料</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/b2g.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.b2g.css" />
+
+    <link rel="stylesheet" href="../../static/css/b2g_personage_center.css" media="all" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/b2g/jquery-ui-1.10.3.custom.js"></script>
+    <script type="text/javascript" src="../../static/js/jquery.jscrollpane.js"></script>
+    <script type="text/javascript" src="../../static/js/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="../../static/js/b2g/common.js"></script>
+    <!--[if lte IE 9]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="top-line"></div>
+    <header class="main-header">
+        <div class="header-content">
+            <a class="logo" href="/">天地行 B2G</a>
+            <nav class="main-nav pc_main-nav">
+                <ul class="clearfix">
+                    <li class="active"><a herf="#">用户中心</a></li>
+                </ul> 
+            </nav>
+        </div>
+    </header>
+<section class="main-body clearfix">
+    <div class="main-body-content">
+            <div class="personalNavBar clearfix">
+		  <ul>
+		    <li><span class="journey"><em>我的行程</em></span></li>
+			<li><span class="card"><em>信用卡</em></span></li>
+			<li><span class="secretary"><em>差旅秘书</em></span></li>
+			<li><span class="approver"><em>代理审批人</em></span></li>
+			<li><span class="messages"><em>消息中心</em></span></li>
+			<li class="current"><span class="data"><em>我的资料</em></span></li>
+			<li><span class="password"><em>修改密码</em></span></li>
+		  </ul>
+		</div>
+      	 	<div class="infoBox">
+                <div class="infoCon">
+                       <div class="editboxTitle">
+                              <b class="editTith3">我的基础信息</b>
+                              <button type="button" class="commonBtn orangeBtn">编 辑</button>
+                        </div>
+                        <table>
+                              <colgroup>
+                                   <col width="110"/>
+                                   <col width="250"/>
+                                   <col width="100"/>
+                                   <col width="250"/>
+                                   <col width="100"/>
+                                   <col width="340"/>
+                              </colgroup>
+                              <tbody>
+                              <tr>
+                                <td class="tdTit"><em>*</em>姓：</td>
+                                <td><input type="text" value="中文/英文" /></td>
+                                <td class="tdTit"><em>*</em>名：</td>
+                                <td><input type="text" value="中文/英文" /></td>
+                                <td class="tdTit"><em>*</em>出生日期：</td>
+                                <td><input type="text" value="yy-mm-dd" style="width:250px;" /></td>
+                              </tr>
+                              <tr>
+                                <td class="tdTit">拼音姓：</td>
+                                <td><input type="text" /></td>
+                                <td class="tdTit">拼音名：</td>
+                                <td><input type="text" /></td>
+                                <td class="tdTit"><em>*</em>国籍：</td>
+                                <td><input type="text" style="width:250px;" /></td>
+                              </tr>
+                               <tr>
+                                <td class="tdTit">移动电话：</td>
+                                <td><input type="text" /></td>
+                                <td class="tdTit">办公电话：</td>
+                                <td><input type="text" /></td>
+                                <td class="tdTit"><em>*</em>邮箱地址：</td>
+                                <td><input type="text" style="width:250px;" /></td>
+                              </tr>
+                              </tbody>
+                      </table> 
+                </div>
+            </div>
+                <!-- 紧急联系人 -->
+                <div class="infoBox">
+                  <div class="infoCon">
+                   <div class="editboxTitle">
+                   	   <b class="editTith3">紧急联系人信息</b>
+                   </div>
+                    <table id="linkman-info">
+                          <colgroup>
+                               <col width="115px"/>
+                               <col width="180px"/>
+                               <col width="115px"/>
+                               <col width="180px"/>
+                               <col width="115px"/>
+                               <col width="180px"/>
+                               <col width="115px"/>
+                               <col width="220px"/>
+                          </colgroup>
+                          <tbody>
+                          <tr>
+                          	<td class="tdTit">姓名：</td>
+                            <td><input type="text" style="width:150px"/></td>
+                            <td class="tdTit">关系：</td>
+                            <td><input type="text"  style="width:150px"/></td>
+                            <td class="tdTit">电话：</td>
+                            <td><input type="text"  style="width:150px"/></td>
+                            <td class="tdTit">国籍：</td>
+                            <td><input type="text" id="ipt_nationality" name="" style="width:150px;padding:0;"/></td>
+                          </tr>
+                          </tbody>
+                    </table> 
+                </div>
+                </div>
+                
+                <!-- 证件信息 -->
+                <div class="infoBox">
+                  <div class="infoCon">
+                   <div class="editboxTitle">
+                   	   <b class="editTith3">证件信息</b>       
+                   </div>
+                    <table border="0" cellpadding="0" cellspacing="0"  class="otherInfo" id="elsepapers">
+                          <colgroup>
+                               <col width="90px"/>
+                               <col width="320px"/>
+                               <col width="110px"/>
+                               <col width="240px"/>
+                               <col width="110px"/>
+                               <col width="260px"/>
+                          </colgroup>
+                          <tbody>
+                          <tr>
+                          	<td class="tdTit last">身份证号码：</td>
+                            <td class="last"><input type="text" /></td>
+                            <td class="tdTit last">身份证到期日：</td>
+                            <td class="last"><input type="text" class="datepicker dpChangeMonthYear" /></td>
+                            <td class="last"></td>
+                            <td class="last"></td>
+                          </tr>
+                          <tr>
+                          	<td class="tdTit">护照号码：</td>
+                            <td>
+                                <input type="text" />
+                            </td>
+                            <td class="tit">护照到期日：</td>
+                            <td><input type="text" class="datepicker dpChangeMonthYear" minDate="2014-01-01" maxDate="2030-12-31" /></td>
+                            <td class="tdTit">证件签发地：<div class="twofont">（2字码）</div></td>
+                            <td>
+                                <input type="text" />
+                            </td>
+                          </tr>
+                          <tr>
+                          	<td class="tdTit last">证件类型：</td>
+                            <td class="last">
+                                  <select data-role="dropdownlist" style="width:150px;">
+                                       <option>身份证</option>
+                                       <option>护照</option>
+                                  </select>
+                            </td>
+                            <td class="tit last">证件号码：</td>
+                            <td class="last"><input type="text" /></td>
+                            <td rowspan="2">
+                            <label class="editInfo-add"><i></i><em>增加</em></label>
+                            </td>
+                            <td class="last"></td>
+                          </tr>
+                          <tr>
+                          	<td class="tdTit">证件签发地：<div class="twofont">（2字码）</div></td>
+                            <td>
+                                <input type="text" />
+                            </td>
+                            <td class="tit">证件到期日：</td>
+                            <td><input type="text" class="datepicker dpChangeMonthYear" /></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                          	<td class="tdTit last">证件类型：</td>
+                            <td class="last">
+                                  <select data-role="dropdownlist" style="width:150px;">
+                                       <option>身份证</option>
+                                       <option>护照</option>
+                                  </select>
+                            </td>
+                            <td class="tit last">证件号码：</td>
+                            <td class="last"><input type="text" /></td>
+                            <td rowspan="2" class="last">
+                                <label class="editInfo-del"><i></i><em>删除</em></label>
+                            </td>
+                            <td class="last"></td>
+                          </tr>
+                          <tr>
+                          	<td class="tdTit last">证件签发地：<div class="twofont">（2字码）</div></td>
+                            <td class="last">
+                                <input type="text" />
+                            </td>
+                            <td class="tit last">证件到期日：</td>
+                            <td class="last"><input type="text" class="datepicker dpChangeMonthYear" /></td>
+                            <td class="last"></td>
+                          </tr>
+                          </tbody>
+                    </table> 
+                </div>
+                </div>
+                
+                <!-- 常旅卡信息 -->
+                <div class="infoBox">
+                  <div class="infoCon">
+                   <div class="editboxTitle">
+                   	   <b class="editTith3">常旅卡信息</b>
+                   </div>
+                    <table>
+                          <colgroup>
+                               <col width="110px"/>
+                               <col width="300px"/>
+                               <col width="110px"/>
+                               <col width="245px"/>
+                               <col width="370px"/>
+                          </colgroup>
+                          <tbody>
+                              <tr>
+                                <td class="tdTit">航空公司/联盟：</td>
+                                <td>
+                                    <select data-role="dropdownlist" style="width:160px;">
+                                       <option>中国国航</option>
+                                       <option>东方航空</option>
+                                       <option>西方航空</option>
+                                    </select>
+                                </td>
+                                <td class="tdTit">卡号：</td>
+                                <td ><input type="text" style="width:230px;" /></td>
+                                <td><label class="editInfo-add"><i></i><em>增加</em></label></td>
+                              </tr>
+                              <tr>
+                                <td class="tdTit">航空公司/联盟：</td>
+                                <td>
+                                    <select data-role="dropdownlist" style="width:160px;">
+                                       <option>中国国航</option>
+                                       <option>东方航空</option>
+                                       <option>西方航空</option>
+                                    </select>
+                                </td>
+                                <td class="tdTit">卡号：</td>
+                                <td><input type="text" style="width:230px;" /></td>
+                                <td><label class="editInfo-del"><i></i><em>删除</em></label></td>
+                              </tr>
+                          </tbody>
+                    </table> 
+                </div>
+                </div>
+                
+                <!-- 按钮 -->
+                  <div class="editbuttonbox">
+                        <button type="button" class="commonBtn lightRedBtn btnfontStyle" style="margin-right:12px">保  存</button>
+                        <button type="button" class="commonBtn grayBtn btnfontStyle">取 消</button>
+                  </div> 
+        </div>       
+    </section> 
+    
+    <footer class="main-footer">
+        <p class="copyright">Copyright &copy; 2013 天地行 All Rights Reserved.     沪ICP备08101503号</p>
+    </footer>
+</div>
+
+<script type="text/html" id="datepicker-yearSelectTemplate">
+    <div class="datepicker-yearSelectPanel  horizontal-only">
+        <ul>
+            <li data-value="2010">2010</li>
+            <li data-value="2011">2011</li>
+            <li data-value="2012">2012</li>
+            <li data-value="2013">2013</li>
+            <li data-value="2014">2014</li>
+            <li data-value="2015">2015</li>
+            <li data-value="2016">2016</li>
+            <li data-value="2017">2017</li>
+            <li data-value="2018">2018</li>
+            <li data-value="2019">2019</li>
+            <li data-value="2020">2020</li>
+            <li data-value="2021">2021</li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+</script>
+
+<script>
+
+    $(function(){
+
+        $("#ipt_nationality").kendoAutoComplete({
+            dataSource:["新加坡","新西兰","新几内亚"]
+        })
+
+		
+	});
+</script>
+</body>
+</html>

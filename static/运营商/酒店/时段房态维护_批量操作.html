@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>酒店 酒店维护 时段房态维护 批量操作</title>
+    <meta content="text/html" charset="utf-8">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/b2b.css">
+    <link rel="stylesheet" href="/css/kendo.common.css">
+    <link rel="stylesheet" href="/css/kendo.gray.css">
+    <link href="/css/kendo.reset.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/hotel.css">
+    <style type="text/css">
+        .roomStyleName li{float:left;width:130px}
+        .effective_period_listItem{width:168px;height:40px;background:#ECF7FB;border:1px solid #A2CFDE;margin:3px 6px 3px 0;padding:6px;float:left;position:relative}
+    </style>
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+    <style type="text/css">
+        .ul_operation li{height:35px}
+    </style>
+</head>
+<body>
+
+<div style="background:#ffffff">
+    <table>
+    <tr>
+        <td style="text-align:right;width:70px"><span class="head">房型名称：</span></td>
+        <td>
+            <ul class="roomStyleName">
+                <li><label><input type="checkbox">商务标准房</label></li>
+                <li><label><input type="checkbox">商务大床房</label></li>
+                <li><label><input type="checkbox">豪华街景房</label></li>
+                <li><label><input type="checkbox">豪华海景房</label></li>
+                <li><label><input type="checkbox">商务套房</label></li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align:right"><span class="head">操作：</span></td>
+        <td>
+            <ul class="ul_operation">
+                <li style="border-bottom:1px solid #cccccc;padding-bottom:10px;margin-bottom:10px">
+                    <label><input type="radio" name="actionStyle"><span class="head">人工关房</span></label>
+                    <input type="text" style="width:400px" placeholder="输入关房原因...">
+                </li>
+                <li>
+                    <label><input type="radio" name="actionStyle"><span class="head">人工开房</span></label>
+                    <label style="padding:0 10px"><input type="checkbox" name="" id="">Cutoff Day</label>
+                    <select name="" id="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <span style="padding:0 10px" class="txt_l6">*只对人工关房有效</span>
+                </li>
+                <li>
+                    <label><input type="radio" name="" id=""><span class="head">Cutoff Day</span></label>
+                    <select name="" id="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </li>
+                <li>
+                    <label><input type="radio" name="actionStyle"><span class="head">修改库存</span></label><input type="text">
+                    <label style="padding:0 10px"><input type="checkbox" name="" id="">售完房态</label>
+                    <select name="" id="">
+                        <option value="1">请选择</option>
+                        <option value="2">自由售卖</option>
+                        <option value="3">待确认</option>
+                        <option value="3">关房</option>
+                    </select>
+                    <label style="padding:0 10px"><input type="checkbox" name="" id="">Cutoff Day</label>
+                    <select name="" id="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </li>
+                <li>
+                    <label><input type="radio" name="actionStyle"><span class="head">添加库存</span></label><input type="text">
+                    <label style="padding:0 10px"><input type="checkbox" name="" id="">售完房态</label>
+                    <select name="" id="">
+                        <option value="1">请选择</option>
+                        <option value="2">自由售卖</option>
+                        <option value="3">待确认</option>
+                        <option value="3">关房</option>
+                    </select>
+                </li>
+                <li>
+                    <label><input type="radio"><span class="head">售完房态</span></label>
+                    <select name="" id="">
+                        <option value="">请选择</option>
+                    </select>
+                    <span style="color:#CB6532;font-weight:bold">释意：FS：自由售卖；OR：待确认；CL：关房。</span>
+                </li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align:right">
+            <span class="head">时段：</span><br/>
+            <span style="padding-right:15px;font-weight:bold"><span data-bind="text:periods.length"></span>/10</span>
+        </td>
+        <td>
+            <span style="float:left">
+                开始 <input type="text" data-bind="value:startDate" class="datePicker">
+                结束 <input type="text" data-bind="value:endDate" class="datePicker second">
+            </span>
+            <span>
+                <label style="float:left;padding:0 3px 0 15px"><input type="checkbox" data-bind="checked:Mon"><br/>一</label>
+                <label style="float:left;padding:0 3px"><input type="checkbox" data-bind="checked:Tue"><br/>二</label>
+                <label style="float:left;padding:0 3px"><input type="checkbox" data-bind="checked:Wed"><br/>三</label>
+                <label style="float:left;padding:0 3px"><input type="checkbox" data-bind="checked:Thur"><br/>四</label>
+                <label style="float:left;padding:0 3px"><input type="checkbox" data-bind="checked:Fri"><br/>五</label>
+                <label style="float:left;padding:0 3px"><input type="checkbox" data-bind="checked:Sat"><br/><span class="important">六</span></label>
+                <label style="float:left;padding:0 3px"><input type="checkbox" data-bind="checked:Sun"><br/><span class="important">日</span></label>
+                <a class="button_2_2" href="javascript:;" style="margin:0 0 0 30px " data-bind="click:addPeriod">添加</a>
+            </span>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="border-bottom:1px solid #cccccc;height:99px">
+            <div class="periodContainer" data-template="effective_period_list_template" data-bind="source:periods"></div>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <div style="text-align:right;padding-top:10px">
+                <a href="javascript:;" class="button_1_2">保存并关闭</a>
+                <a href="javascript:;" class="button_2_2 close">取&nbsp;消</a>
+            </div>
+        </td>
+    </tr>
+</table>
+</div>
+
+<script id="effective_period_list_template" type="text/x-kendo-template">
+    <div class="effective_period_listItem">
+        <span data-bind="text:startDate"></span> - <span data-bind="text:endDate"></span><br/>
+        <span data-bind="visible:Mon">一</span>
+        <span data-bind="visible:Tue">二</span>
+        <span data-bind="visible:Wed">三</span>
+        <span data-bind="visible:Thur">四</span>
+        <span data-bind="visible:Fri">五</span>
+        <span data-bind="visible:Sat">六</span>
+        <span data-bind="visible:Sun">日</span>
+        <div style="position:absolute;right:5px;top:5px">
+            <a href="javascript:;" data-bind="click:delPeriod"><img src="../../static/images/deleteButton1.gif" alt=""></a>
+        </div>
+    </div>
+</script>
+
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/kendo.web.js"></script>
+<script type="text/javascript" src="/js/scrollFix.js"></script>
+<script type="text/javascript" src="/js/hotel.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        viewModel=kendo.observable({
+            startDate:"",
+            endDate:"",
+            Mon:false,
+            Tue:false,
+            Wed:false,
+            Thur:false,
+            Fri:false,
+            Sat:false,
+            Sun:false,
+            periods:[],
+            addPeriod:function(){
+                this.get("periods").push({
+                    "startDate":this.startDate,
+                    "endDate":this.endDate,
+                    "Mon":this.Mon,
+                    "Tue":this.Tue,
+                    "Wed":this.Wed,
+                    "Thur":this.Thur,
+                    "Fri":this.Fri,
+                    "Sat":this.Sat,
+                    "Sun":this.Sun,
+                    delPeriod:function(e){
+                        var p=this.parent();
+                        p.splice(p.indexOf(this),1);
+                    }
+                });
+                return false;
+            }
+        });
+        kendo.bind($("body"),viewModel);
+    })
+</script>
+</body>
+</html>

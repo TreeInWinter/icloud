@@ -1,0 +1,1434 @@
+@charset "utf-8";
+/* CSS Document */
+
+ul,li{ list-style-type:none;}
+
+.sorttab { position:relative;cursor:pointer;}
+.sorttab i,.sorttab_line2 i {  width:9px; display:inline-block;height:13px;vertical-align:middle; position:relative; right:0; top:0; background:url(../images/store/sort.png) no-repeat 0 0;}
+.sorttab_line2 i {top:-20px;left:27px;}
+.ascend i {background-position: -14px 0;}
+.descend i {background-position: -28px 0;}
+
+
+.separate10 {margin-bottom:10px;}
+
+.flight_search {color:#636363;border-bottom:2px solid #ececec;background-color:#fff;}
+.flight_search .condition li {position:relative;float:left;padding:15px 0px;}
+
+.flight_search .condition .trip_type {padding-top:25px;}
+.flight_search .trip_type strong {color:#646464;font-weight:bold;}
+.flight_search .time_city td {padding:5px 0;}
+.flight_search .time_city{margin-bottom:10px;}
+.flight_search .time_city input {width:180px;height:23px;line-height:23px;font-size:12px;}
+.flight_search .time_city em,.flight_search .trip_type em {color:#ef482d;padding:0 5px;font-size:16px;vertical-align:text-top;}
+.flight_search .muted em {color:#999999;}
+.flight_search .search_history {margin-top:10px;}
+
+.flight_search .internation {padding:20px;border-top:1px dashed #e4e4e4;}
+.flight_search .extra {padding:20px 10px;position:relative;}
+.flight_search .muti_trip .hitext {font-size:20px;}
+.flight_search .muti_trip td {padding:5px 5px;}
+
+.k-ff .flight_search .muti_trip td {display:inline-block;}
+
+
+.flight_number{ background-color:#fff;border:1px solid #e9e9e9; position:relative; color:#646464;}
+
+.flight_result_list{ background-color:#fff;padding:0 10px; border:1px solid #e9e9e9; position:relative; color:#646464; border-top:0;}
+
+.caption{ padding:15px 10px; color:#636363;position:relative;}
+.caption h3{ font-size:14px; font-weight:bold; float:left;}
+.caption p span{ font-size:14px; font-weight:bold;}
+.caption p{ position:absolute;right:10px;bottom:15px; }
+.caption p em{ color:#ff6500; font-weight:bold; font-size:14px;}
+.caption p i{ margin:0 10px 0 20px; color:#e94749;}
+.caption p strong a{ padding:5px 10px; border:1px solid #ccd5de; color:#e94749;}
+.caption h3 span:nth-child(1){
+    margin-top:0;
+}
+.caption h3 span{
+    display:block;
+    margin-top:10px;
+}
+
+
+.number{ border:1px solid #f1f1f1; border-left:0; border-right:0; background:#f8f8f8; color:#404040;}
+.number table{ width:100%;}
+.number td:first-child{ padding-left:10px;}
+.number td{
+    padding:7px 0;
+}
+.number table span,.information span{ position:relative;}
+.number strong{ width:9px; height:5px; display:inline-block; background:url(../images/store/up_down.png) no-repeat right top;}
+.information{  border-bottom:1px solid #eaeaea;}
+.information table{ width:100%;}
+.information td{padding:20px 0;border-bottom:1px dashed #e4e4e4;}
+.information td[rowspan],.information tr:nth-last-child(1) td{border-bottom:0;}
+.information td:first-child{ padding-left:10px;}
+.information div{ line-height:20px;}
+.information i.flight_abundant{
+    padding-right:27px;
+}
+.information i.flight_lack{ color:#e94749; background:url(../images/store/lack.png) 100% 50% no-repeat;padding-right:27px;}
+.information .greaterThan{ color:#45b32e; font-family: 宋体;}
+.information big{ color:#ff6500; font-size:12px;}
+.information strong{ color:#ff6500; font-size:13px; font-weight:bold;}
+.information .widen td{ padding:20px 5px;}
+.information .transfer{ position:relative;}
+.information .transfer strong{ position:absolute; top:22%; left:110%; cursor:pointer;}
+.information table code{ width:16px; height:16px; margin:3px 5px 0 0; display:inline-block; background:url(../images/store/aviation.jpg) no-repeat left center;}
+.more-cabin,.more-cabin:hover{ position:relative; color:#636363; text-decoration:none; padding:4px 10px 0 10px; display:inline-block; vertical-align:middle;}
+.more-cabin i{ width:9px; height:8px; display:inline-block;background:url(../images/store/up_down.png) no-repeat right -5px; vertical-align:middle; margin-left:2px;}
+.more-cabin b{font-weight:normal;}
+/*.information span strong,.route td small{ width:14px; height:14px; display:inline-block; background:url(../images/store/smallPicture.png) no-repeat 0 -58px; cursor:pointer;}*/
+.darkOrange,.wayPoint{padding: 0 1px;text-align:center; cursor:default; color:#cf6b00; padding-bottom:3px; border-bottom:1px dashed #cf6b00;}
+.information cite{ height:16px; display:inline-block; background:url(../images/store/smiling.png) no-repeat right center; padding-right:18px; vertical-align:middle;}
+.information:hover,.international:hover{ background:#fff6f0;}
+.information.last{ border-bottom:0;}
+.information.international.solid_bom{ border-bottom:1px solid #e4e4e4;}
+
+.dashed{ border:1px dashed #e4e4e4; border-left:0; border-right:0;}
+.dashed_top,.dashed_top td{ border-top:1px dashed #e4e4e4;}
+.bor_bom td { border-bottom:1px solid #e4e4e4 !important;}
+.location{ width:448px; position:absolute; top:373px; left:595px;}
+.location_1{ width:448px; position:absolute; top:317px; left:790px;}
+.floating{ height:auto; background:#fff; border:1px solid #a8a8a8; position:relative; color:#636363;box-shadow:0px 0px 0px 3px #e2e2e2}
+.floating i{ width:11px; display:inline-block; position:absolute; background:url(../images/store/upward.png) no-repeat center center; top:-9px; left:50%;}
+.floating_title{ width:100%; border-bottom:1px solid #ccc;}
+.floating_title td{ font-weight:bold; padding:10px 0;}
+.floating_title td:first-child{ padding-left:7px;}
+.floating p{ line-height:22px;}
+.aviation{ padding:12px 0px; margin:0 7px; border-bottom:1px dashed #ccc;}
+.aviation td{ height:20px;}
+.half_dashed{ border-bottom:1px dashed #e4e4e4;}
+
+.time{ border:1px solid #e9e9e9; margin:0px auto; border-bottom:0; color:#646464;background-color:#fff;}
+.date{ width:100%; height:auto; border-bottom:2px solid #f1634c; margin:0;}
+.date li{ float:left; border-right:1px solid #e9e9e9; line-height:20px; background:#f8f8f8;}
+.date li a{ width:129px; padding:10px 0px; display:inline-block; text-align:center;}
+.date li a:hover{ text-decoration:none;}
+.date li em{ color:#ff6500; font-weight:bold; font-size:15px;font-family:arial;}
+
+.flight_prev_arrow i{ }
+.flight_next_arrow i{ }
+
+.date .flight_arrow{
+    width:33px;
+    height:61px;
+    padding:0;
+}
+.flight_arrow:hover{
+    background-image:none;
+}
+.flight_arrow{
+    background:#fff url(../images/store/flnavarrow.png) 0 bottom repeat-x;
+}
+.flight_arrow i{
+    margin-top:20px;
+width:11px; height:19px; display:inline-block; background:url(../images/store/arrows.png) no-repeat 0 0;
+}
+.flight_prev_arrow i{
+    background-position:0 -19px;
+}
+.flight_next_arrow i{
+    background-position:-16px 0;
+}
+.flight_prev_arrow.disabled i{
+    background-position:0 0;
+}
+.flight_next_arrow.disabled i{
+    background-position:-16px -19px;
+}
+.flight_arrow.disabled{
+    background:#fff url(../images/store/flnavarrow.png) 0 bottom repeat-x !important;
+}
+
+.date .last_li:hover{ background:#fdfdfd;}
+.date li b{ font-weight:500; margin-left:3px;}
+.date .current{ border-top:2px solid #f1634c; border-left:1px solid #f1634c; border-right:1px solid #f1634c; border-bottom:2px solid #fff; margin:-1px 0 -3px -1px; background:#fff;}
+.company{ line-height:20px; padding:10px;}
+.company input{ border:0; vertical-align:middle; margin-right:5px;}
+.company label{ margin-right:10px;}
+.company b{ width:75px; display:inline-block;}
+.company span{ margin-left:20px; font-weight:bold;}
+.light_pink{ background:#f8f8f8;}
+.light_pink td {border-bottom:1px dashed #e4e4e4;}
+.first_up {background-color:#ffffff;}
+.first_up td {border-bottom:1px solid #e4e4e4;}
+.bor_top{ border-top:1px solid #e4e4e4;}
+
+.selected{ width:960px; color:#666666; padding:10px; border:1px solid #e4e4e4; margin-bottom:10px; background:#fbfbfb;}
+.selected h3{ width:100%; font-weight:bold; font-size:13px; padding-bottom:10px; border-bottom:1px dashed #e4e4e4;}
+.selected_tab{ margin-top:10px;}
+.selected_tab td{ line-height:23px;}
+.selected_tab td b{ font-weight:bold; color:#404040;}
+.selected_tab td em{  color:#ff6500; font-weight:bold;}
+.selected_tab em s{
+    font-size:18px;
+}
+.obtain{ text-decoration:underline;}
+
+.fruitless{ padding:70px 0; border:1px solid #e1e1e1; color:#636363; background:#fff;}
+.write{ width:280px; height:auto; margin:0 auto;}
+.villain{ width:76px; height:86px; display:inline-block; float:left; background:url(../images/store/villain.png) no-repeat left center; margin-bottom:50px;}
+.hint{ float:left; margin-left:20px;}
+.hint p{ line-height:27px; font-size:14px;}
+.hint div{ vertical-align:middle; color:#f0482d; font-size:22px; font-weight:bold; line-height::20px; padding-left:25px; background:url(../images/store/telephone.png) no-repeat left center; margin-top:10px;}
+.write_btn{ float:left; margin:20px 0 0 20px;}
+.write_btn a{ font-size:14px;}
+
+.flow{ padding:10px 10px 0 10px;}
+.flow h3{ padding:10px 0 10px 10px; font-size:14px; color:#797979; font-weight:bold; background:url(../images/store/leftarrows.png) no-repeat left center; float:left;}
+.flow ul{ float:right; border-bottom:2px solid #e1e1e1; padding-right:20px; position:relative;}
+.flow ul li{ float:left; margin-right:90px; padding:10px 0; font-size:14px; font-weight:bold; color:#c8c8c8;}
+.flow .current_li{ color:#4bae10;}
+.flow ul .line { border-top: 2px solid #4bae10; bottom: -6px; height: 4px; left: 0; position: absolute; width: 100%;}
+.departure{ height:auto; padding:10px 10px 0 10px; border: 1px solid #e1e1e1; margin:10px 0; color:#636363; background:#fff;}
+.chief{ border-bottom:1px solid #e1e1e1; padding-top:10px;}
+.chief h3{ width:10%; font-size:14px; font-weight:bold; color:#f1634c; border-bottom:1px solid #f1634c; padding:0 0 10px 5px; margin-bottom:-1px;}
+.chiefTit{ float:left;}
+.look{ float:right; vertical-align:middle; color:#636363; text-decoration:underline;}
+.route{ width:100%; margin-top:10px;}
+.route th,.fare th{ background:#f8f8f8; border-bottom:1px solid #e4e4e4; padding:13px 0; color:#404040;}
+.route th:first-child,.route td:first-child,.departure .traveller tr td:first-child{ padding-left:10px;}
+.route td,.fare td{ padding:15px 0; line-height:22px;}
+.route a{ text-decoration:none;}
+.route input{ border:0; vertical-align:middle; margin-right:3px;}
+.routex td{
+   border-bottom:1px dotted #e4e4e4; 
+}
+.routex tr.disabled td{
+   color:#a3a3a3; 
+}
+.departure .traveller td{ padding:10px 0;}
+.aviation_icon{ display:inline-block; padding-left:20px; background:url(../images/store/aviation.jpg) no-repeat left top;}
+.quote{ position: relative; padding:0 0px 10px 0px; border:1px solid #e1e1e1; color:#636363; background:#fff;}
+.quote .message_ul{ width:100%; background:#f8f8f8; border-bottom:1px solid #e1e1e1;}
+.message_ul li{ float:left; padding:10px 0px; font-size:14px; font-weight:bold; color:#636363;}
+.message_ul li a{ display:inline-block;}
+.message_li{ background:#fff; border-top:2px solid #f1634c; margin-top:-1px; border-right:1px solid #e1e1e1; border-bottom:1px solid #fff; margin-bottom:-1px; border-left:1px solid #e1e1e1;}
+.message_ul .message_li:first-child{border-left:0;}
+.message_li a{ color:#f1634c;}
+.message_ul li em{ padding-right:15px; font-weight:bold; margin-left:15px; border-right:1px solid #e1e1e1; margin-right:-1px;}
+.message_ul a:hover{ text-decoration:none;}
+.fare{ margin:0 10px; margin-top:10px; width:98%;}
+.fare tr {cursor:pointer;}
+.fare td em{ color:#ff6500;}
+.fare td b{  font-size:12px;}
+.fare td:first-child,.fare th:first-child{ padding-left:5px;}
+.fare input{ border:0; vertical-align:middle;}
+.rule{ padding:15px 0px; color:#636363; margin:0 10px;}
+.rule h3{ font-size:14px; font-weight:bold; margin-bottom:7px;}
+.rule p{ line-height:22px;}
+.rule b{ font-weight:bold;}
+.rule span{ font-weight:bold; color:#e94749;}
+.remark{ width:600px; height:100px; margin:15px 0 10px 10px;}
+.accounts{ padding:20px 20px 20px 10px; text-align:right; background:#fee7d5; color:#000000; border:1px solid #f2d7c1; filter:alpha(opacity=90); opacity:0.9; width:948px;}
+.accounts a{ font-size:14px; margin-left:20px;}
+.accounts em{ color:#ff6500; margin:0 5px;}
+.accounts i{ font-size:16px;}
+.accounts b{ font-size:18px; color:#ff6500;}
+.save{ padding:20px 10px 10px 0;}
+.save em{ color:#ff6500;}
+.save label{ margin-left:20px;}
+.save label input{ border:0; vertical-align:middle; margin-right:5px;}
+
+.constant{ margin:15px 10px 12px 0px;}
+.user{ width:auto; float:left;}
+.user p{ padding:13px; background:#fafadb; border:1px solid #dcc791;}
+.user p span{ color:#ff6500; font-weight:bold;}
+.delete{ width:9px; height:9px; display:inline-block; background:url(../images/store/sign.png) no-repeat left center;}
+.deleteInfo{ margin-right:3px;}
+.addInfo{ color:#cf6b00;}
+.addInfo:hover{ color:#f1634c;}
+.add{ width:10px; height:10px; display:inline-block; background:url(../images/store/sign.png) no-repeat -14px 0;}
+.case input{ height:22px; line-height:22px; vertical-align:middle; border:1px solid #abadb3;}
+.case select{ height:24px; vertical-align:middle; color:#636363;}
+.del{ padding:12px 0 12px 10px;}
+.fillout{ padding:10px; margin:0 10px 10px 0px;}
+.fillout h3{ font-size:14px; font-weight:bold; margin-bottom:5px;}
+.fillout p{ line-height:22px;}
+.distance{ padding:0 2px;}
+
+.retreat{ position:absolute; top:745px; left:432px;}
+.floating .retreat_i{ width:11px; display:inline-block; position:absolute; background:url(../images/store/upward.png) no-repeat center center; top:-9px; left:93%;}
+
+.pack_up,.pack_up:hover{ position:relative; color:#636363; text-decoration:none; padding:4px 10px 0 18px; display:inline-block; vertical-align:middle;}
+.pack_up i,.more-cabin.expanded i{ width:9px; height:7px; display:inline-block;background:url(../images/store/up_down.png) no-repeat right 0px; vertical-align:middle; margin-left:2px;}
+.first_up td{ padding:20px 0;}
+
+/*询价单*/
+.k_place{ border:1px solid #e1e1e1; color:#797979; background:#fff;}
+.k_place h2{ padding:10px; font-size:14px; font-weight:bold; border-bottom:1px solid #e1e1e1; background:#f8f8f8;}
+.important{color:#ef482d}
+.mes_h3{ border-bottom:1px solid #e1e1e1;}
+.mes_h3 h3{ width:10%; padding:10px; font-size:14px; font-weight:bold; color:#f1634c; border-bottom:1px solid #f1634c; margin-bottom:-1px;}
+.hldfgx{border-bottom:1px dashed #e4e4e4;position:relative;margin:20px 0}
+.hldfgx div{position:absolute;top:-7px;left:100px;width:40px;background:#fff;text-align:center}
+.mes_tab input[type=text]{height:23px;line-height:23px}
+.mes_tab td{padding:8px 0}
+.mes_tab td.td_head{text-align:right;vertical-align:middle}
+.apply_message,.contacts,.businessDesc{padding:10px 20px}
+.message_content,.contacts_content,.businessDesc_content{padding:10px 20px}
+.phone{background:url('../images/store/i6.png')no-repeat;width:17px;height:16px;display:inline-block;vertical-align:middle;margin:-4px 4px 0 0}
+/*询价单*/
+
+
+/*白屏弹窗*/
+.audit{ padding:0 10px 20px; color:#636363;}
+.audit_tab{ width:auto; height:auto;}
+.audit_tab td{ height:40px;}
+.audit_tab td:first-child{ text-align:right; padding-right:3px;}
+.audit_input{ height:20px; width:265px; line-height:20px; padding-left:3px;}
+.audit label{ margin-right:20px;}
+.audit a{ font-size:14px;}
+.audit_tab textarea{ width:265px; height:60px; padding:3px;}
+.audit_last td{ padding:10px 0;}
+.audit_last td:first-child{ vertical-align:top;}
+.abolish{ font-size:12px; margin-left:30px; vertical-align:middle; text-decoration:underline;}
+/*白屏弹窗*/
+
+
+/* 国际订单详情-正常 */
+
+.position{ margin:15px 0 10px 0;}
+.pos_ul{ margin-left:10px;}
+.pos_ul li{ float:left; margin-right:5px;}
+.pos_btn{ float:right; margin-right:20px;}
+.pos_btn a{ margin-left:5px;}
+.order{ color:#636363; border:1px solid #e4e4e4; background:#fff;}
+.order_list{ width:100%;}
+.order_list td,.order_list th{ padding:10px 0;}
+.order_list td:first-child,.order_list th:first-child{ padding-left:10px;}
+.order_list th{ border-bottom:1px solid #e4e4e4; background:#f8f8f8; color:#404040;}
+.order_list a{ color:#cf6b00;}
+.order_list em{ color:#f1634c;}
+.order_list td{ border-bottom:1px solid #e4e4e4;}
+.order_trace{ margin:10px 0;}
+.trace{ width:10%; font-weight:bold; float:left; padding:10px 0 0 10px;}
+.trace_list{ width:88%; float:left;}
+.trace_list th,.trace_list td{ padding:10px 0;}
+.trace_list th:first-child,.trace_list td:first-child{ padding-left:15px;}
+.trace_list th{ border-bottom:1px dashed #e4e4e4; color:#404040;}
+.examine{ background:#fff7f1;}
+.write_note{ margin:15px 0; line-height:22px;}
+.trace_list a{ text-decoration:underline;}
+
+/* 国际订单详情-正常 */
+
+
+/* 酒店订单详情 */
+
+.description{ padding:15px 10px; border-top:1px dashed #e4e4e4;}
+.description p{ line-height:22px;}
+.cost{ width:100%; margin-top:10px; text-align:center; border:1px solid #fff;}
+.cost th{ background:#f8f8f8; border-bottom:1px solid #e4e4e4; padding:13px 0; color:#404040; text-align:center; border-left:1px solid #e4e4e4;}
+.cost td:first-child,.cost tr th:first-child,.contactgegevens td:first-child,.contactgegevens th:first-child{ padding-left:10px;}
+.cost td{ padding:10px 0; border:1px dashed #e4e4e4;}
+.contactgegevens{ width:100%; margin-top:10px;}
+.contactgegevens th{ background:#f8f8f8; border-bottom:1px solid #e4e4e4; padding:13px 0; color:#404040;}
+.contactgegevens td{ padding:13px 0;}
+.stipulate{ margin:15px 0;}
+.stipulate p{ width:85%; line-height:22px;}
+.stipulate p b{ width:100px; display:inline-block; text-align:right;}
+.stipulate div{ width:70%; line-height:22px; margin:15px 0 0 100px;}
+
+/* 酒店订单详情 */
+
+.successful{ margin:130px 0 0; color:#636363; text-align:center;}
+.successful h3{ font-size:14px; font-weight:bold; line-height:36px;}
+.successful h3 em{ width:36px; height:36px; display:inline-block; background:url(../images/store/succeed.png) no-repeat left center; vertical-align:middle;}
+.successful div{ margin:15px 0;}
+.successful ul{ margin-left:447px;}
+.successful ul li{ float:left; margin-right:20px;}
+.successful ul li a{ text-decoration:underline;}
+
+
+.psr_files b{
+    float:left;
+    margin-left:-60px;
+    font-weight:normal;
+    padding:8px 0;
+}
+.psr_files {
+    margin-left:10px;
+    padding-left: 55px;
+    padding-top:20px;
+}
+.psr_files a{
+    display:block;
+    float:left;
+    width:190px;
+    padding:8px;
+    background-color:#f8f8f8;
+    border:1px solid #e7e7e7;
+    margin-left:15px;
+    margin-bottom:10px;
+}
+.psr_files a:hover{
+    text-decoration:none;
+    background-color:#fff7f2;
+    color:#cf6b00;
+    border:1px solid #f2d7c4;
+}
+
+.ngrade{ width:auto; margin-bottom:3px; position:relative;}
+.ngrade span{ background:#ff7400; color:#fff; display:inline-block; padding:0 3px;}
+.ngrade div{ background:url(../images/store/cw.gif) no-repeat; display:inline-block; width:3px; height:2px; position:absolute; top:20px; left:25%;}
+
+.pascer{ height:auto; margin-top:20px;}
+.pascer div{ float:left; min-width:70px; line-height:27px;}
+.pascer ul{ float:left; width:90%;}
+.pascer ul li{ float:left; margin:0 20px 10px 0;}
+.pascer ul li a{ min-width:180px; padding:6px 5px; color:#6c6c6c; display:inline-block; border:1px solid #ececec; background:#f8f8f8;}
+.pascer ul li a:hover{ color:#ac7d4a; text-decoration:none; background:#fff8f2; border:1px solid #eadfd6;}
+
+.fare .ora{ color:#636363; font-size:14px;}
+.fare .ora em{ font-weight:bold; color:#ff6500;}
+
+
+.intiback{ color:#636363;}
+.stipulateCon{ width:290px; padding:5px 8px; border:1px solid #dcc791; background:#fafadb; line-height:20px; position:absolute; top:22px; right:22px;}
+.intiback th{ text-align:right; font-weight:bold;}
+.intiback .unFold,.intiback .packUp{ color:#cf6b00; margin-left:30px; cursor:pointer;}
+.intiExplain{ width:200px; line-height:20px;}
+.intiExplain i,.gn-title-tip i{ background:url(../images/store/smallPicture.png) no-repeat 0 -58px; width:14px; height:14px; display:inline-block; margin-left:-15px; margin-right:3px; vertical-align:middle;}
+.intiType label{ margin-left:25px;}
+.intiType label:first-child{ margin-left:0;}
+.intiType label input{ border:0; vertical-align:middle;}
+.required{ color:#ff0000; font-size:14px; font-weight:bold; vertical-align:middle; margin:0 3px 0 0;}
+.choiceDiv{ color:#636363; width:890px;}
+.choiceTitle{ width:125px; text-align:right; font-weight:bold; color:#636363; margin-bottom:5px; margin-top:10px;}
+.choiceTab{ width:100%;}
+.choiceTab thead th{ background:#f8f8f8; border-bottom:1px solid #e4e4e4; padding:8px 5px; color:#404040;}
+.choiceTab tbody td{ border-bottom:1px dashed #e4e4e4; padding:8px 5px; line-height:20px;}
+.choiceTab input[type="text"]{ height:23px; padding-left:5px; margin-bottom:3px;}
+.reftic{ color:#636363; margin-top:10px;}
+.reftic td{ line-height:35px;}
+.reftic th,.subtab th{ text-align:right; font-weight:bold;}
+.reftic td select{ height:24px; color:#636363;}
+.subtab{ color:#636363; margin-top:15px;}
+.subtab textarea{ width:600px; height:100px;}
+.subtabCancel{ margin-left:20px; color:#636363; text-decoration:underline; vertical-align:middle;}
+.intiMes{ margin-bottom:10px;}
+.intiMes th{ font-weight:bold; text-align:right;}
+.intiMes td{ padding:10px 5px;}
+.intiMes .intiMesTab{ margin-top:0;}
+.intiMes .intiMesTab th{ font-weight:500; text-align:left;}
+.intiMes .intiMesTab td{ border-bottom:1px dashed #e4e4e4;}
+.ticketmes{padding:12px 5px 5px;}
+.nofloat{ padding:0; margin:0;}
+.nofloat a{ margin-left:0; margin-right:15px; vertical-align:middle; margin-bottom:0;}
+.flexible{ float:right; vertical-align:middle; margin-bottom:-4px; cursor:pointer; margin-right:15px;}
+.flexible em{ color:#f1634c;}
+.flexible em i{ margin-left:15px; width:9px; height:6px; display:inline-block; vertical-align:middle;}
+.upArrow{ background:url(../images/store/up_down.png) no-repeat 0 0;}
+.downArrow{ background:url(../images/store/up_down.png) no-repeat 0 -7px;}
+.marem { color:#636363; margin-top:0; margin-bottom:15px;}
+.departure .marem em{ margin:0 5px 0 0;}
+.marem strong{ font-weight:bold;}
+
+
+
+
+.gn-title-tip{
+    color:#636363;
+    font-size:12px;
+    margin-left:20px;
+    position:relative;
+    cursor:pointer;
+    padding-bottom:3px;
+}
+
+.gn-title-tip:hover .gn-tip-div{
+    display:block;
+}
+.gn-tip-div{
+    cursor:default;
+    color:#636363;
+    line-height:23px;
+    padding:10px 20px;
+    position:absolute;
+    z-index:3;
+    left:-126px;
+    top:17px;
+    white-space:nowrap;
+    display:none;
+}
+.gn-tip-div .arrow_north{
+    left: 117px;
+}
+
+.sailType label{ margin-right:20px;}
+.sailType label input{ border:0; margin-right:2px; vertical-align:middle;}
+
+.orTitle{ background:#f8f8f8; border-bottom:1px solid #e1e1e1; font-size:16px; font-weight:bold; color:#797979; position:relative;}
+.orTitle a{ float:left; font-weight:bold; line-height:39px; padding-right:30px; border-right:1px solid #e1e1e1; color:#797979; text-decoration:none;}
+.orTitle a em{ display:inline-block; width:5px; height:7px; background:url(../images/store/leftarrows.png) no-repeat; margin:0 5px 0 10px; vertical-align:middle;}
+.upProcess{ float:left; position:absolute; left:18%;}
+.upProcess li{ float:left; margin-left:40px; vertical-align:middle; line-height:39px;}
+.upProcess li i{display:block;position:relative;width:16px;height:16px;float:left;top:11px;text-indent:-1000em; font-style:italic; margin-right:8px;background:url(../images/store/step_num.png) no-repeat left top;}
+.upProcess i.hightlight {background-position: -16px 0;}
+.upProcess i.unable {background-position: -32px 0;}
+.upProcess .untanned{ color:#c8c8c8;}
+
+.currentFlow{ color:#4bae10;}
+.upProcess li em{ display:inline-block; width:22px; height:39px; background:url(../images/store/store_login.png) no-repeat 0 -328px; margin-left:50px;}
+.endorseOrder{ border:1px solid #e1e1e1; border-bottom:0; margin-top:10px; color:#404040; width:100%; margin-bottom:-10px; position:relative; background:#fff;}
+.endorseOrder th{ font-weight:500; text-align:left; padding:15px 5px 10px;}
+.endorseOrder th:first-child{ padding-left:10px;}
+.endorseOrder td:first-child{ padding-left:15px;}
+.endorseOrder td{ padding:5px 5px 10px;}
+.orderNo {position:relative;z-index:2;}
+.orderNO b{ font-size:14px;}
+.orderNO strong{ font-weight:bold; font-size:13px;}
+.relevanceOr{position:relative;cursor:pointer;left:50px;top:-1px;}
+.relevanceOr i{ color:#f1634c;}
+.relevanceOr em{ display:inline-block; width:7px; height:4px; background:url(../images/store/arrow_down.png) no-repeat; vertical-align:middle;}
+.endorsing{ font-size:14px; color:#f1634c;}
+.adultOrder{ text-decoration:none; color:#cf6b00;}
+.passTicket{ border:1px solid #e1e1e1; border-collapse:collapse; margin-bottom:10px; width:100%; color:#404040;}
+.passTicket td{ padding:15px 10px;}
+.passTicket th{ background:#f8f8f8; padding:15px 10px; border-bottom:1px solid #e1e1e1; font-weight:bold;}
+.accountRec{ text-align:right;}
+.accountRec strong{ font-size:14px;}
+.accountRec em{ font-size:14px; color:#ff6500;}
+.copy{ color:#cf6b00; margin-left:20px; font-weight:500;}
+.passTicket .noborder th{ border-bottom:0;}
+.remarkTex{ width:600px; height:100px; margin:15px 0 20px;}
+.accountInfo{width:960px; background:#eaeaea; border:1px solid #e1e1e1; border-top:0; padding:15px 10px; margin-top:-10px;}
+.accountTit{ margin-bottom:10px;}
+.accountTit h3{ float:left; font-size:14px; color:#f1634c; font-weight:bold;}
+.acTotal{ float:right; color:#404040;}
+.acTotal em{ font-size:16px;}
+.acTotal strong{ font-size:16px; color:#ff6500; font-weight:bold;}
+.operateBtn{ text-align:right;}
+.operateBtn a{ margin-left:15px;}
+.printOrdBtn:hover{ text-decoration:none; color:#636363; background:#fdfdfd;}
+.printOrdBtn{ display:inline-block; padding:0 20px; height:30px; line-height:30px; border:1px solid #bbbbbb; vertical-align:middle; background:url(../images/store/bgcolor.jpg) repeat-x; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; color:#636363;}
+.listTit h3{ float:left;}
+.titleRi{ float:left; margin:10px 0 0 15px;}
+.titleRi i{ background:url(../images/store/smallPicture.png) no-repeat 0 -58px; width:14px; height:14px; display:inline-block; margin-left:-15px; margin-right:3px; vertical-align:middle;}
+.chHint{ color:#8d8d8d;}
+.titleRi label{ margin-left:15px;}
+.titleRi label input{ border:0; margin-right:2px;}
+.reOrder{ border:1px solid #e1e1e1; padding:12px; width:375px; color:#404040; position:absolute; top:278px; left:560px; background:#ffffff;}
+.reTi{ padding-bottom:10px; border-bottom:1px dashed #e1e1e1;}
+.reNO{ float:left;}
+.reNO b{ font-size:14px;}
+.reNO strong{ font-size:13px; font-weight:bold;}
+.re_order{ float:right;}
+.re_order em{ display:inline-block; width:9px; height:5px; background:url(../images/store/up_down.png) no-repeat 0 0; vertical-align:middle;}
+.re_order i{ color:#f1634c;}
+.rawOrd{ padding:7px 10px; border-bottom:1px dashed #e1e1e1;}
+.rawNum{ float:left; font-size:14px;}
+.ordNum{ float:right; font-size:14px; color:#ff6500; font-weight:bold;}
+.orderSta{ margin-top:10px;}
+.orderSta li{padding:0 0 20px 12px; position:relative;}
+.sta{ color:#f1634c; margin-left:20px;}
+.staList{ background:#f0f0f0; padding:10px; margin-top:7px;}
+.staList td{ line-height:20px;}
+.staList a,.rawNum a{ color:#cf6b00;}
+.staList a:hover,.rawNum a:hover{ color:#f1634c;}
+.weight{ font-size:14px; font-weight:bold; color:#ff6500;}
+.signOrd{ display:block; width:7px; height:100%; background:url(../images/store/smallsign.png) no-repeat left top; position:absolute; left:0; top:5px; z-index:1;}
+.signOrd em{ border-left:1px solid #e1e1e1; position:absolute; left:3px; top:7px; width:1px; height:100%; display:block; z-index:0;}
+.currentSta{ border:1px solid #f1634c; background:#f0f0f0;}
+.currentSta:hover{ background:#f0f0f0;}
+.toLead{ display:inline-block; padding:0 10px; background:url(../images/store/bgcolor.jpg) repeat-x; height:25px; line-height:25px; border:1px solid #e1e1e1;}
+
+.fico{
+    position:relative;
+}
+.fico .code_share {
+    position:absolute;
+    top: 20px;
+    left:5px;
+    font-size:16px;
+    color:red;
+}
+
+
+.remarkCont td{ padding-top:0;}
+.currentTr .fontWeight{ font-size:14px; font-weight:bold;}
+.currentTr .fontWeight b{ font-size:14px;}
+.beizhu{ padding:8px 10px; background:#fafadb; color:#636363; border:1px solid #dcc791; width:870px;}
+.beizhu b{ float:left; display:block; min-width:8%;}
+.beizhu div{ float:left; line-height:20px; width:92%;}
+
+.orangeChar{ color:#ff6500;}
+.shouInfo{ color:#636363; margin:10px 0 20px;}
+
+.explainContent{ border:1px solid #e1e1e1; padding:0 12px; color:#666666; background:#fff;}
+.explainTitle{ font-size:20px; font-weight:bold; padding:20px 0; text-align:center; border-bottom:1px solid #e1e1e1;}
+.explainTitle em{ display:inline-block; background:url(../images/store/store_login.png) no-repeat -27px -328px; width:20px; height:20px; vertical-align:middle; margin-right:5px;}
+.explainDetails{ line-height:22px; word-break: break-all; word-wrap:break-word; margin-bottom:20px; margin-left:10px;}
+.explainList{ margin:20px 0 0 20px;}
+.explainList li{ list-style-type:decimal;}
+
+.wayPointContent{ background:#fff; border-collapse:collapse; border:1px solid #a8a8a8; color:#636363; box-shadow:0px 0px 0px 3px #e2e2e2}
+.wayPointContent th,.wayPointContent td{ padding:10px; border-bottom:1px solid #a8a8a8;}
+.wayPointContent th{ font-weight:bold;}
+
+
+.negative_indent{
+    text-indent:-30px;
+}
+.flight_time{
+    font-weight:bold;
+    font-size:18px;
+    margin-right:3px;
+}
+.percent{
+    font-weight:bold;
+    font-size:16px;
+}
+.percent s{
+    font-weight:normal;
+}
+.percent u{
+    font-size:13px;
+    font-family:arial;
+} 
+.money u{
+    font-family:arial;
+}
+.price{
+    color:#ff6500;
+    font-weight:bold;
+    font-size:20px;
+}
+.price u{
+    font-size:13px;
+    font-family:arial;
+}
+.information div{
+}
+.limited_length{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.flight_type{
+    text-align:center;
+    margin: 0 10px;
+    cursor:default;
+    position:relative;
+}
+
+.flight_type em{
+    border-bottom:1px solid #aaa;
+    position:absolute;
+    left:0;right:0;
+    top:50%;
+}
+.flight_type_orange{
+    color:#cf6b00;
+    border-bottom:1px dashed #cf6b00;
+}
+.flight_type_exist s{
+    padding:1px 3px;
+    background-color:#f8f8f8;
+    position:relative;
+}
+.flight_type_exist u{
+    padding:1px 3px;
+    background-color:#fff;
+    border:1px solid #c6c6c6;
+}
+.flight_type_exist{
+}
+.information{
+
+}
+.flight_ticket{
+    /* font-family:'simsun' */
+}
+.condition_topleft{
+    padding:0 30px!important;
+    margin-top:20px;
+}
+.condition_topleft label{
+    display:block;
+    margin-bottom:20px;
+}
+.condition_topright{
+    width:840px;
+    margin-top:10px;
+    margin-bottom:10px;
+    position:relative;
+    border-left:1px solid #e9e9e9;
+    padding:0 0 0 30px!important;
+}
+.condition_topright .brightRed_btn{
+    position:absolute;
+    right:30px;
+    top:20px;
+    font-size:14px;
+}
+.flight_dropdownlist_group td{
+    padding-right:16px;
+}
+.disabled_input{
+    background-color:#fbfbfb!important;
+    border-color:#e6e6e6!important;
+}
+.condition_chosen{
+    border-top:1px solid #e9e9e9;
+    padding:15px 25px;
+    padding-bottom:5px;
+    min-height:28px;
+}
+.chosen_empty{
+    float:right;
+    cursor:pointer;
+}
+.chosen_items{
+    vertical-align: top;
+    width: 715px;
+    display: inline-block;
+    margin-left:43px;
+    margin-top:-10px;
+}
+.chosen_item{
+    display: inline-block;
+    border:1px solid #abadb3;
+    padding:3px 0 4px 6px;
+    margin-right:10px;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+.chosen_item:hover{
+    color:#fff;
+    border-color:#ff6500;
+    background-color:#ff6500;
+}
+.chosen_item:hover .chosen_delete{
+    color:#fff;
+}
+
+.chosen_delete{
+    color:#f00;
+    font-size:16px;
+    vertical-align:middle;
+    margin:0 5px;
+    cursor:pointer;
+}
+.muti_trip_lines td{
+    padding-top:20px !important;
+    position:relative;
+}
+.line_num_tr{
+    position:absolute;
+    top:0;
+}
+.line_num_tr .index_num{
+    font-size:16px !important;
+    /* font-family:simsun */
+}
+
+/*******************
+ * 国内机票搜索结果
+ */
+.flight_filter{
+    padding:10px 0;
+    margin:0 10px;
+    border-top:1px dotted #e4e4e4;
+    min-height:28px;
+}
+.filter_item .sorttab{
+    background-color:#f8f8f8;
+    border:1px solid #c1c1c1;
+    padding:4px 7px;
+    margin-right:6px;
+}
+.flight_filter  .chosen_items{
+    margin-left:1px;
+    width:800px;
+}
+.center_text{
+    text-align:center;
+    margin: 0 10px;
+}
+.flight_result_list  .percent{
+    color:#ff6500;
+    font-size:16px;
+}
+.flight_number .number{
+    padding: 0 10px;
+}
+.flight_number .information{
+    margin:0 10px;
+}
+.flight_result_list .information:hover{
+    background:none;
+}
+.flight_result_list .information{
+    border-bottom:0;
+}
+.flight_result_list .fico{
+    margin-left:10px;
+}
+.flight_result_list .tgq{
+}
+
+.flight_result_list .information td{
+    padding:15px 0;
+}
+.information_detail tr:hover{
+    background-color:#fff6f0;
+}
+.information_detail td:nth-child(1){
+    text-align:right;
+    padding-right:30px;
+}
+.more_cabin_item{display:none;}
+.information_header{
+    margin-top:-1px;
+    background-color:#f8f8f8;
+    border-top:1px solid #e4e4e4;
+}
+.cell_name{
+    color:#999;
+    margin-right:10px;
+}
+.flight_dropdownlist_group .hyper-text{
+    border:1px solid #bbb;
+    box-shadow:none;
+    left:-1px;
+    min-width:100%;
+    top:30px;
+    padding:5px 0;
+}
+.flight_dropdownlist_group .hyper-link{
+    border:1px solid #bbb;
+    display:block;
+    height:24px;
+    line-height:24px;
+    width:120px;
+    padding-right:0;
+}
+.flight_dropdownlist_group .hyper-text a,.hyper-plainlist label{
+    padding:5px 10px;
+    display:block;
+}
+.flight_dropdownlist_group .hyper-text a:hover,.hyper-plainlist label:hover{
+    color:#6d6d6d;
+    background-color:#F2F2F2;
+}
+
+.hyper-plainlist{
+    overflow:hidden;
+}
+
+.hyper-plainlist [type="radio"]{
+    position:absolute;
+    left:-100px;
+}
+
+.flight_dropdownlist_group .arrow-down{
+    top:10px;
+    right:10px;
+}
+.flight_dropdownlist_group u{
+    display:block;
+    text-indent:10px;
+}
+
+.flight_dropdownlist_group .hyper-airline{
+    width: 300px;
+}
+
+.flight_dropdownlist_group .hyper-link:hover u{
+    padding-bottom:7px;
+    background-color:#fff;
+    border-left:1px solid #bbb;
+    border-right:1px solid #bbb;
+    width:100%;
+    margin-left:-1px;
+}
+.hyper-airline li{
+    float:left;
+    width:80px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    padding:3px 10px;
+}
+
+.delivery-table th{
+    font-weight:normal;
+}
+.delivery-table{
+    margin:10px 0 10px 20px;
+}
+.delivery-table select{
+    height:25px;
+    vertical-align:middle;
+    font-size:12px;
+    color:#444;
+}
+.delivery-table .item{
+    margin-right:15px;
+}
+.delivery-table em{
+    margin-right:5px;
+}
+
+/*流程样式 */
+.instr{
+    overflow:hidden;
+    margin:0 10px;
+}
+.instr span{
+    position:relative;
+    z-index:1;    
+	padding-bottom:20px;
+    display:block;
+    float:left;
+    background:url(../images/store/flowDot.png) 50% 25px no-repeat;
+    margin-right:10px;
+	min-width:100px;
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+	color:#b9b9b9;
+}
+.instr .first{
+    margin-left:0;
+}
+.instr .last{
+    margin-right:0;
+}
+.instr span.highlight-fl{
+    background-image:url(../images/order_r5_c12.png);
+    background-position:50% 105%;
+    color:#f60;
+}
+.travel-instr span.highlight-fl{
+    background: url(../images/hotel_order_status_dot_ing.gif) no-repeat 40% 13%;
+}
+.instr span.highlight-fe{
+    background-image:url(../images/order_r5_c123.png);
+    background-position:50% 0;
+    color:#f10;
+}
+.instr span.highlight{
+    background-position:50% 25px;
+    background-image:url(../images/store/flowdeepDot.png);	
+    color:#797979;
+}
+.instr{
+    position:relative;
+}
+.instr .line{
+    position:absolute;
+    display:block;
+    height:2px;
+    border-bottom: 2px dotted #e6e6e6;
+    bottom:6px;
+    z-index:0;
+    margin-left:-5px;
+}
+.instr .line div{
+    background-color:#c1c1c1;
+    height:2px;
+	margin-top:2px;
+}
+
+.airPlace .transferTime{ width:90px; display:inline-block; text-align:center; cursor:pointer; vertical-align:middle; position:relative;}
+.airPlace .transferTime .transferNumber{ border-bottom:1px dashed #cf6b00; color:#cf6b00;}
+.airPlace .weightFont{ font-size:16px; display:inline-block; width:100px; text-align:center; vertical-align:middle;}
+.airLogo{ background:url(../images/store/aviation.jpg) no-repeat; width:16px; height:16px; vertical-align:middle; display:inline-block; margin-right:5px;}
+.practicalTips{ display:inline-block; cursor:pointer; vertical-align:middle; margin-left:20px; border-bottom:1px dashed #cf6b00; color:#cf6b00;}
+
+/*浮层提示样式*/
+.tooltipsContent .tooltipsArrow {
+	position:absolute;
+	top:-5px;
+	left:50%;
+	background:url(../images/store/messge_direct_gray.png) no-repeat 0 -20px;
+	width:9px;
+	height:5px;
+}
+.tooltipsContent { 
+    color:#636363; 
+	border:1px solid #a8a8a8; 
+	background:#fff; 
+	padding:10px 12px; 
+	position:relative;
+}
+.tooltipsContent div{ line-height:23px;}
+
+.offerInfoTab{ margin:10px 0; width:100%;}
+.offerInfoTab thead th{ background:#f8f8f8; height:40px; line-height:40px;}
+.offerInfoTab tbody td{ padding:12px 0; font-size:14px;}
+.offerInfoTab .pnrA{ background:#fafafa; border:1px solid #e7e7e7; padding:3px 5px; font-size:12px;}
+.offerInfoTab .orangeFont{ color:#ff6500; font-size:20px;}
+.offerInfoTab .bigFont{ font-size:16px;}
+.offerInfoTab .weightFont{ font-size:16px;}
+.typeTips{ position:relative; display:inline-block; text-align:center;}
+.typeTips .typeContent{ background:#ffe8e8; height:40px; line-height:40px; min-width:50px; font-size:14px; color:#f6a095; display:inline-block;}
+.typeTips .typeTipsIcon{ background:url(../images/store/iconSprite.png) no-repeat -39px 0; display:inline-block; width:5px; height:10px; position:absolute; top:40%; right:-10%;}
+
+.flexibleType{ width:140px; height: 25px; margin: 0 auto; border: 1px solid #e1e1e1; top: -1px; z-index: 2; line-height: 25px; cursor: pointer; background:url(../images/store/doubleUp.png) no-repeat 90px center #fbfbfb; margin-bottom:-2px; text-align:center;}
+.flexibleType.down{ background:url(../images/store/doubleDown.png) no-repeat 90px center; color:#f1634c;}
+.tipsTab thead th{ font-weight:bold; border-bottom:1px solid #d2d2d2; padding:7px 2px;}
+.tipsTab tbody td{ border-top:1px dashed #d2d2d2; padding:7px 2px;}
+.pnrCoding{ text-align:center; color:#898989; margin-top:5px;}
+.pnrCoding .lightGrayFont{ color:#636363;}
+.remarkInfo .remarkDiv{ background:#fafadb; border:1px solid #dcc791; padding:10px; font-size:12px; margin-top:-10px;}
+.remarkInfo .remarkDiv h5{ font-weight:bold;}
+.remarkInfo .remarkDiv p{ line-height:20px; margin:7px 0;}
+
+.flight_filter .chosen_text{ float:left;}
+.flight_filter .chosen_items{ width:85%; float:left;}
+.flight_filter .chosen_items .chosen_item{ white-space:nowrap; margin-bottom:7px; display:inline-block;}
+
+
+/*特价机票*/
+.bargain_ticket {
+	padding: 0 0 10px 0px;
+	border: 1px solid #e8e8e8;
+    color: #636363;
+	background: #fff;
+}
+.ticketType_ul {
+	width: 100%;
+	background: #f8f8f8;
+    border-bottom: 1px solid #e1e1e1;
+}
+.ticketType_ul li {
+	float: left;
+	padding: 10px 0px;
+    font-size: 16px;
+	color: #787878;
+	font-weight:bold;
+}
+.ticketType_ul li a {
+	display: inline-block;
+}
+.ticketType_ul .currentState {
+	background: #fff;
+	border-top: 2px solid #f1634c;
+    margin-top: -1px;
+	border-right: 1px solid #e1e1e1;
+	border-bottom: 1px solid #fff;
+	margin-bottom: -1px;
+	border-left: 1px solid #e1e1e1;
+}
+.ticketType_ul .ticketType_li:first-child {
+	border-left: 0;
+}
+.ticketType_li a {
+	color: #f1634c;
+}
+.ticketType_ul li em {
+	padding-right: 15px;
+	font-weight: bold;
+	margin-left: 15px;
+}
+.ticketType_ul a:hover {
+	text-decoration: none;
+}
+
+/*创建订单的常旅客*/
+.constant #ffc_title{ background:none #EF633D;}
+.k-ie7 .constant #ffc_title,.k-ie7 #travellerListTitle { width:158px;}
+.k-ie7 .travellerLocation{ width:168px;} 
+.constant #ffc_input_new{border:0;text-indent:0;width:148px;padding:0 15px 0 5px;outline:none;background:url("../images/order_r8_c5.png") no-repeat center right 8px #fff;height:30px;line-height:30px;}
+#travellerListTitle{background:url(../images/store/orangeBgDownArrow.png) no-repeat 90% 50% #ececec;color:#666666;padding:0 5px;height:30px;line-height:30px; border-top:1px solid #e1e1e1;}
+#travellerListTitle.expanded{background-image:url(../images/store/orangeBgUpArrow.png)}
+#travellerListTitle label {display:block;cursor:pointer; width:158px;}
+.travellerListCont{ position:absolute; z-index:20; background:#fff;margin-left:-1px;border:1px solid #ef633d; border-top:0;}
+#travellerList{ width:168px; overflow-y:auto; overflow-x:hidden;height:310px;}
+#travellerList li{ border-top:1px solid #e1e1e1; display:block; padding:0px 5px 0px 10px;height:30px;line-height:30px;}
+#travellerList li label{ display:block;white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+.travellerLocation{ position:relative; z-index:0;border:1px solid #ef633d;}
+
+.airlineInfo { 
+    margin:0 10px; 
+	margin-top:10px; 
+	width:98%;
+	position:relative;
+}
+.airlineInfo th {
+	padding:15px 0;
+	background:#f8f8f8;
+}
+.airlineInfo td {
+	padding:12px 0;
+}
+.airlineInfo tr:hover {
+	background:#fff6f0;
+}
+.airlineInfo .firstTh, .airlineInfo .firstTd {
+	padding-left:20px;
+}
+.airlineInfo .fontStyle-size16 {
+	font-size:16px;
+}
+.airlineInfo .fontStyle-size14 {
+	font-size:14px;
+}
+.airlineInfo .fontStyle-size12 {
+	font-size:12px;
+}
+.airlineInfo .fontStyle-orange {
+	color:#ff6500;
+    font-weight: bold;
+}
+.airlineInfo .fontStyle-lightgray {
+	color:#939393;
+}
+.airlineInfo .endorse {
+	color:#cf6b00;
+	padding-bottom:2px;
+	border-bottom:1px dashed #cf6b00;
+}
+.airlineInfo .endorse a {
+	color:#cf6b00;
+}
+.airlineInfo .entrepot {
+	color:#cf6b00;
+	font-size:12px;
+}
+.entrepotPlace {
+	position:absolute;
+	top:-16px;
+	left:-8%;
+	color:#cf6b00;
+	font-size:12px;
+	width:50px;
+}
+.airlineInfo .flight_plan {
+	background:url(../images/store/icon_warnBlue.png) no-repeat 0 0;
+	width:16px;
+	height:16px;
+	display:inline-block;
+	vertical-align:middle;
+	cursor:pointer;
+}
+.airlineInfo .seatType {
+	background:url(../images/store/rec_bg.png) no-repeat 0 0;
+	width:37px;
+	height:20px;
+	display:inline-block;
+	margin:0 0 0 5px;
+}
+.airlineInfo .seatType em {
+	color:#fff;
+	padding:0 0 0 8px;
+	line-height:20px;
+}
+.airlineInfo .flight_goBack {
+	background:url(../images/store/flight_wf.png) no-repeat 0 0;
+	width:20px;
+	height:8px;
+	display:inline-block;
+	margin:0 3px;
+		position:relative;
+
+}
+/*特价机票 浮层*/
+.floatLayer{ padding:5px 10px; background:#fff;}
+.floatLayer p{ line-height:20px;}
+
+
+
+.constant #ffc_title.expand {
+      background-image: none;
+}
+
+.airInfoTitle{position:relative;}
+.airInfoTitle code{ display:inline-block; vertical-align:middle; width:26px; height:16px; padding-left:0;text-align:center; position:absolute;left:0px; top:0px;}
+.airInfoName{display:inline-block; font-size:12px; margin:0 3px 0 28px;}
+.cabinType{ display:inline-block;}
+/*.airDuration em{ display:inline-block; width:16px; height:17px; background:url(../images/b2g/smallImg.png) -177px 0; margin-right:5px; vertical-align:middle;}*/
+.airLeftLine{ position:absolute; display:block; width:2px; height:83%; border-left:2px solid #ddd; left:7px; top:3px;}
+.airInfoCont{ position:relative;}
+.takeOffArrive{ padding:5px 0 10px 0; margin-left:0px;}
+.takeOffArrive p { padding:0 0 5px 0; color:#888;}
+.tranTime{ margin-left:110px; padding-bottom:20px; position:relative;}
+.tranImg{ display:inline-block; width:17px; height:18px; background:url(../images/store/icon_entrepot.png) no-repeat 0 0; vertical-align:middle; position:absolute; left:-31px; top:0px;}
+
+.entrepotCont{ position:relative;}
+.entrepotCont .airLeftLine{ position:absolute; display:block; width:2px; height:11px; border-left:2px solid #ddd; left:7px; top:-13px;}
+
+.tran_air{ min-width:330px; display:inline-block;}
+.tran_air em{ color:#f94037;}
+/*.stopTime em{ display:inline-block; width:16px; height:17px; background:url(../images/b2g/smallImg.png) -86px -21px; margin-right:5px; vertical-align:middle;}*/
+.flightLogo{ background:url(../images/airline_logo.png) no-repeat 0 -422px; width:28px; height:28px; vertical-align:middle; display:inline-block;}
+.specialBg{ background:#f9f9f9;}
+.airInfoList .resestDistance{ margin-left:30px;}
+
+.goBlock {
+	float:left;
+	border-right:1px dashed #d5d5d5;
+	margin:0 20px 0 0;
+}
+.gobackBlockTit {
+	font-size:14px;
+	font-weight:bold;
+	clear:both;
+	padding:5px 0 10px 0;
+}
+.backBlock {
+	float:left;
+}
+
+/*layer Gray*/
+.layerGrayBlock {
+	border:3px solid #e2e2e2;
+	background:#fff;
+}
+.layerGrayContainer {
+	border:1px solid #a8a8a8;
+	padding:5px 12px; 
+	color:#636363;
+	position:relative;
+}
+.k-tooltip-dir-n .layerGrayArrow,
+.shadow_box .k-callout-n{
+    /*TOP arrow*/
+    position:absolute;
+	top:-5px;
+	left:50%;
+	background:url(../images/store/layerGrayArrow.png) no-repeat 0 0;
+	width:9px;
+	height:5px;
+}
+
+.k-tooltip-dir-s .layerGrayArrow,
+.shadow_box .k-callout-s{
+    /*BOTTOM arrow*/
+    position:absolute;
+	bottom:-5px;
+	left:50%;
+	background:url(../images/store/layerGrayArrow.png) no-repeat 0 -6px;
+	width:9px;
+	height:5px;
+}
+
+.shadow_box .k-callout-n{/*TOP arrow*/
+    margin-top:1px;
+}
+.shadow_box .k-callout-s{/*BOTTOM arrow*/
+    margin-bottom:1px;
+}
+.shadow_box .k-loading-image{
+    height: 40px;
+    width: 40px;
+    left:50%;
+    margin-left:-20px;
+    background: url(../images/store/mini_loading.gif) no-repeat 50% 50%;
+}
+.shadow_box .k-loading-mask{
+    background:#fff;
+    border:1px solid #a8a8a8;
+}
+
+.orangeRedFont{ color:#f1634c;}
+.grayTabTitle{ margin:10px 0;}
+.grayTabTitle thead th{ background:#f8f8f8; height:40px; line-height:40px; padding:0 5px;}
+.grayTabTitle tbody td{ padding:12px 5px; line-height:20px;}
+.grayTabTitle tbody td:first-child,.grayTabTitle thead th:first-child{ padding-left:10px;}
+
+.loadData {
+	color:#636363;
+	font-weight:bold;
+	padding:10px 0;
+	text-align:center;
+}
+
+.inquiryListStatus{ margin:0 0 10px 0;}
+.inquiryListStatus td{ line-height:20px; padding:5px;}
+.inquiryListStatus .statusColor{ color:#ff6633; font-size:18px;}
+.inquiryListStatus .orderNumber{ font-size:22px; font-weight:bold;}
+
+/*反馈信息*/
+.feedbackInfo{
+    padding:28px 50px;
+    min-height:100px;
+	max-height:260px;
+    overflow: auto;
+	margin:10px 0;
+}
+.feedbackInfo .answer,.feedbackInfo .question{
+    background: url("../images/store/answer_top.png") right top no-repeat;
+    text-align: right;
+    padding-top: 10px;
+}
+.feedbackInfo .answer span,.feedbackInfo .question span{
+    background: url("../images/store/answer_bottom.png") right bottom no-repeat;
+    display: inline-block;
+    width: 460px;
+    text-align: left;
+    line-height: 1.5;
+    padding:5px 10px 23px 10px;
+    word-break: break-all;
+}
+.feedbackInfo .question{
+    background: url("../images/store/question_top.png") left top no-repeat;
+    text-align: left;
+}
+.feedbackInfo .question span{
+    background: url("../images/store/question_bottom.png") right bottom no-repeat;
+}
+.feedbackInfo .answerInfo{
+    text-align: right;
+    padding:5px 0 10px;
+}
+.feedbackInfo .questionInfo{
+    text-align: left;
+    padding:5px 0 10px;
+}
+.feedbackInfo .name{
+    color: #666666;
+    padding-right: 15px;
+}
+.feedbackInfo .dateTime{
+    color: #999999;
+    padding-right: 15px;
+}
+
+
+.airInfoFirstTab,.airWayTab,.linkManInfo{ margin:10px 0; width:100%;}
+.airInfoFirstTab td{ padding:15px 5px; border-bottom:1px dashed #cccccc;}
+.airWayTab td,.linkManInfo td{ padding:10px 5px;}
+.departure .distance td{ padding:5px;}
+.airWayTab .nthNumber{ color:#ff3333; font-size:16px;}
+.airWayTab .addressName{ font-size:16px; font-weight:bold;}
+.airWayTab .arrowRight{ vertical-align:top;}
+.priceTab .smallFont{ font-size:12px; line-height:20px;}
+.priceTab tbody td:first-child,.priceTab thead th:first-child{ padding-left:5px;}
+.ac-feedbackBtn{ margin:0 20px; text-decoration:underline;}
+.feedbackContent textarea{ width:370px; height:110px; overflow:auto; padding:5px 3px;}
+.feedbackContent .feebackSubmit{text-align:center; margin:15px auto 0 auto;}
+.grayBgBtn{ min-width:85px; text-align:center; height:35px; line-height:35px; border:1px solid #cccccc; background:url(../images/store/grayBtnBg.jpg) repeat-x; display:inline-block; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px; color:#666666; font-size:14px;}
+.grayBgBtn:hover{ background:#ffffff; text-decoration:none;}
+
+.transferTime .bgLine{ border-bottom:1px solid #a5a5a5; height:1px; display:inline-block; position:absolute; top:50%; right:0; width:97%;}
+.transferTime .stoppingBox{ padding:0 3px; position:relative; background:#fff; display:inline-block;}
+.transferTime .stoppingBox u{ padding:2px 4px; border:1px solid #c6c6c6; background:#fff; vertical-align:middle;}
+.airPlace .noHand{ cursor:default;}
+.k-ie7 .transferTime .bgLine{ top:37%;}
+.k-ie7 .transferTime .stoppingBox{ padding:1px 3px; text-align:center;}
+
+
+
+
+
+
+
+.loading_price{
+	margin-bottom: 10px;
+	color:#666;
+	padding: 30px 0;
+	border: 1px solid #e1e1e1;
+	background-color:#fff;
+}
+.loading_price p{
+	padding: 10px 0;
+	text-align:center;
+}
+.loading_price .text1{
+	font-size:14px;
+}
+.loading_price .icon-loading{
+	display: inline-block;
+	margin-right: 10px;
+	vertical-align: middle;
+	width: 32px;
+	height: 17px;
+	background: url(../images/store/mini_loading.gif) 0 -10px no-repeat;
+}
+.loading_price .btn-cancel{
+	cursor: pointer;
+	padding: 6px 12px;
+	border:1px solid #bbb;
+	background:#fff url(../images/store/bgcolor.jpg) repeat-x;
+}
+.loading_price .btn-cancel:hover{
+	background-image:none;
+}
+.loading_price .icon-ban{
+	background: url(../images/store/warn24.png) no-repeat;
+	width: 24px;
+	height: 24px;
+	vertical-align:middle;
+	display:inline-block;
+	margin-right: 5px;
+}
+.messagebar .icon-ban2{
+	background: url(../images/store/icon_warn.png) no-repeat;
+	width: 16px;
+	height: 16px;
+	vertical-align:middle;
+	display:inline-block;
+	margin-right: 5px;
+}
+.loading_price .row{
+	width: 256px;
+	margin:0 auto;
+}
+.loading_price .row2{
+	padding-left: 60px;
+}
+.messagebar{
+	left: 390px;
+	top: 4px;
+	border:1px solid #d49d0f;
+	background-color:#fafadb;
+	padding: 5px;
+	position: absolute;
+}
+
+
+.titleFont{ padding:10px 0;}
+.offerInfoTab .bottomSolid td{ border-bottom:1px solid #e1e1e1;}
+.tabComm{ width:98%; margin-left:20px;}
+.tabComm td{ padding:5px;}
+.departure .lastTab{ margin-bottom:10px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

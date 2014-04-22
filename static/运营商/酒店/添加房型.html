@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html" charset="utf-8">
+    <title>酒店 酒店维护 添加房型</title>
+
+    <link rel="stylesheet" href="/static/js/uploadify/uploadify.css">
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/b2b.css">
+    <link rel="stylesheet" href="/static/css/kendo.common.css">
+    <link rel="stylesheet" href="/static/css/kendo.gray.css">
+<link href="/static/css/kendo.reset.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/hotel.css">
+    <style type="text/css">
+        .roomFacilities li{float:left;width:110px}
+        .btnUpload{
+            border-radius:0;
+            border: 0;
+            width:120px;
+            height:34px;
+        }
+        #SWFUpload_0{left:0;top:0}
+    </style>
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<!-- @CLB@ -->
+</head>
+<body style="background:#ffffff;min-width:0">
+<div class="addroomtype">
+    <form method="get" action="">
+    
+        <table class="tbform tbl_head_right">
+            <colgroup>
+                <col width="80">
+            </colgroup>
+            <tr>
+                <th><span class="important">*</span>房间名称：</th>
+                <td colspan="3">
+                    <input type="text" name="roomtypename" style="width:280px"/>
+                </td>
+                <th>
+                    入住人数：
+                </th>
+                <td style="vertical-align: middle">
+                    <select><option>1</option></select>人
+                </td>
+            </tr>
+            <tr>
+                <th>套内面积：</th>
+                <td>
+                    <input type="text" class="stext" name="innerSquare" value="0" style="width:50px"/> 平米
+                </td>
+                <th>
+                    楼层：
+                </th>
+                <td>
+                    <span>
+                        <input class="stext" type="text" name="floorNum" value="1" style="width:50px"/> -
+                        <input class="stext" type="text" name="floorNum" value="1" style="width:50px"/> 层
+                    </span>
+                </td>
+                <th>
+                    窗户：
+                </th>
+                <td style="vertical-align: middle">
+                    <select name="" id="">
+                        <option value="0">-</option>
+                        <option value="1">1</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th><span class="important">*</span>房屋床型：</th>
+                <td colspan="5">
+                    <label><input id="" type="radio" name="bednumber" checked="checked" />大床/双床</label>
+                    <label><input id="" type="radio" name="bednumber" />大床</label>
+                    <label><input id="" type="radio" name="bednumber" />双床</label>
+                    <label><input id="" type="radio" name="bednumber" />单人床</label>
+                    <label><input id="" type="radio" name="bednumber" />三床</label>
+                    <label><input id="" type="radio" name="bednumber" />四床</label>
+                    <label><input id="" type="radio" name="bednumber" />套房</label>
+                    <select name="" id="">
+                        <option value="">床数</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>房型尺寸：</th>
+                <td colspan="5">
+                    <select name="bedsize" id="sel_bedSize1">
+                        <option value="选择尺寸" selected="">选择尺寸</option>
+                        <option value="110cm*200cm">110cm*200cm</option>
+                        <option value="120cm*200cm">120cm*200cm</option>
+                        <option value="130cm*200cm">130cm*200cm</option>
+                        <option value="135cm*200cm">135cm*200cm</option>
+                        <option value="140cm*200cm">140cm*200cm</option>
+                        <option value="150cm*200cm">150cm*200cm</option>
+                        <option value="160cm*200cm">160cm*200cm</option>
+                        <option value="180cm*200cm">180cm*200cm</option>
+                        <option value="180cm*210cm">180cm*210cm</option>
+                        <option value="200cm*200cm">200cm*200cm</option>
+                        <option value="220cm*220cm">220cm*220cm</option>
+                    </select>
+                    <select name="bedsize" id="sel_bedSize2">
+                        <option value="选择尺寸" selected="">选择尺寸</option>
+                        <option value="110cm*200cm">110cm*200cm</option>
+                        <option value="120cm*200cm">120cm*200cm</option>
+                        <option value="130cm*200cm">130cm*200cm</option>
+                        <option value="135cm*200cm">135cm*200cm</option>
+                        <option value="140cm*200cm">140cm*200cm</option>
+                        <option value="150cm*200cm">150cm*200cm</option>
+                        <option value="160cm*200cm">160cm*200cm</option>
+                        <option value="180cm*200cm">180cm*200cm</option>
+                        <option value="180cm*210cm">180cm*210cm</option>
+                        <option value="200cm*200cm">200cm*200cm</option>
+                        <option value="220cm*220cm">220cm*220cm</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th style="vertical-align: top;padding-top: 5px;"><span class="important">*</span>房间设施：</th>
+                <td colspan="5">
+                    <ul class="roomFacilities">
+                        <li><label><input type="checkbox" name="facility" />无窗</label></li>
+                        <li><label><input type="checkbox" name="facility" />可安排无烟楼层</label></li>
+                        <li><label><input type="checkbox" name="facility" />有无烟房</label></li>
+                        <li><label><input type="checkbox" name="facility" />可无烟处理</label></li>
+                        <li><label><input type="checkbox" name="facility" />空调</label></li>
+                        <li><label><input type="checkbox" name="facility" />保险箱</label></li>
+                        <li><label><input type="checkbox" name="facility" />有线宽度</label></li>
+                        <li><label><input type="checkbox" name="facility" />无线宽带WIFI</label></li>
+                        <li><label><input type="checkbox" name="facility" />免费市话</label></li>
+                        <li><label><input type="checkbox" name="facility" />电子钥匙</label></li>
+                        <li><label><input type="checkbox" name="facility" />书桌</label></li>
+                        <li><label><input type="checkbox" name="facility" />冰箱</label></li>
+                        <li><label><input type="checkbox" name="facility" />婴儿床</label></li>
+                        <li><label><input type="checkbox" name="facility" />电水壶</label></li>
+                        <li><label><input type="checkbox" name="facility" />酒柜</label></li>
+                        <li><label><input type="checkbox" name="facility" />吹风机</label></li>
+                        <li><label><input type="checkbox" name="facility" />淋浴</label></li>
+                        <li><label><input type="checkbox" name="facility" />浴室电话</label></li>
+                        <li><label><input type="checkbox" name="facility" />电视</label></li>
+                        <li><label><input type="checkbox" name="facility" />电话</label></li>
+                        <li><label><input type="checkbox" name="facility" />报纸</label></li>
+                        <li><label><input type="checkbox" name="facility" />两瓶免费矿泉水</label></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="6" style="text-align: left;padding-left:5px;">房型照片：4/5</th>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <div id="queue">
+                        <div style="width:134px;height:109px;text-align:center;background:#EBEBEB;margin:5px;float:left">
+                            <div style="padding-top:40px">
+                                <p style="padding-left:7px"><input type="file" id="btn_upload" name="btn_upload" multiple="true"></p>
+                            </div>
+                        </div>
+
+                        <div class="uploadedRoomPic">
+                            <p>
+                                <img src="/static/images/roomTypePic_small.gif" width="127" height="80" alt="">
+                            </p>
+                            <input type="text" name="" id="" placeholder="请输入标题"/>
+                            <em class="close"></em>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th style="vertical-align: top;padding-top: 5px;">房型备注：</th>
+                <td colspan="5">
+                    <textarea name="remark" style="width:530px;height: 60px;" placeholder="如有更多房型介绍请备注此处，如开间数量等..."></textarea>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div style="text-align:right">
+    <a href="javascript:;" class="button_1_2">保&nbsp;存</a>
+    <a href="javascript:;" class="button_2_2 close">取&nbsp;消</a>
+</div>
+<script type="text/javascript" src="/static/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/static/js/uploadify/jquery.uploadify.min.js"></script>
+<script type="text/javascript" src="/static/js/kendo.web.js"></script>
+
+<script type="text/x-kendo-template" id="picTemplate">
+    <div class="uploadedRoomPic">
+        <p>
+            <img src="#= name #" alt="">
+        </p>
+        <input type="text" name="" id="" placeholder="请输入标题"/>
+        <em class="close"></em>
+    </div>
+</script>
+
+<script type="text/javascript">
+    $(function(){
+        $("a.close").click(function(){
+            window.parent.$("span.k-i-close").trigger("click")
+        })
+        $(":radio[name=bednumber]").change(function(){
+            if($(this).parent().text()!="大床/双床")
+            {
+                $("#sel_bedSize2").hide();
+            }
+            else
+            {
+                $("#sel_bedSize2").show();
+            }
+        })
+    });
+</script>
+<script type="text/javascript">
+    $(function(){
+        var picTemplate=kendo.template($("#picTemplate").html());
+        $("#btn_upload").uploadify({
+            buttonImage   : '/static/images/btnUpload.gif',
+            button_image_url :'/static/images/btnUpload.gif',
+            height        : 34,
+            buttonClass   : 'btnUpload',
+            uploader      : 'test.html',
+            swf           : '/static/js/uploadify/uploadify.swf',
+            queueID       : 'queue',
+            removeTimeout :0,
+            itemTemplate  : '<div id="${fileID}" class="uploadify-queue-item" style="float:left;width:134px;height:109px;background:#EBEBEB;padding:0;margin:5px">\
+								<div class="uploadify-progress" style="margin-top:49px">\
+									<div class="uploadify-progress-bar" style="height:20px "></div>\
+                                </div>\
+                            </div>',
+        onUploadSuccess:function(file,data,response){$("#queue").append(picTemplate({name:"15145042443.png"}))},
+        onUploadError:function(file,errorCode,errorMsg,errorString){alert(errorString);}
+    });
+    })
+</script>
+</body>
+</html>

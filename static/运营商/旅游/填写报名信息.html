@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>运营商 信息发布 旅游 填写报名信息</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.gray.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.reset.css" rel="stylesheet" type="text/css" /> <!--弹窗CSS-->
+    <link href="../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/kendo.reset.css" rel="stylesheet" />
+    <link href="../../static/css/travel.css" rel="stylesheet" type="text/css"/>
+    <script src="../../static/js/jquery.min.js" type="text/javascript"></script>
+    
+    <script src="../../static/js/kendo.web.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/static/js/scrollFix.js"></script>
+    <script type="text/javascript" src="../../static/js/public.js"></script>
+
+   <!-- <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript">
+$(function(){
+    new Collpase({
+        limitHeight:140,
+        container:'.xyzc_div' 
+    }).init();
+}) 
+    </script>-->
+<script src="../../static/js/hotel.js" type="text/javascript"></script> <!--弹窗JS--> 
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body>
+    <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">&nbsp;</a>
+                <span>&nbsp;</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent" style="overflow:hidden;">
+			<!-- start content -->
+        
+            <div class="topFixedToolsBar">
+                <div style="float:left;border-right:1px solid #ffffff">
+                    <a href="#" style="display:inline-block;line-height:33px;font-size: 14px;font-weight: bold;border-right: 1px solid #CDCECE;padding: 0 8px;">返回</a>
+                </div>                        
+                <div class="fixedMenu" style="font-weight:bold; width:auto;">
+                    <span>预订报名</span>
+                </div>                
+                <!--<div class="fixedButton">
+                    <a class="button_secondary adaptiveButton small" href="javascript:;">
+                        <span class="left"></span>
+                        <span class="center center_1">取 消</span>
+                        <span class="right"></span>
+                    </a>
+                    <a class="button_secondary adaptiveButton small" href="javascript:;">
+                        <span class="left"></span>
+                        <span class="center center_1">保 存</span>
+                        <span class="right"></span>
+                    </a>
+                </div>  -->              
+            </div>
+            
+            <div class="enroll">  <!--enroll start-->
+                 <div class="mass">
+                     <b>美国东西海岸14日团队游(3钻)·7成四星酒店</b>
+                     <span>行程天数：6天</span>
+                     <em>团号：BM-130908-001</em>
+                 </div>
+                 <div class="write">  <!--write start-->
+                     <div>填写报名信息：</div>
+                     <div class="tourist">  <!--tourist start-->
+                          <div class="tourist_mes">
+                               <b>游客信息</b>
+                               <a href="#">新增</a>
+                          </div>
+                          <div class="traveller"> <!--traveller strat-->
+                                <div class="basic_info">  <!--basic_info start-->
+                                      <div class="newly"> <!--newly start-->
+                                           <div class="del">
+                                               <em>第1位游客</em>
+                                               <a href="#">删除</a>
+                                           </div>
+                                           
+                                           <table class="newly_list">
+                                                <colgroup>
+                                                     <col width="85px"/>
+                                                     <col width="220px"/>
+                                                     <col width="72px"/>
+                                                </colgroup>
+                                                <tr>
+                                                    <td><em> * </em>中文姓名：</td>
+                                                    <td><input type="text" value="中文名" /></td>
+                                                    <td><em> * </em>拼音：</td>
+                                                    <td><input type="text" value="中文名的拼音" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><em> * </em>证件类型：</td>
+                                                    <td>
+                                                        <select style="width:100px;">
+                                                             <option>护照</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><em> * </em>护照号码：</td>
+                                                    <td><input type="text" value="G23364650" /></td>
+                                                </tr>
+                                           </table>
+                                           <div class="newly_div">
+                                               <table class="newly_list">
+                                                        <colgroup>
+                                                             <col width="85px"/>
+                                                             <col width="220px"/>
+                                                             <col width="72px"/>
+                                                        </colgroup>                                                        
+                                                        <tr>
+                                                            <td>护照有效期：</td>
+                                                            <td>
+                                                                <select style="width:50px;">
+                                                                     <option>11</option>
+                                                                </select>
+                                                                <select style="width:50px;">
+                                                                     <option>JAN</option>
+                                                                     <option>FEB</option>
+                                                                     <option>MAR</option>
+                                                                     <option>APR</option>
+                                                                     <option>MAY</option>
+                                                                     <option selected="">JUN</option>
+                                                                     <option>JUL</option>
+                                                                     <option>AUG</option>
+                                                                     <option>SEP</option>
+                                                                     <option>OCT</option>
+                                                                     <option>NAV</option>
+                                                                     <option>DEC</option>
+                                                                </select>
+                                                                <select style="width:50px;">
+                                                                     <option>50</option>
+                                                                     <option>51</option>
+                                                                     <option>52</option>
+                                                                     <option>…</option>
+                                                                     <option>75</option>
+                                                                     <option>76</option>
+                                                                     <option>77</option>
+                                                                     <option>78</option>
+                                                                     <option>79</option>
+                                                                     <option>80</option>
+                                                                     <option>81</option>
+                                                                     <option>82</option>
+                                                                     <option>…</option>
+                                                                     <option>99</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>签发日期：</td>
+                                                            <td>
+                                                                <select style="width:50px;">
+                                                                     <option>11</option>
+                                                                </select>
+                                                                <select style="width:50px;">
+                                                                     <option>JAN</option>
+                                                                     <option>FEB</option>
+                                                                     <option>MAR</option>
+                                                                     <option>APR</option>
+                                                                     <option>MAY</option>
+                                                                     <option>JUN</option>
+                                                                     <option>JUL</option>
+                                                                     <option selected="">AUG</option>
+                                                                     <option>SEP</option>
+                                                                     <option>OCT</option>
+                                                                     <option>NAV</option>
+                                                                     <option>DEC</option>
+                                                                </select>
+                                                                <select style="width:50px;">
+                                                                     <option>50</option>
+                                                                     <option>51</option>
+                                                                     <option>52</option>
+                                                                     <option>…</option>
+                                                                     <option>75</option>
+                                                                     <option>76</option>
+                                                                     <option>77</option>
+                                                                     <option>78</option>
+                                                                     <option>79</option>
+                                                                     <option>80</option>
+                                                                     <option>81</option>
+                                                                     <option>82</option>
+                                                                     <option>…</option>
+                                                                     <option>99</option>
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>签发地：</td>
+                                                            <td><input type="text" value="上海" /></td>
+                                                            <td>签证国别：</td>
+                                                            <td>
+                                                                <select style="width:100px;">
+                                                                     <option>美签</option>
+                                                                     <option>加签</option>
+                                                                     <option>美签 加签</option>
+                                                                     <option>其它</option>
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>有无签证：</td>
+                                                            <td><select style="width:100px;">
+                                                                     <option>美签自备</option>
+                                                                     <option>加签自备</option>
+                                                                     <option>美签 加签自备</option>
+                                                                     <option selected="">无签证</option>
+                                                                </select></td>
+                                                            <td>国籍：</td>
+                                                            <td>
+                                                               <input type="text" value="中国" /> 
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>出生地：</td>
+                                                            <td><input type="text" value="上海" /></td>
+                                                            <td>出生日期：</td>
+                                                            <td>
+                                                                <select style="width:50px;">
+                                                                     <option>11</option>
+                                                                </select>
+                                                                <select style="width:50px;">
+                                                                     <option>JAN</option>
+                                                                     <option>FEB</option>
+                                                                     <option>MAR</option>
+                                                                     <option>APR</option>
+                                                                     <option>MAY</option>
+                                                                     <option>JUN</option>
+                                                                     <option>JUL</option>
+                                                                     <option selected="">AUG</option>
+                                                                     <option>SEP</option>
+                                                                     <option>OCT</option>
+                                                                     <option>NAV</option>
+                                                                     <option>DEC</option>
+                                                                </select>
+                                                                <select style="width:50px;">
+                                                                     <option>50</option>
+                                                                     <option>51</option>
+                                                                     <option>52</option>
+                                                                     <option>…</option>
+                                                                     <option>75</option>
+                                                                     <option>76</option>
+                                                                     <option>77</option>
+                                                                     <option>78</option>
+                                                                     <option>79</option>
+                                                                     <option>80</option>
+                                                                     <option>81</option>
+                                                                     <option>82</option>
+                                                                     <option>…</option>
+                                                                     <option>99</option>
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>手机号码：</td>
+                                                            <td><input type="text" value="13801876678" /></td>
+                                                            <td>性别：</td>
+                                                            <td>
+                                                                <select style="width:50px;">
+                                                                     <option>F</option>
+                                                                     <option>M</option>
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>是否购买保险：</td>
+                                                            <td>
+                                                                <select style="width:100px;">
+                                                                     <option>是</option>
+                                                                     <option>否</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>保险类型：</td>
+                                                            <td>
+                                                               <select style="width:100px;">
+                                                                     <option>美亚保险</option>
+                                                                     <option selected="">太平洋保险</option>
+                                                                     <option>友邦保险</option>
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                   </table>
+                                            </div>
+                                      </div> <!--newly end-->
+                                </div> <!--basic_info end-->
+                                <div class="more_info">  <!--more_info start-->
+                                           <div class="unfold_content"> <!--unfold_content start-->                                                   
+                                              <h3 class="pay_h3">支付信息</h3>
+                                              <table class="pay">
+                                                   <colgroup>
+                                                       <col width="85px"/>
+                                                       <col width="200px"/>
+                                                       <col width="80px"/>
+                                                       <col width="200px"/>
+                                                       <col width="65px"/>
+                                                   </colgroup>
+                                                   <tr>
+                                                       <td>产品实际售价：</td>
+                                                       <td> <input type="text" value="28000"/> 元</td>
+                                                       <td>签证费用：</td>
+                                                       <td> <input type="text" value="28000"/> 元</td>
+                                                       <td>保险费用：</td>
+                                                       <td> <input type="text" value="28000"/> 元</td>
+                                                   </tr>
+                                                   <tr>
+                                                       <td>支付状态：</td>
+                                                       <td>
+                                                           <select style="width:88px;">
+                                                                <option>未付款</option>
+                                                                <option selected="">部分付款</option>
+                                                                <option>已付款</option>
+                                                           </select>
+                                                       </td>
+                                                       <td>已付款金额：</td>
+                                                       <td> <input type="text" value="28000"/> 元</td>
+                                                   </tr>
+                                              </table>
+                                              <h3 class="pay_h3">佣金信息</h3>
+                                              <table class="pay">
+                                                   <colgroup>
+                                                       <col width="45px"/>
+                                                   </colgroup>
+                                                   <tr>
+                                                       <td>佣金：</td>
+                                                       <td> <input type="text" value="1000"/> 元</td>
+                                                   </tr>
+                                                   <tr>
+                                                       <td style="vertical-align:top;">备注：</td>
+                                                       <td>
+                                                           <textarea></textarea>
+                                                       </td>
+                                                   </tr>
+                                              </table> 
+                                      </div> <!--unfold_content end-->
+                                 </div> <!--moer_info end-->   
+                            </div> <!--traveller end-->
+                            
+                            <div class="traveller"> <!--traveller strat-->
+                                     <div class="basic_info"> <!--basic_info start-->
+                                          <div class="newly newly_last"> <!--newly start-->
+                                               <div class="del">
+                                                   <em>第2位游客</em>
+                                                   <a href="#">删除</a>
+                                               </div>
+                                               <table class="newly_list">
+                                                    <colgroup>
+                                                         <col width="85px"/>
+                                                         <col width="220px"/>
+                                                         <col width="72px"/>
+                                                    </colgroup>
+                                                    <tr>
+                                                        <td><em> * </em>中文姓名：</td>
+                                                        <td><input type="text" value="中文名" /></td>
+                                                        <td><em> * </em>拼音：</td>
+                                                        <td><input type="text" value="中文名的拼音" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><em> * </em>证件类型：</td>
+                                                        <td>
+                                                            <select style="width:100px;">
+                                                                 <option>护照</option>
+                                                            </select>
+                                                        </td>
+                                                        <td><em> * </em>护照号码：</td>
+                                                        <td><input type="text" value="G23364650" /></td>
+                                                    </tr>
+                                               </table>
+                                               <div class="newly_div">
+                                                       <table class="newly_list">
+                                                                <colgroup>
+                                                                     <col width="85px"/>
+                                                                     <col width="220px"/>
+                                                                     <col width="72px"/>
+                                                                </colgroup>
+                                                                <tr>
+                                                                    <td>护照有效期：</td>
+                                                                    <td>
+                                                                        <select style="width:50px;">
+                                                                             <option>11</option>
+                                                                        </select>
+                                                                        <select style="width:50px;">
+                                                                             <option>JAN</option>
+                                                                             <option>FEB</option>
+                                                                             <option>MAR</option>
+                                                                             <option>APR</option>
+                                                                             <option>MAY</option>
+                                                                             <option selected="">JUN</option>
+                                                                             <option>JUL</option>
+                                                                             <option>AUG</option>
+                                                                             <option>SEP</option>
+                                                                             <option>OCT</option>
+                                                                             <option>NAV</option>
+                                                                             <option>DEC</option>
+                                                                        </select>
+                                                                        <select style="width:50px;">
+                                                                             <option>50</option>
+                                                                             <option>51</option>
+                                                                             <option>52</option>
+                                                                             <option>…</option>
+                                                                             <option>75</option>
+                                                                             <option>76</option>
+                                                                             <option>77</option>
+                                                                             <option>78</option>
+                                                                             <option>79</option>
+                                                                             <option>80</option>
+                                                                             <option>81</option>
+                                                                             <option>82</option>
+                                                                             <option>…</option>
+                                                                             <option>99</option>
+                                                                        </select>
+                                                                    </td>
+                                                                    <td>签发日期：</td>
+                                                                    <td>
+                                                                        <select style="width:50px;">
+                                                                             <option>11</option>
+                                                                        </select>
+                                                                        <select style="width:50px;">
+                                                                             <option>JAN</option>
+                                                                             <option>FEB</option>
+                                                                             <option>MAR</option>
+                                                                             <option>APR</option>
+                                                                             <option>MAY</option>
+                                                                             <option>JUN</option>
+                                                                             <option>JUL</option>
+                                                                             <option selected="">AUG</option>
+                                                                             <option>SEP</option>
+                                                                             <option>OCT</option>
+                                                                             <option>NAV</option>
+                                                                             <option>DEC</option>
+                                                                        </select>
+                                                                        <select style="width:50px;">
+                                                                             <option>50</option>
+                                                                             <option>51</option>
+                                                                             <option>52</option>
+                                                                             <option>…</option>
+                                                                             <option>75</option>
+                                                                             <option>76</option>
+                                                                             <option>77</option>
+                                                                             <option>78</option>
+                                                                             <option>79</option>
+                                                                             <option>80</option>
+                                                                             <option>81</option>
+                                                                             <option>82</option>
+                                                                             <option>…</option>
+                                                                             <option>99</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>签发地：</td>
+                                                                    <td><input type="text" value="上海" /></td>
+                                                                    <td>签证国别：</td>
+                                                                    <td>
+                                                                        <select style="width:100px;">
+                                                                             <option>美签</option>
+                                                                             <option>加签</option>
+                                                                             <option>美签 加签</option>
+                                                                             <option>其它</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>有无签证：</td>
+                                                                    <td><select style="width:100px;">
+                                                                             <option>美签自备</option>
+                                                                             <option>加签自备</option>
+                                                                             <option>美签 加签自备</option>
+                                                                             <option selected="">无签证</option>
+                                                                        </select></td>
+                                                                    <td>国籍：</td>
+                                                                    <td>
+                                                                       <input type="text" value="中国" /> 
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>出生地：</td>
+                                                                    <td><input type="text" value="上海" /></td>
+                                                                    <td>出生日期：</td>
+                                                                    <td>
+                                                                        <select style="width:50px;">
+                                                                             <option>11</option>
+                                                                        </select>
+                                                                        <select style="width:50px;">
+                                                                             <option>JAN</option>
+                                                                             <option>FEB</option>
+                                                                             <option>MAR</option>
+                                                                             <option>APR</option>
+                                                                             <option>MAY</option>
+                                                                             <option>JUN</option>
+                                                                             <option>JUL</option>
+                                                                             <option selected="">AUG</option>
+                                                                             <option>SEP</option>
+                                                                             <option>OCT</option>
+                                                                             <option>NAV</option>
+                                                                             <option>DEC</option>
+                                                                        </select>
+                                                                        <select style="width:50px;">
+                                                                             <option>50</option>
+                                                                             <option>51</option>
+                                                                             <option>52</option>
+                                                                             <option>…</option>
+                                                                             <option>75</option>
+                                                                             <option>76</option>
+                                                                             <option>77</option>
+                                                                             <option>78</option>
+                                                                             <option>79</option>
+                                                                             <option>80</option>
+                                                                             <option>81</option>
+                                                                             <option>82</option>
+                                                                             <option>…</option>
+                                                                             <option>99</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>手机号码：</td>
+                                                                    <td><input type="text" value="13801876678" /></td>
+                                                                    <td>性别：</td>
+                                                                    <td>
+                                                                        <select style="width:50px;">
+                                                                             <option>F</option>
+                                                                             <option>M</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>是否购买保险：</td>
+                                                                    <td>
+                                                                        <select style="width:100px;">
+                                                                             <option>是</option>
+                                                                             <option>否</option>
+                                                                        </select>
+                                                                    </td>
+                                                                    <td>保险类型：</td>
+                                                                    <td>
+                                                                       <select style="width:100px;">
+                                                                             <option>美亚保险</option>
+                                                                             <option selected="">太平洋保险</option>
+                                                                             <option>友邦保险</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                           </table>
+                                                     </div>
+                                          </div> <!--newly end-->                                          
+                                    </div> <!--basic_info end-->
+                                    <div class="more_info"> <!--more_info start-->
+                                          <div class="unfold_content"> <!--unfold_content start-->
+                                                  <h3 class="pay_h3">支付信息</h3>
+                                                  <table class="pay">
+                                                       <colgroup>
+                                                           <col width="85px"/>
+                                                           <col width="200px"/>
+                                                           <col width="80px"/>
+                                                           <col width="200px"/>
+                                                           <col width="65px"/>
+                                                       </colgroup>
+                                                       <tr>
+                                                           <td>产品实际售价：</td>
+                                                           <td> <input type="text" value="28000"/> 元</td>
+                                                           <td>签证费用：</td>
+                                                           <td> <input type="text" value="28000"/> 元</td>
+                                                           <td>保险费用：</td>
+                                                           <td> <input type="text" value="28000"/> 元</td>
+                                                       </tr>
+                                                       <tr>
+                                                           <td>支付状态：</td>
+                                                           <td>
+                                                               <select style="width:88px;">
+                                                                    <option>未付款</option>
+                                                                    <option selected="">部分付款</option>
+                                                                    <option>已付款</option>
+                                                               </select>
+                                                           </td>
+                                                           <td>已付款金额：</td>
+                                                           <td> <input type="text" value="28000"/> 元</td>
+                                                       </tr>
+                                                  </table>
+                                                  <h3 class="pay_h3">佣金信息</h3>
+                                                  <table class="pay">
+                                                       <colgroup>
+                                                           <col width="45px"/>
+                                                       </colgroup>
+                                                       <tr>
+                                                           <td>佣金：</td>
+                                                           <td> <input type="text" value="1000"/> 元</td>
+                                                       </tr>
+                                                       <tr>
+                                                           <td style="vertical-align:top;">备注：</td>
+                                                           <td>
+                                                               <textarea></textarea>
+                                                           </td>
+                                                       </tr>
+                                                  </table>                                              
+                                          </div> <!--unfold_content end--> 
+                                     </div>  <!--more_info end-->
+                          </div> <!--traveller end--> 
+                                                               
+                              <div class="unfold">
+                                    <a href="javascript:;" class="button_secondary adaptiveButton small">
+                                        <span class="left"></span>
+                                        <span class="center">完善游客信息<em></em></span>
+                                        <span class="right"></span>
+                                    </a>
+                             </div>
+                             <div class="pack_up">
+                                 <a href="javascript:;" class="button_secondary adaptiveButton small">
+                                     <span class="left"></span>
+                                     <span class="center">收起游客信息<em></em></span>
+                                     <span class="right"></span>
+                                 </a>
+                            </div>                                    
+                     </div>  <!--tourist end-->
+                 </div>  <!--write end-->
+                 
+                 <div class="write_message">
+                      <h3>客户联系人信息</h3>
+                      <table>
+                           <colgroup>
+                                <col width="70px"/>
+                           </colgroup>
+                           <tr>
+                               <td><em> * </em>公司名称：</td>
+                               <td><input type="text" value="不夜城旅行社" style="width:180px;"/></td>
+                           </tr>
+                           <tr>
+                               <td><em> * </em>姓名：</td>
+                               <td><input type="text" value="王飞"/></td>
+                           </tr>
+                           <tr>
+                               <td><em> * </em>手机号码：</td>
+                               <td><input type="text" value="13601543321"/></td>
+                           </tr>
+                           <tr>
+                               <td><em> * </em>结算方式：</td>
+                               <td>
+                                   <select style="width:120px;">
+                                        <option>月结</option>
+                                        <option>非月结</option>
+                                   </select>
+                               </td>
+                           </tr>
+                      </table>
+                 </div>
+                 <div class="write_message">
+                      <h3>报名人信息</h3>
+                      <table>
+                           <colgroup>
+                                <col width="83px"/>
+                           </colgroup>
+                           <tr>
+                               <td><em> * </em>销售人姓名：</td>
+                               <td><input type="text" value="张三"/></td>
+                           </tr>
+                      </table>
+                 </div>
+                 
+                 <div class="submit_btn">
+                      <a href="javascript:;" class="button_important adaptiveButton medium">
+                            <span class="left"></span>
+                            <span class="center" style="padding:0 25px;">提 交</span>
+                            <span class="right"></span>
+                     </a>
+                 </div>
+                 
+          </div>  <!--enroll end-->
+          
+          </div> 
+    <!-- end of content -->
+    </div>
+    
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+    
+</body>
+</html>

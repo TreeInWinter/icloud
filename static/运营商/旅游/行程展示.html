@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>运营商 旅游 行程展示</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+<link rel="stylesheet" href="/static/css/kendo.common.min.css" />
+<link rel="stylesheet" href="/static/css/kendo.gray.css" />
+<link rel="stylesheet" href="/static/css/kendo.reset.css" />
+<link rel="stylesheet" href="/static/css/common.css" />
+<link rel="stylesheet" href="/static/css/b2b.css" />
+
+        <link rel="stylesheet" type="text/css" href="/static/css/swfupload.css" media="all" />
+        <script type="text/javascript" src="/static/js/swfup/swfupload.js"></script>
+        <script type="text/javascript" src="/static/js/swfup/swfupload.queue.js"></script>
+        <script type="text/javascript" src="/static/js/swfup/fileprogress_yystl.js"></script>
+        <script type="text/javascript" src="/static/js/swfup/handlers_yystl.js"></script>
+
+<link href="../../static/css/travel.css" rel="stylesheet" type="text/css"/>
+
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/plugins/jquery.fixedBar.js"></script>
+<script type="text/javascript" src="/static/js/kendo.web.js"></script>
+<script type="text/javascript" src="/static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+<script type="text/javascript" src="/static/js/global.js"></script>
+<!--[if lt IE 9]>
+    <link rel="stylesheet" href="/static/css/ie.css" />
+    <script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="/static/js/sync.js"></script>
+
+<script>
+
+$(function(){
+    $('#saveButton').on('click',function(){
+        $('.on-saving').show(); 
+    });
+
+    $('.tl-page').on('click','.ac-edit',function(e){
+        e.preventDefault();
+        $(this).closest('.tl-pic').addClass('on-edit').find('input').removeAttr('readonly');
+    });
+
+    $('.tl-page').on('click','.ac-save',function(e){
+        e.preventDefault();
+        $(this).closest('.tl-pic').removeClass('on-edit').find('input').attr('readonly','true');
+    });
+
+    $('.tl-page').on('click','.ac-del',function(e){
+        e.preventDefault();
+        $(this).closest('.tl-pic').remove();
+    });
+})
+</script>
+
+
+</head><body>  <div id="extHeader">
+    <div></div>
+</div>
+
+<div id="container">
+    <div class="header">
+        <h1></h1>
+        <div>
+            <span>你好,${name}</span>
+            <a href="javascript:void(0);">退出</a>
+        </div>
+        <ul id="top_menu">
+            <li><a href="javascript:void(0);">国内机票</a></li>
+            <li><a href="javascript:void(0);">国际机票</a></li>
+            <li><a href="javascript:void(0);">酒店</a></li>
+            <li><a href="javascript:void(0);">票证中心</a></li>
+            <li><a href="javascript:void(0);">财务管理</a></li>
+            <li><a href="javascript:void(0);">客户管理</a></li>
+            <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+        </ul>
+        <ol class="sub_menu">
+            <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+            <li><a href="javascript:void(0);">公司信息</a></li>
+            <li><a href="javascript:void(0);">组织架构</a></li>
+            <li><a href="javascript:void(0);">角色维护</a></li>
+            <li><a href="javascript:void(0);">基础数据</a></li>
+        </ol>
+        <div id="message">
+            <a href="javascript:void(0);">消息</a>
+            <span>New</span>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="sub_menu_bar"></div>
+    <div id="mainContent">
+        <div class="actions block">
+            <div class="col col-l sep-r">
+                <button class="btns btn-return">返回</button>
+            </div>
+            <div class="col col-l" style="padding-left:10px;">
+                <span class="page-title">新建线路</span>
+                <a class="item" href="#">产品基本信息</a>
+                <a class="item highlight" href="#">行程展示</a>
+                <a class="item" href="#">时间价格</a>
+                <a class="item" href="#">产品图片</a>
+                <a class="item" href="#">描述信息</a>
+            </div>
+        </div>
+
+        <div class="block">
+            <div class="tl-header clearfix">
+                <h3>美国东西海岸7日团队游（3钻）- 7成四星酒店</h3>
+                <span class="tl-count">行程天数：<b>7</b>天</span>
+
+                <span class="tl-save">
+                    <a href="javascript:;" class="button_important adaptiveButton small">
+
+                        <span class="left"></span>
+                        <span class="center">保 存</span>
+                        <span class="right"></span>
+                    </a>
+                </span>
+            </div>
+            <div class="tl-body clearfix">
+                <div class="tl-proc">
+                    <table>
+                        <tr>
+                            <td class="tl-icon"><i>D1</i><b></b></td>
+                            <td class="tl-text"><span>上海洛杉矶11上海洛杉矶111上海111上海洛杉矶</span></td>
+                        </tr>
+                        <tr class="active">
+                            <td class="tl-icon"><i>D2</i><b></b></td>
+                            <td class="tl-text"><span>上海洛杉矶2222</span></td>
+                        </tr>
+                        <tr class="empty"> <td class="tl-icon"><i>D3</i><b></b></td> <td class="tl-text"><span>请填写行程</span></td> </tr>
+                        <tr class="empty"> <td class="tl-icon"><i>D4</i><b></b></td> <td class="tl-text"><span>请填写行程</span></td> </tr>
+                        <tr class="empty"> <td class="tl-icon"><i>D5</i><b></b></td> <td class="tl-text"><span>请填写行程</span></td> </tr>
+                        <tr class="empty"> <td class="tl-icon"><i>D6</i><b></b></td> <td class="tl-text"><span>请填写行程</span></td> </tr>
+                        <tr class="empty"> <td class="tl-icon"><i>D7</i><b></b></td> <td class="tl-text"><span>请填写行程</span></td> </tr>
+                        <tr class="empty"> <td class="tl-icon"><i>D8</i><b></b></td> <td class="tl-text"><span>请填写行程</span></td> </tr>
+                        <tr class="empty"> <td class="tl-icon"><i>D9</i><b></b></td> <td class="tl-text"><span>请填写行程</span></td> </tr>
+                        <tr class="empty"> <td class="tl-icon"><i>D10</i><b></b></td> <td class="tl-text"><span>请填写行程</span></td> </tr>
+                        <tr class="empty"> <td class="tl-icon"><i>D11</i><b></b></td> <td class="tl-text"><span>请填写行程</span></td> </tr>
+                        <tr class="empty"> <td class="tl-icon"><i>D12</i><b></b></td> <td class="tl-text"><span>请填写行程</span></td> </tr>
+                        <tr class="empty"> <td class="tl-icon"><i>D13</i><b></b></td> <td class="tl-text"><span>请填写行程</span></td> </tr>
+                        <tr class="empty"> <td class="tl-icon"><i>D14</i><b></b></td> <td class="tl-text"><span>请填写行程</span></td> </tr>
+                        <tr class="empty"> <td class="tl-icon"><i>D15</i><b></b></td> <td class="tl-text"><span>请填写行程</span></td> </tr>
+                        <tr class="empty"> <td class="tl-icon"><i>D16</i><b></b></td> <td class="tl-text"><span>请填写行程</span></td> </tr>
+                        <tr class="empty"> <td class="tl-icon"><i>D17</i><b></b></td> <td class="tl-text"><span>请填写行程</span></td> </tr>
+                        <tr class="empty"> <td class="tl-icon"><i>D18</i><b></b></td> <td class="tl-text"><span>请填写行程</span></td> </tr>
+                    </table>
+                </div>
+                <div class="tl-page">
+                    <h4>第三天</h4>
+                    <table class="cv-table cv-fixed">
+                        <colgroup>
+                            <col width="90">
+                        </colgroup>
+
+                        <tr>
+                            <th><u>*</u>标题：</th>
+                            <td><input id="" type="text" name=""></td>
+                        </tr>
+                        <tr>
+                            <th><u>*</u>内容：</th>
+                            <td><textarea id="" style="height:180px;" name=""></textarea></td>
+                        </tr>
+                        <tr>
+                            <th>行程图片：</th>
+                            <td>
+
+    <div class="tl-uploader">
+    <span id="UploaderPlaceholder_1"></span>
+                <span class="Uploader" allowSize="5120MB" allowFile="*.jpg;*.jpeg;*.png;*.iso" ></span>
+                <!-- <button class="btns btn&#45;blue" onclick="swfu.cancelQueue();"> 取消 </button> -->
+    </div>
+                    
+            <script>
+function createSwfUpload(index,allowSize, allowFile){
+    var upload = window.swfu = new SWFUpload({
+	// Backend Settings
+	upload_url: "http://devel/test/upload.php",
+	post_params: {"name" : "testname"},
+	// File Upload Settings
+	file_size_limit : "50000MB",
+	//file_types : "*.*;",
+	//file_size_limit : allowSize ,
+	file_types : allowFile ,
+	file_types_description : "Choose Files",
+	file_upload_limit : "0",
+	file_queue_limit : "0",
+	// Event Handler Settings (all my handlers are in the Handler.js file)
+	file_dialog_start_handler : fileDialogStart,
+	file_queued_handler : fileQueued,
+	file_queue_error_handler : fileQueueError,
+	file_dialog_complete_handler : fileDialogComplete,
+	upload_start_handler : uploadStart,
+	upload_progress_handler : uploadProgress,
+	upload_error_handler : uploadError,
+	upload_success_handler : uploadSuccess,
+	upload_complete_handler : uploadComplete,
+	// Button Settingsimg/fee
+	button_image_url : "/static/images/tluploader.png",
+	button_placeholder_id : "UploaderPlaceholder_" + index,
+	button_width: 88,
+	button_height: 25,
+	button_window_mode:"TRANSPARENT",
+	button_cursor: SWFUpload.CURSOR.HAND,
+	// Flash Settings
+	flash_url : "/static/flash/swfupload.swf",
+	custom_settings : {
+		progressTarget : "UploaderProgress_" + index,
+		cancelButtonId : "UploaderCancelBtn_" + index,
+		callback : function(file,serverData){
+            var tmp = $.parseJSON(serverData);
+		}
+	},
+
+	// Debug Settings
+	debug: false
+    });
+
+    return upload;
+}
+
+var uploads = [];
+$(function(){
+        $(".Uploader").each(function(index){	
+            uploads.push(createSwfUpload(index + 1,$(this).attr("allowSize"),$(this).attr("allowFile")));
+        });
+
+});
+            </script>
+            <script type="text/kendo-x-template" id="tl-pic-template">
+            
+                                    <span class="tl-pic">
+                                        <img src="#= data.path #" alt="">
+                                        <span class="tl-pic-name">
+                                            <input id="" readonly type="text" value="#= data.name #" name="">
+                                        </span>
+                                        <span class="tl-pic-ac">
+                                            <a class="ac-save" href="">保存</a>
+                                            <a class="ac-edit" href="">编辑</a>
+                                            <a class="ac-del" href="">删除</a>
+                                        </span>
+                                    </span>
+            </script>
+                                <div class="tl-pics clearfix">
+                                    <span style="float:left;" class="tl-upholder" id="UploaderProgress_1"><b></b></span>
+                                    <span class="tl-pic">
+                                        <img src="//placehold.it/160x100" alt="">
+                                        <span class="tl-pic-name">
+                                            <input id="" readonly type="text" value="玻璃维亚" name="">
+                                        </span>
+                                        <span class="tl-pic-ac">
+                                            <a class="ac-save" href="">保存</a>
+                                            <a class="ac-edit" href="">编辑</a>
+                                            <a class="ac-del" href="">删除</a>
+                                        </span>
+                                    </span>
+                                    <span class="tl-pic">
+                                        <img src="//placehold.it/160x100" alt="">
+                                        <span class="tl-pic-name">
+                                            <input id="" type="text" value="玻璃维亚" name="">
+                                        </span>
+                                        <span class="tl-pic-ac">
+                                            <a class="ac-save" href="">保存</a>
+                                            <a class="ac-edit" href="">编辑</a>
+                                            <a class="ac-del" href="">删除</a>
+                                        </span>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><u>*</u>用餐：</th>
+                            <td>
+                                <input id="" type="text" name="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><u>*</u>住宿：</th>
+                            <td>
+                                <input id="" type="text" name="">
+                            </td>
+                        </tr>
+                    </table>
+                    <center>
+                        <a href="javascript:;" id="saveButton" class="button_secondary adaptiveButton small">
+                            <span class="left"></span>
+                            <span class="center">填写下一天</span>
+                            <span class="right"></span>
+                        </a>                           
+                        <span class="on-saving">正在保存</span>
+                    </center>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<div id="extFooter">
+    <div>
+        <p>
+        <a href="javascript:void(0);">关于我们</a>&nbsp;|
+        <a href="javascript:void(0);">微博</a>&nbsp;|
+        <a href="javascript:void(0);">服务条款</a>&nbsp;|
+        <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+        </p>
+        <p>客户服务热线:400-720-6666</p>
+    </div>
+</div>
+</body>
+</html>

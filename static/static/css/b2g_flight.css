@@ -1,0 +1,335 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ font-family:Tahoma,微软雅黑;}
+ul,li{ list-style-type:none;}
+label input[type="radio"],label input[type="checkbox"]{ border:0; vertical-align:middle; margin-right:3px;}
+
+.date{ width:100%; height:auto; border-bottom:1px solid #f94037; margin:0; color:#404040; border-left:1px solid #ebcebf; border-right:1px solid #ebcebf;
+ border-top:1px solid #ebcebf; font-size:14px;}
+.date li{ float:left; border-right:1px solid #ebcebf; line-height:21px; background:#ffede4;}
+.date li a{ width:160px; padding:10px 0px; display:inline-block; text-align:center; text-decoration:none;}
+.date li a:hover{ text-decoration:none; background:#fff7f4; color:#404040;}
+.date li em{ color:#f94037; font-weight:bold; font-size:14px;}
+.date li i{ width:12px; height:23px; display:inline-block; background:url(../images/b2g/smallImg.png) no-repeat 0 -21px; margin:10px 0 0;}
+.date .highlightI{ background-position:-120px -61px;}
+.date li span{ width:12px; height:23px; display:inline-block; background:url(../images/b2g/smallImg.png) no-repeat -17px -21px;}
+.date .highlightSpan{ background-position:-137px -61px;}
+.date .last_li,.date li:first-child{ background:#fdf8f5;}
+.date li b{ font-weight:500; margin-left:3px;}
+.date .current{ border-top:1px solid #f1634c; border-left:1px solid #f1634c; border-right:1px solid #f1634c; border-bottom:2px solid #fff; margin:-1px 0 -3px -1px; background:#fff;}
+.company{ line-height:20px; padding:10px;}
+.company input{ border:0; vertical-align:middle; margin-right:5px;}
+.company label{ margin-right:10px;}
+.company b{ width:75px; display:inline-block;}
+.company span{ margin-left:20px; font-weight:bold;}
+.light_pink{ background:#f8f8f8;}
+.light_pink td {border-bottom:1px dashed #e4e4e4;}
+.first_up {background-color:#ffffff;}
+.first_up td {border-bottom:1px solid #e4e4e4;}
+.bor_top{ border-top:1px solid #e4e4e4;}
+
+.titTop{ margin-bottom:10px;}
+.titleH3{ float:left; font-weight:bold; font-size:16px; color:#575757; line-height:25px;}
+.flowImg{ float:right;}
+
+.seekCon{ margin-bottom:10px;}
+.againSeek{ padding:10px 20px 0; background:#fff; color:#666666; font-size:14px; border-bottom:1px solid #d3d3d3;}
+.againSeek select,.unfoldCon select,.airport select{ height:30px; color:#666666; border:1px solid #c7c7c7; vertical-align:middle;}
+.againSeek input[type=text]{ height:28px; line-height:28px; padding:0 7px; width:160px;}
+.againSeek .k-input[type=text]{ padding:0;border:0;}
+.againSeek td{ padding-bottom:8px;}
+.heiSeek{ padding:10px 17px 20px;}
+.heiSeek,.putAway{ color:#0066cc; cursor:pointer; display:inline-block; margin-bottom:-9px; z-index:2; position:relative;}
+.putAway{ background:#f5f4f4; border:1px solid #d6d6d6; border-bottom:0; padding:10px 29px 20px;}
+.heiSeek em{ display:inline-block; width:12px; height:9px; background:url(../images/b2g/smallImg.png) no-repeat -21px 0; vertical-align:middle;}
+.putAway em{ display:inline-block; width:12px; height:6px; background:url(../images/b2g/smallImg.png) no-repeat -37px 0; vertical-align:middle;}
+.unfoldCon{ background:#f5f4f4; padding:10px 0 10px 10px; border-bottom:2px solid #dddddd; color:#666666; z-index:1;}
+.unfoldCon label{ margin-right:30px;}
+.unfoldCon b{ margin-left:20px;}
+.airport{ padding:15px 0 10px; background:#fff; color:#333333;}
+.airport em{ margin-left:85px; color:#333333; font-size:13px;}
+.airport em:first-child{ margin-left:35px;}
+.airport label{ margin-right:7px;}
+.timePrice{ padding:10px 0 15px 35px; background:#fff; color:#333333; font-size:13px;}
+.timePrice label{ padding:5px 10px; border:1px solid #dcdcdc; background:#f5f5f5; display:inline-block; min-width:65px; text-align:center; cursor:pointer;}
+.timePrice .currentCli,.timePrice label:active{ background:#fcf0ed; border:1px solid #f4a7a3; cursor:pointer;}
+.timePrice em{ display:inline-block; width:13px; height:14px; background:url(../images/b2g/smallImg.png) no-repeat -52px 0; vertical-align:middle; margin-left:5px;}
+.timePrice .arrDownGray{ background:url(../images/b2g/smallImg.png) no-repeat -69px 0;}
+.timePrice .arrDown{ background:url(../images/b2g/smallImg.png) no-repeat -99px 0;}
+.timePrice .arrUpOrange{ background:url(../images/b2g/smallImg.png) no-repeat -117px 0;}
+.airContent{ background:#fff; border:1px solid #d2d2d2; border-bottom:2px solid #d2d2d2;}
+.airList{ width:100%; border-collapse:collapse; color:#333333; position:relative;}
+.airList .lastList td{ border-bottom:1px solid #d2d2d2;}
+.airList td{ border-bottom:1px solid #f1f1f1; padding:10px 0;}
+.airList tr:hover,.checkMore a:hover{ background:#f5f5f5;}
+.airList th:first-child,.modFliList td:first-child{ text-align:right; padding-right:5px;}
+.airList th{ background:#f0efef; padding:10px 0;}
+.NoColor{font-size:24px; font-weight:bold; color:#ff0000;}
+.QiSize{font-size:14px; font-weight:bold; margin-left:2px;}
+/*.airContent code,.modFliList code{ background:url(../images/airline_logo.png) no-repeat 0 -422px; display:inline-block; width:28px; height:28px;}*/
+.airList th strong{ margin-left:20px; font-size:15px; font-weight:bold;}
+.airList .lightRedBtn{ padding:3px 20px;}
+.airList .btnReset{ padding:3px 10px;}
+.only{ color:#ff0000; vertical-align:middle; margin-left:5px; padding:2px 7px; border:1px solid #f94f46;border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px;}
+.linkA{ color:#3764bd; text-decoration:underline;}
+.linkA:hover{ color:#3764bd;}
+.flexMore,.flexUp{ color:#0066cc; font-size:14px; cursor:pointer;}
+.flexMore i{ display:inline-block; width:12px; height:6px; vertical-align:middle; margin-left:7px; background:url(../images/b2g/smallImg.png) no-repeat -21px 0;}
+.flexUp i{ display:inline-block; width:12px; height:6px; vertical-align:middle; margin-left:7px; background:url(../images/b2g/smallImg.png) no-repeat -37px 0;}
+.checkMore{ text-align:center; font-size:14px; font-weight:bold;}
+.checkMore a{ color:#1d5ceb; display:block; padding:10px 0;}
+.smallLoading{ text-align:center; font-size:14px; color:#1d5ceb; padding:10px 0;}
+.smallLoading em{ background:url(../images/b2g/small_loading.gif) no-repeat; display:inline-block; width:22px; height:22px; vertical-align:middle; margin-right:10px;}
+.floatLayer{ padding:5px 10px; background:#fff;}
+.floatLayer p{ line-height:20px;}
+.arrowLayer{ display:inline-block; width:9px; height:5px; background:url(../images/b2g/smallImg.png) no-repeat -85px 0; position:absolute; top:-6px; left:10%;}
+.favorable{ display:inline-block; width:47px; height:19px; background:url(../images/b2g/smallImg.png) no-repeat -34px -21px; vertical-align:middle; color:#fff; text-align:center; text-indent:5px;}
+
+.modFlight{ margin:10px 0; border:2px solid #75d0ea; background:#fff; position:relative;}
+.selectedInfo{ float:left; background:#f4fdff; font-weight:bold; padding:10px; text-align:center; width:18%; border-right:1px dashed #b6cee1;}
+.selectedInfo h2{ font-size:16px; color:#0066cc; font-weight:bold; margin-bottom:15px;}
+.selectedInfo h3{ font-size:16px; color:#333333; font-weight:bold; /*margin-bottom:7px;*/margin-bottom:3px;}
+.modFlight .selectedInfo h3 em{ font-weight:500;}
+.selectedInfo div{ color:#666666;font-weight:normal;}
+.modFliList{ float:left; padding:10px 0; color:#333333; width:80%;}
+.colorSize{ font-size:14px; color:#666666;}
+.modFliList td{ padding:3px 5px;}
+.moflBtn{ background:#c2eef9; border:1px solid #93e6f1; padding:5px 20px; cursor:pointer;}
+.moflBtn:hover{ background:#d2f4fd;}
+.k-ie7 .moflBtn{ padding:3px 7px;}
+.k-tooltip-content{ color:#666666;}
+.modFlightLeft{ float:left; width:88%;}
+.modFlightRight{ float:right; position:absolute; right:2%; top:48%;}
+.module{ border-bottom:1px solid #d2d2d2; border-top:1px solid #d2d2d2; padding:15px 0; color:#333333; margin-bottom:10px;}
+.module:first-child{ border-top:0;}
+.module:hover{ background:#f5f5f5;}
+.airName{ float:left; width:200px; text-align:center;}
+.airMore .airLogo{ display:inline-block; vertical-align:middle; background:url(../images/b2g/logo.png) no-repeat 0 -30px; width:32px; height:32px; cursor:pointer;}
+.airMore{ margin:10px auto;}
+.nameMany em{ padding: 0 2px 2px; border-bottom:1px dashed #0066cc; font-size:14px;}
+.transfTime{text-align:center; position:relative;}
+.transfTime b{ font-size:16px;}
+.transfTime em{ color:#a5a5a5;}
+.transfTime i{ background:#f9f9f9; padding:2px 3px; border:1px solid #dddddd; cursor:pointer;}
+.stops{ background:#f9f9f9; padding:1px 4px; border:1px solid #dddddd; display:inline-block; color:#333333; cursor:pointer;}
+.stopPlace{ position:absolute; bottom:-83%; left:62%; color:#979c9c;}
+.centercon{ width:400px; margin:0 auto; float:left;}
+.place{ margin:7px auto;}
+.place li{ float:left; color:#979c9c; text-align:center; min-width:113px;}
+.place li:first-child{ margin-left:30px;}
+.place .pullRight{ float:right; text-align:left;}
+.airportName{ margin-bottom:35px;}
+.airportName em{ display:inline-block; min-width:70px; text-align:center; margin-left:135px;}
+.airportName em:first-child{ margin-left:50px;}
+.totalPrice{ float:left; margin-left:100px; min-width:270px;}
+.toPriceTop i{ font-size:14px;}
+.toPriceTop em{ color:#ff0000; font-weight:bold;}
+.toPriceTop b{ font-size:24px; color:#ff0000;}
+.toPriceCenter{ margin:20px 0 35px; font-size:14px;}
+.exclMark{ color:#ff5a00; margin-left:15px; cursor:pointer;}
+.exclMark i{ display:inline-block; width:16px; height:17px; background:url(../images/b2g/smallImg.png) no-repeat -135px 0; vertical-align:middle; margin-right:3px;}
+.moduleRight{ float:left; margin:45px 0; vertical-align:middle;}
+.moduleRight .lightRedBtn{ padding:7px 18px;}
+.k-ie7 .moduleRight .lightRedBtn{ padding:6px 5px;}
+.spread,.paUp{ cursor:pointer; margin-left:65px; margin-right:35px; font-size:14px;}
+.spread i,.paUp i{ color:#0066cc; margin-right:3px; text-decoration:underline;}
+.spread em{ display:inline-block; width:11px; height:6px; background:url(../images/b2g/smallImg.png) no-repeat -21px 0;}
+.paUp em{ display:inline-block; width:11px; height:6px; background:url(../images/b2g/smallImg.png) no-repeat -37px 0;}
+.floatTierCon b{ color:#3764bd; font-size:14px;}
+.moreAirCon td{ padding:3px; color:#333333;}
+.moreAirCon td code{ display:inline-block; width:16px; height:16px; vertical-align:middle; /* background:url(../images/pic_flightslogo.png) no-repeat 0 -720px; */}
+.openCon{ background:#fffbe8; padding:20px 50px 0 20px; border:1px solid #5ba5ed; position:relative; color:#333333; margin-top:-10px;}
+.openArrow{ background:url(../images/b2g/smallImg.png) no-repeat -107px -21px; vertical-align:middle; display:inline-block; width:13px; height:7px; position:absolute; top:-7px; left:24%;}
+/* .airInfoTitle code{ display:inline-block; vertical-align:middle; background:url(../images/pic_flightslogo.png) no-repeat 0 -720px; width:16px; height:16px;} */
+.airInfoName{ min-width:85px; display:inline-block; font-size:14px;}
+.cabinType{ display:inline-block; min-width:320px;}
+.airDuration em{ display:inline-block; width:16px; height:17px; background:url(../images/b2g/smallImg.png) -177px 0; margin-right:5px; vertical-align:middle;}
+.airLeftLine{ position:absolute; display:block; width:1px; height:90%; border-left:1px solid #a5a5a5; left:40px; top:5px;}
+.airInfoCont{ position:relative;}
+.takeOffArrive{ padding:15px 0 20px; margin-left:110px;}
+.tranTime{ margin-left:110px; padding-bottom:20px;}
+.tranImg{ display:inline-block; width:16px; height:17px; background:url(../images/b2g/smallImg.png) no-repeat -156px 0; vertical-align:middle; position:absolute; left:32px; top:70px;}
+.tran_air{ min-width:338px; display:inline-block;}
+.airContent .tran_air{min-width:319px;}
+.tran_air em{ color:#f94037;}
+.stopTime em{ display:inline-block; width:16px; height:17px; background:url(../images/b2g/smallImg.png) -86px -21px; margin-right:5px; vertical-align:middle;}
+/*.flightLogo{ background:url(../images/airline_logo.png) no-repeat 0 -422px; width:28px; height:28px; vertical-align:middle; display:inline-block;}*/
+.specialBg{ background:#f9f9f9;}
+.airInfoList .resestDistance{ margin-left:90px;}
+
+.flyTime{ float:left;}
+.zongTime{ font-size:14px; color:#999999; margin-bottom:35px; margin-left:-16px; display:inline-block;}
+.goBack{ float:left; margin:25px 10px 0 20px; color:#bfbfbf; font-size:14px; }
+.goBack em{ display:inline-block; vertical-align:middle; width:16px; height:7px;}
+.goArrow{ background:url(../images/b2g/smallImg.png) no-repeat -125px -21px;}
+.backArrow{ background:url(../images/b2g/smallImg.png) no-repeat -146px -21px;}
+.interCentercon { width:376px; margin:0 auto; float:left;}
+.leftIntent{ margin-left:-40px;}
+
+.interAirportName{ }
+.interAirportName em{ display:inline-block; min-width:70px; text-align:center; margin-left:116px;}
+.interAirportName em:first-child{ margin-left:47px;}
+
+.interPlace{ margin:7px auto;}
+.interPlace li{ float:left; color:#979c9c; text-align:center; min-width:100px;}
+.interPlace li:first-child{ margin-left:36px;}
+.interPlace .pullRight{ float:right; text-align:left;}
+
+.interDayNumber { 
+   color:#ff0100; 
+   border-bottom:1px dashed #ff0100; 
+   font-size:10px; 
+   -webkit-transform: scale(0.8); 
+   cursor:pointer;
+   position:absolute; 
+   top:0px; 
+   right:13%;
+}
+.distMargin{ margin:10px 0  0 30px; min-width:220px; position:absolute; top:21%; right:16%; color:#666;}
+.airModuleLeft{ float:left;}
+.airModuleRight{ float:right;}
+.moduleLeft{ padding:20px 0; border-bottom:1px dashed #c0bfbf;}
+.module .lastModuleLeft{ border-bottom:0;}
+.airContent .interModule{ padding:0; position:relative;}
+.module .interModuleRight { margin:0 10px; position:absolute; top:39%; right:0; width:175px;}
+
+.interModuleRight {top:39%; right:0;}
+.noBorder{ border:0; margin-top:0;}
+.goBackLogo{ float:left; width:152px; text-align:center;}
+
+.green .k-callout {
+    border:none;
+    background:url(../images/b2g/smallImg.png) no-repeat -107px -21px;width:13px;height:7px;position:absolute; display:inline-block;
+}
+
+.green .k-callout-n {
+    top:-7px;margin-left:-4px;
+}
+.green .k-callout-w {
+    left:-6px;margin-top:-4px; width:7px; height:13px;background-position:-179px -18px;
+}
+.green .k-callout-s {
+    bottom:-7px;background-position:0 -49px;
+}
+.green .k-callout-e {
+    right:-6px;margin-top:-4px; width:7px; height:13px;background-position:-167px -18px;
+}
+
+.green.k-tooltip {
+    border: 1px solid #5ba5ed !important;
+}
+.green .k-tooltip-content {
+	padding:0;
+}
+
+
+.k-ie7 #return_label em{ vertical-align:middle; display:inline-block; margin-bottom:10px;}
+
+#manyAirName,#manyAirName:hover{ cursor:pointer;}
+
+.addDay{ position:relative;}
+.addDayTime,.dayNumber{ color:#ff0100; border-bottom:1px dashed #ff0100; font-size:10px; -webkit-transform: scale(0.8); cursor:pointer;}
+.addDayTime{ position:absolute; top:0px; left:27%;}
+.dayNumber{ position:absolute; top:0px; right:15%;}
+.lineWeight .k-tooltip-content{ border-top:3px solid #525b68; min-height:20px !important;}
+
+.ticketPrice{ padding:5px; background:#f5f5f5; color:#666666; width:auto; float:left;}
+.ticketPrice div{ line-height:20px;}
+.leftFillIn{ float:left; width:900px;}
+.infoContent{ background:#fff; border:1px solid #d2d2d2; margin-bottom:10px;}
+.writeTitle{ background:#f4f4f4; border-bottom:1px solid #d2d2d2; padding:10px 15px; color:#333333; font-size:15px; font-weight:bold;}
+.fillInContent{ border-bottom:1px dashed #d2d2d2; padding: 0 20px 15px; margin:20px 0;}
+.serialNumber{ font-size:18px; color:#f94f46; font-weight:bold; float:left;}
+.writeList{ float:left; color:#333333;}
+.writeList th,.linkmanList th{ text-align:right; font-size:14px; font-weight:bold; padding:0 5px 5px 0;}
+.writeList td,.linkmanList td{ line-height:35px; padding:0 5px 5px 0;}
+.writeList td input[type="text"]{ width:163px;}
+.askMark{ display:inline-block; width:17px; height:18px; background:url(../images/b2g/smallImg.png) no-repeat -91px -43px; vertical-align:middle; margin: 0 5px;}
+.roundBeadBorder{ border:1px solid #00b49d; color:#00b49d; padding:1px 4px; -webkit-border-radius:3px; -moz-border-radius:3px; border-radius: 3px; margin:0 5px;}
+.writeList label input{ vertical-align:middle;}
+.specialFoot{ color:#f94f46;}
+.unconformity{ float:right; margin-right:5px;}
+.unconforCont{ border:2px solid #f84f48; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; width:175px;}
+.handPointer{ background:#f84f48; padding:5px 10px; float:left;}
+.handPointer i{ background:url(../images/b2g/smallImg.png) no-repeat -84px -61px; display:inline-block; width:31px; height:31px; vertical-align:middle;}
+.unconforCont b{ padding:0 0 0 7px; vertical-align:middle; line-height:40px; color:#f84f48; font-size:15px; float:left;}
+.pointerBoat{ color:#f94f46; margin:8px 0 8px 10px; line-height:20px; width:180px;}
+.sumColor{ color:#f94037;}
+.fillInLast{ border-bottom:0; margin-bottom:0;}
+.linkmanList{ margin:20px 0; color:#333333;}
+.shoppingCart{ display:inline-block; width:21px; height:20px; background:url(../images/b2g/smallImg.png) no-repeat -110px -39px; vertical-align:middle; margin-right:5px;}
+.fillInBtn{ text-align:center; margin:25px 0;}
+.fillInBtn button{ font-size:15px;}
+.fillInBtn .shoppingBtn{ padding:8px 10px; margin-left:10px;}
+.k-ie7 .shoppingBtn{ padding:7px 0px; width:150px;}
+.fillInBtn a{ color:#666666; font-size:16px; margin-left:10px; vertical-align:middle;}
+.fillInBtn a:hover{ color:#3764bd;}
+.rightFillIn{ color:#333333;margin-left:910px;}
+.orderTopBg{ background:url(../images/b2g/orderInfoTop.png) no-repeat; width:289px; height:31px;}
+.FillInOrderCon{ background:url(../images/b2g/orderBg.png) repeat-y;}
+.orderMingXi,.flightOrderInfo{ padding:10px 0 10px 15px; border-top:1px dashed #b0b0b0; width:92%; margin-left:4px;}
+.k-ie7 .orderMingXi,.k-ie7 .flightOrderInfo{ width:auto; margin-right:4px;}
+.orderMingXi h3{ font-size:15px; font-weight:bold; margin-bottom:5px;}
+.flightH3{ font-size:14px; font-weight:bold;}
+.goFlightImg,.backFlightImg{ display:inline-block; width:16px; height:7px; vertical-align:middle; margin-right:5px;}
+.goFlightImg{ background:url(../images/b2g/smallImg.png) no-repeat -125px -21px;}
+.backFlightImg{ background:url(../images/b2g/smallImg.png) no-repeat -146px -21px;}
+.moneryInfo{ background:#e7fafe; border:1px dashed #93ccf8; padding:7px 5px 0; width:180px; margin:10px 0; position:relative;}
+.boatList td{ line-height:20px;}
+.chengMan{ margin-left:30px; margin-bottom:10px;}
+.priceCont em{ color:#f94037;}
+.priceCont b{ color:#f94037; font-size:14px;}
+.airplane{ display:inline-block; vertical-align:middle; background:url(../images/b2g/smallImg.png) no-repeat -136px -38px; width:22px; height:21px; position:absolute; left:3%; top:40%;}
+.orderTotalPrices{ padding:10px 0; text-align:center; border-top:1px solid #c8c8c8; background:#e0f5fa; margin:0 6px;}
+.orderTotalPrices b{ font-size:16px; color:#333333;}
+.orderTotalPrices em,.orderTotalPrices i{ color:#f92e2f; font-weight:bold;}
+.orderTotalPrices i{ font-size:24px;}
+.orderBottomBg{ background: url(../images/b2g/orderBorderBottom.png) no-repeat left bottom; width:289px; height:17px;}
+
+.rightFillIn.fixedBar{
+	+margin-left:10px;
+}
+
+.accountForWrite{ color:#666666; margin-left:10px;}
+.accountForWrite p{ line-height:23px;}
+.writeImg{ margin-left:7px;}
+
+.limitContent {
+	float: left;
+	position: absolute;
+	top: 45%;
+	right: 35%;
+	font-size: 13px;
+}
+
+.changAlign td:first-child{ text-align:left;}
+.priceContent{ float:left; position:absolute; top:33%; right:12%;}
+.priceContent div{ line-height:20px; margin-bottom:5px;}
+.selectedInfo .goBack{ margin:25px 20px 0 10px}
+
+.transferList td{ color:#666666; line-height:25px;}
+.transferList th{ padding-left:5px; color:#333333;}
+
+.selectedInfo .transfer { 
+   border:1px solid #e1e1e1; 
+   font-weight:500; 
+   font-size:12px; 
+   padding:1px 5px; 
+   cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>政策 国际政策 添加修改普通政策</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="../../static/css/common.css" rel="stylesheet" />
+	<link href="../../static/css/kendo.common.css" rel="stylesheet" />
+	<link href="../../static/css/kendo.gray.css" rel="stylesheet" />
+	<link href="../../static/css/b2b.css" rel="stylesheet" />
+    <link href="/static/css/kendo.reset.css" rel="stylesheet" />
+    <link href="../../static/css/guojitianjiaxiugai.css" rel="stylesheet"  type="text/css"/>
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+
+  
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<!-- @CLB@ -->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body>
+    <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">&nbsp;</a>
+                <span>&nbsp;</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent"> <!--mainContent开始-->
+        
+          <div class="tjxg_top">
+               <h2>返回</h2>
+               <p>添加政策</p>
+               <div class="lkfb">
+                   <label><input type="checkbox"/> 立刻发布</label>
+               </div>
+               <div class="tyxj_a">
+                 <a href="#" class="tyxj_a_1">关&nbsp;闭</a>
+                 <a href="#" class="tyxj_a_1">清&nbsp;除</a>
+                 <a href="#" class="tyxj_a_2">保&nbsp;存</a>
+                 <a href="#" class="tyxj_a_2">保存并继续</a>
+               </div>
+          </div>
+       <div class="middlecontent"> <!--middlecontent开始-->
+         <div class="mudong clearfix">
+            <p class="mudong_p_1"><strong>协议名称：</strong> <input type="text"/></p>
+         </div>
+         <div class="dijia clearfix"> 
+           <b>政策类型：</b>  
+           <label><input type="radio" value="单程" checked="checked" name="1_1" /> 普通政策</label>
+           <label><input type="radio" value="往返" name="1_1"  /> 团队政策</label>
+           <label><input type="radio" value="单程及往返" name="1_1"  /> 散客K位政策</label>
+         </div>
+         <div class="dijia clearfix"> 
+           <b>航程类型：</b>  
+           <label><input type="radio" value="单程" checked="checked" name="1" /> 单程</label>
+           <label><input type="radio" value="往返" name="1"  /> 往返</label>
+           <label><input type="radio" value="单程及往返" name="1"  /> 单程及往返</label>
+         </div>
+         <div class="cjrq_tj clearfix">
+              <p class="clearfix"> <span class="cjrq_span">政策有效期：</span> <input class="cjrq_input_1 noexpire" type="text" value="2013-06-01" /> <span class="noexpire cjrq_zhi">至</span> <input class="noexpire cjrq_input_2" type="text" value="2013-06-01" />  <a href="javascript:void(0);" class="noexpire cjrq_a">添加</a>
+                <label><input type="checkbox" style="width:20px;vertical-align:middle;"/>永久</label>
+              </p>
+              <div class="date_span noexpire">
+                  <span> 2013-06-01至2013-08-31 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>x</i> </span>
+                  <span> 2013-06-01至2013-08-31 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>x</i> </span>
+              </div>
+         </div>
+         <div style="clear:both;"></div>
+         <div class="hcjlzc"> <!--此处 class="hcjlzc"的div只能点选了“往返”、“单程及往返”才会出现！-->
+             <b>回程奖励政策沿用至：</b>
+             <input type="text" class="noexpire" />
+         </div>
+         <div class="kpyxq clearfix">
+              <p> <span class="cjrq_span">开票有效期：</span> <input class="cjrq_input_1" type="text" value="2013-06-01" /> <span class="cjrq_zhi">至</span> <input class="cprq_jz" type="text" value="2013-06-01" /> 
+              </p>
+         </div>
+         <div class="pzlx_cp clearfix">
+             <p> <span class="leixing_1">票证类型：</span> <label><input type="checkbox"/> BSP</label>
+                               <label><input type="checkbox"/> B2B</label>
+                               <label><input type="checkbox"/> CRS</label>
+                               <label><input type="checkbox"/>  境外电子</label>
+             </p>
+         </div>
+         <div class="pnr clearfix">
+            <b>PNR：</b>
+            <label><input type="radio" checked="checked"  name="2"/> <i>不限</i></label>
+            <label><input type="radio"  name="2" /> <span>换编码出票</span></label>
+            <label><input type="radio"  name="2" /> <em>大编码出票（无需换编码）</em></label>
+            <label><input type="radio"  name="2" /> <em>大编码出票（需换编码）</em></label>
+         </div>
+         <div class="cklx_div clearfix">
+             <b>乘客类型：</b> 
+              <div class="cklx_p">
+                  <p> <label><input type="checkbox"/> <span>成人</span></label>
+                      <label><input type="checkbox"/> <span class="cklx_p_span">一般成人</span></label>
+                      <label><input type="checkbox"/> <span>学生</span></label>
+                      <label><input type="checkbox"/> <span>青年</span></label>
+                      <label><input type="checkbox"/> <span>劳务</span></label>
+                      <label><input type="checkbox"/> <span>移民</span></label>
+                      <label><input type="checkbox"/> <span>海员</span></label>
+                      <label><input type="checkbox"/> <span class="cklx_p_span">特殊身份</span></label>
+                 </p> 
+                 <p>  <label><input type="checkbox"/> <span>儿童</span></label>
+                      <label><input type="checkbox"/> <em>返点与成人一致</em>
+                      <label><input type="checkbox"/> <span class="cklx_p_span1">可开无返点</span></label>
+                      <label><input type="checkbox"/> <span class="cklx_p_span1">可开无奖励</span></label>
+                      <label><input type="checkbox"/> <span class="cklx_p_span">不可开</span></label>
+                 </p> 
+                 <p>  <label><input type="checkbox"/> <span>婴儿</span></label>
+                      <label><input type="radio" name="kai"/> <span>可开</span></label>
+                      <label><input type="radio" name="kai"/> <span>不可开</span></label>
+                 </p> 
+             </div>        
+         </div>
+         <div class="office clearfix">
+            <p class="office_p"> <span>OFFICE号：</span> <select><option>SHA255</option></select> <a href="#">添加</a></p>
+             <div class="office_bottom">
+                <p><span>SHA255</span> <em>x</em> </p>
+                <p><span>SHA836</span> <em>x</em> </p>
+             </div>
+         </div>
+         <div style="clear:both;"></div>
+         <div class="shifou">
+            <span class="shifou_span">是否需授权：</span> <label><input type="checkbox"/> <span class="shifou_span_1">编码需要授权</span></label>
+         </div>
+         <p class="sf_p">&nbsp;</p>
+         <p class="mudong_p clearfix"><strong>航空公司：</strong>  <select><option>MU东航</option></select></p>
+         
+         <div class="jichang clearfix">
+            <b>出发机场：</b>
+            <div class="xuanzepaichu">
+               <p> <a href="#">选择</a> <a href="#" class="xuanzepaichu_a">编辑</a> </p>
+               <textarea>&nbsp;</textarea>
+            </div>
+            <div class="paichu">
+                <p> <a href="#">排除</a> <a href="#" class="xuanzepaichu_a">编辑</a> </p>
+                <textarea>&nbsp;</textarea>
+            </div>
+         </div>
+          <div class="jichang clearfix">
+            <b>到达机场：</b>
+            <div class="xuanzepaichu">
+               <p> <a href="#">选择</a> <a href="#" class="xuanzepaichu_a">编辑</a> </p>
+               <textarea>&nbsp;</textarea>
+            </div>
+            <div class="paichu">
+                <p> <a href="#">排除</a> <a href="#" class="xuanzepaichu_a">编辑</a> </p>
+                <textarea>&nbsp;</textarea>
+            </div>
+         </div>
+         
+         <div class="xzcfjc clearfix">  <!-- class="xzcfjc"的div是只有点选 “选择出发机场”中的两个编辑时才能出现此内容！-->
+            <p><span>选择出发机场</span>  <em>×</em></p>
+            <ul class="abcdef">
+               <li class="abcdef_li">ABCDEF</li>  <li>GHIJKL</li> <li>MNOPQR</li> <li class="abcdef_li_1">STUVWXYZ</li>
+            </ul>
+            <div class="tab_div">
+            <table cellpadding="0" cellspacing="0" class="tab_cife">
+                <tr>
+                   <td> <a href="#" class="tab_cife_a">鞍山</a> </td>
+                   <td> <a href="#">安阳</a> </td>
+                   <td> <a href="#">安庆</a> </td>
+                   <td> <a href="#">安庆</a> </td>
+                </tr>
+                <tr>
+                   <td> <a href="#">阿坝</a> </td>
+                   <td> <a href="#">安顺</a> </td>
+                   <td> <a href="#">阿里</a> </td>
+                   <td> <a href="#">阿里</a> </td>
+                </tr>
+                <tr>
+                   <td> <a href="#">阿拉尔</a> </td>
+                   <td> <a href="#">阿拉善</a> </td>
+                   <td> <a href="#">北京</a> </td>
+                   <td> <a href="#">北京</a> </td>
+                </tr>
+                <tr>
+                   <td> <a href="#">保定</a> </td>
+                   <td> <a href="#">宝鸡</a> </td>
+                   <td> <a href="#">包头</a> </td>
+                   <td> <a href="#">包头</a> </td>
+                </tr>
+            </table>
+            </div>
+            <div class="radio_div">
+               <p> <label><input type="radio" name="3_1"  checked="checked" id="qx" /> <i>全选</i></label>  <label><input type="radio" name="3_1" /> <i>反选</i></label>  </p>
+               <div class="radio_a"> <a href="#" class="radio_a_1">保&nbsp;存</a> <a href="#" class="radio_a_2">取&nbsp;消</a> </div>
+            </div>
+         </div>
+         
+         <div class="xzcfjc clearfix">   <!-- class="xzcfjc"的div是只有点选 “选择到达机场”中的两个编辑时才能出现此内容！-->
+            <p><span>选择到达机场</span>  <em>×</em></p>
+            <div class="qygj">
+               <b>区域：</b> <select><option>亚洲</option></select>
+               <b>国家：</b> <select><option>全部</option></select> 
+            </div>
+            <div class="tab_div">
+            <table cellpadding="0" cellspacing="0" class="tab_cife">
+                <tr>
+                   <td colspan="4"> <b>机场：</b> </td>
+                </tr>
+                <tr>
+                   <td> <a href="#" class="tab_cife_a">东京</a> </td>
+                   <td> <a href="#">大阪</a> </td>
+                   <td> <a href="#">名古屋</a> </td>
+                   <td> <a href="#">安庆</a> </td>
+                </tr>
+                <tr>
+                   <td> <a href="#">上海</a> </td>
+                   <td> <a href="#">北京</a> </td>
+                   <td> <a href="#">首尔</a> </td>
+                   <td> <a href="#">阿里</a> </td>
+                </tr>
+                <tr>
+                   <td> <a href="#">巴黎</a> </td>
+                   <td> <a href="#">北京</a> </td>
+                   <td> <a href="#">北京</a> </td>
+                   <td> <a href="#">北京</a> </td>
+                </tr>
+            </table>
+            </div>
+            <div class="radio_div">
+               <p> <label><input type="radio" name="3"  checked="checked" /> <i>全选</i></label>  <label><input type="radio" name="3" /> <i>反选</i></label> </p>
+               <div class="radio_a"> <a href="#" class="radio_a_1">保&nbsp;存</a> <a href="#" class="radio_a_2">取&nbsp;消</a> </div>
+            </div>
+         </div>         
+         
+         <div class="fchbxz"> <!-- class="fchbxz"的div只有点选了“往返”、“单程及往返”才会出现！-->
+          <div class="hbxz clearfix">
+             <p class="hbxz_p"> <span>去程航班限制：</span> 
+                               <label><input type="radio" checked="checked" name="bh"/> 包含</label>
+                               <label><input type="radio" name="bh" /> 排除</label>
+             </p>
+             <p class="hbxz_textarea"> <textarea>请输入文字...</textarea></p>
+         </div>
+         <div class="xingqi clearfix">  
+             <b>去程适用班期：</b>
+             <label><input type="checkbox" /> 周一</label>
+             <label><input type="checkbox" /> 周二</label>
+             <label><input type="checkbox" /> 周三</label>
+             <label><input type="checkbox" /> 周四</label>
+             <label><input type="checkbox" /> 周五</label>
+             <label><input type="checkbox" /> 周六</label>
+             <label><input type="checkbox" /> 周日</label>
+         </div>
+         </div>
+         
+         <div class="hbxz clearfix">
+             <p class="hbxz_p"> <b>返程航班限制：</b> 
+                               <label><input type="radio" checked="checked" name="pai"/> 包含</label>
+                               <label><input type="radio" name="pai"/> 排除</label>
+             </p>
+             <p class="hbxz_textarea"> <textarea>请输入文字...</textarea></p>
+         </div>
+         <div class="xingqi clearfix"> 
+             <b>返程适用班期：</b>
+             <label><input type="checkbox" /> 周一</label>
+             <label><input type="checkbox" /> 周二</label>
+             <label><input type="checkbox" /> 周三</label>
+             <label><input type="checkbox" /> 周四</label>
+             <label><input type="checkbox" /> 周五</label>
+             <label><input type="checkbox" /> 周六</label>
+             <label><input type="checkbox" /> 周日</label>
+         </div>
+         <div class="sekuai clearfix">
+            <p class="cangwei clearfix"><b>去程适用舱位：</b>
+                               <label><input type="radio" checked="checked" name="xuan" /> 全选</label> 
+                               <label><input type="radio" name="xuan" /> 反选</label>
+            </p>
+            <ul class="sekuai_ul">
+               <li>A</li>
+               <li>B</li>
+               <li>C</li>
+               <li>D</li>
+               <li>E</li>
+               <li class="sekuai_ul_li">F</li>
+               <li>G</li>
+               <li>H</li>
+               <li>I</li>
+               <li>J</li>
+               <li>K</li>
+               <li>L</li>
+               <li class="sekuai_ul_li">M</li>
+               <li>N</li>
+               <li>O</li>
+               <li>P</li>
+               <li>Q</li>
+               <li>R</li>
+               <li>S</li>
+               <li>T</li>
+               <li>U</li>
+               <li>V</li>
+               <li>W</li>
+               <li>X</li>
+               <li>Y</li>
+               <li>Z</li>
+            </ul>
+         </div>
+         
+         <div class="zcgz clearfix">  <!--此处要做交互效果，单程的内容为class="danchengcontent" ，往返和单程及往返的内容是一样的 class="wangfancontent"-->
+           <big>政策规则：</big> 
+           <div class="feilu">
+             <p> <b>代理费：</b> <input type="text" value="2" />  <label>%</label>  <b>开票费：</b> <input type="text" value="10" />  <label>元</label></p>
+             <p> <b>奖励扣率：</b> <input type="text" value="2" />  <label>%</label>  <b>奖励金额：</b> <input type="text" value="10" />  <label>元</label></p>
+           </div>
+         </div>
+                  
+         <!--单程内容开始-->
+         <div class="danchengcontent clearfix">
+              <div class="spa">
+                  <p> ·&nbsp;&nbsp;&nbsp;SPA联程</p>
+                  <div> <span>同一承运人</span> <label><input type="radio" name="yu"/> 与实际承运第一国际段同样计入奖励</label> 
+                                               <label><input type="radio" name="yu"/> 该段不计入奖励(按NUC值去除)</label> 
+                  </div>
+                  <div> <span>非同一承运人</span> <label><input type="radio" name="fei"/> 与实际承运第一国际段同样计入奖励</label> 
+                                                 <label><input type="radio" name="fei"/> 该段不计入奖励(按NUC值去除)</label> 
+                  </div>
+              </div>
+              <div class="addon">
+                  <p> ·&nbsp;&nbsp;&nbsp;ADDON</p>
+                  <div> <span>同一承运人</span> <label><input type="radio" name="gai"/> 该段计入整体奖励</label> 
+                                               <label><input type="radio" name="gai"/> 该段不计入整体奖励</label> </div>
+                  <div> <span>非同一承运人</span> <label><input type="radio" name="bu"/> 该段计入整体奖励</label> 
+                                                <label><input type="radio" name="bu"/> 该段不计入整体奖励</label> </div>
+              </div>
+              <div class="daimagongxiang">
+                  <p> ·&nbsp;&nbsp;&nbsp;代码共享</p>
+                  <div> <span>代码共享</span> <label><input type="radio" name="quan"/> 全程不计奖励</label>  
+                                             <label><input type="radio" name="quan"/> 全程计入奖励</label> 
+                                             <label><input type="radio" name="quan"/> 代码共享段无奖励</label> 
+                  </div>
+              </div>
+         </div>
+          <!--单程内容结束-->
+          
+          <!--往返和单程及往返的内容开始-->
+         <div class="wangfancontent clearfix">
+              <div class="wffd">
+                  <p> ·&nbsp;&nbsp;&nbsp;往返-返点</p>
+                  <div> <span>缺口程</span> <label><input type="radio" name="qu"/> <i>取1/2值</i></label> <label><input type="radio" name="qu"/> <i>取最小值</i></label> 
+                                           <label><input type="radio" name="qu" /> <em>按各段实际奖励分别计入(NUC值)</em></label> 
+                  </div>
+                  <div> <span>混舱</span> <label><input type="radio" name="min"/> <i>取1/2值</i></label> <label><input type="radio" name="min"/> <i>取最小值</i></label> 
+                                          <label><input type="radio" name="min"/> <em>按各段实际奖励分别计入(NUC值)</em></label> 
+                  </div>
+                  <div> <span>跨季</span>  <label><input type="radio" name="kua"/> <i>取1/2值</i></label> <label><input type="radio" name="kua"/> <i>取最小值</i></label> 
+                                           <label><input type="radio" name="kua"/> <em>按各段实际奖励分别计入(NUC值)</em></label> 
+                  </div>
+              </div>
+              <div class="wffd">
+                  <p> ·&nbsp;&nbsp;&nbsp;往返-返款</p>
+                  <div> <span>缺口程</span> <label><input type="radio" name="lei"/> <i>累加</i></label> <label><input type="radio" name="lei"/> <i>单项最小值</i></label> 
+                                           <label><input type="radio" name="lei"/> <em>单项最大值</em></label> 
+                  </div>
+                  <div> <span>混舱</span>  <label><input type="radio" name="max"/> <i>累加</i></label> <label><input type="radio" name="max"/> <i>单项最小值</i></label> 
+                                           <label><input type="radio" name="max"/> <em>单项最大值</em></label> 
+                  </div>
+                  <div> <span>跨季</span> <label><input type="radio" name="ji"/> <i>累加</i></label> <label><input type="radio" name="ji"/> <i>单项最小值</i></label> 
+                                           <label><input type="radio" name="ji"/> <em>单项最大值</em></label> 
+                  </div>
+              </div>
+              <div class="open">
+                  <p> ·&nbsp;&nbsp;&nbsp;OPEN</p>
+                  <div> <span>OPEN</span> <label><input type="radio" name="shi"/> 与实际承运第一国际段同样计入奖励</label> 
+                                          <label><input type="radio" name="shi"/> 按跨季算</label> 
+                  </div>
+              </div>
+              <div class="spa">
+                  <p> ·&nbsp;&nbsp;&nbsp;SPA联程</p>
+                  <div> <span>同一承运人</span> <label><input type="radio" name="yu"/> 与实际承运第一国际段同样计入奖励</label> 
+                                               <label><input type="radio" name="yu"/> 该段不计入奖励(按NUC值去除)</label> 
+                  </div>
+                  <div> <span>非同一承运人</span> <label><input type="radio" name="fei"/> 与实际承运第一国际段同样计入奖励</label> 
+                                                 <label><input type="radio" name="fei"/> 该段不计入奖励(按NUC值去除)</label> 
+                  </div>
+              </div>
+              <div class="addon">
+                  <p> ·&nbsp;&nbsp;&nbsp;ADDON</p>
+                  <div> <span>同一承运人</span> <label><input type="radio" name="gai"/> 该段计入整体奖励</label> 
+                                               <label><input type="radio" name="gai"/> 该段不计入整体奖励</label> </div>
+                  <div> <span>非同一承运人</span> <label><input type="radio" name="bu"/> 该段计入整体奖励</label> 
+                                                <label><input type="radio" name="bu"/> 该段不计入整体奖励</label> </div>
+              </div>
+              <div class="daimagongxiang">
+                  <p> ·&nbsp;&nbsp;&nbsp;代码共享</p>
+                  <div> <span>代码共享</span> <label><input type="radio" name="quan"/> 全程不计奖励</label>  
+                                             <label><input type="radio" name="quan"/> 全程计入奖励</label> 
+                                             <label><input type="radio" name="quan"/> 代码共享段无奖励</label> 
+                  </div>
+              </div>
+         </div>
+          <!--往返和单程及往返的内容结束-->
+          
+         <div class="fdbsy clearfix">
+            <b>返点不适用：</b>
+            <label><input type="checkbox" />三方协议</label>
+            <label><input type="checkbox" />套票</label>
+            <label><input type="checkbox" />小团</label>
+            <label><input type="checkbox" />整团</label>
+            <label><input type="checkbox" />SOTO</label>
+         </div>
+         <p class="p_1">&nbsp;</p>
+         <div class="remark">
+            <b>公开备注：</b>
+            <textarea> &nbsp; </textarea>
+         </div>
+         <div class="remark">
+            <b>内部备注：</b>            
+            <textarea>签转回收促销费，其他快捷备注。再写点其他什么的。</textarea>
+         </div>
+         <div class="tishi_bottom">
+            <span>&nbsp;</span>
+            <p>提示：点击“保存”完成发布（或提交审核），点击“保存并继续”完成发布（或提交审核），保留在当前页面，页面内容不清除，点击清除恢复空白页面。</p>
+         </div>
+         
+      </div> <!--middlecontent结束-->
+      </div><!--mainContent结束-->
+
+    </div>
+		
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+</body>
+</html>

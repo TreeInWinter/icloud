@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>机票 国内机票 公务机</title>
+<meta charset="utf-8" />
+<link href="/static/css/kendo.common.css" rel="stylesheet" />
+<link href="/static/css/kendo.gray.css" rel="stylesheet" />
+<link href="/static/css/common.css" rel="stylesheet" />
+<link href="/static/css/b2b.css" rel="stylesheet" />
+<link href="/static/css/kendo.reset.css" rel="stylesheet" />
+<link href="/static/css/order.css" rel="stylesheet">
+
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/kendo.web.js"></script>
+<script type="text/javascript" src="/static/js/plugins/jquery.fixedBar.js"></script>
+<script type="text/javascript" src="/static/js/global.js"></script>
+<script type="text/javascript" src="/static/js/flight.js"></script>
+
+<!--[if lt IE 9]> 
+        <link rel="stylesheet" href="/static/css/ie.css" /> 
+        <script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+        <![endif]-->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+<!-- @CLB@ -->
+</head>
+<body> 
+<div id="extHeader">
+    <div></div>
+</div>
+
+<div id="container">
+    <div class="header">
+        <h1></h1>
+        <div>
+            <span>你好,${name}</span>
+            <a href="javascript:void(0);">退出</a>
+        </div>
+        <ul id="top_menu">
+            <li><a href="javascript:void(0);">国内机票</a></li>
+            <li><a href="javascript:void(0);">国际机票</a></li>
+            <li><a href="javascript:void(0);">酒店</a></li>
+            <li><a href="javascript:void(0);">票证中心</a></li>
+            <li><a href="javascript:void(0);">财务管理</a></li>
+            <li><a href="javascript:void(0);">客户管理</a></li>
+            <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+        </ul>
+        <ol class="sub_menu">
+            <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+            <li><a href="javascript:void(0);">公司信息</a></li>
+            <li><a href="javascript:void(0);">组织架构</a></li>
+            <li><a href="javascript:void(0);">角色维护</a></li>
+            <li><a href="javascript:void(0);">基础数据</a></li>
+        </ol>
+        <div id="message">
+            <a href="javascript:void(0);">消息</a>
+            <span>New</span>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="sub_menu_bar"></div>
+    <div id="mainContent">
+        <div class="actions block">
+            <div class="col col-l sep-r">
+                <button class="btns btn-return">返回</button>
+            </div>
+            <div class="col col-r sep-l">
+                <a href="javascript:;" class="button_secondary adaptiveButton small">
+                    <span class="left"></span>
+                    <span class="center">取消受理</span>
+                    <span class="right"></span>
+                </a>
+                <a href="javascript:;" class="ac-refuse button_secondary adaptiveButton small">
+                    <span class="left"></span>
+                    <span class="center">退回</span>
+                    <span class="right"></span>
+                </a>
+                <a href="javascript:;" class="ac-create button_secondary adaptiveButton small">
+                    <span class="left"></span>
+                    <span class="center">审核通过</span>
+                    <span class="right"></span>
+                </a>
+            </div>
+        </div>
+
+        <div class="block block0 clearfix">
+            <div class="col col-l">
+                <div class="row">
+                    <span class="text1">询价单号：<strong>12311321983921</strong></span>
+                </div>
+                <div class="row">
+                </div>
+            </div>
+            <div class="col col-r">
+                <ul class="flat-list">
+                    <li>
+                    <div class="instr">
+                        <span>创建</span>
+                        <span class="highlight-fl">审核</span>
+                        <span>建单</span>
+                    </div> 
+                    </li>
+                    <li>
+                    <div class="instr">
+                        <span>退回</span>
+                    </div> 
+                    </li><li class="count"><span>关联订单</span><strong>3</strong></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="block block3 block-module">
+            <div class="block-title"><span class="block-title-orange">航班信息</span>
+            </div>
+            <div class="row">
+                <table class="grid-table" style="width:600px;">
+                    <tr class="thead">
+						<td>出发城市</td>
+						<td>到达城市</td>
+						<td>出发日期</td>
+					</tr>
+					<tr>
+					  <td>PEK T3</td>
+					  <td>PVG T2</td>
+					  <td>2013-04-01</td>
+					</tr>
+					<tr>
+					  <td>PEK T3</td>
+					  <td>PVG T2</td>
+					  <td>2013-04-01</td>
+					</tr>
+                </table> 
+            </div>
+        </div>
+
+
+        <div class="block block-module">
+            <div class="block-title">联系人信息</div>    
+            <div class="row">
+                <span class="txt">联系人姓名：离大将</span>
+                <span class="txt">手机号码：1238841</span>
+            </div>
+        </div>
+
+        <div class="block block-module">
+            <div class="block-title">备注</div>
+            <div class="row">
+                <textarea id="" name="" style="width:100%;height:100px;"></textarea>
+            </div>
+        </div>
+
+
+        <script type="text/x-kendo-template" id="ac-refuse-template">
+            <div class="row"><strong>审核退回原因：</strong></div>
+            <div class="row"><textarea id="" name="" style="width:400px;"></textarea></div>
+            <div class="row" style="text-align:right;">
+                <button class="btns button_1_2">提 交</button> 
+                <button class="btns button_2_2">取 消</button> 
+            </div>
+        </script>
+
+        <script type="text/x-kendo-template" id="ac-create-template">
+            <div class="row"><strong>PNR导入：</strong>
+                <input id="" style="width:340px" type="text" name="">
+            </div>
+            <div class="row" style="text-align:right;">
+                <button class="btns button_1_2">创建订单</button> 
+                <button class="btns button_2_2">取 消</button> 
+            </div>
+        </script>
+
+        <script>
+$(function(){
+
+	$('.ac-create').on('click',function(){
+		$(this).children('.center').text('生成订单');	
+	});
+
+    new PopWindow('.ac-refuse',{
+         title:'审核退回',
+         template:'#ac-refuse-template',
+         width:470
+    }).init();
+
+    new PopWindow('.ac-create',{
+         title:'创建订单',
+         template:'#ac-create-template',
+         width:470
+    }).init();
+})
+        </script>
+
+
+    </div>
+
+</div>
+
+<div id="extFooter">
+    <div>
+        <p>
+        <a href="javascript:void(0);">关于我们</a>&nbsp;|
+        <a href="javascript:void(0);">微博</a>&nbsp;|
+        <a href="javascript:void(0);">服务条款</a>&nbsp;|
+        <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+        </p>
+        <p>客户服务热线:400-720-6666</p>
+    </div>
+</div>
+</body>
+</html>

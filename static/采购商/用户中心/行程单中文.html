@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>天地行 采购商 用户中心 行程单中文</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+
+<link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+<link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+<link rel="stylesheet" href="../../static/css/store_ucenter.css" media="screen" />
+
+<link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+<link rel="stylesheet" href="../../static/css/kendo.store.css" />
+
+<script type="text/javascript" src="../../static/js/jquery.min.js"></script>    
+<script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+<script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+<script type="text/javascript" src="../../static/js/global.js"></script>    
+
+<!--[if IE]>
+    <script src="../../static/js/vendor/IE7.min.js"></script>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+<script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+
+<script type="text/javascript" src="../../static/js/store/store.js"></script>
+
+
+<script>
+$(function(){
+    $('.xcd-print').fixedBar({inverse:true})
+})
+</script>
+
+</head>
+<body>
+
+<div class="main-wrapper">
+    <header class="main-header">
+        <a class="logo" href="/"><h1>天地行</h1></a>
+        <nav class="main-nav">
+            <ul class="clearfix">
+                <li class="first"><a herf="#">首页</a></li>
+                <li><a herf="#">国内机票</a></li>
+                <li><a herf="#">国际机票</a></li>
+                <li><a herf="#">酒店</a></li>
+                <li><a herf="#">保险</a></li>
+            </ul> 
+        </nav>
+        <nav class="main-links">
+            <ul class="clearfix">
+                <li class="first"><a href="#">订单管理</a></li>
+                <li><a href="#">分销管理</a></li>
+                <li><a href="#">电子钱包</a></li>
+                <li><a href="#">统计报表</a></li>
+                <li><a href="#">客服服务</a></li>
+                <li><span class="hyper-link"><u>lfdak</u>
+                    <i class="arrow-down"></i>
+                    <div class="hyper-text">
+                        <a href="#">提交审核</a>
+                        <a href="#">申请出票</a>
+                        <a href="#">提交审核</a>
+                        <a href="#">提交审核</a>
+                    </div>
+                </span></li>
+                <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+    </header>
+    <section class="main-body clearfix">
+        <aside class="us-nav">
+            <nav>
+                <h3>用户中心</h3>
+                <div class="us-bind"><a href="#">手机已绑定</a>&#12288;<a class="text1" href="#"><i class="ucnav_03"></i>邮箱未绑定</a></div>
+                <dl>
+                    <dt><i class="ucnav_07"></i>订单管理</dt>
+                    <dd><a href="#">当日所有订单</a></dd>
+                    <dd><a href="#">国内机票订单</a></dd>
+                    <dd><a href="#">国际机票订单</a></dd>
+                    <dd><a href="#">酒店订单</a></dd>
+                </dl>
+                <dl>
+                    <dt><i class="ucnav_10"></i>询价单管理</dt>
+                    <dd><a href="#">国内机票询价单</a></dd>
+                    <dd><a href="#">国际机票询价单</a></dd>
+                    <dd><a href="#">酒店询价单</a></dd>
+                </dl>
+
+                <dl>
+                    <dt><i class="ucnav_12"></i>电子钱包</dt>
+                    <dd><a href="#">账户信息</a></dd> <dd><a href="#">账户充值</a></dd>
+                </dl>
+
+                <dl>
+                    <dt><i class="ucnav_15"></i>票据管理</dt>
+                    <dd><a class="current" href="#">行程单</a></dd>
+                    <dd><a href="#">发票</a></dd>
+                </dl>
+
+                <dl>
+                    <dt><i class="ucnav_17"></i>统计报表</dt>
+                    <dd><a href="#">财务报表</a></dd>
+                    <dd><a href="#">机票业务</a></dd>
+                    <dd><a href="#">酒店业务</a></dd>
+                    <dd><a href="#">分销业务</a></dd>
+                </dl>
+
+                <dl>
+                    <dt><i class="ucnav_19"></i>分销商管理</dt>
+                    <dd><a href="#">分销商管理</a></dd>
+                </dl>
+
+                <dl>
+                    <dt><i class="ucnav_22"></i>账户资料</dt>
+                    <dd><a href="#">信息维护</a></dd>
+                    <dd><a href="#">消息设置</a></dd>
+                </dl>
+
+                <dl>
+                    <dt><i class="ucnav_26"></i>我的工具</dt>
+                    <dd><a class="ic-j" href="#"><i class="ucnav_29"></i>常旅客管理</a></dd>
+                    <dd><a class="ic-j" href="#"><i class="ucnav_32"></i>短消息</a></dd>
+                </dl>
+            </nav>
+        </aside>
+        <main class="us-content">
+        <h1 class="us-title">国际机票A4打印</h1>
+        <div class="us-body">
+            <aside>
+                <ul class="tab_change clearfix">
+                    <li class="currentState"><em><a href="#">中文版</a></em></li>
+                    <li><em><a href="#">英文版</a></em></li>
+                </ul>
+            </aside>
+
+            <section class="us-result xcd-content">
+                <div class="xcd-logo"></div>
+                <hr>
+                <h1>电子客票行程单</h1>
+                <table class="xcd-table1">
+                    <tr><td width="450"><s>航空公司记录编号：</s>K3GKZ6</td>	<td><s>订座记录编号：</s>JPTG9C</td></tr>
+                    <tr><td><s>旅客姓名：</s>CHU/KER TAI</td>	<td><s>票号：</s>297-3982243670</td></tr>
+                    <tr><td><s>身份识别代码：</s></td>	<td><s>联票：</s></td></tr>
+                    <tr><td>&nbsp;</td> <td>&nbsp;</td></tr>
+                    <tr><td><s>出票航空公司：</s>中华航空公司</td>	<td><s>出票时间：</s>05JUL13</td></tr>
+                    <tr><td>&nbsp;</td> <td>&nbsp;</td></tr>
+                    <tr><td><s>出票代理人：</s>上海不夜城旅行社有限公司</td>	<td><s>航协代码：</s>08307736</td></tr>
+                    <tr><td colspan="2"><s>代理人地址：</s>上海市长寿路699号3楼</td></tr>
+                    <tr><td><s>电话：</s>021 62772009</td>	<td><s>传真：</s>021 62776189</td></tr>
+                </table>
+                <hr>
+                <table class="xcd-table2">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">始发地/目的地</th> 
+                            <th rowspan="2">航班</th>
+                            <th rowspan="2">座位等级</th>
+                            <th rowspan="2">日期</th>
+                            <th rowspan="2">起飞时间</th> 
+                            <th rowspan="2">到达时间</th>
+                            <th rowspan="2">有效期</th> 
+                            <th rowspan="2">客票状态</th>
+                            <th rowspan="2">行李</th> 
+                            <th colspan="2" style="border:0;text-align:center;">航站楼</th>
+                        </tr>
+                        <tr>
+                            <th style="text-align:center;padding-bottom:10px">起飞</th> 
+                            <th style="text-align:center;padding-bottom:10px">到达</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>台北松山机场</td>
+                        <td>CI0201</td>
+                        <td>J</td>
+                        <td>09JUL</td>
+                        <td>1230</td>
+                        <td></td>
+                        <td>/31DEC3</td>
+                        <td>OK</td>
+                        <td>30K</td>		
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>上海虹桥</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <hr>
+                <table class="xcd-table3">
+                    <tr>
+                        <td><s>票价计算：</s></td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left:50px;">09JUL13TPE CI SHA918.23NUC918.23END ROE29.837800</td>
+                    </tr>
+                </table>
+                <table class="xcd-table4">
+                    <tr>
+                        <td><s>付款方式：</s>CASH</td>
+                        <td width="50">税款：</td>
+                        <td>PD62<br>PD265</td>
+                    </tr>
+                </table>
+                <table class="xcd-table5">
+                    <tr>
+                        <td><s>机票款：</s>TWD27398</td>
+                    </tr>
+                    <tr>
+                        <td><s>总 额：</s>CNY350</td> 
+                    </tr>
+                    <tr>
+                        <td><s style="float:left;">限制条件：</s><div style="margin-left:70px;">NONENDO/RFND/REISSUE CHRG OB VLD BETWEEN 01A PR13-31DEC13VLD ON ALL SHA WUX-TWN VV SHA-TWN VV INVLD CODESHARE FLT</div></td> 
+                    </tr>
+                </table>
+                <hr>
+                <table class="xcd-table6">
+                    <tr>
+                        <td><s>须知：</s></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                            1、发送JP到10669018（本条免费） 得到服务列表，根据提示回复选择相关的服务-电子客票验真或电子客票状态跟踪 （一旦机票状态发生任何改变，我们将第一时间短信通知您）<br>
+                            2、发送YZ+有效身份证件号码或YZ+电子客票票号到10669018（每条一元）验明电子客票真伪<br>
+                            3、发送GZ+有效身份证件号码或GZ+电子客票票号到10669018（每条一元）获得电子客票全程状态跟踪（一旦机票状态 发生任何改变，我们将第一时间短信通知您）
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="xcd-print">
+                    <a class="adaptiveButton brightRed_btn">
+                        <span class="left"></span>
+                        <span class="center">打 印</span>
+                        <span class="right"></span>
+                    </a>
+                </div>
+            </section>
+
+        </div>
+
+
+
+
+        </main>
+    </section>
+    <footer class="main-footer">
+        <center>
+            <a href="#">隐私问题</a>
+            <i class="bar">|</i>
+            <a href="#">常见问题</a>
+            <i class="bar">|</i>
+            <a href="#">关于我们</a>
+            <i class="bar">|</i>
+            <a href="#">媒体中心</a>
+            <i class="bar">|</i>
+            <a href="#">联系我们</a>
+        </center>
+        <center class="copyright">
+            Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+        </center>
+    </footer>
+</div>
+
+
+</body>
+</html>
+

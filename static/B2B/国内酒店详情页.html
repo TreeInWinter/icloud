@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>国内酒店搜索页</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<link href="/static/css/phase1/b2b_common.css" rel="stylesheet" />
+	
+	
+	<!-- Common Kendo UI Web CSS -->
+	<link href="/static/css/kendo.common.css" rel="stylesheet" />
+	<link href="/static/css/kendo.default.css" rel="stylesheet" />
+	<link href="/static/css/phase1/hotel.css" rel="stylesheet" />
+
+    </head>
+    <body>
+	
+	<div id="container">
+		<div class="top_header">
+			<h1></h1>
+			<div class="profile">
+				<span>欢迎 <a href="javascript:void(0);">吕小名</a></span>
+				<span><a href="登陆.html">退出</a></span>
+
+			</div>
+		
+	    </div>
+		<div class="clear"></div>
+	    <ul id="menu">
+			<li>
+				<a href="国内机票搜索页.html">国内机票</a>
+				
+			</li>
+			<li>
+				<a href="javascript:void(0);">国际机票</a>
+			</li>
+			<li class="k-state-selected">
+				<a href="javascript:void(0);">酒店</a>
+				<ul>
+					<li><a href="国内酒店搜索页.html">国内酒店</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);">PNR操作</a>
+				<ul>
+					<li><a href="PNR导入生成预订单.html">PNR导入生成预订单</a></li>
+					<li><a href="黑屏指令粘贴生成预订单.html">黑屏指令粘贴生成预订单</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);">订单管理</a>
+				<ul>
+					<li><a href="订单列表.html">订单列表</a></li>
+					<li><a href="手工录入订单.html">手工录入订单</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);">客户管理</a>
+				<ul>
+					<li>供应商</li>
+					<li><a href="采购商.html">采购商</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);">系统管理</a>
+				<ul>
+					<li>政策管理</li>
+					<li><a href="用户管理.html">用户管理</a></li>
+					<li><a href="角色管理.html">角色管理</a></li>
+				</ul>
+			</li>
+		</ul>
+	    
+		<div class="breadcrum"> &gt;&gt; <a href="国内酒店搜索页.html">国内酒店</a> &gt;&gt;  上海嘉汇华美达广场大酒店 </div>
+		
+		<div class="detailMain">
+			
+			<div class="h-brief clx">
+				<ul class="hotelName">
+					<li class="name">
+						<h1>
+							<i class="crown"></i> 上海嘉汇华美达广场大酒店
+						</h1>
+					</li>
+		
+					<li class="addr"><span
+						title="上海市徐汇区天钥桥路325-327号（徐家汇地区，近南丹东路,腾飞广场旁）">
+							地址：上海市徐汇区天钥桥路325-327号（徐家汇地区...</span> <a href="/shanghai/center020109/"
+						title="徐家汇" target="_blank" class="area"> 徐家汇，</a> <a
+						href="/shanghai/center020149/" title="八万人体育场" target="_blank"
+						class="area"> 八万人体育场</a> &nbsp;<a href="#?" class="map"
+						id="mapDetial"><i></i>地图</a>&nbsp;</li>
+				</ul>
+				<div class="hotelPrice" id="divHotelPrice">
+					<span method="coupon" class="iconFan">55元</span><span class="none"><div
+							class="sf_voucher">
+							<!--<span class="fanIcon_help mt5" style="cursor:auto; vertical-align:top"></span>-->
+							<span>用“消费券”预订此房型，每间房每晚返还55元现金！结账后3个工作日内可至您的艺龙账户提现。&nbsp;<a
+								href="http://www.elong.com/promotion/web/ecoupon/index.html?inid=dh:couponh:cc:ecoupon:090901:1201hrightbanner1_cn"
+								target="_blank">如何获得消费券</a></span>
+							<div class="clear"></div>
+						</div></span><span class="price"><span class="fh">￥</span>580<span
+						class="fb">起</span></span><a href="#room" method="GoLowestPriceRoom"><span
+						class="btn">立即预订</span></a>
+				</div>
+			</div>
+			<!-- Hotel Pic end -->
+			<a name="room" id="room"></a><a name="room" id="iTop"></a>
+	
+			
+	
+			<div class="" id="roomTypes">
+				<!--detailRpList-->
+	
+				<ul style="background: #fefefe;" id="dateRegion" class="alterDate">
+					<li>入住日期<input type="text" value="2013-05-30" class="dateTxt"
+						method="checkInDateApply" id="checkInDateApply" name="">退房日期<input
+						type="text" value="2013-05-31" class="dateTxt"
+						method="checkOutDateApply" id="checkOutDateApply" name=""><input
+						type="button" value="修改日期" method="modify" id="Revise"
+						class="button" name=""></li>
+					<li id="promotionHtml" class="cuxiao"></li>
+				</ul>
+				<!--detailRpList-->
+				<div id="RpListArea">
+					<div style="display: none;" id="noRoom" class="noRoom">
+						<span class="icon"></span>对不起，该酒店在此期间部分日期没有空余房间了，建议您修改日期试试。
+					</div>
+					<div id="divRoomLoading" class="roomLoading" style="display: none;">
+						<span class="loading"></span>正在为您努力加载中...
+					</div>
+					<div id="divRoomList" class="detailRpList">
+						<ul class="title">
+							<li class="tw1">房型</li>
+							<li class="tw2">床型</li>
+							<li class="tw2">宽带</li>
+							<li class="tw2">早餐</li>
+							<li class="tw3">日均价</li>
+							<li class="tw4"></li>
+						</ul>
+						<ul class="roomTypes">
+							<li sid="19766" rpid="161735" isshadow="false" roomid="1052"
+								isshow="1" class="rbox  ">
+								<p class="rw1">
+									<img width="70" height="50" method="RoomDetail" alt="商务房(周年特惠)"
+										onerror="this.src='http://www.elongstatic.com/hotels/pic/no_pics_CN.gif'"
+										src="http://www.elongstatic.com/hotels/pic/room_no.png">
+								</p>
+								<p class="rw2 ">
+									<a method="RoomDetail" href="javascript:void(0);">商务房(周年特惠)<span
+										class="arrow"></span></a>
+								</p>
+								<p class="rw3">双/大</p>
+								<p class="rw3">免费</p>
+								<p class="rw3">无早</p>
+								<p class="rw4">
+									<span method="AvgPrice" class="price"><dfn>￥</dfn>580</span>
+								</p>
+								<p class="rw5">
+									<span islongcui="0" method="coupon" class="iconFan">55元</span>
+									&nbsp;
+								</p>
+								<p class="rw6">
+									<span method="danbao" class="iconDanbao"></span> &nbsp;
+								</p>
+								<p class="rw7">
+									<a class="button" href="javascript:void(0);" title=""
+										method="Order">预订</a> <br>
+								</p>
+								<div roomid="1052" mark="d" class="roomImg">
+									<span class="arrow"></span>
+									<ul class="imgList">
+									</ul>
+									<p class="roomTxt mt10">
+										床型：双床（120cm*200cm）/大床（150cm*200cm）&nbsp;&nbsp;&nbsp;&nbsp;房间面积：36平方米&nbsp;&nbsp;&nbsp;&nbsp;楼层：3层-13（A楼）层
+										&nbsp;&nbsp;&nbsp;&nbsp;上网方式：宽带[<span class="green">免费</span>]
+									</p>
+									<p class="roomTxt"></p>
+								</div>
+							</li>
+							<li sid="19766" rpid="25220" isshadow="false" roomid="1028"
+								isshow="1" class="rbox  ">
+								<p class="rw1">
+									<img width="70" height="50" method="RoomDetail" alt="商务双床房"
+										ispanorama="false"
+										bigimageurl="http://www.elongstatic.com/imageapp/hotels/hotelimages/0201/40201982/1_c78f9938-c023-4fb0-b95f-52bbca33c537.jpg?v=20120817125613"
+										onerror="this.src='http://www.elongstatic.com/hotels/pic/no_pics_CN.gif'"
+										src="http://www.elongstatic.com/imageapp/hotels/hotelimages/0201/40201982/2_78600c07-391b-4165-8de6-6fa92dfc1b7b.jpg?v=20120817125613">
+								</p>
+								<p class="rw2 ">
+									<a method="RoomDetail" href="javascript:void(0);">商务房<span
+										class="arrow"></span></a>
+								</p>
+								<p class="rw3">大/双</p>
+								<p class="rw3">免费</p>
+								<p class="rw3">无早</p>
+								<p class="rw4">
+									<span method="AvgPrice" class="price"><dfn>￥</dfn>749</span>
+								</p>
+								<p class="rw5">
+									<span islongcui="0" method="coupon" class="iconFan">70元</span>
+									&nbsp;
+								</p>
+								<p class="rw6">&nbsp;</p>
+								<p class="rw7">
+									<a class="button" href="javascript:void(0);" title=""
+										method="Order">预订</a> <br>
+								</p>
+								<div roomid="1028" mark="d" class="roomImg  none">
+									<span class="arrow"></span>
+									<ul class="imgList">
+										<li><img width="70" height="70" method="ShowImage"
+											alt="商务双床房" ispanorama="false"
+											bigimageurl="http://www.elongstatic.com/imageapp/hotels/hotelimages/0201/40201982/1_c78f9938-c023-4fb0-b95f-52bbca33c537.jpg?v=20120817125613"
+											onerror="this.src='http://www.elongstatic.com/hotels/pic/no_pics_CN.gif'"
+											src="http://www.elongstatic.com/imageapp/hotels/hotelimages/0201/40201982/2_78600c07-391b-4165-8de6-6fa92dfc1b7b.jpg?v=20120817125613"></li>
+										<li><img width="70" height="70" method="ShowImage"
+											alt="商务大床房" ispanorama="false"
+											bigimageurl="http://www.elongstatic.com/imageapp/hotels/hotelimages/0201/40201982/1_2e3a3dda-d5d1-4b57-b36f-31f8439c430d.jpg?v=20120817125614"
+											onerror="this.src='http://www.elongstatic.com/hotels/pic/no_pics_CN.gif'"
+											src="http://www.elongstatic.com/imageapp/hotels/hotelimages/0201/40201982/2_83d6e4bd-ed49-4817-9c17-01883b008fd7.jpg?v=20120817125614"></li>
+										<li><img width="70" height="70" method="ShowImage"
+											alt="商务房" ispanorama="false"
+											bigimageurl="http://www.elongstatic.com/imageapp/hotels/hotelimages/0201/40201982/1_4babdf22-2940-44d9-95ed-07e6290b615b.jpg?v=20130506141913"
+											onerror="this.src='http://www.elongstatic.com/hotels/pic/no_pics_CN.gif'"
+											src="http://www.elongstatic.com/imageapp/hotels/hotelimages/0201/40201982/2_ae9ae094-8b24-4677-ba87-4e56d4ced135.jpg?v=20130506141913">
+										</li>
+									</ul>
+									<p class="roomTxt mt10">
+										床型：大床/双床&nbsp;&nbsp;&nbsp;&nbsp;房间面积：36平方米&nbsp;&nbsp;&nbsp;&nbsp;楼层：3层-13（A楼）层
+										&nbsp;&nbsp;&nbsp;&nbsp;上网方式：宽带[<span class="green">免费</span>]
+									</p>
+									<p class="roomTxt"></p>
+								</div>
+							</li>
+							<li sid="19766" rpid="25220" isshadow="false" roomid="1020"
+								isshow="1" class="rbox  ">
+								<p class="rw1">
+									<img width="70" height="50" method="RoomDetail" alt="豪华房"
+										ispanorama="true"
+										bigimageurl="http://www.elongstatic.com/imageapp/hotels/hotelimages/27/mod_40201982_2_8_1020_5.jpg"
+										onerror="this.src='http://www.elongstatic.com/hotels/pic/no_pics_CN.gif'"
+										src="http://www.elongstatic.com/imageapp/hotels/hotelimages/27/40201982_3_8_1020_5.jpg?v=20110429173427">
+								</p>
+								<p class="rw2 ">
+									<a method="RoomDetail" href="javascript:void(0);">豪华房<span
+										class="arrow"></span></a>
+								</p>
+								<p class="rw3">大/双</p>
+								<p class="rw3">免费</p>
+								<p class="rw3">无早</p>
+								<p class="rw4">
+									<span method="AvgPrice" class="price"><dfn>￥</dfn>849</span>
+								</p>
+								<p class="rw5">
+									<span islongcui="0" method="coupon" class="iconFan">80元</span>
+									&nbsp;
+								</p>
+								<p class="rw6">&nbsp;</p>
+								<p class="rw7">
+									<a class="button" href="javascript:void(0);" title=""
+										method="Order">预订</a> <br>
+								</p>
+								<div roomid="1020" mark="d" class="roomImg  none">
+									<span class="arrow"></span>
+									<ul class="imgList">
+										<li class="img360"><span method="ShowImage"
+											ispanorama="true"
+											bigimageurl="http://www.elongstatic.com/imageapp/hotels/hotelimages/27/mod_40201982_2_8_1020_5.jpg"
+											class="icon"></span><span method="ShowImage" ispanorama="true"
+											bigimageurl="http://www.elongstatic.com/imageapp/hotels/hotelimages/27/mod_40201982_2_8_1020_5.jpg"
+											class="imgTxt">360度全景图</span><img width="70" height="70"
+											method="ShowImage" alt="豪华房" ispanorama="true"
+											bigimageurl="http://www.elongstatic.com/imageapp/hotels/hotelimages/27/mod_40201982_2_8_1020_5.jpg"
+											src="http://www.elongstatic.com/imageapp/hotels/hotelimages/27/40201982_3_8_1020_5.jpg?v=20110429173427"></li>
+										<li class="img360"><span method="ShowImage"
+											ispanorama="true"
+											bigimageurl="http://www.elongstatic.com/imageapp/hotels/hotelimages/27/mod_40201982_2_8_1020_2.jpg"
+											class="icon"></span><span method="ShowImage" ispanorama="true"
+											bigimageurl="http://www.elongstatic.com/imageapp/hotels/hotelimages/27/mod_40201982_2_8_1020_2.jpg"
+											class="imgTxt">360度全景图</span><img width="70" height="70"
+											method="ShowImage" alt="豪华房" ispanorama="true"
+											bigimageurl="http://www.elongstatic.com/imageapp/hotels/hotelimages/27/mod_40201982_2_8_1020_2.jpg"
+											src="http://www.elongstatic.com/imageapp/hotels/hotelimages/27/40201982_3_8_1020_2.jpg?v=20090313093200"></li>
+										<li><img width="70" height="70" method="ShowImage"
+											alt="豪华房-洗手间" ispanorama="false"
+											bigimageurl="http://www.elongstatic.com/imageapp/hotels/hotelimages/0201/40201982/5f9ef62f-f403-4fd2-a2cb-5f8840e7f91e.jpg?v=20120311160920"
+											onerror="this.src='http://www.elongstatic.com/hotels/pic/no_pics_CN.gif'"
+											src="http://www.elongstatic.com/imageapp/hotels/hotelimages/0201/40201982/93190e4e-7e4c-4956-a634-be402ed8e0a1.jpg?v=20120311160920"></li>
+										<li><img width="70" height="70" method="ShowImage"
+											alt="豪华房" ispanorama="false"
+											bigimageurl="http://www.elongstatic.com/imageapp/hotels/hotelimages/0201/40201982/23ef6ac1-4efe-449b-85cd-0397eb2d5fa2.jpg?v=20120311160901"
+											onerror="this.src='http://www.elongstatic.com/hotels/pic/no_pics_CN.gif'"
+											src="http://www.elongstatic.com/imageapp/hotels/hotelimages/0201/40201982/5d64689d-66fe-4124-910a-ff9627ffcd2c.jpg?v=20120311160901">
+										</li>
+									</ul>
+									<p class="roomTxt mt10">
+										床型：大床/双床&nbsp;&nbsp;&nbsp;&nbsp;房间面积：32平方米&nbsp;&nbsp;&nbsp;&nbsp;楼层：8层-19层
+										&nbsp;&nbsp;&nbsp;&nbsp;上网方式：宽带[<span class="green">免费</span>]
+									</p>
+									<p class="roomTxt">其它：无烟楼层，大床：180cm*200cm／双床：120cm*200cm</p>
+								</div>
+							</li>
+							<li sid="19766" rpid="25876" isshadow="false" roomid="1029"
+								isshow="1" class="rbox  ">
+								<p class="rw1">
+									<img width="70" height="50" method="RoomDetail" alt="行政商务房"
+										ispanorama="true"
+										bigimageurl="http://www.elongstatic.com/imageapp/hotels/hotelimages/27/mod_40201982_2_8_1029_4.jpg"
+										onerror="this.src='http://www.elongstatic.com/hotels/pic/no_pics_CN.gif'"
+										src="http://www.elongstatic.com/imageapp/hotels/hotelimages/27/40201982_3_8_1029_4.jpg?v=20090313100140">
+								</p>
+								<p class="rw2 ">
+									<a method="RoomDetail" href="javascript:void(0);">行政商务房<span
+										class="arrow"></span></a>
+								</p>
+								<p class="rw3">大</p>
+								<p class="rw3">免费</p>
+								<p class="rw3">单早</p>
+								<p class="rw4">
+									<span method="AvgPrice" class="price"><dfn>￥</dfn>1099</span>
+								</p>
+								<p class="rw5">
+									<span islongcui="0" method="coupon" class="iconFan">100元</span>
+									&nbsp;
+								</p>
+								<p class="rw6">&nbsp;</p>
+								<p class="rw7">
+									<a class="button" href="javascript:void(0);" title=""
+										method="Order">预订</a> <br>
+								</p>
+								<div roomid="1029" mark="d" class="roomImg  none">
+									<span class="arrow"></span>
+									<ul class="imgList">
+										<li class="img360"><span method="ShowImage"
+											ispanorama="true"
+											bigimageurl="http://www.elongstatic.com/imageapp/hotels/hotelimages/27/mod_40201982_2_8_1029_4.jpg"
+											class="icon"></span><span method="ShowImage" ispanorama="true"
+											bigimageurl="http://www.elongstatic.com/imageapp/hotels/hotelimages/27/mod_40201982_2_8_1029_4.jpg"
+											class="imgTxt">360度全景图</span><img width="70" height="70"
+											method="ShowImage" alt="行政商务房" ispanorama="true"
+											bigimageurl="http://www.elongstatic.com/imageapp/hotels/hotelimages/27/mod_40201982_2_8_1029_4.jpg"
+											src="http://www.elongstatic.com/imageapp/hotels/hotelimages/27/40201982_3_8_1029_4.jpg?v=20090313100140"></li>
+										<li><img width="70" height="70" method="ShowImage"
+											alt="行政商务房-洗手间" ispanorama="false"
+											bigimageurl="http://www.elongstatic.com/imageapp/hotels/hotelimages/0201/40201982/94a1dcbd-405d-4364-8b12-5a4d4a11ed83.jpg?v=20120311160910"
+											onerror="this.src='http://www.elongstatic.com/hotels/pic/no_pics_CN.gif'"
+											src="http://www.elongstatic.com/imageapp/hotels/hotelimages/0201/40201982/a8bac72f-6fc8-4698-9612-896464103ba9.jpg?v=20120311160910"></li>
+										<li><img width="70" height="70" method="ShowImage"
+											alt="行政商务房" ispanorama="false"
+											bigimageurl="http://www.elongstatic.com/imageapp/hotels/hotelimages/0201/40201982/66495237-f54f-4cfc-b763-64515a90e7b4.jpg?v=20120311160916"
+											onerror="this.src='http://www.elongstatic.com/hotels/pic/no_pics_CN.gif'"
+											src="http://www.elongstatic.com/imageapp/hotels/hotelimages/0201/40201982/57ba5c8f-39c5-4aa4-9074-b542b129e9b1.jpg?v=20120311160916">
+										</li>
+									</ul>
+									<p class="roomTxt mt10">
+										床型：大床&nbsp;&nbsp;&nbsp;&nbsp;房间面积：32平方米&nbsp;&nbsp;&nbsp;&nbsp;楼层：20层-25层
+										&nbsp;&nbsp;&nbsp;&nbsp;上网方式：宽带[<span class="green">免费</span>]
+									</p>
+									<p class="roomTxt">其它：无烟楼层，大床：180cm*200cm</p>
+								</div>
+							</li>
+							<li sid="19766" rpid="25876" isshadow="false" roomid="1022"
+								isshow="1" class="rbox norbox ">
+								<p class="rw1">
+									<img width="70" height="50" method="RoomDetail" alt="豪华套房"
+										ispanorama="false"
+										bigimageurl="http://www.elongstatic.com/imageapp/hotels/hotelimages/0201/40201982/1_f0d5d141-b12e-415c-8cbf-2353c4e8860a.jpg?v=20120724105109"
+										onerror="this.src='http://www.elongstatic.com/hotels/pic/no_pics_CN.gif'"
+										src="http://www.elongstatic.com/imageapp/hotels/hotelimages/0201/40201982/2_be27fb4b-9b7e-4ee9-b304-05dd55890e7f.jpg?v=20120724105109">
+								</p>
+								<p class="rw2 ">
+									<a method="RoomDetail" href="javascript:void(0);">豪华套房<span
+										class="arrow"></span></a>
+								</p>
+								<p class="rw3">大</p>
+								<p class="rw3">免费</p>
+								<p class="rw3">单早</p>
+								<p class="rw4">
+									<span method="AvgPrice" class="price"><dfn>￥</dfn>1499</span>
+								</p>
+								<p class="rw5">
+									<span islongcui="0" method="coupon" class="iconFan">140元</span>
+									&nbsp;
+								</p>
+								<p class="rw6">&nbsp;</p>
+								<p class="rw7">
+									<a class="button" href="javascript:void(0);" title=""
+										method="Order">预订</a> <br>
+								</p>
+								<div roomid="1022" mark="d" class="roomImg  none">
+									<span class="arrow"></span>
+									<ul class="imgList">
+										<li><img width="70" height="70" method="ShowImage"
+											alt="豪华套房" ispanorama="false"
+											bigimageurl="http://www.elongstatic.com/imageapp/hotels/hotelimages/0201/40201982/1_f0d5d141-b12e-415c-8cbf-2353c4e8860a.jpg?v=20120724105109"
+											onerror="this.src='http://www.elongstatic.com/hotels/pic/no_pics_CN.gif'"
+											src="http://www.elongstatic.com/imageapp/hotels/hotelimages/0201/40201982/2_be27fb4b-9b7e-4ee9-b304-05dd55890e7f.jpg?v=20120724105109">
+										</li>
+									</ul>
+									<p class="roomTxt mt10">
+										床型：大床&nbsp;&nbsp;&nbsp;&nbsp;房间面积：54-56平方米&nbsp;&nbsp;&nbsp;&nbsp;楼层：3层-19层
+										&nbsp;&nbsp;&nbsp;&nbsp;上网方式：宽带[<span class="green">免费</span>]
+									</p>
+									<p class="roomTxt">其它：大床：180cm*200cm</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--detailRpList end-->
+	
+				<!--设施介绍 开始-->
+	
+				<div class="mainDiv mt10">
+					<h2 class="detTitle">
+						<span> 酒店设施</span>
+					</h2>
+					<ul class="contentUl">
+	
+						<li><span class="title">酒店电话</span>
+						<p>021-33632222</p></li>
+	
+						<li><span class="title">开业时间</span>
+						<p>酒店开业时间 2008年</p></li>
+	
+						<li class="clx" id="netAndwifi"><span class="title">上网服务</span>
+						<p>
+								酒店提供宽带上网，公共区域提供<strong class="green">免费</strong>WiFi
+							</p></li>
+	
+						<li><span class="title"> 停车场</span>
+						<p>酒店提供停车位</p></li>
+	
+						<li><span class="title">酒店服务</span>
+						<p class="fw">
+	
+								<span> 商务中心</span> <span> 送餐服务</span> <span> 洗衣服务</span> <span>
+									叫醒服务</span> <span> 礼宾司服务</span> <span> 旅游服务</span> <span> 擦鞋服务</span> <span>
+									外币兑换</span> <span> 停车场</span> <span> 前台贵重物品保险柜</span> <span>
+									大巴或轿车租赁服务</span> <span> 公共区域<strong class="green">免费</strong>Wi-Fi
+								</span>
+							</p></li>
+	
+						<li><span class="title">房间设施</span>
+						<p>嘉汇华美达大酒店拥有各类全新舒适客房，备有独立控制的中央空调、私人保险箱和卫星转播电视、国际国内直拨电话、高速上网、特色阅读灯等设施。</p>
+						</li>
+	
+						<li><span class="title">餐饮设施</span>
+						<p>
+								西餐厅：融合了世界各地制法的精萃佳肴，提供自助早餐、中午商务自助餐及套餐；<br>厚街粤菜馆：为客人提供纯正粤菜莞乡精华；<br>大堂吧：提供各式各样的鸡尾酒、葡萄酒、啤酒，并配有精心挑选的小食。
+							</p></li>
+	
+						<li><span class="title">康体娱乐</span>
+						<p>棋牌室、台球、乒乓球、健身房、室内游泳池、SPA</p></li>
+	
+						<li><span class="title">会议设施</span>
+						<p>
+								酒店G1-G3会议室：可容纳约20-150人不等的会议；<br>嘉会厅：可容纳约250人；<br>宴会厅及中式宴会厅：可容纳约10-25桌客人。
+							</p></li>
+	
+						<li><span class="title">酒店简介</span>
+						<p id="Introduce">
+								&#12288;&#12288;上海嘉汇华美达广场大酒店位于上海市中心西南面，紧邻繁华的徐家汇商业及购物中心，地铁1、4号线出口近在咫尺，内环高架公路出行便捷。作为2008年中国上海国际艺术节的官方指定酒店、F1本田车队指定酒店，领跑于徐家汇地区，八万人体育馆、上海大舞台、虹桥展览中心、旅游集散中心等更是围绕周边。...
+								<a id="IntroduceMore" href="#?" class="open">展开<i></i></a>
+	
+							</p>
+							<p id="IntroduceAll" style="display: none;">
+								&#12288;&#12288;上海嘉汇华美达广场大酒店位于上海市中心西南面，紧邻繁华的徐家汇商业及购物中心，地铁1、4号线出口近在咫尺，内环高架公路出行便捷。作为2008年中国上海国际艺术节的官方指定酒店、F1本田车队指定酒店，领跑于徐家汇地区，八万人体育馆、上海大舞台、虹桥展览中心、旅游集散中心等更是围绕周边。<br>&#12288;&#12288;上海嘉汇华美达广场大酒店拥有各类全新舒适客房，超大空间，时尚设计，环保装修，房内设施齐全，备有独立控制中央空调、私人保险箱和卫星转播电视、国际国内直拨电话、迷你酒吧、高速上网、特色阅读灯等设施，并可根据特殊要求提供各类个性化服务。<br>&#12288;&#12288;位于25楼的行政楼酒廊，格调高雅，是您品茗小憩，会友商磋，彰显非凡身份的个性场所。每日邀您享用欧美茶点、阅览环球读物、共渡“欢乐时光”；行政洽谈区、无线宽带上网、便捷的商务设施和多语种的外籍服务人员，促成您的每一个商务机会。<br>&#12288;&#12288;1200平米的华美达康体中心拥有超大恒温泳池，专业健身中心及课程培训，定期的YOGA和舞蹈课程，并提供桌球、乒乓等专业活动和比赛级课程培训。<br>&#12288;&#12288;&#12288;酒店开业时间2008年5月25日，楼高25层，客房总数291间（套）。
+								<a id="PackUp" href="#?" class="open">收起<i class="on"></i></a>
+							</p></li>
+	
+						<li class="last"><span class="title">可接受的信用卡</span>
+						<p class="card">
+	
+								<span title="境外发行信用卡--威士（VISA）" class="visa"></span> <span
+									title="国内发行银联卡" class="unionpay"></span> <span
+									title="境外发行信用卡--万事达（Master）" class="master"></span> <span
+									title="境外发行信用卡--运通（AMEX）" class="amex"></span> <span
+									title="境外发行信用卡--大莱（Diners Club）" class="dinersclub"></span> <span
+									title="境外发行信用卡--JCB" class="jcb"></span>
+	
+							</p></li>
+					</ul>
+				</div>
+	
+				<!--设施介绍 结束-->
+				<!--交通信息 开始-->
+	
+				<div class="mainDiv">
+					<h2 class="detTitle">
+						<span> 交通位置</span>
+					</h2>
+					<ul class="contentUl">
+	
+						<li><i class="map"></i>
+							酒店紧邻繁华的徐家汇商业及购物中心，八万人体育馆、上海商学院围绕周边，地理位置优越。</li>
+	
+						<li>- 距离徐家汇商业圈，步行5分钟；</li>
+	
+						<li>- 4号线上海体育场站4号口，步行约5分钟；</li>
+	
+						<li>- 至上海体育场步行约15分钟；</li>
+	
+						<li>- 距离人民广场8.5公里，乘坐出租车约20分钟，约人民币29元；</li>
+	
+						<li>- 至地铁4号线（上海体育场站）步行约15分钟；</li>
+	
+						<li>- 距离上海火车南站6公里，乘坐出租车约18元；</li>
+	
+						<li>- 距离上海火车站10 公里，乘坐出租车约37元；</li>
+	
+						<li>- 距离虹桥火车站20.3 公里，乘坐出租车约68元；</li>
+	
+						<li>- 距离虹桥机场14公里，乘坐出租车约20-30分钟；</li>
+	
+						<li class="last">- 距离浦东机场45公里，乘坐出租车约60分钟，约人民币161元；</li>
+	
+					</ul>
+				</div>
+	
+				<!--交通信息 结束-->
+			</div>
+			
+			
+		</div>
+		
+		
+	</div>
+	<!-- jQuery JavaScript -->
+	<script src="/static/js/jquery.min.js"></script>
+	<!-- Kendo UI Web combined JavaScript -->
+
+	<script src="/static/js/kendo.web.min.js"></script>
+	<script src="/static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+	<script src="/static/js/phase1/cityList.js"></script>
+	<script src="/static/js/phase1/common.js"></script>
+	<script src="/static/js/phase1/flight.js"></script>
+		
+    </body>
+</html>

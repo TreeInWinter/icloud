@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>组织架构 组织架构和员工管理 添加员工 弹层</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.common.css" rel="stylesheet" />
+    <link href="../../static/css/kendo.gray.css" rel="stylesheet" />
+    <link href="../../static/css/kendo.reset.css" rel="stylesheet" />
+    <link href="../../static/css/tianjiabumentishi.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<!-- @CLB@ -->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body>
+    <div class="tianjiayuangongneirong">
+        <div class="tianjiabumentishi">
+            <h3>
+                添加员工</h3>
+            <a href="#"></a>
+        </div>
+        <div class="yuangongmiddle">
+            <div class="leftdiv">
+                <table cellpadding="0" cellspacing="0" class="lefttable">
+                    <tr>
+                        <td class="yuangongxingming_1">
+                            员工姓名：
+                        </td>
+                        <td class="xingming_input">
+                            <input type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            员工状态：
+                        </td>
+                        <td>
+                            <select class="zhengchang">
+                                <option>正常</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            失效日期：
+                        </td>
+                        <td class="riqi">
+                            <input type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            员工级别：
+                        </td>
+                        <td>
+                            <select class="zhengchang">
+                                <option>普通员工</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            员工职位：
+                        </td>
+                        <td>
+                            <select class="zhengchang">
+                                <option> </option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            电话：
+                        </td>
+                        <td class="riqi">
+                            <input type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            邮件：
+                        </td>
+                        <td class="riqi">
+                            <input type="text" />
+                        </td>
+                    </tr>
+                </table>
+                <div class="suosubumen">
+                    <p>
+                        所属部门：</p>
+                    <div class="suosubumen_content">
+                        <div class="gundongtiao">
+                            <ul id="treeView">
+                                <li>不夜城集团
+                                    <ul>
+                                        <li>不夜城国旅
+                                            <ul>
+                                                <li>国内机票部
+                                                    <ul>
+                                                        <li>退票部
+                                                            <ul>
+                                                                <li>退票部一组</li>
+                                                                <li>退票部二组</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>出票部</li>
+                                                    </ul>
+                                                </li>
+                                                <li>国际机票部</li>
+                                                <li>酒店部</li>
+                                                <li>财务部</li>
+                                            </ul>
+                                        </li>
+                                        <li>北京爱特博</li>
+                                        <li>广州长荣</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rightdiv">
+                <table cellpadding="0" cellspacing="0" class="righttable">
+                    <tr>
+                        <td class="yonghuming">
+                            用户名：
+                        </td>
+                        <td class="yonghuming_input">
+                            <input type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            密码：
+                        </td>
+                        <td class="yonghuming_input">
+                            <input type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            确认密码：
+                        </td>
+                        <td class="yonghuming_input">
+                            <input type="text" />
+                        </td>
+                    </tr>
+                </table>
+                <div class="suosubumen">
+                    <p>
+                        角色选择：</p>
+                    <div class="juesexuanze">
+                        <!--角色选择的内容-->
+                    </div>
+                </div>
+            </div>
+            <div style="clear: both;">
+            </div>
+            <div class="tianjia_button">
+                <a class="tianjiaqueding_btn" href="#">确定 </a><a class="tianjiaquxiao_btn" href="#">取消</a>
+            </div>
+        </div>
+      </div>  
+</body>
+</html>
+
+<script>
+    $(function() {
+        $("#treeView").kendoTreeView();
+    })
+</script>
+

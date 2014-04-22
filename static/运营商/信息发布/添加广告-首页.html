@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>运营商 信息发布 添加广告-首页</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+        <link rel="stylesheet" href="../../static/css/kendo.gray.css" />
+        <link rel="stylesheet" href="../../static/css/kendo.reset.css" />
+        <link rel="stylesheet" href="../../static/css/common.css" />
+        <link rel="stylesheet" href="../../static/css/b2b.css" />
+        <link href="../../static/css/information_publish.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="../../static/js/vendor/jquery.min.js"></script>
+        <script type="text/javascript" src="../../static/js/plugins/jquery.fixedBar.js"></script>
+        <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+        <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+        <script type="text/javascript" src="../../static/js/global.js"></script>
+        <script type="text/javascript" src="../../static/js/flight.js"></script>
+        <!--[if lt IE 8]>
+        <link rel="stylesheet" href="/static/css/ie.css" />
+        <script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script>
+        <![endif]-->
+        <script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body> 
+    <div id="extHeader">
+       <div></div>
+    </div>
+    <div id="container">
+    <div class="header">
+        <h1></h1>
+    <div>
+        <span>你好,${name}</span>
+        <a href="javascript:void(0);">退出</a>
+    </div>
+    <ul id="top_menu">
+        <li><a href="javascript:void(0);">国内机票</a></li>
+        <li><a href="javascript:void(0);">国际机票</a></li>
+        <li><a href="javascript:void(0);">酒店</a></li>
+        <li><a href="javascript:void(0);">票证中心</a></li>
+        <li><a href="javascript:void(0);">财务管理</a></li>
+        <li><a href="javascript:void(0);">客户管理</a></li>
+        <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+    </ul>
+    <ol class="sub_menu">
+        <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+        <li><a href="javascript:void(0);">公司信息</a></li>
+        <li><a href="javascript:void(0);">组织架构</a></li>
+        <li><a href="javascript:void(0);">角色维护</a></li>
+        <li><a href="javascript:void(0);">基础数据</a></li>
+    </ol>
+    <div id="message">
+       <a href="javascript:void(0);">消息</a>
+       <span>New</span>
+    </div>
+    </div>
+   <div class="clear"></div>
+   <div id="sub_menu_bar"></div>
+   <div id="mainContent"> <!--mainContent start-->
+
+  <div class="actions block">
+        <div class="col col-l sep-r">
+            <button class="btns btn-return">返回</button>
+        </div>
+        <div class="col col-l">
+            <span class="page-title">添加广告</span>
+        </div>
+        <div class="col col-r sep-l">
+            <a href="javascript:;" class="button_secondary adaptiveButton small">
+                <span class="left"></span>
+                <span class="center">取 消</span>
+                <span class="right"></span>
+            </a>
+            <a href="javascript:;" class="button_secondary adaptiveButton small">
+                <span class="left"></span>
+                <span class="center">确 定</span>
+                <span class="right"></span>
+            </a>
+      </div>
+  </div>
+  <div class="advertising"> <!--advertising start-->
+          <div class="advertising_title">
+              <b>广告标题：</b>
+              <input type="text" />
+          </div>
+          <div class="issue_date">
+              <b>发布日期：</b>
+              <input type="text" value="2013-8-31" class="datepicker" />
+              <em>&nbsp; 至 &nbsp;</em>
+              <input type="text" value="2013-8-31" class="datepicker orange" />              
+          </div>
+          <div class="advertise">
+               <b>投放位置：</b>
+               <select>
+                   <option>全部</option>
+                   <option>首页大图</option>
+                   <option selected="">一号广告位</option>
+                   <option>二号广告位</option>
+               </select>
+          </div>
+          <div class="add"> <!--add start-->
+                  <div class="location">
+                            <div class="move clearfix"> <!--move start-->
+                                 <div class="move_left">                                       
+                                       <div class="advertise">
+                                           <b>广告图片</b>
+                                           <span>（<em>1680*400</em> JPG/PNG）</span>
+                                           <a href="javascript:;" class="button_important adaptiveButton medium">
+                                                <span class="left"></span>
+                                                <span class="center">上 传</span>
+                                                <span class="right"></span>
+                                           </a>
+                                       </div>
+                                   </div>
+                                   <div class="move_right">
+                                         <div>
+                                            <a href="javascript:;" class="button_unimportant adaptiveButton small">
+                                                <span class="left"></span>
+                                                <span class="center">上移 &nbsp;↑</span>
+                                                <span class="right"></span>
+                                            </a>
+                                         </div>
+                                         <div>
+                                            <a href="javascript:;" class="button_secondary adaptiveButton small">
+                                                <span class="left"></span>
+                                                <span class="center">下移 &nbsp;↓</span>
+                                                <span class="right"></span>
+                                            </a>
+                                         </div>
+                                   </div>
+                            </div>  <!--move end-->      
+                           <div class="adimg">
+                                <img src="../../static/images/adimg.jpg" />
+                           </div>
+                           <div class="advertise">
+                               <b>广告类型：</b>
+                               <select>
+                                   <option>全部</option>
+                                   <option>纯图片</option>
+                                   <option selected="">URL链接</option>
+                               </select>
+                           </div>
+                           <div class="url">
+                              <b>URL链接：</b>
+                              <input type="text" />
+                           </div>
+                  </div>
+          </div> <!--add end-->
+          
+          <div class="add">  <!--add start-->
+                  <div class="location">
+                            <div class="move clearfix"> <!--move start-->
+                                 <div class="move_left">                                       
+                                       <div class="advertise">
+                                           <b>广告图片</b>
+                                           <span>（<em>1680*400</em> JPG/PNG）</span>
+                                           <a href="javascript:;" class="button_important adaptiveButton medium">
+                                                <span class="left"></span>
+                                                <span class="center">上 传</span>
+                                                <span class="right"></span>
+                                           </a>
+                                       </div>
+                                   </div>
+                                   <div class="move_right">                                         
+                                         <div>
+                                            <a href="javascript:;" class="button_secondary adaptiveButton small">
+                                                <span class="left"></span>
+                                                <span class="center">上移 &nbsp;↑</span>
+                                                <span class="right"></span>
+                                            </a>
+                                         </div>
+                                         <div>
+                                            <a href="javascript:;" class="button_unimportant adaptiveButton small">
+                                                <span class="left"></span>
+                                                <span class="center">下移 &nbsp;↓</span>
+                                                <span class="right"></span>
+                                            </a>
+                                         </div>
+                                   </div>
+                            </div>  <!--move end-->      
+                           <div class="adimg">
+                                <img src="../../static/images/adimg.jpg" />
+                           </div>
+                           <div class="advertise">
+                               <b>广告类型：</b>
+                               <select>
+                                   <option>全部</option>
+                                   <option>纯图片</option>
+                                   <option selected="">URL链接</option>
+                               </select>
+                           </div>
+                           <div class="url">
+                              <b>URL链接：</b>
+                              <input type="text" />
+                           </div>
+                  </div>
+          </div> <!--add end-->
+          
+          <div class="add_upload">
+              <a href="#">+</a>          
+          </div>
+          
+  </div> <!--advertising end-->
+  
+  
+</div> <!--mainContent end-->
+</div>
+<div id="extFooter">
+<div>
+<p>
+<a href="javascript:void(0);">关于我们</a>&nbsp;|
+<a href="javascript:void(0);">微博</a>&nbsp;|
+<a href="javascript:void(0);">服务条款</a>&nbsp;|
+<a href="javascript:void(0);">隐私政策</a>&nbsp;|
+</p>
+<p>客户服务热线:400-720-6666</p>
+</div>
+</div>
+</body>
+</html>
+

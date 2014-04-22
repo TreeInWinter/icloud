@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 酒店订单提交成功</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+     
+    <link href="../../static/css/coin-slider-styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_order.css" media="screen" />
+    
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+	<link rel="stylesheet" href="../../static/css/kendo.store.css" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+	<script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>    
+
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+    
+    <script type="text/javascript" src="../../static/js/store/store.js"></script>
+    
+</head>
+<body>
+
+<div class="main-wrapper">
+<header class="main-header">
+    <a class="logo" href="/"><h1>天地行</h1></a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first active"><a herf="#">首页</a></li>
+            <li><a herf="#">国内机票</a></li>
+            <li><a herf="#">国际机票</a></li>
+            <li><a herf="#">酒店</a></li>
+        </ul> 
+    </nav>
+    <nav class="main-links">
+        <ul class="clearfix">
+            <li class="first"><a href="#">订单管理</a></li>
+            <li><a href="#">分销管理</a></li>
+            <li><a href="#">电子钱包</a></li>
+            <li><a href="#">统计报表</a></li>
+            <li><a href="#">客服服务</a></li>
+            <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+            <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+</header>
+<section class="main-body clearfix">
+
+    <div class="flow clearfix">
+       <ul>
+          <li class="current_li">创建订单</li>
+          <li>支付</li>
+          <li>确认</li>
+          <li class="last">完成</li>     
+          <div style="width:15%;" class="line"></div>     
+       </ul>       
+    </div>
+    
+    <div class="order clearfix">
+         <div class="present">
+             <div class="succeed">
+                 <h3>订单提交成功！</h3>
+             </div>
+             <div class="ordernum"><em>订单号：</em> <span>030312103112261</span></div>
+             <div class="money overstriking"><i>酒店：</i>上海宝华国际酒店</div>
+             <div class="money"><em>地址：</em>东方路800号</div>
+             <div class="money"><em>房型：</em>经济房</div>
+             <div class="money"><em>入住日期：</em>2013-09-1 至 2013-09-03</div>
+             <div class="money"><em>支付金额：</em> <b>￥4500.36</b></div>
+         </div>
+         <div class="prompt">
+              <h3>温馨提示：</h3>
+              <p>此酒店预订我们将于支付后<b>3个工作小时内</b>尽快给予您确认。如订房无法确认,我们将全额返还相关款项至您的支付账户。</p>
+         </div>
+    </div>
+    
+    <div class="pay">
+        <ul class="tab_change clearfix">
+            <li class="currentState"><em><a href="javascript:void(0);">账户支付</a></em></li>
+            <li><em><a href="javascript:void(0);">在线支付</a></em></li>
+            <!--<li><em><a href="javascript:void(0);">线下转账</a></em></li>-->
+        </ul>
+        <div class="account_pay tab">
+            <table class="gopay">
+                <colgroup>
+                    <col width="95" />
+                    <col width="190" />                 
+                </colgroup>
+                <tr>
+                    <td>账户可用余额：</td>
+                    <td><b>￥6500.67 </b></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>支付密码：</td>
+                    <td><input type="password" /></td>
+                    <td><em>4~20位数字或者字母的组合，区分大小写。</em></td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td>
+                        <a class="adaptiveButton brightRed_btn">
+                            <span class="left"></span>
+                            <span class="center center_1">去支付</span>
+                            <span class="right"></span>
+                        </a>
+                    </td>
+                    <td> </td>
+                </tr>
+            </table>
+            <table class="recharge">
+                <colgroup>
+                    <col width="95" />
+                    <col width="130" />                 
+                </colgroup>
+                <tr>
+                    <td>账户可用余额：</td>
+                    <td><b>￥2500.67</b></td>
+                    <td><em><strong>&nbsp;</strong>可用余额不足，请尽快去帐户充值或者联系客服人员。</em></td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td>
+                        <a class="adaptiveButton brightRed_btn">
+                            <span class="left"></span>
+                            <span class="center center_1">充 值</span>
+                            <span class="right"></span>
+                        </a>
+                    </td>
+                    <td> </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="on_line tab" style="display:none;"> <!--on_line start-->
+            <div class="terrace">
+                    <div>
+                        <b>支付平台：</b>
+                        <label>
+                            <input type="radio" name="terrace"/>
+                            <i class="ico_alipay"></i>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="radio" name="terrace"/>
+                            <em class="ico_tenpay"></em>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="radio" name="terrace"/>
+                            <span class="ico_chinapnr"></span>
+                        </label>
+                    </div>   
+            </div>
+                        
+            <div class="pay_btn">
+                 <a class="adaptiveButton brightRed_btn">
+                    <span class="left"></span>
+                    <span class="center center_1">去支付</span>
+                    <span class="right"></span>
+                </a>
+            </div>
+        </div> <!--on_line end--> 
+    </div>
+    
+</section>
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+
+<script>
+    $(function(){
+        $(".tab_change li").each(function(index){
+            $(this).click(function(){
+                $(".pay .tab").hide();
+                $(".pay .tab:eq(" + index + ")").show();
+                $(".tab_change li").removeClass("currentState");
+                $(this).addClass("currentState");
+            });
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2748 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>基础数据 城市代码</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.gray.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.reset.css" rel="stylesheet" type="text/css" /> <!--弹窗CSS-->
+    <link href="../../static/css/cabinseat.css" rel="stylesheet" type="text/css"/>
+    <script src="../../static/js/jquery.min.js" type="text/javascript"></script>
+    <script src="../../static/js/kendo.web.js" type="text/javascript"></script>
+        
+        <script type="text/javascript">
+            $().ready(function () {
+                $(".testbox ul").find("li:first").find(".boxshow").show();
+                $(".testbox ul").find("li:first").find("a:first").addClass("ClickMenu");
+                $(".testbox ul").find("li:first").css("background-color", "#fff");
+
+                $(".testbox ul li").hover(
+                function () {
+                    $(this).addClass("MenuHover");
+                    $(this).find(".MenuItem").css("text-decoration", "underline");
+                },
+                function () {
+                    $(this).removeClass("MenuHover");
+                    $(this).find(".MenuItem").css("text-decoration", "none");
+                });
+
+                $(".testbox ul li").click(function () {
+                    $(".testbox ul li").find(".boxshow").hide();
+                    $(".testbox ul li").find("a:first").removeClass("ClickMenu");
+                    $(".testbox ul li").css("background-color", "");
+
+                    $(this).find(".boxshow").show();
+                    $(this).find("a:first").addClass("ClickMenu");
+                    $(this).css("background-color", "#fff");
+                }
+                );
+				    $(".testbox ul").find("li:first").click();
+            });
+
+
+    </script>
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+<script src="../../static/js/hotel.js" type="text/javascript"></script> <!--弹窗JS-->
+<!-- @CLB@ -->
+</head>
+<body>
+    <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">&nbsp;</a>
+                <span>&nbsp;</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent">
+        
+        <div class="topFixedToolsBar">
+                <div class="fixedMenu" style="font-size:12px;">
+                    <a href="#" class="code_a_1">国内机票</a>
+                    <a href="#">国际机票</a>
+                    <a href="#">酒店</a>
+                    <a href="#">公共</a>
+                </div>
+        </div>
+       
+    <div class="leftandright"> <!--leftAndRight start-->
+
+    <!--left start-->
+       <div class="testbox">
+        <ul>
+          <li><a class="MenuItem" href="#">城市代码</a>
+        <div class="boxshow">  
+          <div class="right_side">  <!--right start-->         
+            <div class="query">
+              <table cellpadding="0" cellspacing="0" class="query_tab_1">
+                <tr>
+                  <td class="list_1">国别</td>
+                  <td class="list_2"> <select><option>国内</option></select> </td>
+                  <td class="list_3">城市代码</td>
+                  <td class="list_4"> <input type="text" value="SHA"/> </td>
+                  <td class="list_5">城市名称</td>
+                  <td class="list_6"> <input type="text" value="上海虹桥"/> </td>
+                  <td class="list_9"><a href="#" class="query_a">查 询</a></td>
+                </tr>          
+              </table>          
+            </div>
+            
+            <div class="qx">
+                      <div class="xuanze">
+                          <button class="btns btn-ac-blue popwin" data='{"url":"城市代码-添加城市代码弹层.html","width":470,"height":300,"title":"添加城市代码"}' id="add_city_code">添加</button>
+                          <button class="btns btn-ac-blue">删除</button>
+                          <button class="btns btn-ac-blue">Excel导入</button>
+                          <button class="btns btn-ac-blue">导出到Excel</button>
+                          <button class="btns btn-ac-blue">更新JS</button>
+                      </div>
+                      <!--<div class="qx_right">
+                          <button class="btns btn-ac-blue">导出Excel</button>
+                          <button class="btns btn-ac-blue">模版导出</button>
+                          <button class="btns btn-ac-blue">导入说明【模版下载】</button>
+                      </div>-->
+             </div>
+                        
+            <div class="right_tab"> <!--table滚动开始-->
+            <table cellpadding="0" cellspacing="0" class="city_tab">
+              <thead>
+              <tr>
+                <th class="th_left"><input type="checkbox" /></th>
+                <th>国别</th>
+                <th>城市代码</th>
+                <th>城市名称</th>
+                <th>城市英文</th>
+                <th>城市拼音</th>
+                <th>拼音简写</th>
+                <th>热点</th>
+                <th class="city_td_1">更新时间</th>
+                <th>操作</th>
+              </tr>
+              </thead>
+              
+              <tbody>
+              <tr>
+                <td><input type="checkbox" checked="checked" /></td>
+                <td>国别</td>
+                <td>AAT</td>
+                <td>阿勒泰</td>
+                <td>Y</td>
+                <td>ALETAI</td>
+                <td>ALT</td>
+                <td>1</td>
+                <td>2012-04-23</td>
+                <td><a href="#">修改</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>国别</td>
+                <td>AAT</td>
+                <td>安康</td>
+                <td>M</td>
+                <td>ALETAI</td>
+                <td>AK</td>
+                <td>1</td>
+                <td>2012-04-23</td>
+                <td><a href="#">修改</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>国别</td>
+                <td>AAT</td>
+                <td>阿克苏</td>
+                <td>M</td>
+                <td>ALETAI</td>
+                <td>AKS</td>
+                <td>1</td>
+                <td>2012-04-23</td>
+                <td><a href="#">修改</a></td>
+              </tr>
+              <tr class="fourth_bg">
+                <td><input type="checkbox" /></td>
+                <td>国别</td>
+                <td>AAT</td>
+                <td>鞍山</td>
+                <td>M</td>
+                <td>ALETAI</td>
+                <td>AS</td>
+                <td>1</td>
+                <td>2012-04-23</td>
+                <td><a href="#">修改</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>国别</td>
+                <td>AAT</td>
+                <td>安庆</td>
+                <td>M</td>
+                <td>ALETAI</td>
+                <td>AQ</td>
+                <td>1</td>
+                <td>2012-04-23</td>
+                <td><a href="#">修改</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>国别</td>
+                <td>AAT</td>
+                <td>安庆</td>
+                <td>M</td>
+                <td>ALETAI</td>
+                <td>AQ</td>
+                <td>1</td>
+                <td>2012-04-23</td>
+                <td><a href="#">修改</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>国别</td>
+                <td>AAT</td>
+                <td>安庆</td>
+                <td>M</td>
+                <td>ALETAI</td>
+                <td>AQ</td>
+                <td>1</td>
+                <td>2012-04-23</td>
+                <td><a href="#">修改</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>国别</td>
+                <td>AAT</td>
+                <td>安庆</td>
+                <td>M</td>
+                <td>ALETAI</td>
+                <td>AQ</td>
+                <td>1</td>
+                <td>2012-04-23</td>
+                <td><a href="#">修改</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>国别</td>
+                <td>AAT</td>
+                <td>安庆</td>
+                <td>M</td>
+                <td>ALETAI</td>
+                <td>AQ</td>
+                <td>1</td>
+                <td>2012-04-23</td>
+                <td><a href="#">修改</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>国别</td>
+                <td>AAT</td>
+                <td>安庆</td>
+                <td>M</td>
+                <td>ALETAI</td>
+                <td>AQ</td>
+                <td>1</td>
+                <td>2012-04-23</td>
+                <td><a href="#">修改</a></td>
+              </tr>
+              </tbody>
+            </table>
+            </div> <!--table滚动结束-->
+                        
+                    <div class="grid-table-pagination">
+                          <span class="grid-table-count">
+                              共 <em>132</em> 条记录
+                          </span>
+                          <span>
+                              <a href="#" class="prev">&nbsp;</a>
+                          </span>
+                          <span class="links">
+                              <a href="#">1</a>
+                              <a href="#">2</a>
+                              <a href="#" class="current">3</a>
+                              <a href="#">4</a>
+                              <a href="#">5</a>
+                              <a href="javascript:;">...</a>
+                              <a href="#">50</a>
+                          </span>
+                          <span>
+                              <a href="#" class="next">&nbsp;</a>
+                          </span>
+                      </div>
+               
+            </div> <!--right end-->
+        </div>
+            </li>
+            
+            <li><a class="MenuItem" href="#">机场代码</a>
+                <div class="boxshow">
+                     <div class="right_side">  <!--right start-->   
+                        <div class="query">
+                          <table cellpadding="0" cellspacing="0" class="query_tab_1">
+                            <tr>
+                              <td class="list_1">国别</td>
+                              <td class="list_2"> <select><option>国内</option></select> </td>
+                              <td class="list_3">机场代码</td>
+                              <td class="list_4"> <input type="text" value="SHA"/> </td>
+                              <td class="list_5">机场名称</td>
+                              <td class="list_6"> <input type="text" value="上海虹桥"/> </td>
+                              <td class="list_9"><a href="#" class="query_a">查 询</a></td>
+                            </tr>          
+                          </table>          
+                        </div>   
+                        
+                        <div class="qx">
+                                      <div class="xuanze">
+                                          <button class="btns btn-ac-blue popwin" data='{"url":"机场代码-添加机场代码弹层.html","width":570,"height":400,"title":"添加机场代码"}' id="add_city_code">添加</button>
+                                          <button class="btns btn-ac-blue">删除</button>
+                                          <button class="btns btn-ac-blue">Excel导入</button>
+                                          <button class="btns btn-ac-blue">导出到Excel</button>
+                                          <button class="btns btn-ac-blue">更新JS</button>
+                                      </div>
+                                      <!--<div class="qx_right">
+                                          <button class="btns btn-ac-blue">导出Excel</button>
+                                          <button class="btns btn-ac-blue">模版导出</button>
+                                          <button class="btns btn-ac-blue">导入说明【模版下载】</button>
+                                      </div>-->
+                           </div>
+                        
+                        <div class="right_tab"> <!--table滚动开始-->
+                        <table cellpadding="0" cellspacing="0" class="city_tab">
+                          <tr>
+                            <th class="th_left"><input type="checkbox" /></th>
+                            <th>国别</th>
+                            <th>机场代码</th>
+                            <th>机场名称</th>
+                            <th>简称</th>
+                            <th>机场拼音</th>
+                            <th>英文名称</th>
+                            <th>国际代码</th>
+                            <th>城市名称</th>
+                            <th>更新时间</th>
+                            <th>建设费</th>
+                            <th>操作</th>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" checked="checked" /></td>
+                            <td>国内</td>
+                            <td>AOG</td>
+                            <td>鞍山机场</td>
+                            <td>鞍山</td>
+                            <td>Anshan</td>
+                            <td>China.AnShan</td>
+                            <td>ALT</td>
+                            <td>鞍山</td>
+                            <td>2012-04-23</td>
+                            <td>50.00</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>国内</td>
+                            <td>AOG</td>
+                            <td>鞍山机场</td>
+                            <td>鞍山</td>
+                            <td>Anshan</td>
+                            <td>China.AnShan</td>
+                            <td>ALT</td>
+                            <td>鞍山</td>
+                            <td>2012-04-23</td>
+                            <td>50.00</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>国内</td>
+                            <td>AOG</td>
+                            <td>鞍山机场</td>
+                            <td>鞍山</td>
+                            <td>Anshan</td>
+                            <td>China.AnShan</td>
+                            <td>ALT</td>
+                            <td>鞍山</td>
+                            <td>2012-04-23</td>
+                            <td>50.00</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr class="fourth_bg">
+                            <td><input type="checkbox" /></td>
+                            <td>国内</td>
+                            <td>AOG</td>
+                            <td>鞍山机场</td>
+                            <td>鞍山</td>
+                            <td>Anshan</td>
+                            <td>China.AnShan</td>
+                            <td>ALT</td>
+                            <td>鞍山</td>
+                            <td>2012-04-23</td>
+                            <td>50.00</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>国内</td>
+                            <td>AOG</td>
+                            <td>鞍山机场</td>
+                            <td>鞍山</td>
+                            <td>Anshan</td>
+                            <td>China.AnShan</td>
+                            <td>ALT</td>
+                            <td>鞍山</td>
+                            <td>2012-04-23</td>
+                            <td>50.00</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>国内</td>
+                            <td>AOG</td>
+                            <td>鞍山机场</td>
+                            <td>鞍山</td>
+                            <td>Anshan</td>
+                            <td>China.AnShan</td>
+                            <td>ALT</td>
+                            <td>鞍山</td>
+                            <td>2012-04-23</td>
+                            <td>50.00</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>国内</td>
+                            <td>AOG</td>
+                            <td>鞍山机场</td>
+                            <td>鞍山</td>
+                            <td>Anshan</td>
+                            <td>China.AnShan</td>
+                            <td>ALT</td>
+                            <td>鞍山</td>
+                            <td>2012-04-23</td>
+                            <td>50.00</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>国内</td>
+                            <td>AOG</td>
+                            <td>鞍山机场</td>
+                            <td>鞍山</td>
+                            <td>Anshan</td>
+                            <td>China.AnShan</td>
+                            <td>ALT</td>
+                            <td>鞍山</td>
+                            <td>2012-04-23</td>
+                            <td>50.00</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>国内</td>
+                            <td>AOG</td>
+                            <td>鞍山机场</td>
+                            <td>鞍山</td>
+                            <td>Anshan</td>
+                            <td>China.AnShan</td>
+                            <td>ALT</td>
+                            <td>鞍山</td>
+                            <td>2012-04-23</td>
+                            <td>50.00</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>国内</td>
+                            <td>AOG</td>
+                            <td>鞍山机场</td>
+                            <td>鞍山</td>
+                            <td>Anshan</td>
+                            <td>China.AnShan</td>
+                            <td>ALT</td>
+                            <td>鞍山</td>
+                            <td>2012-04-23</td>
+                            <td>50.00</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                        </table>
+                        </div> <!--table滚动结束-->
+                                                
+                                            <div class="grid-table-pagination">
+                                                  <span class="grid-table-count">
+                                                      共 <em>132</em> 条记录
+                                                  </span>
+                                                  <span>
+                                                      <a href="#" class="prev">&nbsp;</a>
+                                                  </span>
+                                                  <span class="links">
+                                                      <a href="#">1</a>
+                                                      <a href="#">2</a>
+                                                      <a href="#" class="current">3</a>
+                                                      <a href="#">4</a>
+                                                      <a href="#">5</a>
+                                                      <a href="javascript:;">...</a>
+                                                      <a href="#">50</a>
+                                                  </span>
+                                                  <span>
+                                                      <a href="#" class="next">&nbsp;</a>
+                                                  </span>
+                                              </div>
+                                              
+                       </div> <!--right end-->
+                </div>
+            </li>
+            
+            <li><a class="MenuItem" href="#">机型代码</a>
+                <div class="boxshow">
+                     <div class="right_side">  <!--right start--> 
+                        <div class="query">
+                          <table cellpadding="0" cellspacing="0" class="query_tab_1">
+                            <tr>
+                              <td class="list_1_2">制造商</td>
+                              <td class="list_2"> <select><option>空中客车</option></select> </td>
+                              <td class="list_3">机型代码</td>
+                              <td class="list_4"> <input type="text" value="AAA"/> </td>
+                              <td class="list_5">机型名称</td>
+                              <td class="list_6"> <input type="text" value="737"/> </td>
+                              <td class="list_9"><a href="#" class="query_a">查 询</a></td>
+                            </tr>          
+                          </table>          
+                        </div>
+                        
+                        <div class="qx">
+                                      <div class="xuanze">
+                                          <button class="btns btn-ac-blue popwin" data='{"url":"机型代码-添加机型代码弹层.html","width":570,"height":390,"title":"添加机型代码"}' id="add_city_code">添加</button>
+                                          <button class="btns btn-ac-blue">删除</button>
+                                          <button class="btns btn-ac-blue">Excel导入</button>
+                                          <button class="btns btn-ac-blue">导出到Excel</button>
+                                          <button class="btns btn-ac-blue">更新JS</button>
+                                      </div>
+                                      <!--<div class="qx_right">
+                                          <button class="btns btn-ac-blue">导出Excel</button>
+                                          <button class="btns btn-ac-blue">模版导出</button>
+                                          <button class="btns btn-ac-blue">导入说明【模版下载】</button>
+                                      </div>-->
+                           </div>
+                        
+                        <div class="right_tab"> <!--table滚动开始-->
+                        <table cellpadding="0" cellspacing="0" class="city_tab">
+                          <tr>
+                            <th class="th_left"><input type="checkbox" /></th>
+                            <th>制造商</th>
+                            <th>代码</th>
+                            <th>名称</th>
+                            <th>类别</th>
+                            <th>最少座位数</th>
+                            <th>最多座位数</th>
+                            <th>更新时间</th>
+                            <th>备注</th>
+                            <th>操作</th>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" checked="checked" /></td>
+                            <td>空中客</td>
+                            <td>AOG</td>
+                            <td>A300</td>
+                            <td>W</td>
+                            <td>206</td>
+                            <td>303</td>
+                            <td>2012-04-23</td>
+                            <td>备注信息</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>空中客</td>
+                            <td>AOG</td>
+                            <td>A300-100</td>
+                            <td>W</td>
+                            <td>206</td>
+                            <td>303</td>
+                            <td>2012-04-23</td>
+                            <td>备注信息</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>空中客</td>
+                            <td>AOG</td>
+                            <td>A300-100</td>
+                            <td>W</td>
+                            <td>206</td>
+                            <td>303</td>
+                            <td>2012-04-23</td>
+                            <td>备注信息</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr class="fourth_bg">
+                            <td><input type="checkbox" /></td>
+                            <td>空中客</td>
+                            <td>AOG</td>
+                            <td>A300-100</td>
+                            <td>W</td>
+                            <td>206</td>
+                            <td>303</td>
+                            <td>2012-04-23</td>
+                            <td>备注信息</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>空中客</td>
+                            <td>AOG</td>
+                            <td>A300-100</td>
+                            <td>W</td>
+                            <td>206</td>
+                            <td>303</td>
+                            <td>2012-04-23</td>
+                            <td>备注信息</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>空中客</td>
+                            <td>AOG</td>
+                            <td>A300</td>
+                            <td>W</td>
+                            <td>206</td>
+                            <td>303</td>
+                            <td>2012-04-23</td>
+                            <td>备注信息</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>空中客</td>
+                            <td>AOG</td>
+                            <td>A300-100</td>
+                            <td>W</td>
+                            <td>206</td>
+                            <td>303</td>
+                            <td>2012-04-23</td>
+                            <td>备注信息</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>空中客</td>
+                            <td>AOG</td>
+                            <td>A300-100</td>
+                            <td>W</td>
+                            <td>206</td>
+                            <td>303</td>
+                            <td>2012-04-23</td>
+                            <td>备注信息</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>空中客</td>
+                            <td>AOG</td>
+                            <td>A300-100</td>
+                            <td>W</td>
+                            <td>206</td>
+                            <td>303</td>
+                            <td>2012-04-23</td>
+                            <td>备注信息</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>空中客</td>
+                            <td>AOG</td>
+                            <td>A300-100</td>
+                            <td>W</td>
+                            <td>206</td>
+                            <td>303</td>
+                            <td>2012-04-23</td>
+                            <td>备注信息</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                        </table>
+                        </div> <!--table滚动结束-->
+                                                
+                                            <div class="grid-table-pagination">
+                                                  <span class="grid-table-count">
+                                                      共 <em>132</em> 条记录
+                                                  </span>
+                                                  <span>
+                                                      <a href="#" class="prev">&nbsp;</a>
+                                                  </span>
+                                                  <span class="links">
+                                                      <a href="#">1</a>
+                                                      <a href="#">2</a>
+                                                      <a href="#" class="current">3</a>
+                                                      <a href="#">4</a>
+                                                      <a href="#">5</a>
+                                                      <a href="javascript:;">...</a>
+                                                      <a href="#">50</a>
+                                                  </span>
+                                                  <span>
+                                                      <a href="#" class="next">&nbsp;</a>
+                                                  </span>
+                                              </div>
+                                              
+                       </div> <!--right end-->
+                </div>
+            </li>
+            <li><a class="MenuItem" href="#">航站楼</a>
+                <div class="boxshow">
+                     <div class="right_side">  <!--right start-->               
+                        <div class="query">
+                          <table cellpadding="0" cellspacing="0" class="query_tab_1">
+                            <tr>
+                              <td class="list_3">机场代码</td>
+                              <td class="list_4"> <input type="text" value="空中客车"/> </td>
+                              <td class="list_5_1">航空公司代码</td>
+                              <td class="list_6"> <input type="text" value="AAA"/> </td>
+                              <td class="list_9"><a href="#" class="query_a">查 询</a></td>
+                            </tr>          
+                          </table>          
+                        </div>
+                        
+                         <div class="qx">
+                                      <div class="xuanze">
+                                          <button class="btns btn-ac-blue popwin" data='{"url":"航站楼-添加航站楼弹层.html","width":570,"height":390,"title":"添加航站楼"}' id="add_city_code">添加</button>
+                                          <button class="btns btn-ac-blue">删除</button>
+                                          <button class="btns btn-ac-blue">Excel导入</button>
+                                          <button class="btns btn-ac-blue">导出到Excel</button>
+                                          <button class="btns btn-ac-blue">更新JS</button>
+                                      </div>
+                                      <!--<div class="qx_right">
+                                          <button class="btns btn-ac-blue">导出Excel</button>
+                                          <button class="btns btn-ac-blue">模版导出</button>
+                                          <button class="btns btn-ac-blue">导入说明【模版下载】</button>
+                                      </div>-->
+                           </div>
+                           
+                        <div class="right_tab"> <!--table滚动开始-->
+                        <table cellpadding="0" cellspacing="0" class="city_tab">
+                          <tr>
+                            <th class="th_left"><input type="checkbox" /></th>
+                            <th>机场代码</th>
+                            <th>航站楼编码</th>
+                            <th>航站楼名称</th>
+                            <th class="carrier">航司</th>
+                            <th>航站楼交通说明</th>
+                            <th class="remarks">备注</th>
+                            <th>更新时间</th>
+                            <th>操作</th>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" checked="checked" /></td>
+                            <td>SHA</td>
+                            <td>T2</td>
+                            <td>2号航站楼</td>
+                            <td>MU/CZ/CA/FM/ZH/SC/M..</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>2012-04-23</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>PVG</td>
+                            <td>T1</td>
+                            <td>1号航站楼</td>
+                            <td>MU/CZ/CA/FM/ZH/SC/M..</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>2012-04-23</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>PVG</td>
+                            <td>T2</td>
+                            <td>2号航站楼</td>
+                            <td>MU/CZ/CA/FM/ZH/SC/M..</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>2012-04-23</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr class="fourth_bg">
+                            <td><input type="checkbox" /></td>
+                            <td>SHA</td>
+                            <td>T2</td>
+                            <td>2号航站楼</td>
+                            <td>MU/CZ/CA/FM/ZH/SC/M..</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>2012-04-23</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>PVG</td>
+                            <td>T1</td>
+                            <td>1号航站楼</td>
+                            <td>MU/CZ/CA/FM/ZH/SC/M..</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>2012-04-23</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>SHA</td>
+                            <td>T1</td>
+                            <td>1号航站楼</td>
+                            <td>MU/CZ/CA/FM/ZH/SC/M..</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>2012-04-23</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>PVG</td>
+                            <td>T2</td>
+                            <td>2号航站楼</td>
+                            <td>MU/CZ/CA/FM/ZH/SC/M..</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>2012-04-23</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>PVG</td>
+                            <td>T2</td>
+                            <td>2号航站楼</td>
+                            <td>MU/CZ/CA/FM/ZH/SC/M..</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>2012-04-23</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>SHA</td>
+                            <td>T2</td>
+                            <td>2号航站楼</td>
+                            <td>MU/CZ/CA/FM/ZH/SC/M..</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>2012-04-23</td>
+                            <td><a href="#">修改</a></td>
+                          </tr>
+                        </table>
+                        </div> <!--table滚动结束-->
+                                                
+                                            <div class="grid-table-pagination">
+                                                  <span class="grid-table-count">
+                                                      共 <em>132</em> 条记录
+                                                  </span>
+                                                  <span>
+                                                      <a href="#" class="prev">&nbsp;</a>
+                                                  </span>
+                                                  <span class="links">
+                                                      <a href="#">1</a>
+                                                      <a href="#">2</a>
+                                                      <a href="#" class="current">3</a>
+                                                      <a href="#">4</a>
+                                                      <a href="#">5</a>
+                                                      <a href="javascript:;">...</a>
+                                                      <a href="#">50</a>
+                                                  </span>
+                                                  <span>
+                                                      <a href="#" class="next">&nbsp;</a>
+                                                  </span>
+                                              </div>
+                                              
+                       </div> <!--right end--> 
+                </div>
+            </li>
+            
+            <li><a class="MenuItem" href="#">航空公司</a>
+                <div class="boxshow">
+                  <div class="right_side">  <!--right start--> 
+                    <div class="query">
+                      <table cellpadding="0" cellspacing="0" class="query_tab_1">
+                        <tr>
+                          <td class="list_1">国别</td>
+                          <td class="list_2"> <select><option>国内</option></select> </td>
+                          <td class="list_3">航司代码</td>
+                          <td class="list_4"> <input type="text" value="MU"/> </td>
+                          <td class="list_5">中文名称</td>
+                          <td class="list_6"> <input type="text" value="东方航空"/> </td>
+                          <td class="list_9"><a href="#" class="query_a">查 询</a></td>
+                        </tr>          
+                      </table>          
+                    </div>
+                    
+                    <div class="qx">
+                              <div class="xuanze">
+                                  <button class="btns btn-ac-blue popwin" data='{"url":"航空公司添加弹层.html","width":570,"height":330,"title":"添加航空公司信息"}' id="add_city_code">添加</button>
+                                  <button class="btns btn-ac-blue">删除</button>
+                                  <button class="btns btn-ac-blue">Excel导入</button>
+                                  <button class="btns btn-ac-blue">导出到Excel</button>
+                                  <button class="btns btn-ac-blue">更新JS</button>
+                              </div>
+                              <!--<div class="qx_right">
+                                  <button class="btns btn-ac-blue">导出Excel</button>
+                                  <button class="btns btn-ac-blue">模版导出</button>
+                                  <button class="btns btn-ac-blue">导入说明【模版下载】</button>
+                              </div>-->
+                      </div>
+                      
+                    <div class="right_tab"> <!--table滚动开始-->
+                    <table cellpadding="0" cellspacing="0" class="city_tab">        
+                      <thead>
+                      <tr>
+                        <th class="th_left"><input type="checkbox" /></th>
+                        <th>二字码</th>
+                        <th>结算代码</th>
+                        <th>简称</th>
+                        <th>中文名称</th>
+                        <th>拼音</th>
+                        <th>英文名称</th>
+                        <th>默认返点</th>
+                        <th>PAT指令</th>
+                        <th>类型</th>
+                        <th>销售</th>
+                        <th>排序</th>
+                        <th>备注</th>
+                        <th>操作</th>
+                      </tr>
+                      </thead>
+                      
+                      <tbody>
+                      <tr>
+                        <td><input type="checkbox" checked="checked" /></td>
+                        <td>3U</td>
+                        <td>876</td>
+                        <td>川航</td>
+                        <td>四川航空</td>
+                        <td>chuanghang</td>
+                        <td>3U</td>
+                        <td>2</td>
+                        <td>PAT:A</td>
+                        <td>国内</td>
+                        <td>是</td>
+                        <td>1</td>
+                        <td>10</td>
+                        <td><a href="#">修改</a></td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>3U</td>
+                        <td>876</td>
+                        <td>川航</td>
+                        <td>四川航空</td>
+                        <td>chuanghang</td>
+                        <td>3U</td>
+                        <td>2</td>
+                        <td>PAT:A</td>
+                        <td>国内</td>
+                        <td>是</td>
+                        <td>2</td>
+                        <td>10</td>
+                        <td><a href="#">修改</a></td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>3U</td>
+                        <td>876</td>
+                        <td>川航</td>
+                        <td>四川航空</td>
+                        <td>chuanghang</td>
+                        <td>3U</td>
+                        <td>2</td>
+                        <td>PAT:A</td>
+                        <td>国内</td>
+                        <td>是</td>
+                        <td>3</td>
+                        <td>10</td>
+                        <td><a href="#">修改</a></td>
+                      </tr>
+                      <tr class="fourth_bg">
+                        <td><input type="checkbox" /></td>
+                        <td>3U</td>
+                        <td>876</td>
+                        <td>川航</td>
+                        <td>四川航空</td>
+                        <td>chuanghang</td>
+                        <td>3U</td>
+                        <td>2</td>
+                        <td>PAT:A</td>
+                        <td>国内</td>
+                        <td>是</td>
+                        <td>4</td>
+                        <td>10</td>
+                        <td><a href="#">修改</a></td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>3U</td>
+                        <td>876</td>
+                        <td>川航</td>
+                        <td>四川航空</td>
+                        <td>chuanghang</td>
+                        <td>3U</td>
+                        <td>2</td>
+                        <td>PAT:A</td>
+                        <td>国内</td>
+                        <td>是</td>
+                        <td>5</td>
+                        <td>10</td>
+                        <td><a href="#">修改</a></td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>3U</td>
+                        <td>876</td>
+                        <td>川航</td>
+                        <td>四川航空</td>
+                        <td>chuanghang</td>
+                        <td>3U</td>
+                        <td>2</td>
+                        <td>PAT:A</td>
+                        <td>国内</td>
+                        <td>是</td>
+                        <td>6</td>
+                        <td>10</td>
+                        <td><a href="#">修改</a></td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>3U</td>
+                        <td>876</td>
+                        <td>川航</td>
+                        <td>四川航空</td>
+                        <td>chuanghang</td>
+                        <td>3U</td>
+                        <td>2</td>
+                        <td>PAT:A</td>
+                        <td>国内</td>
+                        <td>是</td>
+                        <td>7</td>
+                        <td>10</td>
+                        <td><a href="#">修改</a></td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>3U</td>
+                        <td>876</td>
+                        <td>川航</td>
+                        <td>四川航空</td>
+                        <td>chuanghang</td>
+                        <td>3U</td>
+                        <td>2</td>
+                        <td>PAT:A</td>
+                        <td>国内</td>
+                        <td>是</td>
+                        <td>8</td>
+                        <td>10</td>
+                        <td><a href="#">修改</a></td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>3U</td>
+                        <td>876</td>
+                        <td>川航</td>
+                        <td>四川航空</td>
+                        <td>chuanghang</td>
+                        <td>3U</td>
+                        <td>2</td>
+                        <td>PAT:A</td>
+                        <td>国内</td>
+                        <td>是</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td><a href="#">修改</a></td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>3U</td>
+                        <td>876</td>
+                        <td>川航</td>
+                        <td>四川航空</td>
+                        <td>chuanghang</td>
+                        <td>3U</td>
+                        <td>2</td>
+                        <td>PAT:A</td>
+                        <td>国内</td>
+                        <td>是</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td><a href="#">修改</a></td>
+                      </tr>
+                      </tbody>
+                    </table>
+                    </div> <!--table滚动结束-->
+                                
+                            <div class="grid-table-pagination">
+                                  <span class="grid-table-count">
+                                      共 <em>132</em> 条记录
+                                  </span>
+                                  <span>
+                                      <a href="#" class="prev">&nbsp;</a>
+                                  </span>
+                                  <span class="links">
+                                      <a href="#">1</a>
+                                      <a href="#">2</a>
+                                      <a href="#" class="current">3</a>
+                                      <a href="#">4</a>
+                                      <a href="#">5</a>
+                                      <a href="javascript:;">...</a>
+                                      <a href="#">50</a>
+                                  </span>
+                                  <span>
+                                      <a href="#" class="next">&nbsp;</a>
+                                  </span>
+                              </div>
+                              
+                    </div> <!--right end--> 
+                </div>
+            </li>
+
+          <li><a class="MenuItem" href="#">舱位等级</a>
+              <div class="boxshow">
+                  <div class="right_side">  <!--right start-->
+                      <div class="query">
+                          <table cellpadding="0" cellspacing="0" class="query_tab_1">
+                              <tr>
+                                  <td class="list_1">舱位级别</td>
+                                  <td class="list_2"> <select><option>国内</option></select> </td>
+                                  <td class="list_3">等级名称</td>
+                                  <td class="list_4"> <input type="text" value="SHA"/> </td>
+                                  <td class="list_5"></td>
+                                  <td class="list_6"></td>
+                                  <td class="list_9"><a href="#" class="query_a">查 询</a></td>
+                              </tr>
+                          </table>
+                      </div>
+
+                      <div class="qx">
+                          <div class="xuanze">
+                              <button class="btns btn-ac-blue popwin" data='{"url":"城市代码-添加城市代码弹层.html","width":470,"height":300,"title":"添加城市代码"}' id="add_city_code">添加</button>
+                              <button class="btns btn-ac-blue">删除</button>
+                              <button class="btns btn-ac-blue">Excel导入</button>
+                              <button class="btns btn-ac-blue">导出到Excel</button>
+                              <button class="btns btn-ac-blue">更新JS</button>
+                          </div>
+                          <!--<div class="qx_right">
+                              <button class="btns btn-ac-blue">导出Excel</button>
+                              <button class="btns btn-ac-blue">模版导出</button>
+                              <button class="btns btn-ac-blue">导入说明【模版下载】</button>
+                          </div>-->
+                      </div>
+
+                      <div class="right_tab"> <!--table滚动开始-->
+                          <table cellpadding="0" cellspacing="0" class="city_tab" style="width:100%">
+                              <thead>
+                              <tr>
+                                  <th width="20" class="th_left"><input type="checkbox" /></th>
+                                  <th width="55">类型</th>
+                                  <th width="55">类型名称</th>
+                                  <th width="55">级别代码</th>
+                                  <th width="55">所属类型</th>
+                                  <th width="90">适用航空公司</th>
+                                  <th>描述</th>
+                                  <th width="85">更新时间</th>
+                                  <th width="55" class="city_td_1">编辑</th>
+                              </tr>
+                              </thead>
+
+                              <tbody>
+                              <tr>
+                                  <td><input type="checkbox" checked="checked" /></td>
+                                  <td>舱位级别</td>
+                                  <td>头等舱</td>
+                                  <td>Y</td>
+                                  <td>无</td>
+                                  <td>不限</td>
+                                  <td></td>
+                                  <td>2012-04-23</td>
+                                  <td><a href="#">复制</a> <a href="#">修改</a></td>
+                              </tr>
+                              <tr>
+                                  <td><input type="checkbox" /></td>
+                                  <td>舱位级别</td>
+                                  <td>头等舱</td>
+                                  <td>Y</td>
+                                  <td>无</td>
+                                  <td>不限</td>
+                                  <td></td>
+                                  <td>2012-04-23</td>
+                                  <td><a href="#">复制</a> <a href="#">修改</a></td>
+                              </tr>
+                              <tr>
+                                  <td><input type="checkbox" /></td>
+                                  <td>舱位级别</td>
+                                  <td>头等舱</td>
+                                  <td>Y</td>
+                                  <td>无</td>
+                                  <td>不限</td>
+                                  <td></td>
+                                  <td>2012-04-23</td>
+                                  <td><a href="#">复制</a> <a href="#">修改</a></td>
+                              </tr>
+                              <tr>
+                                  <td><input type="checkbox" /></td>
+                                  <td>舱位级别</td>
+                                  <td>头等舱</td>
+                                  <td>Y</td>
+                                  <td>无</td>
+                                  <td>不限</td>
+                                  <td></td>
+                                  <td>2012-04-23</td>
+                                  <td><a href="#">复制</a> <a href="#">修改</a></td>
+                              </tr>
+                              <tr>
+                                  <td><input type="checkbox" /></td>
+                                  <td>舱位级别</td>
+                                  <td>头等舱</td>
+                                  <td>Y</td>
+                                  <td>无</td>
+                                  <td>不限</td>
+                                  <td></td>
+                                  <td>2012-04-23</td>
+                                  <td><a href="#">复制</a> <a href="#">修改</a></td>
+                              </tr>
+                              <tr>
+                                  <td><input type="checkbox" /></td>
+                                  <td>舱位级别</td>
+                                  <td>头等舱</td>
+                                  <td>Y</td>
+                                  <td>无</td>
+                                  <td>不限</td>
+                                  <td></td>
+                                  <td>2012-04-23</td>
+                                  <td><a href="#">复制</a> <a href="#">修改</a></td>
+                              </tr>
+                              <tr>
+                                  <td><input type="checkbox" /></td>
+                                  <td>舱位级别</td>
+                                  <td>头等舱</td>
+                                  <td>Y</td>
+                                  <td>无</td>
+                                  <td>不限</td>
+                                  <td></td>
+                                  <td>2012-04-23</td>
+                                  <td><a href="#">复制</a> <a href="#">修改</a></td>
+                              </tr>
+                              <tr>
+                                  <td><input type="checkbox" /></td>
+                                  <td>舱位级别</td>
+                                  <td>头等舱</td>
+                                  <td>Y</td>
+                                  <td>无</td>
+                                  <td>不限</td>
+                                  <td></td>
+                                  <td>2012-04-23</td>
+                                  <td><a href="#">复制</a> <a href="#">修改</a></td>
+                              </tr>
+                              <tr>
+                                  <td><input type="checkbox" /></td>
+                                  <td>舱位级别</td>
+                                  <td>头等舱</td>
+                                  <td>Y</td>
+                                  <td>无</td>
+                                  <td>不限</td>
+                                  <td></td>
+                                  <td>2012-04-23</td>
+                                  <td><a href="#">复制</a> <a href="#">修改</a></td>
+                              </tr>
+                              <tr>
+                                  <td><input type="checkbox" /></td>
+                                  <td>舱位级别</td>
+                                  <td>头等舱</td>
+                                  <td>Y</td>
+                                  <td>无</td>
+                                  <td>不限</td>
+                                  <td></td>
+                                  <td>2012-04-23</td>
+                                  <td><a href="#">复制</a> <a href="#">修改</a></td>
+                              </tr>
+                              </tbody>
+                          </table>
+                      </div> <!--table滚动结束-->
+
+                      <div class="grid-table-pagination">
+                          <span class="grid-table-count">
+                              共 <em>132</em> 条记录
+                          </span>
+                          <span>
+                              <a href="#" class="prev">&nbsp;</a>
+                          </span>
+                          <span class="links">
+                              <a href="#">1</a>
+                              <a href="#">2</a>
+                              <a href="#" class="current">3</a>
+                              <a href="#">4</a>
+                              <a href="#">5</a>
+                              <a href="javascript:;">...</a>
+                              <a href="#">50</a>
+                          </span>
+                          <span>
+                              <a href="#" class="next">&nbsp;</a>
+                          </span>
+                      </div>
+
+                  </div> <!--right end-->
+              </div>
+          </li>
+            
+            <li><a class="MenuItem" href="#">舱位代码</a>
+                <div class="boxshow">
+                   <div class="right_side"> <!--right start-->   
+                    <div class="query">
+                      <table cellpadding="0" cellspacing="0" class="query_tab">
+                        <tr>
+                          <td class="list_1">国别</td>
+                          <td style="width:160px;"> <select style="width:89%;"><option>全部</option></select> </td>
+                          <td class="list_3">航空公司名称</td>
+                          <td class="list_4"> <input type="text" value="MU"/> </td>
+                            <td class="list_7">出票日期</td>
+                            <td class="list_8" style=" width:160px;"> <input type="text" value="2013-07-02"/> </td>
+                          <td class="list_9" rowspan="2"><a href="#" class="query_a">查 询</a></td>
+                        </tr>
+                        <tr>
+                          <td class="list_7">有效日期</td>
+                          <td class="list_8" style=" width:160px;"> <input type="text" value="2013-07-02"/> </td>                
+                        </tr>          
+                      </table>          
+                    </div>
+                    
+                    <div class="qx">
+                          <div class="xuanze">
+                              <button class="btns btn-ac-blue">添加</button>
+                              <button class="btns btn-ac-blue">删除</button>
+                              <button class="btns btn-ac-blue">Excel导入</button>
+                              <button class="btns btn-ac-blue">导出到Excel</button>
+                              <button class="btns btn-ac-blue">更新JS</button>
+                          </div>
+                          <!--<div class="qx_right">
+                              <button class="btns btn-ac-blue">导出Excel</button>
+                              <button class="btns btn-ac-blue">模版导出</button>
+                              <button class="btns btn-ac-blue">导入说明【模版下载】</button>
+                          </div>-->
+                      </div>
+
+                   <div class="qx">
+                       <span style="padding-left:20px"><b class="title">国内机票各航空公司适用舱位表</b>有效期：2013-07-01</span>
+                       <span>
+                           <span class="blackSquare"></span>黑色表示普通舱位
+                           <span class="blueSquare"></span>蓝色表示特殊舱位
+                           <span class="redSquare"></span>红色表示可申请舱位
+                       </span>
+                   </div>
+                    
+                    <div class="right_tab"> <!--table滚动开始-->
+                    <table cellpadding="0" cellspacing="0" class="module" style="width:174%">
+                      <thead>
+                      <tr class="first_th">
+                        <th class="th_border"></th>
+                        <th colspan="6">头等舱</th>
+                        <th colspan="4">公务舱</th>
+                        <th colspan="17">经济舱</th>
+                        <th colspan="6">其他</th>
+                      </tr>
+                      </thead>
+                   
+                      <tbody>
+                      <tr class="second_th">
+                         <th width="43">航空公司</th>
+                         <th width="43">豪华头等</th>
+                         <th width="43">标准头等</th>
+                         <th width="43">超值头等</th>
+                         <th width="43">空中头等</th>
+                         <th width="43">暂时头等</th>
+                         <th width="43">里程兑换</th>
+                         <th width="43">豪华公务</th>
+                         <th width="43">标准公务</th>
+                         <th width="43">超值公务</th>
+                         <th width="43">悦享公务</th>
+                         <th width="43">豪华经济</th>
+                         <th width="43">标准经济</th>
+                         <th width="43">超值经济</th>
+                         <th width="60">超值经济特价</th>
+                         <th width="43">95%</th>
+                         <th width="43">90%</th>
+                         <th width="43">85%</th>
+                         <th width="43">80%</th>
+                         <th width="43">75%</th>
+                         <th width="43">70%</th>
+                         <th width="43">65%</th>
+                         <th width="43">60%</th>
+                         <th width="43">55%</th>
+                         <th width="43">50%</th>
+                         <th width="43">43%</th>
+                         <th width="43">40%</th>
+                         <th width="43">35%</th>
+                         <th width="43">提够</th>
+                         <th width="43">特殊舱位</th>
+                         <th width="60">团队舱</th>
+                         <th width="60">往返舱</th>
+                         <th width="60">中转舱</th>
+                         <th width="43">限制条件</th>
+                      </tr>
+                      <tr>
+                          <td>3U</td>
+                          <td>A</td>
+                          <td>F</td>
+                          <td><span class="appliableShippingSpace">A/P</span></td>
+                          <td></td>
+                          <td></td>
+                          <td><span class="appliableShippingSpace">A</span></td>
+                          <td></td>
+                          <td>C</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>Y</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>B</td>
+                          <td>E</td>
+                          <td>H</td>
+                          <td>L</td>
+                          <td>M</td>
+                          <td>N</td>
+                          <td>R</td>
+                          <td>S</td>
+                          <td>V</td>
+                          <td>T</td>
+                          <td></td>
+                          <td></td>
+                          <td>X</td>
+                          <td>H</td>
+                          <td>H</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td>3U</td>
+                          <td>A</td>
+                          <td>F</td>
+                          <td><span class="appliableShippingSpace">A/P</span></td>
+                          <td></td>
+                          <td></td>
+                          <td><span class="appliableShippingSpace">A</span></td>
+                          <td></td>
+                          <td>C</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>Y</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>B</td>
+                          <td>E</td>
+                          <td>H</td>
+                          <td>L</td>
+                          <td>M</td>
+                          <td>N</td>
+                          <td>R</td>
+                          <td>S</td>
+                          <td>V</td>
+                          <td>T</td>
+                          <td></td>
+                          <td></td>
+                          <td>X</td>
+                          <td>H</td>
+                          <td>H</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td>3U</td>
+                          <td>A</td>
+                          <td>F</td>
+                          <td><span class="appliableShippingSpace">A/P</span></td>
+                          <td></td>
+                          <td></td>
+                          <td><span class="appliableShippingSpace">A</span></td>
+                          <td></td>
+                          <td>C</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>Y</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>B</td>
+                          <td>E</td>
+                          <td>H</td>
+                          <td>L</td>
+                          <td>M</td>
+                          <td>N</td>
+                          <td>R</td>
+                          <td>S</td>
+                          <td>V</td>
+                          <td>T</td>
+                          <td></td>
+                          <td></td>
+                          <td>X</td>
+                          <td>H</td>
+                          <td>H</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td>3U</td>
+                          <td>A</td>
+                          <td>F</td>
+                          <td><span class="appliableShippingSpace">A/P</span></td>
+                          <td></td>
+                          <td></td>
+                          <td><span class="appliableShippingSpace">A</span></td>
+                          <td></td>
+                          <td>C</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>Y</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>B</td>
+                          <td>E</td>
+                          <td>H</td>
+                          <td>L</td>
+                          <td>M</td>
+                          <td>N</td>
+                          <td>R</td>
+                          <td>S</td>
+                          <td>V</td>
+                          <td>T</td>
+                          <td></td>
+                          <td></td>
+                          <td>X</td>
+                          <td>H</td>
+                          <td>H</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td>3U</td>
+                          <td>A</td>
+                          <td>F</td>
+                          <td><span class="appliableShippingSpace">A/P</span></td>
+                          <td></td>
+                          <td></td>
+                          <td><span class="appliableShippingSpace">A</span></td>
+                          <td></td>
+                          <td>C</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>Y</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>B</td>
+                          <td>E</td>
+                          <td>H</td>
+                          <td>L</td>
+                          <td>M</td>
+                          <td>N</td>
+                          <td>R</td>
+                          <td>S</td>
+                          <td>V</td>
+                          <td>T</td>
+                          <td></td>
+                          <td></td>
+                          <td>X</td>
+                          <td>H</td>
+                          <td>H</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td>3U</td>
+                          <td>A</td>
+                          <td>F</td>
+                          <td><span class="appliableShippingSpace">A/P</span></td>
+                          <td></td>
+                          <td></td>
+                          <td><span class="appliableShippingSpace">A</span></td>
+                          <td></td>
+                          <td>C</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>Y</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>B</td>
+                          <td>E</td>
+                          <td>H</td>
+                          <td>L</td>
+                          <td>M</td>
+                          <td>N</td>
+                          <td>R</td>
+                          <td>S</td>
+                          <td>V</td>
+                          <td>T</td>
+                          <td></td>
+                          <td></td>
+                          <td>X</td>
+                          <td>H</td>
+                          <td>H</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td>3U</td>
+                          <td>A</td>
+                          <td>F</td>
+                          <td><span class="appliableShippingSpace">A/P</span></td>
+                          <td></td>
+                          <td></td>
+                          <td><span class="appliableShippingSpace">A</span></td>
+                          <td></td>
+                          <td>C</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>Y</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>B</td>
+                          <td>E</td>
+                          <td>H</td>
+                          <td>L</td>
+                          <td>M</td>
+                          <td>N</td>
+                          <td>R</td>
+                          <td>S</td>
+                          <td>V</td>
+                          <td>T</td>
+                          <td></td>
+                          <td></td>
+                          <td>X</td>
+                          <td>H</td>
+                          <td>H</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td>3U</td>
+                          <td>A</td>
+                          <td>F</td>
+                          <td><span class="appliableShippingSpace">A/P</span></td>
+                          <td></td>
+                          <td></td>
+                          <td><span class="appliableShippingSpace">A</span></td>
+                          <td></td>
+                          <td>C</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>Y</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>B</td>
+                          <td>E</td>
+                          <td>H</td>
+                          <td>L</td>
+                          <td>M</td>
+                          <td>N</td>
+                          <td>R</td>
+                          <td>S</td>
+                          <td>V</td>
+                          <td>T</td>
+                          <td></td>
+                          <td></td>
+                          <td>X</td>
+                          <td>H</td>
+                          <td>H</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td>3U</td>
+                          <td>A</td>
+                          <td>F</td>
+                          <td><span class="appliableShippingSpace">A/P</span></td>
+                          <td></td>
+                          <td></td>
+                          <td><span class="appliableShippingSpace">A</span></td>
+                          <td></td>
+                          <td>C</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>Y</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>B</td>
+                          <td>E</td>
+                          <td>H</td>
+                          <td><span class="specialShippingSpace">L</span></td>
+                          <td><span class="specialShippingSpace">M</span></td>
+                          <td><span class="specialShippingSpace">N</span></td>
+                          <td>R</td>
+                          <td>S</td>
+                          <td>V</td>
+                          <td>T</td>
+                          <td></td>
+                          <td></td>
+                          <td>X</td>
+                          <td>H</td>
+                          <td>H</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td>3U</td>
+                          <td>A</td>
+                          <td>F</td>
+                          <td><span class="appliableShippingSpace">A/P</span></td>
+                          <td></td>
+                          <td></td>
+                          <td><span class="appliableShippingSpace">A</span></td>
+                          <td></td>
+                          <td>C</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>Y</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>B</td>
+                          <td>E</td>
+                          <td>H</td>
+                          <td>L</td>
+                          <td>M</td>
+                          <td>N</td>
+                          <td>R</td>
+                          <td>S</td>
+                          <td>V</td>
+                          <td>T</td>
+                          <td></td>
+                          <td></td>
+                          <td>X</td>
+                          <td>H</td>
+                          <td>H</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                      </tbody>
+                    </table>
+                    </div> <!--table滚动结束-->
+                    
+                    <div class="grid-table-pagination">
+                          <span class="grid-table-count">
+                              共 <em>132</em> 条记录
+                          </span>
+                          <span>
+                              <a href="#" class="prev">&nbsp;</a>
+                          </span>
+                          <span class="links">
+                              <a href="#">1</a>
+                              <a href="#">2</a>
+                              <a href="#" class="current">3</a>
+                              <a href="#">4</a>
+                              <a href="#">5</a>
+                              <a href="javascript:;">...</a>
+                              <a href="#">50</a>
+                          </span>
+                          <span>
+                              <a href="#" class="next">&nbsp;</a>
+                          </span>
+                      </div>
+                    
+                   </div> <!--right end-->
+                </div>
+            </li>
+            
+            <li><a class="MenuItem" href="#">舱位折扣</a>
+                <div class="boxshow">
+                  <div class="right_side">  <!--right start-->   
+                    <div class="query">
+                      <table cellpadding="0" cellspacing="0" class="query_tab">
+                        <tr>
+                          <td class="list_1">国别</td>
+                          <td class="list_2"> <select><option>全部</option></select> </td>
+                          <td class="list_3">航司代码</td>
+                          <td class="list_4"> <input type="text" value="MU"/> </td>
+                          <td class="list_5">中文名称</td>
+                          <td class="list_6"> <input type="text" value="东方航空"/> </td>
+                          <td class="list_9"><a href="#" class="query_a">查 询</a></td>
+                        </tr>          
+                      </table>          
+                    </div>
+                    
+                    <div class="qx">
+                              <div class="xuanze">
+                                  <button class="btns btn-ac-blue popwin"  data='{"url":"舱位折扣添加弹层.html","width":570,"height":400,"title":"添加舱位信息"}' id="add_city_code">添加</button>
+                                  <button class="btns btn-ac-blue">删除</button>
+                                  <button class="btns btn-ac-blue">Excel导入</button>
+                                  <button class="btns btn-ac-blue">导出到Excel</button>
+                                  <button class="btns btn-ac-blue">更新JS</button>
+                              </div>
+                              <!--<div class="qx_right">
+                                  <button class="btns btn-ac-blue">导出Excel</button>
+                                  <button class="btns btn-ac-blue">模版导出</button>
+                                  <button class="btns btn-ac-blue">导入说明【模版下载】</button>
+                              </div>-->
+                          </div>
+                          
+                    <div class="right_tab"> <!--table滚动开始-->
+                    <table cellpadding="0" cellspacing="0" class="discount_tab">
+                      <thead>
+                      <tr>
+                         <th class="th_left"><input type="checkbox" /></th>
+                         <th>航空公司</th>
+                         <th>舱位级别</th>
+                         <th>舱位代码</th>
+                         <th>舱位拓展</th>
+                         <th>舱位折扣</th>
+                         <th>可销售</th>
+                         <th>可申请</th>
+                         <th>开始日期</th>
+                         <th>结束日期</th>
+                         <th>备注</th>
+                         <th>更新时间</th>
+                         <th>航线</th>
+                         <th>操作</th>
+                      </tr>
+                      </thead>
+                      
+                      <tbody>
+                      <tr>
+                         <td><input type="checkbox" checked="checked" /></td>
+                         <td>MU</td>
+                         <td>头等舱</td>
+                         <td>F</td>
+                         <td>&nbsp;</td>
+                         <td>200</td>
+                         <td>Y</td>
+                         <td>N</td>
+                         <td>2007-08-02</td>
+                         <td>2050-01-01</td>
+                         <td>&nbsp;</td>
+                         <td>2013-06-08 16:18</td>
+                         <td>&nbsp;</td>
+                         <td class="last_td"><a href="#">修改</a></td>
+                      </tr>
+                      <tr>
+                         <td><input type="checkbox" /></td>
+                         <td>MU</td>
+                         <td>公务舱</td>
+                         <td>C</td>
+                         <td>&nbsp;</td>
+                         <td>150</td>
+                         <td>Y</td>
+                         <td>N</td>
+                         <td>2007-08-02</td>
+                         <td>2050-01-01</td>
+                         <td>&nbsp;</td>
+                         <td>&nbsp;</td>
+                         <td>&nbsp;</td>
+                         <td class="last_td"><a href="#">修改</a></td>
+                      </tr>
+                      <tr>
+                         <td><input type="checkbox" /></td>
+                         <td>MU</td>
+                         <td>标准经济舱</td>
+                         <td>J</td>
+                         <td>&nbsp;</td>
+                         <td>130</td>
+                         <td>Y</td>
+                         <td>N</td>
+                         <td>2007-08-02</td>
+                         <td>2050-01-01</td>
+                         <td>&nbsp;</td>
+                         <td>&nbsp;</td>
+                         <td>&nbsp;</td>
+                         <td class="last_td"><a href="#">修改</a></td>
+                      </tr>
+                      <tr class="fourth_bg">
+                         <td><input type="checkbox" /></td>
+                         <td>MU</td>
+                         <td>折扣经济舱</td>
+                         <td>Y</td>
+                         <td>B1</td>
+                         <td>100</td>
+                         <td>Y</td>
+                         <td>N</td>
+                         <td>2007-08-02</td>
+                         <td>2050-01-01</td>
+                         <td>&nbsp;</td>
+                         <td>&nbsp;</td>
+                         <td>&nbsp;</td>
+                         <td class="last_td"><a href="#">修改</a></td>
+                      </tr>
+                      <tr>
+                         <td><input type="checkbox" /></td>
+                         <td>MU</td>
+                         <td>折扣经济舱</td>
+                         <td>G</td>
+                         <td>&nbsp;</td>
+                         <td>95</td>
+                         <td>G</td>
+                         <td>N</td>
+                         <td>2007-08-02</td>
+                         <td>2050-01-01</td>
+                         <td>&nbsp;</td>
+                         <td>&nbsp;</td>
+                         <td>&nbsp;</td>
+                         <td class="last_td"><a href="#">修改</a></td>
+                      </tr>
+                      <tr>
+                         <td><input type="checkbox" /></td>
+                         <td>MU</td>
+                         <td>折扣经济舱</td>
+                         <td>H</td>
+                         <td>&nbsp;</td>
+                         <td>85</td>
+                         <td>Y</td>
+                         <td>N</td>
+                         <td>2007-08-02</td>
+                         <td>2050-01-01</td>
+                         <td>&nbsp;</td>
+                         <td>&nbsp;</td>
+                         <td>&nbsp;</td>
+                         <td class="last_td"><a href="#">修改</a></td>
+                      </tr>
+                      <tr>
+                         <td><input type="checkbox" /></td>
+                         <td>MU</td>
+                         <td>折扣经济舱</td>
+                         <td>J</td>
+                         <td>&nbsp;</td>
+                         <td>80</td>
+                         <td>Y</td>
+                         <td>N</td>
+                         <td>2007-08-02</td>
+                         <td>2050-01-01</td>
+                         <td>&nbsp;</td>
+                         <td>&nbsp;</td>
+                         <td>&nbsp;</td>
+                         <td class="last_td"><a href="#">修改</a></td>
+                      </tr>
+                      <tr>
+                         <td><input type="checkbox" /></td>
+                         <td>MU</td>
+                         <td>折扣经济舱</td>
+                         <td>J</td>
+                         <td>&nbsp;</td>
+                         <td>75</td>
+                         <td>Y</td>
+                         <td>N</td>
+                         <td>2007-08-02</td>
+                         <td>2050-01-01</td>
+                         <td>&nbsp;</td>
+                         <td>&nbsp;</td>
+                         <td>&nbsp;</td>
+                         <td class="last_td"><a href="#">修改</a></td>
+                      </tr>
+                      <tr>
+                         <td><input type="checkbox" /></td>
+                         <td>MU</td>
+                         <td>折扣经济舱</td>
+                         <td>I</td>
+                         <td>&nbsp;</td>
+                         <td>70</td>
+                         <td>Y</td>
+                         <td>N</td>
+                         <td>2007-08-02</td>
+                         <td>2050-01-01</td>
+                         <td>&nbsp;</td>
+                         <td>&nbsp;</td>
+                         <td>&nbsp;</td>
+                         <td class="last_td"><a href="#">修改</a></td>
+                      </tr>
+                      <tr>
+                         <td><input type="checkbox" /></td>
+                         <td>MU</td>
+                         <td>折扣经济舱</td>
+                         <td>K</td>
+                         <td>&nbsp;</td>
+                         <td>65</td>
+                         <td>Y</td>
+                         <td>N</td>
+                         <td>2007-08-02</td>
+                         <td>2050-01-01</td>
+                         <td>&nbsp;</td>
+                         <td>&nbsp;</td>
+                         <td>&nbsp;</td>
+                         <td class="last_td"><a href="#">修改</a></td>
+                      </tr>
+                      </tbody>         
+                    </table>
+                 
+                    </div> <!--table滚动结束-->
+                                
+                                <div class="grid-table-pagination">
+                                      <span class="grid-table-count">
+                                          共 <em>132</em> 条记录
+                                      </span>
+                                      <span>
+                                          <a href="#" class="prev">&nbsp;</a>
+                                      </span>
+                                      <span class="links">
+                                          <a href="#">1</a>
+                                          <a href="#">2</a>
+                                          <a href="#" class="current">3</a>
+                                          <a href="#">4</a>
+                                          <a href="#">5</a>
+                                          <a href="javascript:;">...</a>
+                                          <a href="#">50</a>
+                                      </span>
+                                      <span>
+                                          <a href="#" class="next">&nbsp;</a>
+                                      </span>
+                                  </div>
+                       
+                        </div> <!--right end-->
+                </div>
+            </li>
+           
+            <li><a class="MenuItem" href="#">公布运价</a>
+                <div class="boxshow">
+                  <div class="right_side">  <!--right start--> 
+                    <div class="query">
+                      <table cellpadding="0" cellspacing="0" class="query_tab">
+                        <tr>
+                          <td class="list_3">数据来源</td>
+                          <td class="list_2"> <select style="width:80%;"><option>所有数据</option></select> </td>
+                          <td class="list_3">出发城市</td>
+                          <td class="list_4"> <input type="text" value="SHA"/> </td>
+                          <td class="list_5">到达城市</td>
+                          <td class="list_6"> <input type="text" value="PVG"/> </td>
+                          <td class="list_9" rowspan="2"><a href="#" class="query_a">查 询</a></td>
+                        </tr> 
+                        <tr>
+                          <td class="list_7">航空公司</td>
+                          <td> <input type="text" value="MU" style="width:77%;"/> </td>            
+                        </tr>         
+                      </table>          
+                    </div>
+                    
+                    <div class="qx">
+                              <div class="xuanze">
+                                  <button class="btns btn-ac-blue popwin" data='{"url":"公布运价设置弹层.html","width":570,"height":430,"title":"公布运价设置"}' id="add_city_code">添加</button>
+                                  <button class="btns btn-ac-blue">删除</button>
+                                  <button class="btns btn-ac-blue">Excel导入</button>
+                                  <button class="btns btn-ac-blue">导出到Excel</button>
+                                  <button class="btns btn-ac-blue">更新JS</button>
+                              </div>
+                              <!--<div class="qx_right">
+                                  <button class="btns btn-ac-blue">导出Excel</button>
+                                  <button class="btns btn-ac-blue">模版导出</button>
+                                  <button class="btns btn-ac-blue">导入说明【模版下载】</button>
+                              </div>-->
+                      </div>
+                    
+                    <div class="right_tab"> <!--table滚动开始-->
+                    <table cellpadding="0" cellspacing="0" class="bdi_tab">
+                      <tr>
+                         <th class="th_left"><input type="checkbox" /></th>
+                         <th>行程航线</th>
+                         <th>航空<br>公司</th>
+                         <th>级别<br>代码</th>
+                         <th>舱位<br>代码</th>
+                         <th>舱位扩展</th>
+                         <th>价格类型</th>
+                         <th>单位价格</th>
+                         <th>往返价格</th>
+                         <th>缓存时间</th>
+                         <th>销售</th>
+                         <th>座位</th>
+                         <th>起飞日期</th>
+                         <th>开始日期</th>
+                         <th>结束日期</th>
+                         <th>操作</th>
+                      </tr>
+                      <tr>
+                         <td><input type="checkbox" checked="checked" /></td>
+                         <td>SHAPEK/PEKSHA</td>
+                         <td>*</td>
+                         <td>Y</td>
+                         <td>Y</td>
+                         <td>Y</td>
+                         <td>FD</td>
+                         <td>1,130.00</td>
+                         <td>1,130.00</td>
+                         <td>24h</td>
+                         <td>是</td>
+                         <td> </td>
+                         <td>2013-01-01</td>
+                         <td>2013-01-01</td>
+                         <td>2013-01-01</td>
+                         <td><a href="#">修改</a></td>
+                      </tr>
+                      <tr>
+                         <td class="notborder"><input type="checkbox" /></td>
+                         <td class="notborder">KWECSX</td>
+                         <td class="notborder">*</td>
+                         <td class="notborder">Y</td>
+                         <td class="notborder">Y</td>
+                         <td>Y</td>
+                         <td>FD</td>
+                         <td>600.00</td>
+                         <td>600.00</td>
+                         <td>24h</td>
+                         <td>是</td>
+                         <td> </td>
+                         <td>2013-01-01</td>
+                         <td>2013-01-01</td>
+                         <td>2013-01-01</td>
+                         <td><a href="#">修改</a></td>
+                      </tr>
+                      <tr>
+                         <td class="notborder"><input type="checkbox" /></td>
+                         <td class="notborder">KWECSX</td>
+                         <td class="notborder">MU</td>
+                         <td class="notborder">Y</td>
+                         <td class="notborder">Y</td>
+                         <td>Y</td>
+                         <td>NFD</td>
+                         <td>600.00</td>
+                         <td>600.00</td>
+                         <td>24h</td>
+                         <td>是</td>
+                         <td> </td>
+                         <td>2013-01-01</td>
+                         <td>2013-01-01</td>
+                         <td>2013-01-01</td>
+                         <td><a href="#">修改</a></td>
+                      </tr>
+                      <tr>
+                         <td class="notborder"><input type="checkbox" /></td>
+                         <td class="notborder">KWECSX</td>
+                         <td class="notborder">MU</td>
+                         <td class="notborder">Y</td>
+                         <td class="notborder">Y</td>
+                         <td>Y</td>
+                         <td>NFD</td>
+                         <td>600.00</td>
+                         <td>600.00</td>
+                         <td>24h</td>
+                         <td>是</td>
+                         <td> </td>
+                         <td>2013-01-01</td>
+                         <td>2013-01-01</td>
+                         <td>2013-01-01</td>
+                         <td><a href="#">修改</a></td>
+                      </tr>
+                      <tr>
+                         <td class="notborder"><input type="checkbox" /></td>
+                         <td class="notborder">KWECSX</td>
+                         <td class="notborder">MU</td>
+                         <td class="notborder">Y</td>
+                         <td class="notborder">Y</td>
+                         <td>Y</td>
+                         <td>NFD</td>
+                         <td>600.00</td>
+                         <td>600.00</td>
+                         <td>24h</td>
+                         <td>是</td>
+                         <td> </td>
+                         <td>2013-01-01</td>
+                         <td>2013-01-01</td>
+                         <td>2013-01-01</td>
+                         <td><a href="#">修改</a></td>
+                      </tr>
+                      <tr>
+                         <td><input type="checkbox" /></td>
+                         <td>PVGDLC</td>
+                         <td>CL</td>
+                         <td>F</td>
+                         <td>F</td>
+                         <td>F</td>
+                         <td>FD</td>
+                         <td>600.00</td>
+                         <td>600.00</td>
+                         <td>24h</td>
+                         <td>是</td>
+                         <td> </td>
+                         <td>2013-01-01</td>
+                         <td>2013-01-01</td>
+                         <td>2013-01-01</td>
+                         <td><a href="#">修改</a></td>
+                      </tr>
+                      <tr>
+                         <td class="notborder"><input type="checkbox" /></td>
+                         <td class="notborder">KWECSX</td>
+                         <td class="notborder">MU</td>
+                         <td class="notborder">F</td>
+                         <td class="notborder">F</td>
+                         <td>Z3VVAO</td>
+                         <td>FD</td>
+                         <td>600.00</td>
+                         <td>600.00</td>
+                         <td>24h</td>
+                         <td>是</td>
+                         <td> </td>
+                         <td>2013-01-01</td>
+                         <td>2013-01-01</td>
+                         <td>2013-01-01</td>
+                         <td><a href="#">修改</a></td>
+                      </tr>
+                      <tr>
+                         <td class="notborder"><input type="checkbox" /></td>
+                         <td class="notborder">KWECSX</td>
+                         <td class="notborder">MU</td>
+                         <td class="notborder">F</td>
+                         <td class="notborder">F</td>
+                         <td>FOW</td>
+                         <td>FD</td>
+                         <td>600.00</td>
+                         <td>600.00</td>
+                         <td>24h</td>
+                         <td>是</td>
+                         <td> </td>
+                         <td>2013-01-01</td>
+                         <td>2013-01-01</td>
+                         <td>2013-01-01</td>
+                         <td><a href="#">修改</a></td>
+                      </tr>
+                      <tr class="fourth_bg">
+                         <td><input type="checkbox" /></td>
+                         <td>KWECSX</td>
+                         <td>MU</td>
+                         <td>F</td>
+                         <td>F</td>
+                         <td>FRT</td>
+                         <td>FD</td>
+                         <td>600.00</td>
+                         <td>600.00</td>
+                         <td>24h</td>
+                         <td>是</td>
+                         <td> </td>
+                         <td>2013-01-01</td>
+                         <td>2013-01-01</td>
+                         <td>2013-01-01</td>
+                         <td><a href="#">修改</a></td>
+                      </tr>
+                      <tr>
+                         <td><input type="checkbox" /></td>
+                         <td>KWECSX</td>
+                         <td>MU</td>
+                         <td>F</td>
+                         <td>F</td>
+                         <td>P</td>
+                         <td>FD</td>
+                         <td>600.00</td>
+                         <td>600.00</td>
+                         <td>24h</td>
+                         <td>是</td>
+                         <td> </td>
+                         <td>2013-01-01</td>
+                         <td>2013-01-01</td>
+                         <td>2013-01-01</td>
+                         <td><a href="#">修改</a></td>
+                      </tr>
+                    </table>
+                    </div> <!--table滚动结束-->
+                                
+                            <div class="grid-table-pagination">
+                                  <span class="grid-table-count">
+                                      共 <em>132</em> 条记录
+                                  </span>
+                                  <span>
+                                      <a href="#" class="prev">&nbsp;</a>
+                                  </span>
+                                  <span class="links">
+                                      <a href="#">1</a>
+                                      <a href="#">2</a>
+                                      <a href="#" class="current">3</a>
+                                      <a href="#">4</a>
+                                      <a href="#">5</a>
+                                      <a href="javascript:;">...</a>
+                                      <a href="#">50</a>
+                                  </span>
+                                  <span>
+                                      <a href="#" class="next">&nbsp;</a>
+                                  </span>
+                              </div>
+                              
+                    </div> <!--right end-->
+                </div>
+            </li>
+            
+            <li><a class="MenuItem" href="#">里程数</a>
+                <div class="boxshow">
+                      <div class="right_side">  <!--right start-->   
+                        <div class="query">
+                          <table cellpadding="0" cellspacing="0" class="query_tab">
+                            <tr>
+                              <td class="list_3">数据来源</td>
+                              <td class="list_2"> <select style="width:145px;"><option>基础运价</option></select> </td>
+                              <td class="list_3">出发城市</td>
+                              <td class="list_4"> <input type="text" value="SHA"/> </td>
+                              <td class="list_5">到达城市</td>
+                              <td class="list_6"> <input type="text" value="PVG"/> </td>
+                              <td class="list_9" rowspan="2"><a href="#" class="query_a">查 询</a></td>
+                            </tr>  
+                            <tr>
+                              <td class="list_7">航空公司</td>
+                              <td class="list_8_1"> <input type="text" value="MU"/> </td>
+                            </tr>        
+                          </table>          
+                        </div>
+                        
+                        <div class="qx">
+                                      <div class="xuanze">
+                                          <button class="btns btn-ac-blue popwin" data='{"url":"里程数设置弹层.html","width":570,"height":320,"title":"里程数设置"}' id="add_city_code">添加信息</button>
+                                          <button class="btns btn-ac-blue">删除信息</button>
+                                          <button class="btns btn-ac-blue">删除数据</button>
+                                      </div>
+                                      <!--<div class="qx_right">
+                                          <button class="btns btn-ac-blue">导出Excel</button>
+                                          <button class="btns btn-ac-blue">模版导出</button>
+                                          <button class="btns btn-ac-blue">导入说明【模版下载】</button>
+                                      </div>-->
+                           </div>
+                        
+                        <div class="right_tab"> <!--table滚动开始-->
+                        <table cellpadding="0" cellspacing="0" class="discount_tab">
+                          <tr>
+                             <th class="th_left"><input type="checkbox" /></th>
+                             <th>出发机场</th>
+                             <th>到达机场</th>
+                             <th>航空公司</th>
+                             <th>里程数</th>
+                             <th>缓存时间</th>
+                             <th>开始日期</th>
+                             <th>结束日期</th>
+                             <th width="155px">更新时间</th>
+                             <th width="100px">操作</th>
+                          </tr>
+                          <tr>
+                             <td><input type="checkbox" checked="checked" /></td>
+                             <td>SHA</td>
+                             <td>PEK</td>
+                             <td>*</td>
+                             <td>1178.00</td>
+                             <td>24h</td>
+                             <td>2013-05-06</td>
+                             <td>2013-05-06</td>
+                             <td>2013-04-06 13:31:30</td>
+                             <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                             <td><input type="checkbox" /></td>
+                             <td>SHA</td>
+                             <td>PEK</td>
+                             <td>MU</td>
+                             <td>1178.00</td>
+                             <td>24h</td>
+                             <td>2013-05-06</td>
+                             <td>2013-05-06</td>
+                             <td>2013-04-06 13:31:30</td>
+                             <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                             <td><input type="checkbox" /></td>
+                             <td>SHA</td>
+                             <td>PEK</td>
+                             <td>*</td>
+                             <td>1178.00</td>
+                             <td>24h</td>
+                             <td>2013-05-06</td>
+                             <td>2013-05-06</td>
+                             <td>2013-04-06 13:31:30</td>
+                             <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr class="fourth_bg">
+                             <td><input type="checkbox" /></td>
+                             <td>SHA</td>
+                             <td>PEK</td>
+                             <td>MU</td>
+                             <td>1178.00</td>
+                             <td>24h</td>
+                             <td>2013-05-06</td>
+                             <td>2013-05-06</td>
+                             <td>2013-04-06 13:31:30</td>
+                             <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                             <td><input type="checkbox" /></td>
+                             <td>SHA</td>
+                             <td>PEK</td>
+                             <td>*</td>
+                             <td>1178.00</td>
+                             <td>24h</td>
+                             <td>2013-05-06</td>
+                             <td>2013-05-06</td>
+                             <td>2013-04-06 13:31:30</td>
+                             <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                             <td><input type="checkbox" /></td>
+                             <td>SHA</td>
+                             <td>PEK</td>
+                             <td>MU</td>
+                             <td>1178.00</td>
+                             <td>24h</td>
+                             <td>2013-05-06</td>
+                             <td>2013-05-06</td>
+                             <td>2013-04-06 13:31:30</td>
+                             <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                             <td><input type="checkbox" /></td>
+                             <td>SHA</td>
+                             <td>PEK</td>
+                             <td>*</td>
+                             <td>1178.00</td>
+                             <td>24h</td>
+                             <td>2013-05-06</td>
+                             <td>2013-05-06</td>
+                             <td>2013-04-06 13:31:30</td>
+                             <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                             <td><input type="checkbox" /></td>
+                             <td>SHA</td>
+                             <td>PEK</td>
+                             <td>MU</td>
+                             <td>1178.00</td>
+                             <td>24h</td>
+                             <td>2013-05-06</td>
+                             <td>2013-05-06</td>
+                             <td>2013-04-06 13:31:30</td>
+                             <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                             <td><input type="checkbox" /></td>
+                             <td>SHA</td>
+                             <td>PEK</td>
+                             <td>*</td>
+                             <td>1178.00</td>
+                             <td>24h</td>
+                             <td>2013-05-06</td>
+                             <td>2013-05-06</td>
+                             <td>2013-04-06 13:31:30</td>
+                             <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                             <td><input type="checkbox" /></td>
+                             <td>SHA</td>
+                             <td>PEK</td>
+                             <td>MU</td>
+                             <td>1178.00</td>
+                             <td>24h</td>
+                             <td>2013-05-06</td>
+                             <td>2013-05-06</td>
+                             <td>2013-04-06 13:31:30</td>
+                             <td><a href="#">修改</a></td>
+                          </tr>
+                        </table>
+                        </div> <!--table滚动结束-->
+                                                
+                                            <div class="grid-table-pagination">
+                                                  <span class="grid-table-count">
+                                                      共 <em>132</em> 条记录
+                                                  </span>
+                                                  <span>
+                                                      <a href="#" class="prev">&nbsp;</a>
+                                                  </span>
+                                                  <span class="links">
+                                                      <a href="#">1</a>
+                                                      <a href="#">2</a>
+                                                      <a href="#" class="current">3</a>
+                                                      <a href="#">4</a>
+                                                      <a href="#">5</a>
+                                                      <a href="javascript:;">...</a>
+                                                      <a href="#">50</a>
+                                                  </span>
+                                                  <span>
+                                                      <a href="#" class="next">&nbsp;</a>
+                                                  </span>
+                                              </div>
+                                              
+                       </div> <!--right end-->
+                </div>
+            </li>
+            
+              <li style="border-bottom:1px solid #E6E6E6;"><a class="MenuItem" href="#">燃油加价</a>
+                <div class="boxshow">
+                     <div class="right_side">  <!--right start-->    
+                        <div class="query">
+                          <table cellpadding="0" cellspacing="0" class="query_tab">
+                            <tr>
+                              <td class="list_1_2">里程数</td>
+                              <td class="list_4"> <input type="text" style="width:140px;" /> </td>
+                              <td class="list_3">出发城市</td>
+                              <td class="list_4"> <input type="text" value="SHA"/> </td>
+                              <td class="list_5">到达城市</td>
+                              <td class="list_6"> <input type="text" value="PVG"/> </td>
+                              <td class="list_9" rowspan="2"><a href="#" class="query_a">查 询</a></td>
+                            </tr>  
+                            <tr>
+                              <td class="list_7">航空公司</td>
+                              <td class="list_8_1"> <input type="text" value="MU"/> </td>
+                            </tr>        
+                          </table>          
+                        </div>
+                        
+                        <div class="qx">
+                                      <div class="xuanze">
+                                          <button class="btns btn-ac-blue popwin" data='{"url":"燃油加价设置弹层.html","width":570,"height":350,"title":"燃油加价设置"}' id="add_city_code">添加信息</button>
+                                          <button class="btns btn-ac-blue">删除信息</button>
+                                      </div>
+                                      <!--<div class="qx_right">
+                                          <button class="btns btn-ac-blue">导出Excel</button>
+                                          <button class="btns btn-ac-blue">模版导出</button>
+                                          <button class="btns btn-ac-blue">导入说明【模版下载】</button>
+                                      </div>-->
+                           </div>
+                        
+                        <div class="right_tab"> <!--table滚动开始-->
+                        <table cellpadding="0" cellspacing="0" class="discount_tab">
+                          <tr>
+                             <th class="th_left"><input type="checkbox" /></th>
+                             <th>出发机场</th>
+                             <th>到达机场</th>
+                             <th>航空公司</th>
+                             <th>起始里程</th>
+                             <th>终止里程</th>
+                             <th>成人税</th>
+                             <th>儿童税</th>
+                             <th>缓存时间</th>
+                             <th>开始日期</th>
+                             <th>结束日期</th>
+                             <th>备注OFFICE</th>
+                             <th width="130px;">更新时间</th>
+                             <th>操作</th>
+                          </tr>
+                          <tr>
+                             <td><input type="checkbox" checked="checked" /></td>
+                             <td>SHA</td>
+                             <td>PEK</td>
+                             <td>*</td>
+                             <td>801</td>
+                             <td>20,000</td>
+                             <td>110</td>
+                             <td>50</td>
+                             <td>24h</td>
+                             <td>2013-05-06</td>
+                             <td>2013-05-06</td>
+                             <td>&nbsp;</td>
+                             <td>2013-04-06 13:31:30</td>
+                             <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                             <td><input type="checkbox" /></td>
+                             <td>SHA</td>
+                             <td>PEK</td>
+                             <td>MU</td>
+                             <td>801</td>
+                             <td>20,000</td>
+                             <td>110</td>
+                             <td>50</td>
+                             <td>24h</td>
+                             <td>2013-05-06</td>
+                             <td>2013-05-06</td>
+                             <td>&nbsp;</td>
+                             <td>2013-04-06 13:31:30</td>
+                             <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                             <td><input type="checkbox" /></td>
+                             <td>SHA</td>
+                             <td>PEK</td>
+                             <td>*</td>
+                             <td>801</td>
+                             <td>20,000</td>
+                             <td>110</td>
+                             <td>50</td>
+                             <td>24h</td>
+                             <td>2013-05-06</td>
+                             <td>2013-05-06</td>
+                             <td>&nbsp;</td>
+                             <td>2013-04-06 13:31:30</td>
+                             <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr class="fourth_bg">
+                             <td><input type="checkbox" /></td>
+                             <td>SHA</td>
+                             <td>PEK</td>
+                             <td>MU</td>
+                             <td>801</td>
+                             <td>20,000</td>
+                             <td>110</td>
+                             <td>50</td>
+                             <td>24h</td>
+                             <td>2013-05-06</td>
+                             <td>2013-05-06</td>
+                             <td>&nbsp;</td>
+                             <td>2013-04-06 13:31:30</td>
+                             <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                             <td><input type="checkbox" /></td>
+                             <td>SHA</td>
+                             <td>PEK</td>
+                             <td>*</td>
+                             <td>801</td>
+                             <td>20,000</td>
+                             <td>110</td>
+                             <td>50</td>
+                             <td>24h</td>
+                             <td>2013-05-06</td>
+                             <td>2013-05-06</td>
+                             <td>&nbsp;</td>
+                             <td>2013-04-06 13:31:30</td>
+                             <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                             <td><input type="checkbox" /></td>
+                             <td>SHA</td>
+                             <td>PEK</td>
+                             <td>MU</td>
+                             <td>801</td>
+                             <td>20,000</td>
+                             <td>110</td>
+                             <td>50</td>
+                             <td>24h</td>
+                             <td>2013-05-06</td>
+                             <td>2013-05-06</td>
+                             <td>&nbsp;</td>
+                             <td>2013-04-06 13:31:30</td>
+                             <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                             <td><input type="checkbox" /></td>
+                             <td>SHA</td>
+                             <td>PEK</td>
+                             <td>*</td>
+                             <td>801</td>
+                             <td>20,000</td>
+                             <td>110</td>
+                             <td>50</td>
+                             <td>24h</td>
+                             <td>2013-05-06</td>
+                             <td>2013-05-06</td>
+                             <td>&nbsp;</td>
+                             <td>2013-04-06 13:31:30</td>
+                             <td><a href="#">修改</a></td>
+                          </tr>
+                          <tr>
+                             <td><input type="checkbox" /></td>
+                             <td>SHA</td>
+                             <td>PEK</td>
+                             <td>MU</td>
+                             <td>801</td>
+                             <td>20,000</td>
+                             <td>110</td>
+                             <td>50</td>
+                             <td>24h</td>
+                             <td>2013-05-06</td>
+                             <td>2013-05-06</td>
+                             <td>&nbsp;</td>
+                             <td>2013-04-06 13:31:30</td>
+                             <td><a href="#">修改</a></td>
+                          </tr>                         
+                          <tr>
+                             <td><input type="checkbox" /></td>
+                             <td>SHA</td>
+                             <td>PEK</td>
+                             <td>MU</td>
+                             <td>801</td>
+                             <td>20,000</td>
+                             <td>110</td>
+                             <td>50</td>
+                             <td>24h</td>
+                             <td>2013-05-06</td>
+                             <td>2013-05-06</td>
+                             <td>&nbsp;</td>
+                             <td>2013-04-06 13:31:30</td>
+                             <td><a href="#">修改</a></td>
+                          </tr>
+                        </table>
+                        </div> <!--table滚动结束-->
+                                                
+                                            <div class="grid-table-pagination">
+                                                  <span class="grid-table-count">
+                                                      共 <em>132</em> 条记录
+                                                  </span>
+                                                  <span>
+                                                      <a href="#" class="prev">&nbsp;</a>
+                                                  </span>
+                                                  <span class="links">
+                                                      <a href="#">1</a>
+                                                      <a href="#">2</a>
+                                                      <a href="#" class="current">3</a>
+                                                      <a href="#">4</a>
+                                                      <a href="#">5</a>
+                                                      <a href="javascript:;">...</a>
+                                                      <a href="#">50</a>
+                                                  </span>
+                                                  <span>
+                                                      <a href="#" class="next">&nbsp;</a>
+                                                  </span>
+                                              </div>
+                                              
+                       </div> <!--right end-->
+                </div>
+            </li>
+        </ul>
+    </div>
+        <!--left end-->
+            
+       
+       </div> <!--leftAndRight end-->
+       
+      </div>
+        <!-- 舱位代码结束 -->
+    </div>
+	
+    <div id="window"></div>
+    
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+</body>
+</html>

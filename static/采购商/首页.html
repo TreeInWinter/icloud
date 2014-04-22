@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    
+    <link rel="stylesheet" href="../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../static/css/store_flight.css" media="screen" />
+    <link rel="stylesheet" href="../static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="../static/css/kendo.store.css" />
+
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../static/js/global.js"></script>
+    <script type="text/javascript" src="../static/js/store/store.js"></script>
+
+    <!--[if IE]>
+    <script src="../static/js/html5.js"></script>
+    <![endif]-->
+    <script src="../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+</head>
+<body>
+<div class="main-wrapper">
+<header class="main-header">
+    <a class="logo" href="/"><h1>天地行</h1></a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first active"><a herf="#">首页</a></li>
+            <li><a herf="#">国内机票</a></li>
+            <li><a herf="#">国际机票</a></li>
+            <li><a herf="#">酒店</a></li>
+        </ul> 
+    </nav>
+    <nav class="main-links">
+        <ul class="clearfix">
+            <li class="first"><a href="#">订单管理</a></li>
+            <li><a href="#">分销管理</a></li>
+            <li><a href="#">电子钱包</a></li>
+            <li><a href="#">统计报表</a></li>
+            <li><a href="#">客服服务</a></li>
+            <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+            <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+        <!-- WPA Button Begin -->
+        <script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzkzODA0Mjc1NV85Mzk5MV80MDA3MjA2NjY2Xw"></script>
+        <!-- WPA Button End -->
+
+</header>
+<section class="main-body clearfix">
+
+    <!-- 首页 start -->
+    <div class="bannerAndTicket">
+        <div class="banner">
+            <img src="../static/images/banner/procurer_banner1.jpg"/>  
+        </div>  
+        <div class="ticket">
+            <ul>
+               <li class="ticket_li"> <em>&nbsp;</em> 国内机票 </li>
+               <li> <i>&nbsp;</i> 国际机票</li> 
+               <li> <span>&nbsp;</span> 酒店</li> 
+            </ul>
+            <div class="range">
+               <div class="cut">
+                  <b>航程类型：</b>
+                  <label> <input type="radio" name="cut"/> 单程</label>
+                  <label> <input type="radio" name="cut"/> 往返</label>
+               </div>
+               <table cellpadding="0" cellspacing="0" class="range_tab">
+                 <colgroup>
+                   <col width="35px"/>
+                   <col width="20px"/>
+                   <col width="200px"/>
+                   <col width="25px"/>
+                 </colgroup>
+                  <tr>
+                     <td rowspan="2"><b>城<br>市</b></td>
+                     <td>从</td>
+                     <td><input type="text" class="gray-border" value="上海" /></td>
+                     <td rowspan="2"> 
+                         <i> </i> <em>换</em> <span> </span>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>到</td>
+                     <td><input type="text" class="gray-border" value="北京" /></td>                     
+                  </tr>
+                  <td rowspan="2"><b>日<br>期</b></td>
+                     <td>去</td>
+                     <td><input type="text" class="datepicker gray-border" value=" " /></td>
+                     <td rowspan="2">&nbsp;  </td>
+                  </tr>
+                  <tr>
+                     <td>回</td>  
+                     <td><input type="text" class="datepicker gray-border" value=" " /></td>                     
+                  </tr>
+               </table>
+               <div class="search_btn">
+                   <a class="adaptiveButton brightRed_btn">
+                          <span class="left"> &nbsp; </span>
+                          <span class="center">搜索</span>
+                          <span class="right"> &nbsp; </span>
+                   </a>
+               </div>
+            </div>
+        </div>
+    </div>
+  
+  <div class="specialAndInquiries"> <!--specialAndInquiries start--> 
+    <div class="preference"> <!--preference start-->
+        <div class="headline">
+            <h3>热门城市酒店特惠</h3>
+            <ul>
+               <li class="pitch-on">上海</li>
+               <li>广州</li>
+               <li>深圳</li>
+               <li>武汉</li>
+               <li>更多</li>
+            </ul>
+        </div>
+        <div class="showImg clearfix"> <!--showImg start-->
+            <div class="showBigImg">
+               <em> &nbsp;</em>
+               <div>
+                    <div><a href="#"><img src="../static/images/store/showImg1.jpg" title="上海宝华国际酒店"></a></div>
+                    <div class="state">  
+                        <p>上海宝华国际酒店</p>
+                        <span>￥450</span>
+                    </div>
+               </div>
+            </div>
+            <div class="showright pull-right">
+                <dl>
+                   <dt> <a href="#"><img src="../static/images/store/showright1.jpg" title="上海宝华国际酒店"/></a> </dt>
+                   <dd>
+                      <p> <a href="#">上海宝华国际酒店</a></p>
+                      <span>￥450</span>
+                   </dd>
+                </dl>
+                <dl>
+                   <dt> <a href="#"><img src="../static/images/store/showright2.jpg" title="上海宝华国际酒店"/></a> <em>&nbsp;</em> </dt>
+                   <dd>
+                      <p> <a href="#">上海宝华国际酒店</a></p>
+                      <span>￥450</span>
+                   </dd>
+                </dl>
+                <dl>
+                   <dt> <a href="#"><img src="../static/images/store/showright3.jpg" title="上海宝华国际酒店"/></a> </dt>
+                   <dd>
+                      <p> <a href="#">上海宝华国际酒店</a></p>
+                      <span>￥450</span>
+                   </dd>
+                </dl>
+                <dl style="margin-bottom:0;">
+                   <dt> <a href="#"><img src="../static/images/store/showright4.jpg" title="上海宝华国际酒店"/></a> <em>&nbsp;</em> </dt>
+                   <dd>
+                      <p> <a href="#">上海宝华国际酒店</a></p>
+                      <span>￥450</span>
+                   </dd>
+                </dl>
+                <dl style="margin-bottom:0;">
+                   <dt> <a href="#"><img src="../static/images/store/showright5.jpg" title="上海宝华国际酒店"/></a> </dt>
+                   <dd>
+                      <p> <a href="#">上海宝华国际酒店</a></p>
+                      <span>￥450</span>
+                   </dd>
+                </dl>
+                <dl style="margin-bottom:0;">
+                   <dt> <a href="#"><img src="../static/images/store/showright6.jpg" title="上海宝华国际酒店"/></a> <em>&nbsp;</em> </dt>
+                   <dd>
+                      <p> <a href="#">上海宝华国际酒店</a></p>
+                      <span>￥450</span>
+                   </dd>
+                </dl>
+            </div>
+        </div>  <!--showImg emd-->
+        
+        
+        <div class="advert">
+          <a href="#"> <img src="../static/images/store/advert1.jpg"/> </a>
+        </div>
+        
+        <div class="airline"> <!--airline start-->
+            <div class="headline">
+                 <h3>国际K位特惠</h3>
+                 <ul>
+                    <li class="pitch-on">东南亚航线</li>
+                    <li>日本航线</li>
+                    <li>港澳航线</li>
+                    <li>更多</li>
+                </ul>
+            </div>
+            <ul class="airline_ul clearfix">
+               <li>
+                  <div>
+                      <span>厦门航空</span>
+                       <label>  <em>成功率</em> <i>90%</i> </label>
+                  </div>
+                  <p>
+                      <strong>日本航线</strong>
+                      <strong>东南亚航线</strong>
+                  </p>
+               </li>
+               <li>
+                  <div>
+                      <span>厦门航空</span>
+                       <label>  <em>成功率</em> <i>90%</i> </label>
+                  </div>
+                  <p>
+                      <strong>日本航线</strong>
+                      <strong>东南亚航线</strong>
+                  </p>
+               </li>
+               <li style="margin-right:0;">
+                  <div>
+                      <span>厦门航空</span>
+                       <label>  <em>成功率</em> <i>90%</i> </label>
+                  </div>
+                  <p>
+                      <strong>日本航线</strong>
+                      <strong>东南亚航线</strong>
+                  </p>
+               </li>
+               <li>
+                  <div>
+                      <span>厦门航空</span>
+                       <label>  <em>成功率</em> <i>90%</i> </label>
+                  </div>
+                  <p>
+                      <strong>日本航线</strong>
+                      <strong>东南亚航线</strong>
+                  </p>
+               </li>
+               <li>
+                  <div>
+                      <span>厦门航空</span>
+                       <label>  <em>成功率</em> <i>90%</i> </label>
+                  </div>
+                  <p>
+                      <strong>日本航线</strong>
+                      <strong>东南亚航线</strong>
+                  </p>
+               </li>
+               <li style="margin-right:0;">
+                  <div>
+                      <span>厦门航空</span>
+                       <label>  <em>成功率</em> <i>90%</i> </label>
+                  </div>
+                  <p style="margin-right:0;">
+                      <strong>日本航线</strong>
+                      <strong>东南亚航线</strong>
+                  </p>
+               </li>
+            </ul>                 
+        </div> <!--airline end-->
+        
+        <div class="weather clearfix"> <!--weather start-->
+            <div class="headline">
+                 <h3>城市天气早知道</h3>
+                 <ul>
+                    <li class="pitch-on">北京</li>
+                    <li>上海</li>
+                    <li>广州</li>
+                    <li>深圳</li>
+                    <li>武汉</li>
+                </ul>
+            </div>
+            <ul class="weather_ul">
+               <li class="grey_bg">
+                   <ul>
+                      <li><em>今日</em> 8-13 周二</li>
+                      <li>37-28℃</li>
+                      <li>晴</li>
+                      <li>东南风4-5级</li>
+                   </ul>
+               </li>
+               <li>
+                   <ul>
+                      <li>8-13 周二</li>
+                      <li>37-28℃</li>
+                      <li>晴</li>
+                      <li>东南风4-5级</li>
+                   </ul>
+               </li>
+               <li>
+                   <ul>
+                      <li>8-13 周二</li>
+                      <li>37-28℃</li>
+                      <li>晴</li>
+                      <li>东南风4-5级</li>
+                   </ul>
+               </li>
+               <li>
+                   <ul>
+                      <li>8-13 周二</li>
+                      <li>37-28℃</li>
+                      <li>晴</li>
+                      <li>东南风4-5级</li>
+                   </ul>
+               </li>
+               <li>
+                   <ul>
+                      <li>8-13 周二</li>
+                      <li>37-28℃</li>
+                      <li>晴</li>
+                      <li>东南风4-5级</li>
+                   </ul>
+               </li>
+               <li>
+                   <ul>
+                      <li>8-13 周二</li>
+                      <li>37-28℃</li>
+                      <li>晴</li>
+                      <li>东南风4-5级</li>
+                   </ul>
+               </li>
+               <li class="grey_bg">
+                   <ul>
+                      <li>8-13 周二</li>
+                      <li>37-28℃</li>
+                      <li>晴</li>
+                      <li>东南风4-5级</li>
+                   </ul>
+               </li>
+            </ul>
+        </div> <!--weather end-->        
+    </div> <!--preference end-->
+    
+    <div class="enquiry"> <!--enquiry start-->
+         <div class="dimension clearfix">
+             <dl>
+                 <dt><img src="../static/images/store/two-dimension.png" /></dt>
+                 <dd>
+                    <h3>天地行官方微信</h3>
+                    <p>微信扫描二维码，随时随地与天地行亲密接触。</p>
+                    <p>订单状态，特价特惠触手可得。</p>
+                 </dd>
+             </dl>         
+             <ul class="commitment">
+                 <li>
+                    <img src="../static/images/store/safe.png"/>
+                    <span>安心购票</span>
+                 </li>
+                 <li>
+                    <img src="../static/images/store/card.png"/>
+                    <span>航协认证</span>
+                 </li>
+                 <li>
+                    <img src="../static/images/store/low.png"/>
+                    <span>低价承诺</span>
+                 </li>
+            </ul>            
+       </div>       
+       <div class="inland clearfix">
+          <h3>国内机票询价</h3>
+          <dl>
+             <dt> <a href="#"><img src="../static/images/store/inlandgroup.png" title="团队申请"/></a> </dt>
+             <dd> <a href="#">团队申请</a> </dd>
+          </dl>
+          <dl>
+             <dt> <a href="#"><img src="../static/images/store/officialbusiness.png" title="公务机申请"/></a> </dt>
+             <dd> <a href="#">公务机申请</a> </dd>
+          </dl>
+      </div>
+      <div class="inland clearfix">
+          <h3>国际机票询价</h3>
+          <dl>
+             <dt> <a href="#"><img src="../static/images/store/inlandgroup.png" title="团队申请"/></a> </dt>
+             <dd> <a href="#">团队申请</a> </dd>
+          </dl>
+          <dl>
+             <dt> <a href="#"><img src="../static/images/store/k-place.png" title="K位申请"/></a> </dt>
+             <dd> <a href="#">K位申请</a> </dd>
+          </dl>
+          <dl>
+             <dt> <a href="#"><img src="../static/images/store/enquiry.png" title="团队询价"/></a> </dt>
+             <dd> <a href="#">团队询价</a> </dd>
+          </dl>
+          <dl>
+             <dt> <a href="#"><img src="../static/images/store/charteredAirplane.png" title="包机询价"/></a> </dt>
+             <dd> <a href="#">包机询价</a> </dd>
+          </dl>
+      </div> 
+      <div class="templateid"> <a href="#"><img src="../static/images/store/templateid.jpg"/></a> </div>
+    </div> <!--enquiry end-->
+    
+  </div> <!--specialAndInquiries end-->    
+
+
+    </section>
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+
+
+
+</body>
+</html>

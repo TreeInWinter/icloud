@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<!-- Common Kendo UI Web CSS -->
+	<link href="/static/css/kendo.common.min.css" rel="stylesheet" />
+	<!-- Default Kendo UI Web theme CSS -->
+	<link href="/static/css/kendo.default.min.css" rel="stylesheet" />
+	<!-- jQuery JavaScript -->
+	<script src="/static/js/jquery.min.js"></script>
+	<!-- Kendo UI Web combined JavaScript -->
+	<script src="/static/js/kendo.web.min.js"></script>
+	<script src="/static/js/console.js"></script>
+	
+	<script src="/最佳实践/formatPage.js"></script>
+
+    </head>
+    <body>
+	<h1>时间 不在构造参数</h1>
+	
+	<input id="timepicker" value="10:00 AM" />
+                
+	<script>
+                $(document).ready(function() {
+                    // create TimePicker from input HTML element
+                    $("#timepicker").kendoTimePicker();
+                });
+            </script>
+
+	
+	<h1>日期 不带构造参数</h1>
+	<input id="datepicker" />
+	<script>
+	$(function() {
+	    // Initialize the Kendo DatePicker by calling the kendoDatePicker jQuery plugin
+	    $("#datepicker").kendoDatePicker();
+	});
+	</script>
+	
+	
+	
+	<h1>日期+时间 不带构造参数</h1>
+	<input id="datepicker1" />
+	<script>
+	$(function() {
+	    // Initialize the Kendo DatePicker by calling the kendoDatePicker jQuery plugin
+	    $("#datepicker1").kendoDateTimePicker();
+	});
+	</script>
+	
+	
+	
+	<h1>范围选择，开始日期 选择的上限为结束日期</h1>
+	<ul>
+	    <li>
+		<label for="start">开始日期:</label>
+		<input id="start" value="10/10/2011" />
+	    </li>
+	    <li>
+		<label for="end">结束日期:</label>
+		<input id="end" value="10/10/2012"/>
+	    </li>
+	</ul>
+
+	<script>
+	    $(document).ready(function() {
+		function startChange() {
+		    var startDate = start.value(),
+		    endDate = end.value();
+
+		    if (startDate) {
+			startDate = new Date(startDate);
+			startDate.setDate(startDate.getDate());
+			end.min(startDate);
+		    } else if (endDate) {
+			start.max(new Date(endDate));
+		    } else {
+			endDate = new Date();
+			start.max(endDate);
+			end.min(endDate);
+		    }
+		}
+
+		function endChange() {
+		    var endDate = end.value(),
+		    startDate = start.value();
+
+		    if (endDate) {
+			endDate = new Date(endDate);
+			endDate.setDate(endDate.getDate());
+			start.max(endDate);
+		    } else if (startDate) {
+			end.min(new Date(startDate));
+		    } else {
+			endDate = new Date();
+			start.max(endDate);
+			end.min(endDate);
+		    }
+		}
+
+		var start = $("#start").kendoDatePicker({
+		    change: startChange
+		}).data("kendoDatePicker");
+
+		var end = $("#end").kendoDatePicker({
+		    change: endChange
+		}).data("kendoDatePicker");
+
+		start.max(end.value());
+		end.min(start.value());
+	    });
+	</script>
+
+	
+	
+	<h1>自定义UI日历</h1>
+	<input id="birthday" />
+	<style type="text/css">
+	    
+	    .birthday {
+                    background: transparent url(/kendoui.web/examples/content/web/calendar/cake.png) no-repeat 0 50%;
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    vertical-align: middle;
+                    margin-right: 3px;
+                }
+	</style>
+	<script>
+	    function isInArray(date, dates) {
+		for(var idx = 0, length = dates.length; idx < length; idx++) {
+		    var d = dates[idx];
+		    if (date.getFullYear() == d.getFullYear() &&
+			date.getMonth() == d.getMonth() &&
+			date.getDate() == d.getDate()) {
+			return true;
+		    }
+		}
+
+		return false;
+	    }
+
+	    $(document).ready(function() {
+		var today = new Date(),
+		    birthdays = [
+			new Date(today.getFullYear(), today.getMonth(), 11),
+			new Date(today.getFullYear(), today.getMonth() + 1, 6),
+			new Date(today.getFullYear(), today.getMonth() + 1, 27),
+			new Date(today.getFullYear(), today.getMonth() - 1, 3),
+			new Date(today.getFullYear(), today.getMonth() - 2, 22)
+		    ];
+
+		$("#birthday").kendoDatePicker({
+		    value: today,
+		    dates: birthdays,
+		    month: {
+			// template for dates in month view
+			content: '# if (isInArray(data.date, data.dates)) { #' +
+					'<div class="birthday"></div>' +
+				    '# } #' +
+				    '#= data.value #'
+		    },
+		    footer: "Today - #=kendo.toString(data, 'd') #"
+		});
+
+		$("#datepicker").data("kendoDatePicker")
+				.dateView.calendar.element
+				.width(300);
+	    });
+	</script>
+	
+	
+	<h1>事件</h1>
+	<input id="eventdatepicker"/>
+	<div class="console"></div>
+	<script>
+	    $(document).ready(function() {
+		function onOpen() {
+		    kendoConsole.log("Open");
+		}
+
+		function onClose() {
+		    kendoConsole.log("Close");
+		}
+
+		function onChange() {
+		    kendoConsole.log("Change :: " + kendo.toString(this.value(), 'd'));
+		}
+
+		$("#eventdatepicker").kendoDatePicker({
+		    change: onChange,
+		    close: onClose,
+		    open: onOpen
+		});
+	    });
+	</script>
+	
+	
+	<h1>更多API</h1>
+	<input id="apidatepicker" />
+	
+	<div class="configuration k-widget k-header" style="width: 220px">
+		<span class="configHead">API Functions</span>
+		<ul class="options">
+			<li>
+			    <button id="get" class="k-button">Get value</button>
+		    </li>
+		    <li>
+			    <input id="value" value="10/10/2000" style="float:none" />
+			    <button id="set" class="k-button">Set value</button>
+		    </li>
+			<li>
+				<button id="enable" class="k-button">Enable</button> or <button id="disable" class="k-button">Disable</button>
+			</li>
+			<li>
+				<button id="open" class="k-button">Open</button> or <button id="close" class="k-button">Close</button> the calendar
+			</li>
+		</ul>
+	</div>
+	
+	
+	<script>
+	    $(document).ready(function() {
+		$("#apidatepicker").kendoDatePicker()
+				.closest(".k-widget")
+				.attr("id", "datepicker_wrapper");
+
+		var datepicker = $("#apidatepicker").data("kendoDatePicker");
+
+		var setValue = function () {
+		    datepicker.value($("#value").val());
+		};
+
+		$("#enable").click(function() {
+		    datepicker.enable();
+		});
+
+		$("#disable").click(function() {
+		    datepicker.enable(false);
+		});
+
+		$("#open").click(function() {
+		    datepicker.open();
+		});
+
+		$("#close").click(function() {
+		    datepicker.close();
+		});
+
+		$("#value").kendoDatePicker({
+		    change: setValue
+		});
+
+		$("#set").click(setValue);
+
+		$("#get").click(function() {
+		    alert(datepicker.value());
+		});
+	    });
+	</script>
+	
+	
+    </body>
+</html>

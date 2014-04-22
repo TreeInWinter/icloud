@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta content="text/html" charset="utf-8">
+    <link rel="stylesheet" href="../static/css/b2b.css"/>
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../static/js/kendo.culture.zh-CHS.min.js"></script>
+    <script type="text/javascript" src="../static/js/excanvas.js"></script>
+    <style type="text/css">
+        #tbl_lc{position:absolute;top:0;left:0}
+        #tbl_lc td{padding:5px 10px;vertical-align:middle}
+        #tbl_lc td div{cursor:pointer;border:1px solid #c1c1c1;padding:3px 5px 3px 25px;color:#999999}
+        #tbl_lc td div.complete{background:url('../static/images/trip_lc_complete.gif') 5px 50% no-repeat;border:1px solid #FF6600;color:#333333}
+        #tbl_lc td div.current{background:#FF6600;color:#ffffff}
+    </style>
+</head>
+<body>
+<script type="text/html" id="template">
+    <ul>
+        <li data-bind="text:name,click:click"></li>
+    </ul>
+</script>
+
+<div style="position:relative;">
+    <canvas id="canvas" style="position:absolute;top:0;left:0;" width="500" height="200"></canvas>
+    <table id="tbl_lc"></table>
+</div>
+
+<table id="tbl_lcEx" cellpadding="10" cellspacing="10" style="display:none">
+    <tr>
+        <td><div>材料到齐/已齐</div></td>
+        <td><div>预约</div></td>
+        <td><div>面试</div></td>
+        <td>
+            <table>
+                <tr><td><div>拒签</div></td></tr>
+                <tr>
+                    <td><div>审查</div></td>
+                    <td>
+                        <table>
+                            <tr><td><div>通过</div></td></tr>
+                            <tr><td><div>不通过</div></td></tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr><td class="complete"><div>出签</div></td></tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<script type="text/html" id="tp1">
+    <div data-bind="attr:{class:status},text:name,click:click"></div>
+</script>
+
+<script type="text/html" id="tp2">
+    <td><div data-bind="attr:{class:status},text:name,click:click"></div></td>
+</script>
+
+
+
+<script type="text/javascript">
+    var lc={name:"材料到齐/已齐",click:function(){clickLc(this);},children:[
+                {name:"预约",children:[
+                    {name:"面试",children:[
+                        {name:"拒签",children:[],status:"uncomplete",click:function(){clickLc(this)}},
+                        {name:"审查",children:[
+                            {name:"通过",children:[],status:"uncomplete",click:function(){clickLc(this)}},
+                            {name:"不通过",children:[],status:"uncomplete",click:function(){clickLc(this)}}
+                        ],status:"uncomplete",click:function(){clickLc(this)}},
+                        {name:"出签",children:[],status:"uncomplete",click:function(){clickLc(this)}}
+                    ],status:"uncomplete",click:function(){clickLc(this)}}],status:"uncomplete",click:function(){clickLc(this)}}
+                ],status:"uncomplete",click:function(){clickLc(this)}
+            };
+    model=kendo.observable(lc);
+
+    function init(m,el,tpID,warpEl){
+        var index=new kendo.View(tpID,{model:m,tagName:warpEl});
+        el.append(index.render());
+        switch(m.children.length)
+        {
+            case 0:return;break;
+            case 1:init(m.children[0],el,"tp1","td");break;
+            default:
+                var td=$("<td></td>").insertAfter($("#tbl_lc td:last"));
+                var tbl=$("<table></table>").appendTo(td);
+                for(var i=0;i< m.children.length;i++)
+                {
+                    init(m.children[i],tbl,"tp2","tr");
+                }
+        }
+    }
+
+
+
+    function clickLc(el){
+        clearModelStatus(model);
+        changeModelStatus(el);
+        el.set("status","complete current");
+        resize();
+    }
+
+    function clearModelStatus(m)
+    {
+        if(m.status.indexOf("complete"))
+        {
+            return;
+        }
+        else
+        {
+            m.set("status","uncomplete");
+            if(m.children.length==0)
+            {
+                return;
+            }
+            else
+            {
+                for(var i=0;i< m.children.length;i++)
+                {
+                    clearModelStatus(m.children[i]);
+                }
+            }
+        }
+    }
+
+    function changeModelStatus(m)
+    {
+        m.set("status","complete");
+        if(m.parent())
+            changeModelStatus(m.parent().parent());
+    }
+
+    function resize(){
+        var ctx=document.getElementById("canvas").getContext("2d");
+        ctx.clearRect(0,0,500,200);
+        ctx.beginPath();
+
+        $("#tbl_lc td").each(function(){
+            ctx.beginPath();
+            var td1=$(this);
+            $(this).children("div").hasClass("complete")?ctx.strokeStyle="#FF6600":ctx.strokeStyle="#C1C1C1";
+            if($(this).closest("table").attr("id")!="tbl_lc" && !$(this).prev("td").length)
+            {
+                var p=td1.closest("table").parent();
+                ctx.moveTo(p.position().left+10, p.position().top+ p.outerHeight()/2);
+                ctx.lineTo(p.position().left+10,td1.position().top+td1.outerHeight()/2);
+                ctx.lineTo(td1.position().left+10,td1.position().top+td1.outerHeight()/2);
+                ctx.stroke();
+            }
+            ctx.beginPath();
+            $(this).closest("td").nextAll().find("*").hasClass("complete") || $(this).nextAll().hasClass("complete")?ctx.strokeStyle="#FF6600":ctx.strokeStyle="#C1C1C1";
+            ctx.moveTo(td1.position().left+td1.width()+10,td1.position().top+td1.outerHeight()/2);
+            var td2=$(this).next();
+            if(td2.length)
+            {
+                ctx.lineTo(td2.position().left+10,td2.position().top+td2.outerHeight()/2);
+                ctx.stroke();
+            }
+        })
+    }
+
+    $(function(){
+        init(model,$("#tbl_lc"),"tp1","td");
+
+        resize();
+    })
+
+</script>
+
+</body>
+</html>

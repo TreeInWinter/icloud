@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 国际机票复杂航段询价</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+     
+    <link href="../../static/css/coin-slider-styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_apply.css" media="screen" />
+    
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+	<link rel="stylesheet" href="../../static/css/kendo.store.css" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+	<script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>    
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+    <script type="text/javascript" src="../../static/js/store/store.js"></script>
+</head>
+<body>
+
+<div class="main-wrapper">
+<header class="main-header">
+    <a class="logo" href="/"><h1>天地行</h1></a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first active"><a herf="#">首页</a></li>
+            <li><a herf="#">国内机票</a></li>
+            <li><a herf="#">国际机票</a></li>
+            <li><a herf="#">酒店</a></li>
+        </ul> 
+    </nav>
+    <nav class="main-links">
+        <ul class="clearfix">
+            <li class="first"><a href="#">订单管理</a></li>
+            <li><a href="#">分销管理</a></li>
+            <li><a href="#">电子钱包</a></li>
+            <li><a href="#">统计报表</a></li>
+            <li><a href="#">客服服务</a></li>
+            <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+            <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+</header>
+<section class="main-body clearfix">
+  
+  <div class="k_place">  <!-- k_place start -->
+      <h2>国际机票复杂航段询价单</h2>      
+      <div class="apply_message"> <!--message start-->
+           <div class="mes_h3"> <h3>航程信息</h3> </div>            
+             <div class="inquire">
+                <script type="text/x-kendo-template" id="ac-add-line-template">
+                    <tr>
+                        <td>
+                            <label>第<span class="hitext index_num">1</span>程<em style="margin-left:23px;">* </em><span>出发城市</span>
+                                <input type="text" class="city_ac" value="" name="departure_city"/></label>
+                        </td>
+                        <td>
+                            <label><em>* </em><span>到达城市</span>
+                                <input type="text" class="city_ac" value="" name="arrive_city" /></label>
+                        </td>
+                        <td>
+                            <label><em>* </em><span>出发日期</span>
+                                <input type="text" style="width:160px;" class="datepicker" value="2013-08-08     周三" name="departure_date"/></label>
+                        </td>
+                        <td>
+                            <a href="javascript:void(0);" class="muti_add ac-remove-line">删除</a>
+                        </td>
+                    </tr>
+                </script>
+                <!-- 多程 -->
+                <table class="time_city muti_trip" id="muti_trip"  style="margin:0 auto;">
+                    <colgroup>
+                        <col width="330px" />
+                        <col width="270px" />
+                        <col width="245px" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label>第<span class="hitext index_num">1</span>程<em style="margin-left:23px;">* </em><span>出发城市</span>
+                                    <input type="text" class="city_ac" value="上海" name="departure_city"/></label>
+                            </td>
+                            <td>
+                                <label><em>* </em><span>到达城市</span>
+                                    <input type="text" class="city_ac" value="香港" name="arrive_city" />
+                                </label>
+                            </td>                            
+                            <td>
+                                <label><em>* </em><span>出发日期</span>
+                                    <input type="text" style="width:160px;" class="datepicker" value="2013-08-08     周三" name="departure_date"/></label>
+                            </td>
+							
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>第<span class="hitext index_num">2</span>程<em style="margin-left:23px;">* </em><span>出发城市</span>
+                                    <input type="text" class="city_ac" value="香港" name="departure_city"/></label>
+                            </td>
+                            <td>
+                                <label><em>* </em><span>到达城市</span>
+                                    <input type="text" class="city_ac" value="新加坡" name="arrive_city" /></label>
+                            </td>
+                            <td>
+                                <label><em>* </em><span>出发日期</span>
+                                    <input type="text" style="width:160px;" class="datepicker" value="2013-08-08     周三" name="departure_date"/></label>
+                            </td>
+                           
+                        </tr>
+                    </tbody>
+                </table>
+				<div style="text-align:right; padding:10px 100px 0 0;">
+				<a href="javascript:;" class="muti_add ac-add-line">添加航程</a>
+				</div>              
+             </div>
+			 <div class="rangeDetails">             
+             <div class="rangeDetailsRow">
+                  <div class="rowTitle">航空公司：</div>
+                  <select style="width:187px;">
+                       <option>&nbsp;</option>
+                  </select>
+             </div>
+			 <div class="rangeDetailsRow">
+                  <div class="rowTitle">舱位等级：</div>
+                  <label><input type="checkbox" checked=""/>经济舱</label>
+                  <label><input type="checkbox" checked=""/>超级经济舱</label>
+                  <label><input type="checkbox" checked=""/>商务舱</label>
+                  <label><input type="checkbox" checked=""/>头等舱</label>
+             </div>
+			 <div class="rangeDetailsRow">
+                  <div class="rowTitle">乘客类型：</div>
+                  <label><input type="radio" name="fare" checked=""/>散客</label>
+                  <label><input type="radio" name="fare"/>团队</label>
+             </div>
+			 <div class="rangeDetailsRow">
+                  <div class="rowTitle"><em>* </em>乘机人数：</div>
+                  <input type="text" name="" style="heigth:22px;line-height:22px;border:1px solid #abadb3;"/>
+             </div>
+			 <div class="rangeDetailsRow">
+                 <div class="rowTitle" style="vertical-align:top;">备注：</div>
+                 <textarea style="border:1px solid #abadb3; width:598px; height:100px;">您可在此输入其他航程需求。</textarea>
+            </div>
+            </div> 
+           
+            
+          <div class="contacts">
+               <div class="mes_h3"> <h3>联系人信息</h3> </div>
+              <table cellpadding="0" cellspacing="0" class="submitAsk" style="margin-left:35px;font-size:14px;">
+                   <colgroup>
+                       <col width="52"/>
+                   </colgroup>
+                   <tr>
+                       <th><em> * </em>姓名：</th>
+                       <td><input style="width:160px; border-color:#ABADB3;" type="text" /></td>
+                   </tr>
+                   <tr>
+                       <th><em> * </em>手机：</th>
+                       <td><input style="width:160px; border-color:#ABADB3;" type="text" /></td>           
+                   </tr>
+                   <tr>
+                       <td> </td>
+                       <td>
+                           <a class="adaptiveButton brightRed_btn">
+                              <span class="left"></span>
+                              <span class="center center_1">提交询价单</span>
+                              <span class="right"></span>
+                           </a>
+                       </td>
+                   </tr>
+               </table>
+          </div>
+   </div> <!--message end-->
+  </div>  <!-- k_place end -->
+
+
+</section>
+
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+<script type="text/javascript" src="../../static/js/store/international_flight.js"></script>
+<script id="ffcsTemplate" type="text/x-kendo-template">
+    <ul class="ul_ffc">
+        # for(var i=0;i<data.length;i++){ #
+        <li style="padding:5px">
+            <label><input type="checkbox" value="#=data[i].id #"> #= data[i].name #</label>
+        </li>
+        # } #
+    </ul>
+</script>
+</body>
+</html>

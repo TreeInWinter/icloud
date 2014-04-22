@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 用户中心 国内订单列表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+     
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_ucenter.css" media="screen" />
+
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.store.css" />
+    
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>    
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>    
+
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+    
+    <script type="text/javascript" src="../../static/js/store/store.js"></script>
+</head>
+<body>
+
+<div class="main-wrapper">
+<header class="main-header">
+    <a class="logo" href="/"><h1>天地行</h1></a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first active"><a herf="#">首页</a></li>
+            <li><a herf="#">国内机票</a></li>
+            <li><a herf="#">国际机票</a></li>
+            <li><a herf="#">酒店</a></li>
+        </ul> 
+    </nav>
+    <nav class="main-links">
+        <ul class="clearfix">
+            <li class="first"><a href="#">订单管理</a></li>
+            <li><a href="#">分销管理</a></li>
+            <li><a href="#">电子钱包</a></li>
+            <li><a href="#">统计报表</a></li>
+            <li><a href="#">客服服务</a></li>
+            <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+            <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+</header>
+<section class="main-body clearfix">
+    <aside class="us-nav">
+        <nav>
+            <h3>用户中心</h3>
+            <div class="us-bind"><a href="#">手机已绑定</a>&#12288;<a class="text1" href="#"><i class="ucnav_03"></i>邮箱未绑定</a></div>
+            <dl>
+                <dt><i class="ucnav_07"></i>订单管理</dt>
+                <dd><a href="#">当日所有订单</a></dd>
+                <dd><a class="current" href="#">国内机票订单</a></dd>
+                <dd><a href="#">国际机票订单</a></dd>
+                <dd><a href="#">酒店订单</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="ucnav_10"></i>询价单管理</dt>
+                <dd><a href="#">国内机票询价单</a></dd>
+                <dd><a href="#">国际机票询价单</a></dd>
+                <dd><a href="#">酒店询价单</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_12"></i>电子钱包</dt>
+                <dd><a href="#">账户信息</a></dd>
+                <dd><a href="#">账户充值</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_15"></i>票据管理</dt>
+                <dd><a href="#">行程单</a></dd>
+                <dd><a href="#">发票</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_17"></i>统计报表</dt>
+                <dd><a href="#">财务报表</a></dd>
+                <dd><a href="#">机票业务</a></dd>
+                <dd><a href="#">酒店业务</a></dd>
+                <dd><a href="#">分销业务</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_19"></i>分销商管理</dt>
+                <dd><a href="#">分销商管理</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_22"></i>账户资料</dt>
+                <dd><a href="#">信息维护</a></dd>
+                <dd><a href="#">消息设置</a></dd>
+            </dl>
+
+            <dl>
+              <dt><i class="ucnav_26"></i>我的工具</dt>
+                <dd><a class="ic-j" href="#"><i class="ucnav_29"></i>常旅客管理</a></dd>
+                <dd><a class="ic-j" href="#"><i class="ucnav_32"></i>短消息</a></dd>
+                <dd><a class="ic-j" href="#"><i class="ico_tuifeipiaoguiding"></i>退废票规定</a></dd>
+                <dd><a class="ic-j" href="#"><i class="ico_shengcangguidign"></i>升舱规定</a></dd>
+            </dl>
+        </nav>
+    </aside>
+    <main class="us-content">
+        <div class="us-body" style="margin-bottom: 15px">
+            <section class="us-result">
+                <div style="color:#666;border-bottom:1px dashed #ccc;padding-bottom:12px;margin-bottom:20px;line-height:22px">
+                    <span>laobai</span>,欢迎您！
+                    <span style="float:right;color:#c1c1c1">最后一次登录时间：2013年3月15日 15:08</span>
+                </div>
+                <div class="allOrdersPreview">
+                    <ul style="width:140px">
+                        <li style="font-size:14px">可用金额：</li>
+                        <li class="recharge"><strong><b>￥4,499.00</b></strong></li>
+                        <li>
+                            <a class="adaptiveButton brightRed_btn medium price_confirm">
+                                <span class="left"></span>
+                                <span class="center" style="padding:0 25px;">充 值</span>
+                                <span class="right"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>国内订单未支付：（<span class="text1">13</span>）</li>
+                        <li>国内订单审核未通过：（<span class="text1">13</span>）</li>
+                    </ul>
+                    <ul>
+                        <li>国际订单未支付：（<span class="text1">13</span>）</li>
+                        <li>国际订单审核未通过：（<span class="text1">13</span>）</li>
+                    </ul>
+                    <ul style="border:none">
+                        <li>酒店订单未支付：（<span class="text1">13</span>）</li>
+                        <li>酒店订单审核未通过：（<span class="text1">13</span>）</li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+            </section>
+        </div>
+
+        <div class="us-body" style="margin-bottom: 13px">
+            <div class="tab_item">
+                <section class="us-result">
+
+                <div class="chief" style="margin-bottom:10px">
+                    <h3 style="width:130px;display: inline-block">当日国内机票订单</h3>
+                    <span style="float:right;"><a href="">更多</a></span>
+                </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>订单编号</th>
+                                <th>下单日期</th>
+                                <th>PNR</th>
+                                <th>航班号</th>
+                                <th>行程</th>
+                                <th>旅客姓名</th>
+                                <th>出发日期</th>
+                                <th>舱位/折扣</th>
+                                <th>订单金额</th>
+                                <th>订单状态</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tr class="currentList">
+                            <td><a class="text1" href="#">030312103112261</a></td>
+                            <td>2013-08-14</td>
+                            <td>ABCDEF</td>
+                            <td>MU5183</td>
+                            <td>北京<s>&#8596;</s>巴黎</td>
+                            <td>白展堂展堂</td>
+                            <td>2013-07-25</td>
+                            <td>G/6.0折</td>
+                            <td>￥6,800</td>
+                            <td>未支付</td> 
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><a class="text1" href="#">030312103112261</a></td>
+                            <td>2013-08-14</td>
+                            <td>ABCDEF</td>
+                            <td>MU5183</td>
+                            <td>北京<s>&#8596;</s>巴黎</td>
+                            <td>白展堂展堂</td>
+                            <td>2013-07-25</td>
+                            <td>G/6.0折</td>
+                            <td>￥6,800</td>
+                            <td>未支付</td> 
+                            <!-- <td><a class="ac&#45;oper" href="">操作<i class="active"></i></a></td> -->
+                            <td><span class="hyper-link"><u>操作</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></td>
+                        </tr>
+                        <tr>
+                            <td><a class="text1" href="#">030312103112261</a></td>
+                            <td>2013-08-14</td>
+                            <td>ABCDEF</td>
+                            <td>MU5183</td>
+                            <td>北京<s>&#8596;</s>巴黎</td>
+                            <td>白展堂展堂</td>
+                            <td>2013-07-25</td>
+                            <td>G/6.0折</td>
+                            <td>￥6,800</td>
+                            <td>未支付</td> 
+                            <td></td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+
+        <div class="us-body" style="margin-bottom: 14px">
+            <div class="tab_item">
+                <section class="us-result">
+
+                    <div class="chief" style="margin-bottom:10px">
+                        <h3 style="width:130px;display: inline-block">当日国际机票订单</h3>
+                        <span style="float:right;"><a href="">更多</a></span>
+                    </div>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>订单编号</th>
+                            <th>下单日期</th>
+                            <th>PNR</th>
+                            <th>航班号</th>
+                            <th>行程</th>
+                            <th>旅客姓名</th>
+                            <th>出发日期</th>
+                            <th>舱位/折扣</th>
+                            <th>订单金额</th>
+                            <th>订单状态</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tr>
+                            <td><a class="text1" href="#">030312103112261</a></td>
+                            <td>2013-08-14</td>
+                            <td>ABCDEF</td>
+                            <td>MU5183</td>
+                            <td>北京<s>&#8596;</s>巴黎</td>
+                            <td>白展堂展堂</td>
+                            <td>2013-07-25</td>
+                            <td>G/6.0折</td>
+                            <td>￥6,800</td>
+                            <td>未支付</td>
+                            <td></td>
+                        </tr>
+                        <tr class="currentList">
+                            <td><a class="text1" href="#">030312103112261</a></td>
+                            <td>2013-08-14</td>
+                            <td>ABCDEF</td>
+                            <td>MU5183</td>
+                            <td>北京<s>&#8596;</s>巴黎</td>
+                            <td>白展堂展堂</td>
+                            <td>2013-07-25</td>
+                            <td>G/6.0折</td>
+                            <td>￥6,800</td>
+                            <td>未支付</td>
+                            <!-- <td><a class="ac&#45;oper" href="">操作<i class="active"></i></a></td> -->
+                            <td><span class="hyper-link"><u>操作</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></td>
+                        </tr>
+                        <tr>
+                            <td><a class="text1" href="#">030312103112261</a></td>
+                            <td>2013-08-14</td>
+                            <td>ABCDEF</td>
+                            <td>MU5183</td>
+                            <td>北京<s>&#8596;</s>巴黎</td>
+                            <td>白展堂展堂</td>
+                            <td>2013-07-25</td>
+                            <td>G/6.0折</td>
+                            <td>￥6,800</td>
+                            <td>未支付</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+        <div class="us-body" style="">
+            <div class="tab_item">
+                <section class="us-result">
+                    <div class="chief" style="margin-bottom:10px">
+                        <h3 style="width:130px;display: inline-block">当日酒店订单</h3>
+                        <span style="float:right;"><a href="">更多</a></span>
+                    </div>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>订单编号</th>
+                            <th>下单日期</th>
+                            <th>城市</th>
+                            <th>酒店名称</th>
+                            <th width="60">入住日期 离店日期</th>
+                            <th>订单金额</th>
+                            <th>订单状态</th>
+                            <th width="80">操作</th>
+                        </tr>
+                        </thead>
+                        <tr>
+                            <td><a class="text1" href="#">030312103112261</a></td>
+                            <td>2013-08-14</td>
+                            <td>呼和浩特</td>
+                            <td>上海宝花国际酒店</td>
+                            <td>2013-08-09 2013-09-01</td>
+                            <td>￥6,800</td>
+                            <td>未支付</td>
+                            <td></td>
+                        </tr>
+                        <tr class="currentList">
+                            <td><a class="text1" href="#">030312103112261</a></td>
+                            <td>2013-08-14</td>
+                            <td>呼和浩特</td>
+                            <td>上海宝花国际酒店</td>
+                            <td>2013-08-09 2013-09-01</td>
+                            <td>￥6,800</td>
+                            <td>未支付</td>
+                            <td><a class="text1" href="#">变更</a>&#12288;&#12288;<a class="text1" href="#">退单</a></td>
+                        </tr>
+                        <tr>
+                            <td><a class="text1" href="#">030312103112261</a></td>
+                            <td>2013-08-14</td>
+                            <td>呼和浩特</td>
+                            <td>上海宝花国际酒店</td>
+                            <td>2013-08-09 2013-09-01</td>
+                            <td>￥6,800</td>
+                            <td>未支付</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><a class="text1" href="#">030312103112261</a></td>
+                            <td>2013-08-14</td>
+                            <td>呼和浩特</td>
+                            <td>上海宝花国际酒店</td>
+                            <td>2013-08-09 2013-09-01</td>
+                            <td>￥6,800</td>
+                            <td>未支付</td>
+                            <td><a class="text1" href="#">变更</a>&#12288;&#12288;<a class="text1" href="#">退单</a></td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+    </main>
+</section>
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+
+
+</body>
+</html>
+

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta content="text/html" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css"/>
+    <link rel="stylesheet" href="../../static/css/b2g.css" media="all"/>
+    <link rel="stylesheet" href="../../static/css/kendo.common.css"/>
+    <link rel="stylesheet" href="../../static/css/kendo.b2g.css"/>
+    <link rel="stylesheet" href="../../static/css/b2g_personage_center.css" media="all" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/b2g/common.js"></script>
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+    <!--[if lte IE 9]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        .ac-floatlayer {
+            background-color: transparent
+        }
+
+        .k-ie7 .ac-floatlayer, .k-ie8 .ac-floatlayer {
+            background-color: transparent
+        }
+    </style>
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="top-line"></div>
+    <header class="main-header">
+        <div class="header-content"><a class="logo" href="/">天地行 B2G</a>
+            <nav class="main-nav">
+                <ul class="clearfix">
+                    <li class="first active"><a herf="#">行程预订</a></li>
+                    <li><a herf="#">行程管理</a></li>
+                    <li><a herf="#">数据服务</a></li>
+                    <li><a herf="#">创业维护</a></li>
+                    <li><a herf="#">系统设置</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="header-bar clearfix">
+        <div class="header-bar-content"><span class="font-titbar">潘小美，您正在为<em>钱多多</em><em>唐笑笑</em><em>小可怜</em>预订</span>
+        </div>
+    </div>
+    <section class="main-body clearfix">
+        <div class="main-body-content">
+            <div class="personalNavBar clearfix">
+                <ul>
+                    <li><span class="journey"><em>我的行程</em></span></li>
+                    <li><span class="card"><em>信用卡</em></span></li>
+                    <li><span class="secretary"><em>差旅秘书</em></span></li>
+                    <li><span class="approver"><em>代理审批人</em></span></li>
+                    <li><span class="messages"><em>消息中心</em></span></li>
+                    <li><span class="data"><em>我的资料</em></span></li>
+                    <li class="current"><span class="password"><em>修改密码</em></span></li>
+                </ul>
+            </div>
+            <div class="fillIn clearfix"> <!--fillIn start-->
+                <div class="leftFillIn"> <!--leftFillIn start-->
+                    <div class="infoContent">
+                        <h3 class="writeTitle"></h3>
+                        <div class="fillInContent clearfix">
+                            <table class="tbl_modifyPassword">
+                                <colgroup>
+                                    <col width="150"/>
+                                    <col width="450"/>
+                                </colgroup>
+                                <tr>
+                                    <th>请输入当前密码：</th>
+                                    <td><input type="text" name="" id="" placeholder="密码为6位数字或英文字母" style="width:220px"/><i class="oldPasswordStatus right"></i><i class="oldPasswordStatus wrong"></i></td>
+                                    <td rowspan="3">
+                                        <div class="passwordTip">
+                                            <div class="title"><i></i>温馨提示</div>
+                                            <ul>
+                                                <li>定期更换密码可以让您的账户更加安全，</li>
+                                                <li>请确保登录密码与支付密码不同，</li>
+                                                <li>建议密码采用字母和数字混合，并不短于6位。</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>请输入新密码：</th>
+                                    <td><input type="text" name="" id="" style="width:220px"/></td>
+                                </tr>
+                                <tr>
+                                    <th>确认信密码：</th>
+                                    <td><span class="validtorContainer"><input type="text" name="" id="" style="width:220px"/><i class="invalidTip">与之前的输入不一致</i></span></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="row row-btns">
+                            <a href="javascript:;" class="btns btn-s2 btn-c1" id="btn_applyModify">确 定</a>
+                            <a href="javascript:;" class="btns btn-s2 btn-c5">取 消</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script type="text/html" id="successPromptTemplate">
+    <div class="successPrompt">
+        <i class="ico"></i>恭喜您，密码修改成功
+    </div>
+</script>
+<script>
+    $(function(){
+        $("#btn_applyModify").click(function(){
+            $.prompt({content:$("#successPromptTemplate").html()}).open().center();
+
+        })
+    })
+</script>
+</body>
+</html>

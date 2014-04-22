@@ -1,0 +1,45 @@
+<!-- 以及废弃 ---->
+<div>
+	<h1>添加采购商</h1>
+	<form name="customer" action="" method="post">
+		<h2>公司信息</h2>
+		<ul>
+			<li><label>公司名称：</label><input type="text" name="company_fullname"/></li>
+			<li><label>公司简称：</label><input type="password" name="company_shortname"/></li>
+			
+			<li><label>工作时间：</label><input type="text" name="startTime"/>到<input type="text" name="endTime"/></li>
+			<li><label>负责人手机号码：</label><input type="text" name="managerMobile"/></li>
+			<li><label>操作员许可数：</label><input type="text" name=""/></li>
+			<li><label>电子邮箱：</label><input type="text" name=""/></li>
+			<li><label>电话：</label><input type="text" name=""/></li>
+			<li><label>详细地址：</label><input type="text" name=""/></li>
+			<li><label>编号：</label><input type="text" name=""/></li>
+			<li><label>结算银行：</label><input type="text" name=""/></li>
+			<li><label>结算银行账号：</label><input type="text" name=""/></li>
+		</ul>
+		
+		<h2>账号信息</h2>
+		<ul>
+			<li><label>账号：</label><input type="text" name="login_name"/></li>
+			<li><label>登录密码：</label><input type="password" name="password"/></li>
+			<li><label>账户类型：</label>
+				<select name="account_type">
+					<option value="singlePay">单笔支付</option>
+					<option value="prePay">预存客户</option>
+					<option value="trustPay">授信客户</option>
+				</select></li>
+			<li><label>账号状态：</label><select name="account_status">
+					<option value="open">启用</option>
+					<option value="stop">停用</option>
+				</select>
+			</li>
+			<li><label>管理员名称</label><input type="text" name=""/></li>
+			<td><label>上级机构我改：</label><input type="text" name=""/></td>
+			<td><label>积分客户：</label><input type="checkbox" name=""/></td>
+			<li><label>操作员许可数：</label><input type="text" name=""/></li>
+			<li><label>下级分销商许可：</label><input type="checkbox" name=""/></li>
+			<li><label>账号有效期：</label><input type="text" name="" class="Datepicker"/></li>
+			<li><label>账号状态：</label><input type="text" name=""/></li>
+		</ul>
+	</form>
+</div>

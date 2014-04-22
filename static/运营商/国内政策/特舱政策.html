@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>政策 国内政策 特舱政策</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../static/css/common.css" rel="stylesheet" />
+	<link href="../../static/css/kendo.common.css" rel="stylesheet" />
+	<link href="../../static/css/kendo.gray.css" rel="stylesheet" />
+	<link href="../../static/css/b2b.css" rel="stylesheet" />
+    <link href="/static/css/kendo.reset.css" rel="stylesheet" />
+    <link href="../../static/css/ordinary.css" rel="stylesheet"  type="text/css"/>
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/public.js"></script>
+    
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<!-- @CLB@ -->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body>
+    <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">&nbsp;</a>
+                <span>&nbsp;</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent"> <!--mainContent开始-->
+        
+          <div class="tjxg_top">
+               <h2>返回</h2>
+               <p>添加政策</p>
+               <div class="lkfb">
+                    <label> <input type="checkbox"/>立刻发布</label>
+               </div>
+               <div class="tyxj_a">
+                 <a href="#" class="tyxj_a_1">关&nbsp;闭</a>
+                 <a href="#" class="tyxj_a_1">清&nbsp;除</a>
+                 <a href="#" class="tyxj_a_2">保&nbsp;存</a>
+                 <a href="#" class="tyxj_a_2">保存并继续</a>
+               </div>
+          </div>
+       <div class="middlecontent"> <!--middlecontent开始-->
+         <div class="mudong clearfix">
+            <p class="mudong_p"><em>航空公司：</em>  <select><option>MU东航</option></select></p>
+            <p class="mudong_p_1"><em>协议名称：</em> <input type="text"/></p>
+         </div>
+         <div class="zclx_dx clearfix">
+             <p class="dx_1">政策类型：</p>
+             <div><label><input type="radio" value="普通政策" name="radio_1"> 普通政策</label></div>
+             <div><label><input type="radio" value="全国政策" name="radio_1"> 全国政策</label></div>
+             <div><label><input type="radio" value="特殊高返" name="radio_1"> 特殊高返</label></div>
+             <div><label><input type="radio" value="往返打包" name="radio_1"> 往返打包</label></div>
+             <div><label><input type="radio" value="特舱政策" checked="checked" name="radio_1"> 特舱政策</label></div>
+             <div><label><input type="radio" value="团队政策" name="radio_1"> 团队政策</label></div>
+             <div><label><input type="radio" value="特价申请" name="radio_1"> 特价申请</label></div>
+         </div>
+         <div class="office clearfix">
+            <p class="office_p"> <span>政策标签：</span> <select><option>东航1</option> <option>东航2</option></select> <a href="#">添加</a></p>
+             <div class="office_bottom">
+                <p><span>东航2</span> <label>x</label> </p>
+                <p><span>东航3</span> <label>x</label> </p>
+             </div>
+         </div>
+         <div style="clear:both;"></div>
+         <div class="pzlx_cp clearfix">
+             <p class="pzlx_cp_p1"> <span class="leixing_1">票证类型：</span> <label><input type="checkbox"/> BSP</label>
+                               <label><input type="checkbox"/> B2B</label>
+                               <label><input type="checkbox"/> CRS</label>
+                               <label class="pzlx_cp_p1_label"><input type="checkbox"/> 允许自动出票 </label>
+             </p>
+             <p class="prompt"><i></i>提示：如果您允许自动出票，此政策的订单可通过自动出票程序进行出票。</p>
+             <div>
+             <p class="pzlx_cp_p2"><label><input type="checkbox"/>  必须换编码才能出票</label></p> 
+             <p class="prompt"><i></i>提示：如果您勾选了此项，采购商会看到该政策需要换编码出票，有可能会影响到您的票量，请谨慎选择，尽量不要勾选此项。</p> 
+             </div>       
+         </div>
+         <div class="danwang clearfix">
+             <p class="danwang_p"> <span class="hclx_1">航程类型：</span> <label><input type="checkbox"/> 单程</label>
+                                                                         <label><input type="checkbox"/> 往返</label>
+             </p>
+             <p class="danwang_p"> <span class="hclx_1">乘客类型：</span> <label><input type="checkbox"/> 成人</label>
+                                                                         <label><input type="checkbox"/> 儿童</label>
+             </p>       
+         </div>
+         <div class="office">
+            <p class="office_p"> <span>OFFICE号：</span> <select><option>SHA255</option></select> <a href="#">添加</a></p>
+             <div class="office_bottom">
+                <p><span>SHA255</span> <label>x</label> </p>
+                <p><span>SHA836</span> <label>x</label> </p>
+             </div>
+         </div>
+         <div style="clear:both;"></div>
+         <div class="shifou">
+            <span class="shifou_span">是否需授权：</span>  <label><input type="checkbox"/> 编码需要授权</label>
+            <p class="prompt_1"><i></i>提示：勾选该项后，政策选择时会提示采购商该条政策需授权才能出票，请按真实的出票情况进行设置。</p>
+         </div>
+         <p class="sf_p">&nbsp;</p>
+         <div class="cfjc clearfix">
+             <p class="pzlx_cp_p1"> <span class="leixing_1">出发机场：</span> 
+                               <label><input type="radio" checked="checked" name="radio_2"/> 所有</label>
+                               <label><input type="radio" name="radio_2"/> 包含</label>
+                               <label><input type="radio" name="radio_2"/> 排除</label>
+             </p>
+             <div>
+             <p class="cfjc_textarea"> <textarea>请输入文字...</textarea></p>
+             <p class="prompt_2"><i></i>提示：可输入多个机场三字码，用半角/分隔。如PEK/SHA/PVG。</p>
+             </div>
+         </div>
+         <div class="cfjc clearfix">
+             <p class="pzlx_cp_p1 clearfix"> <span class="leixing_1">到达机场：</span> 
+                               <label><input type="radio" checked="checked" name="radio_3"/> 所有</label>
+                               <label><input type="radio" name="radio_3"/> 包含</label>
+                               <label><input type="radio" name="radio_3"/> 排除</label>
+             </p>
+             <p class="cfjc_textarea"> <textarea>全国所有机场...</textarea></p>
+         </div>
+          <div class="cfjc_1 clearfix">
+             <b>排除航段：</b>
+             <textarea class="cfjc_textarea_1">SHA-PEK/SHA-PEK</textarea>
+             <p class="prompt_3"><i></i>提示：排除指定的航段，如：SHA-PEK，表示只排除SHA到PEK这一段，SHA到其他机场正常。可以用半角/分割添加多段。</p>
+         </div>
+         
+         <div class="cfjc_content clearfix">
+          <div class="cfjc_2">
+             <p class="pzlx_cp_p1"> <span class="leixing_1">航班限制：</span> 
+                               <label><input type="radio" checked="checked" name="radio_4"/> 所有</label>
+                               <label><input type="radio" name="radio_4"/> 包含</label>
+                               <label><input type="radio" name="radio_4"/> 排除</label>
+             </p>
+             <p class="cfjc_textarea"> <textarea>2134/2701-2999</textarea></p>
+         </div>
+         <p class="prompt_4"><i></i>提示：输入航班号时，无需输入航空公司代码，如CA1234，请输入1234，可输入多个航班号，用半角/分隔，支持号段，如：2701-2999。“所有”表示本政策适用于所有航班号，“包含”表示本政策适用于左侧输入航班号，“排除”表示适用于除左侧输入的航班号之外的其他所有航班号。</p>
+         </div>
+         
+         <div class="sekuai clearfix">
+            <p class="cangwei"><span class="cangwei_span">适用舱位：</span> <span class="juse">&nbsp;</span> 
+                               <span class="xuan_1">全选</span> <span class="huise_1">&nbsp;</span> <span class="xuan_1">反选</span>
+            </p>
+            <ul class="sekuai_ul">
+               <li> <span>C</span> <label>[150]</label> </li>
+               <li> <span>F</span> <label>[150]</label> </li>
+               <li class="sekuai_ul_li"> <span>P</span> <label>[150]</label> </li>
+               <li> <span>A</span> <label>[120]</label> </li>
+               <li> <span>J</span> <label>[120]</label> </li>
+               <li> <span>I</span> <label>[30]</label> </li>
+               <li class="sekuai_ul_li"> <span>Y</span> <label>[100]</label> </li>
+               <li> <span>T</span> <label>[90]</label> </li>
+               <li class="sekuai_ul_li"> <span>H</span> <label>[80]</label> </li>
+               <li class="sekuai_ul_li"> <span>M</span> <label>[75]</label> </li>
+               <li> <span>G</span> <label>[70]</label> </li>
+               <li> <span>S</span> <label>[65]</label> </li>
+               <li> <span>L</span> <label>[60]</label> </li>
+               <li> <span>Q</span> <label>[55]</label> </li>
+               <li> <span>E</span> <label>[50]</label> </li>
+               <li> <span>V</span> <label>[45]</label> </li>
+               <li class="sekuai_ul_li"> <span>R</span> <label>[40]</label> </li>
+               <li> <span>K</span> <label>[35]</label> </li>
+            </ul>
+         </div>
+         <div class="cjrq_tj clearfix">
+              <div class="cjrq_top clearfix">
+              <p class="cjrq_tj_p_0"> <span class="cjrq_span">乘机日期：</span> <input class="cjrq_input_1 datePicker" type="text" value="2013-06-01" /> <span class="cjrq_zhi">至</span> <input class="cjrq_input_2 datePicker" type="text" value="2013-06-01" />  <a href="#" class="cjrq_a">添加</a>
+              </p>
+              <p class="prompt_5"><i></i>提示：在此时间范围内起飞的航班才适用本政策。</p>
+              </div>
+              <div class="date_span">
+                  <span> 2013-06-01至2013-08-31 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>x</i> </span>
+                  <span> 2013-06-01至2013-08-31 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>x</i> </span>
+              </div>
+         </div>
+         <div style="clear:both;"></div>
+         
+         <div class="cprx clearfix">
+              <p style="width:auto;"> <span class="cjrq_span">出票日期：</span> <input class="cjrq_input_1 datePicker" type="text" value="2013-06-01" /> <span class="cjrq_zhi">至</span> <input class="cprq_jz datePicker" type="text" value="2013-06-01" />  <label>08:00</label> <span class="lzf">-</span> <label>17:30</label>
+              </p>
+              <p class="prompt_3"><i></i>提示：只有在此时间内本政策有效，才可以查询预定，时间段默认供应商上下班时间段。</p>
+         </div>
+         <p class="xian">&nbsp;  </p>
+         <div class="dijia">
+             <div>
+               <p> <b>现结底价：</b> <input type="text" value="3" /> <label>+</label> <input type="text" value="2" /> <label>%</label> </p>
+              </div>
+             <p class="prompt_6"><i></i>提示：3+Z值，用于计算利润，仅供应商内部可见。</p>
+         </div>
+         <div class="houfan"> <b>预期后返：</b> <select> <option>取配置</option> <option>无</option> <option>自定义</option> </select> <input type="text" value="2" /> <label>%</label> </div>
+         <div class="dijia">
+             <div style="width:310px;">
+               <p class="koulu"> <b>奖励扣率：</b> <input type="text" value="1" /> <label>%</label> </p>
+               <p class="dijia_p"> <b>奖励金额：</b> <input type="text" value="10" /> <label>元</label> </p>
+             </div>
+             <p class="hongsi"><label> <input type="checkbox" checked="checked" style="border:0" /> &nbsp; 航司后返</label></p>
+             <p class="prompt_6"><i></i>提示：可不设置，仅供应商可见，主要是便于计算利润。</p>
+         </div>
+         <div class="xdmax">
+           <p> <b>限定最高值：</b> <input type="text" value="8" /> <label>%</label> <label>+</label> <input type="text" value="10" /> <label>元</label> </p>
+           <p class="prompt_7"><i></i>提示：可不设置，主要用于业务员手动开单时限制最高值，仅运营商内部可见。</p>
+         </div>
+         <div class="freight_rate"> <b>运价计算：</b> <input type="text" value="PAT:A" /> </div>
+         <div class="freight_rate"> <b>运价基础：</b> <select><option>按舱位折扣</option> <option>按实际折扣</option> 
+                                    <option>自定义</option></select> <input type="text" value="THZ" />
+         </div>
+         <div class="rmk">
+           <b>RMK项：</b> <input type="text" value="RMK备注指令内容"/>
+         </div>
+         <div class="tgqfjgd clearfix">
+            <b>退改签附加规定：</b>
+            <textarea> &nbsp; </textarea>
+         </div>
+         <p class="xian">&nbsp;  </p>
+         
+         <div class="beizhu clearfix">
+            <p> <b>公开备注：</b> 
+                <label><input type="checkbox" /> 签转回收促销费</label>
+                <label><input type="checkbox" /> 其他快捷备注</label>
+            </p>
+            <div> <textarea> &nbsp; </textarea>
+                  <p class="prompt_8"><i></i>提示：此备注内容将在订单中显示，用于提醒采购商需注意的事项，所有人均可见。</p> 
+            </div>
+         </div>
+         <div class="beizhu clearfix">
+            <p> <b>内部备注：</b> 
+                <label><input type="checkbox" /> 签转回收促销费</label>
+                <label><input type="checkbox" /> 其他快捷备注</label>
+            </p>
+            <div> <textarea>签转回收促销费，其他快捷备注。再写点其他什么的。</textarea>
+                  <p class="prompt_9"><i></i>提示：此备注仅后台人员查看时显示，采购商不可查看。</p> 
+            </div>
+         </div>
+         <div class="tishi_bottom">
+            <span>&nbsp;</span>
+            <p>提示：点击“保存”完成发布（或提交审核），点击“保存并继续”完成发布（或提交审核），保留在当前页面，页面内容不清除，点击清除恢复空白页面。</p>
+         </div>
+         
+      </div> <!--middlecontent结束-->
+      </div><!--mainContent结束-->
+
+    </div>
+		
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+</body>
+</html>

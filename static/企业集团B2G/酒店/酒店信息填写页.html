@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 B2G 酒店信息填写页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css"/>
+    <link rel="stylesheet" href="../../static/css/b2g.css" media="all"/>
+    <link rel="stylesheet" href="../../static/css/kendo.common.css"/>
+    <link rel="stylesheet" href="../../static/css/kendo.b2g.css"/>
+    <link rel="stylesheet" href="../../static/css/b2g_hotel.css"/>
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/b2g/common.js"></script>
+    <script src="../../static/js/b2g/jquery-ui-1.10.3.custom.js"></script>
+    <script src="../../static/js/jquery.jscrollpane.js"></script>
+    <script src="../../static/js/jquery.mousewheel.js"></script>
+    <!--[if lte IE 9]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        .ac-floatlayer {
+            background-color: transparent
+        }
+
+        .k-ie7 .ac-floatlayer, .k-ie8 .ac-floatlayer {
+            background-color: transparent
+        }
+    </style>
+</head>
+<body>
+<div class="main-wrapper">
+<div class="top-line"></div>
+<header class="main-header">
+    <div class="header-content"><a class="logo" href="/">天地行 B2G</a>
+        <nav class="main-nav">
+            <ul class="clearfix">
+                <li class="first active"><a herf="#">行程预订</a></li>
+                <li><a herf="#">行程管理</a></li>
+                <li><a herf="#">数据服务</a></li>
+                <li><a herf="#">创业维护</a></li>
+                <li><a herf="#">系统设置</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="header-bar clearfix">
+    <div class="header-bar-content"><span class="font-titbar">潘小美，您正在为<em>钱多多</em><em>唐笑笑</em><em>小可怜</em>预订</span>
+    </div>
+</div>
+<section class="main-body clearfix">
+<div class="main-body-content">
+<div class="titTop clearfix">
+    <div class="flowImg"><em>选择</em> <em>预订</em> <em class="curFlowImg"><i></i>填写</em> <em>加入行程</em> <em
+            class="lastFlowGray">提交行程</em></div>
+</div>
+<div class="fillIn clearfix"> <!--fillIn start-->
+<div class="leftFillIn"> <!--leftFillIn start-->
+<div class="modHotel"><!--modHotel start-->
+    <ul class="hotel-info">
+        <li class="hotel-pic"><a href="javascript:void(0)" target="_blank"><img
+                src="../../static/images/b2g/hotelPic.jpg" width="200px" height="135px" alt="上海宝华国际酒店"
+                title="上海宝华国际酒店"/></a></li>
+        <li class="hotel-name">
+            <h3><a href="javascript:void(0)">上海宝华国际酒店</a></h3>
+            <span class="hotel-stars" style="margin-right:5px; top:2px;"><i class="hotel_stars05"></i></span><span><em>[
+            五星/豪华 ]</em></span>
+
+            <p class="hotel-address">地址：<em>上海市虹口区西江湾路718号（近广中路）</em></p>
+
+            <div class="icon-list"><span class="ico-free-wifi" title="免费wifi"></span> <span class="ico-gym"
+                                                                                            title="健身房"></span> <span
+                    class="ico-breakfast" title="餐厅"></span> <span class="ico-broadband" title="收费宽带"></span></div>
+            <p class="rowRoom"><span><strong>商务标准间</strong> - 不含早（江浙沪特惠专场-内宾）</span> <span
+                    class="commonGround orangeGround">担保</span></p>
+        </li>
+    </ul>
+</div>
+<div class="infoContent"> <!--infoContent start-->
+<h3 class="writeTitle">填写订单信息</h3>
+
+<div class="fillInContent clearfix"> <!--fillInContent start-->
+<table class="writeList">
+<colgroup>
+    <col width="125px"/>
+    <col width="140px"/>
+    <col width="95px"/>
+    <col width="476px"/>
+</colgroup>
+<tr>
+    <th>入住日期：</th>
+    <td>2013-12-21</td>
+    <th>名：</th>
+    <td>duoduo<span class="days">3晚</span></td>
+</tr>
+<tr>
+    <th>房间数量：</th>
+    <td colspan="3"><select data-role="dropdownlist" style="width:73px; margin-right:3px;">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+        间
+    </td>
+</tr>
+<tr>
+    <th>房费总计：</th>
+    <td colspan="3"><span class="red fontDash">￥<em class="price">620.00</em></span> 元<span class="grayfonts">（预订免费，入住后酒店前台付款）</span>
+    </td>
+</tr>
+<tr>
+    <th valign="top" style="padding-top:8px">住客姓名：</th>
+    <td colspan="3">
+        <div class="guestName">
+            <label>房间1</label>
+												<span class="inconformGuest invalid">
+											<input class="guestList" type="text" style="width:165px;"/>
+											<i>不符合差旅政策</i> </span> <span class="inconformGuest">
+											<input class="guestList" type="text" style="width:165px;"/>
+											<i>不符合差旅政策</i> </span></div>
+
+        <!--填写违背原因-->
+
+        <div class="againstReason"><span class="fillinReason">填写违背原因：</span>
+            <label></label>
+												<span class="inconformReason">
+											<select data-role="dropdownlist" style="width:165px;">
+                                                <option>陪领导出行</option>
+                                                <option>时间不合适</option>
+                                            </select>
+											</span></div>
+
+        <!--填写违背原因 结束-->
+
+        <div class="guestName">
+            <label>房间2</label>
+												<span class="inconformGuest">
+											<input class="guestList" type="text" style="width:165px;"/>
+											<i>不符合差旅政策</i> </span> <span class="inconformGuest invalid">
+											<input class="guestList" type="text" style="width:165px;"/>
+											<i>不符合差旅政策</i> </span></div>
+        <div class="againstReason"><span class="fillinReason">填写违背原因：</span>
+            <label></label>
+												<span class="inconformReason" style="display:none">
+											<select data-role="dropdownlist" style="width:165px;">
+                                                <option>陪领导出行</option>
+                                                <option>时间不合适</option>
+                                            </select>
+											</span> <span class="inconformReason inconformReason-second">
+											<select data-role="dropdownlist" style="width:165px;">
+                                                <option>陪领导出行</option>
+                                                <option>时间不合适</option>
+                                            </select>
+											</span></div>
+    </td>
+</tr>
+<tr>
+    <th style="vertical-align:top; padding-top:5px;">房间保留时间：</th>
+    <td colspan="3">
+        <div class="ensureCost">
+            <label>
+                <input name="keepTime" type="radio" checked="checked">
+                12月21日 23:59</label>
+            <i class="roundBeadBorder">推荐</i>
+            <br>
+            <label>
+                <input name="keepTime" type="radio">
+                12月22日 06:00</label>
+            <span>（<i class="card-mark"></i>需要信用卡或支付宝担保房费<em class="red">￥<strong
+                    style="font-size:16px;">620.00</strong></em> 元）</span>
+        </div>
+        <div class="ensureTips" style="display:none">
+            <p>担保方式：</p>
+
+            <p>房间保留至12月22日06:00，需冻结/暂扣首晚房费担保订单：金额<em class="red">￥<strong style="font-size:16px;">620.00</strong></em>元
+                , 结账后立即操作解冻/退款。</p>
+        </div>
+    </td>
+</tr>
+<tr>
+    <th colspan="4" class="" style="text-align:left;font-weight:normal;">
+        <div class="cardEnsure" style="display:none;">
+            <div class="cardSelTit"><b>请选择担保信用卡：</b></div>
+            <div class="cardType basicInfoSetup_items">
+                <ul>
+                    <li><span><i class="zs"></i>招商银行</span></li>
+                    <li><span class="cardNumber">6222 3333 4444 5555</span></li>
+                    <li><span class="cardDays">有效期至：2015年 5月</span></li>
+                </ul>
+                <ul class="cardSelected">
+                    <li><span><i class="jtyh"></i>交通银行</span></li>
+                    <li><span class="cardNumber">6222 3333 4444 5555</span></li>
+                    <li><span class="cardDays">有效期至：2015年 5月</span></li>
+                </ul>
+                <!--<ul>
+                 <li><span><i class="zs"></i>招商银行</span></li>
+                 <li><span class="cardNumber">6222 3333 4444 5555</span></li>
+                 <li><span class="cardDays">有效期至：2015年 5月</span></li>
+                </ul>
+                <ul>
+                 <li><span><i class="zs"></i>招商银行</span></li>
+                 <li><span class="cardNumber">6222 3333 4444 5555</span></li>
+                 <li><span class="cardDays">有效期至：2015年 5月</span></li>
+                </ul>-->
+										   <span class="cardType_add">
+										   <i></i>添加一张信用卡
+										   </span>
+            </div>
+            <div class="clearfix">
+                <strong>请输入CVV2码：</strong>
+                <span class="cardSelTips cvv2Tip">
+                    信用卡背面的后三位数字<br/>
+                    <input type="text" class="ipt_cvv2" maxlength="3"/>
+                </span>
+            </div>
+            <div class="cardEdit"><a href="javascript:void(0);">修改信用卡信息</a></div>
+        </div>
+        <!--添加 填写信用卡内容-->
+        <div class="fillCard" style="display:none">
+            <div class="cardSelTit"><b>请选择担保信用卡：</b>
+                <span class="cardSelTips">请确保信用卡证件登记信息与发卡行记录信息一致 !</span>
+            </div>
+            <table class="add_cardList">
+                <colgroup>
+                    <col width="230px"/>
+                    <col width="152px"/>
+                    <col width="162px"/>
+                    <col width="162px"/>
+                    <col width="80px"/>
+                    <col width=""/>
+                </colgroup>
+                <tbody>
+                <tr>
+                    <th>持卡人姓名：</th>
+                    <td><input class="" type="text" style="width:150px;"/></td>
+                    <th>发卡银行：</th>
+                    <td>
+                        <select data-role="dropdownlist" style="width:150px;">
+                            <option>光大银行</option>
+                            <option>广发银行</option>
+                            <option>招商银行</option>
+                            <option>建设银行</option>
+                        </select>
+                    </td>
+                    <th>卡号：</th>
+                    <td><input id="ipt_cardNo" type="text" class="" style="width:220px;" placeholder="请输入信用卡卡号"
+                               maxlength="19"></td>
+                </tr>
+                <tr>
+                    <th>信用卡有效期：</th>
+                    <td colspan="5">
+                        <select data-role="dropdownlist" style="width:45px; margin-right:3px;">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>月
+                        <select data-role="dropdownlist" style="width:85px; margin-right:3px;">
+                            <option>2014</option>
+                            <option>2015</option>
+                            <option>2016</option>
+                            <option>2017</option>
+                            <option>2018</option>
+                        </select>年
+                    </td>
+                </tr>
+                <tr>
+                    <th>发卡银行预留证件：</th>
+                    <td>
+                        <select data-role="dropdownlist" style="width:150px;">
+                            <option>身份证</option>
+                            <option>驾驶证</option>
+                            <option>军官证</option>
+                            <option>学生证</option>
+                        </select>
+                    </td>
+                    <th>证件号：</th>
+                    <td colspan="3"><input class="" type="text" style="width:150px;"/></td>
+                </tr>
+                <tr>
+                    <th>证件签发地：<br><span class="codeword">(2字码)</span></th>
+                    <td><input class="" type="text" style="width:150px;"/></td>
+                    <th>证件到期日：</th>
+                    <td>
+                        <input type="text" name="" placeholder="" style="width:150px" minDate="2014-01-01" class="gray-border datepicker dpChangeMonthYear"/>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="buttonBox">
+                <button type="button" class="commonBtn lightRedBtn btnfontStyle" style="margin-right:12px">保 存</button>
+                <button type="button" class="commonBtn grayBtn btnfontStyle close bis_cancel">取 消</button>
+            </div>
+        </div>
+
+    </th>
+</tr>
+<tr>
+    <th colspan="4" class="noEnsure"></th>
+</tr>
+<!--<tr>
+        <th>银行名称：</th>
+        <td colspan="3"><input id="ipt_bank" type="text" class="" style="width:237px;" placeholder="请选择/输入信用卡银行"></td>
+</tr>
+<tr>
+        <th>信用卡卡号：</th>
+        <td colspan="3"><input id="ipt_cardNo" type="text" class="" style="width:235px;" placeholder="请输入信用卡卡号" maxlength="19"></td>
+</tr>-->
+</table>
+</div>
+<!--fillInContent end-->
+
+</div>
+<!--infoContent end-->
+
+<div class="infoContent"> <!--infoContent start-->
+    <h3 class="writeTitle">联系人信息填写</h3>
+
+    <div class="linkmanList">
+        <table>
+            <colgroup>
+                <col width="125px"/>
+                <col width="125px"/>
+            </colgroup>
+            <tr>
+                <th>姓名：</th>
+                <td><input type="text" value="潘小美"/></td>
+            </tr>
+            <tr>
+                <th>手机号：</th>
+                <td><input type="text" value="18651668596"/></td>
+            </tr>
+            <tr>
+                <th>邮箱：</th>
+                <td><input type="text" value="18651668596"/></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!--infoContent end-->
+<div class="fillInBtn">
+    <button type="button" class="commonBtn lightRedBtn">立即提交</button>
+    <button type="button" class="commonBtn lightRedBtn shoppingBtn"><em class="shoppingCart"></em>加入行程购物车</button>
+    <!--<a href="javascript:void(0);">取消订单</a> -->
+</div>
+</div>
+<!--leftFillIn end-->
+
+<div class="rightFillIn"> <!--rightFillIn start-->
+    <div class="fillInModelOne"> <!--fillInModelOne start-->
+        <div class="orderTopBg"></div>
+        <div class="FillInOrderCon"> <!--FillInOrderCon start-->
+            <div class="orderMingXi">
+                <h3><i></i>订单明细</h3>
+            </div>
+            <div class="hotelOrderInfo">
+                <table class="boatList">
+                    <colgroup>
+                        <col width="45px"/>
+                        <col width="200px"/>
+                    </colgroup>
+                    <tr>
+                        <td>房 型：</td>
+                        <td>商务标准间</td>
+                    </tr>
+                    <tr>
+                        <td>床 型：</td>
+                        <td>双床（110cm*200cm)</td>
+                    </tr>
+                    <tr>
+                        <td>早 餐：</td>
+                        <td>无早</td>
+                    </tr>
+                    <tr>
+                        <td>宽 带：</td>
+                        <td>宽带（免费）</td>
+                    </tr>
+                    <tr>
+                        <td>面 积：</td>
+                        <td>20-25平米</td>
+                    </tr>
+                    <tr>
+                        <td>入 住：</td>
+                        <td>2014-01-02星期四</td>
+                    </tr>
+                    <tr>
+                        <td>退 房：</td>
+                        <td>2014-01-04星期六</td>
+                    </tr>
+                    <tr>
+                        <td>间 数：</td>
+                        <td>2</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="orderTotalPrices"><b>订单总金额：</b> <em>￥</em> <i>6200</i></div>
+        </div>
+        <!--FillInOrderCon end-->
+        <div class="orderBottomBg"></div>
+    </div>
+    <!--fillInModelOne end-->
+
+</div>
+<!--rightFillIn end-->
+
+</div>
+</div>
+</section>
+<footer class="main-footer">
+    <p class="copyright">Copyright &copy; 2013 天地行 All Rights Reserved. 沪ICP备08101503号</p>
+</footer>
+</div>
+<script type="text/html" id="bis_newItemTemplate">
+</script>
+<script type="text/html" id="bis_itemTemplate">
+</script>
+
+<script type="text/x-kendo-template" id="hotel_price_info">
+    <table class="room-date">
+        <colgroup>
+            <col width="100px"/>
+            <col width="100px"/>
+            <col width="100px"/>
+            <col width="100px"/>
+            <col width="100px"/>
+            <col width="100px"/>
+            <col width="100px"/>
+            <col width="100px"/>
+        </colgroup>
+        <thead>
+        <tr>
+            <th></th>
+            <th>周一</th>
+            <th>周二</th>
+            <th>周三</th>
+            <th>周四</th>
+            <th>周五</th>
+            <th class="room-date-red">周六</th>
+            <th class="room-date-red">周日</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>第一周</td>
+            <td><span class="room-date-price">￥<em>810</em></span><br>无早</td>
+            <td><span class="room-date-price">￥<em>810</em></span><br>无早</td>
+            <td><span class="room-date-price">￥<em>810</em></span><br>无早</td>
+            <td><span class="room-date-price">￥<em>810</em></span><br>无早</td>
+            <td><span class="room-date-price">￥<em>810</em></span><br>无早</td>
+            <td><span class="room-date-price">￥<em>810</em></span><br>无早</td>
+            <td><span class="room-date-price">￥<em>810</em></span><br>无早</td>
+        </tr>
+        <tr>
+            <td>第二周</td>
+            <td><span class="room-date-price">￥<em>810</em></span><br>无早</td>
+            <td><span class="room-date-price">￥<em>810</em></span><br>无早</td>
+            <td><span class="room-date-price">￥<em>810</em></span><br>无早</td>
+            <td><span class="room-date-price">￥<em>810</em></span><br>无早</td>
+            <td><span class="room-date-price">￥<em>810</em></span><br>无早</td>
+            <td><span class="room-date-price">￥<em>810</em></span><br>无早</td>
+            <td><span class="room-date-price">￥<em>810</em></span><br>无早</td>
+        </tr>
+        <tr>
+            <td colspan="8" style="text-align:left">
+                <p><span class="tdTit">早餐：</span>含早餐2份，单加每份￥68.00元（中西自助）。</p>
+
+                <p><span class="tdTit">加床：</span>提供加床，加床价￥150.00元。</p>
+
+                <p><span class="tdTit">支付方式：</span>预订免费，入住后酒店前台付款。</p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</script>
+<script>
+
+
+    $(function () {
+
+
+        var guestDs = [
+            {name: "请选择", value: "choose"},
+            {name: "王叔叔", value: "wss"},
+            {name: "李阿姨", value: "lay"},
+            {name: "小明", value: "xm"},
+        ];
+
+        $(".guestList").kendoDropDownList({
+            dataTextField: "name",
+            dataValueField: "value",
+            dataSource: guestDs,
+            template: "<div class='guest'><span>#=name#</span><i class='against_icon'></i></div>"
+        });
+
+        $(".writeList .price").kendoTooltip({
+            position: "bottom", //left right top
+            wrapperClass: "lineWeight",
+            width: 600,
+            content: function () {
+                return $("#hotel_price_info").html();
+            },
+            offsetY: 10
+        });
+
+        $(".rightFillIn").fixedBar();
+
+        cardNo = FloatLayer({
+            trigger: '#ipt_cardNo',
+            template: '#cardNoTemplate',
+            offsetY: 25,
+            offsetX: -4,
+            data: {cardNo: ""},
+            type: "keypress"
+
+        })
+
+        $("#ipt_cardNo").keydown(function (e) {
+            var code = e.keyCode || e.charCode;
+            if ((code < 48 || code > 57) && (code != 8 && code != 46) && (code < 96 || code > 105)) return false;
+            setTimeout(function () {
+                var cardNo_txt = $("#ipt_cardNo").val().replace(/\s/g, "");
+                var tmp = "";
+                while (cardNo_txt.length > 4) {
+                    tmp += cardNo_txt.substr(0, 4) + " ";
+                    cardNo_txt = cardNo_txt.substring(4);
+                }
+                tmp += cardNo_txt;
+                $("#ipt_cardNo").val(tmp)
+                cardNo.data({cardNo: tmp});
+            }, 0);
+        })
+
+        $("#ipt_bank").kendoAutoComplete({
+            dataTextField: "py",
+            dataSource: [
+                {py: "gongshangyinhang", name: "工商银行"}
+            ],
+            template: kendo.template("#=name#"),
+            select: function (e) {
+                setTimeout(function () {
+                    $("#ipt_bank").val(e.item.text())
+                }, 0);
+            }
+        })
+    });
+</script>
+<script type="text/html" id="cardNoTemplate">
+    <div class="blockNumber">
+        #= cardNo #
+    </div>
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        $(".ensureCost").find("input[type='radio']").each(function (index) {
+            $(this).click(function () {
+                //console.log(index);
+                switch (index) {
+                    case 0:
+                        $(".noEnsure").show();
+                        $(".cardEnsure,.ensureTips,.fillCard").hide();
+                        break;
+                    case 1:
+                        $(".noEnsure").hide();
+                        $(".cardEnsure,.ensureTips").show();
+                        break;
+                    default:
+                        break;
+                }
+            });
+        });
+
+        $(".cardType_add").click(function () {
+            var t = kendo.template($("#bis_newItemTemplate").html());
+            $(".fillCard").show();
+            $(".cardEnsure,.cardType_add").hide();
+        })
+
+        $("body").delegate(".bis_cancel", "click", function () {
+            $(".fillCard").hide();
+            $(".cardEnsure,.cardType_add").show();
+
+        })
+
+        $(".ipt_cvv2").on("keydown",function(){
+            setTimeout(function () {
+                if($(".ipt_cvv2").val().length>0)
+                {
+                    $(".ipt_cvv2").addClass("hasValue");
+                }
+                else
+                {
+                    $(".ipt_cvv2").removeClass("hasValue");
+                }
+            }, 0);
+        })
+    });
+</script>
+</body>
+</html>

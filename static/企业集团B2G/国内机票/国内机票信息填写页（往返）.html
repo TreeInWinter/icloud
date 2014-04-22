@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 B2G 国内机票信息填写页（往返）</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/b2g.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.b2g.css" />
+    <link rel="stylesheet" href="../../static/css/b2g_flight.css" media="all" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/b2g/common.js"></script>
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+    <!--[if lte IE 9]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="top-line"></div>
+    <header class="main-header">
+        <div class="header-content">
+            <a class="logo" href="/">天地行 B2G</a>
+            <nav class="main-nav">
+                <ul class="clearfix">
+                    <li class="first active"><a herf="#">行程预订</a></li>
+                    <li><a herf="#">行程管理</a></li>
+                    <li><a herf="#">数据服务</a></li>
+                    <li><a herf="#">创业维护</a></li>
+                    <li><a herf="#">系统设置</a></li>
+                </ul> 
+            </nav>
+        </div>
+    </header>
+    <div class="header-bar clearfix">
+        <div class="header-bar-content">
+            <i class="tips"></i><span>请先选择差旅人   * 默认状态下您为自己预订</span>
+            <div class="setuser">
+                <a href="javascript:void(0);">设置差旅人</a>
+            </div>
+            <div class="for_reason">
+                <span class="reason_checkbox checked"></span><label for="reason">因私</label><input type="checkbox" style="display:none;" id="reason" value="for_private" name="reason"/>
+            </div>
+        </div>
+    </div>
+
+    <section class="main-body clearfix">
+        <div class="main-body-content">   <!--main-body-content start-->
+        	<div class="titTop clearfix">               
+                <div class="flowImg">
+                        <em class="curFlowImg"><i></i>选择</em>
+                        <em>预订</em>
+                        <em>填写</em>
+                        <em>加入行程</em>
+                        <em class="lastFlowGray">提交行程</em>
+                </div>
+        	</div> 
+        
+            <div class="modFlight clearfix">
+                  <div class="modFlightLeft clearfix"> <!--modFlightLeft start-->
+                         <div class="clearfix" style=" border-bottom:1px solid #d2d2d2;">
+                                 <div class="selectedInfo" style="padding:25px 10px;">
+                                      <h2>已选航班信息 — 去程</h2>
+                                      <h3>上海 <em>—</em> 西安</h3>
+                                      <div>2013-12-17</div>
+                                 </div>
+                                 <div class="modFliList">
+                                         <table>
+                                               <colgroup>
+                                                    <col width="70px"/>
+                                                    <col width="140px"/>
+                                                    <col width="210px"/>
+                                                    <col width="280px"/>
+                                                    <col width="85px"/>
+                                               </colgroup>
+                                               <tr>
+                                                   <td align="right"><code class="logo_MU"></code></td>
+                                                   <td class="colorSize">南方航空 &nbsp; CZ6437</td>
+                                                   <td class="colorSize">机型 333（大）  &nbsp;&nbsp; 经济舱</td>
+                                                   <td><i class="colorSize">单程票价：</i><em style=" color:#f94037;">￥</em><b style="font-size:18px; color:#f94037;">620</b></td>
+                                                   <td rowspan="3" align="center"><a href="javascript:void(0);" class="linkA">退改签限制</a></td>
+                                               </tr>
+                                               <tr>
+                                                   <td></td>
+                                                   <td><b style="color:#333333;">起飞：</b>07:40</td>
+                                                   <td style="color:#333333">上海浦东国际机场T2</td>
+                                                   <td>机建 + 燃油： 50+120 元</td>
+                                               </tr>
+                                               <tr>
+                                                   <td></td>
+                                                   <td valign="top"><b style="color:#333333">到达：</b>07:40</td>
+                                                   <td valign="top" style="color:#333333;">西安咸阳国际机场T3</td>
+                                                   <td>
+                                                       <div class="ticketPrice">
+                                                             <div>儿童票：￥570 &nbsp; 机建 + 燃油：50+120 元</div>
+                                                             <div>婴儿票：￥110 &nbsp; 机建 + 燃油：50+120 元 </div>
+                                                       </div>
+                                                   </td>
+                                               </tr>
+                                         </table>
+                                  </div>
+                             </div>
+                             
+                             <div class="clearfix">
+                                 <div class="selectedInfo">
+                                      <h2>已选航班信息 — 返程</h2>
+                                      <h3>西安 <em>—</em> 上海</h3>
+                                      <div>2013-12-17</div>
+                                 </div>
+                                 <div class="modFliList">
+                                         <table>
+                                               <colgroup>
+                                                    <col width="70px"/>
+                                                    <col width="140px"/>
+                                                    <col width="210px"/>
+                                                    <col width="280px"/>
+                                                    <col width="85px"/>
+                                               </colgroup>
+                                               <tr>
+                                                   <td align="right"><code class="logo_MU"></code></td>
+                                                   <td class="colorSize">南方航空 &nbsp; CZ6437</td>
+                                                   <td class="colorSize">机型 333（大）  &nbsp;&nbsp; 经济舱</td>
+                                                   <td><i class="colorSize">单程票价：</i><em style=" color:#f94037;">￥</em><b style="font-size:18px; color:#f94037;">620</b></td>
+                                                   <td rowspan="3" align="center"><a href="javascript:void(0);" class="linkA">退改签限制</a></td>
+                                               </tr>
+                                               <tr>
+                                                   <td></td>
+                                                   <td><b style="color:#333333;">起飞：</b>07:40</td>
+                                                   <td style="color:#333333">上海浦东国际机场T2</td>
+                                                   <td>机建 + 燃油： 50+120 元</td>
+                                               </tr>
+                                               <tr>
+                                                   <td></td>
+                                                   <td><b style="color:#333333">到达：</b>07:40</td>
+                                                   <td style="color:#333333">西安咸阳国际机场T3</td>
+                                                   <td> </td>
+                                               </tr>
+                                         </table>
+                                  </div>
+                             </div>                             
+                      </div> <!--modFlightLeft end-->
+                     <div class="modFlightRight"><button type="button" class="moflBtn">修改航班</button></div>
+             </div>  
+                          
+             <div class="fillIn clearfix"> <!--fillIn start--> 
+                   <div class="leftFillIn"> <!--leftFillIn start-->
+                             <div class="infoContent"> <!--infoContent start-->
+                                   <h3 class="writeTitle">乘机人信息填写</h3>
+                                   <div class="fillInContent clearfix"> <!--fillInContent start-->
+                                         <h2 class="serialNumber">1.</h2>
+                                         <table class="writeList">
+                                               <colgroup>
+                                                     <col width="125px"/>
+                                                     <col width="180px"/>
+                                                     <col width="60px"/>
+                                                     <col width="280px"/>
+                                               </colgroup>
+                                               <tr>
+                                                   <th>乘客类型：</th>
+                                                   <td>
+                                                       <select data-role="dropdownlist" style="width:165px;">
+                                                            <option>成人</option>
+                                                            <option>儿童</option>
+                                                            <option>婴儿</option>
+                                                       </select>
+                                                   </td>
+                                                   <th></th>
+                                                   <td></td>
+                                               </tr>
+                                               <tr>
+                                                   <th>姓：</th>
+                                                   <td><input type="text" value="钱"/></td>
+                                                   <th>名：</th>
+                                                   <td>
+                                                       <input type="text" value="多多" style="width:130px;"/>
+                                                       <em class="askMark"></em>
+                                                       <a href="javascript:void(0);" class="linkA caseExplain">案例说明</a>
+                                                   </td>
+                                               </tr>
+                                               <tr>
+                                                   <th>证件信息：</th>
+                                                   <td>
+                                                       <select data-role="dropdownlist" style="width:165px;">
+                                                            <option>身份证</option>
+                                                            <option>护照</option>
+                                                       </select>
+                                                   </td>
+                                                   <td colspan="2"><input type="text" value="320121198804200258" style="width:190px;"/></td>
+                                               </tr>
+                                               <tr>
+                                                   <th>出生日期：</th>
+                                                   <td><input type="text" value="1988-04-20" /></td>
+                                                   <th></th>
+                                                   <td></td>
+                                               </tr>
+                                               <tr>
+                                                   <th>保险信息：</th>
+                                                   <td colspan="3">
+                                                        <label><input type="checkbox" />航空意外险</label>
+                                                        <em>￥57 &nbsp; </em>
+                                                        <select data-role="dropdownlist" style="width:80px;">
+                                                             <option>1份</option>
+                                                             <option>2份</option>
+                                                             <option>3份</option>
+                                                             <option>4份</option>                                                             
+                                                             <option>5份</option>
+                                                        </select>
+                                                        <i class="roundBeadBorder">免费赠送</i>
+                                                        <a href="javascript:void(0);" class="linkA">保险条款</a>
+                                                   </td>
+                                               </tr>
+                                               <tr>
+                                                   <th>常旅客卡：</th>
+                                                   <td>
+                                                       <select data-role="dropdownlist" style="width:165px;">
+                                                            <option>上海航空</option>
+                                                            <option>海南航空</option>
+                                                       </select>
+                                                   </td>
+                                                   <th></th>
+                                                   <td></td>
+                                               </tr>
+                                               <tr>
+                                                   <th>常旅客卡号：</th>
+                                                   <td colspan="3"><input type="text" value="78451231245645454" style="width:340px;"/></td>
+                                               </tr>
+                                               <tr>
+                                                   <th><b class="specialFoot">* 违背政策原因：</b></th>
+                                                   <td colspan="3">
+                                                       <select data-role="dropdownlist" style="width:340px;">
+                                                            <option>时间不合适</option>
+                                                            <option>陪同领导出行</option>
+                                                       </select>
+                                                   </td>
+                                               </tr>
+                                         </table>
+                                         <div class="unconformity">
+                                              <div class="unconforCont clearfix">
+                                                    <em class="handPointer"><i></i></em>
+                                                    <b>不符合差旅政策</b>
+                                              </div> 
+                                              <div class="pointerBoat">提示：该员工仅限乘坐经济舱</div> 
+                                         </div>
+                                   </div> <!--fillInContent end-->
+                                   <div class="fillInContent fillInLast clearfix"> <!--fillInContent start-->
+                                         <h2 class="serialNumber">2.</h2>
+                                         <table class="writeList">
+                                               <colgroup>
+                                                     <col width="125px"/>
+                                                     <col width="180px"/>
+                                                     <col width="60px"/>
+                                                     <col width="280px"/>
+                                               </colgroup>
+                                               <tr>
+                                                   <th>乘客类型：</th>
+                                                   <td>
+                                                       <select data-role="dropdownlist" style="width:165px;">
+                                                            <option>成人</option>
+                                                            <option selected="">儿童</option>
+                                                            <option>婴儿</option>
+                                                       </select>
+                                                   </td>
+                                                   <th></th>
+                                                   <td></td>
+                                               </tr>
+                                               <tr>
+                                                   <th>姓：</th>
+                                                   <td><input type="text" value="小"/></td>
+                                                   <th>名：</th>
+                                                   <td>
+                                                       <input type="text" value="多多" style="width:130px;"/>
+                                                       <em class="askMark"></em>
+                                                       <a href="javascript:void(0);" class="linkA caseExplain">案例说明</a>
+                                                   </td>
+                                               </tr>
+                                               <tr>
+                                                   <th>证件信息：</th>
+                                                   <td>
+                                                       <select data-role="dropdownlist" style="width:165px;">
+                                                            <option>身份证</option>
+                                                            <option>护照</option>
+                                                       </select>
+                                                   </td>
+                                                   <td colspan="2"><input type="text" value="320121198804200258" style="width:190px;"/></td>
+                                               </tr>
+                                               <tr>
+                                                   <th>出生日期：</th>
+                                                   <td><input type="text" value="1988-04-20" /></td>
+                                                   <th></th>
+                                                   <td></td>
+                                               </tr>
+                                               <tr>
+                                                   <th>保险信息：</th>
+                                                   <td colspan="3">
+                                                        <label><input type="checkbox" />航空意外险</label>
+                                                        <em><del>￥57</del> &nbsp; </em>
+                                                        <i class="sumColor">￥0 &nbsp;</i>
+                                                        <select data-role="dropdownlist" style="width:80px;">
+                                                             <option>1份</option>
+                                                             <option>2份</option>
+                                                             <option>3份</option>
+                                                             <option>4份</option>                                                             
+                                                             <option>5份</option>
+                                                        </select>
+                                                        <i class="roundBeadBorder">免费赠送</i>
+                                                        <a href="javascript:void(0);" class="linkA">保险条款</a>
+                                                   </td>
+                                               </tr>
+                                               <tr>
+                                                   <th>常旅客卡：</th>
+                                                   <td>
+                                                       <select data-role="dropdownlist" style="width:165px;">
+                                                            <option>上海航空</option>
+                                                            <option>海南航空</option>
+                                                       </select>
+                                                   </td>
+                                                   <th></th>
+                                                   <td></td>
+                                               </tr>
+                                               <tr>
+                                                   <th>常旅客卡号：</th>
+                                                   <td colspan="3"><input type="text" value="78451231245645454" style="width:340px;"/></td>
+                                               </tr>                                               
+                                         </table>
+                                   </div> <!--fillInContent end-->
+                             </div> <!--infoContent end-->
+                             
+                             <div class="infoContent"> <!--infoContent start-->
+                                   <h3 class="writeTitle">联系人信息填写</h3>
+                                   <div class="linkmanList">
+                                           <table>
+                                                 <colgroup>
+                                                     <col width="125px"/>
+                                                     <col width="125px"/>                                             
+                                                 </colgroup>
+                                                 <tr>
+                                                     <th>姓名：</th>
+                                                     <td><input type="text" value="潘小美"/></td>
+                                                 </tr>
+                                                 <tr>
+                                                     <th>手机号：</th>
+                                                     <td><input type="text" value="18651668596"/></td>
+                                                 </tr>
+                                                 <tr>
+                                                     <th>邮箱：</th>
+                                                     <td><input type="text" value="18651668596"/></td>
+                                                 </tr>
+                                           </table>
+                                     </div>
+                             </div> <!--infoContent end-->
+                             <div class="fillInBtn">
+                                   <button type="button" class="commonBtn lightRedBtn">立即提交</button>
+                                   <button type="button" class="commonBtn lightRedBtn shoppingBtn"><em class="shoppingCart"></em>加入行程购物车</button>
+                                   <a href="javascript:void(0);">取消订单</a>
+                             </div>
+                  </div>  <!--leftFillIn end-->  
+				 
+                  <div class="rightFillIn">   <!--rightFillIn start--> 
+                       <div class="fillInModelOne"> <!--fillInModelOne start-->  
+                               <div class="orderTopBg"></div>
+                               <div class="FillInOrderCon">  <!--FillInOrderCon start-->
+                                    <div class="orderMingXi">
+                                         <h3>订单明细</h3>
+                                         <div>乘客人数： 3人</div>
+                                    </div>
+                                    <div class="flightOrderInfo">
+                                        <h3 class="flightH3"><em class="goFlightImg"></em>去程航班:</h3>
+                                        <table class="boatList">
+                                             <colgroup>
+                                                  <col width="205px"/>
+                                                  <col width="50px"/>
+                                             </colgroup>
+                                                  <tr>
+                                                      <td rowspan="2">
+                                                           <div class="moneryInfo">
+                                                                 <div class="chengMan">
+                                                                       <div class="priceCont">成人票价：<em>￥</em><b>570</b> </div>
+                                                                       <div>机建 + 燃油： 50+120 元</div>
+                                                                 </div>
+                                                                 <div class="chengMan">
+                                                                       <div class="priceCont">儿童票价：<em>￥</em><b>100</b> </div>
+                                                                       <div>机建 + 燃油： 50+120 元</div>
+                                                                 </div>
+                                                                 <em class="airplane"></em>
+                                                           </div>
+                                                      </td>
+                                                      <td align="right"><div style="margin-top:30px;"><i>x</i> &nbsp; 2人</div></td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td align="right"><i>x</i> &nbsp; 1人</td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>
+                                                          <div class="priceCont">保险：<em>￥</em><b>20</b> </div>
+                                                      </td>
+                                                      <td align="right"><i>x</i> &nbsp; 2人</td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>
+                                                          <div class="priceCont">赠送保险：<del>20 元 </del> &nbsp; <em>￥</em><b>20</b> </div>
+                                                      </td>
+                                                      <td align="right"><i>x</i> &nbsp; 1人</td>
+                                                  </tr>
+                                        </table>
+                                    </div>
+                                    <div class="flightOrderInfo">
+                                        <h3 class="flightH3"><em class="backFlightImg"></em>去程航班:</h3>
+                                        <table class="boatList">
+                                             <colgroup>
+                                                  <col width="205px"/>
+                                                  <col width="50px"/>
+                                             </colgroup>
+                                                  <tr>
+                                                      <td rowspan="2">
+                                                           <div class="moneryInfo">
+                                                                 <div class="chengMan">
+                                                                       <div class="priceCont">成人票价：<em>￥</em><b>570</b> </div>
+                                                                       <div>机建 + 燃油： 50+120 元</div>
+                                                                 </div>
+                                                                 <div class="chengMan">
+                                                                       <div class="priceCont">儿童票价：<em>￥</em><b>100</b> </div>
+                                                                       <div>机建 + 燃油： 50+120 元</div>
+                                                                 </div>
+                                                                 <em class="airplane"></em>
+                                                           </div>
+                                                      </td>
+                                                      <td align="right"><div style="margin-top:30px;"><i>x</i> &nbsp; 2人</div></td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td align="right"><i>x</i> &nbsp; 1人</td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>
+                                                          <div class="priceCont">保险：<em>￥</em><b>20</b> </div>
+                                                      </td>
+                                                      <td align="right"><i>x</i> &nbsp; 2人</td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>
+                                                          <div class="priceCont">赠送保险：<del>20 元 </del> &nbsp; <em>￥</em><b>20</b> </div>
+                                                      </td>
+                                                      <td align="right"><i>x</i> &nbsp; 1人</td>
+                                                  </tr>
+                                        </table>
+                                    </div>
+                                    <div class="orderTotalPrices">
+                                          <b>订单总金额：</b>
+                                          <em>￥</em>
+                                          <i>6200</i>
+                                    </div>                            
+                               </div>  <!--FillInOrderCon end-->
+                               <div class="orderBottomBg"></div>
+                         </div>  <!--fillInModelOne end-->
+                         
+                  </div>  <!--rightFillIn end--> 
+                     
+             </div>  <!--fillIn end-->        
+        
+	</div>   <!--main-body-content end-->
+    </section>
+    <footer class="main-footer">
+        <p class="copyright">Copyright &copy; 2013 天地行 All Rights Reserved.     沪ICP备08101503号</p>
+    </footer>
+</div>
+</body>
+
+<script type="text/x-kendo-template" id="caseExplain">
+	<div class="accountForWrite">
+	     <p>请严格按照登机时所用证件上的信息填写。</p>
+		 <p>填写说明：（以中国大陆护照的位置为例）</p>
+	</div>
+	<div class="writeImg"><img src="../../static/images/b2g/writeImg.jpg"/></div>
+</script>
+
+<script type="text/x-kendo-template" id="helpPoint">
+	<div class="helpContent">
+	     <p>1.乘客姓名需与登机所持证件上的名字一致</p>
+		 <p>2.生僻字或繁体字可用拼音代替</p>
+		 <p>3.名字过长（大于26个字符）请使用缩写</p>
+	</div>
+</script>
+
+<script>
+		
+		$(function(){
+				  			
+			$(".writeList .caseExplain").kendoTooltip({
+				position:"bottom", //left right top
+				wrapperClass:"lineWeight",
+				width:360,
+				content:function(){
+					return $("#caseExplain").html();
+				},
+				offsetY:10				
+			});
+			
+			$(".writeList .askMark").kendoTooltip({
+				position:"bottom", //left right top
+				wrapperClass:"lineWeight",
+				width:290,
+				content:function(){
+					return $("#helpPoint").html();
+				},
+				offsetY:10				
+			});
+			
+			
+		});
+	</script>
+
+<script>
+
+        $(function(){
+			
+			$(".rightFillIn").fixedBar();
+			
+        });
+</script>
+
+
+</html>
+
+

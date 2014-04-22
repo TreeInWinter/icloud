@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>酒店 酒店维护 价格计划详情</title>
+    <meta content="text/html" charset="utf-8">
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/b2b.css">
+    <link rel="stylesheet" href="/static/css/kendo.common.css">
+    <link rel="stylesheet" href="/static/css/kendo.gray.css">
+    <link href="/static/css/kendo.reset.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/hotel.css">
+    <style type="text/css">
+        .roomStyleName{background:#F6F6F6;border-bottom:1px solid #BBD6E4;height:40px;line-height:40px;padding:0 20px;}
+        .roomStyleContainer{background:#F8F8F8;color:#555555;position:relative}
+        .roomStyleItemContainer{background:#ffffff;overflow:hidden;position:relative;border:1px solid #cccccc;}
+        .roomStyleItemHead{font-weight:bold;width:63px;text-align:center;float:left;border-right:1px solid #cccccc;padding:5px;background:#ffffff;z-index:1;position:relative}
+        .pricePlanItem{width:146px;border-left:1px solid #cccccc;padding:5px;float:left}
+        #pricePlanItemList{position:absolute;left:73px;z-index:0;width:3000px}
+
+        .effective_period_leftButton{display:inline-block;position:absolute;background:url("../../static/images/pricePlanArrow.png") -1px -1px;width:18px;height:32px;top:250px;left:0}
+        .effective_period_rightButton{display:inline-block;position:absolute;background:url("../../static/images/pricePlanArrow.png") -28px -39px;width:18px;height:32px;top:250px;right:0}
+        .effective_period_leftButton.active{background-position:-1px -39px}
+        .effective_period_rightButton.active{background-position:-28px -1px}
+    </style>
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+<!-- @CLB@ --></head>
+<body>
+<div class="roomStyleName">
+    <span style="font-weight:bold">房型名称：商务标准房</span>
+    <span style="border-left:2px solid #cccccc;margin:0 10px">&nbsp;</span>
+    <span style="font-weight:bold">不可加床</span>
+    <div style="position:absolute;right:10px;top:0;">
+        <a class="button_5 editPricePlan" href="javascript:;">编辑</a>
+        <a class="button_5 handPricePlan" href="javascript:;">挂起</a>
+        <a class="button_5" href="javascript:;">删除</a>
+    </div>
+</div>
+
+<div class="roomStyleContainer">
+    <div style="margin:0 30px">
+        <div>
+            <span class="head">价格名称：</span>含早特惠
+            <span style="float:right">5个时段价格</span>
+        </div>
+        <div><span class="head">价格说明：</span>无</div>
+        <div><span class="head">预定条件：</span>提前3天及以上的12点以前</div>
+        <div class="roomStyleItemContainer">
+            <ul class="roomStyleItemHead">
+                <li>时段名称</li>
+                <li>价&nbsp;&nbsp;&nbsp;&nbsp;格</li>
+                <li data-bind="style:{height:period_height}">时&nbsp;&nbsp;&nbsp;&nbsp;段</li>
+                <li data-bind="style:{height:services_height}">包含服务</li>
+                <li data-bind="style:{height:provisions_height}">酒店规定</li>
+                <li>礼包备注</li>
+            </ul>
+            <ul id="pricePlanItemList" data-template="pricePlanItemTemplate" data-bind="source:pricePlanItem">
+
+            </ul>
+
+        </div>
+
+        <div class="clearfix" style="height:20px"></div>
+    </div>
+    <a href="javascript:;" class="effective_period_leftButton"></a>
+    <a href="javascript:;" class="effective_period_rightButton"></a>
+</div>
+
+<div id="window1" style="padding:18px">
+    <span style="color:#000000">您是否要挂起价格计划？</span>
+    <div style="border-top:1px dashed #cccccc;padding-top: 2px;margin-top:3px">
+        *如果挂起房型中的最后一条价格，此房型将不会出现在酒店搜索结果中。
+    </div>
+    <div style="text-align:right;padding-top:10px">
+        <a href="javascript:;" class="button_1_2">确&nbsp;&nbsp;&nbsp;&nbsp;定</a>
+        <a href="javascript:;" class="button_2_2 close">取&nbsp;&nbsp;&nbsp;&nbsp;消</a>
+    </div>
+</div>
+<div id="window2" style="padding:18px">
+    <span style="color:#000000">您是否要删除价格计划？</span>
+    <div style="border-top:1px dashed #cccccc;padding-top: 2px;margin-top:3px">
+        *如果删除房型中的最后一条价格，此房型将不会出现在酒店搜索结果中。
+    </div>
+    <div style="text-align:right;padding-top:10px">
+        <a href="javascript:;" class="button_1_2">确&nbsp;&nbsp;&nbsp;&nbsp;定</a>
+        <a href="javascript:;" class="button_2_2 close">取&nbsp;&nbsp;&nbsp;&nbsp;消</a>
+    </div>
+</div>
+
+<script id="pricePlanItemTemplate" type="text/x-kendo-template">
+    <li class="pricePlanItem">
+        <ul>
+            <li data-bind="text:periodName"></li>
+            <li data-bind="text:price"></li>
+            <ul data-bind="style:{height:period_height}">
+                # for (var i = 0; i < period.length; i++) { #
+                <li>
+                    #= period[i].startDate # - #= period[i].endDate # <br/>
+                    #= period[i].selectDay #
+                </li>
+                # } #
+            </ul>
+            <ul data-bind="style:{height:services_height}">
+                # for (var i = 0; i < services.length; i++) { #
+                <li>#= services[i].item #</li>
+                # } #
+            </ul>
+            <ul data-bind="style:{height:provisions_height}">
+                # for (var i = 0; i < provisions.length; i++) { #
+                <li>#= provisions[i].item #</li>
+                # } #
+            </ul>
+            <li data-bind="text:note"></li>
+        </ul>
+    </li>
+</script>
+
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/kendo.web.js"></script>
+<script type="text/javascript" src="/static/js/scrollFix.js"></script>
+<script type="text/javascript" src="/static/js/hotel.js"></script>
+
+<script type="text/javascript">
+    var viewModel=kendo.observable({
+        period_height:0,
+        services_height:0,
+        provisions_height:0,
+        pricePlanItem:[]
+    });
+
+    viewModel.pricePlanItem.bind("change",function(e){
+        viewModel.set("period_height",(e.items[0].period.length)*45+"px");
+        viewModel.set("services_height",(e.items[0].services.length)*20+"px");
+        viewModel.set("provisions_height",(e.items[0].provisions.length)*60+"px");
+        if(viewModel.pricePlanItem.length<5)
+        {
+            $(".effective_period_leftButton").removeClass("active");
+        }
+        else
+        {
+            $(".effective_period_leftButton").addClass("active");
+        }
+    })
+
+    kendo.bind($("body"),viewModel);
+    var result={"result":[
+        {
+            "periodName":"平日周中",
+            "price":400,
+            "period":[
+                {"startDate":"2013/09/30","endDate":"2013/10/07","selectDay":"一 二 三 四 五 六 日"},
+                {"startDate":"2013/09/30","endDate":"2013/10/07","selectDay":"一 二 三 四 五 六 日"},
+                {"startDate":"2013/09/30","endDate":"2013/10/07","selectDay":"一 二 三 四 五 六 日"}
+            ],
+            "services":[
+                {"item":"自助早餐 x1"},
+                {"item":"宽带"}
+            ],
+            "provisions":[
+                {"item":"入住时间：14:00以后<br/>退房时间：12:00以前<br/>保留时间：无"},
+                {"item":"入住前1天的12点之前变更或取消，不收取任何费用；"},
+                {"item":"入住前1天的12点之后变更或取消，酒店将扣除首晚房费。"}
+            ],
+            "note":"无"
+        },
+        {
+            "periodName":"平日周中",
+            "price":400,
+            "period":[
+                {"startDate":"2013/09/30","endDate":"2013/10/07","selectDay":"一 二 三 四 五 六 日"},
+                {"startDate":"2013/09/30","endDate":"2013/10/07","selectDay":"一 二 三 四 五 六 日"},
+                {"startDate":"2013/09/30","endDate":"2013/10/07","selectDay":"一 二 三 四 五 六 日"}
+            ],
+            "services":[
+                {"item":"自助早餐 x1"},
+                {"item":"宽带"}
+            ],
+            "provisions":[
+                {"item":"入住时间：14:00以后<br/>退房时间：12:00以前<br/>保留时间：无"},
+                {"item":"入住前1天的12点之前变更或取消，不收取任何费用；"},
+                {"item":"入住前1天的12点之后变更或取消，酒店将扣除首晚房费。"}
+            ],
+            "note":"无"
+        },
+        {
+            "periodName":"平日周中",
+            "price":400,
+            "period":[
+                {"startDate":"2013/09/30","endDate":"2013/10/07","selectDay":"一 二 三 四 五 六 日"},
+                {"startDate":"2013/09/30","endDate":"2013/10/07","selectDay":"一 二 三 四 五 六 日"},
+                {"startDate":"2013/09/30","endDate":"2013/10/07","selectDay":"一 二 三 四 五 六 日"}
+            ],
+            "services":[
+                {"item":"自助早餐 x1"},
+                {"item":"宽带"}
+            ],
+            "provisions":[
+                {"item":"入住时间：14:00以后<br/>退房时间：12:00以前<br/>保留时间：无"},
+                {"item":"入住前1天的12点之前变更或取消，不收取任何费用；"},
+                {"item":"入住前1天的12点之后变更或取消，酒店将扣除首晚房费。"}
+            ],
+            "note":"无"
+        },
+        {
+            "periodName":"平日周中",
+            "price":400,
+            "period":[
+                {"startDate":"2013/09/30","endDate":"2013/10/07","selectDay":"一 二 三 四 五 六 日"},
+                {"startDate":"2013/09/30","endDate":"2013/10/07","selectDay":"一 二 三 四 五 六 日"},
+                {"startDate":"2013/09/30","endDate":"2013/10/07","selectDay":"一 二 三 四 五 六 日"}
+            ],
+            "services":[
+                {"item":"自助早餐 x1"},
+                {"item":"宽带"}
+            ],
+            "provisions":[
+                {"item":"入住时间：14:00以后<br/>退房时间：12:00以前<br/>保留时间：无"},
+                {"item":"入住前1天的12点之前变更或取消，不收取任何费用；"},
+                {"item":"入住前1天的12点之后变更或取消，酒店将扣除首晚房费。"}
+            ],
+            "note":"无"
+        },
+        {
+            "periodName":"平日周中",
+            "price":400,
+            "period":[
+                {"startDate":"2013/09/30","endDate":"2013/10/07","selectDay":"一 二 三 四 五 六 日"},
+                {"startDate":"2013/09/30","endDate":"2013/10/07","selectDay":"一 二 三 四 五 六 日"},
+                {"startDate":"2013/09/30","endDate":"2013/10/07","selectDay":"一 二 三 四 五 六 日"}
+            ],
+            "services":[
+                {"item":"自助早餐 x1"},
+                {"item":"宽带"}
+            ],
+            "provisions":[
+                {"item":"入住时间：14:00以后<br/>退房时间：12:00以前<br/>保留时间：无"},
+                {"item":"入住前1天的12点之前变更或取消，不收取任何费用；"},
+                {"item":"入住前1天的12点之后变更或取消，酒店将扣除首晚房费。"}
+            ],
+            "note":"无"
+        },
+        {
+            "periodName":"平日周中",
+            "price":400,
+            "period":[
+                {"startDate":"2013/09/30","endDate":"2013/10/07","selectDay":"一 二 三 四 五 六 日"},
+                {"startDate":"2013/09/30","endDate":"2013/10/07","selectDay":"一 二 三 四 五 六 日"},
+                {"startDate":"2013/09/30","endDate":"2013/10/07","selectDay":"一 二 三 四 五 六 日"}
+            ],
+            "services":[
+                {"item":"自助早餐 x1"},
+                {"item":"宽带"}
+            ],
+            "provisions":[
+                {"item":"入住时间：14:00以后<br/>退房时间：12:00以前<br/>保留时间：无"},
+                {"item":"入住前1天的12点之前变更或取消，不收取任何费用；"},
+                {"item":"入住前1天的12点之后变更或取消，酒店将扣除首晚房费。"}
+            ],
+            "note":"无"
+        },
+        {
+            "periodName":"平日周中",
+            "price":400,
+            "period":[
+                {"startDate":"2013/09/30","endDate":"2013/10/07","selectDay":"一 二 三 四 五 六 日"},
+                {"startDate":"2013/09/30","endDate":"2013/10/07","selectDay":"一 二 三 四 五 六 日"},
+                {"startDate":"2013/09/30","endDate":"2013/10/07","selectDay":"一 二 三 四 五 六 日"}
+            ],
+            "services":[
+                {"item":"自助早餐 x1"},
+                {"item":"宽带"}
+            ],
+            "provisions":[
+                {"item":"入住时间：14:00以后<br/>退房时间：12:00以前<br/>保留时间：无"},
+                {"item":"入住前1天的12点之前变更或取消，不收取任何费用；"},
+                {"item":"入住前1天的12点之后变更或取消，酒店将扣除首晚房费。"}
+            ],
+            "note":"无"
+        }
+    ]};
+    function addPricePlanItem(result)
+    {
+        var r=result.result;
+        for(var i=0;i<r.length;i++)
+        {
+            viewModel.pricePlanItem.push(r[i]);
+        }
+    }
+    addPricePlanItem(result);
+
+
+    $(".effective_period_leftButton").click(function(){
+        if($(this).hasClass("active"))
+        {
+            var ppli=$(".pricePlanItem")
+            var ppl=$("#pricePlanItemList");
+            if(567-ppl.position().left<(ppli.length-1)*157)
+            {
+                $("#pricePlanItemList").animate({"left":"-=157"},function(){
+                    if(ppl.position().left<0)
+                    {
+                        $(".effective_period_rightButton").addClass("active");
+                    }
+                    else
+                    {
+                        $(".effective_period_rightButton").removeClass("active");
+                    }
+                });
+            }
+
+        }
+    });
+    $(".effective_period_rightButton").click(function(){
+        if($(this).hasClass("active"))
+        {
+            var ppl=$("#pricePlanItemList");
+            if(ppl.position().left<0)
+            {
+                $("#pricePlanItemList").animate({"left":"+=157"},function(){
+                    if(ppl.position().left<0)
+                    {
+                        $(".effective_period_rightButton").addClass("active");
+                    }
+                    else
+                    {
+                        $(".effective_period_rightButton").removeClass("active");
+                    }
+                });
+            }
+        }
+    });
+
+    $(".editPricePlan").click(function(){
+        var w=$("#window2").kendoWindow({
+            animation:false,
+            iframe:true,
+            modal:true,
+            width:469,
+            height:124,
+            title:"是否编辑房型价格计划？"
+        }).data("kendoWindow");
+        w.center();
+    });
+    $(".handPricePlan").click(function(){
+        var w=$("#window1").kendoWindow({
+            animation:false,
+            iframe:true,
+            modal:true,
+            width:469,
+            height:124,
+            title:"是否覆盖房型价格计划？"
+        }).data("kendoWindow");
+        w.center();
+    });
+</script>
+</body>
+</html>

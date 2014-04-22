@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>运营商 财务 网银对账管理 导入匹配</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.gray.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.reset.css" rel="stylesheet" />
+    <link href="../../static/css/finance.css" rel="stylesheet" type="text/css"/>
+    <script src="../../static/js/jquery.min.js" type="text/javascript"></script>
+    <script src="../../static/js/kendo.web.js" type="text/javascript"></script>
+    <script src="../../static/js/global.js" type="text/javascript"></script>
+
+<!--    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript">
+$(function(){
+    new Collpase({
+        limitHeight:85,
+        container:'.xyzc_div' 
+    }).init();
+}) 
+    </script>-->	
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<!-- @CLB@ -->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body>
+    <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">&nbsp;</a>
+                <span>&nbsp;</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent">
+               
+            <div class="actions block">
+                <div class="col col-r sep-l">
+                    <a href="javascript:;" class="button_secondary adaptiveButton small">
+                        <span class="left"></span>
+                        <span class="center">匹配失败列表</span>
+                        <span class="right"></span>
+                    </a>
+                    <a href="javascript:;" class="button_secondary adaptiveButton small">
+                        <span class="left"></span>
+                        <span class="center">匹配成功列表</span>
+                        <span class="right"></span>
+                    </a>
+                </div>
+                <span class="page-title">网支对账管理  导入匹配</span>
+            </div>
+              
+              <div class="uploading">
+                   <em>上传文件，导入匹配</em>
+                   <a href="javascript:;" class="button_important adaptiveButton medium ac-nextStep">
+                        <span class="left"></span>
+                        <span class="center">立即上传</span>
+                        <span class="right"></span>
+                   </a>
+                   <label class="AreUploading">
+                        <a href="javascript:;" class="button_unimportant adaptiveButton medium">
+                            <span class="left"></span>
+                            <span class="center">立即上传</span>
+                            <span class="right"></span>
+                        </a>
+                        <i></i>
+                   </label>
+                   <strong class="uploadedSuccess">上传成功</strong>
+              </div>
+ 
+              <!--<div class="qx tabHead">
+                  <div class="xuanze">
+                      <button class="btns btn-ac-blue">审核</button>
+                      <button class="btns btn-ac-blue">自动匹配</button>
+                      <button class="btns btn-ac-blue">导出Excel</button>
+                  </div>
+                  <div class="qx_right">
+                      <button class="btns btn-ac-blue">导出Excel</button>
+                      <button class="btns btn-ac-blue">模版导入</button>
+                      <button class="btns btn-ac-blue">导入说明【模版下载】</button>
+                  </div>
+              </div>-->
+              
+              <div class="refer">
+                    <h4 style="padding:5px 0;">上传记录：</h4>
+                    <table cellpadding="0" cellspacing="0" class="refer_list">
+                        <colgroup>
+                            <col style="width:65px;"/>
+                            <col style="width:200px;"/>
+                            <col style="width:65px;"/>
+                            <col style="width:300px;"/>
+                            <col style="width:180px;"/>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>支付机构</td>
+                                <td>
+                                    <select name="pay_org" data-role="dropdownlist" style="width:150px;">
+                                        <option value="alipay">支付宝</option>
+                                        <option value="tenpay">财付通</option>
+                                    </select>
+                                </td>
+                                <td>上传日期</td>
+                                <td><input type="text" name="pay_start" style="width:120px;" class="datepicker"/> 至 <input type="text" name="pay_end" style="width:120px;" class="datepicker orange"/></td>
+                                <td>
+                                    <a id="search_btn" href="javascript:;" class="button_important adaptiveButton medium">
+                                        <span class="left"></span>
+                                        <span class="center" style="padding:0 20px;">查 询</span>
+                                        <span class="right"></span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div style="height:10px;"></div>
+
+              </div>
+              
+            
+              <table cellpadding="0" cellspacing="0" class="tgrid">
+                      <thead>
+                         <tr>
+                             <th class="line_left">操作</th>
+                             <th>上传状态</th>
+                             <th>支付机构名称</th>
+                             <th>上传文件名称</th>
+                             <th>上传日期</th>
+                             <th class="line_right">操作员</th>
+                         </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td></td>
+                              <td>匹配中</td>
+                              <td>支付宝</td>
+                              <td><a class="oper" href="javascript:void(0);">20121123.txt</a></td>
+                              <td>2012-9-17</td>
+                              <td>auto</td>
+                          </tr>
+                          <tr>
+                              <td><a href="javascript:void(0);">下载</a></td>
+                              <td>匹配完成</td>
+                              <td>支付宝</td>
+                              <td><a class="oper" href="javascript:void(0);">20121123.txt</a></td>
+                              <td>2012-9-17</td>
+                              <td>auto</td>
+                          </tr>
+                          <tr>
+                              <td><a href="javascript:void(0);">下载</a></td>
+                              <td>匹配完成</td>
+                              <td>支付宝</td>
+                              <td><a class="oper" href="javascript:void(0);">20121123.txt</a></td>
+                              <td>2012-9-17</td>
+                              <td>auto</td>
+                          </tr>
+                      </tbody>                      
+              </table>
+           
+              <div class="grid-table-pagination page">
+                  <span class="grid-table-count">
+                      共 <em>132</em> 条记录
+                  </span>
+                  <span>
+                      <a href="#" class="prev">&nbsp;</a>
+                  </span>
+                  <span class="links">
+                      <a href="#">1</a>
+                      <a href="#">2</a>
+                      <a href="#" class="current">3</a>
+                      <a href="#">4</a>
+                      <a href="#">5</a>
+                      <a href="javascript:;">...</a>
+                      <a href="#">50</a>
+                  </span>
+                  <span>
+                      <a href="#" class="next">&nbsp;</a>
+                  </span>
+              </div>
+                          
+        </div>
+    </div>
+    
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+
+<script type="text/x-kendo-template" id="ac-nextStep_template"> 
+<div class="nextStep">
+     <table cellpadding="0" cellspacing="0" class="nextStep_tab bsp">
+          <colgroup>
+               <col width="140px" />
+               <col width="188px" />
+          </colgroup>
+          <tr>
+              <td style="text-align:right;">支付机构：</td>
+              <td>
+                  <select name="pay_org" data-role="dropdownlist" style="width:150px;">
+                      <option value="alipay">支付宝</option>
+                      <option value="tenpay">财付通</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <td></td>
+              <td class="nextStep_btn" style="padding:10px 0;">
+                  <a href="javascript:;" class="button_important adaptiveButton medium ac-uploadingWindow">
+                        <span class="left"></span>
+                        <span class="center">下一步</span>
+                        <span class="right"></span>
+                  </a>
+                  <a href="javascript:;" class="button_unimportant adaptiveButton medium">
+                        <span class="left"></span>
+                        <span class="center callOff" style="padding:0 20px;">取 消</span>
+                        <span class="right"></span>
+                 </a>
+              </td>
+          </tr>
+     </table>
+</div>
+</script>
+
+<script type="text/x-kendo-template" id="ac-uploadingWindow_template">
+<div class="uploadingWindow">
+     <table cellpadding="0" cellspacing="0">
+          <colgroup>
+               <col width="85px" />
+               <col width="250px" />
+               <col width="85px" />
+          </colgroup>
+          <tr>
+              <td>请上传文件：</td>
+              <td><input type="text" value="国际机票账单20120902.csv" style="width:240px;" /> </td>
+              <td>
+                  <input type="file" name="filename" id="fileupload"/>
+              </td> 
+          </tr>
+          <tr>
+              <td colspan="3" style=" text-align:center;">
+                  <a href="javascript:;" class="button_important adaptiveButton medium ac-uploadingWrong" style="margin-top:20px;">
+                        <span class="left"></span>
+                        <span class="center" style=" font-size:14px; font-weight:bold; padding:0 20px;">上 传</span>
+                        <span class="right"></span>
+                  </a>
+              </td>
+          </tr>
+     </table>
+</div>
+</script> 
+
+    
+  </body>
+</html>
+
+
+
+<script type="text/javascript">
+	 var nextStep_win = new PopWindow(".ac-nextStep",{
+		   title:"导入匹配",
+		   width:470,
+		   template:"#ac-nextStep_template"
+	}).init();
+	 
+	  var nextStep_win = new PopWindow(".ac-uploadingWindow",{
+		   title:"导入匹配",
+		   width:470,
+           template:"#ac-uploadingWindow_template",
+           open:function(){
+                console.log("uploaded open");
+                $("#fileupload").kendoUpload({
+                    multiple:false,
+                    showFileList:false,
+                    localization:{ 
+                        select: '浏览' 
+                    } ,
+                    async: {
+                        saveUrl: "Home/Save",
+                        removeUrl: "Home/Remove",
+                        autoUpload: true
+                    }
+                });
+           }
+	}).init();
+ 
+</script>
+
+
+
+
+

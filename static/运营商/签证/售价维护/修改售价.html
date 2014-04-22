@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>酒店 酒店维护 新增酒店</title>
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/b2b.css">
+    <link rel="stylesheet" href="/static/css/kendo.common.css">
+    <link rel="stylesheet" href="/static/css/kendo.gray.css">
+<link href="/static/css/kendo.reset.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/visa.css">
+</head>
+<body>
+    <div class="main">
+        <div class="actions block">
+            <!--修改右边菜单在没有返回按钮情况下靠左变贴齐 2013.10.21-->
+            <div class="col col-l sep-r" style="margin-right:10px">
+                <button class="btns btn-return">返回</button>
+            </div>
+            <div class="col col-l">
+                <a class="page-title" href="#">修改售价</a>
+            </div>
+            <div class="col col-r sep-l">
+                <a class="button_4_3" href="#" style="color:#ffffff;margin-top:4px;">提交</a>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panelTitle-visa">签证产品</div>
+            <table class="grid-table">
+                <colgroup>
+                    <col width="250">
+                    <col width="97">
+                    <col width="190">
+                    <col width="110">
+                    <col width="105">
+                    <col width="115">
+                </colgroup>
+                <thead>
+                <tr class="thead">
+                    <td>产品名称</td>
+                    <td>签证目的地</td>
+                    <td>签证类型</td>
+                    <td>是否需要面试</td>
+                    <td>底价</td>
+                    <td>卖价</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>美国个人旅游签证（专业人员陪签）</td>
+                    <td>美国</td>
+                    <td>B1/B2 （旅游/商务/探亲）</td>
+                    <td>需要面试</td>
+                    <td>1000.00 元</td>
+                    <td><span class="money">1500.00</span> 元</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="selectSaleCustomerContainer">
+                <div class="panelTitle-visa">选择销售客户</div>
+                <div class="content">
+                    <strong>客户组：</strong>
+                    <label><input type="checkbox" name="" id=""/>苏宁</label>
+                    <label><input type="checkbox" name="" id=""/>携程</label>
+                    <label><input type="checkbox" name="" id=""/>途牛</label>
+                    <label><input type="checkbox" name="" id=""/>中青旅</label>
+                    <label><input type="checkbox" name="" id=""/>中青旅</label>
+                </div>
+            </div>
+
+            <div class="selectSalePriceTypeContainer">
+                <div class="panelTitle-visa">选择售价类型</div>
+                <div class="content">
+                    <label><input type="radio" name="salePriceType" id=""/>团签价</label>
+                    <label><input type="radio" name="salePriceType" id=""/>个签价</label>
+                </div>
+            </div>
+
+            <div class="setSalePrice">
+                <div class="panelTitle-visa">设置售价</div>
+                <div class="content">
+                    底价 <strong id="basePrice">1000.00</strong> 元 + 加价 <input type="text" name="" id="externalPrice" style="width:100px;"/> 元 = 卖价 <span class="money">1500.00</span> 元
+                </div>
+
+            </div>
+        </div>
+    </div>
+<div id="window"></div>
+
+    <script type="text/javascript" src="../../../static/js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="../../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../../static/js/visa.js"></script>
+<!--[if lt IE 8]>
+<link rel="stylesheet" href="/static/css/ie.css" />
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script>
+<![endif]-->
+    <script type="text/javascript">
+        $(function(){
+            $("#externalPrice").blur(function(){
+                $(this).next(".money").text(
+                        (parseFloat($("#basePrice").text())+parseFloat($(this).val())).toFixed(2)
+                )}
+                );
+        })
+    </script>
+</body>
+</html>
+

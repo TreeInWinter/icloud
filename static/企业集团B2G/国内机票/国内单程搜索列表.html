@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 B2G 国内单程搜索列表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/b2g.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.b2g.css" />
+    <link rel="stylesheet" href="../../static/css/b2g_flight.css" media="all" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/b2g/common.js"></script>
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+    <!--[if lte IE 9]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="top-line"></div>
+    <header class="main-header">
+        <div class="header-content">
+            <a class="logo" href="/">天地行 B2G</a>
+            <nav class="main-nav">
+                <ul class="clearfix">
+                    <li class="first active"><a herf="#">行程预订</a></li>
+                    <li><a herf="#">行程管理</a></li>
+                    <li><a herf="#">数据服务</a></li>
+                    <li><a herf="#">创业维护</a></li>
+                    <li><a herf="#">系统设置</a></li>
+                </ul> 
+            </nav>
+        </div>
+    </header>
+    <div class="header-bar clearfix">
+        <div class="header-bar-content">
+            <i class="tips"></i><span>请先选择差旅人   * 默认状态下您为自己预订</span>
+            <div class="setuser">
+                <a href="javascript:void(0);">设置差旅人</a>
+            </div>
+            <div class="for_reason">
+                <span class="reason_checkbox checked"></span><label for="reason">因私</label><input type="checkbox" style="display:none;" id="reason" value="for_private" name="reason"/>
+            </div>
+        </div>
+    </div>
+    <section class="main-body clearfix">
+        <div class="main-body-content">
+        	<div class="titTop clearfix">
+                <h3 class="titleH3">上海到重庆机票 （单程）</h3>
+                <div class="flowImg">
+                        <em class="curFlowImg"><i></i>选择</em>
+                        <em>预订</em>
+                        <em>填写</em>
+                        <em>加入行程</em>
+                        <em class="lastFlowGray">提交行程</em>
+                </div>
+        	</div>  
+       
+      	 	<div class="seekCon">
+                <div class="againSeek">
+                    <table>
+                          <colgroup>
+                               <col width="210px"/>
+                               <col width="70px"/>
+                               <col width="210px"/>
+                               <col width="70px"/>
+                               <col width="210px"/>
+                               <col width="45px"/>
+                               <col width="190px"/>
+                               <col width="130px"/>
+                          </colgroup>
+                          <tr>
+                              <td rowspan="2">
+                                   <select data-role="dropdownlist" style="width:160px;" id="trip_type">
+                                         <option selected  value="one_way">单程</option>
+                                         <option value="round_trip">往返</option>
+                                         <option value="union_trip">联程</option>
+                                   </select>
+                              </td>
+                              <td>出发城市：</td>
+                              <td><input type="text" value="上海" /></td>
+                              <td>出发时间：</td>
+                              <td><input type="text" value="" class="datepicker"/></td>
+                              <td>舱位：</td>
+                              <td>
+                                  <select data-role="dropdownlist" style="width:150px;">
+                                       <option>不限</option>
+                                       <option>经济舱</option>
+                                       <option>商务舱</option>
+                                       <option>头等舱</option>
+                                  </select>
+                              </td>
+                              <td><button type="button" class="commonBtn lightBlueBtn" style="padding:7px 25px;">重新搜索</button></td>
+                          </tr>
+                          <tr>
+                              <td>到达城市：</td>
+                              <td><input type="text" value="重庆"/></td>
+                              <td colspan="2"><label id="return_label"><em>返程时间：</em><input type="text" value="" class="datepicker grayed" id="return_date"  disabled="disabled" /></label></td>
+                              <td></td>
+                              <td></td>
+                              <td valign="bottom">
+                                  <label class="heiSeek toggle_trigger" data-toggle='{"target":"#unfoldCon","textFilter":"i","toggleClass":["heiSeek","putAway"],"toggleText":["高级搜索","收起"]}'><i>高级搜索</i> <em></em></label>
+                                  <label class="putAway" style="display:none;"><i>收起</i> <em></em></label>
+                              </td>
+                          </tr>
+                     </table>  
+                </div>
+                <div class="unfoldCon" id="unfoldCon" style="display:none;">
+                     <b>舱位：</b>
+                     <label><input type="checkbox"/>全部</label>
+                     <label><input type="checkbox"/>头等舱</label>
+                     <label><input type="checkbox"/>商务舱</label>
+                     <label><input type="checkbox"/>经济舱 </label>
+                     <b>起飞时间：</b>
+                     <select data-role="dropdownlist" style="width:120px;">
+                          <option>不限</option>
+                          <option selected>00:00-02:00</option>
+                          <option>02:00-04:00</option>
+                          <option>04:00-06:00</option>
+                          <option>06:00-08:00</option>
+                          <option>08:00-10:00</option>
+                          <option>10:00-12:00</option>
+                          <option>12:00-14:00</option>
+                          <option>14:00-16:00</option>
+                          <option>16:00-18:00</option>
+                          <option>18:00-20:00</option>
+                          <option>20:00-22:00</option>
+                          <option>22:00-24:00</option>
+                     </select>
+                     <b style="margin-left:85px;">航空公司：</b>
+                     <select data-role="dropdownlist" style="width:120px;">
+                          <option>东方航空</option>
+                          <option>南方航空</option>
+                          <option>春秋航空</option>
+                     </select>
+                </div>
+        </div>   
+    
+        <ul class="date clearfix">
+            <li>
+               <a href="#" style="width:35px; min-height:42px;"> <i class="highlightI"></i> </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>07-20 周一</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>07-20 周二</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>07-20 周三</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li class="current">
+                <a href="#">
+                    <div>07-20 周四</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>07-20 周五</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>07-20 周六</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>07-20 周日</div>
+                    <div><em>￥450</em></div>
+                </a>
+            </li>
+            <li style="border:0;" class="last_li">
+                <a href="#" style=" width:36px; padding:20px 0;">
+                     <span class="highlightSpan">&nbsp;</span>
+                </a>
+            </li>
+        </ul>
+        
+        <div class="airport">
+             <em>起飞机场：</em>
+             <label><input type="checkbox"/>全部</label>
+             <label><input type="checkbox"/>虹桥</label>
+             <label><input type="checkbox"/>浦东</label>
+             <em>降落机场：</em>
+             <label><input type="checkbox"/>全部</label>
+             <label><input type="checkbox"/>南苑</label>
+             <label><input type="checkbox"/>首都</label>
+             <em>机型：</em>
+             <label><input type="checkbox"/>全部</label>
+             <label><input type="checkbox"/>大型机</label>
+             <label><input type="checkbox"/>中型机</label>
+             <em>机票折扣：</em>
+             <select data-role="dropdownlist" style="width:100px;">
+                  <option>不限</option>
+                  <option>8折以下</option>
+                  <option selected>7折以下</option>
+                  <option>6折以下</option>
+             </select>
+        </div>
+        <div class="timePrice">
+             <label>起飞时间<em></em></label>
+             <label>降落时间<em></em></label>
+             <label class="currentCli">价格<em class="arrDownGray"></em></label>
+        </div>
+        
+        <div class="airContent">  <!--airContent start-->
+              <div class="flight-item">
+                     <table class="airList">
+                          <colgroup>
+                               <col width="70px"/>
+                               <col width="210px"/>
+                               <col width="180px"/>
+                               <col width="240px"/>
+                               <col width="300px"/>
+                               <col width="200px"/>
+                          </colgroup>
+                          <thead>
+                                  <tr>
+                                      <th><code class="logo_CA"></code></th>
+                                      <th>
+                                          <div>东方航空  <b style="color:#333333;">MU5137</b></div>
+                                          <div>机型 333（大）</div>
+                                      </th>
+                                      <th>
+                                          <div style="position:relative;">
+                                               <strong>07:20</strong> &nbsp;&nbsp;&nbsp; <i style="color:#a5a5a5;">——&nbsp;<em class="stops">经停</em>&nbsp;——</i>
+                                               <span class="stopPlace">石家庄</span>
+                                          </div>
+                                          <div>重庆江北机场T2</div>
+                                      </th>
+                                      <th>
+                                          <div class="addDay"><strong>09:20</strong> <em class="addDayTime">+1</em></div>
+                                          <div>首都国际机场T2</div>
+                                      </th>
+                                      <th>
+                                          <div>机建 + 燃油： 50+120元</div>
+                                          <div>当日准点率：  100%</div>
+                                      </th>
+                                      <th><b style="color:#ff0000;">￥</b><em class="NoColor">620</em><em class="QiSize">起</em></th>
+                                  </tr>
+                          </thead>
+                          <tbody>
+                                  <tr>
+                                      <td></td>
+                                      <td></td>
+                                      <td>经济舱 &nbsp; <em class="favorable">7.6折</em></td>
+                                      <td><a href="javascript:void(0);" class="linkA">退改签限制</a></td>
+                                      <td><em style=" color:#f94037;">￥</em><b style="font-size:16px; color:#f94037;">620</b></td>
+                                      <td>
+                                          <button type="button" class="commonBtn lightRedBtn">预 订</button>
+                                          <em class="only">仅剩1张</em>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td></td>
+                                      <td></td>
+                                      <td>经济舱 &nbsp; <em class="favorable">7.6折</em></td>
+                                      <td><a href="javascript:void(0);" class="linkA">退改签限制</a></td>
+                                      <td><em style=" color:#f94037;">￥</em><b style="font-size:16px; color:#f94037;">620</b></td>
+                                      <td>
+                                          <button type="button" class="commonBtn lightRedBtn">预 订</button>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td></td>
+                                      <td></td>
+                                      <td>经济舱 &nbsp; <em class="favorable">7.6折</em></td>
+                                      <td><a href="javascript:void(0);" class="linkA">退改签限制</a></td>
+                                      <td><em style=" color:#f94037;">￥</em><b style="font-size:16px; color:#f94037;">620</b></td>
+                                      <td>
+                                          <button type="button" class="commonBtn lightRedBtn">预 订</button>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td></td>
+                                      <td></td>
+                                      <td>经济舱 &nbsp; <em class="favorable">7.6折</em></td>
+                                      <td><a href="javascript:void(0);" class="linkA">退改签限制</a></td>
+                                      <td><em style=" color:#f94037;">￥</em><b style="font-size:16px; color:#f94037;">620</b></td>
+                                      <td>
+                                          <button type="button" class="commonBtn lightRedBtn">预 订</button>
+                                      </td>
+                                  </tr>
+                                  <tr class="airMore" style="display:none;">
+                                      <td></td>
+                                      <td></td>
+                                      <td>经济舱 &nbsp; <em class="favorable">7.6折</em></td>
+                                      <td><a href="javascript:void(0);" class="linkA">退改签限制</a></td>
+                                      <td><em style=" color:#f94037;">￥</em><b style="font-size:16px; color:#f94037;">620</b></td>
+                                      <td>
+                                          <button type="button" class="commonBtn lightRedBtn">预 订</button>
+                                      </td>
+                                  </tr>
+                                  <tr class="airMore" style="display:none;">
+                                      <td></td>
+                                      <td></td>
+                                      <td>经济舱 &nbsp; <em class="favorable">7.6折</em></td>
+                                      <td><a href="javascript:void(0);" class="linkA">退改签限制</a></td>
+                                      <td><em style=" color:#f94037;">￥</em><b style="font-size:16px; color:#f94037;">620</b></td>
+                                      <td>
+                                          <button type="button" class="commonBtn lightRedBtn">预 订</button>
+                                      </td>
+                                  </tr>
+                                  <tr class="airMore" style="display:none;">
+                                      <td></td>
+                                      <td></td>
+                                      <td>经济舱 &nbsp; <em class="favorable">7.6折</em></td>
+                                      <td><a href="javascript:void(0);" class="linkA">退改签限制</a></td>
+                                      <td><em style=" color:#f94037;">￥</em><b style="font-size:16px; color:#f94037;">620</b></td>
+                                      <td>
+                                          <button type="button" class="commonBtn lightRedBtn">预 订</button>
+                                      </td>
+                                  </tr>
+                          </tbody>
+                          <tfoot>
+                                  <tr class="lastList">
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td>
+                                          <label class="flexMore toggle_trigger" data-toggle='{"wrapper":".flight-item","target":".airMore","textFilter":"em","toggleSelfClass":["flexMore","flexUp"],"toggleText":["查看更多","收起"]}'><em>查看更多</em><i></i></label>
+                                          <label class="flexUp" style="display:none;"><em>收起</em><i></i></label>
+                                      </td>
+                                  </tr>
+                           </tfoot>
+                     </table>
+              </div>
+              <div class="flight-item">
+                     <table class="airList">
+                          <colgroup>
+                               <col width="70px"/>
+                               <col width="210px"/>
+                               <col width="180px"/>
+                               <col width="240px"/>
+                               <col width="300px"/>
+                               <col width="200px"/>
+                          </colgroup>
+                          <thead>
+                                  <tr>
+                                      <th><code class="logo_CA"></code></th>
+                                      <th>
+                                          <div>东方航空  <b style="color:#333333;">MU5137</b></div>
+                                          <div>机型 333（大）</div>
+                                      </th>
+                                      <th>
+                                          <div style="position:relative;">
+                                               <strong>07:20</strong> &nbsp;&nbsp;&nbsp; <i style="color:#a5a5a5;">——&nbsp;<em class="stops">经停</em>&nbsp;——</i>
+                                               <span class="stopPlace">石家庄</span>
+                                          </div>
+                                          <div>重庆江北机场T2</div>
+                                      </th>
+                                      <th>
+                                          <div><strong>09:20</strong></div>
+                                          <div>首都国际机场T2</div>
+                                      </th>
+                                      <th>
+                                          <div>机建 + 燃油： 50+120元</div>
+                                          <div>当日准点率：  100%</div>
+                                      </th>
+                                      <th><b style="color:#ff0000;">￥</b><em class="NoColor">620</em><em class="QiSize">起</em></th>
+                                  </tr>
+                          </thead>
+                          <tbody>
+                                  <tr>
+                                      <td></td>
+                                      <td></td>
+                                      <td>经济舱 &nbsp; <em class="favorable">7.6折</em></td>
+                                      <td><a href="javascript:void(0);" class="linkA">退改签限制</a></td>
+                                      <td><em style=" color:#f94037;">￥</em><b style="font-size:16px; color:#f94037;">620</b></td>
+                                      <td>
+                                          <button type="button" class="commonBtn lightRedBtn">预 订</button>
+                                          <em class="only">仅剩1张</em>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td></td>
+                                      <td></td>
+                                      <td>经济舱 &nbsp; <em class="favorable">7.6折</em></td>
+                                      <td><a href="javascript:void(0);" class="linkA">退改签限制</a></td>
+                                      <td><em style=" color:#f94037;">￥</em><b style="font-size:16px; color:#f94037;">620</b></td>
+                                      <td>
+                                          <button type="button" class="commonBtn lightRedBtn">预 订</button>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td></td>
+                                      <td></td>
+                                      <td>经济舱 &nbsp; <em class="favorable">7.6折</em></td>
+                                      <td><a href="javascript:void(0);" class="linkA">退改签限制</a></td>
+                                      <td><em style=" color:#f94037;">￥</em><b style="font-size:16px; color:#f94037;">620</b></td>
+                                      <td>
+                                          <button type="button" class="commonBtn lightRedBtn">预 订</button>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td></td>
+                                      <td></td>
+                                      <td>经济舱 &nbsp; <em class="favorable">7.6折</em></td>
+                                      <td><a href="javascript:void(0);" class="linkA">退改签限制</a></td>
+                                      <td><em style=" color:#f94037;">￥</em><b style="font-size:16px; color:#f94037;">620</b></td>
+                                      <td>
+                                          <button type="button" class="commonBtn lightRedBtn">预 订</button>
+                                      </td>
+                                  </tr>
+                                  <tr class="airMore" style="display:none;">
+                                      <td></td>
+                                      <td></td>
+                                      <td>经济舱 &nbsp; <em class="favorable">7.6折</em></td>
+                                      <td><a href="javascript:void(0);" class="linkA">退改签限制</a></td>
+                                      <td><em style=" color:#f94037;">￥</em><b style="font-size:16px; color:#f94037;">620</b></td>
+                                      <td>
+                                          <button type="button" class="commonBtn lightRedBtn">预 订</button>
+                                      </td>
+                                  </tr>
+                                  <tr class="airMore" style="display:none;">
+                                      <td></td>
+                                      <td></td>
+                                      <td>经济舱 &nbsp; <em class="favorable">7.6折</em></td>
+                                      <td><a href="javascript:void(0);" class="linkA">退改签限制</a></td>
+                                      <td><em style=" color:#f94037;">￥</em><b style="font-size:16px; color:#f94037;">620</b></td>
+                                      <td>
+                                          <button type="button" class="commonBtn lightRedBtn">预 订</button>
+                                      </td>
+                                  </tr>
+                                  <tr class="airMore" style="display:none;">
+                                      <td></td>
+                                      <td></td>
+                                      <td>经济舱 &nbsp; <em class="favorable">7.6折</em></td>
+                                      <td><a href="javascript:void(0);" class="linkA">退改签限制</a></td>
+                                      <td><em style=" color:#f94037;">￥</em><b style="font-size:16px; color:#f94037;">620</b></td>
+                                      <td>
+                                          <button type="button" class="commonBtn lightRedBtn">预 订</button>
+                                      </td>
+                                  </tr>
+                          </tbody>
+                          <tfoot>
+                                  <tr class="lastList">
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td>
+                                          <label class="flexMore toggle_trigger" data-toggle='{"wrapper":".flight-item","target":".airMore","textFilter":"em","toggleSelfClass":["flexMore","flexUp"],"toggleText":["查看更多","收起"]}'><em>查看更多</em><i></i></label>
+                                          <label class="flexUp" style="display:none;"><em>收起</em><i></i></label>
+                                      </td>
+                                  </tr>
+                          </tfoot>
+                     </table>
+              </div>
+             <div class="flight-item">
+                     <table class="airList">
+                          <colgroup>
+                               <col width="70px"/>
+                               <col width="210px"/>
+                               <col width="180px"/>
+                               <col width="240px"/>
+                               <col width="300px"/>
+                               <col width="200px"/>
+                          </colgroup>
+                          <thead>
+                                  <tr>
+                                      <th><code class="logo_MU"></code></th>
+                                      <th>
+                                          <div>东方航空  <b style="color:#333333;">MU5137</b></div>
+                                          <div>机型 333（大）</div>
+                                      </th>
+                                      <th>
+                                          <div style="position:relative;">
+                                               <strong>07:20</strong> &nbsp;&nbsp;&nbsp; <i style="color:#a5a5a5;">——&nbsp;<em class="stops">经停</em>&nbsp;——</i>
+                                               <span class="stopPlace">石家庄</span>
+                                          </div>
+                                          <div>重庆江北机场T2</div>
+                                      </th>
+                                      <th>
+                                          <div><strong>09:20</strong></div>
+                                          <div>首都国际机场T2</div>
+                                      </th>
+                                      <th>
+                                          <div>机建 + 燃油： 50+120元</div>
+                                          <div>当日准点率：  100%</div>
+                                      </th>
+                                      <th><b style="color:#ff0000;">￥</b><em class="NoColor">620</em><em class="QiSize">起</em></th>
+                                  </tr>
+                            </thead>
+                            <tbody>
+                                  <tr>
+                                      <td></td>
+                                      <td></td>
+                                      <td>经济舱 &nbsp; <em class="favorable">7.6折</em></td>
+                                      <td><a href="javascript:void(0);" class="linkA">退改签限制</a></td>
+                                      <td><em style=" color:#f94037;">￥</em><b style="font-size:16px; color:#f94037;">620</b></td>
+                                      <td>
+                                          <button type="button" class="commonBtn lightRedBtn">预 订</button>
+                                          <em class="only">仅剩1张</em>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td></td>
+                                      <td></td>
+                                      <td>经济舱 &nbsp; <em class="favorable">7.6折</em></td>
+                                      <td><a href="javascript:void(0);" class="linkA">退改签限制</a></td>
+                                      <td><em style=" color:#f94037;">￥</em><b style="font-size:16px; color:#f94037;">620</b></td>
+                                      <td>
+                                          <button type="button" class="commonBtn lightRedBtn">预 订</button>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td></td>
+                                      <td></td>
+                                      <td>经济舱 &nbsp; <em class="favorable">7.6折</em></td>
+                                      <td><a href="javascript:void(0);" class="linkA">退改签限制</a></td>
+                                      <td><em style=" color:#f94037;">￥</em><b style="font-size:16px; color:#f94037;">620</b></td>
+                                      <td>
+                                          <button type="button" class="commonBtn lightRedBtn">预 订</button>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td></td>
+                                      <td></td>
+                                      <td>经济舱 &nbsp; <em class="favorable">7.6折</em></td>
+                                      <td><a href="javascript:void(0);" class="linkA">退改签限制</a></td>
+                                      <td><em style=" color:#f94037;">￥</em><b style="font-size:16px; color:#f94037;">620</b></td>
+                                      <td>
+                                          <button type="button" class="commonBtn lightRedBtn">预 订</button>
+                                      </td>
+                                  </tr>
+                                  <tr class="airMore" style="display:none;">
+                                      <td></td>
+                                      <td></td>
+                                      <td>经济舱 &nbsp; <em class="favorable">7.6折</em></td>
+                                      <td><a href="javascript:void(0);" class="linkA">退改签限制</a></td>
+                                      <td><em style=" color:#f94037;">￥</em><b style="font-size:16px; color:#f94037;">620</b></td>
+                                      <td>
+                                          <button type="button" class="commonBtn lightRedBtn">预 订</button>
+                                      </td>
+                                  </tr>
+                                  <tr class="airMore" style="display:none;">
+                                      <td></td>
+                                      <td></td>
+                                      <td>经济舱 &nbsp; <em class="favorable">7.6折</em></td>
+                                      <td><a href="javascript:void(0);" class="linkA">退改签限制</a></td>
+                                      <td><em style=" color:#f94037;">￥</em><b style="font-size:16px; color:#f94037;">620</b></td>
+                                      <td>
+                                          <button type="button" class="commonBtn lightRedBtn">预 订</button>
+                                      </td>
+                                  </tr>
+                                  <tr class="airMore" style="display:none;">
+                                      <td></td>
+                                      <td></td>
+                                      <td>经济舱 &nbsp; <em class="favorable">7.6折</em></td>
+                                      <td><a href="javascript:void(0);" class="linkA">退改签限制</a></td>
+                                      <td><em style=" color:#f94037;">￥</em><b style="font-size:16px; color:#f94037;">620</b></td>
+                                      <td>
+                                          <button type="button" class="commonBtn lightRedBtn">预 订</button>
+                                      </td>
+                                  </tr>
+                          </tbody>
+                          <tfoot>
+                                  <tr class="lastList">
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td>
+                                          <label class="flexMore toggle_trigger" data-toggle='{"wrapper":".flight-item","target":".airMore","textFilter":"em","toggleSelfClass":["flexMore","flexUp"],"toggleText":["查看更多","收起"]}'><em>查看更多</em><i></i></label>
+                                          <label class="flexUp" style="display:none;"><em>收起</em><i></i></label>
+                                      </td>
+                                  </tr>
+                           </tfoot>
+                     </table>
+              </div>
+             <div class="checkMore"><a href="javascript:void(0);">点击查看更多</a></div>
+             <div class="smallLoading"><em></em> <b>数据正在加载中……</b></div>
+        </div>  <!--airContent end-->
+    
+        <!--<div style="position:absolute; bottom:15px; left:650px;">
+                <div class="floatLayer">
+                     <i class="arrowLayer"></i>
+                     <p><b>退票：</b>仅退基建燃油费，机票款不退</p>
+                     <p><b>废票：</b>每张收取N元费用</p>
+                     <p><b>更改：</b>不得改期、升舱</p>
+                     <p><b>签转：</b>不允许签转</p>
+                     <p><b>备注：</b> </p>
+                </div>
+        </div>-->
+        
+	</div>
+    </section>
+    <footer class="main-footer">
+        <p class="copyright">Copyright &copy; 2013 天地行 All Rights Reserved.     沪ICP备08101503号</p>
+    </footer>
+</div>
+    
+    <script>
+
+        $(function(){
+
+            $("#trip_type").change(function(){
+				console.log($(this).val());
+                if($(this).val() == "one_way"){
+                    $("#return_label input").addClass("grayed").prop("disabled",true);                    
+                }else{
+					$("#return_date").removeClass("grayed").prop("disabled",false);
+
+                }
+            });
+        });
+    </script>
+    
+	<script>
+
+		$(function(){
+				  
+			$(".flight-item .linkA").kendoTooltip({
+				position:"bottom", //left right top
+				wrapperClass:"lineWeight",
+                width:250,
+				content:{
+                    url:"/php/farerule.php"
+				},
+				offsetY:10
+				
+			});
+			
+			$(".addDay .addDayTime").kendoTooltip({
+				position:"bottom", //left right top
+				wrapperClass:"lineWeight",
+				content:function(){
+					return "到达时间为第2天，2013-12-24 09：20。";
+				},
+				offsetY:5				
+			});
+			
+			$(".airList .stops").kendoTooltip({
+				position:"bottom", //left right top
+				wrapperClass:"lineWeight",
+				content:function(){
+					return "经停：石家庄（12：30-13:20）";
+				},
+				offsetY:5				
+			});
+			
+		});
+	</script>
+    
+    
+    
+</body>
+
+</html>
+
+

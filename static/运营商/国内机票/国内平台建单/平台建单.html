@@ -1,0 +1,392 @@
+<!DOCTYPE html><html><head>
+        <title>机票 国内机票 平台建单</title>
+        <script src="http://localhost:35729/livereload.js"></script><meta charset="utf-8" />
+<link href="../../../static/css/common.css" rel="stylesheet" />
+<link href="../../../static/css/b2b.css" rel="stylesheet" />
+<link href="../../../static/css/kendo.common.css" rel="stylesheet" />
+<link href="../../../static/css/kendo.gray.css" rel="stylesheet" />
+<link href="../../../static/css/kendo.reset.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="../../../static/css/global.css" />
+<script type="text/javascript" src="../../../static/js/jquery.min.js"></script>
+<script type="text/javascript" src="../../../static/js/kendo.web.js"></script>
+<script type="text/javascript" src="../../../static/js/plugins/jquery.fixedBar.js"></script>
+<script type="text/javascript" src="../../../static/js/global.js"></script>
+<script type="text/javascript" src="../../../static/js/flight.js"></script>
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="../../../static/css/ie.css" /> 
+<script type="text/javascript" src="../../../static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<script type="text/javascript" src="../../../static/js/sync.js"></script>
+<!-- @CLB@ -->
+</head>
+<body>  <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">消息</a>
+                <span>New</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent">
+<link href="../../../static/css/pnr.css" rel="stylesheet"><div id="page-importpnr"><div class="actions block">
+    <div class="col col-r sep-l">
+        <button class="btns btn-blue">订单导入</button>
+        <button class="btns btn-blue">订单补录</button>
+        <button class="btns btn-blue">白屏预订</button>
+    </div>
+    <span class="page-title">
+        黑屏创建订单
+    </span>
+</div>
+<div class="block block1">
+    <!-- search_form -->
+    <ul class="flat-list">
+        <li>
+        <label class="vertical-head">客户名称</label>
+        <input style="width:120px" />
+        <button class="btns btn-search">查询</button>
+        </li>
+        <li>
+        <label class="vertical-head">OFFICE号</label>
+        <input style="width:120px" data-role="dropdownlist" 
+        data-source="['SHA888','SHA999','SHA222']" 
+        />
+        </li>
+        <li>
+        <label class="vertical-head">联系人</label>
+        <input style="width:120px" />
+        </li>
+        <li>
+        <label class="vertical-head">建单营业点</label>
+        <input style="width:120px" />
+        <button class="btns btn-search">查询</button>
+        <button class="btns ac-default">默认</button>
+        </li>
+    </ul>
+</div>
+
+<div class="block block2">
+    <div id="tabstrip" data-animation="false" data-role="tabstrip">
+        <ul class="tab-head-list">
+            <li class="k-state-active">
+            成人 
+            </li>
+            <li>
+            儿童 
+            </li>
+            <li>
+            团队
+            </li>
+            <li>
+            三方协议 
+            </li>
+        </ul>
+        <!-- ADT tab -->
+        <div>
+            <div class="row">
+                <form action="#">
+                <ul class="flat-list">
+                    <li class="row-title">PNR编码方式创建</li>
+                  <li>
+                  <input class="input-pnrcode" value="HYGNKR">
+                  </li>
+                  <li>
+                  <button disabled class="btns btn-orange-n disabled">创建订单</button> 
+                  <img style="vertical-align:middle;" src="../../../static/css/Default/loading.gif">
+                  </li>
+                  <li>
+                  <button class="btns btn-orange-n">创建订单</button> 
+                  </li>
+                </ul>
+                </form>
+            </div>
+            <div class="row row2 clearfix">
+                <form action="#">
+                 <h3 class="row-title">黑屏粘贴方式创建</h3>
+                 <div class="col1 col">
+                    <textarea class="pnr-console" name="">
+温馨提示:
+1. 请使用您的Eterm系统提取PNR内容。
+
+2. 再执行PAT:A指令,将全部内容复制,并粘贴到黑色输入框内。
+
+3. 团队从RT:N/编码开始复制到PAT:A结果的所有内容。
+
+4. 根据航空公司出票要求,PNR内容中必须备注手机号码。
+
+5. 注意:复制的内容建议从RT编码开始复制到PAT:A结果的所有内容。儿童PNR编码,请走儿童订单专用通道。</textarea> 
+
+<span style="right:0;top:-24px;" class="k-widget k-tooltip k-tooltip-validation k-invalid-msg" data-for="adultPnrCode" role="alert"><span class="k-icon k-warning"> </span> 乘客列表为空</span>
+                        <button class="btns btn-orange-n">创建订单</button> 
+                 </div>
+                 <div>
+            <div class="row">
+                <dl>
+                  <dt>注意事项</dt>
+                  <dd>
+                  1. 根据“PNR编码”生成订单信息。
+                  </dd>
+                  <dd>
+                  2. 根据输入的PNR内容生成订单信息。
+                  </dd>
+                  <dd>
+                  3. 请确保PNR姓名组的正确。
+                  </dd>
+                  <dd>
+                  4. 请确保航段组正确，舱位状况正确。
+                  </dd>
+                  <dd>
+                  5. 请确保每个乘客均有真实有效的信息。
+                  </dd>
+                </dl>
+            </div>
+                         
+                 </div>
+                </form>
+            </div>
+        </div>
+        <!-- CHD tab -->
+        <div>
+            <div class="row">
+                <label><input id="" type="radio" name="" />无成人陪伴</label>
+                <label><input id="" type="radio" name="" />成人PNR</label>
+                <label><input id="" type="radio" name="" />成人订单号</label>
+            </div>
+            <div class="row">
+                <form action="#">
+                <ul class="flat-list">
+                    <li class="row-title">PNR编码方式创建</li>
+                  <li>
+                  <input class="input-pnrcode" value="HYGNKR">
+                  </li>
+                  <li>
+                        <button class="btns btn-orange-n">创建订单</button> 
+                  </li>
+                </ul>
+                </form>
+            </div>
+            <div class="row row2 clearfix">
+                <form action="#">
+                 <h3 class="row-title">黑屏粘贴方式创建</h3>
+                 <div class="col1 col1">
+                    <textarea class="pnr-console" name="">
+温馨提示:
+1.请使用您的Eterm系统提取PNR内容。
+
+2.再执行PAT:A*CH指令,将全部内容复制,并粘贴到黑色输入框内。
+
+3.根据航空公司出票要求,PNR内容中必须备注手机号码.
+
+4. 注意:复制的内容建议从RT编码开始复制到PAT:A*CH结果的所有内容。</textarea> 
+                        <button class="btns btn-orange-n">创建订单</button> 
+                 </div>
+                 <div>
+            <div class="row">
+                <dl>
+                  <dt>注意事项</dt>
+                  <dd>
+                  1. 原订单编号：已经出票的原编码订单编号。
+                  </dd>
+                  <dd>
+                  2. 根据“PNR编码”生成订单信息。
+                  </dd>
+                  <dd>
+                  3. 生成儿童票必须同一供应商，请提供平台中成人订单编号，若成人订单未在平台生成请提供成人PNR编码。
+                  </dd>
+                  <dd>
+                  4. 根据输入的PNR内容生成订单信息。
+                  </dd>
+                  <dd>
+                  5. 请确保PNR姓名组的正确。
+                  </dd>
+                  <dd>
+                  6. 请确保航段组正确，舱位状况正确。
+                  </dd>
+                </dl>
+            </div>
+                 </div>
+                </form>
+            </div>
+        </div>
+        <!-- TEAM tab -->
+        <div>
+            <div class="row">
+                <form action="#">
+                <ul class="flat-list">
+                    <li class="row-title">PNR编码方式创建</li>
+                  <li>
+                  <input class="input-pnrcode" value="HYGNKR">
+                  </li>
+                  <li>
+                        <button class="btns btn-orange-n">创建订单</button> 
+                  </li>
+                </ul>
+                </form>
+            </div>
+            <div class="row row2 clearfix">
+                <form action="#">
+                 <h3 class="row-title">黑屏粘贴方式创建</h3>
+                 <div class="col1 col">
+                    <textarea class="pnr-console" name="">
+温馨提示:
+1. 请使用您的Eterm系统提取PNR内容。
+
+2. 再执行PAT:A指令,将全部内容复制,并粘贴到黑色输入框内。
+
+3. 团队从RT:N/编码开始复制到PAT:A结果的所有内容。
+
+4. 根据航空公司出票要求,PNR内容中必须备注手机号码。
+
+5. 注意:复制的内容建议从RT编码开始复制到PAT:A结果的所有内容。儿童PNR编码,请走儿童订单专用通道。</textarea> 
+<button class="btns btn-orange-n">创建订单</button>
+                 </div>
+                 <div>
+            <div class="row">
+                <dl>
+                  <dt>注意事项</dt>
+                  <dd>
+                  1. 根据“PNR编码”生成订单信息。
+                  </dd>
+                  <dd>
+                  2. 根据输入的PNR内容生成订单信息。
+                  </dd>
+                  <dd>
+                  3. 请确保PNR姓名组的正确。
+                  </dd>
+                  <dd>
+                  4. 请确保航段组正确，舱位状况正确。
+                  </dd>
+                  <dd>
+                  5. 请确保每个乘客均有真实有效的信息。
+                  </dd>
+                </dl>
+            </div>
+                 </div>
+                </form>
+            </div>
+        </div>
+        
+        <!-- CHD tab -->
+        <div>
+            <div class="row">
+                <label><input id="" type="radio" name="" />SHA255</label>
+                <label><input id="" type="radio" name="" />SHA836</label>
+                <label><input id="" type="radio" name="" />BJS407</label>
+                <label><input id="" type="radio" name="" />CAN525</label>
+            </div>
+            <div class="row">
+                <form action="#">
+                <ul class="flat-list">
+                    <li class="row-title">PNR编码方式创建</li>
+                  <li>
+                  <input class="input-pnrcode" value="HYGNKR">
+                  </li>
+                  <li>
+                        <button class="btns btn-orange-n">创建订单</button> 
+                  </li>
+                </ul>
+                </form>
+            </div>
+            <div class="row row2 clearfix">
+                <form action="#">
+                 <h3 class="row-title">黑屏粘贴方式创建</h3>
+                 <div class="col1 col1">
+                    <textarea class="pnr-console" name="">
+温馨提示:
+1.请使用您的Eterm系统提取PNR内容。
+
+2.再执行PAT:A*CH指令,将全部内容复制,并粘贴到黑色输入框内。
+
+3.根据航空公司出票要求,PNR内容中必须备注手机号码.
+
+4. 注意:复制的内容建议从RT编码开始复制到PAT:A*CH结果的所有内容。</textarea> 
+                        <button class="btns btn-orange-n">创建订单</button> 
+                 </div>
+                 <div>
+            <div class="row">
+                <dl>
+                  <dt>注意事项</dt>
+                  <dd>
+                  1. 原订单编号：已经出票的原编码订单编号。
+                  </dd>
+                  <dd>
+                  2. 根据“PNR编码”生成订单信息。
+                  </dd>
+                  <dd>
+                  3. 生成儿童票必须同一供应商，请提供平台中成人订单编号，若成人订单未在平台生成请提供成人PNR编码。
+                  </dd>
+                  <dd>
+                  4. 根据输入的PNR内容生成订单信息。
+                  </dd>
+                  <dd>
+                  5. 请确保PNR姓名组的正确。
+                  </dd>
+                  <dd>
+                  6. 请确保航段组正确，舱位状况正确。
+                  </dd>
+                </dl>
+            </div>
+                 </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<script type="text/x-kendo-template" id="salepoint-window">
+    <div>
+        <h1>
+            建单营业点 
+        </h1> 
+    </div>
+</script>
+
+<script type="text/javascript" src="../../../static/js/importpnr.js"></script>
+
+</div>        </div>
+
+    </div>
+		
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+</body></html>

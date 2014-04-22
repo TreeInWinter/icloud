@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 B2G 编辑临时差旅人信息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/b2g.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.b2g.css" />
+
+    <link rel="stylesheet" href="../../static/css/b2g_management.css" media="all" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/b2g/common.js"></script>
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+    <!--[if lte IE 9]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="top-line"></div>
+    <header class="main-header">
+        <div class="header-content">
+            <a class="logo" href="/">天地行 B2G</a>
+            <nav class="main-nav">
+                <ul class="clearfix">
+                    <li class="first active"><a herf="#">行程预订</a></li>
+                    <li><a herf="#">行程管理</a></li>
+                    <li><a herf="#">数据服务</a></li>
+                    <li><a herf="#">创业维护</a></li>
+                    <li><a herf="#">系统设置</a></li>
+                </ul> 
+            </nav>
+        </div>
+    </header>
+    <!--
+    <div class="header-bar clearfix">
+        <div class="header-bar-content">
+            <i class="tips"></i><span>请先选择差旅人   * 默认状态下您为自己预订</span>
+            <div class="setuser">
+                <a href="javascript:void(0);">设置差旅人</a>
+            </div>
+            <div class="for_reason">
+                <span class="reason_checkbox checked"></span><label for="reason">因私</label><input type="checkbox" style="display:none;" id="reason" value="for_private" name="reason"/>
+            </div>
+        </div>
+    </div>
+    -->
+<section class="main-body clearfix">
+    <div class="main-body-content">
+        	
+            <div class="titTop clearfix">
+                <b class="editTith3">编辑临时差旅人信息</b>
+        	</div>  
+       
+      	 	<div class="infoBox">
+                <div class="infoCon">
+                   <div class="editboxTitle">
+                   	 <h4>临时差旅人基础信息</h4>
+                   </div>
+                    <table>
+                          <colgroup>
+                               <col width="115px"/>
+                               <col width="200px"/>
+                               <col width="60px"/>
+                               <col width="115px"/>
+                               <col width="200px"/>
+                               <col width="60px"/>
+                               <col width="85px"/>
+                               <col width="325px"/>
+                          </colgroup>
+                          <tbody>
+                          <tr>
+                          	<td class="tdTit"><em>*</em>姓：</td>
+                            <td><input type="text" value="中文/英文" /></td>
+                            <td></td>
+                            <td class="tdTit"><em>*</em>名：</td>
+                            <td><input type="text" value="中文/英文" /></td>
+                            <td></td>
+                            <td class="tdTit"><em>*</em>性别：</td>
+                            <td>
+                                <select data-role="dropdownlist" style="width:186px;">
+                                     <option>男</option>
+                                     <option>女</option>
+                                </select>
+                            </td>
+                          </tr>
+                          <tr>
+                          	<td class="tdTit">拼音姓：</td>
+                            <td><input type="text" /></td>
+                            <td> </td>
+                            <td class="tdTit">拼音名：</td>
+                            <td><input type="text" /></td>
+                            <td> </td>
+                            <td class="tdTit"><em>*</em>国籍：</td>
+                            <td><input type="text" /></td>
+                          </tr>
+                          <tr>
+                          	<td class="tdTit"><em>*</em>类型：</td>
+                            <td>
+                                <select data-role="dropdownlist" style="width:186px;">
+                                     <option>成人</option>
+                                     <option>儿童</option>
+                                </select>
+                            </td>
+                            <td></td>
+                            <td class="tdTit"><em>*</em>移动电话：</td>
+                            <td><input type="text" /></td>
+                            <td></td>
+                            <td class="tdTit"><em>*</em>邮箱地址：</td>
+                            <td><input type="text" /></td>
+                          </tr>
+                          <tr>
+                          	<td class="tdTit"><em>*</em>公司全称：</td>
+                            <td><input type="text" /></td>
+                            <td></td>
+                            <td class="tdTit">临时差旅人属性：</td>
+                            <td>
+                                <select data-role="dropdownlist" style="width:186px;">
+                                     <option>保密</option>
+                                     <option selected>公开</option>
+                                </select>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          </tbody>
+                  </table> 
+                </div>
+    </div>
+                <!-- 紧急联系人 -->
+                <div class="infoBox">
+                  <div class="infoCon">
+                   <div class="editboxTitle">
+                   	   <h4>紧急联系人信息</h4>
+                       <!--<div class="editInfo-unfold" style="margin-right:40px;">
+                        <span class="editInfo-fold toggle_trigger" data-toggle='{"target":"#linkman-info","textFilter":"em","toggleClass":["editInfo-unfold","editInfo-fold"],"toggleText":["展开","收起"]}'><i></i><em>收起</em></span>
+                        <span class="editInfo-unfold" style="display:none"><i></i><em>展开</em></span>
+                       </div>-->
+                   </div>
+                    <table id="linkman-info">
+                          <colgroup>
+                               <col width="115px"/>
+                               <col width="180px"/>
+                               <col width="115px"/>
+                               <col width="180px"/>
+                               <col width="115px"/>
+                               <col width="180px"/>
+                               <col width="115px"/>
+                               <col width="220px"/>
+                          </colgroup>
+                          <tbody>
+                          <tr>
+                          	<td class="tdTit">姓名：</td>
+                            <td><input type="text" style="width:150px"/></td>
+                            <td class="tdTit">关系：</td>
+                            <td><input type="text"  style="width:150px"/></td>
+                            <td class="tdTit">电话：</td>
+                            <td><input type="text"  style="width:150px"/></td>
+                            <td class="tdTit">国籍：</td>
+                            <td><input type="text"  style="width:150px"/></td>
+                          </tr>
+                          </tbody>
+                    </table> 
+                </div>
+                </div>
+                
+                <!-- 证件信息 -->
+                <div class="infoBox">
+                  <div class="infoCon">
+                   <div class="editboxTitle">
+                   	   <h4>证件信息</h4>
+                       <!--<div class="editInfo-unfold" style="margin-right:40px;">
+                        <span class="editInfo-fold toggle_trigger" data-toggle='{"target":"#elsepapers","textFilter":"em","toggleClass":["editInfo-unfold","editInfo-fold"],"toggleText":["展开","收起"]}'><i></i><em>收起</em></span>
+                        <span class="editInfo-fold" style="display:none"><i></i><em>展开</em></span>
+                       </div> -->                   
+                   </div>
+                    <table border="0" cellpadding="0" cellspacing="0"  class="otherInfo" id="elsepapers">
+                          <colgroup>
+                               <col width="90px"/>
+                               <col width="320px"/>
+                               <col width="110px"/>
+                               <col width="240px"/>
+                               <col width="370px"/>
+                          </colgroup>
+                          <tbody>
+                          <tr>
+                          	<td class="tdTit last">身份证号码：</td>
+                            <td class="last"><input type="text" /></td>
+                            <td class="tdTit last">身份证到期日：</td>
+                            <td class="last"><input type="text" class="datepicker dpSingle" /></td>
+                            <td class="last"></td>
+                          </tr>
+                          <tr>
+                          	<td class="tdTit">护照号码：</td>
+                            <td>
+                                <input type="text" />
+                            </td>
+                            <td class="tit">护照到期日：</td>
+                            <td><input type="text" class="datepicker dpSingle" /></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                          	<td class="tdTit last">证件类型：</td>
+                            <td class="last">
+                                  <select data-role="dropdownlist" style="width:150px;">
+                                       <option>身份证</option>
+                                       <option>护照</option>
+                                  </select>
+                            </td>
+                            <td class="tit last">证件号码：</td>
+                            <td class="last"><input type="text" /></td>
+                            <td rowspan="2">
+                            <label class="editInfo-add"><i></i><em>增加</em></label>
+                            </td>
+                          </tr>
+                          <tr>
+                          	<td class="tdTit">证件签发地：<div class="twofont">（2字码）</div></td>
+                            <td>
+                                <input type="text" />
+                            </td>
+                            <td class="tit">证件到期日：</td>
+                            <td><input type="text" class="datepicker dpSingle" /></td>
+                          </tr>
+                          <tr>
+                          	<td class="tdTit last">证件类型：</td>
+                            <td class="last">
+                                  <select data-role="dropdownlist" style="width:150px;">
+                                       <option>身份证</option>
+                                       <option>护照</option>
+                                  </select>
+                            </td>
+                            <td class="tit last">证件号码：</td>
+                            <td class="last"><input type="text" /></td>
+                            <td rowspan="2" class="last">
+                                <label class="editInfo-del"><i></i><em>删除</em></label>
+                            </td>
+                          </tr>
+                          <tr>
+                          	<td class="tdTit last">证件签发地：<div class="twofont">（2字码）</div></td>
+                            <td class="last">
+                                <input type="text" />
+                            </td>
+                            <td class="tit last">证件到期日：</td>
+                            <td class="last"><input type="text" class="datepicker dpSingle" /></td>
+                          </tr>
+                          </tbody>
+                    </table> 
+                </div>
+                </div>
+                
+                <!-- 常旅卡信息 -->
+                <div class="infoBox">
+                  <div class="infoCon">
+                   <div class="editboxTitle">
+                   	   <h4>常旅卡信息</h4>
+                   </div>
+                    <table>
+                          <colgroup>
+                               <col width="110px"/>
+                               <col width="300px"/>
+                               <col width="110px"/>
+                               <col width="245px"/>
+                               <col width="370px"/>
+                          </colgroup>
+                          <tbody>
+                              <tr>
+                                <td class="tdTit">航空公司/联盟：</td>
+                                <td>
+                                    <select data-role="dropdownlist" style="width:160px;">
+                                       <option>中国国航</option>
+                                       <option>东方航空</option>
+                                       <option>西方航空</option>
+                                    </select>
+                                </td>
+                                <td class="tdTit">卡号：</td>
+                                <td ><input type="text" style="width:230px;" /></td>
+                                <td><label class="editInfo-add"><i></i><em>增加</em></label></td>
+                              </tr>
+                              <tr>
+                                <td class="tdTit">航空公司/联盟：</td>
+                                <td>
+                                    <select data-role="dropdownlist" style="width:160px;">
+                                       <option>中国国航</option>
+                                       <option>东方航空</option>
+                                       <option>西方航空</option>
+                                    </select>
+                                </td>
+                                <td class="tdTit">卡号：</td>
+                                <td><input type="text" style="width:230px;" /></td>
+                                <td><label class="editInfo-del"><i></i><em>删除</em></label></td>
+                              </tr>
+                          </tbody>
+                    </table> 
+                </div>
+                </div>
+                
+                <!-- 个人偏好信息 -->
+                <div class="infoBox">
+                  <div class="infoCon">
+                   <div class="editboxTitle">
+                   	   <h4>个人偏好信息</h4>
+                   </div>
+                    <table>
+                          <colgroup>
+                               <col width="110px"/>
+                               <col width="300px"/>
+                               <col width="110px"/>
+                               <col width="280px"/>
+                               <col width="90px"/>
+                               <col width="250px"/>
+                          </colgroup>
+                          <tbody>
+                              <tr>
+                                <td class="tdTit">座位偏好：</td>
+                                <td>
+                                    <select data-role="dropdownlist" style="width:160px;">
+                                       <option>靠窗</option>
+                                       <option>靠过道</option>
+                                       <option>中间位置</option>
+                                    </select>
+                                </td>
+                                <td class="tdTit">餐食偏好：</td>
+                                <td>
+                                    <select data-role="dropdownlist" style="width:160px;">
+                                       <option>中餐</option>
+                                       <option>西餐</option>
+                                       <option>米饭</option>
+                                       <option>面条</option>
+                                    </select>
+                                </td>
+                                <td class="tdTit">酒店偏好：</td>
+                                <td>
+                                    <select data-role="dropdownlist" style="width:160px;">
+                                       <option>五星级</option>
+                                    </select>
+                                </td>
+                              </tr>
+                          </tbody>
+                    </table> 
+                </div>
+                </div>
+                
+            <!-- 按钮 -->
+              <div class="editbuttonbox">
+                <button type="button" class="commonBtn lightRedBtn btnfontStyle" style="margin-right:12px">确 定</button>
+                <button type="button" class="commonBtn grayBtn btnfontStyle">取 消</button>
+            </div> 
+        </div>       
+    </section>  
+     <!-- 修改密码 -->
+       <div id="changBlueBtn-template" class="changepwdDiv">
+          <table>
+             <colgroup>
+              <col width="140px"/>
+              <col width="262px"/>
+              <col width="100px"/>
+             </colgroup>
+             <tbody>
+             <tr>
+              <td class="tdTit">请输入当前密码：</td>
+              <td><input type="text"  placeholder="密码为6位"  style="width:248px"/></td>
+              <td><span class="textright"></span></td>
+             </tr>
+              <tr>
+              <td class="tdTit">请输入新密码：</td>
+              <td><input type="password"  style="width:248px"/></td>
+              <td><span class="texterror"></span></td>
+             </tr>
+             <tr>
+              <td class="tdTit">确认新密码：</td>
+              <td><input type="password"  style="width:248px"/></td>
+              <td></td>
+             </tr>
+             <tr>
+              <td>&nbsp;</td>
+              <td colspan="2">
+                 <div class="pwd-tips"><p><i></i>定期更换密码可以让您的账户更加安全。</p>
+                      <ul>
+                        <li>请确保登录密码与支付密码不同，</li>
+                        <li>建议密码采用字母和数字混合，并不短于6位。</li>
+                      </ul>
+                 </div>
+              </td>
+             </tr>
+             </tbody>
+          </table>
+            <div class="buttonbox" style="padding:15px 0 20px 0">
+                 <button type="button" class="commonBtn lightRedBtn btnfontStyle" style="margin-right:12px">确 定</button>
+                <button type="button" class="commonBtn grayBtn btnfontStyle close">取 消</button>
+            </div>
+       </div> 
+    <!-- 部门组织架构树 -->
+      <div id="orgchart-template" class="orgchartDiv">
+         <p>
+            <label >部门名称：</label><input type="text"  placeholder="请输入部门名称"  style="width:376px"/>
+         </p>
+         <p><label>组织架构树：</label></p>
+         <div class="row treeview-white">
+                    <ul id="treeview" data-role="treeview">
+                        <li>
+                        苏宁公司
+                        <ul>
+                            <li>
+                            北京分部
+                            <ul>
+                                <li>总裁部
+                                    <ul>
+                                        <li>业务部</li>
+                                        <li>行政部</li>
+                                        <li rel="1112">采购部</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            </li>
+
+                            <li>
+                            南京分部 
+                            <ul>
+                                <li rel="1412">
+                                采购部 
+                                <ul>
+                                    <li>家电部</li>
+                                </ul>
+                                </li>
+                            </ul>
+                            </li>
+                            <li>业务部</li>
+                        </ul>
+                        </li>
+                    </ul>
+          </div>
+          <div class="buttonbox" style="padding:15px 0 20px 0">
+          <button type="button" class="commonBtn lightRedBtn btnfontStyle" style="margin-right:12px">确 定</button>
+          <button type="button" class="commonBtn grayBtn btnfontStyle close">取 消</button>
+          </div>
+      </div> 
+    
+    <footer class="main-footer">
+        <p class="copyright">Copyright &copy; 2013 天地行 All Rights Reserved.     沪ICP备08101503号</p>
+    </footer>
+</div>
+
+
+<script>
+	$(function(){
+			  
+		$(".flight-item .linkA").kendoTooltip({
+			position:"bottom", //left right top
+			content:function(){
+				return "退票：仅退基建燃油费，机票款不退<br>废票：每张收取N元费用<br>更改：不得改期、升舱<br>签转：不允许签转<br>备注：";
+			},
+			offsetY:10
+			
+		});
+	});
+</script>
+
+<script>
+
+    $(function(){
+
+		new PopWindow('.changBlueBtn',{
+			title:'修改密码',
+			width:'580'
+		},"#changBlueBtn-template").init();
+		
+		new PopWindow('.orgchart',{
+			title:'部门组织架构树',
+			width:'580'
+		},"#orgchart-template").init();
+	});
+</script>
+</body>
+</html>

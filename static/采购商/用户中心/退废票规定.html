@@ -1,0 +1,2079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 用户中心 国内订单列表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+     
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_ucenter.css" media="screen" />
+
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.store.css" />
+    
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>    
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>    
+
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+    
+    <script type="text/javascript" src="../../static/js/store/store.js"></script>
+    <style type="text/css">
+        .tbl_Invalidticketrequests{display:none}
+    </style>
+</head>
+<body>
+
+<div class="main-wrapper">
+<header class="main-header">
+    <a class="logo" href="/"><h1>天地行</h1></a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first active"><a herf="#">首页</a></li>
+            <li><a herf="#">国内机票</a></li>
+            <li><a herf="#">国际机票</a></li>
+            <li><a herf="#">酒店</a></li>
+        </ul> 
+    </nav>
+    <nav class="main-links">
+        <ul class="clearfix">
+            <li class="first"><a href="#">订单管理</a></li>
+            <li><a href="#">分销管理</a></li>
+            <li><a href="#">电子钱包</a></li>
+            <li><a href="#">统计报表</a></li>
+            <li><a href="#">客服服务</a></li>
+            <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+            <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+</header>
+<section class="main-body clearfix">
+    <main class="us-content" style="width:100%">
+        <h1 class="us-title" style="border-bottom:none">
+            各航空公司退废票规定
+            <span class="important" style="font-weight: normal;font-size: 12px;">（此规定仅供参考，最终以航空公司规定为准。）</span>
+            <span style="font-size: 12px;font-weight: normal;float:right"><a href="javascript:;">查看各航空公司升舱规定<i class="rightArrow"></i></a></span>
+        </h1>
+        <div class="us-body" style="border:none">
+            <div id="airlineCompanyContainer">
+                <ul>
+                    <li data-target="CA">中国国航CA</li>
+                    <li data-target="MU">东方航空MU</li>
+                    <li data-target="CZ">南方航空CZ</li>
+                    <li data-target="HU">海航集团HU</li>
+                    <li data-target="FM">上海航空FM</li>
+                    <li data-target="SC">山东航空SC</li>
+                    <li data-target="ZH">深圳航空ZH</li>
+                    <li data-target="3U">四川航空3U</li>
+                    <li data-target="MF">厦门航空MF</li>
+                    <li data-target="EU">成都航空EU</li>
+                    <li data-target="HO">吉祥航空HO</li>
+                    <li data-target="G5">华夏航空G5</li>
+                    <li data-target="BK">奥凯航空BK</li>
+                    <li data-target="NS">河北航空NS</li>
+                    <li data-target="KN">中联航空KN</li>
+                    <li data-target="JD">首都航空JD</li>
+                    <li data-target="JR">幸福航空JR</li>
+                    <li data-target="TV">西藏航空TV</li>
+                    <li data-target="KY">昆明航空KY</li>
+                    <li data-target="PN">西部航空PN</li>
+                    <li data-target="8L">祥鹏航空8L</li>
+                    <li data-target="GS">天津航空GS</li>
+                    <li data-target="GJ">长龙航空GJ</li>
+                </ul>
+            </div>
+            <div class="current_find" style="font-size: 14px;margin-bottom:10px">废票的要求：</div>
+            <div class="Invalidticketrequests">
+                1、出票当日可提交废票,废票手续费10元/张（奥凯BK20元/张）.   2、非当天起飞航班在供应商下班前20分钟提交废票申请；   3、当天起飞航班在飞机起飞前2小时20分钟提交废票申请；<br/>
+                4、特殊产品订单废票规定根据出票条件而定。   5、 首都航空废票：编码里有多个人的订单，不能分开提交废票申请。 6、 厦航B2B废票：厦航起飞当天所出B2B票，无法作废。<br/>
+                7、暑运、春运期间的废票客规按照航空公司发布的废票客规为准。<br>
+                <span class="important">特别提醒：凡是客票中备注了不得退票的，退票只退税费。</span>
+            </div>
+            <div class="tbl_Invalidticketrequests CA-container">
+                <div class="current_find" style="font-size: 14px;margin-bottom:10px">【新规定】</div>
+                <table cellspacing="1" cellpadding="0" width="100%" class="tablez">
+                        <col width="105" />
+                        <col width="370" />
+                        <col width="370" />
+                        <col width="170" />
+                        <tr>
+                            <td colspan="4" align="center" height="20"><div class="current_find" style="font-size:14px;">国航--CA</div></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" align="right">
+                                 <div class="current_find">所有航空公司重复开票不予以全退；以下只针对散客，团队不适用；只要机票上注明“不得退票”字样的，均一律不得退票！</div>
+                                 <div class="STYLE3">以下退票规定仅供参考，请以退票部（021-32069555*5382、5358分机）最终电话确认为准！</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center"><span class="STYLE3">舱位</span></td>
+                            <td align="center"><span class="STYLE3">关于退票</span></td>
+                            <td align="center"><span class="STYLE3">关于变更</span></td>
+                            <td align="center"><span class="STYLE3">关于签转</span></td>
+                        </tr>
+                        <tr>
+                            <td align="center">P F C </td>
+                            <td>航班起飞前取消定座免费退票，航班起飞取消定座每次收取公布票价10%的退票费</td>
+                            <td>航班起飞前免费改期，航班起飞后每次收取公布票价5%的改期费</td>
+                            <td>允许签转 </td>
+                        </tr>
+                        <tr>
+                            <td align="center">A D Z</td>
+                            <td>正常票价：航班起飞前取消定座免费退票，航班起飞后取消定座每次收取公布票价10%的退票费。低开价格：按照各舱位公布票价收取10%退票费。</td>
+                            <td>相同舱位改期每次每段收取公布票价5%的改期费，子舱位变更改期：重新计算票价，与原款金额进行比较，差额少不多不退，不另行收取改期费。</td>
+                            <td>不允许签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">Y</td>
+                            <td>航班起飞前（以客票上的航班起飞时间为准)Y经济舱公布票价的客票,    收取5%的退票费。航班起飞后取消定座每次收取10%的退票费（来回低开不适用）</td>
+                            <td>航班起飞前免费改期，航班起飞后每次收取公布票价5%的改期费（来回低开不适用）</td>
+                            <td>允许签转 </td>
+                        </tr>
+                        <tr>
+                            <td align="center">W</td>
+                            <td>航班起飞前取消定座(以客票上的航班起飞时间为准)W超值经济舱票价的客票, 收取5%的退票费，起飞后收取10%退票费。      若W舱为联程产品客票全部未使用收取票面价格的30%作为退票手续费，余额退还给旅客；客票已部分使用扣除已使用航段的Y舱公布票价，如有余额，退还旅客，不再另行收取退票手续费</td>
+                            <td>航班起飞前免费改期，航班起飞后每次收取公布票价5%的改期费，来回低开不适用。若为联程产品每次收取公布票价20%的改期费</td>
+                            <td>允许签转 </td>
+                        </tr>
+                        <tr>
+                            <td align="center">B M M1 H H1 K K1 L L1 Q Q1</td>
+                            <td>航班起飞前取消定座每次收取公布票价20%退票费，航班起飞后取消定座每次收取公布票价30%的退票费（来回低开不适用）</td>
+                            <td>航班起飞前每次收取公布票价10%改期费，航班起飞后每次收取公布票价20%的改期费（来回低开不适用）</td>
+                            <td rowspan="2">不允许签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center"> G V V1</td>
+                            <td>航班起飞前取消定座每次收取公布票价50%退票费，航班起飞后不得退票（来回低开不适用）</td>
+                            <td>航班起飞前每次收取公布票价30%的改期费，航班起飞后每次收取公布票价50%的改期费（来回低开不适用）</td>
+                        </tr>
+                        <tr>
+                            <td align="center">W+明折明扣舱位</td>
+                            <td>客票全部未使用收取票面30%手续费，余额退还给旅客；客票已部分使用扣除已使用航段Y舱票价，如有余额退还旅客，不再另行收取退票费</td>
+                            <td>每次收取CNY200元改期费；子舱位变更升舱W舱对应航段不允许变更升舱。明折明扣舱位对应航段允许子舱位变更升舱，收取变更舱位对应的票价差价，少补多不退。</td>
+                            <td>不允许签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">S</td>
+                            <td>收取公布运价50%的退票费</td>
+                            <td>每次收取票面价格50%的改期费</td>
+                            <td>不允许签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">O</td>
+                            <td>客票全部未使用，扣除票面运价30%的退票费，余额退还；客票已部分使用，扣除已使用航段票面价，未使用航段对应的票面运价30%的退票费后，余额退还旅客；客票必须顺序使用，如未顺序使用，不允许退票。</td>
+                            <td>相同舱位改期：每次每段更改收取票面运价10%改期费；子舱位变更改期：重新计算票价，并与原付票款金额进行比较，差额少补多不退，不再另收取改期费。</td>
+                            <td>不得签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">T E</td>
+                            <td>自愿退票的客票全部未使用：收取票面价格的50%作为退票手续费，余额退还给旅客客票已部分使用：扣除已使用航段的Y舱公布票价，如有余额，退还旅客，不再另行收取退票手续费。特殊运价不得退票。(具体以ETERM系统查询为准)</td>
+                            <td>每次收取票面价格50%的改期费。特殊运价不得变更。（具体以ETERM系统查询为准)</td>
+                            <td>不得签转</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">注：自愿退票，退票费按票面价格计算.子舱位变更或升舱后如需退票,按变更前的舱位规定执行,并全额退还补收的差额.改期后如需退票,已收取的改期费不退。不得升舱全退。团队退票：按时间来退，以发电报时间为准。</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">国航CA &nbsp;&nbsp; YWB明折明扣折扣联程产品    </td>
+                        </tr>
+                        <tr>
+                            <td align="center">Y</td>
+                            <td>l收取公布票价10%的退票费。非自愿退票：客票全部未使用：按实收票面价退款；客票已使用部分：扣除已使用航段对应舱位的公布票价，余额退还旅客。</td>
+                            <td rowspan="3">相同子舱位改期，每次收取CNY 200元改期费。    子舱位变更改期：客票全部未使用重新订座，并使用“PAT：A”计算票价后与原付票价进行比较，差额少补多不退，不再另行收取改期费；客票部分使用：收取未使用航段舱位对应公布票价差价，差额少补多不退，不再另行收取改期费。<br /></td>
+                            <td>不允许签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">Ø B\M\M1\H\H1\K\K1\L\L1\Q\Q1</td>
+                            <td>l    收取公布票价30%的退票费。非自愿退票：客票全部未使用：按实收票面价退款；客票已使用部分：扣除已使用航段对应舱位的公布票价，余额退还旅客。</td>
+                            <td>不允许签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">Ø G\V\V1</td>
+                            <td>不得退票。</td>
+                            <td>不允许签转</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" align="center"><span class="STYLE3">国航CA（以下适用于成都=邦达、成都=林芝、成都=九寨、邦达=拉萨、成都=日喀则、成都=西宁、成都=拉萨、重庆=拉萨、成都=丽江、北京=拉萨、北京=呼市、北京=海拉尔、北京=佳木斯、北京=朝阳、北京=丹东、北京=包头、北京=锡林浩特、北京=通辽、北京=赤峰、北京=大同、成都=稻城的航线的单程及往返航线票价，低开不适用）</span></td>
+                        </tr>
+                        <tr>
+                            <td align="center"><span class="STYLE3">舱位</span></td>
+                            <td align="center"><span class="STYLE3">关于退票</span></td>
+                            <td align="center"><span class="STYLE3">关于变更</span></td>
+                            <td align="center"><span class="STYLE3">关于签转</span></td>
+                        </tr>
+                        <tr>
+                            <td align="center">F/C/P</td>
+                            <td>航班起飞前(含)取消定座收取公布票价20%退票费;<br />
+                                航班起飞后取消定座收取公布票价30%退票费</td>
+                            <td>航班起飞前(含)每次更改收取公布票价10%改期费;航班起飞后每次更改收取公布票价20%改期费;</td>
+                            <td>允许签转 但需按照自愿变更航班/日期的收费标准收取变更费（航空公司办理）。(变更承运人时票价少补多不退)</td>
+                        </tr>
+                        <tr>
+                            <td align="center">W/Y</td>
+                            <td>航班起飞前(含)取消定座收取公布票价20%退票费;<br />
+                                航班起飞后取消定座收取公布票价30%退票费</td>
+                            <td>航班起飞前(含)每次更改收取公布票价10%改期费;航班起飞后每次更改收取公布票价20%改期费;</td>
+                            <td>允许签转    但需按照自愿变更航班/日期的收费标准收取变更费（航空公司办理）。(变更承运人时票价少补多不退)</td>
+                        </tr>
+                        <tr>
+                            <td align="center">A/D/Z</td>
+                            <td>航班起飞前(含)取消定座收取公布票价20%退票费;<br />
+                                航班起飞后取消定座收取公布票价30%退票费</td>
+                            <td>航班起飞前(含)每次更改收取公布票价10%改期费;航班起飞后每次更改收取公布票价20%改期费;</td>
+                            <td>不允许签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">B/M/M1/H/H1/K/K1/L/L1/Q/Q1</td>
+                            <td>航班起飞前(含)取消定座收取公布票价30%退票费;<br />
+                                航班起飞后取消定座收取公布票价40%退票费</td>
+                            <td>航班起飞前(含)每次更改收取公布票价20%改期费;航班起飞后每次更改收取公布票价30%改期费;</td>
+                            <td rowspan="2">不允许签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">Ø G/V/V1</td>
+                            <td>航班起飞前(含)取消定座收取公布票价50%退票费;<br />
+                                航班起飞后取消定座不得退票</td>
+                            <td>航班起飞前(含)每次更改收取公布票价30%改期费;航班起飞后每次更改收取公布票价50%改期费;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">注：自愿退票，退票费按公布运价计算.子舱位变更或升舱后如需退票,按变更前的舱位规定执行,并全额退还补收的差额.改期后如需退票,已收取的改期费不退。不得升舱全退。</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" align="center"><div class="current_find" style="font-size:14px;">国航CA（以下适用于北京=哈密、北京=库尔勒的单程及往返航线票价，低开不适用）</div></td>
+                        </tr>
+                        <tr>
+                            <td align="center"><span class="STYLE3">舱位</span></td>
+                            <td align="center"><span class="STYLE3">关于退票</span></td>
+                            <td align="center"><span class="STYLE3">关于变更</span></td>
+                            <td align="center"><span class="STYLE3">关于签转</span></td>
+                        </tr>
+                        <tr>
+                            <td align="center">F/C/P/W</td>
+                            <td>航班起飞前2小时取消定座免费退票;<br />
+                                航班起飞前2小时之内及起飞后取消定座收取公布票价10%退票费</td>
+                            <td>航班起飞2小时前每次免费变更;航班起飞前2小时之内及起飞后每次更改收取10%改期费;</td>
+                            <td>允许签转 但需按照自愿变更航班/日期的收费标准收取变更费（航空公司办理）。(变更承运人时票价少补多不退)</td>
+                        </tr>
+                        <tr>
+                            <td align="center">Y</td>
+                            <td>航班起飞前2小时取消定座免费退票;<br />
+                                航班起飞前2小时之内及起飞后取消定座收取公布票价10%退票费</td>
+                            <td>航班起飞2小时前每次免费变更;航班起飞前2小时之内及起飞后每次更改收取10%改期费;</td>
+                            <td>允许签转    但需按照自愿变更航班/日期的收费标准收取变更费（航空公司办理）。(变更承运人时票价少补多不退)</td>
+                        </tr>
+                        <tr>
+                            <td align="center">A/D/Z</td>
+                            <td>航班起飞前2小时取消定座免费退票;<br />
+                                航班起飞前2小时之内及起飞后取消定座收取公布票价10%退票费</td>
+                            <td>航班起飞2小时前每次免费变更;航班起飞前2小时之内及起飞后每次更改收取10%改期费;</td>
+                            <td rowspan="3">不允许签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">B/M/M1/H/H1/K/K1</td>
+                            <td>航班起飞前2小时取消定座收取10%退票费;<br />
+                                航班起飞前2小时之内及起飞后取消定座收取20%退票费</td>
+                            <td>航班起飞2小时前每次免费变更;航班起飞前2小时之内及起飞后每次更改收取20%改期费;</td>
+                        </tr>
+                        <tr>
+                            <td align="center">L/L1/Q/Q1/G/V/V1</td>
+                            <td>航班起飞前2小时取消定座收取公布票价30%退票费;<br />
+                                航班起飞前2小时之内及起飞后取消定座收取公布票价40%退票费</td>
+                            <td>航班起飞2小时前收取20%改期费;航班起飞前2小时之内及起飞后每次更改收取30%改期费;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">注：自愿退票，退票费按公布运价计算.子舱位变更或升舱后如需退票,按变更前的舱位规定执行,并全额退还补收的差额.改期后如需退票,已收取的改期费不退。不得升舱全退。</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" align="center"><span class="STYLE3">国航CA（以下适用于成都=邦达、成都=林芝、成都=九寨、邦达=拉萨、成都=日喀则、成都=西宁、成都=拉萨、重庆=拉萨、成都=丽江、北京=拉萨、北京=呼市、北京=海拉尔、北京=佳木斯、北京=朝阳、北京=丹东、北京=包头、北京=锡林浩特、北京=通辽、北京=赤峰、北京=大同、成都=稻城的航线） &nbsp;&nbsp; YWB明折明扣折扣联程产品</span></td>
+                        </tr>
+                        <tr>
+                            <td align="center">Y</td>
+                            <td>l收取公布票价30%的退票费。客票全部未使用：扣除各航段明折明扣舱位公布票价对应的退票手续费后，余额退还旅客。客票已部分使用：扣除已使用航段舱位公布票价和未使用航段公布票价对应的退票手续费后，如有余额退还旅客。</td>
+                            <td rowspan="3">相同子舱位改期，每次收取CNY 200元改期费。    子舱位变更改期：客票全部未使用重新订座，并使用“PAT：A”计算票价后与原付票价进行比较，差额少补多不退，不再另行收取改期费；客票部分使用：收取未使用航段舱位对应公布票价差价，差额少补多不退，不再另行收取改期费。<br /></td>
+                            <td>不允许签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">B/M/M1/H/H1/K/K1/L/L1/Q/Q1</td>
+                            <td>l 收取公布票价40%的退票费。客票全部未使用：扣除各航段公布票价对应的退票手续费后，余额退还旅客。</td>
+                            <td>不允许签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">Ø G/V/V1</td>
+                            <td>不得退票。</td>
+                            <td>不允许签转</td>
+                        </tr>
+                        <tr align="center">
+                            <td colspan="4"><div class="current_find" style="font-size: 14px;">国航CA  明折明扣舱直减产品（OW/RT）  （适用于普通航线）</div></td>
+                        </tr>
+                        <tr>
+                            <td align="center"><span class="STYLE3">舱位</span></td>
+                            <td align="center"><span class="STYLE3">关于退票</span></td>
+                            <td align="center"><span class="STYLE3">关于变更</span></td>
+                            <td align="center"><span class="STYLE3">关于签转</span></td>
+                        </tr>
+                        <tr>
+                            <td align="center">P\F\A\C\D\Z\W\Y</td>
+                            <td>客票全部未使用，扣除各航段对应的退票手续费后，余额退还,l收取公布票价10%的退票费。客票已部分使用，扣除已使用航段票面价（如无分摊价格，扣除1/2全程票面价）和未使用航段对应的退票手续费后，余额退还旅客，客票必须顺序使用,如未顺序使用，不允许退票。</td>
+                            <td>相同舱位每次每段更改收取公布运价5%的改期费；子舱位变更改期：收取原舱位公布运价与变更后子舱位公布运价的差价，不再另行收取改期费。</td>
+                            <td>不允许签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">Ø B\M\M1\H\H1\K\K1\</td>
+                            <td>客票全部未使用，扣除各航段对应的退票手续费后，余额退还,收取公布运价20%的退票费。客票已部分使用，扣除已使用航段票面价（如无分摊价格，扣除1/2全程票面价）和未使用航段对应的退票手续费后，余额退还旅客，客票必须顺序使用,如未顺序使用，不允许退票。</td>
+                            <td>相同舱位每次每段更改收取公布运价10%的改期费；子舱位变更改期：收取原舱位公布运价与变更后子舱位公布运价的差价，不再另行收取改期费。</td>
+                            <td>不允许签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">L\L1\Q\Q1\G\V\V1</td>
+                            <td>客票全部未使用，扣除各航段对应的退票手续费后，余额退还收取公布运价40%的退票费。客票已部分使用，扣除已使用航段票面价（如无分摊价格，扣除1/2全程票面价）和未使用航段对应的退票手续费后，余额退还旅客，客票必须顺序使用,如未顺序使用，不允许退票。</td>
+                            <td>相同舱位每次每段更改收取公布运价30%的改期费；子舱位变更改期：收取原舱位公布运价与变更后子舱位公布运价的差价，不再另行收取改期费。</td>
+                            <td>不允许签转</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">升舱：收取原舱位公布运价与升舱后舱位公布运价的差价，不再另行收取改期费。购买A、D、Z舱，实际乘坐超级经济舱及普通经济舱，均退还原付票价与“M”舱公布运价的差额。如差额为零或为负数，则不退还舱位等级票价差额。</td>
+                        </tr>
+                        <tr>
+                            <td><strong class="STYLE1">国航客服电话</strong></td>
+                            <td colspan="3">95583</td>
+                        </tr>
+                    </table>
+            </div>
+            <div class="tbl_Invalidticketrequests MU-container">
+                <div class="current_find" style="font-size: 14px;margin-bottom:10px">【新规定】</div>
+                <table width="100%" cellspacing="1" cellpadding="0" class="tablez">
+                        <col width="105" />
+                        <col width="370" />
+                        <col width="370" />
+                        <col width="170" />
+                        <tbody>
+                            <tr>
+                                <td colspan="4" height="20"><div class="current_find" style="font-size:14px; text-align:center;">东航—MU &nbsp;&nbsp; 上航—FM &nbsp;&nbsp; 中联—KN </div></td>
+                            </tr>
+                            <tr>
+                                <td align="center"><span class="STYLE3">舱位</span></td>
+                                <td><span class="STYLE3">关于退票</span><b>（航班规定离站时间以客票上每一航段最后一次变更后的起飞日期/时间为准，并按照取消定座的日期/时间计算退票手续费）</b></td>
+                                <td><span class="STYLE3">关于变更</span><b>（航班规定离站时间以网站提交变更的申请时间向前推24小时（即T-24H）与订单中显示的航班起飞时间做比较，以此作为手续费的计算标准。（以航班起飞前2小时作为航前/航后的时间划分截点。）</b></td>
+                                <td align="center"><span class="STYLE3">关于签转</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center">F J</td>
+                                <td>航班规定离站时间2小时之前免收退票费，离站时间2小时以内至航班起飞后收取票面价10%退票费。</td>
+                                <td>航班规定离站时间2小时之前免收变更费，离站时间2小时以内至航班起飞后收取5%变更费。</td>
+                                <td>允许客票自愿签转，但注有&quot;不得签转&quot;字样的客票除外</td>
+                            </tr>
+                            <tr>
+                                <td align="center">P</td>
+                                <td>航班规定离站时间2小时之前免收退票费，离站时间2小时以内至航班起飞后收取票面价10%退票费。（其中上海始发航线P舱的特殊运价的不管航班起飞前后都收取10%的退票费；由于具体航线过多，请最终以退票部确认为准。异地始发直减运价航线收取实际票面价20%的退票费。低开的特殊票价不得退票。）</td>
+                                <td>航班规定离站时间2小时之前免收变更费，离站时间2小时以内至航班起飞后收取5%变更费。（其中上海始发航线P舱的特殊运价的不管航班起飞前后都不得变更，不得签转；由于具体航线过多，请最终以退票部确认为准。异地始发直减运价航线不得自愿变更航班日期。低开的特殊票价不得更改。）</td>
+                                <td>不得自愿签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center"> Y</td>
+                                <td>航班规定离站时间2小时之前收取票面价5%退票费，离站时间2小时以内至航班起飞后收取票面价10%退票费。</td>
+                                <td>航班规定离站时间2小时之前免收变更费，离站时间2小时以内至航班起飞后收取5%变更费。</td>
+                                <td>允许客票自愿签转，但注有&quot;不得签转&quot;字样的客票除外</td>
+                            </tr>
+                            <tr>
+                                <td align="center">BMEHKLNR </td>
+                                <td>航班规定离站时间2小时之前收取票面价20%退票费，离站时间2小时以内至航班起飞后收取票面价30%退票费。</td>
+                                <td>航班规定离站时间2小时之前收取10%变更费，离站时间2小时以内至航班起飞后收取20%变更费。</td>
+                                <td rowspan="2">不得自愿签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">S V</td>
+                                <td>航班规定离站时间7天前收取票面价40%退票费,航班规定离站时间7天内至航班规定离站时间2小时之前收取票面价80%退票费,航班规定离站时间2小时之前至航班起飞后不得退票，只退基建燃油费。</td>
+                                <td>航班规定离站时间2小时之前收取30%变更费，航班规定离站时间2小时之前至航班起飞后收取50%变更费。</td>
+                            </tr>
+                            <tr>
+                                <td align="center">T Z G</td>
+                                <td>航班规定离站时间7天前收取票面价40%退票费,航班规定离站时间7天内至航班规定离站时间2小时之前收取票面价80%退票费,航班规定离站时间2小时之前至航班起飞后不得退票，只退基建燃油费。（行程单上有不得退票字样的，不得退票。G舱特殊票价的不得退改签）</td>
+                                <td>航班规定离站时间2小时之前收取30%变更费，航班规定离站时间2小时之前至航班起飞后收取50%变更费。（G舱特殊票价的不得退改签）</td>
+                                <td>不得自愿签转</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">公布来回程（RT）、联程(MT)折扣运价客票，客票全部未使用，从已付票款中扣除相应舱位的手续费，退还余额；如客票已部分使用，从已付票款中扣除已使用航段相应舱位的单程票价的票款，余额扣除相应舱位的适用的手续费，退还余额。       子舱位变更或升舱后如需退票，按变更前的舱位票价规定执行，并全额退还补收的差额。已收取的变更费不退。多次变更后退票，按照第一次变更前的舱位票价规定执行，并全额退还补收的差额，已收取的变更费不退。旅客自愿变更航程,按自愿退票办理.<br/>
+                                注意：鉴于目前东航以提交网站退票时间作为取消时间来收取退票费，请提交当天起飞时间的退票订单的，退票申请提交后一定要致电我公司退票部，以免提交航空公司网站的时间迟了导致退票费增加！退票部电话：021-51811615或021-62999004! </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4"><b>国内退票费/改期费不得低于50元,低于的按此标准收取,高于此标准的按实际收取;所有退票费计算后四舍五入至个位。退改签规定东航有最终解释权</b></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" height="20"><div class="current_find" style="font-size:14px; text-align:center;">东航—MU &nbsp;&nbsp; 上航—FM  &nbsp;&nbsp;&nbsp;  （乘机日13.12.31前适用）</div></td>
+                            </tr>
+                            <tr>
+                                <td>A（乘机日13.12.31前）</td>
+                                <td>自愿退票收取票面价10%退票费。注：以提交东上航网站时间为准。此舱位为头等促销特殊舱，请以退票部咨询为准。</td>
+                                <td>不得自愿签转、变更</td>
+                                <td>不得自愿签转</td>
+                            </tr>
+                            <tr height="20">
+                                <td><strong class="STYLE1">东航客服电话</strong></td>
+                                <td colspan="3" height="18">021-95530</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+            <div class="tbl_Invalidticketrequests CZ-container">                 
+                 <table width="100%" cellspacing="1" cellpadding="0" class="tablez">
+                        <col width="105" />
+                        <col width="370" />
+                        <col width="370" />
+                        <col width="170" />
+                        <tbody>
+                            <tr>
+                                <td colspan="4" align="center" height="20">
+                                    <div class="current_find" style="font-size:14px;">南航--CZ &nbsp; <span class="STYLE3">（适用于即日销售乘机日13.10.27日（含）起的客票适用）</span> </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center"><span class="STYLE3">舱位</span></td>
+                                <td align="center"><span class="STYLE3">关于退票</span></td>
+                                <td align="center"><span class="STYLE3">关于变更</span></td>
+                                <td align="center"><span class="STYLE3">关于签转</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center">F A J</td>
+                                <td>航班规定离站时间2小时（含）前，收取公布运价5%退票费；航班规定离站时间2小时（不含）后，收取公布运价10%退票手续费</td>
+                                <td>航班规定离站时间2小时（含）前，免费变更；航班规定离站时间2小时（不含）后，每次变更收取5%手续费</td>
+                                <td>允许自愿签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center"> C</td>
+                                <td>航班规定离站时间2小时（含）前，收取公布运价5%退票费；航班规定离站时间2小时（不含）后，收取公布运价10%退票手续费</td>
+                                <td>航班规定离站时间2小时（含）前，免费变更；航班规定离站时间2小时（不含）后，每次变更收取5%手续费</td>
+                                <td>不允许自愿签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">W</td>
+                                <td>航班规定离站时间2小时（含）前，收取公布运价10%退票费；航班规定离站时间2小时（不含）后，收取公布运价20%退票手续费</td>
+                                <td>航班规定离站时间2小时（含）前，免费变更；航班规定离站时间2小时（不含）后，每次变更收取10%手续费</td>
+                                <td rowspan="3">允许自愿签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">S（S1*折扣介于99折至75折（含）之间，S2*折扣介于75折（不含）至45折（含）之间，S3*折扣为45折以下）</td>
+                                <td>S1*运价原航班规定离站时间前2小时（含）之前收取10%退票费，原航班规定离站时间前2小时(不含)后收取20%退票费；S2*运价原航班规定离站时间前2小时（含）之前收取30%退票费，原航班规定离站时间前2小时(不含)后收取50%退票费；S3*不得退票。（客票变更后退票，所收变更费不退；票价价差部分按新运价使用条件的退票手续费标准办理,其它按变更前运价退票规定办理，合计收取退票费。）</td>
+                                <td>自愿变更：S1*运价航原航班规定离站时间前2小时（含）之前免费变更，原航班规定离站时间前2小时(不含)后收取10%变更费；S2*运价原航班规定离站时间前2小时（含）之前收取10%变更费，原航班规定离站时间前2小时(不含)后收取30%变更费；S3*不得变更。      S舱不同运价之间的变更：a.较高运价改为较低运价，按自愿退票处理；b.较低运价改为较高运价，收取票价价差及航班、日期变更手续费；      不同舱位，不同运价变更:a.较高票价改为较低票价，按自愿退票办理；b.S舱较低票价改为经济舱较高票价或经济舱较低票价改为S舱较高票价：不发生客票航班/日期变更时，仅收取票价价差；发生客票航班/日期变更，则同时收取变更费和票价价差。c．若变更目标航班某舱位无运价，则不得变更到该航班此舱位。</td>
+                            </tr>
+                            <tr>
+                                <td align="center">Y</td>
+                                <td>航班规定离站时间2小时（含）前，收取公布运价10%退票费; 航班规定离站时间2小时（不含）后，收取公布运价20%的退票手续费</td>
+                                <td>航班规定离站时间2小时（含）前，免费变更；航班规定离站时间2小时（不含）后，每次变更收取10%手续费</td>
+                            </tr>
+                            <tr>
+                                <td align="center">B M H</td>
+                                <td>航班规定离站时间2小时（含）前，收取10%退票费; 航班规定离站时间2小时（不含）后，收取20%的退票手续费</td>
+                                <td>航班规定离站时间2小时（含）前，免费变更；航班规定离站时间2小时（不含）后，每次变更收取10%手续费</td>
+                                <td rowspan="3">不允许自愿签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">K L E V</td>
+                                <td>航班规定离站时间2小时（含）前，收取公布运价30%退票费; 航班规定离站时间2小时（不含）后，收取公布运价50%的退票手续费</td>
+                                <td>航班规定离站时间2小时（含）前，每次变更收取10%手续费；航班规定离站时间2小时（不含）后，每次变更收取30%手续费</td>
+                            </tr>
+                            <tr>
+                                <td align="center">Z T R N</td>
+                                <td>不得退票</td>
+                                <td>不得签转；不得更改 </td>
+                            </tr>
+                            <tr>
+                                <td align="center">P D（P/D代表头等舱、公务舱的促销公布运价；，PPRL*、DPRL*代表票价水平低于Y105的头等舱、公务舱促销运价；PPRK*、DPRK*代表票价水平等于或高于Y105、且低于Y150的头等舱、公务舱促销运价；PPRH*、DPRH*代表票价水平等于或高于Y150的头等舱、公务舱促销运价）</td>
+                                <td>票价级别为P/D客票退票:收取各舱位对应公布运价10％的退票费；票价级别为PPRH*/DPRH*客票退票:收取各舱位对应公布运价20％的退票费；票价级别为PPRK*/DPRK*客票退票:收取各舱位对应公布运价30％的退票费；票价级别为PPRL*/DPRL*客票退票:收取各舱位对应公布运价50％的退票费。</td>
+                                <td>票价级别为P/D客票的变更:对应舱位变更每次收取各舱位对应公布运价5％的变更费；           票价级别为PPRH*/DPRH*客票的变更:对应舱位变更每次收取各舱位对应公布运价5％的变更费；         票价级别为PPRK*/DPRK*客票的变更:对应舱位变更每次收取各舱位对应公布运价10％的变更费；   票价级别为PPRL*/DPRL*客票的变更:    对应舱位变更每次收取各舱位对应公布运价30％的变更费。</td>
+                                <td>不允许自愿签转</td>
+                            </tr>
+                            <tr>
+                                <td height="20"><strong class="STYLE1">南航客服电话</strong></td>
+                                <td colspan="3"><span class="STYLE2">（020）95539 4000095539 &nbsp;&nbsp; 电子商务: （020）86133399 （020）28295539</span></td>
+                            </tr>
+                        </tbody>
+                    </table>         
+            </div>
+            <div class="tbl_Invalidticketrequests HU-container">
+                <div class="current_find" style="font-size: 14px;margin-bottom:10px">【新规定】</div>
+                <table width="100%" cellspacing="1" cellpadding="0" class="tablez">
+                        <col width="105" />
+                        <col width="370" />
+                        <col width="370" />
+                        <col width="170" />
+                        <tbody>
+                            <tr>
+                                <td colspan="4" align="center" height="20"><div class="current_find" style="font-size: 14px;">海航HU、大新华CN</div></td>
+                            </tr>
+                            <tr align="center">
+                                <td><span class="STYLE3">舱位</span></td>
+                                <td><span class="STYLE3">关于退票</span></td>
+                                <td><span class="STYLE3">关于变更</span></td>
+                                <td><span class="STYLE3">关于签转</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center">R</td>
+                                <td>航班规定离站时间前（含）收取公布票价5%退票费；航班规定离站时间后收取公布票价10%的退票费</td>
+                                <td>航班规定离站时间前（含）免费变更；航班规定离站时间后变更收取10%变更费</td>
+                                <td>允许签转（公务，宾客免票不允许）</td>
+                            </tr>
+                            <tr>
+                                <td align="center">F</td>
+                                <td>航班规定离站时间前（含）收取公布票价5%退票费；航班规定离站时间后收取公布票价10%的退票费</td>
+                                <td>航班规定离站时间前（含）免费变更；航班规定离站时间后变更收取10%变更费</td>
+                                <td>允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">F1 Z</td>
+                                <td>航班规定离站时间前（含）收取公布票价5%退票费；航班规定离站时间后收取公布票价10%的退票费</td>
+                                <td>航班规定离站时间前（含）免费变更；航班规定离站时间后变更收取10%变更费</td>
+                                <td>不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">C</td>
+                                <td>航班规定离站时间前（含）收取公布票价5%退票费；航班规定离站时间后收取公布票价10%的退票费</td>
+                                <td>航班规定离站时间前（含）免费变更；航班规定离站时间后变更收取10%变更费</td>
+                                <td>允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">C1</td>
+                                <td>航班规定离站时间前（含）收取公布票价5%退票费；航班规定离站时间后收取公布票价10%的退票费</td>
+                                <td>航班规定离站时间前（含）免费变更；航班规定离站时间后变更收取10%变更费</td>
+                                <td rowspan="2">不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">I</td>
+                                <td>航班规定离站时间前（含）收取公布票价20%退票费；航班规定离站时间后收取公布票价30%的退票费</td>
+                                <td>航班规定离站时间前（含）收取10%变更费费；航班规定离站时间后变更收取20%变更费</td>
+                            </tr>
+                            <tr>
+                                <td align="center">Y</td>
+                                <td>航班规定离站时间前（含）收取公布票价5%退票费；航班规定离站时间后收取公布票价10%的退票费</td>
+                                <td>航班规定离站时间前（含）免费变更；航班规定离站时间后变更收取10%变更费</td>
+                                <td>允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">B H K L M M1  Q Q1</td>
+                                <td>航班规定离站时间前（含）收取公布票价20%退票费；航班规定离站时间后收取公布票价30%的退票费</td>
+                                <td>航班规定离站时间前（含）收取10%变更费费；航班规定离站时间后变更收取20%变更费</td>
+                                <td rowspan="2">不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center"> X U E</td>
+                                <td>航班规定离站时间前（含）收取公布票价50%退票费；航班规定离站时间后收取公布票价100%退票费</td>
+                                <td>航班规定离站时间前（含）收取20%变更费费；航班规定离站时间后变更收取30%变更费</td>
+                            </tr>
+                            <tr>
+                                <td align="center">T</td>
+                                <td>不得退票，仅退机建燃油费，机票款不退</td>
+                                <td>不得自愿变更，升舱见请具体咨询</td>
+                                <td>　</td>
+                            </tr>
+                            <tr>
+                                <td align="center">A</td>
+                                <td>航班离站时间前（含）收取各舱位对应票价5%退票费，航班离站时间后收取各舱位对应票价10%退票费.如遇机型调整等原因，调整后航班不能提供头等舱座位时，旅客可办理非自愿退票；若旅客不同意退票，在征得旅客同意后，原客票按非自愿退票处理，按本航班曾经销售过的经济舱散客最低舱位（限6折及6折以上）重新为旅客订座、出票，退还A舱与实际出票舱位差额及税费差额（由不正常航班室负责K位，并在PNR中备注：RMK:降舱优惠），旅客享受经济舱待遇。</td>
+                                <td>非自愿变更：有头等舱机型变更为无头等舱机型时：A保护至Y舱;自愿变更：航班离站时间前（含）均免费变更，不限次数；航班离站时间后，每次收取各舱位对应票价10%变更费。变更到F舱，需补齐F舱与Y舱全票价的差额；变更到R舱，需补齐R舱与Y舱全票价的差额；变更至Y舱按非自愿退票处理，变更至Y舱以下折扣舱按自愿退票处理。</td>
+                                <td>允许签转（可自愿签转至其它航空公司的经济舱，按航空公司对应舱位规则办理；非自愿签转只得签转至其它航空公司的经济舱）</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">A舱产品不适用于购买Y50%客票的军警残、儿童等旅客。婴儿购票按随行成人同服务等级F10%购买，空地服务与随行成人享受相同的服务。如舒适A舱成人旅客携带儿童，儿童也可购买舒适Ａ舱产品，但需支付与成人同等产品票价，民航发展基金与燃油费享受儿童旅客标准。儿童旅客必须打印CHD标示，PAT:A后手工修改价格成A舱全价、及儿童旅客应收取的基建燃油。儿童及婴儿不可购单独买该产品。</td>
+                            </tr>
+                            <tr>
+                                <td align="center">D</td>
+                                <td>航班规定离站时间前（含）收5%退票费；航班规定离站时间后收取10%的退票费</td>
+                                <td>航班规定离站时间前(含)免费变更；航班规定离站时间后变更收取10%变更费</td>
+                                <td>允许签转</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">N舱退票变更规定按特价规定执行</td>
+                            </tr>
+                            <tr>
+                                <td height="20"><strong class="STYLE1">海航客服电话</strong></td>
+                                <td colspan="3"><span class="STYLE2">8008768999 950718</span></td>
+                            </tr> 
+                            <tr>
+                                <td height="20"><strong class="STYLE1">大新华客服电话</strong></td>
+                                <td colspan="3"><span class="STYLE2">950710 8008768999 <b style="color:#333333;">（固话拨打免费的）</b></span></td>
+                            </tr> 
+                         </tbody>
+                    </table>
+            </div>
+            <div class="tbl_Invalidticketrequests FM-container">
+                <div class="current_find" style="font-size: 14px;margin-bottom:10px">【新规定】</div>
+                <table width="100%" cellspacing="1" cellpadding="0" class="tablez">
+                        <col width="105" />
+                        <col width="370" />
+                        <col width="370" />
+                        <col width="170" />
+                        <tbody>
+                            <tr>
+                                <td colspan="4" height="20"><div class="current_find" style="font-size:14px; text-align:center;">东航—MU &nbsp;&nbsp; 上航—FM &nbsp;&nbsp; 中联—KN </div></td>
+                            </tr>
+                            <tr>
+                                <td align="center"><span class="STYLE3">舱位</span></td>
+                                <td><span class="STYLE3">关于退票</span><b>（航班规定离站时间以客票上每一航段最后一次变更后的起飞日期/时间为准，并按照取消定座的日期/时间计算退票手续费）</b></td>
+                                <td><span class="STYLE3">关于变更</span><b>（航班规定离站时间以网站提交变更的申请时间向前推24小时（即T-24H）与订单中显示的航班起飞时间做比较，以此作为手续费的计算标准。（以航班起飞前2小时作为航前/航后的时间划分截点。）</b></td>
+                                <td align="center"><span class="STYLE3">关于签转</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center">F J</td>
+                                <td>航班规定离站时间2小时之前免收退票费，离站时间2小时以内至航班起飞后收取票面价10%退票费。</td>
+                                <td>航班规定离站时间2小时之前免收变更费，离站时间2小时以内至航班起飞后收取5%变更费。</td>
+                                <td>允许客票自愿签转，但注有&quot;不得签转&quot;字样的客票除外</td>
+                            </tr>
+                            <tr>
+                                <td align="center">P</td>
+                                <td>航班规定离站时间2小时之前免收退票费，离站时间2小时以内至航班起飞后收取票面价10%退票费。（其中上海始发航线P舱的特殊运价的不管航班起飞前后都收取10%的退票费；由于具体航线过多，请最终以退票部确认为准。异地始发直减运价航线收取实际票面价20%的退票费。低开的特殊票价不得退票。）</td>
+                                <td>航班规定离站时间2小时之前免收变更费，离站时间2小时以内至航班起飞后收取5%变更费。（其中上海始发航线P舱的特殊运价的不管航班起飞前后都不得变更，不得签转；由于具体航线过多，请最终以退票部确认为准。异地始发直减运价航线不得自愿变更航班日期。低开的特殊票价不得更改。）</td>
+                                <td>不得自愿签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center"> Y</td>
+                                <td>航班规定离站时间2小时之前收取票面价5%退票费，离站时间2小时以内至航班起飞后收取票面价10%退票费。</td>
+                                <td>航班规定离站时间2小时之前免收变更费，离站时间2小时以内至航班起飞后收取5%变更费。</td>
+                                <td>允许客票自愿签转，但注有&quot;不得签转&quot;字样的客票除外</td>
+                            </tr>
+                            <tr>
+                                <td align="center">BMEHKLNR </td>
+                                <td>航班规定离站时间2小时之前收取票面价20%退票费，离站时间2小时以内至航班起飞后收取票面价30%退票费。</td>
+                                <td>航班规定离站时间2小时之前收取10%变更费，离站时间2小时以内至航班起飞后收取20%变更费。</td>
+                                <td rowspan="2">不得自愿签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">S V</td>
+                                <td>航班规定离站时间7天前收取票面价40%退票费,航班规定离站时间7天内至航班规定离站时间2小时之前收取票面价80%退票费,航班规定离站时间2小时之前至航班起飞后不得退票，只退基建燃油费。</td>
+                                <td>航班规定离站时间2小时之前收取30%变更费，航班规定离站时间2小时之前至航班起飞后收取50%变更费。</td>
+                            </tr>
+                            <tr>
+                                <td align="center">T Z G</td>
+                                <td>航班规定离站时间7天前收取票面价40%退票费,航班规定离站时间7天内至航班规定离站时间2小时之前收取票面价80%退票费,航班规定离站时间2小时之前至航班起飞后不得退票，只退基建燃油费。（行程单上有不得退票字样的，不得退票。G舱特殊票价的不得退改签）</td>
+                                <td>航班规定离站时间2小时之前收取30%变更费，航班规定离站时间2小时之前至航班起飞后收取50%变更费。（G舱特殊票价的不得退改签）</td>
+                                <td>不得自愿签转</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">公布来回程（RT）、联程(MT)折扣运价客票，客票全部未使用，从已付票款中扣除相应舱位的手续费，退还余额；如客票已部分使用，从已付票款中扣除已使用航段相应舱位的单程票价的票款，余额扣除相应舱位的适用的手续费，退还余额。       子舱位变更或升舱后如需退票，按变更前的舱位票价规定执行，并全额退还补收的差额。已收取的变更费不退。多次变更后退票，按照第一次变更前的舱位票价规定执行，并全额退还补收的差额，已收取的变更费不退。旅客自愿变更航程,按自愿退票办理.<br/>
+                                注意：鉴于目前东航以提交网站退票时间作为取消时间来收取退票费，请提交当天起飞时间的退票订单的，退票申请提交后一定要致电我公司退票部，以免提交航空公司网站的时间迟了导致退票费增加！退票部电话：021-51811615或021-62999004! </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4"><b>国内退票费/改期费不得低于50元,低于的按此标准收取,高于此标准的按实际收取;所有退票费计算后四舍五入至个位。退改签规定东航有最终解释权</b></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" height="20"><div class="current_find" style="font-size:14px; text-align:center;">东航—MU &nbsp;&nbsp; 上航—FM  &nbsp;&nbsp;&nbsp;  （乘机日13.12.31前适用）</div></td>
+                            </tr>
+                            <tr>
+                                <td>A（乘机日13.12.31前）</td>
+                                <td>自愿退票收取票面价10%退票费。注：以提交东上航网站时间为准。此舱位为头等促销特殊舱，请以退票部咨询为准。</td>
+                                <td>不得自愿签转、变更</td>
+                                <td>不得自愿签转</td>
+                            </tr>
+                            <tr height="18">
+                            <td><strong class="STYLE1">上航客服电话</strong></td>
+                            <td colspan="3" height="18">021-95530</td>
+                        </tr>
+                        </tbody>
+                    </table>
+            </div>
+            <div class="tbl_Invalidticketrequests SC-container">
+                <div class="down_box disable" id="pr_con5" style="display: block; ">
+                    <!--山东航空-->
+                    <div class="current_find" style="font-size: 14px;margin-bottom:10px">【新规定】</div>
+                    <table width="100%" cellspacing="1" cellpadding="0" class="tablez">
+                            <col width="105" />
+                            <col width="370" />
+                            <col width="370" />
+                            <col width="170" />
+                            <tbody>
+                                <tr>
+                                    <td colspan="4" align="center"><div class="current_find" style="font-size:14px;">山航--SC</div></td>
+                                </tr>
+                                <tr>
+                                    <td align="center"><span class="STYLE3">舱位</span></td>
+                                    <td align="center"><span class="STYLE3">关于退票</span></td>
+                                    <td align="center"><span class="STYLE3">关于变更</span></td>
+                                    <td align="center"><span class="STYLE3">关于签转</span></td>
+                                </tr>
+                                <tr>
+                                    <td align="center">F C</td>
+                                    <td>航班起飞时刻（含）前收取票面价5％的退票费；航班起飞时刻后收取票面价10％的退票费</td>
+                                    <td>航班起飞前 (含)免费改期；航班起飞后收取票面价5%改期费</td>
+                                    <td>允许签转</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">Y</td>
+                                    <td>航班起飞时刻（含）前收取票面价5％的退票费；航班起飞时刻后收取票面价10％的退票费</td>
+                                    <td>航班起飞前 (含)免费改期；航班起飞后收取票面价5%改期费</td>
+                                    <td>允许签转</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">Y1</td>
+                                    <td>航班起飞时刻（含）前收取票面价5％的退票费；航班起飞时刻后收取票面价10％的退票费</td>
+                                    <td>航班起飞前 (含)免费改期；航班起飞后收取票面价5%改期费</td>
+                                    <td>允许签转</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">A</td>
+                                    <td>航班起飞时刻（含）前收取票面价5％的退票费；航班起飞时刻后收取票面价10％的退票费</td>
+                                    <td>同等舱位免费改期；改期时如没有A舱利用，可先致电4006096777山航客服电话在线申请，如客服可申请到同等A仓，直接改期成功。申请无同等A仓，可重订航班外放仓位，待新票成行后，原A舱客票全退。（必须备注另购同航段新客票的票号）。</td>
+                                    <td>不允许签转</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">W</td>
+                                    <td>航班起飞前2小时以外办理退票：收取票面价票面价5％的退票费；航班起飞前2小时及以后办理退票：收取票面价票面价10%退票费</td>
+                                    <td>自愿变更航班/日期：如变更航班有W舱，直接变更至W舱；航班起飞前2小时以外变更：免费；航班起飞前2小时以后（含）变更：收取票面价5%变更费；如变更航班无W舱，全额退票（退票时需附注新购客票票号），重新购买客票；    如需升舱至F舱，按升舱规定办理。</td>
+                                    <td>允许签转</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">D/B/B1/M/M1/H/H1</td>
+                                    <td>航班起飞时刻（含）前收取票面价5％的退票费；航班起飞时刻后收取票面价10％的退票费</td>
+                                    <td>航班起飞前 (含)免费改期；航班起飞后收取票面价5%改期费</td>
+                                    <td>不允许签转</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">K/K1/L/L1/P/P1/Q/Q1/G/G1</td>
+                                    <td>航班起飞时刻（含）前收取票面价10％的退票费；航班起飞时刻后收取票面价30％的退票费</td>
+                                    <td>航班起飞前 (含)收取票面价10%改期费；航班起飞后收取票面价20%改期费</td>
+                                    <td>不允许签转</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">V/U/Z</td>
+                                    <td>航班起飞时刻（含）前收取票面价30％的退票费；航班起飞时刻后收取票面价50％的退票费</td>
+                                    <td>航班起飞前 (含)收取票面价20%改期费；航班起飞后收取票面价30%改期费</td>
+                                    <td>不允许签转</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">S/R/E/J/T</td>
+                                    <td>不得退票</td>
+                                    <td>不得更改</td>
+                                    <td>不允许签转</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">注：改期费、经济舱舱位变更及升降舱差额均按对应客票票面价格计算。明折明扣舱位（F/W/Y/B/M/H/K/L/P/Q/G/V/U/Z）客票可以不按顺序使用，剩余航段按照对应舱位规定执行。当承运人之间F/C/Y舱运价不一致时，也允许自愿变更承运人。如变更后承运人适用票价高于山航票价，需补齐差额后进行变更；如变更后承运人适用票价低于山航票价，允许变更，但差额不退，或者按自愿退票处理。    客票订座舱位变更后如又发生退票，全额退还升舱补收的差额后，按变更前订座舱位退票手续费标准办理。  使用婴儿客票，免费退票；婴儿票价的客票，客票有效期内免费更改。    S/R/E舱票价客票,需升舱至全价改期。<br />
+                                        旅客自愿变更航班后，如果变更前后的机型不同，机场建设费多退少补；旅客非自愿变更航班后，如果变更前后的机型不同，机场建设费多退、少不补。  经济舱范围内变更舱位，不改变舱位等级时允许高舱位改低舱位，但差额不退；低舱位改高舱位，补收实际舱位差额；如客票改期与低舱位改高舱位同时进行，比较舱位差额和改期费，按高者收取。经济舱舱位变更后如需改期，按经济舱舱位变更后的舱位规定执行。变更舱位等级时，提高舱位等级（升舱），按照票面价格与变更后适用舱位票价的差价收取差额；如客票改期与低舱位改高舱位同时进行，比较舱位差价和改期费，按高者收取。</td>
+                                </tr>
+                                <tr>
+                                    <td><strong class="STYLE1">山航客服电话</strong></td>
+                                    <td height="20" colspan="3"><span class="STYLE2">（0531）96777</span></td>
+                                </tr>
+                             </tbody>
+                        </table>
+                </div>
+            </div>
+            <div class="tbl_Invalidticketrequests ZH-container">
+                <div class="current_find" style="font-size: 14px;margin-bottom:10px">【新客规】</div>
+                <table width="100%" cellspacing="1" cellpadding="0" class="tablez">
+                        <col width="105" />
+                        <col width="370" />
+                        <col width="370" />
+                        <col width="170" />
+                        <tbody>
+                            <tr>
+                                <td colspan="4" align="center" height="20"><div class="current_find" style="font-size: 14px;">深航--ZH &nbsp;&nbsp;&nbsp; 昆明--KY</div></td>
+                            </tr>
+                            <tr>
+                                <td align="center"><span class="STYLE3">舱位</span></td>
+                                <td align="center"><span class="STYLE3">关于退票</span></td>
+                                <td align="center"><span class="STYLE3">关于变更</span></td>
+                                <td align="center"><span class="STYLE3">关于签转</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center">F C </td>
+                                <td>航班起飞前2小时之前取消定座免费退票，航班起飞2小时内及航班起飞后取消定座每次票面价收取5%的退票费。</td>
+                                <td>航班起飞前2小时之前或者之后都消定座都免费改期</td>
+                                <td>允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">Y B M H </td>
+                                <td>航班起飞前2小时之前取消定座每次收取票面价5%退票费，航班起飞2小时内及航班起飞后取消定座每次收取票面价10%的退票费</td>
+                                <td>航班起飞前2小时之前取消定座免费改期，航班起飞2小时内及航班起飞后取消定座每次收取票面价5%的改期费</td>
+                                <td rowspan="3">不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">K L J Q Z </td>
+                                <td>航班起飞前2小时之前取消定座每次收取票面价20%退票费，航班起飞2小时内及航班起飞后取消定座每次收取票面价20%的退票费</td>
+                                <td>每次更收取票面价10%的改期费。</td>
+                            </tr>
+                            <tr>
+                                <td align="center">G V W</td>
+                                <td>航班起飞前2小时之前取消定座每次收取票面价50%退票费，航班起飞2小时内及航班起飞后取消定座每次收取票面价50%的退票费</td>
+                                <td>每次改期收取票面价20%的改期费。</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">注：1.儿童\婴儿\革命伤残军人和因公致残人民警察客票免收退票费。     2.改期时无同等舱位开放，可以升舱至高折扣舱位，如如客票改期与低舱位改高舱位同时进行，只收取实际舱位票价差额。3.往返程、缺口程或联程客票必须按顺序使用，在前段伟使用，后段已使用的情况下，前段只能按自愿退票处理，不允许操作任何形式的改期。</td>
+                            </tr>
+                            <tr>
+                                <td height="20"><strong class="STYLE1">深航客服电话</strong></td>
+                                <td colspan="3"><span class="STYLE2">400-88-95080</span></td>
+                            </tr>
+                        </tbody> 
+                    </table>
+            </div>
+            <div class="tbl_Invalidticketrequests 3U-container">
+                <div class="current_find" style="font-size: 14px;margin-bottom:10px">【新客规】</div>
+                <table width="100%" cellspacing="1" cellpadding="0" class="tablez">
+                        <col width="105" />
+                        <col width="370" />
+                        <col width="370" />
+                        <col width="170" />
+                        <tbody>
+                            <tr>
+                                <td colspan="4" align="center" height="20"><div class="current_find" style="font-size: 14px;">川航--3U</div></td>
+                            </tr>
+                            <tr align="center">
+                                <td><span class="STYLE3">舱位</span></td>
+                                <td><span class="STYLE3">关于退票</span></td>
+                                <td><span class="STYLE3">关于变更</span></td>
+                                <td><span class="STYLE3">关于签转</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center">F C</td>
+                                <td>起飞2小时(含)前免收取退票费，起飞2小时内及起飞后收取公布票价10%退票费（以取消订座时间为准）低开价格按照各舱位公布票价计算退票费。</td>
+                                <td>起飞2小时(含)前每次变更免收变更费，起飞2小时内及起飞后每次收取5%变更费</td>
+                                <td>仅允许同价签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">J I</td>
+                                <td>起飞2小时(含)前收取公布票价5％退票费，起飞2小时内及起飞后收取公布票价10%退票费（以取消订座时间为准）低开价格按照各舱位公布票价计算退票费。</td>
+                                <td>起飞2小时(含)前每次变更免收变更费，起飞2小时内及起飞后每次收取5%变更费</td>
+                                <td>不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">A（高端经济）</td>
+                                <td>起飞2小时(含)前收取公布票价10％退票费，起飞2小时内及起飞后收取公布票价15%退票费（以取消订座时间为准）低开价格按照各舱位公布票价计算退票费。</td>
+                                <td>起飞2小时(含)前收取对应公布运价的5%变更费，起飞2小时内及起飞后收取对应公布运价10%变更费。（注意A舱自愿变更到Y及Y以下折扣舱按自愿退票处理）</td>
+                                <td>不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">Y</td>
+                                <td>起飞2小时(含)前收取5％退票费，起飞2小时内及起飞后收取10%退票费（以取消订座时间为准）低开价格按照各舱位公布票价计算退票费。</td>
+                                <td>起飞2小时(含)前每次变更免收变更费，起飞2小时内及起飞后每次收取5%变更费</td>
+                                <td>仅允许同价签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center"> T W H</td>
+                                <td>起飞2小时(含)前收取公布票价10％退票费，起飞2小时内及起飞后收取公布票价20%退票费（以取消订座时间为准）低开价格按照各舱位公布票价计算退票费。</td>
+                                <td>起飞2小时(含)前每次变更免收变更费，起飞2小时内及起飞后每次收取5%变更费</td>
+                                <td rowspan="5">T舱以下不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">M G S L</td>
+                                <td>起飞2小时(含)前收取公布票价20％退票费，起飞2小时内及起飞后收取公布票价30%退票费（以取消订座时间为准）低开价格按照各舱位公布票价计算退票费。</td>
+                                <td>起飞2小时(含)前每次变更收取5%变更费，起飞2小时内及起飞后每次收取10%变更费</td>
+                            </tr>
+                            <tr>
+                                <td align="center">Q E V R</td>
+                                <td>起飞2小时(含)前收取公布票价30％退票费，起飞2小时内及起飞后收取公布票价40%退票费（以取消订座时间为准）低开价格按照各舱位公布票价计算退票费。</td>
+                                <td>起飞2小时(含)前每次变更收取10%变更费，起飞2小时内及起飞后每次收取20%变更费</td>
+                            </tr>
+                            <tr>
+                                <td align="center">K N</td>
+                                <td>仅退机建燃油费，机票款不退</td>
+                                <td>不得自愿改期、升舱</td>
+                            </tr>
+                            <tr>
+                                <td align="center">X U P D</td>
+                                <td>仅退机建燃油费，机票款不退</td>
+                                <td>不得自愿改期、变更</td>
+                            </tr>
+                            <tr>
+                                <td height="20"><strong class="STYLE1">川航客服电话</strong></td>
+                                <td colspan="3"><span class="STYLE2">028-88888888</span></td>
+                            </tr> 
+                          </tbody>
+                    </table>
+            </div>
+            <div class="tbl_Invalidticketrequests MF-container">
+                <div class="current_find" style="font-size: 14px;margin-bottom:10px">【新客规】</div>
+                <table width="100%" cellspacing="1" cellpadding="0" class="tablez">
+                        <col width="105" />
+                        <col width="370" />
+                        <col width="370" />
+                        <col width="170" />
+                        <tbody>
+                            <tr>
+                                <td colspan="4" align="center" height="20"><div class="current_find" style="font-size: 14px;">厦航--MF</div></td>
+                            </tr>
+                            <tr>
+                                <td align="center"><span class="STYLE3">舱位</span></td>
+                                <td align="center"><span class="STYLE3">关于退票</span></td>
+                                <td align="center"><span class="STYLE3">关于变更</span></td>
+                                <td align="center"><span class="STYLE3">关于签转</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center">P F J Y</td>
+                                <td>航班起飞时间2小时前（含2小时）收取对应舱位等级全票价（P/F/J/Y）的5%退票费；航班起飞时间前2小时内（不含2小时）及航班起飞后收取对应舱位等级全票价（P/F/J/Y）的10%退票费。</td>
+                                <td>航班起飞时间2小时前（含2小时）: 1、变更≤3次，免费；<br />
+                                    2、变更&gt;3次，收取对应舱位等级全票价（P/F/J/Y）的5%变更费；航班起飞时间前2小时内（不含2小时）及航班起飞后收取对应舱位等级全票价（P/F/J/Y）的5%变更费。    自愿变更航程：按相应舱位自愿退票处理，收取退票费，另购新票。</td>
+                                <td>允许签转（允许自愿签转的客票签转须在航班起飞时间24小时（含）以前提出。如在航班起飞时间24小时以内及起飞后提出，按该舱位航班起飞后自愿变更收费标准收取变更费）</td>
+                            </tr>
+                            <tr>
+                                <td align="center">B M</td>
+                                <td>航班起飞时间2小时前（含2小时）收取经济舱全票价（Y）的10%退票费；航班起飞时间前2小时内（不含2小时）及航班起飞后收取经济舱全票价（Y）的20%退票费。</td>
+                                <td>航班起飞时间2小时前（含2小时）：1、变更≤3次，免费；<br />
+                                    2、变更&gt;3次，对应舱位等级全票价（P/F/J/Y）的5%变更费；航班起飞时间前2小时内（不含2小时）及航班起飞后收取经济舱全票价（Y）的10%变更费。   自愿变更航程：按相应舱位自愿退票处理，收取退票费，另购新票。</td>
+                                <td rowspan="3">不得签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">L K</td>
+                                <td>航班起飞时间2小时前（含2小时）收取经济舱全票价（Y）的10%退票费；航班起飞时间前2小时内（不含2小时）及航班起飞后收取经济舱全票价（Y）的20%退票费。</td>
+                                <td>航班起飞时间2小时前（含2小时）经济舱全票价（Y）的5%变更费；航班起飞时间前2小时内（不含2小时）及航班起飞后收取经济舱全票价（Y）的10%变更费。    自愿变更航程：按相应舱位自愿退票处理，收取退票费，另购新票。</td>
+                            </tr>
+                            <tr>
+                                <td align="center">N Q V T</td>
+                                <td>航班起飞时间2小时前（含2小时）收取经济舱全票价（Y）的20%退票费；航班起飞时间前2小时内（不含2小时）及航班起飞后收取经济舱全票价（Y）的40%退票费。</td>
+                                <td>航班起飞时间2小时前（含2小时）经济舱全票价（Y）的10%变更费；航班起飞时间前2小时内（不含2小时）及航班起飞后收取经济舱全票价（Y）的20%变更费。    自愿变更航程：按相应舱位自愿退票处理，收取退票费，另购新票。</td>
+                            </tr>
+                            <tr>
+                                <td align="center">W</td>
+                                <td>不得退票，仅退机建燃油费，机票款不退</td>
+                                <td>不得更改，不得升舱</td>
+                                <td>不得签转</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">注：不得倒用退票。儿童票按相应舱位规定办理(无成人陪伴儿童不允许)。婴儿免收退票费及变更费。同等舱位自愿变更应在同航程航班同等舱位有可利用座位的条件下办理。    自愿升舱需同时收取变更费以及新、旧舱位之间的票价差额。自愿降舱按原定舱位退座退票，收取退票费，另购新票。客票由低舱位改高舱位而换开客票（升舱）时，需在新票    “签注（EI）”栏内注明原客票舱位，注明格式为“原客票XX舱”,而用OI指令升舱的客票无需备注原客票舱位；原客票在电子退款单“旅客姓名（Passenger    Name）”栏备注新票票号(格式为“SC新票号”，不得出现汉字)后再退座退票，原客票需收取变更费，不收取退票费。自愿变更舱位后如需再变更，按变更后的相应舱位规定办理，变更前所收的变更费不退。    凡不允许自愿签转的客票要求自愿签转，按该舱位自愿退票规定办理。</td>
+                            </tr>
+                            <tr>
+                                <td height="20"><strong class="STYLE1">厦航客服电话</strong></td>
+                                <td colspan="3"><span class="STYLE2">8008582666 （0592）95557</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+            <div class="tbl_Invalidticketrequests EU-container">
+                <table width="100%" cellspacing="1" cellpadding="0" class="tablez">
+                        <col width="105" />
+                        <col width="370" />
+                        <col width="370" />
+                        <col width="170" />
+                        <tbody>
+                            <tr align="center">
+                                <td colspan="4" height="20"><div class="current_find" style="font-size: 14px;">成都航空-EU</div></td>
+                            </tr>
+                            <tr align="center">
+                                <td><span class="STYLE3">舱位</span></td>
+                                <td><span class="STYLE3">关于退票</span></td>
+                                <td><span class="STYLE3">关于变更</span></td>
+                                <td><span class="STYLE3">关于签转</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center">F C</td>
+                                <td>免费退票</td>
+                                <td>相同航程可免费改期</td>
+                                <td>仅允许同价签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">A J</td>
+                                <td>收取票价5％退票费</td>
+                                <td>相同航程可免费改期</td>
+                                <td>不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">Y</td>
+                                <td>收取票价5％退票费</td>
+                                <td>相同航程可免费改期</td>
+                                <td>仅允许同价签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center"> T H</td>
+                                <td>收取票价5％退票费</td>
+                                <td>相同航程可免费改期</td>
+                                <td rowspan="5">T舱以下不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">M G S L</td>
+                                <td>收取票价10％退票费</td>
+                                <td>每次改期收取票面价10％的改期费</td>
+                            </tr>
+                            <tr>
+                                <td align="center">Q E V R</td>
+                                <td>收取票价30％退票费</td>
+                                <td>每次改期收取票面价20％的改期费</td>
+                            </tr>
+                            <tr>
+                                <td align="center">K</td>
+                                <td>仅退机建燃油费，机票款不退</td>
+                                <td>不得自愿改期、升舱</td>
+                            </tr>
+                            <tr>
+                                <td align="center">N Z D</td>
+                                <td>仅退机建燃油费，机票款不退</td>
+                                <td>不得自愿改期、升舱</td>
+                            </tr>
+                            <tr>
+                                <td align="center">W X B U P</td>
+                                <td colspan="2">客票已使用航段按该航段Y舱全价从总票款中进行扣除；若没有剩余金额，则仅退机建燃油费，客票款不退。             若客票有剩余金额或客票全部未使用时，未使用航段退票以各航段航班起飞日期为准，按各航段分别计收退票费：提前3天及以上办理退票收取该航段Y舱10%的退票费；提前1至2天办理收取Y舱30%的退票费；起飞当天至航班离站时间前办理退票，收取Y舱50%的退票费；该航段离站后提出退票，仅退机建燃油费，客票款不退。</td>
+                                <td>不允许签转</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+            <div class="tbl_Invalidticketrequests HO-container">
+                <div class="current_find" style="font-size: 14px;margin-bottom:10px">【新客规】</div>
+                <table cellspacing="1" cellpadding="0" width="100%" class="tablez">
+                        <col width="105" />
+                        <col width="370" />
+                        <col width="370" />
+                        <col width="170" />
+                        <tr align="center">
+                            <td colspan="4"> <div class="current_find" style="font-size:14px;">吉祥--HO &nbsp;&nbsp; <span class="STYLE3">截止14年1月15日有效</span></div></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" align="right">
+                                 <div class="current_find">所有航空公司重复开票不予以全退；以下只针对散客，团队不适用；只要机票上注明“不得退票”字样的，均一律不得退票！</div>
+                                 <div class="STYLE3">以下退票规定仅供参考，请以退票部（021-32069555*5382、5358分机）最终电话确认为准！</div>
+                            </td>
+                        </tr>    
+                        <tr align="center">
+                            <td><span class="STYLE3">舱位</span></td>
+                            <td><span class="STYLE3">关于退票</span></td>
+                            <td><span class="STYLE3">关于变更</span></td>
+                            <td><span class="STYLE3">关于签转</span></td>
+                        </tr>                    
+                        <tr>
+                            <td align="center">F</td>
+                            <td>免费退票</td>
+                            <td rowspan="6">免费更改</td>
+                            <td>允许签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">A C D</td>
+                            <td>免费退票</td>
+                            <td>不得签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">Y</td>
+                            <td>航班起飞前2小时之前（含）收取公布运价10%退票费，航班起飞前2小时内及航班起飞后收取公布运价15%的退票费，不得低于50元</td>
+                            <td>允许签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">B L M</td>
+                            <td>航班起飞前2小时之前（含）收取公布运价5%的退票费，航班起飞前2小时内及航班起飞后收取公布运价10%的退票费,不得低于50元</td>
+                            <td rowspan="7">不得签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">T E H V</td>
+                            <td>航班起飞前2小时之前（含）收取公布运价20%的退票费，航班起飞前2小时内及航班起飞后收取公布运价30%的退票费,不得低于50元</td>
+                        </tr>
+                        <tr>
+                            <td align="center">K W R Q</td>
+                            <td>航班起飞前2小时之前（含）收取公布运价40%的退票费，航班起飞前2小时内及航班起飞后收取公布运价50%的退票费,不得低于50元</td>
+                        </tr>
+                        <tr>
+                            <td align="center">P </td>
+                            <td>不得退票</td>
+                            <td>不得更改，不得升舱</td>
+                        </tr>
+                        <tr>
+                            <td align="center">X</td>
+                            <td>航班起飞前2小时（含）退票收取公布运价50%手续费，不得低于50元;航班起飞2小时以内及起飞后不得退票</td>
+                            <td>不得更改，不得升舱</td>
+                        </tr>
+                        <tr>
+                            <td align="center">G S</td>
+                            <td>不得退票，G舱和S舱均为特殊舱位请以咨询退票部审核为准</td>
+                            <td> G舱开放的条件下，可免费更改一次；S舱开放的条件下，可免费更改一次；G    S舱位为特殊舱位，以航司最终确认审核为准</td>
+                        </tr>
+                        <tr>
+                            <td align="center">Z</td>
+                            <td>不得退票</td>
+                            <td>不得更改，不得升舱</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">注：儿童、婴儿、伤残军人经济舱、伤残警察经济舱　不收取退票手续费；<b>退票手续费和更改手续费均不得低于50元。</b></td>
+                        </tr>
+                        <tr align="center">
+                            <td colspan="4"><span class="current_find" style="font-size:14px;">吉祥--HO</span> &nbsp;&nbsp; <span class="STYLE3">自出票日2014年1月16起执行</span></td>
+                        </tr>
+                        <tr align="center">
+                            <td><span class="STYLE3">舱位</span></td>
+                            <td><span class="STYLE3">关于退票</span></td>
+                            <td><span class="STYLE3">关于变更</span></td>
+                            <td><span class="STYLE3">关于签转</span></td>
+                        </tr>
+                        <tr>
+                            <td align="center">F</td>
+                            <td>免费退票</td>
+                            <td rowspan="6">免费更改</td>
+                            <td>允许签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">A C D</td>
+                            <td>免费退票</td>
+                            <td>不得签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">Y</td>
+                            <td>航班起飞前2小时之前（含）收取10退票费，航班起飞前2小时内及航班起飞后收取公布运价15%的退票费，不得低于50元</td>
+                            <td>允许签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">B L M</td>
+                            <td>航班起飞前2小时之前（含）收取10退票费，航班起飞前2小时内及航班起飞后收取公布运价15%的退票费，不得低于50元</td>
+                            <td rowspan="6">不得签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">T E H V</td>
+                            <td>航班起飞前2小时之前（含）收取公布运价20%的退票费，航班起飞前2小时内及航班起飞后收取公布运价30%的退票费,不得低于50元</td>
+                        </tr>
+                        <tr>
+                            <td align="center">K W R Q</td>
+                            <td>航班起飞前2小时之前（含）收取公布运价40%的退票费，航班起飞前2小时内及航班起飞后收取公布运价50%的退票费,不得低于50元</td>
+                        </tr>
+                        <tr>
+                            <td align="center">Z  P </td>
+                            <td>不得退票</td>
+                            <td>不得更改</td>
+                        </tr>
+                        <tr>
+                            <td align="center">X(提前购票舱)</td>
+                            <td>航班起飞前2小时（含）退票收取公布运价50%手续费，不得低于50元;航班起飞2小时以内及起飞后不得退票</td>
+                            <td>不得更改，不得升舱</td>
+                        </tr>
+                        <tr>
+                            <td align="center">G S</td>
+                            <td>不得退票，G舱和S舱均为特殊舱位请以咨询退票部审核为准</td>
+                            <td> G舱开放的条件下，可免费更改一次；S舱开放的条件下，可免费更改一次；G    S舱位为特殊舱位，以航司最终确认审核为准</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">注：儿童、婴儿、伤残军人经济舱和头等舱、伤残警察经济舱和头等舱均不收取退票手续费；<b>退票手续费和更改手续费均不得低于50元。</b></td>
+                        </tr>
+                        <tr>
+                            <td height="20"><strong class="STYLE1">吉祥客服电话</strong></td>
+                            <td colspan="3"><span class="STYLE2">95520</span></td>
+                        </tr>
+                    </table>
+            </div>
+            <div class="tbl_Invalidticketrequests G5-container">
+                <div class="current_find" style="font-size: 14px;margin-bottom:10px">【新客规】</div>
+                <table width="100%" cellspacing="1" cellpadding="0" class="tablez">
+                        <col width="105" />
+                        <col width="370" />
+                        <col width="370" />
+                        <col width="170" />
+                        <tbody>
+                            <tr>
+                                <td colspan="4" align="center" height="20"><div class="current_find" style="font-size: 14px;">华夏--G5</div></td>
+                            </tr>
+                            <tr align="center">
+                                <td><span class="STYLE3">舱位</span></td>
+                                <td><span class="STYLE3">关于退票</span></td>
+                                <td><span class="STYLE3">关于变更</span></td>
+                                <td><span class="STYLE3">关于签转</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center">F</td>
+                                <td>航班规定离站时间2小时前（含）取消定座免收退票费，航班规定离站时间2小时内取消定座收取5%退票费</td>
+                                <td>航班规定离站时间2小时前（含）取消定座免费改期，航班规定离站时间2小时内取消定座收取5%改期费</td>
+                                <td>允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">Y</td>
+                                <td>航班规定离站时间2小时前（含）取消定座收取5%退票费，航班规定离站时间2小时内取消定座收取10%退票费</td>
+                                <td>航班规定离站时间2小时前（含）取消定座每次收取5%改期费，航班规定离站时间2小时内取消定座每次收取10%改期费</td>
+                                <td>允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">P T K H </td>
+                                <td>航班规定离站时间2小时前（含）取消定座收取10%退票费，航班规定离站时间2小时内取消定座收取20%退票费</td>
+                                <td>航班规定离站时间2小时前（含）取消定座每次收取5%改期费，航班规定离站时间2小时内取消定座每次收取10%改期费</td>
+                                <td rowspan="4">不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">M G S L</td>
+                                <td>航班规定离站时间2小时前（含）取消定座收取15%退票费，航班规定离站时间2小时内取消定座收取30%退票费</td>
+                                <td>航班规定离站时间2小时前（含）取消定座每次收取10%改期费，航班规定离站时间2小时内取消定座每次收取20%改期费</td>
+                            </tr>
+                            <tr>
+                                <td align="center">Q E V R</td>
+                                <td>航班规定离站时间2小时前（含）取消定座收取30%退票费，航班规定离站时间2小时内取消定座收取50%退票费</td>
+                                <td>航班规定离站时间2小时前（含）取消定座每次收取20%改期费，航班规定离站时间2小时内取消定座每次收取40%改期费</td>
+                            </tr>
+                            <tr>
+                                <td align="center">O U Z X</td>
+                                <td>不得退票</td>
+                                <td>不得自愿变更</td>
+                            </tr>
+                            <tr>
+                                <td align="center">W</td>
+                                <td>1.如使用了第一航程航段，后续航段不得退票。                       2.全程未使用退票：航班离站前24小时以外按照票面价20%计收手续费，航班离站前24小时内按票面价50%计收手续费，航班规定离站时间后不得退票。    3.如有另行规定，以中转联程运价通告为准。</td>
+                                <td>不允许自愿变更</td>
+                                <td>不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td height="20"><strong class="STYLE1">华夏客服电话</strong></td>
+                                <td colspan="3"><span class="STYLE2">（0851）5499660</span></td>
+                            </tr> 
+                          </tbody>
+                    </table>
+            </div>
+            <div class="tbl_Invalidticketrequests BK-container">
+                <div class="current_find" style="font-size: 14px;margin-bottom:10px">【新客规】</div>
+                <table width="100%" cellspacing="1" cellpadding="0" class="tablez">
+                        <col width="105" />
+                        <col width="370" />
+                        <col width="370" />
+                        <col width="170" />
+                        <tbody>
+                            <tr>
+                                <td colspan="4" align="center" height="20"><div class="current_find" style="font-size: 14px;">奥凯--BK</div></td>
+                            </tr>
+                            <tr>
+                                <td align="center"><span class="STYLE3">舱位</span></td>
+                                <td align="center"><span class="STYLE3">关于退票</span></td>
+                                <td align="center"><span class="STYLE3">关于变更</span></td>
+                                <td align="center"><span class="STYLE3">关于签转</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center">F F1</td>
+                                <td>航班起飞前2小时之前取消定座按对应等级F舱收取10%退票费，航班起飞2小时内及航班起飞后取消定座按对应等级F舱收取20%的退票费</td>
+                                <td>同等舱位免费变更。不同舱位变更：降舱：从较高等级舱位改为较低等级舱位，按自愿退票处理。升舱：即由低舱位改高舱位，包括相同舱位等级之间的变更和不同舱位等级之间的变更。仅限奥凯营业部、机场柜台、客服中心等奥凯直属单位办理。</td>
+                                <td rowspan="2">可以签转，仅限与奥凯有签转协议的航空公司</td>
+                            </tr>
+                            <tr>
+                                <td align="center">Y</td>
+                                <td>航班起飞前2小时之前取消定座按经济舱全价(Y)收取20%的退票费，航班起飞2小时内及航班起飞后取消定座按经济舱全价(Y)收取30%的退票费</td>
+                                <td>起飞前2小时不含之前同等舱位免费变更。起飞前2小时以内及航班起飞后按经济舱全价（Y）收取5%的变更费</td>
+                            </tr>
+                            <tr>
+                                <td align="center">B H K K1</td>
+                                <td>航班起飞前2小时之前取消定座按经济舱全价(Y)收取20%的退票费，航班起飞2小时内及航班起飞后取消定座按经济舱全价(Y)收取30%的退票费</td>
+                                <td>起飞前2小时不含之前同等舱位免费变更。起飞前2小时以内及航班起飞后按经济舱全价（Y）收取5%的变更费</td>
+                                <td rowspan="5">不得签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">M M1 L L1 N N1 Q Q1 X X1</td>
+                                <td>航班起飞前2小时之前取消定座按经济舱全价(Y)收取25%的退票费，航班起飞2小时内及航班起飞后取消定座按经济舱全价(Y)收取35%的退票费</td>
+                                <td>起飞前2小时不含之前按经济舱全价（Y）收取5%的变更费;起飞前2小时以内及航班起飞后按经济舱全价（Y）收取10%的变更费</td>
+                            </tr>
+                            <tr>
+                                <td align="center">E U T</td>
+                                <td>不论在起飞前或起飞后提出按经济舱全价(Y)收取30%的退票费</td>
+                                <td>起飞前2小时不含之前按经济舱全价（Y）收取10%的变更费;起飞前2小时以内及航班起飞后按经济舱全价（Y）收取15%的变更费</td>
+                            </tr>
+                            <tr>
+                                <td align="center">O</td>
+                                <td>无论何时提出退票，只退机场建设费及燃油费</td>
+                                <td>不得自愿变更，不得升舱</td>
+                            </tr>
+                            <tr>
+                                <td align="center">D 往返舱</td>
+                                <td>不论起飞前还是后提出，客票全部未使用，按相应折扣舱位退票；分段不予退票</td>
+                                <td>按产品规定及特价销售政策执行，未作产品特别说明的，按订座折扣舱位对应规定办理。</td>
+                            </tr>
+                            <tr>
+                                <td height="20"><strong class="STYLE1">奥凯客服电话</strong></td>
+                                <td colspan="3"><span class="STYLE2">4000668866 &nbsp; 022-24903464  &nbsp;  022-23233399</span></td>
+                            </tr> 
+                         </tbody>
+                    </table>
+            </div>
+            <div class="tbl_Invalidticketrequests NS-container">
+                <div class="current_find" style="font-size: 14px;margin-bottom:10px">【新客规】</div>
+                <table cellspacing="1" cellpadding="0" width="100%" class="tablez">
+                        <col width="105" />
+                        <col width="370" />
+                        <col width="370" />
+                        <col width="170" />
+                        <tr align="center">
+                            <td colspan="4"> <span class="current_find" style="font-size:14px;">河北-NS</span> &nbsp;&nbsp; <span class="STYLE3">适用于乘机日14年1月16日至1月21日之间客票</span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" align="right">
+                                 <div class="current_find">所有航空公司重复开票不予以全退；以下只针对散客，团队不适用；只要机票上注明“不得退票”字样的，均一律不得退票！</div>
+                                 <div class="STYLE3">以下退票规定仅供参考，请以退票部（021-32069555*5382、5358分机）最终电话确认为准！</div>
+                            </td>
+                        </tr>
+                        <tr align="center">
+                            <td><span class="STYLE3">舱位</span></td>
+                            <td><span class="STYLE3">关于退票</span></td>
+                            <td><span class="STYLE3">关于变更</span></td>
+                            <td><span class="STYLE3">关于签转</span></td>
+                        </tr>
+                        <tr>
+                            <td align="center">F </td>
+                            <td>航班离站2小时前免收退票费，航班离站时间2小时(含)之内及起飞后收票面价5%的退票费<br /></td>
+                            <td>可免费改期</td>
+                            <td>允许签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">A</td>
+                            <td>航班离站2小时前收取5%退票费，航班离站时间2小时(含)之内及起飞后收票面价5%的退票费</td>
+                            <td>可免费改期</td>
+                            <td>不允许签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">Y</td>
+                            <td>航班离站2小时前收取5%退票费，航班规定离站时间2小时(含)之内及起飞后收票面价10%的退票费</td>
+                            <td>航班离站前可免费改期，航班离站时间2小时(含)之内及起飞后收票面价5%变更费</td>
+                            <td>允许签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center"> T I H</td>
+                            <td>航班离站2小时前收取5%退票费，航班规定离站时间2小时(含)之内及起飞后收票面价10%的退票费</td>
+                            <td>航班离站前可免费改期，航班离站时间2小时(含)之内及起飞后收票面价5%变更费</td>
+                            <td>T舱以下不允许签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">M G S L</td>
+                            <td>航班离站2小时前收取10%退票费，航班规定离站时间2小时(含)之内及起飞后收票面价20%的退票费</td>
+                            <td>航班离站前收取5%变更费，航班离站时间2小时(含)之内及起飞后收票面价10%变更费</td>
+                            <td>　</td>
+                        </tr>
+                        <tr>
+                            <td align="center">Q E V R</td>
+                            <td>航班离站2小时前收取30%退票费，航班规定离站时间2小时(含)之内及起飞后收票面价40%的退票费</td>
+                            <td>航班离站前收取10%变更费，航班离站时间2小时(含)之内及起飞后收票面价20%变更费</td>
+                            <td>　</td>
+                        </tr>
+                        <tr>
+                            <td align="center">K</td>
+                            <td>仅退机建燃油费，机票款不退</td>
+                            <td>不得自愿改期、升舱</td>
+                            <td>　</td>
+                        </tr>
+                        <tr>
+                            <td align="center">N Z D</td>
+                            <td>仅退机建燃油费，机票款不退</td>
+                            <td>不得自愿改期、升舱</td>
+                            <td>　</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">改期费与舱位票价变更费同时发生时,仅收取实际票价价差,免收改期费.变更后的客票如旅客要求退票，按变更前的舱位对应的收费标准收取退费，原变更所收的变更费不退。 重复购票旅客退票时按自愿退票办理。<br /></td>
+                        </tr>
+                        <tr align="center">
+                            <td colspan="4"><span class="current_find" style="font-size:14px;">河北-NS</span>  &nbsp;&nbsp; <span class="STYLE3">自14年1月16日出票乘机日14年1月22日起的客票适用</span></td>
+                        </tr>
+                        <tr align="center">
+                            <td><span class="STYLE3">舱位</span></td>
+                            <td><span class="STYLE3">关于退票</span></td>
+                            <td><span class="STYLE3">关于变更</span></td>
+                            <td><span class="STYLE3">关于签转</span></td>
+                        </tr>
+                        <tr>
+                            <td align="center">F </td>
+                            <td>航班离站2小时前免收退票费，航班离站时间2小时(含)之内及起飞后收票面价10%的退票费</td>
+                            <td>可免费改期</td>
+                            <td>允许签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">A</td>
+                            <td>航班离站2小时前和航班离站时间2小时(含)之内及起飞后都收取票面价10%退票费</td>
+                            <td>可免费改期</td>
+                            <td>不允许签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">Y</td>
+                            <td>航班离站2小时前收取票面价10%退票费，航班规定离站时间2小时(含)之内及起飞后收票面价20%的退票费</td>
+                            <td>同舱改期航班离站前收取票面价5%改期费，航班离站时间2小时(含)之内及起飞后收票面价10%改期费</td>
+                            <td>允许签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center"> T H</td>
+                            <td>航班离站2小时前收取票面价10%退票费，航班规定离站时间2小时(含)之内及起飞后收票面价20%的退票费</td>
+                            <td>同舱改期航班离站前收取票面价5%改期费，航班离站时间2小时(含)之内及起飞后收票面价10%改期费</td>
+                            <td rowspan="6">T舱以下不允许签转</td>
+                        </tr>
+                        <tr>
+                            <td align="center">M G S L</td>
+                            <td>航班离站2小时前收取票面价20%退票费，航班规定离站时间2小时(含)之内及起飞后收票面价30%的退票费</td>
+                            <td>同舱改期航班离站前收取票面价10%改期费，航班离站时间2小时(含)之内及起飞后收票面价20%改期费</td>
+                        </tr>
+                        <tr>
+                            <td align="center">Q E V R</td>
+                            <td>航班离站2小时前收取票面价40%退票费，航班规定离站时间2小时(含)之内及起飞后收取票面价50%的退票费</td>
+                            <td>同舱改期航班离站前收取票面价20%改期费，航班离站时间2小时(含)之内及起飞后收票面价30%改期费</td>
+                        </tr>
+                        <tr>
+                            <td align="center">K Z D</td>
+                            <td>销售3.6折(含)以上舱位运价,填写该运价所对应的舱位客票类别代码按照该客票类别所对应的退票规定执行；若销售3.6折以下舱位运价,则为Y+实际订座舱位字母代即YK,YZ,YD，则仅退机建燃油费，机票款不退。</td>
+                            <td>若销售3.6折(含)以上舱位运价,填写该运价所对应的舱位客票类别代码按照该客票类别所对应的改期规定执行；若销售3.6折以下舱位运价,则为Y+实际订座舱位字母代即YK,YZ,YD则不得自愿改期、升舱。</td>
+                        </tr>
+                        <tr>
+                            <td align="center">W/X/B/U/O/I</td>
+                            <td colspan="2">按河北航相关特殊舱位产品规定执行</td>
+                        </tr>
+                        <tr>
+                            <td align="center">N</td>
+                            <td>仅退机建燃油费，机票款不退</td>
+                            <td>不得自愿改期、升舱</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">舱位变更：(1)一舱多价，按照同舱改期处理;(2)改期费与升舱费同时产生时,只收升舱费。        改期费与舱位票价变更费同时发生时,仅收取实际票价价差,免收改期费.变更后的客票如旅客要求退票，按变更前的舱位对应的收费标准收取退费，原变更所收的变更费不退。    重复购票旅客退票时按自愿退票办理。</td>
+                        </tr>
+                        <tr>
+                            <td height="20"><strong class="STYLE1">河北客服电话</strong></td>
+                            <td colspan="3"><span class="STYLE2">024-88298321、0311-96699</span></td>
+                        </tr> 
+                    </table>
+            </div>
+            <div class="tbl_Invalidticketrequests KN-container">
+                <div class="current_find" style="font-size: 14px;margin-bottom:10px">【新客规】</div>
+                <table width="100%" cellspacing="1" cellpadding="0" class="tablez">
+                        <col width="105" />
+                        <col width="370" />
+                        <col width="370" />
+                        <col width="170" />
+                        <tbody>
+                            <tr>
+                                <td colspan="4" height="20"><div class="current_find" style="font-size:14px; text-align:center;">东航—MU &nbsp;&nbsp; 上航—FM &nbsp;&nbsp; 中联—KN </div></td>
+                            </tr>
+                            <tr>
+                                <td align="center"><span class="STYLE3">舱位</span></td>
+                                <td><span class="STYLE3">关于退票</span><b>（航班规定离站时间以客票上每一航段最后一次变更后的起飞日期/时间为准，并按照取消定座的日期/时间计算退票手续费）</b></td>
+                                <td><span class="STYLE3">关于变更</span><b>（航班规定离站时间以网站提交变更的申请时间向前推24小时（即T-24H）与订单中显示的航班起飞时间做比较，以此作为手续费的计算标准。（以航班起飞前2小时作为航前/航后的时间划分截点。）</b></td>
+                                <td align="center"><span class="STYLE3">关于签转</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center">F J</td>
+                                <td>航班规定离站时间2小时之前免收退票费，离站时间2小时以内至航班起飞后收取票面价10%退票费。</td>
+                                <td>航班规定离站时间2小时之前免收变更费，离站时间2小时以内至航班起飞后收取5%变更费。</td>
+                                <td>允许客票自愿签转，但注有&quot;不得签转&quot;字样的客票除外</td>
+                            </tr>
+                            <tr>
+                                <td align="center">P</td>
+                                <td>航班规定离站时间2小时之前免收退票费，离站时间2小时以内至航班起飞后收取票面价10%退票费。（其中上海始发航线P舱的特殊运价的不管航班起飞前后都收取10%的退票费；由于具体航线过多，请最终以退票部确认为准。异地始发直减运价航线收取实际票面价20%的退票费。低开的特殊票价不得退票。）</td>
+                                <td>航班规定离站时间2小时之前免收变更费，离站时间2小时以内至航班起飞后收取5%变更费。（其中上海始发航线P舱的特殊运价的不管航班起飞前后都不得变更，不得签转；由于具体航线过多，请最终以退票部确认为准。异地始发直减运价航线不得自愿变更航班日期。低开的特殊票价不得更改。）</td>
+                                <td>不得自愿签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center"> Y</td>
+                                <td>航班规定离站时间2小时之前收取票面价5%退票费，离站时间2小时以内至航班起飞后收取票面价10%退票费。</td>
+                                <td>航班规定离站时间2小时之前免收变更费，离站时间2小时以内至航班起飞后收取5%变更费。</td>
+                                <td>允许客票自愿签转，但注有&quot;不得签转&quot;字样的客票除外</td>
+                            </tr>
+                            <tr>
+                                <td align="center">BMEHKLNR </td>
+                                <td>航班规定离站时间2小时之前收取票面价20%退票费，离站时间2小时以内至航班起飞后收取票面价30%退票费。</td>
+                                <td>航班规定离站时间2小时之前收取10%变更费，离站时间2小时以内至航班起飞后收取20%变更费。</td>
+                                <td rowspan="2">不得自愿签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">S V</td>
+                                <td>航班规定离站时间7天前收取票面价40%退票费,航班规定离站时间7天内至航班规定离站时间2小时之前收取票面价80%退票费,航班规定离站时间2小时之前至航班起飞后不得退票，只退基建燃油费。</td>
+                                <td>航班规定离站时间2小时之前收取30%变更费，航班规定离站时间2小时之前至航班起飞后收取50%变更费。</td>
+                            </tr>
+                            <tr>
+                                <td align="center">T Z G</td>
+                                <td>航班规定离站时间7天前收取票面价40%退票费,航班规定离站时间7天内至航班规定离站时间2小时之前收取票面价80%退票费,航班规定离站时间2小时之前至航班起飞后不得退票，只退基建燃油费。（行程单上有不得退票字样的，不得退票。G舱特殊票价的不得退改签）</td>
+                                <td>航班规定离站时间2小时之前收取30%变更费，航班规定离站时间2小时之前至航班起飞后收取50%变更费。（G舱特殊票价的不得退改签）</td>
+                                <td>不得自愿签转</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">公布来回程（RT）、联程(MT)折扣运价客票，客票全部未使用，从已付票款中扣除相应舱位的手续费，退还余额；如客票已部分使用，从已付票款中扣除已使用航段相应舱位的单程票价的票款，余额扣除相应舱位的适用的手续费，退还余额。       子舱位变更或升舱后如需退票，按变更前的舱位票价规定执行，并全额退还补收的差额。已收取的变更费不退。多次变更后退票，按照第一次变更前的舱位票价规定执行，并全额退还补收的差额，已收取的变更费不退。旅客自愿变更航程,按自愿退票办理.<br/>
+                                注意：鉴于目前东航以提交网站退票时间作为取消时间来收取退票费，请提交当天起飞时间的退票订单的，退票申请提交后一定要致电我公司退票部，以免提交航空公司网站的时间迟了导致退票费增加！退票部电话：021-51811615或021-62999004! </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4"><b>国内退票费/改期费不得低于50元,低于的按此标准收取,高于此标准的按实际收取;所有退票费计算后四舍五入至个位。退改签规定东航有最终解释权</b></td>
+                            </tr>                            
+                            <tr height="18">
+                            <td><strong class="STYLE1">中联客服电话</strong></td>
+                            <td colspan="3" height="18">021-95530</td>
+                        </tr>
+                        </tbody>
+                    </table>
+            </div>
+            <div class="tbl_Invalidticketrequests JD-container">
+                <div class="current_find" style="font-size: 14px;margin-bottom:10px">【新客规】</div>
+                <table width="100%" cellspacing="1" cellpadding="0" class="tablez">
+                        <col width="105" />
+                        <col width="370" />
+                        <col width="370" />
+                        <col width="170" />
+                        <tbody>
+                            <tr>
+                                <td colspan="4" align="center" height="20"><div class="current_find" style="font-size: 14px;">首都航空--JD &nbsp;&nbsp;  <span class="STYLE3">截至出票日13年12月31日有效</span></div></td>
+                            </tr>
+                            <tr align="center">
+                                <td><span class="STYLE3">舱位</span></td>
+                                <td><span class="STYLE3">关于退票</span></td>
+                                <td><span class="STYLE3">关于变更</span></td>
+                                <td><span class="STYLE3">关于签转</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center">F C Y</td>
+                                <td>航班离站时间前（含）每次收取各舱位对应票价5%退票费;航班离站时间后，每次收取各舱位对应票价10%退票费</td>
+                                <td>航班离站时间前（含）均免费变更不限次数；航班离站时间后对应舱位变更每次收取各舱位对应票价10%变更费</td>
+                                <td>允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">B H K L M M1 Q Q1</td>
+                                <td>航班离站时间前（含）每次收取各舱位对应票价20%退票费；航班离站时间后，每次收取各舱位对应票价30%退票费</td>
+                                <td>班离站时间前(含)每次收取各舱位对应票价10%变更费；航班离站时间后每次收取各舱位对应票价20%变更费</td>
+                                <td rowspan="5">不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center"> X U E</td>
+                                <td>航班离站时间前（含）收取各舱位对应票价50%退票费，航班离站时间后，收取各舱位对应票价100%退票费（仅退税）</td>
+                                <td>航班离站时间前（含)每次收取各舱位对应票价20%变更费；航班离站时间后每次收取各舱位对应票价30%变更费</td>
+                            </tr>
+                            <tr>
+                                <td align="center">N T Z Z1 Z2 I</td>
+                                <td>按对应折扣计算退票费，若低于四折航班离站时间前（含）收取各舱位对应票价50%退票费，航班离站时间后，收取各舱位对应票价100%退票费（仅退税）。</td>
+                                <td>不允许同舱变更</td>
+                            </tr>
+                            <tr>
+                                <td align="center">P</td>
+                                <td>航班离站时间前（含）收取各舱位对应票价5%退票费，航班离站时间后收取各舱位对应票价10%退票费。</td>
+                                <td>航班规定离站时间前免费变更；航班规定离站时间后变更收取5%变更费。</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">所有舱位升舱变更时，收取原舱位票面价与适用新舱位间票价差额，同时按各舱位对应规则收取变更费。特价舱任何时候不许同舱变更，必须升至四折以上明折明扣舱位办理</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" align="center" height="20"><div class="current_find" style="font-size: 14px;">首都航空--JD &nbsp;&nbsp;&nbsp; <span class="STYLE3">出票日14年1月1日起生效</span></td>
+                            </tr>
+                            <tr align="center">
+                                <td><span class="STYLE3">舱位</span></td>
+                                <td><span class="STYLE3">关于退票</span></td>
+                                <td><span class="STYLE3">关于变更</span></td>
+                                <td><span class="STYLE3">关于签转</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center">F C Y</td>
+                                <td>航班离站时间前（含）每次收取各舱位对应票价5%退票费;航班离站时间后，每次收取各舱位对应票价10%退票费</td>
+                                <td>航班离站时间前（含）均免费变更不限次数；航班离站时间后对应舱位变更每次收取各舱位对应票价10%变更费</td>
+                                <td>允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">B H K L M M1 Q Q1</td>
+                                <td>航班离站时间前（含）每次收取各舱位对应票价20%退票费；航班离站时间后，每次收取各舱位对应票价30%退票费</td>
+                                <td>班离站时间前(含)每次收取各舱位对应票价10%变更费；航班离站时间后每次收取各舱位对应票价20%变更费</td>
+                                <td rowspan="8">不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center"> X U E</td>
+                                <td>航班离站时间前（含）收取各舱位对应票价50%退票费，航班离站时间后，收取各舱位对应票价100%退票费（仅退税）</td>
+                                <td>航班离站时间前（含)每次收取各舱位对应票价20%变更费；航班离站时间后每次收取各舱位对应票价30%变更费</td>
+                            </tr>
+                            <tr>
+                                <td align="center">T/T1/T2/T3/T4/Z/Z1/Z2/Z3/Z4/J</td>
+                                <td>任何时候不得自愿退票，退票仅退税。</td>
+                                <td>任何时候不得自愿变更。</td>
+                            </tr>
+                            <tr>
+                                <td align="center">I</td>
+                                <td>按对应折扣计算退票费，若低于四折航班离站时间前（含）收取各舱位对应票价50%退票费，航班离站时间后，收取各舱位对应票价100%退票费（仅退税）。</td>
+                                <td>任何时候不允许同舱变更，若升舱必须升至E舱以上，且高于原舱位，并征收舱位间差价和对应折扣变更费。</td>
+                            </tr>
+                            <tr>
+                                <td align="center">N</td>
+                                <td>按具体产品规定</td>
+                                <td>按具体产品规定</td>
+                            </tr>
+                            <tr>
+                                <td align="center">P</td>
+                                <td>依据相应规定执行</td>
+                                <td>依据相应规定执行</td>
+                            </tr>
+                            <tr>
+                                <td align="center">A</td>
+                                <td>依据产品规定执行</td>
+                                <td>依据产品规定执行</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">所有舱位升舱变更时，收取原舱位票面价与适用新舱位间票价差额，同时按各舱位对应规则收取变更费。特价舱任何时候不许同舱变更，必须升至四折以上明折明扣舱位办理。首都航客票退票时间均以取消编码时间为准。</td>
+                            </tr>
+                            <tr>
+                                <td height="20"><strong class="STYLE1">首都航空客服电话</strong></td>
+                                <td colspan="3"><span class="STYLE2">95071999</span></td>
+                            </tr> 
+                          </tbody>
+                    </table>
+            </div>
+            <div class="tbl_Invalidticketrequests JR-container">
+                <div class="current_find" style="font-size: 14px;margin-bottom:10px">【新客规】</div>
+                <table width="100%" cellspacing="1" cellpadding="0" class="tablez">
+                        <col width="105" />
+                        <col width="370" />
+                        <col width="370" />
+                        <col width="170" />
+                        <tbody>
+                            <tr align="center">
+                                <td colspan="4" height="20"><div class="current_find" style="font-size: 14px;">幸福--JR</div></td>
+                            </tr>
+                            <tr align="center">
+                                <td><span class="STYLE3">舱位</span></td>
+                                <td><span class="STYLE3">关于退票</span></td>
+                                <td><span class="STYLE3">关于变更</span></td>
+                                <td><span class="STYLE3">关于签转</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center">Y</td>
+                                <td>收取票面价5%的退票费</td>
+                                <td>允许变更</td>
+                                <td>允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">B H M </td>
+                                <td>收取票面价10%的退票费</td>
+                                <td rowspan="3">航班起飞前：同等舱位免费变更不限次数；<br />
+                                    航班起飞后：同等舱位免费变更一次，再次变更，收取票面价10%的变更费；无同等舱位时，升舱费与变更费比较取其高者。</td>
+                                <td rowspan="10">不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">R</td>
+                                <td>收取票面价20%的退票费</td>
+                            </tr>
+                            <tr>
+                                <td align="center">V T</td>
+                                <td>收取票面价50%的退票费</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4" align="center">W X G I</td>
+                                <td>票面为70%-99%时，收取票面价10%的退票费</td>
+                                <td rowspan="4">1、45%（含）以上客票：航班起飞前：同等舱位免费    变更不限次数。航班起飞后：同等舱位免费变更一次，再次变更，收取票面价10%变更费；无同等舱位时，升舱费与变更费比较取其高者<br />
+                                    2、45%以下客票：不允许同舱位变更，允许升舱一次且至6折（含）以上舱位，再次变更，参照《幸福航空多等级舱位管理规定》升舱后舱位相应规定办理</td>
+                            </tr>
+                            <tr>
+                                <td>票价为55%-69%时，收取票面价20%的退票费</td>
+                            </tr>
+                            <tr>
+                                <td>票价为40%-54%时，收取票面价50%的退票费</td>
+                            </tr>
+                            <tr>
+                                <td>票价为40%以下时，不得自愿退票，只退机建和燃油</td>
+                            </tr>
+                            <tr>
+                                <td align="center">O(超售舱)</td>
+                                <td>收取票面价5%的退票费</td>
+                                <td>实际超售情况下，允许同舱位变更或变更至后续航班Y    舱</td>
+                            </tr>
+                            <tr>
+                                <td align="center">U</td>
+                                <td>不得自愿退票</td>
+                                <td>航班起飞前24小时提出，否则不予变更</td>
+                            </tr>
+                            <tr>
+                                <td align="center">J</td>
+                                <td>不得自愿退票</td>
+                                <td>不得变更</td>
+                            </tr>
+                            <tr>
+                                <td height="20"><strong class="STYLE1">幸福客服电话</strong></td>
+                                <td colspan="3"><span class="STYLE2">4008680000</span></td>
+                            </tr> 
+                         </tbody>
+                    </table>
+            </div>
+            <div class="tbl_Invalidticketrequests TV-container">
+                <table width="100%" cellspacing="1" cellpadding="0" class="tablez">
+                        <col width="105" />
+                        <col width="370" />
+                        <col width="370" />
+                        <col width="170" />
+                        <tbody>
+                            <tr>
+                                <td colspan="4" align="center" height="20"><div class="current_find" style="font-size: 14px;">西藏-TV <b style="font-size:12px; color:#333333;">（林芝、邦达、阿里、日喀则进出港航班Y舱有特殊规定）</b></div></td>
+                            </tr>
+                            <tr align="center">
+                                <td><span class="STYLE3">舱位</span></td>
+                                <td><span class="STYLE3">关于退票</span></td>
+                                <td><span class="STYLE3">关于变更</span></td>
+                                <td><span class="STYLE3">关于签转</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center">F</td>
+                                <td>航班起飞前2小时(含)之前取消定座不收取退票费，航班起飞前2小时之内及航班起飞后取消定座收取票面价10%的退票费</td>
+                                <td>航班起飞前2小时(含)之前取消定座免费改期,航班起飞前2小时之内及航班起飞后每次更改收取票面价5%的改期费</td>
+                                <td>允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">A</td>
+                                <td>航班起飞前2小时(含)之前取消定座不收取退票费，航班起飞前2小时之内及航班起飞后取消定座收取票面价10%的退票费</td>
+                                <td>航班起飞前2小时(含)之前取消定座免费改期,航班起飞前2小时之内及航班起飞后每次更改收取票面价5%的改期费</td>
+                                <td>不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">Y</td>
+                                <td>航班起飞前2小时(含)之前取消定座收取票面价5%退票费，航班起飞前2小时之内及航班起飞后取消定座收取票面价10%的退票费</td>
+                                <td>航班起飞前2小时(含)之前取消定座免费改期,航班起飞前2小时之内及航班起飞后每次更改收取票面价5%的改期费</td>
+                                <td>允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">B M H K</td>
+                                <td>航班起飞前2小时(含)之前取消定座收取票面价10%退票费，航班起飞前2小时之内及航班起飞后取消定座收取票面价20%的退票费</td>
+                                <td>航班起飞前2小时(含)之前取消定座免费改期,航班起飞前2小时之内及航班起飞后每次更改收取票面价10%的改期费</td>
+                                <td rowspan="2">不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">L J Q G V R</td>
+                                <td>航班起飞前2小时(含)之前取消定座收取票面价30%退票费，航班起飞前2小时之内及航班起飞后取消定座收取票面价40%的退票费</td>
+                                <td>航班起飞前2小时(含)之前取消定座收取票面价20%改期费,航班起飞前2小时之内及航班起飞后每次更改收取票面价30%的改期费</td>
+                            </tr>
+                            <tr>
+                                <td align="center">S</td>
+                                <td>每次收取票面价格20%的改期费</td>
+                                <td>1.自愿退票：（1）客票全部未使用：收取票面价格的30%作为退票手续费，余额退还给旅客。（2）客票已部分使用：扣除已使用航段的Y舱公布票价，如有余额，退还旅客，不再另行收取退票手续费。<br />
+                                    2.非自愿退票（散客、团队）：（1）客票全部未使用：按实收票面价退还旅客。（2）客票已部分使用：按未使用航段Y舱公布票价的50%退款，但不得超过原付票款总额。<br />
+                                    升舱：按自愿退票处理。<br /></td>
+                                <td>不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" align="center">T/E/U/W/Z/I/D/P</td>
+                                <td>若销售3折以上舱位运价，填写该运价所对应的舱位客票类别代码。例：E=5折，客票类别为“G”。<br />
+                                    散客：按照该客票类别所对应的规定执行。升舱：按自愿退票处理。</td>
+                                <td>若销售3折以上舱位运价，填写该运价所对应的舱位客票类别代码。例：E=5折，客票类别为“G”。1、自愿退票:<br />
+                                    (1)散客：a.客票全部未使用：按照该客票类别所对应的规定执行。b.客票已部分使用：扣除已使用航段的Y舱公布票价，如有余额退还旅客，不再另行收取退票手续费。<br />
+                                    （2)团队：按照团队退票规定处理。2、非自愿退票（散客、团队）（1）客票全部未使用：按实收票面价退还旅客。<br />
+                                    （2）客票已部分使用：扣除已使用航段的销售价格（如已使用航段有单独运价计算组，则直接扣除对应票面价；如全程只有一个票价计算组，扣除50%票面价），余额退还旅客。<br />
+                                    <br /></td>
+                                <td rowspan="2">不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td>若销售3折（含）以下舱位运价，则为T/E/U/W/Z/I/D/P，不得自愿改期、升舱。非自愿退票按照3折以上舱位运价的规定执行。</td>
+                                <td>若销售3折（含）以下舱位运价，则为T/E/U/W/Z/I/D/P，仅退机建费和燃油费，机票款不退。</td>
+                            </tr>
+                            <tr>
+                                <td align="center">O/Z</td>
+                                <td>不签不改不退</td>
+                                <td>不签不改不退</td>
+                                <td>不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td>涉藏Y舱自愿签转，退票规定（适用于销售林芝、邦达、阿里、日喀则进出港航班客票；儿童、婴儿、军警残旅客不适用。）</td>
+                                <td>航班起飞前2小时（含）之前取消定座（以客票上的航班起飞时间为准）票面价20%/次退票费；航班起飞前2小时之内及航班起飞后取消定座（以客票上的航班起飞时间为准）收取票面价30%退票费</td>
+                                <td>航班起飞前2小时（含）之前取消定座（以客票上的航班起飞时间为准）票面价10%/次改期费；航班起飞前2小时之内及航班起飞后取消定座（以客票上的航班起飞时间为准）票面价20%的改期费</td>
+                                <td>不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">如客票改期与低舱位改高舱位同时进行时,只收取实际舱位票价差额。子舱位变更后如需改期,按子舱位变更后的舱位规定执行，子舱位变更或升舱后如需退票,按变更前的舱位规定执行,并全额退还补收的差额。改期后如需退票,已收取的改期费不退。儿童(限FCH50、CCH50、YCH50)客票退票免收退票费</td>
+                            </tr>
+                         </tbody>
+                    </table>
+            </div>
+            <div class="tbl_Invalidticketrequests KY-container">
+                <div class="current_find" style="font-size: 14px;margin-bottom:10px">【新客规】</div>
+                <table width="100%" cellspacing="1" cellpadding="0" class="tablez">
+                        <col width="105" />
+                        <col width="370" />
+                        <col width="370" />
+                        <col width="170" />
+                        <tbody>
+                            <tr>
+                                <td colspan="4" align="center" height="20"><div class="current_find" style="font-size: 14px;">深航--ZH &nbsp;&nbsp;&nbsp; 昆明--KY</div></td>
+                            </tr>
+                            <tr>
+                                <td align="center"><span class="STYLE3">舱位</span></td>
+                                <td align="center"><span class="STYLE3">关于退票</span></td>
+                                <td align="center"><span class="STYLE3">关于变更</span></td>
+                                <td align="center"><span class="STYLE3">关于签转</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center">F C </td>
+                                <td>航班起飞前2小时之前取消定座免费退票，航班起飞2小时内及航班起飞后取消定座每次票面价收取5%的退票费。</td>
+                                <td>航班起飞前2小时之前或者之后都消定座都免费改期</td>
+                                <td>允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">Y B M H </td>
+                                <td>航班起飞前2小时之前取消定座每次收取票面价5%退票费，航班起飞2小时内及航班起飞后取消定座每次收取票面价10%的退票费</td>
+                                <td>航班起飞前2小时之前取消定座免费改期，航班起飞2小时内及航班起飞后取消定座每次收取票面价5%的改期费</td>
+                                <td rowspan="3">不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">K L J Q Z </td>
+                                <td>航班起飞前2小时之前取消定座每次收取票面价20%退票费，航班起飞2小时内及航班起飞后取消定座每次收取票面价20%的退票费</td>
+                                <td>每次更收取票面价10%的改期费。</td>
+                            </tr>
+                            <tr>
+                                <td align="center">G V W</td>
+                                <td>航班起飞前2小时之前取消定座每次收取票面价50%退票费，航班起飞2小时内及航班起飞后取消定座每次收取票面价50%的退票费</td>
+                                <td>每次改期收取票面价20%的改期费。</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">注：1.儿童\婴儿\革命伤残军人和因公致残人民警察客票免收退票费。     2.改期时无同等舱位开放，可以升舱至高折扣舱位，如如客票改期与低舱位改高舱位同时进行，只收取实际舱位票价差额。3.往返程、缺口程或联程客票必须按顺序使用，在前段伟使用，后段已使用的情况下，前段只能按自愿退票处理，不允许操作任何形式的改期。</td>
+                            </tr>
+                            <tr>
+                                <td height="20"><strong class="STYLE1">昆明客服电话</strong></td>
+                                <td colspan="3"><span class="STYLE2">4008876737</span></td>
+                            </tr>
+                        </tbody> 
+                    </table>
+            </div>
+            <div class="tbl_Invalidticketrequests PN-container">
+                <div class="current_find" style="font-size: 14px;margin-bottom:10px">【新客规】</div>
+                <table width="100%" cellspacing="1" cellpadding="0" class="tablez">
+                        <col width="105" />
+                        <col width="370" />
+                        <col width="370" />
+                        <col width="170" />
+                        <tbody>
+                            <tr>
+                                <td colspan="4" align="center" height="20"><div class="current_find" style="font-size: 14px;">西部-PN</div></td>
+                            </tr>
+                            <tr align="center">
+                                <td><span class="STYLE3">舱位</span></td>
+                                <td><span class="STYLE3">关于退票</span></td>
+                                <td><span class="STYLE3">关于变更</span></td>
+                                <td><span class="STYLE3">关于签转</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center">Y</td>
+                                <td rowspan="2">航班计划离站时间24小时（含）前取消座位，收取票面15%退票费，航班计划离站时间24小时内及航班离站时间后取消座位，收取票面25%退票费</td>
+                                <td rowspan="3">同舱变更：航班计划离站时间24小时（含）前取消座位，收取票面10%的变更费，航班计划离站时间24小时内及航班计划离站后取消座位，收取票面15%变更费。无论舱位间是否存在差价，只收取变更费。升舱变更：航班计划离站时间24小时（含）前取消座位，收取票面10%的变更费，航班计划离站时间24小时内及航班计划离站后取消座位，收取票面15%变更费。收取变更费后，再补齐舱位间差价。</td>
+                                <td>允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">B H K</td>
+                                <td rowspan="4">不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center"> L M R Q D X</td>
+                                <td>航班计划离站时间24小时（含）前取消座位，收取票面15%退票费，航班计划离站时间24小时内及航班离站时间后取消座位，收取票面25%退票费</td>
+                            </tr>
+                            <tr>
+                                <td align="center">U A E W Z T I</td>
+                                <td>无论航班计划离站时间前后，均不得退票，仅退还未使用的民航发展基建及燃油附加费</td>
+                                <td>无论航班计划离站时间前后，均不得自愿变更，若要变更，按自愿退票处理，退还未使用的民航发展基建及燃油附加费。</td>
+                            </tr>
+                            <tr>
+                                <td align="center">N</td>
+                                <td>不得退票，仅退机建燃油费，机票款不退</td>
+                                <td>不得自愿改期、升舱</td>
+                            </tr>
+                            <tr>
+                                <td align="center">民航局规定的儿童票价的客票</td>
+                                <td rowspan="2">航班计划离站时间24小时前（含）收取Y舱对应票价15%退票费，航班计划离站时间24小时内及航班离站后收取Y舱对应票价25%退票费</td>
+                                <td rowspan="2">航班计划离站时间24小时前（含）收取Y舱对应票价10%退票费，航班计划离站时间24小时内及航班离站后收取Y舱对应票价15%退票费</td>
+                                <td>允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">Y舱订座，享受经济舱全价50%优惠的无陪儿童客票</td>
+                                <td>不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">任何情况均不得降舱变更，若需变更，按自愿退票处理。持婴儿客票的旅客要求退票免收退票费，要求变更日期免收变更费。在Y舱订座，享受经济舱全价50%优惠的革命伤残军人，因公致残人民警察，自愿退票，免收退票费；自愿变更，免收变更费。。</td>
+                            </tr>
+                            <tr>
+                                <td height="20"><strong class="STYLE1">西部客服电话</strong></td>
+                                <td colspan="3"><span class="STYLE2">0898-95071095</span></td>
+                            </tr> 
+                         </tbody>
+                    </table>
+            </div>
+            <div class="tbl_Invalidticketrequests 8L-container">
+                <div class="current_find" style="font-size: 14px;margin-bottom:10px">【新客规】</div>
+                <table width="100%" cellspacing="1" cellpadding="0" class="tablez">
+                        <col width="105" />
+                        <col width="370" />
+                        <col width="370" />
+                        <col width="170" />
+                        <tbody>
+                            <tr>
+                                <td colspan="4" align="center" height="20"><div class="current_find" style="font-size: 14px;">祥鹏-8L</div></td>
+                            </tr>
+                            <tr align="center">
+                                <td><span class="STYLE3">舱位</span></td>
+                                <td><span class="STYLE3">关于退票</span></td>
+                                <td><span class="STYLE3">关于变更</span></td>
+                                <td><span class="STYLE3">关于签转</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center">F/F1/C/Y</td>
+                                <td>航班离站时间前（含）每次收取各舱位对应票价5%退票费；航班离站时间后，每次收取各舱位对应票价10%退票费</td>
+                                <td>航班离站时间前（含）均免费变更，不限次数；航班离站时间后对应舱位变更每次收取各舱位对应票价10%变更费</td>
+                                <td>允许签转</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" align="center">B/H/K/L/M/M1/Q/Q1/X/U/E</td>
+                                <td rowspan="2"> 航班离站时间前（含）每次收取各舱位对应票价20%退票费；航班离站时间后每次收取各舱位对应票价40%退票费</td>
+                                <td rowspan="2">航班离站时间前(含)每次收取各舱位对应票价10%变更费；航班离站时间后每次收取各舱位对应票价20%变更费</td>
+                                <td>不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">D/J/Z特价舱（含Z1-Z4）</td>
+                                <td>不得退票，仅退机建燃油费，机票款不退</td>
+                                <td>不得自愿改期、升舱</td>
+                            </tr>
+                            <tr>
+                                <td align="center">T N I</td>
+                                <td>不得退票，仅退机建燃油费，机票款不退</td>
+                                <td>不得自愿改期、升舱</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">升舱后退票，票价价差部分：舱位间票价差额退回旅客，不收取退票费，只收取原客票对应舱位退票费。</td>
+                            </tr>
+                            <tr>
+                                <td height="20"><strong class="STYLE1">祥鹏客服电话</strong></td>
+                                <td colspan="3"><span class="STYLE2">0898-95071950</span></td>
+                            </tr> 
+                          </tbody>
+                    </table>
+            </div>
+            <div class="tbl_Invalidticketrequests GS-container">
+                <div class="current_find" style="font-size: 14px;margin-bottom:10px">【新客规】</div>
+                <table width="100%" cellspacing="1" cellpadding="0" class="tablez">
+                        <col width="105" />
+                        <col width="370" />
+                        <col width="370" />
+                        <col width="170" />
+                        <tbody>
+                            <tr>
+                                <td colspan="4" align="center" height="20"><div class="current_find" style="font-size: 14px;">天津-GS</div></td>
+                            </tr>
+                            <tr align="center">
+                                <td><span class="STYLE3">舱位</span></td>
+                                <td><span class="STYLE3">关于退票</span></td>
+                                <td><span class="STYLE3">关于变更</span></td>
+                                <td><span class="STYLE3">关于签转</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center">F1 F C</td>
+                                <td>航班规定离站时间前收取舱位对应票价5%退票费；航班规定离站时间后收取舱位对应票价10%的退票费</td>
+                                <td>航班规定离站时间前免费变更；航班规定离站时间后变更收取10%变更费</td>
+                                <td>允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">P</td>
+                                <td>航班规定离站时间前（含）收取票面价5%退票费；航班规定离站时间后收取票面价10%的退票费</td>
+                                <td>同舱变更：航班离站时间前（含）均免收变更费，不限次数；航班离站时间后，每次收取对应票面价10%变更费；同舱位间变更，若存在票价不同，由低票价变更至高票价，收取票款差额，同时收取变更费。由高票价变更至低票价，按自愿退票处理，重购客票。       不同舱位之间变更，P舱变更到F舱，需换开客票，补齐与F舱公布普通票价之间的差额，航班离站时间前（含）升舱免变更费；航班离站时间后升舱收取对应票面价10%变更费。变更到经济舱及以下折扣舱位按自愿退票处理。<br /></td>
+                                <td>不得自愿签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">A J</td>
+                                <td>航班规定离站时间前收取舱位对应票价5%退票费；航班规定离站时间后收取舱位对应票价10%的退票费</td>
+                                <td>航班规定离站时间前免费变更；航班规定离站时间后变更收取10%变更费</td>
+                                <td>不得签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">Y</td>
+                                <td>航班规定离站时间前收取舱位对应票价5%退票费；航班规定离站时间后收取舱位对应票价10%的退票费</td>
+                                <td>航班规定离站时间前免费变更；航班规定离站时间后变更收取10%变更费</td>
+                                <td>允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center">B H K L M M1 Q Q1</td>
+                                <td>航班规定离站时间前收取舱位对应票价20退票费；航班规定离站时间后收取舱位对应票价30%的退票费</td>
+                                <td>航班规定离站时间前收取10%变更费；航班规定离站时间后变更收取20%变更费</td>
+                                <td rowspan="4">不允许签转</td>
+                            </tr>
+                            <tr>
+                                <td align="center"> X U E</td>
+                                <td>航班规定离站时间前收取舱位对应票价50%退票费；航班规定离站时间后收取舱位对应票价100%的退票费</td>
+                                <td>航班规定离站时间前收取20%变更费；航班规定离站时间后变更收取30%变更费</td>
+                            </tr>
+                            <tr>
+                                <td align="center">Z T N I</td>
+                                <td>不得退票，仅退机建燃油费，机票款不退</td>
+                                <td>不得自愿改期、升舱</td>
+                            </tr>
+                            <tr>
+                                <td align="center">V</td>
+                                <td>退票收费，具体按文件执行，以退票部确认为准</td>
+                                <td>不得自愿改期、升舱</td>
+                            </tr>
+                            <tr>
+                                <td height="20"><strong class="STYLE1">天津客服电话</strong></td>
+                                <td colspan="3"><span class="STYLE2">950710</span></td>
+                            </tr> 
+                          </tbody>
+                    </table>
+            </div>
+                        
+            <div class="tbl_Invalidticketrequests GJ-container">
+                <div class="current_find" style="font-size: 14px;margin-bottom:10px">【新客规】</div>
+                <table width="100%" cellspacing="1" cellpadding="0" class="tablez">
+                        <col width="105" />
+                        <col width="370" />
+                        <col width="370" />
+                        <col width="170" />
+                             <tbody>
+                                    <tr align="center">
+                                    <td colspan="4"><div class="current_find" style="font-size: 14px;">浙江长龙航空--GJ</div></td>
+                                    </tr>
+                                    <tr align="center">
+                                        <td><span class="STYLE3">舱位</span></td>
+                                        <td><span class="STYLE3">关于退票</span></td>
+                                        <td><span class="STYLE3">关于变更</span></td>
+                                        <td><span class="STYLE3">关于签转</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">F/C/Y</td>
+                                        <td>航班起飞时刻前（含）收取5%退票费，航班起飞时刻后收取10%退票费</td>
+                                        <td>航班起飞时刻前（含）免费变更，航班起飞时刻后每次变更收取5%的改期费</td>
+                                        <td>允许签转</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">B/M/H</td>
+                                        <td>航班起飞时刻前（含）收取5%退票费，航班起飞时刻后收取10%退票费</td>
+                                        <td>航班起飞时刻前（含）免费变更，航班起飞时刻后每次变更收取5%的改期费</td>
+                                        <td rowspan="5">不允许签转</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">K/L/P/Q/G</td>
+                                        <td>航班起飞时刻前（含）收取10%退票费，航班起飞时刻后收取30%退票费</td>
+                                        <td>航班起飞时刻前（含）每次变更收取10%的改期费，航班起飞时刻后每次变更收取20%的改期费</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">V/U/Z</td>
+                                        <td>航班起飞时刻前（含）收取30%退票费，航班起飞时刻后收取50%退票费</td>
+                                        <td>航班起飞时刻前（含）每次变更收取20%的改期费，航班起飞时刻后每次变更收取30%的改期费</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">D/I</td>
+                                        <td>不得自愿退票</td>
+                                        <td>不得自愿变更</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">A</td>
+                                        <td>  航班起飞前收取票面价10%退票费，起飞后收取票面价20%退票费。</td>
+                                        <td>仅限航班起飞前变更一次，仅限变更至F-H及A舱，产生的票款差额多不退少补，均不收取手续费；航班起飞后不允许变更。若旅客自愿变更至Y-H舱，则视同为自愿享受经济舱服务。变更后客票如需退票，按变更前客票舱位对应的管理规定办理，已收取的票款差额不退。</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">同舱变更后如需退票，已收取的变更费不退。升舱后退票，全额退还升舱补收的差额，剩余部分按原客票舱位及退座时间（多次升舱按第一张客票退座时间）收取退票费。        升舱变更，升舱时，收取票面价格与变更后订座舱位对应票价间的差额。如客票改期与升舱同时进行，比较舱位差价和变更费，按高者收取。降舱：从高舱位变更至低舱位时，按自愿退票处理。D/I舱不得自愿变更。使用儿童票价的客票按所使用舱位变更规定执行，使用婴儿票价的客票，免费变更。使用其他舱位客票，依据对应文件规定执行。</td>
+                                    </tr>
+                             </tbody>
+                    </table>
+            </div>
+            
+        </div>
+        
+    </main>
+</section>
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+<script type="text/javascript">
+    $(function(){
+        var oldTarget="";
+        $("#airlineCompanyContainer li").click(function () {
+            $(this).addClass("selected").siblings().removeClass("selected");
+            if (oldTarget) {
+                $(oldTarget).hide();
+            }
+            oldTarget = "." + $(this).attr("data-target") + "-container";
+            $(oldTarget).show();
+        });
+        $("#airlineCompanyContainer li:first").trigger("click");
+    })
+</script>
+</body>
+</html>
+

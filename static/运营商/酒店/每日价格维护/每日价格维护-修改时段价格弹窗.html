@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>酒店 酒店维护 每日价格维护 修改时段价格 弹层</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+    <link href="../../../css/kendo.reset.css" rel="stylesheet" />
+    <link href="../../../static/css/tianjiabumentishi.css" rel="stylesheet" type="text/css" />
+ <script src="../../../static/js/jquery.min.js"></script>
+ <script src="../../../static/js/global.js"></script>
+<script type="text/javascript" src="/static/js/hotel.js"></script>
+
+   
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+<!-- @CLB@ -->
+</head>
+
+
+<body>
+      
+   <div class="middle_content">
+      <div class="program">
+        <b>价格计划</b>
+        <select> <option>提前3天预订</option> </select>
+        <label>价格</label>
+        <input class="program_input" type="text"/>
+        <em>变价原因</em>
+        <input class="program_input_1" type="text"/>
+      </div>
+      <div class="jgsm">
+         <b>价格说明</b>
+         <textarea>输入文本...</textarea>
+      </div>
+      <div class="interval">
+        <p class="interval_p">时段3/10</p>
+        <span>开始</span>
+        <input type="text" value="YYYY-MM-DD" class="i_input"/>
+        <span>结束</span>
+        <input type="text" value="YYYY-MM-DD" class="i_input"/>
+        <div class="zouqi">
+         <p> <input type="checkbox" checked="checked"/> <label>一</label></p>
+         <p> <input type="checkbox" checked="checked"/> <label>二</label></p>
+         <p> <input type="checkbox" checked="checked"/> <label>三</label></p>
+         <p> <input type="checkbox" checked="checked"/> <label>四</label></p>
+         <p> <input type="checkbox" checked="checked"/> <label>五</label></p>
+         <p> <input type="checkbox" checked="checked"/> <label>六</label></p>
+         <p> <input type="checkbox" checked="checked"/> <label>日</label></p>
+        </div>
+        <a href="#" class="interval_a">添加</a>
+      </div>
+      <div class="clock">
+         <div>
+           <p><span>2013/07/01—2013/08/01</span> <label>×</label></p>
+           <p class="clock_div_p">一 &nbsp;&nbsp; 二 &nbsp;&nbsp;三 &nbsp;&nbsp;四 &nbsp;&nbsp;五</p>
+         </div>
+         <div>
+           <p><span>2013/07/01—2013/08/01</span> <label>×</label></p>
+           <p class="clock_div_p">一 &nbsp;&nbsp; 二 &nbsp;&nbsp;三 &nbsp;&nbsp;四 &nbsp;&nbsp;五</p>
+         </div>
+         <div class="clock_right">
+           <p><span>2013/07/01—2013/08/01</span> <label>×</label></p>
+           <p class="clock_div_p">一 &nbsp;&nbsp; 二 &nbsp;&nbsp;三 &nbsp;&nbsp;四 &nbsp;&nbsp;五</p>
+         </div>
+      </div>
+      
+     <div class="xuantian">
+       <span>选填</span>
+     </div>
+     <table class="fwgd_tab">
+       <tr class="first">
+          <td>包含服务</td>
+           <td>已有规定</td>
+           <td>增加规定</td>
+       </tr>
+       <tr>
+          <td class="bhfw" style="width:300px">
+            <div style="float:left">
+                <div class="bhfw_topdiv">
+                    <p>
+                        <select name="" id="">
+                            <option value="">无早</option>
+                            <option value="">含早</option>
+                            <option value="">含单早</option>
+                            <option value="">含双早</option>
+                        </select>
+                        <select name="" id="" style="margin-left:10px">
+                            <option value="">-</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                        </select>
+                    </p>
+                  <p><input type="radio" name="zhi"/> <span>自助早餐</span></p>
+                  <p><input type="radio" checked="checked" name="zhi"/> <span>中式早餐</span></p>
+                  <p><input type="radio" name="zhi"/> <span>欧式早餐</span></p>
+                </div>
+                <div class="bhfw_bottomdiv">
+               <p>
+                   <input type="checkbox" checked="checked" /> <span>儿童早餐</span>
+                   <select name="" id="" style="margin-left:10px">
+                       <option value="">1</option>
+                       <option value="">2</option>
+                       <option value="">3</option>
+                       <option value="">4</option>
+                       <option value="">5</option>
+                   </select>
+               </p>
+               <p>
+                   <input type="checkbox" checked="checked" /> <span>晚餐</span>
+                   <select name="" id="" style="margin-left:10px">
+                       <option value="">1</option>
+                       <option value="">2</option>
+                       <option value="">3</option>
+                       <option value="">4</option>
+                       <option value="">5</option>
+                   </select>
+               </p>
+            </div>
+            </div>
+              <div class="bhfw_rightdiv" style="">
+                <ul>
+                    <li><label><input type="checkbox" name="add-bed" id="" class="single" data-group="add-bed"  />加床</label></li>
+                    <li><label><input type="checkbox" name="add-bed" id="" class="single" data-group="add-bed"  />加床含早</label></li>
+                    <li><label><input type="checkbox" name="" id="">宽带</label></li>
+                    <li><label><input type="checkbox" name="" id="">司陪房</label></li>
+                </ul>
+              </div>
+          </td>
+          <td style="vertical-align:top">
+             <div class="rztime">
+                    <p><input type="checkbox" checked="checked" /> <span>入住时间</span>  <label>14:00以后</label> </p>
+                    <p><em>&nbsp;</em> <span>退房时间</span>  <label>12:00以前</label> </p>
+             </div>
+             <div class="rztian">
+               <input type="checkbox" checked="checked" />
+               <p>入住前1天的12点之前变更或取消，不收取任何费用；入住前1天的12点之后变更或取消，酒店将扣除首晚房费。</p>
+             </div>
+          </td>
+          <td style="vertical-align:top">
+             <div class="rz_select" style="margin-top:15px"> <span>入住时间</span> <select><option>请选择</option></select> </div>
+             <div class="rz_select"> <span>退房时间</span> <select><option>请选择</option></select> </div>
+             <div class="rz_select"> <span>离店时间</span> <select><option>请选择</option></select> </div>
+             <p class="rzq"><span>入住前</span> <label></label> <em>天/</em> <label></label> <i>点</i></p>
+             <div class="tj_btn"> <select><option>请选择</option></select> <a href="#" class="tj_btn_a">添加</a> </div>
+          </td>
+       </tr>
+     </table>
+    
+      <div class="btn">
+        <a class="tianjiaqueding_btn" href="#">确定 </a>
+        <a class="tianjiaquxiao_btn" href="#"> 取消</a>    
+      </div>
+    </div>
+ </div> 
+
+ <div class="commercial">
+        <big>商务标准房</big>
+        <b>不可加床</b>
+        <b>4&nbsp;&nbsp;个价格计划</b>
+ </div>
+ <script>
+$(function(){
+    checkboxSingleAndAll();
+
+}) 
+
+
+ </script>
+
+</body>
+</html>

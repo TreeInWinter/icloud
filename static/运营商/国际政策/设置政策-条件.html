@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>政策 国际政策 设置政策 条件</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.gray.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+<link href="/static/css/kendo.reset.css" rel="stylesheet" />
+    <link href="../../static/css/jiudianweihuzs.css" rel="stylesheet" type="text/css"/>
+    <link href="../../static/css/xieyizhengche.css" rel="stylesheet" type="text/css"/>
+    <script src="../../static/js/jquery.min.js" type="text/javascript"></script>
+    <script src="../../static/js/kendo.web.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/static/js/scrollFix.js"></script>
+    <script type="text/javascript" src="../../static/js/public.js"></script>
+
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript">
+$(function(){
+    new Collpase({
+        limitHeight:115,
+        container:'.xyzc_div' 
+    }).init();
+}) 
+    </script>
+	<!--<link href="/static/css/common.css" rel="stylesheet" />
+	<link href="/static/css/b2b.css" rel="stylesheet" />
+    <link href="/static/css/zhuzhijiagou.css" rel="stylesheet" type="text/css" />   
+	<link href="/static/css/kendo.common.css" rel="stylesheet" />
+	<link href="/static/css/kendo.gray.css" rel="stylesheet" />
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/kendo.web.js"></script>-->
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<!-- @CLB@ -->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body>
+    <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">&nbsp;</a>
+                <span>&nbsp;</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent" style="overflow:hidden;">
+			<!-- start zhuzhijiagou -->
+        
+            <div class="topFixedToolsBar">
+                <div style="float:left;border-right:1px solid #ffffff">
+                    <a href="#" style="display:inline-block;line-height:33px;font-size: 14px;font-weight: bold;border-right: 1px solid #CDCECE;padding: 0 8px;">返回</a>
+                </div>
+                <div class="fixedMenu">
+                    <a href="#">设置政策</a>
+                </div>
+                <div class="fixedButton">
+                    <a class="button_secondary adaptiveButton small" href="javascript:;">
+                        <span class="left"></span>
+                        <span class="center">取消</span>
+                        <span class="right"></span>
+                    </a>
+                    <a class="button_important adaptiveButton small" href="javascript:;">
+                        <span class="left"></span>
+                        <span class="center">保存</span>
+                        <span class="right"></span>
+                    </a>
+</div>
+            </div>
+
+            <div class="zhuzhijiagou">
+
+               <div class="xyzc_div">
+               <table cellpadding="0" cellspacing="0" class="xyzc_tab1" style="width:960px;">
+                  <tr>
+                     <td class="list_1"><label> <input type="checkbox"/> 航空公司</label></td>
+                     <td class="list_2">
+                                <select>
+                                   <option>包含</option>
+                                   <option>排出</option>
+                                </select>
+                      </td>
+                     <td class="list_3"> <input type="text" value="MU/CN"/> </td>
+                     <td class="list_1" style=" width:103px;"><label> <input type="checkbox"/> 政策有效期</label></td>
+                     <td class="list_4"><input type="text" value="2013-06-01"/> <em>至</em> <input type="text" value="2013-06-01"/> <a href="#">添加</a></td>
+                     <td class="xyzc_cx" rowspan="6"><a href="#" class="xyzc_cx_a">预览</a></td>
+                  </tr> 
+                  <tr>
+                     <td class="list_1"><label> <input type="checkbox"/> 出发城市</label></td>
+                     <td class="list_2">
+                                <select>
+                                   <option>包含</option>
+                                   <option>排出</option>
+                                </select>
+                      </td>
+                     <td class="list_3"> <input type="text" value="上海 SHA"/> </td>
+                     <td colspan="2" class="date"> 
+                         <p style="margin-right:10px;"><span>2013-06-01至2013-08-31</span> <em>×</em> </p> 
+                         <p><span>2013-06-01至2013-08-31</span> <em>×</em> </p> 
+                     </td>
+                  </tr> 
+                  <tr>
+                     <td class="list_1"><label> <input type="checkbox"/> 到达城市</label></td>
+                     <td class="list_2">
+                                <select>
+                                   <option>包含</option>
+                                   <option>排出</option>
+                                </select>
+                      </td>
+                     <td class="list_3" colspan="3"> <input type="text" value="北京 PEK"/> </td>
+                  </tr> 
+                  <tr>
+                     <td class="list_1"><label> <input type="checkbox"/> 适用舱位</label></td>
+                     <td class="list_2" colspan="4"><input type="text"/></td>
+                  </tr> 
+                  <tr>
+                     <td class="list_1"><label> <input type="checkbox"/> 政策类型</label></td>
+                     <td class="list_2" colspan="4">
+                           <select>
+                              <option>全部</option>
+                              <option>普通政策</option>
+                              <option>全国政策</option>
+                              <option>特殊高返</option>
+                              <option>往返打包</option>
+                              <option>特舱政策</option>
+                              <option>团队政策</option>
+                              <option>特价政策</option>
+                           </select>
+                     </td>
+                  </tr> 
+               </table>
+               </div>
+              
+              <div class="qx">
+                  <p style="float:left; margin-left:20px;"><b>关联政策：</b> <i style="color:#0066cc;">100</i> 个</p>
+              </div>
+           
+            
+            <div class="scroll">
+                <table cellpadding="0" cellspacing="0" class="xyzc_tab2 first_1">
+                    <thead>
+                        <tr>
+                            <th>航司</th>
+                            <th>出发机场</th>
+                            <th>到达机场</th>
+                            <th>航程</th>
+                            <th>航班限制</th>
+                            <th>适用舱位</th>
+                            <th>代理费</th>
+                            <th>奖励</th>
+                            <th>开票费</th>
+                            <th>乘客类型</th>
+                            <th>出票</th>
+                            <th>票证</th>
+                            <th>政策有效期</th>
+                            <th>出票有效期</th>
+                            <th>发布时间</th>
+                            <th>发布人</th>
+                            <th>状态</th>
+                            <th>标签名称</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>MU</td>
+                            <td>SHA/PVG/<br>
+                                SZX/WUH</td>
+                            <td>PEK</td>
+                            <td>单程</td>
+                            <td>所有</td>
+                            <td>FCYBMH<br>KLQGV</td>
+                            <td>6.0</td>
+                            <td>6.0</td>
+                            <td>2.0</td>
+                            <td>成人</td>
+                            <td>自动</td>
+                            <td>BSP</td>
+                            <td>2010/09/01<br>
+                                至2012/10/01</td>
+                            <td>2010/09/01<br>
+                                至2012/10/01</td>
+                            <td>2010/09/01<br>
+                                至2012/10/01</td>
+                            <td>zhangjian</td>
+                            <td>已发布</td>
+                            <td>东方航空/<br>南方航空</td>
+                        </tr>
+                        <tr class="hui_bg">
+                            <td>CA</td>
+                            <td>SHA/PVG</td>
+                            <td>全国</td>
+                            <td>往返</td>
+                            <td>排除2301<br>/2333</td>
+                            <td>FCYBMH<br>KLQGV</td>
+                            <td>6.0</td>
+                            <td>6.0</td>
+                            <td>2.0</td>
+                            <td>儿童</td>
+                            <td>手动</td> 
+                            <td>B2B</td>
+                            <td>2010/09/01<br>
+                                至2012/10/01</td>
+                            <td>2010/09/01<br>
+                                至2012/10/01</td>
+                            <td>2010/09/01<br>
+                                至2012/10/01</td>
+                            <td>zhangjian</td>
+                            <td class="red_color">已挂起</td>
+                            <td>东方航空/<br>南方航空</td>
+                        </tr>
+                        <tr class="font_color">
+                            <td>FM</td>
+                            <td>排除<br>
+                                SHA/PVG</td>
+                            <td>排除PEK</td>
+                            <td>单程</td>
+                            <td>所有</td>
+                            <td>MH</td>               
+                            <td>5.0</td>                 
+                            <td>5.0</td>
+                            <td>2.0</td>
+                            <td>不限</td>
+                            <td>手动</td> 
+                            <td>BSP</td>   
+                            <td>2010/09/01<br>
+                                至2012/10/01</td>
+                            <td>2010/09/01<br>
+                                至2012/10/01</td>
+                            <td>2010/09/01<br>
+                                至2012/10/01</td>
+                            <td>zhangjian</td>
+                            <td>已作废</td>
+                            <td>东方航空</td>
+                        </tr>
+                        <tr class="hui_bg">
+                            <td>MU</td>
+                            <td>SHA/PVG</td>
+                            <td>全国</td>
+                            <td>往返</td>
+                            <td>所有</td>
+                            <td>G</td>               
+                            <td>6.0</td>                 
+                            <td>6.0</td>
+                            <td>2.0</td>
+                            <td>成人</td>
+                            <td>手动</td>
+                            <td>B2B</td>   
+                            <td>2010/09/01<br>
+                                至2012/10/01</td>
+                            <td>2010/09/01<br>
+                                至2012/10/01</td>
+                            <td>2010/09/01<br>
+                                至2012/10/01</td>
+                            <td>zhangjian</td>
+                            <td>已发布</td>
+                            <td> </td>
+                        </tr>
+                        <tr class="font_color">
+                            <td>CA</td>
+                            <td>SHA/PVG</td>
+                            <td>全国</td>
+                            <td>单程</td>
+                            <td>所有</td>
+                            <td>GV</td>
+                            <td>6.0</td>
+                            <td>6.0</td>
+                            <td>2.0</td>
+                            <td>成人</td>
+                            <td>手动</td>
+                            <td>BSP</td>
+                            <td>2010/09/01<br>
+                                至2012/10/01</td>
+                            <td>2010/09/01<br>
+                                至2012/10/01</td>
+                            <td>2010/09/01<br>
+                                至2012/10/01</td>
+                            <td>zhangjian</td>
+                            <td>已作废</td>
+                            <td> </td>
+                        </tr>
+                        <tr class="hui_bg">
+                            <td>CA</td>
+                            <td>&nbsp;</td>
+                            <td>全国</td>
+                            <td>单程</td>
+                            <td>所有</td>
+                            <td>CYBMH<br>KLQGV</td>
+                            <td>5.0</td>
+                            <td>5.0</td>
+                            <td>2.0</td>
+                            <td>儿童</td>
+                            <td>手动</td>
+                            <td>BSP</td>
+                            <td>2010/09/01<br>
+                                至2012/10/01</td>
+                            <td>2010/09/01<br>
+                                至2012/10/01</td>
+                            <td>2010/09/01<br>
+                                至2012/10/01</td>
+                            <td>zhangjian</td>
+                            <td class="red_color">已挂起</td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td>CA</td>
+                            <td>&nbsp;</td>
+                            <td>全国</td>
+                            <td>单程</td>
+                            <td>所有</td>
+                            <td>MH</td>
+                            <td>6.0</td>
+                            <td>6.0</td>
+                            <td>2.0</td>
+                            <td>不限</td>
+                            <td>手动</td>
+                            <td>BSP</td>
+                            <td>2010/09/01<br>
+                                至2012/10/01</td>
+                            <td>2010/09/01<br>
+                                至2012/10/01</td>
+                            <td>2010/09/01<br>
+                                至2012/10/01</td>
+                            <td>zhangjian</td>
+                            <td>已发布</td>
+                            <td> </td>
+                        </tr>
+                        <tr class="hui_bg">
+                            <td>CA</td>
+                            <td>&nbsp;</td>
+                            <td>全国</td>
+                            <td>单程</td>
+                            <td>所有</td>
+                            <td>G</td>
+                            <td>6.0</td>
+                            <td>6.0</td>
+                            <td>2.0</td>
+                            <td>成人</td>
+                            <td>手动</td>
+                            <td>BSP</td>
+                            <td>2010/09/01<br>
+                                至2012/10/01</td>
+                            <td>2010/09/01<br>
+                                至2012/10/01</td>
+                            <td>2010/09/01<br>
+                                至2012/10/01</td>
+                            <td>zhangjian</td>
+                            <td>已发布</td>
+                            <td> </td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+                
+                <div class="grid-table-pagination page">
+                    <span class="grid-table-count">
+                        共 <em>132</em> 条记录
+                    </span>
+                    <span>
+                        <a href="#" class="prev">&nbsp;</a>
+                    </span>
+                    <span class="links">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#" class="current">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="javascript:;">...</a>
+                        <a href="#">50</a>
+                    </span>
+                    <span>
+                        <a href="#" class="next">&nbsp;</a>
+                    </span>
+                </div>
+            
+          </div>
+        </div>
+        <!-- end of zhuzhijiagou -->
+    </div>
+	
+    
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+    
+    <script type="application/javascript">
+        $(function(){
+                //浮动条
+                $(".topFixedToolsBar").scrollFix("top","top");
+                });
+	
+	</script>
+</body>
+</html>

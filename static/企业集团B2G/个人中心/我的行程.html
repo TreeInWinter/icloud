@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>天地行 B2G 个人中心 我的行程</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+        <link rel="stylesheet" href="../../static/css/b2g.css" media="all" />
+        <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+        <link rel="stylesheet" href="../../static/css/kendo.b2g.css" />
+        <link rel="stylesheet" href="../../static/css/b2g_personage_center.css" media="all" />
+
+        <script type="text/javascript" src="../../static/js/jquery.min.js">
+        </script>
+        <script type="text/javascript" src="../../static/js/kendo.web.js">
+        </script>
+        <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js">
+        </script>
+        <script type="text/javascript" src="../../static/js/global.js">
+        </script>
+        
+        <script src="../../static/js/jquery-ui-1.10.3.custom.js">
+        </script>
+        <!--[if lte IE 9]>
+        <script src="/static/js/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="main-wrapper">
+            <div class="top-line"></div>
+            <header class="main-header">
+            <div class="header-content">
+                <a class="logo" href="/">天地行 B2G</a>
+                <nav class="main-nav">
+                <ul class="clearfix">
+                    <li class="first active"><a herf="#">行程预订</a></li>
+                    <li><a herf="#">行程管理</a></li>
+                    <li><a herf="#">数据服务</a></li>
+                    <li><a herf="#">创业维护</a></li>
+                    <li><a herf="#">系统设置</a></li>
+                </ul> 
+                </nav>
+            </div>
+            </header>
+
+            <section class="main-body clearfix">
+            <div class="main-body-content"> <!--body 开始-->
+                <div class="personalNavBar clearfix">
+                    <ul>
+                        <li class="current"><span class="journey"><em>我的行程</em></span></li>
+                        <li><span class="card"><em>信用卡</em></span></li>
+                        <li><span class="secretary"><em>差旅秘书</em></span></li>
+                        <li><span class="approver"><em>代理审批人</em></span></li>
+                        <li><span class="messages"><em>消息中心</em></span></li>
+                        <li><span class="data"><em>我的资料</em></span></li>
+                        <li><span class="password"><em>修改密码</em></span></li>
+                    </ul>
+                </div>
+                <div class="hoverCont">  <!--悬停开始-->
+                    <table class="orderInfoTitle">
+                        <colgroup>
+                            <col width="210">
+                            <col width="634">
+                            <col width="230">
+                            <col width="125">
+                        </colgroup> 
+                        <tr>
+                            <th>行程订单号</th>
+                            <th>订单信息</th>
+                            <th>订单状态</th>
+                            <th>提交日期</th>
+                        </tr>
+                    </table>
+                </div>  <!--悬停结束-->
+
+                <div class="journey-list">  <!--订单信息开始-->
+
+                    <div class="uc-journey-item uc-journey-hotel">
+                        <table>
+                            <colgroup>
+                                <col width="210">
+                                <col width="634">
+                                <col width="230">
+                                <col width="125">
+                            </colgroup>
+                            <tbody><tr>
+                                    <td>
+                                        <div class="uc-journey-item-header">
+                                            <span class="uc-icon uc-journey-hotel-icon">&nbsp;</span>
+                                            CL124124124141
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uc-cols clearfix">
+                                            <div class="col uc-col1">
+                                                <span class="uc-hotel-name"><s>晋江之星</s>（成都金山桥店）</span>
+                                                <span class="uc-hotel-address">上海闸北区光中西路55号</span>
+                                                <span class="uc-hotel-room">超大豪华房 大床</span>
+                                            </div>
+                                            <div class="col uc-col2">
+                                                <span class="uc-hotel-date"><strong>入住日期：</strong>2013-12-21</span>
+                                                <span class="uc-hotel-date"><strong>退房日期：</strong>2013-12-21</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="uc-journey-state">
+                                            <span class="uc-journey-state-box">已驳回</span>
+                                            <span class="uc-journey-state-text">
+                                                <i class="uc-icon uc-bang">&nbsp;</i>与本人差旅政策不符合，驳回。
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="uc-submited-date">2013-12-13</span>
+                                    </td>
+                                </tr>
+                        </tbody></table>
+                    </div>
+
+                    <div class="uc-journey-item uc-journey-flight">
+                        <table class="uc-journey-flight-single">
+                            <colgroup>
+                                <col width="210">
+                                <col width="634">
+                                <col width="230">
+                                <col width="125">
+                            </colgroup>
+                            <tbody><tr>
+                                    <td>
+                                        <div class="uc-journey-item-header">
+                                            <span class="uc-icon uc-journey-flight-icon">&nbsp;</span>
+                                            CL124124124141
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uc-cols clearfix">
+                                            <div class="col uc-col1">
+                                                <div>
+                                                    <span class="uc-flight-departure">上海</span>
+                                                    <span class="uc-flight-stop">
+                                                        <i class="uc-flight-stop-bar">&nbsp;</i>
+                                                        <s class="uc-flight-stop-date">2013-12-17</s>
+                                                        <s class="uc-flight-stop-box"><i>经停</i></s>
+                                                        <s class="uc-flight-stop-place">东京</s>
+                                                    </span>
+                                                    <span class="uc-flight-arrival">西安</span>
+                                                </div>
+                                                <div>
+                                                    <s class="uc-flight-stop-insurance">航空意外保</s>
+                                                </div>
+                                            </div>
+
+                                            <div class="col uc-col2">
+
+                                                <span class="uc-flight-highlight"><i class="icon logo_MU"></i><s>33南方航空CZ6141</s><em>机型333（大）经济舱</em></span>
+
+                                                <span class="uc-flight-text"><s><strong>起飞：</strong> 07:41</s><em>北京 首都机场</em></span>
+                                                <span class="uc-flight-text"><s><strong>到达：</strong> 17:41</s><em>纽约 牛哇可机场</em></span>
+
+                                            </div>
+ 
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="uc-journey-state">
+                                            <span class="uc-journey-state-box">已提交</span>
+                                        </span>
+                                        <span class="uc-ticket">
+                                            <b>客票信息</b>
+                                            <i class="icon"></i>
+                                            <div class="uc-ticket-detail"><i></i>
+                                                   <table>
+                                                <tr class="uc-ticket-item"><td><s>票号：<em>4574878454578</em></s></td>
+                                                <td>
+                                                <u><em>CZ6437</em>  上海浦东国际机场- 西安咸阳国际机场</u>
+                                                </td>
+                                                </tr>
+                                                
+                                                </table>
+                                            </div>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="uc-submited-date">2013-12-13</span>
+                                    </td>
+                                </tr>
+                        </tbody></table>
+                    </div>
+                    <div class="uc-journey-item uc-journey-flight">
+                        <table class="uc-journey-flight-double">
+                            <colgroup>
+                                <col width="210">
+                                <col width="634">
+                                <col width="230">
+                                <col width="125">
+                            </colgroup>
+                            <tbody><tr>
+                                    <td>
+                                        <div class="uc-journey-item-header">
+                                            <span class="uc-icon uc-journey-flight-icon">&nbsp;</span>
+                                            CL124124124141
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="uc-flight-double-group">
+                                            <div class="uc-flight-double-group-item">
+                                                <div class="uc-cols clearfix">
+                                                    <div class="col uc-col1">
+                                                        <div>
+                                                            <span class="uc-icon uc-arrow-green">&nbsp;</span>
+                                                            <span class="uc-flight-departure">上海</span>
+                                                            <span class="uc-flight-stop">
+                                                                <i class="uc-flight-stop-bar">&nbsp;</i>
+                                                                <s class="uc-flight-stop-date">2013-12-17</s>
+                                                                <s class="uc-flight-stop-box"><i>经停</i></s>
+                                                                <s class="uc-flight-stop-place">东京</s>
+                                                            </span>
+                                                            <span class="uc-flight-arrival">西安</span>
+                                                        </div>
+                                                        <div>
+                                                            <s class="uc-flight-stop-insurance">航空意外保</s>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col uc-col2">
+
+                                                        <span class="uc-flight-highlight"><i class="icon logo_MU"></i><s>33南方航空CZ6141</s><em>机型333（大）经济舱</em></span>
+
+                                                        <span class="uc-flight-text"><s><strong>起飞：</strong> 07:41</s><em>北京 首都机场</em></span>
+                                                        <span class="uc-flight-text"><s><strong>到达：</strong> 17:41</s><em>纽约 牛哇可机场</em></span>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="uc-flight-double-group-item">
+                                                <div class="uc-cols clearfix">
+                                                    <div class="col uc-col1">
+                                                        <div>
+                                                            <span class="uc-icon uc-arrow-red">&nbsp;</span>
+                                                            <span class="uc-flight-departure">上海</span>
+                                                            <span class="uc-flight-stop">
+                                                                <i class="uc-flight-stop-bar">&nbsp;</i>
+                                                                <s class="uc-flight-stop-date">2013-12-17</s>
+                                                                <s class="uc-flight-stop-box"><i>2程中转</i></s>
+                                                                <s class="uc-flight-stop-place">东京</s>
+                                                            </span>
+                                                            <span class="uc-flight-arrival">西安</span>
+                                                        </div>
+                                                        <div>
+                                                            <s class="uc-flight-stop-insurance">航空意外保</s>
+                                                        </div>
+                                                    </div>
+                                            <div class="col uc-col2">
+
+                                                <span class="uc-flight-highlight"><i class="icon logo_MU"></i><s>33南方航空CZ6141</s><em>机型333（大）经济舱</em></span>
+
+                                                <span class="uc-flight-text"><s><strong>起飞：</strong> 07:41</s><em>北京 首都机场</em></span>
+                                                <span class="uc-flight-text"><s><strong>到达：</strong> 17:41</s><em>纽约 牛哇可机场</em></span>
+
+                                            </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+
+
+
+
+                                    </td>
+
+                                    <td>
+                                        <span class="uc-journey-state">
+                                            <span class="uc-journey-state-box">已提交</span>
+                                        </span>
+                                        <span class="uc-ticket">
+                                            <b>客票信息</b>
+                                            <i class="icon"></i>
+                                            <div class="uc-ticket-detail"><i></i>
+                                            <table>
+                                                <tr class="uc-ticket-item"><td><s>票号：<em>4574878454578</em></s></td>
+                                                <td>
+                                                <u><em>CZ6437</em>  上海浦东国际机场- 西安咸阳国际机场</u>
+                                                </td>
+                                                </tr>
+                                                <tr class="uc-ticket-item">
+                                                <td><s>票号：<em>4574878454578</em></s></td>
+                                                <td>
+                                                <div><u><em>CZ6437</em>  上海浦东国际机场- 西安咸阳国际机场</u>
+                                                <u><em>CZ6437</em>  上海浦东国际机场- 西安咸阳国际机场</u></div>
+                                                <div>
+                                                <u><em>CZ6437</em>  上海浦东国际机场- 西安咸阳国际机场</u>
+                                                <u><em>CZ6437</em>  上海浦东国际机场- 西安咸阳国际机场</u></div></td>
+                                                </tr>
+                                                </table>
+                                            </div>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="uc-submited-date">2013-12-13</span>
+                                    </td>
+                                </tr>
+                        </tbody></table>
+                    </div>
+
+
+
+                    <div class="smallLoading"><em></em> <b>数据正在加载中……</b></div>
+
+                </div>  <!--订单信息结束-->
+
+
+            </div> <!--body 结束-->
+            </section>
+            <footer class="main-footer">
+            <p class="copyright">Copyright &copy; 2013 天地行 All Rights Reserved.     沪ICP备08101503号</p>
+            </footer>
+        </div>
+
+    </body>
+</html>
+
+<script type="text/x-kendo-template" id="oneTransfer">
+
+    <table class="transferList">
+        <colgroup>
+            <col width="40">
+            <col width="140">
+            <col width="140">
+        </colgroup>
+        <tr>
+            <th>中转</th>
+            <td>香港（香港国际机场）</td>
+            <td>停留时长：2小时15分</td>
+        </tr>
+    </table>	
+</script>
+
+<script type="text/x-kendo-template" id="twiceTransfer">
+
+    <table class="transferList">
+        <colgroup>
+            <col width="40">
+            <col width="140">
+            <col width="140">
+        </colgroup>
+        <tr>
+            <th>中转</th>
+            <td>香港（香港国际机场）</td>
+            <td>停留时长：2小时15分</td>
+        </tr>
+        <tr>
+            <th>经停</th>
+            <td>东京（东京国际机场）</td>
+            <td>停留时长：2小时15分</td>
+        </tr>
+    </table>	
+</script>
+
+<script type="text/javascript">
+
+
+    $(function() {
+            $('.uc-ticket').click(function(){
+                var that= $(this);
+                var detail = that.find('.uc-ticket-detail');
+                
+                if(!that.hasClass('ticket-active')){
+                    that.find('b').html('&#12288;收起&#12288;');
+    
+                    detail.css({'visiblity':'hidden','display':'block'}).css({
+                        'margin-left': '-'+(parseInt(detail.width()/2)-47)+'px'
+                    });
+                    that.addClass('ticket-active');
+                }else{
+                    that.find('b').html('客票信息');
+                    that.removeClass('ticket-active');
+                    detail.hide();
+                }
+
+            });
+
+
+            $(".hoverCont").fixedBar();
+
+            $(".uc-journey-flight-single .uc-flight-stop-box").kendoTooltip({
+                position: "bottom", //left right top
+                wrapperClass: "lineWeight",
+                width: 320,
+                content: function() {
+                return $("#oneTransfer").html();
+                }
+            });
+        
+            $(".uc-journey-flight-double .uc-flight-stop-box").kendoTooltip({
+                position: "bottom", //left right top
+                wrapperClass: "lineWeight",
+                width: 320,
+                content: function() {
+                return $("#twiceTransfer").html();
+                }
+            });
+    
+    });
+</script>
+

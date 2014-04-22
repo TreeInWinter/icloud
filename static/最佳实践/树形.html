@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- Common Kendo UI Web CSS -->
+	<link href="/static/css/kendo.common.min.css" rel="stylesheet" />
+	<!-- Default Kendo UI Web theme CSS -->
+	<link href="/static/css/kendo.default.min.css" rel="stylesheet" />
+	<!-- jQuery JavaScript -->
+	<script src="/static/js/jquery.min.js"></script>
+	<!-- Kendo UI Web combined JavaScript -->
+	<script src="/static/js/kendo.web.min.js"></script>
+	<script src="/static/js/console.js"></script>
+	
+	<script src="/最佳实践/formatPage.js"></script>
+    </head>
+    <body>
+	<!-- 添加示例 -->
+	<h1>基于HTML 构建树形</h1>
+	
+	<div id="example" class="k-content">
+            <div class="demo-section">
+                <ul id="treeview">
+                    <li data-expanded="true">
+                        <span class="k-sprite folder"></span>
+                        My Web Site
+                        <ul>
+                            <li data-expanded="true">
+                                <span class="k-sprite folder"></span>images
+                                <ul>
+                                    <li><span class="k-sprite image"></span>logo.png</li>
+                                    <li><span class="k-sprite image"></span>body-back.png</li>
+                                    <li><span class="k-sprite image"></span>my-photo.jpg</li>
+                                </ul>
+                            </li>
+                            <li data-expanded="true">
+                                <span class="k-sprite folder"></span>resources
+                                <ul>
+                                    <li data-expanded="true">
+                                        <span class="k-sprite folder"></span>pdf
+                                        <ul>
+                                            <li><span class="k-sprite pdf"></span>brochure.pdf</li>
+                                            <li><span class="k-sprite pdf"></span>prices.pdf</li>
+                                        </ul>
+                                    </li>
+                                    <li><span class="k-sprite folder"></span>zip</li>
+                                </ul>
+                            </li>
+                            <li><span class="k-sprite html"></span>about.html</li>
+                            <li><span class="k-sprite html"></span>contacts.html</li>
+                            <li><span class="k-sprite html"></span>index.html</li>
+                            <li><span class="k-sprite html"></span>portfolio.html</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <script>
+                $(document).ready(function() {
+                    $("#treeview").kendoTreeView();
+                });
+            </script>
+
+            <style scoped>
+                .demo-section {
+                    width: 200px;
+                }
+
+                #treeview .k-sprite {
+                    background-image: url("/kendoui.web/examples/content/web/treeview/coloricons-sprite.png");
+                }
+
+                .rootfolder { background-position: 0 0; }
+                .folder { background-position: 0 -16px; }
+                .pdf { background-position: 0 -32px; }
+                .html { background-position: 0 -48px; }
+                .image { background-position: 0 -64px; }
+
+            </style>
+        </div>
+	
+	
+	<h1>带复选框的树形</h1>
+	
+	
+	<div id="example1" class="k-content">
+
+	    <div class="container">
+		<div class="treeview-back ">
+		    <div id="treeview1"></div>
+		</div>
+	    </div>
+
+	    <div id="result">No nodes checked.</div>
+
+	    <script>
+		$("#treeview1").kendoTreeView({
+		    checkboxes: {
+			checkChildren: true
+		    },
+
+		    dataSource: [{
+			id: 1, text: "My Documents", expanded: true, spriteCssClass: "rootfolder", items: [
+			    {
+				id: 2, text: "Kendo UI Project", expanded: true, spriteCssClass: "folder", items: [
+				    { id: 3, text: "about.html", spriteCssClass: "html" },
+				    { id: 4, text: "index.html", spriteCssClass: "html" },
+				    { id: 5, text: "logo.png", spriteCssClass: "image" }
+				]
+			    },
+			    {
+				id: 6, text: "New Web Site", expanded: true, spriteCssClass: "folder", items: [
+				    { id: 7, text: "mockup.jpg", spriteCssClass: "image" },
+				    { id: 8, text: "Research.pdf", spriteCssClass: "pdf" },
+				]
+			    },
+			    {
+				id: 9, text: "Reports", expanded: true, spriteCssClass: "folder", items: [
+				    { id: 10, text: "February.pdf", spriteCssClass: "pdf" },
+				    { id: 11, text: "March.pdf", spriteCssClass: "pdf" },
+				    { id: 12, text: "April.pdf", spriteCssClass: "pdf" }
+				]
+			    }
+			]
+		    }]
+		});
+
+		// function that gathers IDs of checked nodes
+		function checkedNodeIds(nodes, checkedNodes) {
+		    for (var i = 0; i < nodes.length; i++) {
+			if (nodes[i].checked) {
+			    checkedNodes.push(nodes[i].id);
+			}
+
+			if (nodes[i].hasChildren) {
+			    checkedNodeIds(nodes[i].children.view(), checkedNodes);
+			}
+		    }
+		}
+
+		// show checked node IDs on datasource change
+		$("#treeview1").data("kendoTreeView").dataSource.bind("change", function() {
+		    var checkedNodes = [],
+			treeView = $("#treeview1").data("kendoTreeView"),
+			message;
+
+		    checkedNodeIds(treeView.dataSource.view(), checkedNodes);
+
+		    if (checkedNodes.length > 0) {
+			message = "IDs of checked nodes: " + checkedNodes.join(",");
+		    } else {
+			message = "No nodes checked.";
+		    }
+
+		    $("#result").html(message);
+		});
+	    </script>
+
+	    <style scoped>
+		#treeview1 .k-sprite {
+		    background-image: url("/kendoui.web/examples/content/web/treeview/coloricons-sprite.png");
+		}
+
+		.rootfolder { background-position: 0 0; }
+		.folder     { background-position: 0 -16px; }
+		.pdf        { background-position: 0 -32px; }
+		.html       { background-position: 0 -48px; }
+		.image      { background-position: 0 -64px; }
+
+		.treeview-back
+		{
+		    float: left;
+		    margin: 0 0 2em;
+		    padding: 20px;
+		    -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.45), inset 0 0 30px rgba(0,0,0,0.07);
+		    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.45), inset 0 0 30px rgba(0,0,0,0.07);
+		    box-shadow: 0 1px 2px rgba(0,0,0,0.45), inner 0 0 30px rgba(0,0,0,0.07);
+		    -webkit-border-radius: 8px;
+		    -moz-border-radius: 8px;
+		    border-radius: 8px;
+		}
+
+		.container
+		{
+		    margin: 0 30px;
+		    float: left;
+		    width: 220px;
+		}
+
+		#result
+		{
+		    float: left;
+		    padding: 10px;
+		    -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.45), inset 0 0 30px rgba(0,0,0,0.07);
+		    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.45), inset 0 0 30px rgba(0,0,0,0.07);
+		    box-shadow: 0 1px 2px rgba(0,0,0,0.45), inner 0 0 30px rgba(0,0,0,0.07);
+		    -webkit-border-radius: 8px;
+		    -moz-border-radius: 8px;
+		    border-radius: 8px;
+		}
+	    </style>
+	</div>
+	
+	<br clear="both"/>
+	<h1>自定义树形项图片显示</h1>
+	
+	<div id="treeview-images"></div>
+	<script>
+                $("#treeview-images").kendoTreeView({		   
+                    dataSource: [
+                        {
+                            text: "Inbox", imageUrl: "/kendoui.web/examples/content/web/treeview/mail.png",
+                            items: [
+                                { text: "Read Mail", imageUrl: "/kendoui.web/examples/content/web/treeview/readmail.png" }
+                            ]
+                        },
+                        {
+                            text: "Drafts", imageUrl: "/kendoui.web/examples/content/web/treeview/edit.png"
+                        },
+                        {
+                            text: "Search Folders", expanded: true, imageUrl: "/kendoui.web/examples/content/web/treeview/search.png",
+                            items: [
+                                { text: "Categorized Mail", imageUrl: "/kendoui.web/examples/content/web/treeview/search.png" },
+                                { text: "Large Mail", imageUrl: "/kendoui.web/examples/content/web/treeview/search.png" },
+                                { text: "Unread Mail", imageUrl: "/kendoui.web/examples/content/web/treeview/search.png" }
+                            ]
+                        },
+                        {
+                            text: "Settings", imageUrl: "/kendoui.web/examples/content/web/treeview/settings.png"
+                        }
+                    ]
+                });
+            </script>
+	    
+	    
+	    <h1>Jsonp 数据 动态查询数据</h1>
+	    
+	    <div id="jsonp_treeview" class="demo-section"></div>
+            <script>
+                var serviceRoot = "http://demos.kendoui.com/service";
+                    homogeneous = new kendo.data.HierarchicalDataSource({
+                        transport: {
+                            read: {
+                                url: serviceRoot + "/Employees",
+                                dataType: "jsonp"
+                            }
+                        },
+                        schema: {
+                            model: {
+                                id: "EmployeeId",
+                                hasChildren: "HasEmployees"
+                            }
+                        }
+                    });
+
+                $("#jsonp_treeview").kendoTreeView({
+                    dataSource: homogeneous,
+                    dataTextField: "FullName"
+                });
+            </script>
+	    
+	    
+	    <h1>自定义显示模版</h1>
+	    
+	    <div class="k-content">
+		<div id="tpl_treeview" class="demo-section"></div>
+
+		<script id="treeview-template" type="text/kendo-ui-template">
+		    #: item.text #
+		    # if (!item.items) { #
+			<a class='delete-link' href='\#'></a>
+		    # } #
+		</script>
+
+		<script>
+		    $("#tpl_treeview").kendoTreeView({
+			template: kendo.template($("#treeview-template").html()),
+
+			dataSource: [{
+			    id: 1, text: "My Documents", expanded: true, spriteCssClass: "rootfolder", items: [
+				{
+				    id: 2, text: "Kendo UI Project", expanded: true, spriteCssClass: "folder", items: [
+					{ id: 3, text: "about.html", spriteCssClass: "html" },
+					{ id: 4, text: "index.html", spriteCssClass: "html" },
+					{ id: 5, text: "logo.png", spriteCssClass: "image" }
+				    ]
+				},
+				{
+				    id: 6, text: "New Web Site", expanded: true, spriteCssClass: "folder", items: [
+					{ id: 7, text: "mockup.jpg", spriteCssClass: "image" },
+					{ id: 8, text: "Research.pdf", spriteCssClass: "pdf" },
+				    ]
+				},
+				{
+				    id: 9, text: "Reports", expanded: true, spriteCssClass: "folder", items: [
+					{ id: 10, text: "February.pdf", spriteCssClass: "pdf" },
+					{ id: 11, text: "March.pdf", spriteCssClass: "pdf" },
+					{ id: 12, text: "April.pdf", spriteCssClass: "pdf" }
+				    ]
+				}
+			    ]
+			}]
+		    });
+
+		    // Delete button behavior
+		    $(document).on("click", ".delete-link", function(e) {
+			e.preventDefault();
+			var treeview = $("#tpl_treeview").data("kendoTreeView");
+			treeview.remove($(this).closest(".k-item"));
+		    });
+		</script>
+		<style scoped>
+		#tpl_treeview {
+		    width: 300px;
+		}
+
+		#tpl_treeview .k-sprite {
+		    background-image: url("/kendoui.web/examples/content/web/treeview/coloricons-sprite.png");
+		}
+
+		.rootfolder { background-position: 0 0; }
+		.folder     { background-position: 0 -16px; }
+		.pdf        { background-position: 0 -32px; }
+		.html       { background-position: 0 -48px; }
+		.image      { background-position: 0 -64px; }
+
+		.delete-link {
+		    width: 12px;
+		    height: 12px;
+		    background: transparent url("/kendoui.web/examples/content/web/treeview/close.png") no-repeat 50% 50%;
+		    overflow: hidden;
+		    display: inline-block;
+		    font-size: 0;
+		    line-height: 0;
+		    vertical-align: top;
+		    margin: 2px 0 0 3px;
+		    -webkit-border-radius: 5px;
+		    -mox-border-radius: 5px;
+		    border-radius: 5px;
+		}
+	    </style>
+	</div>
+	    
+	    
+	 <h1>树形事件</h1>
+	  <div class="k-content">
+            <div id="event_treeview" ></div>
+            <div class="demo-section">
+                <h3 class="title">Console log</h3>
+                <div class="console"></div>
+            </div>
+            <script>
+                $(document).ready(function() {
+                    function onSelect(e) {
+                        kendoConsole.log("Selecting: " + this.text(e.node));
+                    }
+
+                    function onChange(e) {
+                        kendoConsole.log("Selection changed");
+                    }
+
+                    function onCollapse(e) {
+                        kendoConsole.log("Collapsing " + this.text(e.node));
+                    }
+
+                    function onExpand(e) {
+                        kendoConsole.log("Expanding " + this.text(e.node));
+                    }
+
+                    function onDragStart(e) {
+                        kendoConsole.log("Started dragging " + this.text(e.sourceNode));
+                    }
+
+                    function onDrag(e) {
+                        kendoConsole.log("Dragging " + this.text(e.sourceNode));
+                    }
+
+                    function onDrop(e) {
+                        kendoConsole.log(
+                        "Dropped " + this.text(e.sourceNode) +
+                        " (" + (e.valid ? "valid" : "invalid") + ")"
+                        );
+                    }
+
+                    function onDragEnd(e) {
+                        kendoConsole.log("Finished dragging " + this.text(e.sourceNode));
+                    }
+
+                    function onNavigate(e) {
+                        kendoConsole.log("Navigate " + this.text(e.node));
+                    }
+
+                    $("#event_treeview").kendoTreeView({
+                        dataSource: [
+                            { text: "Furniture", expanded: true, items: [
+                                { text: "Tables & Chairs" },
+                                { text: "Sofas" },
+                                { text: "Occasional Furniture" }
+                            ] },
+                            { text: "Decor", items: [
+                                { text: "Bed Linen" },
+                                { text: "Curtains & Blinds" },
+                                { text: "Carpets" }
+                            ] },
+                            { text: "Storage" }
+                        ],
+                        select: onSelect,
+                        change: onChange,
+                        collapse: onCollapse,
+                        expand: onExpand,
+                        dragAndDrop: true,
+                        /* drag & drop events */
+                        dragstart: onDragStart,
+                        drag: onDrag,
+                        drop: onDrop,
+                        dragend: onDragEnd,
+                        navigate: onNavigate
+                    });
+                });
+            </script>
+        </div>
+    </body>
+</html>

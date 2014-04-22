@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html" charset="utf-8">
+    <title>酒店 酒店维护 库存和房</title>
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/b2b.css">
+    <link rel="stylesheet" href="/static/css/kendo.common.css">
+    <link rel="stylesheet" href="/static/css/kendo.gray.css">
+    <link href="/static/css/kendo.reset.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/hotel.css">
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="/static/js/scrollFix.js"></script>
+    <script type="text/javascript" src="/static/js/hotel.js"></script>
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<!-- @CLB@ -->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="actions block">
+            <div class="col col-l sep-r">
+                <button class="btns btn-return">返回</button>
+            </div>
+            <div class="col col-l" style="padding-left:10px;">
+                <a class="item" href="#">酒店信息</a>
+                <a class="item" href="#">供应商信息</a>
+                <a class="item highlight" href="#">房型</a>
+                <a href="#" class="item">价格计划</a>
+            </div>
+            <div class="col col-r sep-l">
+                <a class="button_4_3" href="#" style="color:#ffffff;margin-top:4px;">提交</a>
+                <a class="button_4_3" href="#" style="color:#ffffff;margin-top:4px">关闭</a>
+            </div>
+        </div>
+        <div class="panel" style="height:21px">
+            <div class="panelTitle">签约信息</div>
+            <div style="float:left;">
+                <span class="head" style="margin-left:75px">城市：<span style="color:#1C64A7">上海</span></span>
+                <span class="head" style="margin-left:75px">酒店名称：<span style="color:#1C64A7">----</span></span>
+                <span class="head" style="margin-left:75px"><span class="important">*</span>签约经理</span>
+                <select>
+                    <option value="签约经理列表">签约经理列表</option>
+                    <option value="李小路" selected="">李小路</option>
+                </select>
+                <span class="head" style="margin-left:75px">状态：<span style="color:#1C64A7">草稿</span></span>
+            </div>
+            <div style="float:right;margin-right:17px">
+                <a class="button_3_3" href="javascipt:;">保存</a>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panelTitle">库存房态管理</div>
+            <span class="rightButtons">
+                <button class="button_text_blue" style="float:right;">批量编辑</button>
+            </span>
+            <div class="panelContent clearfix">
+                <table class="tgrid">
+                    <thead>
+                        <tr>
+                            <th width="25%">房间名称</th>
+                            <th width="15%">保留房</th>
+                            <th width="15%">Cutoff day</th>
+                            <th width="25%">售完房态</th>
+                            <th class="last">操作类型</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>商务标准房</td>
+                            <td><b>3</b><input style="display:none;" type="text" name="room_num" value="3"/></td>
+                            <td><b>3</b><input style="display:none;" type="text" name="cutoffday" value="3"/></td>
+                            <td>
+                            <b>待确认</b>
+                            <select name="room_status" style="display:none">
+                                    <option value="待确认" selected>待确认</option>
+                                    <option value="自由售卖">自由售卖</option>
+                                    <option value="已关闭">已关闭</option>
+                                </select>
+                            </td>
+                             <td>
+                                 <a class="button_text_blue edit" href="javascript:void(0);">编辑</a>
+                                 <div class="oper">
+                                    <a class="button_text_blue" href="javascript:void(0);">保存</a>
+                                    <a class="button_text_blue" href="javascript:void(0);">取消</a>
+                                 </div>
+                             </td>
+                        </tr>
+
+                        <tr>
+                            <td>商务大床房</td>
+                            <td><b>3</b><input style="display:none;" type="text" name="room_num" value="3"/></td>
+                            <td><b>3</b><input style="display:none;" type="text" name="cutoffday" value="3"/></td>
+                            <td>
+                            <b>自由售卖</b>
+                            <select name="room_status" style="display:none">
+                                    <option value="待确认">待确认</option>
+                                    <option value="自由售卖" selected>自由售卖</option>
+                                    <option value="已关闭">已关闭</option>
+                                </select>
+                            </td>
+                            <td>
+                                <a class="button_text_blue edit" href="javascript:void(0);">编辑</a>
+                                 <div class="oper">
+                                    <a class="button_text_blue" href="javascript:void(0);">保存</a>
+                                    <a class="button_text_blue" href="javascript:void(0);">取消</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>豪华街景房</td>
+                            <td><b>3</b><input style="display:none;" type="text" name="room_num" value="3"/></td>
+                            <td><b>3</b><input style="display:none;" type="text" name="cutoffday" value="3"/></td>
+                            <td>
+                            <b>已关闭</b>
+                            <select name="room_status" style="display:none">
+                                    <option value="待确认">待确认</option>
+                                    <option value="自由售卖">自由售卖</option>
+                                    <option value="已关闭" selected>已关闭</option>
+                                </select>
+                            </td>
+                            <td>
+                                <a class="button_text_blue edit" href="javascript:void(0);">编辑</a>
+                                <div class="oper">
+                                    <a class="button_text_blue" href="javascript:void(0);">保存</a>
+                                    <a class="button_text_blue" href="javascript:void(0);">取消</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>豪华海景房</td>
+                            <td><b>3</b><input style="display:none;" type="text" name="room_num" value="3"/></td>
+                            <td><b>3</b><input style="display:none;" type="text" name="cutoffday" value="3"/></td>
+                            <td>
+                            <b>待确认</b>
+                            <select name="room_status" style="display:none">
+                                    <option value="待确认" selected>待确认</option>
+                                    <option value="自由售卖">自由售卖</option>
+                                    <option value="已关闭">已关闭</option>
+                                </select>
+                            </td>
+                            <td>
+                                <a class="button_text_blue edit" href="javascript:void(0);">编辑</a>
+                                <div class="oper">
+                                    <a class="button_text_blue" href="javascript:void(0);">保存</a>
+                                    <a class="button_text_blue" href="javascript:void(0);">取消</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>商务套房</td>
+                            <td>3</td>
+                            <td><b>3</b><input style="display:none;" type="text" name="cutoffday" value="3"/></td>
+                            <td>
+                            <b>关房</b>
+                            <select name="room_status" style="display:none">
+                                    <option value="待确认">待确认</option>
+                                    <option value="自由售卖">自由售卖</option>
+                                    <option value="已关闭" selected>已关闭</option>
+                                </select>
+                            </td>
+                            <td>
+                                <a class="button_text_blue edit" href="javascript:void(0);">编辑</a>
+                                <div class="oper">
+                                    <a class="button_text_blue" href="javascript:void(0);">保存</a>
+                                    <a class="button_text_blue" href="javascript:void(0);">取消</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panelTitle">每日库存管理</div>
+            <div>
+                <label>选择房型</label>
+                <select id="roomType">
+                    <option value="全部房型" selected="">全部房型</option>
+                    <option value="商务标准房">商务标准房</option>
+                    <option value="商务标准房（大床）">商务标准房（大床）</option>
+                    <option value="豪华景观房">豪华景观房</option>
+                </select>
+                <strong>共5个房型</strong>
+                <span style="float:right;"><em style="color:#CA6904;">释义:&nbsp;FS:自由买卖;&nbsp;OR:待确认;&nbsp;CL:关房;</em></span>
+            </div>
+
+            <div class="panelContent clearfix">
+                <div class="df_page_btn">
+                    <span>&nbsp;</span> <a class="page_prev" href="javascript:void(0);"><em>&nbsp;</em>上一页</a>
+                    <label>开始日期</label> <input type="text" value="2013-06-24"> <a class="df_page_a" href="javascript:void(0);">查 询</a>
+                    <p>
+                        <a class="df_page_a" href="javascript:void(0);" id="room_save" style="display:none;">保存</a>
+                        <a class="df_page_a" href="javascript:void(0);" id="room_cancel" style="display:none;">取消</a>
+                        <a class="df_page_a" href="javascript:void(0);" id="edit_room_storage">修 改</a>
+                        <a class="df_page_a_1 popwin" data='{"url":"时段房态维护_批量操作.html","width":800,"height":550,"title":"批量操作"}' href="javascript:void(0);">修改时段价格</a>
+                        <a class="page_next" href="javascript:void(0);">下一页<em>&nbsp;</em></a>
+                    </p>
+                </div>
+
+                <table class="room_matrix" id="room_matrix">
+                    <thead>
+                        <tr>
+                            <th rowspan="2" colspan="2">日期</th>
+                            <th colspan="3">06-24</th>
+                            <th colspan="3">06-25</th>
+                            <th colspan="3">06-26</th>
+                            <th colspan="3">06-27</th>
+                            <th colspan="3">06-28</th>
+                            <th colspan="3" class="weekend">06-29</th>
+                            <th colspan="3" class="weekend">06-30</th>
+                        </tr>
+                        <tr class="weekday_name">
+                            <th colspan="3">一</th>
+                            <th colspan="3">二</th>
+                            <th colspan="3">三</th>
+                            <th colspan="3">四</th>
+                            <th colspan="3">五</th>
+                            <th colspan="3" class="weekend">六</th>
+                            <th colspan="3" class="weekend">日</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 商务标准房 -->
+                        <tr class="title">
+                            <td rowspan="5" class="room_name">
+                                <em>商务标准房</em>
+                                <div>
+                                    <label><input type="checkbox" name="store_close"/><span>库存退还<i style="color:red">已关</i></span></label>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td>已售</td>
+                            <td>剩余</td>
+                            <td>房态</td>
+                            <td>已售</td>
+                            <td>剩余</td>
+                            <td>房态</td>
+                            <td>已售</td>
+                            <td>剩余</td>
+                            <td>房态</td>
+                            <td>已售</td>
+                            <td>剩余</td>
+                            <td>房态</td>
+                            <td>已售</td>
+                            <td>剩余</td>
+                            <td>房态</td>
+                            <td>已售</td>
+                            <td>剩余</td>
+                            <td>房态</td>
+                            <td>已售</td>
+                            <td>剩余</td>
+                            <td>房态</td>
+                        </tr>
+                        <tr>
+                            <td class="title">库存</td>
+                            <td class="even">3</td>
+                            <td class="even">3</td>
+                            <td class="even">&nbsp;</td>
+                            <td class="odd">2</td>
+                            <td class="odd">1</td>
+                            <td class="odd">&nbsp;</td>
+                            <td class="even">2</td>
+                            <td class="even">1</td>
+                            <td class="even">&nbsp;</td>
+                            <td class="odd">2</td>
+                            <td class="odd">1</td>
+                            <td class="odd">&nbsp;</td>
+                            <td class="even">2</td>
+                            <td class="even">1</td>
+                            <td class="even">&nbsp;</td>
+                            <td class="odd">2</td>
+                            <td class="odd">1</td>
+                            <td class="odd">&nbsp;</td>
+                            <td class="even">2</td>
+                            <td class="even">1</td>
+                            <td class="even">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="title">添加</td>
+                            <td class="even">2</td>
+                            <td class="even"><b>1</b><input type="text" name="add" value="2"/></td>
+                            <td class="even">&nbsp;</td>
+                            <td class="odd">2</td>
+                            <td class="odd"><b>1</b><input type="text" name="add" value="2"/></td>
+                            <td class="odd">&nbsp;</td>
+                            <td class="even">2</td>
+                            <td class="even"><b>1</b><input type="text" name="add" value="2"/></td>
+                            <td class="even">&nbsp;</td>
+                            <td class="odd">2</td>
+                            <td class="odd"><b>1</b><input type="text" name="add" value="2"/></td>
+                            <td class="odd">&nbsp;</td>
+                            <td class="even">2</td>
+                            <td class="even"><b>1</b><input type="text" name="add" value="2"/></td>
+                            <td class="even">&nbsp;</td>
+                            <td class="odd">2</td>
+                            <td class="odd"><b>1</b><input type="text" name="add" value="2"/></td>
+                            <td class="odd">&nbsp;</td>
+                            <td class="even">2</td>
+                            <td class="even"><b>1</b><input type="text" name="add" value="2"/></td>
+                            <td class="even">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="title">售完</td>
+                            <td class="even">0</td>
+                            <td class="even">0</td>
+                            <td class="even"><b>CL</b><strong>CL</strong></td>
+                            <td class="odd">0</td>
+                            <td class="odd">0</td>
+                            <td class="odd"><b>CL</b><strong>CL</strong></td>
+                            <td class="even">0</td>
+                            <td class="even">0</td>
+                            <td class="even"><b>CL</b><strong>CL</strong></td>
+                            <td class="odd">0</td>
+                            <td class="odd">0</td>
+                            <td class="odd"><b>CL</b><strong>CL</strong></td>
+                            <td class="even">0</td>
+                            <td class="even">0</td>
+                            <td class="even"><b>CL</b><strong>CL</strong></td>
+                            <td class="odd">0</td>
+                            <td class="odd">0</td>
+                            <td class="odd"><b>CL</b><strong>CL</strong></td>
+                            <td class="even">0</td>
+                            <td class="even">0</td>
+                            <td class="even"><b>CL</b><strong>CL</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="title">关房</td>
+                            <td class="even" colspan="3"><b>已关房</b><label><input type="checkbox" checked name="close_room">关房</label></td>
+                            <td class="odd" colspan="3"><b></b><label><input type="checkbox" name="close_room">关房</label></td>
+                            <td class="even" colspan="3"><b></b><label><input type="checkbox" name="close_room">关房</label></td>
+                            <td class="odd" colspan="3"><b></b><label><input type="checkbox" name="close_room">关房</label></td>
+                            <td class="even" colspan="3"><b></b><label><input type="checkbox" name="close_room">关房</label></td>
+                            <td class="odd" colspan="3"><b></b><label><input type="checkbox" name="close_room">关房</label></td>
+                            <td class="even" colspan="3"><b></b><label><input type="checkbox" name="close_room">关房</label></td>
+                        </tr>
+                        <!-- end of 商务标准房 -->
+
+                        <!-- start 商务大床房 -->
+                        <tr class="title">
+                            <td rowspan="5" class="room_name">
+                                <em>商务大床房</em>
+                                <div>
+                                    <label><input type="checkbox" checked name="store_close"/><span>库存退还<i>已开</i></span></label>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td>已售</td>
+                            <td>剩余</td>
+                            <td>房态</td>
+                            <td>已售</td>
+                            <td>剩余</td>
+                            <td>房态</td>
+                            <td>已售</td>
+                            <td>剩余</td>
+                            <td>房态</td>
+                            <td>已售</td>
+                            <td>剩余</td>
+                            <td>房态</td>
+                            <td>已售</td>
+                            <td>剩余</td>
+                            <td>房态</td>
+                            <td>已售</td>
+                            <td>剩余</td>
+                            <td>房态</td>
+                            <td>已售</td>
+                            <td>剩余</td>
+                            <td>房态</td>
+                        </tr>
+                        <tr>
+                            <td class="title">库存</td>
+                            <td class="even">3</td>
+                            <td class="even">3</td>
+                            <td class="even">&nbsp;</td>
+                            <td class="odd">2</td>
+                            <td class="odd">1</td>
+                            <td class="odd">&nbsp;</td>
+                            <td class="even">2</td>
+                            <td class="even">1</td>
+                            <td class="even">&nbsp;</td>
+                            <td class="odd">2</td>
+                            <td class="odd">1</td>
+                            <td class="odd">&nbsp;</td>
+                            <td class="even">2</td>
+                            <td class="even">1</td>
+                            <td class="even">&nbsp;</td>
+                            <td class="odd">2</td>
+                            <td class="odd">1</td>
+                            <td class="odd">&nbsp;</td>
+                            <td class="even">2</td>
+                            <td class="even">1</td>
+                            <td class="even">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="title">添加</td>
+                            <td class="even">2</td>
+                            <td class="even"><b>1</b><input type="text" name="add" value="2"/></td>
+                            <td class="even">&nbsp;</td>
+                            <td class="odd">2</td>
+                            <td class="odd"><b>1</b><input type="text" name="add" value="2"/></td>
+                            <td class="odd">&nbsp;</td>
+                            <td class="even">2</td>
+                            <td class="even"><b>1</b><input type="text" name="add" value="2"/></td>
+                            <td class="even">&nbsp;</td>
+                            <td class="odd">2</td>
+                            <td class="odd"><b>1</b><input type="text" name="add" value="2"/></td>
+                            <td class="odd">&nbsp;</td>
+                            <td class="even">2</td>
+                            <td class="even"><b>1</b><input type="text" name="add" value="2"/></td>
+                            <td class="even">&nbsp;</td>
+                            <td class="odd">2</td>
+                            <td class="odd"><b>1</b><input type="text" name="add" value="2"/></td>
+                            <td class="odd">&nbsp;</td>
+                            <td class="even">2</td>
+                            <td class="even"><b>1</b><input type="text" name="add" value="2"/></td>
+                            <td class="even">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="title">售完</td>
+                            <td class="even">0</td>
+                            <td class="even">0</td>
+                            <td class="even"><b>CL</b><strong>CL</strong></td>
+                            <td class="odd">0</td>
+                            <td class="odd">0</td>
+                            <td class="odd"><b>CL</b><strong>CL</strong></td>
+                            <td class="even">0</td>
+                            <td class="even">0</td>
+                            <td class="even"><b>CL</b><strong>CL</strong></td>
+                            <td class="odd">0</td>
+                            <td class="odd">0</td>
+                            <td class="odd"><b>CL</b><strong>CL</strong></td>
+                            <td class="even">0</td>
+                            <td class="even">0</td>
+                            <td class="even"><b>CL</b><strong>CL</strong></td>
+                            <td class="odd">0</td>
+                            <td class="odd">0</td>
+                            <td class="odd"><b>CL</b><strong>CL</strong></td>
+                            <td class="even">0</td>
+                            <td class="even">0</td>
+                            <td class="even"><b>CL</b><strong>CL</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="title">关房</td>
+                            <td class="even" colspan="3"><b>已关房</b><label><input type="checkbox" checked name="close_room">关房</label></td>
+                            <td class="odd" colspan="3"><b></b><label><input type="checkbox" name="close_room">关房</label></td>
+                            <td class="even" colspan="3"><b></b><label><input type="checkbox" name="close_room">关房</label></td>
+                            <td class="odd" colspan="3"><b></b><label><input type="checkbox" name="close_room">关房</label></td>
+                            <td class="even" colspan="3"><b></b><label><input type="checkbox" name="close_room">关房</label></td>
+                            <td class="odd" colspan="3"><b></b><label><input type="checkbox" name="close_room">关房</label></td>
+                            <td class="even" colspan="3"><b></b><label><input type="checkbox" name="close_room">关房</label></td>
+                        </tr>
+                        <!-- end of 商务大床房 -->
+
+                        <!-- start 商务套房 -->
+                        <tr class="title_gray">
+                            <td rowspan="5" class="room_name">
+                                <em>商务套房</em>
+                                <div>
+                                    <label><input type="checkbox" checked name="store_close"/><span>库存退还<i>已开</i></span></label>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td class="even">已售</td>
+                            <td class="even">剩余</td>
+                            <td class="even">房态</td>
+                            <td class="odd">已售</td>
+                            <td class="odd">剩余</td>
+                            <td class="odd">房态</td>
+                            <td class="even">已售</td>
+                            <td class="even">剩余</td>
+                            <td class="even">房态</td>
+                            <td class="odd">已售</td>
+                            <td class="odd">剩余</td>
+                            <td class="odd">房态</td>
+                            <td class="even">已售</td>
+                            <td class="even">剩余</td>
+                            <td class="even">房态</td>
+                            <td class="odd">已售</td>
+                            <td class="odd">剩余</td>
+                            <td class="odd">房态</td>
+                            <td class="even">已售</td>
+                            <td class="even">剩余</td>
+                            <td class="even">房态</td>
+                        </tr>
+                        <tr class="title_gray">
+                            <td class="title">库存</td>
+                            <td class="even">3</td>
+                            <td class="even">3</td>
+                            <td class="even">&nbsp;</td>
+                            <td class="odd">2</td>
+                            <td class="odd">1</td>
+                            <td class="odd">&nbsp;</td>
+                            <td class="even">2</td>
+                            <td class="even">1</td>
+                            <td class="even">&nbsp;</td>
+                            <td class="odd">2</td>
+                            <td class="odd">1</td>
+                            <td class="odd">&nbsp;</td>
+                            <td class="even">2</td>
+                            <td class="even">1</td>
+                            <td class="even">&nbsp;</td>
+                            <td class="odd">2</td>
+                            <td class="odd">1</td>
+                            <td class="odd">&nbsp;</td>
+                            <td class="even">2</td>
+                            <td class="even">1</td>
+                            <td class="even">&nbsp;</td>
+                        </tr>
+                        <tr class="title_gray">
+                            <td class="title">添加</td>
+                            <td class="even">2</td>
+                            <td class="even"><b>1</b><input type="text" name="add" value="2"/></td>
+                            <td class="even">&nbsp;</td>
+                            <td class="odd">2</td>
+                            <td class="odd"><b>1</b><input type="text" name="add" value="2"/></td>
+                            <td class="odd">&nbsp;</td>
+                            <td class="even">2</td>
+                            <td class="even"><b>1</b><input type="text" name="add" value="2"/></td>
+                            <td class="even">&nbsp;</td>
+                            <td class="odd">2</td>
+                            <td class="odd"><b>1</b><input type="text" name="add" value="2"/></td>
+                            <td class="odd">&nbsp;</td>
+                            <td class="even">2</td>
+                            <td class="even"><b>1</b><input type="text" name="add" value="2"/></td>
+                            <td class="even">&nbsp;</td>
+                            <td class="odd">2</td>
+                            <td class="odd"><b>1</b><input type="text" name="add" value="2"/></td>
+                            <td class="odd">&nbsp;</td>
+                            <td class="even">2</td>
+                            <td class="even"><b>1</b><input type="text" name="add" value="2"/></td>
+                            <td class="even">&nbsp;</td>
+                        </tr>
+                        <tr class="title_gray">
+                            <td class="title">售完</td>
+                            <td class="even">0</td>
+                            <td class="even">0</td>
+                            <td class="even"><b>CL</b><strong>CL</strong></td>
+                            <td class="odd">0</td>
+                            <td class="odd">0</td>
+                            <td class="odd"><b>CL</b><strong>CL</strong></td>
+                            <td class="even">0</td>
+                            <td class="even">0</td>
+                            <td class="even"><b>CL</b><strong>CL</strong></td>
+                            <td class="odd">0</td>
+                            <td class="odd">0</td>
+                            <td class="odd"><b>CL</b><strong>CL</strong></td>
+                            <td class="even">0</td>
+                            <td class="even">0</td>
+                            <td class="even"><b>CL</b><strong>CL</strong></td>
+                            <td class="odd">0</td>
+                            <td class="odd">0</td>
+                            <td class="odd"><b>CL</b><strong>CL</strong></td>
+                            <td class="even">0</td>
+                            <td class="even">0</td>
+                            <td class="even"><b>CL</b><strong>CL</strong></td>
+                        </tr>
+                        <tr class="title_gray">
+                            <td class="title">关房</td>
+                            <td class="even" colspan="3"><b>已关房</b><label><input type="checkbox" checked name="close_room">关房</label></td>
+                            <td class="odd" colspan="3"><b></b><label><input type="checkbox" name="close_room">关房</label></td>
+                            <td class="even" colspan="3"><b></b><label><input type="checkbox" name="close_room">关房</label></td>
+                            <td class="odd" colspan="3"><b></b><label><input type="checkbox" name="close_room">关房</label></td>
+                            <td class="even" colspan="3"><b></b><label><input type="checkbox" name="close_room">关房</label></td>
+                            <td class="odd" colspan="3"><b></b><label><input type="checkbox" name="close_room">关房</label></td>
+                            <td class="even" colspan="3"><b></b><label><input type="checkbox" name="close_room">关房</label></td>
+                        </tr>
+                        <!-- end of 商务套房 -->
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div class="panel">
+            <div class="panelTitle" style="border: 0">操作日志</div>
+            <div class="panelContent clearfix">
+                <table class="operation_records">
+                    <thead>
+                        <tr>
+                            <td>日期</td>
+                            <td>操作人员</td>
+                            <td>操作项目</td>
+                            <td>操作内容</td>
+                            <td>操作类型</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2013-06-06 14:55</td>
+                            <td>liuwei</td>
+                            <td>库存房态管理</td>
+                            <td>商务标准房/添加库存/关闭</td>
+                            <td>修改</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="window"></div>
+<script type="text/javascript">
+$(function(){
+
+    //浮动条
+    $(".topFixedToolsBar").scrollFix("top","top");
+
+    $("div a.button_text_blue").click(function(){
+        $(this).parent("div").hide();
+        $(this).parent("div").siblings().show();
+        var tr = $(this).parents("tr");
+
+        tr.removeClass("hightlight");
+        $("input,select",tr).hide();
+        $("b",tr).show();
+        });
+    $("a.edit").click(function(){
+        $(this).hide();
+        $(this).siblings().show();
+        var tr = $(this).parents("tr");
+        tr.addClass("hightlight");
+        $("b",tr).hide();
+        $("input,select",tr).show();
+    });
+
+
+    //修改按钮 
+    $("#edit_room_storage").click(function(){
+            $(this).hide();
+            $("#room_save").show();
+            $("#room_cancel").show();
+
+            $("#room_matrix td b").each(function(){
+                $(this).attr({old_value:$(this).html()});
+            });
+            $("#room_matrix input,#room_matrix label").show();
+            $("#room_matrix strong").css({display:"block"}).click(function(){
+                var current_td = $(this).parent("td");
+                var pos = $(this).offset();
+                $("#room_status_popup").css({left: pos.left + "px",top:(pos.top + 28) + "px"}).show();   
+                $("#room_status_popup option").unbind("click");
+                //点击一个选项的事件
+                $("#room_status_popup option").bind("click",function(){
+                    var val = $(this).val();
+
+                    if(!$("b",current_td).attr("old_value")){
+                        var old_value = $("b",current_td).html();
+                        $("b",current_td).attr({old_value:old_value});
+                    }
+                    $("b",current_td).html(val);
+                    $("strong",current_td).html(val);
+                    $("#room_status_popup").hide();
+
+                });
+            });
+
+            $("#room_matrix b").hide();
+            $("#roomType").prop("disabled",true);
+    });
+    //保存按钮
+    $("#room_save").click(function(){
+        //处理保存
+        $("#room_matrix input,#room_matrix label").hide();
+        $("#room_matrix strong").css({display:"none"});
+        $("#room_matrix b").each(function(){
+            $(this).html($(this).siblings(":text").val()).show();
+        })
+
+        $("#room_save").hide();
+        $("#room_cancel").hide();
+        $("#edit_room_storage").show();
+        $("#roomType").prop("disabled",false);
+    });
+
+
+    $("#room_cancel").click(function(){
+        //处理保存
+        $("#room_matrix input,#room_matrix label").hide();
+        $("#room_matrix strong").css({display:"none"});
+        $("#room_matrix b").attr({old_value:""}).show();
+        $("#room_save").hide();
+        $("#room_cancel").hide();
+        $("#edit_room_storage").show();
+        $("#roomType").prop("disabled",false);
+    });
+
+    $("input[name='close_room']").each(function(){
+        $(this).click(function(e){
+            var obj = e.target;
+            var checked = $(obj).attr("checked");
+            if(checked == false){
+                $(obj).parents("td").find("b").css({color:"#ff0000"});
+            }
+        });
+
+    });
+});
+
+</script>
+
+<!-- 关房原因 浮层 -->
+<div id="close_reason">
+    <h2 style="font-size:14px;">请填写关房备注:</h2>
+    <textarea name="close_reason" cols="30" rows="6"></textarea>
+    <div style="text-align:right;padding-top:10px">
+        <a class="button_1_2" href="javascript:;">保&nbsp;存</a>
+        <a class="button_2_2 close" href="javascript:;">取&nbsp;消</a>
+    </div>
+</div>
+
+
+<!-- 房型状态修改 -->
+<div id="room_status_popup" style="display:none;width:80px;position:absolute;">
+    <select name="room_status" size="5">
+        <option value="FS">自由售卖</option>
+        <option value="OR">待确认</option>
+        <option value="CL">关房</option>
+    </select>
+</div>
+</body>
+</html>

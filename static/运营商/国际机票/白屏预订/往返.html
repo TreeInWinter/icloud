@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>国际机票 白屏预订 往返</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+<link rel="stylesheet" href="/static/css/kendo.common.min.css" />
+<link rel="stylesheet" href="/static/css/kendo.gray.css" />
+<link rel="stylesheet" href="/static/css/kendo.reset.css" />
+<link rel="stylesheet" href="/static/css/common.css" />
+<link rel="stylesheet" href="/static/css/b2b.css" />
+<link rel="stylesheet" href="/static/css/flight_logo.css" />
+<link rel="stylesheet" href="/static/css/search_flight.css" />
+
+<script type="text/javascript" src="/static/js/vendor/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/plugins/jquery.fixedBar.js"></script>
+<script type="text/javascript" src="/static/js/kendo.web.js"></script>
+<script type="text/javascript" src="/static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+<script type="text/javascript" src="/static/js/global.js"></script>
+<script type="text/javascript" src="/static/js/search_flight.js"></script>
+<!--[if lt IE 8]>
+    <link rel="stylesheet" href="/static/css/ie.css" />
+    <script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head><body>  <div id="extHeader">
+    <div></div>
+</div>
+
+<div id="container">
+    <div class="header">
+        <h1></h1>
+        <div>
+            <span>你好,${name}</span>
+            <a href="javascript:void(0);">退出</a>
+        </div>
+        <ul id="top_menu">
+            <li><a href="javascript:void(0);">国内机票</a></li>
+            <li><a href="javascript:void(0);">国际机票</a></li>
+            <li><a href="javascript:void(0);">酒店</a></li>
+            <li><a href="javascript:void(0);">票证中心</a></li>
+            <li><a href="javascript:void(0);">财务管理</a></li>
+            <li><a href="javascript:void(0);">客户管理</a></li>
+            <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+        </ul>
+        <ol class="sub_menu">
+            <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+            <li><a href="javascript:void(0);">公司信息</a></li>
+            <li><a href="javascript:void(0);">组织架构</a></li>
+            <li><a href="javascript:void(0);">角色维护</a></li>
+            <li><a href="javascript:void(0);">基础数据</a></li>
+        </ol>
+        <div id="message">
+            <a href="javascript:void(0);">消息</a>
+            <span>New</span>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="sub_menu_bar"></div>
+    <div id="mainContent">
+        <div class="actions block">
+    <div class="col col-l">
+        <span class="page-title">
+            白屏创建订单
+        </span>
+    </div>
+    <div class="col col-r sep-l">
+        <button class="btns btn-blue">黑屏预定</button>
+    </div>
+</div>
+
+<div class="block block1 clearfix">
+    <div class="col col-l">
+        <ul class="flat-list">
+            <li style="width:110px;">
+            <div class="row">
+                <label>
+                    <input type="radio" class="radio radio_is_single is_single" value="1" name="IS_SINGLE" />
+                    单程
+                </label>
+            </div>
+            <div class="row">
+                <label>
+                    <input type="radio" class="radio radio_is_single is_double" value="2" checked name="IS_SINGLE" />
+                    往返
+                </label>
+            </div>
+            <div class="row">
+                <label style="width:100px;">
+                    <input type="radio" class="radio radio_is_single is_mutiple" value="3" name="IS_SINGLE" />
+                    多程（缺口） 
+                </label>
+            </div>
+            </li>
+            <li style="width:220px;">
+            <div class="row">
+                <label class="vertical-head">出发城市</label>
+                <input type="text" id="id_startCity" style="width:150px" class="text suggest depcity suggest-city" value="" name="" />
+                <input name="" id="id_dep" type="hidden" />
+            </div>
+            <div class="row">
+                <label class="vertical-head">到达城市</label>
+                <input type="text" id="id_endCity" style="width:150px;" class="text suggest depcity suggest-city" value="" name="" />
+                <input name="" id="id_arr" type="hidden" />
+            </div>
+                <div class="row">
+                    <label class="vertical-head">客户名称</label>
+                    <input style="width:80px">
+                    <button class="btns btn-search ac-search-customer">查询</button>
+                </div>
+            </li>
+            <li style="width:180px;">
+            <div class="row">
+                <label class="vertical-head">出发日期</label>
+                <input type="text" data-role="datepicker" id="depd" style="width:100px" class="text depdate" value="" name="" />
+            </div>
+            <div class="row">
+                <label class="vertical-head">返程日期</label>
+                <input type="text" id="arrd" style="width:100px" class="text arrdate" data-role="datepicker" value="" name="" />
+            </div>
+            </li>
+            <li style="width:190px;">
+            <div class="row">
+                <label class="vertical-head">航空公司</label>
+                <!-- <input type="text" class="sel_airlines" /> -->
+                <select style="width:120px;" id="sel_airlines" class="sel_airlines">
+                    <option selected="selected" value="">全部</option>
+                    <option value="3u">3U （川航）</option>
+                    <option value="8L">8L （祥鹏）</option>
+                    <option value="BK">BK （奥凯）</option>
+                    <option value="CA">CA （国航）</option>
+                    <option value="CN">CN （大新华）</option>
+                    <option value="CZ">CZ （南航）</option>
+                    <option value="EU">EU （成都）</option>
+                    <option value="FM">FM （上航）</option>
+                    <option value="G5">G5 （华夏）</option>
+                    <option value="GS">GS （天津）</option>
+                    <option value="HO">HO （吉祥）</option>
+                    <option value="HU">HU （海航）</option>
+                    <option value="JD">JD （首都）</option>
+                    <option value="JR">JR （幸福）</option>
+                    <option value="KN">KN （中联）</option>
+                    <option value="KY">KY （昆明）</option>
+                    <option value="MF">MF （厦航）</option>
+                    <option value="MU">MU （东航）</option>
+                    <option value="NS">NS （河北）</option>
+                    <option value="OZ">OZ （韩亚华空）</option>
+                    <option value="PN">PN （西部）</option>
+                    <option value="SC">SC （山航）</option>
+                    <option value="TV">TV （西藏）</option>
+                    <option value="VD">VD （河南）</option>
+                    <option value="ZH">ZH （深航）</option>
+                </select>
+                <!-- <input type="text" class="text airlines" value="" name="" /> -->
+                <!-- <input type="hidden" class="text airlines_hidden" value="" name="" /> -->
+            </div>
+            <div class="row">
+                <label class="vertical-head">舱位等级</label>
+                <input data-role="dropdownlist" style="width:120px" data-source="['不限','经济舱','特级经济舱','商务舱','头等舱']"> 
+            </div>
+            </li>
+            <li style="width:130px;">
+            <div class="row">
+                <label class="vertical-head">航程类型</label>
+                <input style="width:60px;" data-role="dropdownlist" data-source="['不限','直飞','转机']"> 
+            </div> 
+            <div class="row">
+                <label class="vertical-head">乘客类型</label>
+                <input style="width:60px;" data-role="dropdownlist" data-source="['不限','成人','儿童','学生']"> 
+            </div>
+            </li>
+
+        </ul>
+    </div>
+    <div class="col col-r" style="padding-top:10px;">
+        <button class="btns btn-orange-s">查询</button>
+    </div>
+</div>
+
+<div class="block block4">
+            <div class="gj-result gj-result-ply">
+                <div class="caption">
+                    温馨提示：此价格仅供参考，请以预订后价格为准。预订后价格可能更低！
+                </div>
+                <div class="gj-result-head">
+                    <table>
+                        <colgroup>
+                            <col width="90">
+                            <col width="50">
+                            <col width="70">
+                            <col width="75">
+                            <col width="111">
+                            <col width="70">
+                            <col width="35">
+                            <col width="35">
+                            <col width="60">
+                            <col width="45">
+                            <col width="105">
+                            <col width="45">
+                            <col width="40">
+                            <col width="45">
+                            <col width="80">
+                        </colgroup>
+                        <tr>
+                            <td>航空公司</td>
+                            <td>航班号</td>
+                            <td>机型</td>
+                            <td>起降时间 <i class="icon9 desc"></i> </td>
+                            <td>起降机场</td>
+                            <td>飞行时间</td>
+                            <td>舱位</td>
+                            <td>座位</td>
+                            <td>航程类型</td>
+                            <td>退改签</td>
+                            <td>参考票面价/税款 <i class="icon9"></i> </td>
+                            <td>代理费</td>
+                            <td>奖励</td>
+                            <td style="border-right:0">结算价</td>
+                            <td style="border-right:0"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="gj-result-row">
+                    <div class="gj-mul-row-head">
+                        <span class="arrow-top"></span>
+                        <table>
+                            <colgroup>
+                                <col width="90">
+                                <col width="50">
+                                <col width="70">
+                                <col width="75">
+                                <col width="111">
+                                <col width="70">
+                                <col width="35">
+                                <col width="35">
+                                <col width="60">
+                                <col width="45">
+                                <col width="105">
+                                <col width="45">
+                                <col width="40">
+                                <col width="45">
+                                <col width="80">
+                            </colgroup>
+                            <tr>
+                                <td colspan="9">
+                                    <span class="item">
+                                    <strong>去程：</strong>
+                                        上海<s>&#8594;</s>日本
+                                        <u class="time">(2013/09/09)</u>
+                                    </span>     
+                                    <span class="item">
+                                    <strong>回程：</strong>
+                                        马来西亚<s>&#8594;</s>日本
+                                        <u class="time">(2013/09/09)</u>
+                                    </span>
+                                </td>
+                                <td>
+                                    <u class="tgq">退改签</u>
+                                </td>
+                                <td>
+                                    <u class="price text2">
+                                        <b>1540</b>/600</u>
+                                </td>
+                                <td>
+                                    <u class="price text2">0%</u>
+                                </td>
+                                <td>
+                                    <u class="price text2">0%/0.0</u>
+                                </td>
+                                <td>
+                                    <u class="price text2">
+                                        <b>1983</b>
+                                    </u>
+                                </td>
+                                <td>
+                                    <a href="#" class="btns btn-order ac-check" role="window_trigger">核价并预定</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="gj-mul-row gj-mul-row0">
+                        <table>
+                            <colgroup>
+                                <col width="90">
+                                <col width="50">
+                                <col width="70">
+                                <col width="75">
+                                <col width="111">
+                                <col width="70">
+                                <col width="35">
+                                <col width="35">
+                                <col width="60">
+                                <col width="45">
+                                <col width="105">
+                                <col width="45">
+                                <col width="40">
+                                <col width="45">
+                                <col width="80">
+                            </colgroup>
+                            <tr>
+                                <td>
+                                    <span class="pubFlights_cx fico">&nbsp;</span>
+                                    <span class="fname">
+                                        <u class="flight-name">东方航空</u>
+                                    </span>
+                                </td>
+                                <td>
+                                    HX259
+                                </td>
+                                <td>
+                                    <span class="sjx">
+                                        大型机<u class="jx">333</u>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="deptime">2013/09/12 07:00</span><br>
+                                    <span class="arrtime">2013/09/16 09:20</span>
+                                </td>
+                                <td>
+                                    <span class="depcity">上海虹桥机场(PVG)</span><br>
+                                    <span class="arrcity">首都机场(t2)</span>
+                                </td>
+                                <td>
+                                    <span class="text1">
+                                        2小时40分
+                                    </span>
+                                </td>
+                                <td>
+                                    Y
+                                </td>
+                                <td>
+                                    &gt;9
+                                </td>
+                                <td>
+                                    <strong class="text1">
+                                        直飞 
+                                    </strong>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="gj-mul-row gj-mul-row1">
+                        <table>
+                            <colgroup>
+                                <col width="90">
+                                <col width="50">
+                                <col width="70">
+                                <col width="75">
+                                <col width="111">
+                                <col width="70">
+                                <col width="35">
+                                <col width="35">
+                                <col width="60">
+                                <col width="45">
+                                <col width="105">
+                                <col width="45">
+                                <col width="40">
+                                <col width="45">
+                                <col width="80">
+                            </colgroup>
+                            <tr>
+                                <td>
+                                    <span class="pubFlights_cx fico">&nbsp;</span>
+                                    <span class="fname">
+                                        <u class="flight-name">东方航空</u>
+                                    </span>
+                                </td>
+                                <td>
+                                    HX259
+                                </td>
+                                <td>
+                                    <span class="sjx">
+                                        大型机<u class="jx">333</u>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="deptime">2013/09/12 07:00</span><br>
+                                    <span class="arrtime">2013/09/16 09:20</span>
+                                </td>
+                                <td>
+                                    <span class="depcity">上海虹桥机场(PVG)</span><br>
+                                    <span class="arrcity">首都机场(t2)</span>
+                                </td>
+                                <td>
+                                    <span class="text1">
+                                        2小时40分
+                                    </span>
+                                </td>
+                                <td>
+                                    Y
+                                </td>
+                                <td>
+                                    &gt;9
+                                </td>
+                                <td>
+                                    <strong class="text1">
+                                        1次中转 
+                                    </strong>
+                                </td>
+                            </tr>
+                            <tr class="gj-transit-row">
+                                <td>
+                                    <span class="pubFlights_cx fico">&nbsp;</span>
+                                    <span class="fname">
+                                        <u class="flight-name">东方航空</u>
+                                    </span>
+                                </td>
+                                <td>
+                                    HX259
+                                </td>
+                                <td>
+                                    <span class="sjx">
+                                        大型机<u class="jx">333</u>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="deptime">2013/09/12 07:00</span><br>
+                                    <span class="arrtime">2013/09/16 09:20</span>
+                                </td>
+                                <td>
+                                    <span class="depcity">上海虹桥机场(PVG)</span><br>
+                                    <span class="arrcity">首都机场(t2)</span>
+                                </td>
+                                <td>
+                                    <span class="text1">
+                                        2小时40分
+                                    </span>
+                                </td>
+                                <td>
+                                    Y
+                                </td>
+                                <td>
+                                    &gt;9
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="gj-result-row">
+                    <div class="gj-mul-row-head">
+                        <span class="arrow-top"></span>
+                        <table>
+                            <colgroup>
+                                <col width="90">
+                                <col width="50">
+                                <col width="70">
+                                <col width="75">
+                                <col width="111">
+                                <col width="70">
+                                <col width="35">
+                                <col width="35">
+                                <col width="60">
+                                <col width="45">
+                                <col width="105">
+                                <col width="45">
+                                <col width="40">
+                                <col width="45">
+                                <col width="80">
+                            </colgroup>
+                            <tr>
+                                <td colspan="9">
+                                    <span class="item">
+                                    <strong>去程：</strong>
+                                        上海<s>&#8594;</s>日本
+                                        <u class="time">(2013/09/09)</u>
+                                    </span>     
+                                    <span class="item">
+                                    <strong>回程：</strong>
+                                        马来西亚<s>&#8594;</s>日本
+                                        <u class="time">(2013/09/09)</u>
+                                    </span>
+                                </td>
+                                <td>
+                                    <u class="tgq">退改签</u>
+                                </td>
+                                <td>
+                                    <u class="price text2">
+                                        <b>1540</b>/600</u>
+                                </td>
+                                <td>
+                                    <u class="price text2">0%</u>
+                                </td>
+                                <td>
+                                    <u class="price text2">0%/0.0</u>
+                                </td>
+                                <td>
+                                    <u class="price text2">
+                                        <b>1983</b>
+                                    </u>
+                                </td>
+                                <td>
+                                    <a href="#" class="btns btn-order ac-check" role="window_trigger">核价并预定</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="gj-mul-row gj-mul-row0">
+                        <table>
+                            <colgroup>
+                                <col width="90">
+                                <col width="50">
+                                <col width="70">
+                                <col width="75">
+                                <col width="111">
+                                <col width="70">
+                                <col width="35">
+                                <col width="35">
+                                <col width="60">
+                                <col width="45">
+                                <col width="105">
+                                <col width="45">
+                                <col width="40">
+                                <col width="45">
+                                <col width="80">
+                            </colgroup>
+                            <tr>
+                                <td>
+                                    <span class="pubFlights_cx fico">&nbsp;</span>
+                                    <span class="fname">
+                                        <u class="flight-name">东方航空</u>
+                                    </span>
+                                </td>
+                                <td>
+                                    HX259
+                                </td>
+                                <td>
+                                    <span class="sjx">
+                                        大型机<u class="jx">333</u>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="deptime">2013/09/12 07:00</span><br>
+                                    <span class="arrtime">2013/09/16 09:20</span>
+                                </td>
+                                <td>
+                                    <span class="depcity">上海虹桥机场(PVG)</span><br>
+                                    <span class="arrcity">首都机场(t2)</span>
+                                </td>
+                                <td>
+                                    <span class="text1">
+                                        2小时40分
+                                    </span>
+                                </td>
+                                <td>
+                                    Y
+                                </td>
+                                <td>
+                                    &gt;9
+                                </td>
+                                <td>
+                                    <strong class="text1">
+                                        直飞 
+                                    </strong>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="gj-mul-row gj-mul-row1">
+                        <table>
+                            <colgroup>
+                                <col width="90">
+                                <col width="50">
+                                <col width="70">
+                                <col width="75">
+                                <col width="111">
+                                <col width="70">
+                                <col width="35">
+                                <col width="35">
+                                <col width="60">
+                                <col width="45">
+                                <col width="105">
+                                <col width="45">
+                                <col width="40">
+                                <col width="45">
+                                <col width="80">
+                            </colgroup>
+                            <tr>
+                                <td>
+                                    <span class="pubFlights_cx fico">&nbsp;</span>
+                                    <span class="fname">
+                                        <u class="flight-name">东方航空</u>
+                                    </span>
+                                </td>
+                                <td>
+                                    HX259
+                                </td>
+                                <td>
+                                    <span class="sjx">
+                                        大型机<u class="jx">333</u>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="deptime">2013/09/12 07:00</span><br>
+                                    <span class="arrtime">2013/09/16 09:20</span>
+                                </td>
+                                <td>
+                                    <span class="depcity">上海虹桥机场(PVG)</span><br>
+                                    <span class="arrcity">首都机场(t2)</span>
+                                </td>
+                                <td>
+                                    <span class="text1">
+                                        2小时40分
+                                    </span>
+                                </td>
+                                <td>
+                                    Y
+                                </td>
+                                <td>
+                                    &gt;9
+                                </td>
+                                <td>
+                                    <strong class="text1">
+                                        2次中转 
+                                    </strong>
+                                </td>
+                            </tr>
+                            <tr class="gj-transit-row">
+                                <td>
+                                    <span class="pubFlights_cx fico">&nbsp;</span>
+                                    <span class="fname">
+                                        <u class="flight-name">东方航空</u>
+                                    </span>
+                                </td>
+                                <td>
+                                    HX259
+                                </td>
+                                <td>
+                                    <span class="sjx">
+                                        大型机<u class="jx">333</u>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="deptime">2013/09/12 07:00</span><br>
+                                    <span class="arrtime">2013/09/16 09:20</span>
+                                </td>
+                                <td>
+                                    <span class="depcity">上海虹桥机场(PVG)</span><br>
+                                    <span class="arrcity">首都机场(t2)</span>
+                                </td>
+                                <td>
+                                    <span class="text1">
+                                        2小时40分
+                                    </span>
+                                </td>
+                                <td>
+                                    Y
+                                </td>
+                                <td>
+                                    &gt;9
+                                </td>
+                            </tr>
+                            <tr class="gj-transit-row">
+                                <td>
+                                    <span class="pubFlights_cx fico">&nbsp;</span>
+                                    <span class="fname">
+                                        <u class="flight-name">东方航空</u>
+                                    </span>
+                                </td>
+                                <td>
+                                    HX259
+                                </td>
+                                <td>
+                                    <span class="sjx">
+                                        大型机<u class="jx">333</u>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="deptime">2013/09/12 07:00</span><br>
+                                    <span class="arrtime">2013/09/16 09:20</span>
+                                </td>
+                                <td>
+                                    <span class="depcity">上海虹桥机场(PVG)</span><br>
+                                    <span class="arrcity">首都机场(t2)</span>
+                                </td>
+                                <td>
+                                    <span class="text1">
+                                        2小时40分
+                                    </span>
+                                </td>
+                                <td>
+                                    Y
+                                </td>
+                                <td>
+                                    &gt;9
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="grid-table-pagination">
+                    <span class="grid-table-count">
+                        共 <em>132</em> 条记录 
+                    </span> 
+                    <span>
+                        <a class="prev" href="#">&nbsp;</a> 
+                    </span>
+                    <span class="links">
+                        <a href="#">1</a> 
+                        <a href="#">2</a> 
+                        <a class="current" href="#">3</a> 
+                        <a href="#">4</a> 
+                        <a href="#">5</a> 
+                        <a href="javascript:;">...</a>
+                        <a href="#">50</a> 
+                    </span>
+                    <span>
+                        <a class="next" href="#">&nbsp;</a> 
+                    </span>
+                </div>
+            </div>
+        </div>
+<script type="text/x-kendo-template" id="city_popup_tpl">
+<div id="tabstrip" class="tabstrip" style="width:370px">
+<ul>
+<li id="hot_city" class="k-state-active">热门</li>
+# for (var i=0; i<data.group.length; i++ ) { #
+<li>#= data.group[i] #</li>
+# } #
+</ul>
+
+<div title="热门" id="hot_city_tab">
+<ul class="tcy_list clearfix">
+<li data-code="PEK">北京</li>
+<li data-code="SHA">上海虹桥</li>
+<li data-code="PVG">上海浦东</li>
+<li data-code="CAN">广州</li>
+<li data-code="SZX">深圳</li>
+<li data-code="CTU">成都</li>
+<li data-code="HGH">杭州</li>
+<li data-code="WUH">武汉</li>
+<li data-code="XIY">西安</li> 
+<li data-code="CKG">重庆</li>
+<li data-code="TAO">青岛</li>
+<li data-code="CSX">长沙</li>
+<li data-code="NKG">南京</li>
+<li data-code="XMN">厦门</li>
+<li data-code="KMG">昆明</li>
+<li data-code="DLC">大连</li>
+<li data-code="TSN">天津</li> 
+<li data-code="CGO">郑州</li>
+<li data-code="SYX">三亚</li>
+<li data-code="TNA">济南</li>
+<li data-code="FOC">福州</li>
+</ul>
+</div>
+
+# for(var i=0;i<data.citylist.length;i++){ #
+#  var citylist_item = data.citylist[i] #
+<div title="#= citylist_item.name #" class="city_tab">
+<ul class="tcy_list clearfix">
+# for(var j=0;j<citylist_item.value.length;j++){ #
+#  var citylist_value_item = citylist_item.value[j] #
+<li data-code="#= citylist_value_item.code #">#= citylist_value_item.name #</li>
+# } #
+</ul></div>
+# } #
+
+
+</div>
+</script>
+
+<script type="text/k-kendo-template" id="ac-check-template">
+<div class="row ac-check-content">
+    <h3>注意事项</h3>
+    <ul>
+<li>
+    <strong>退票：</strong>不允许退票
+</li>
+<li class="clearfix">
+    <strong style="float:left;">旅行出发日期：</strong>
+    <span style="margin-left:100px;display:block;">
+        2013-09-08 ; 2013-09-20 2013-09-20 ; 2013-09-29 2013-09-29 ; 2013-10-05
+    </span>
+</li>
+<li>
+    <strong>最短/最长停留期：</strong>0—12M
+</li>
+<li>
+    <strong>销售时限：</strong>2013-07-01 — 2013-09-10
+</li>
+<li>
+    <strong>提前出票天数：</strong>20
+</li>
+<li>
+    <strong>验仓结果：</strong>成功
+</li>
+<li>
+    <strong>面价：</strong><span class="price" style="font-size:16px;font-weight:bold;">￥800</span> &nbsp;&nbsp;&nbsp;&nbsp;
+    <strong>税费：</strong><span class="price">￥200</span>
+</li>
+<li class="text">
+*以上退改签规则以航空公司为准，或致电退改热线咨询
+</li>
+    </ul>
+</div>
+        <div class="row" style="text-align:right;">
+<button class="btns button_1_2">提 交</button>
+<button class="btns button_2_2">取 消</button>
+</div>
+</script>
+
+            </div>
+</div>
+
+<div id="extFooter">
+    <div>
+        <p>
+        <a href="javascript:void(0);">关于我们</a>&nbsp;|
+        <a href="javascript:void(0);">微博</a>&nbsp;|
+        <a href="javascript:void(0);">服务条款</a>&nbsp;|
+        <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+        </p>
+        <p>客户服务热线:400-720-6666</p>
+    </div>
+</div>
+</body>
+</html>

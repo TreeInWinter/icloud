@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="/static/css/kendo.common.min.css" />
+<link rel="stylesheet" href="/static/css/kendo.gray.css" />
+<link rel="stylesheet" href="/static/css/common.css" />
+<link rel="stylesheet" href="/static/css/b2b.css" />
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/kendo.web.js"></script>
+<script type="text/javascript" src="/static/js/global.js"></script>
+</head>
+<body> 
+
+<style type="text/css">
+#location-layer{
+    width:586px;
+}
+#location-layer .row-title{
+    float:left;
+    padding:5px 10px;
+    width:50px;
+}
+#location-layer .row{
+    padding:10px 0;
+    border-bottom:1px solid #ccc;
+}
+#location-layer .item{
+    width:110px;
+}
+
+.tcy_list .item:hover{background-color:#fff;color:#000}
+</style>
+
+<div style="margin:100px;">
+<a href="javascript:;" class="ac-show-location">点我显示浮层</a>
+</div>
+
+<script type="text/x-kendo-template" id="ac-show-location-template">
+<div class="tcy_tabstrip" id="location-layer" data-animation="false" data-role="tabstrip">
+<span class="tcy_title">
+可直接选择地理位置
+</span>
+        <ul class="tab-head-list">
+            # for(var i=0; i<data.cityData.length; i++){ #
+            <li# if(i==0){ # class="k-state-active" # } #>
+                #= cityData[i].type #
+            </li>
+            # } #
+        </ul>
+        # for(var i=0; i<data.cityData.length; i++){ #
+        <div class="tcy-tabitem">
+            # for(var j=0; j<data.cityData[i].typeValue.length; j++){ #
+            <div class="row clearfix">
+            <span class="row-title">#= cityData[i].typeValue[j].group #</span>
+            <ul class="tcy_list clearfix">
+                # for(var k=0; k<data.cityData[i].typeValue[j].groupValue.length; k++){ #
+            <li class="item" title="PEK" data-code="PEK">#= cityData[i].typeValue[j].groupValue[k] #</li>
+                # } #
+            </ul>
+            </div>
+            # } #
+        </div>
+        # } #
+</div>
+</script>
+<script type="text/x-kendo-template" id="ac-show-location-Multiple-select-template">
+<div class="tcy_tabstrip clearfix" id="location-layer" data-animation="false" data-role="tabstrip">
+<span class="tcy_title">
+可直接选择地理位置
+</span>
+        <ul class="tab-head-list">
+            # for(var i=0; i<data.cityData.length; i++){ #
+            <li# if(i==0){ # class="k-state-active" # } #>
+                #= cityData[i].type #
+            </li>
+            # } #
+        </ul>
+        # for(var i=0; i<data.cityData.length; i++){ #
+        <div class="tcy-tabitem">
+            <span class="checkall"><label><input type="checkbox" name="" id="">全选</label></span>
+            # for(var j=0; j<data.cityData[i].typeValue.length; j++){ #
+            <div class="row clearfix">
+            <span class="row-title">#= cityData[i].typeValue[j].group #</span>
+            <ul class="tcy_list clearfix">
+                # for(var k=0; k<data.cityData[i].typeValue[j].groupValue.length; k++){ #
+            <li class="item" title="PEK" data-code="PEK"><label><input type="checkbox">#= cityData[i].typeValue[j].groupValue[k] #</label></li>
+                # } #
+            </ul>
+            </div>
+            # } #
+        </div>
+        # } #
+    <span style="float:right;padding:10px">
+        <a href="javascript:;" class="button_secondary adaptiveButton medium closeLocationLayer" style="vertical-align: middle">
+            <span class="left"></span>
+            <span class="center">确 定</span>
+            <span class="right"></span>
+        </a>
+    </span>
+</div>
+</script>
+<script type="text/javascript">
+
+    var selectLocation=[];
+
+    var locationLayer = FloatLayer({
+        // data:{
+        //     cityName:'上海',
+        //     cityData:[{
+        //         name: "商业区",
+        //         value:['徐汇区','长宁区'] 
+        //     },{
+        //         name: "行政区",
+        //         value:['普陀区','虹口区','静安区'] 
+        //     }]
+        // },
+        data:{
+            cityName:'上海',
+            cityData:[{
+                type: "商业区",
+                typeValue:[{
+                    group:"ABCD",
+                    groupValue:['普陀区','虹口区','静安区']
+                },{
+                    group:"ZZZZZ",
+                    groupValue:['长宁区','黄浦区','静安区']
+                }] 
+            },{
+                type: "行政区",
+                typeValue:[{
+                    group:"VDVVD",
+                    groupValue:['长宁区','黄浦区','静安区']
+                },{
+                    group:"ZZZZZ",
+                    groupValue:['长宁区','黄浦区','静安区']
+                }] 
+            }]
+        },
+        trigger: '.ac-show-location',
+        template:  '#ac-show-location-Multiple-select-template'
+    });
+    
+    $(".closeLocationLayer").click(function(){
+        locationLayer.close();
+        alert(selectLocation);
+    })
+
+    /* 全选 */
+    $(".checkall input").click(function(){
+        var checked = $(this).prop("checked"); 
+        $(this).parents(".tcy-tabitem").find(".row input[type='checkbox']").prop("checked",checked);
+    });
+
+    /* 取消一个的时候 ，自动取消全选 */
+    $(".tcy-tabitem .row input[type='checkbox']").click(function(){
+        var checked = $(this).prop("checked"); 
+        if(!checked){
+            $(this).parents(".tcy-tabitem").find(".checkall input").prop("checked",false); 
+        }
+    });
+
+    $(".item input").change(function(){
+        if($(this).prop("checked"))
+        {
+            selectLocation.push($(this).parent().text());
+        }
+        else
+        {
+            selectLocation.splice(selectLocation.indexOf($(this).parent().text()),1);
+        }
+    })
+
+</script>
+
+
+
+</body>
+</html>
+

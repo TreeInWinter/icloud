@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>天地行 采购商 国际机票 首页</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="stylesheet" href="../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+<link rel="stylesheet" href="../static/css/store_reset.css" media="all" />
+<link rel="stylesheet" href="../static/css/store.css" media="screen" />
+<script type="text/javascript" src="../static/js/jquery.min.js"></script>
+
+<link rel="stylesheet" href="../static/css/kendo.common.min.css" />
+<link rel="stylesheet" href="../static/css/kendo.store.css" />
+<script type="text/javascript" src="../static/js/kendo.web.js"></script>
+<script type="text/javascript" src="../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+<script type="text/javascript" src="../static/js/global.js"></script>
+
+<script type="text/javascript" src="../static/js/store/intel_flight_index.js"></script>
+
+<script type="text/javascript" src="../static/js/store/store.js"></script>
+<script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+
+
+<script type="text/javascript" src="/static/js/swfup/swfupload.js"></script>
+<script type="text/javascript" src="/static/js/swfup/swfupload.queue.js"></script>
+<script type="text/javascript" src="/static/js/swfup/handlers.js"></script>
+<script type="text/javascript" src="/static/js/swfup/fileprogress_yysfl.js"></script>
+
+
+<!--[if IE]>
+<script src="../static/js/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+
+<div class="main-wrapper">
+    <header class="main-header">
+        <a class="logo" href="/"><h1>天地行</h1></a>
+        <nav class="main-nav">
+            <ul class="clearfix">
+                <li class="first active"><a herf="#">首页</a></li>
+                <li><a herf="#">国内机票</a></li>
+                <li><a herf="#">国际机票</a></li>
+                <li><a herf="#">酒店</a></li>
+            </ul> 
+        </nav>
+        <nav class="main-links">
+            <ul class="clearfix">
+                <li class="first"><a href="#">订单管理</a></li>
+                <li><a href="#">分销管理</a></li>
+                <li><a href="#">电子钱包</a></li>
+                <li><a href="#">统计报表</a></li>
+                <li><a href="#">客服服务</a></li>
+                <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+                <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+    </header>
+    <section class="main-body clearfix">
+
+        <!-- 国际机票白屏 start -->
+        <div class="row gray-border" style="margin-bottom:10px">
+            <h3 class="title" style="position:relative;"><strong>黑屏预订</strong><span class="specialTicketArea">特价机票专区<i></i></span>
+			</h3>
+
+            <section class="row" data-role="ctype-item" data-group="tab" data-index="c1">
+                <ul class="black_booking">
+                    <li class="passenger gap">
+                    <span class="subline">乘客类型:</span>
+                    <label><input type="radio" data-role="ctype" data-group="passenger_type" name="passenger_type" value="adult" checked/><span>成人</span></label>
+                    <label><input type="radio" data-role="ctype" data-group="passenger_type" data-index="c1" name="passenger_type" value="child"/><span>儿童</span></label>
+                    <label><input type="radio" data-role="ctype" data-group="passenger_type" name="passenger_type" data-index="c3" value="student"/><span>学生</span></label>
+                    <label><input type="radio" data-role="ctype" data-group="passenger_type" name="passenger_type" value="team"/><span>团队</span></label>
+                    <label>
+                        <input type="radio" data-role="ctype" data-group="passenger_type" data-index="c2" name="passenger_type" value="others" /><span>其他类型</span>
+                    </label>
+                    <select data-role="dropdownlist" style="width:80px;" name="other">
+                        <option value="青年">青年</option>
+                        <option value="老人">老人</option>
+                        <option value="移民" selected="selected">移民</option>
+                        <option value="海员">海员</option>
+                        <option value="劳务">劳务</option>
+                    </select>
+
+                    </li>
+
+                    <li class="passenger gap clearfix" data-role="ctype-item" data-group="passenger_type" data-index="c2 c3" style="display:none;">
+<span class="subline" style="margin-right:15px;">上传证件:</span>
+
+<a class="upload-button" href="javascript:;"><span id="UploaderPlaceholder_1"></span></a>
+                                <span allowSize="100kb" allowFile="*.jpg;*.jpeg;*.png;*.iso" class="Uploader fl-uploader">该乘客类型需传证明文件，支持上传多个<b class="fl-uploader-error">上传文件失败，请重新上传（失败原因<i class='fl-error'>&#12288;
+        <div class="fl-uploader-wrap message_ct">
+            <div class="arrow arrow_north"></div>
+            <div class="message_text fl-uploader-errfiles"></div>
+        </div></i>）</b></span>
+
+                            <p class="fl-upholder" id="UploaderProgress_1"></p>
+
+
+
+                    </li>
+
+                    <li class="passenger gap" id="child_extra" data-role="ctype-item" data-group="passenger_type" data-index="c1" style="display:none;">
+                    <span class="subline">成人票号:</span>
+                    <label id="adult_order"><input type="text" class="normal_txt" style="width:200px"/></label><span style="padding-left:10px;color:#e94749;">请确认儿童有成人陪伴，提供成人票号。如是无成人陪伴儿童，请向航空公司申请。</span>
+                    </li>
+                    <li class="ways">
+                    <label class="subline"><span>方式一 PNR导入:</span><input type="text" class="large_txt" style="margin-left:20px;width:100px;"/></label>
+                    </li>
+                    <li>
+                    <span class="dotted_line" style="width:80px;"></span>
+                    <em class="muted">&nbsp;或者&nbsp;</em>
+                    <span class="dotted_line" style="width:455px;"></span>
+                    </li>
+                    <li class="ways way-console" style="position:relative;">
+                    <label class="subline"><span style="vertical-align:top;">方式二 黑屏粘贴:</span></label>
+                    <textarea style="" class="black-paste">
+使用方法:
+1. 请使用您的Eterm系统提取PNR内容。
+2. 再执行PAT:A指令,将全部内容复制,并粘贴到黑色输入框内。
+3. 团队从RT:N/编码开始复制到PAT:A结果的所有内容。
+4. 根据航空公司出票要求,PNR内容中必须备注手机号码。
+5. 注意:复制的内容建议从RT编码开始复制到PAT:A结果的所有内容。
+儿童PNR编码,请走儿童订单专用通道。
+                    </textarea>
+
+                    <div class="btn_area">
+                        <a class="adaptiveButton brightRed_btn">
+                            <span class="left"></span>
+                            <span class="center center_1">创建订单</span>
+                            <span class="right"></span>
+                        </a>
+                    </div>
+
+                    <p class="muted">
+                    注意事项:<br/>
+                    1.请确保该PNR姓名组正确;<br/>
+                    2.请确保航段组正确，舱位状态正确;<br/>
+                    3.请确保每个乘客具有真实有效的信息;<br/>
+                    4.该PNR不能包含票价组项，如：FC/FN/FP.<br/>
+                    </p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- @todo -->
+            <!-- deleted 
+            <section style="display:none;" class="row" data-role="ctype-item" data-group="tab" data-index="c2">
+                <ul class="black_booking">
+                    <li class="passenger gap">
+                    <span class="subline">乘客类型:</span>
+                    <label><input type="radio" name="passenger_type2" value="adult" checked/><span>成人</span></label>
+                    <label><input type="radio" name="passenger_type2" value="child"/><span>儿童</span></label>
+                    <label><input type="radio" name="passenger_type2" value="student"/><span>学生</span></label>
+                    <label><input type="radio" name="passenger_type2" value="team"/><span>团队</span></label>
+                    <label>
+                        <input type="radio" name="passenger_type2" name="passenger_type" value="others" /><span>其他类型</span>
+                    </label>
+                    <select data-role="dropdownlist" style="width:100px;" name="other">
+                        <option value="青年">青年</option>
+                        <option value="老人">老人</option>
+                        <option value="移民" selected="selected">移民</option>
+                        <option value="海员">海员</option>
+                        <option value="劳务">劳务</option>
+                    </select>
+
+                    </li>
+                    <li class="ways" style="position:relative;">
+                    <label class="subline"><span style="vertical-align:top;">黑屏粘贴:</span></label>
+                    <textarea style="width:440px;height:180px;line-height:20px;margin-left:15px;padding:10px;" class="black-paste">
+使用方法:
+1. 请使用您的Eterm系统提取PNR内容。
+2. 再执行PAT:A指令,将全部内容复制,并粘贴到黑色输入框内。
+3. 团队从RT:N/编码开始复制到PAT:A结果的所有内容。
+4. 根据航空公司出票要求,PNR内容中必须备注手机号码。
+5. 注意:复制的内容建议从RT编码开始复制到PAT:A结果的所有内容。
+儿童PNR编码,请走儿童订单专用通道。
+                    </textarea>
+
+                    <div class="btn_area" style="top:140px;">
+                        <a class="adaptiveButton brightRed_btn">
+                            <span class="left"></span>
+                            <span class="center center_1">询价</span>
+                            <span class="right"></span>
+                        </a>
+                    </div>
+
+                    <p class="muted">
+                    注意事项:<br/>
+                    1.请确保该PNR姓名组正确;<br/>
+                    2.请确保航段组正确，舱位状态正确;<br/>
+                    3.请确保每个乘客具有真实有效的信息;<br/>
+                    4.该PNR不能包含票价组项，如：FC/FN/FP.<br/>
+                    </p>
+                    </li>
+                </ul>
+            </section>
+            -->
+        </div>
+        <div class="row  gray-border">
+            <div class="pull-left gray-border-right" style="width:70%;">
+                <h3 class="title"><strong>白屏预订</strong></h3>
+                <section style="position:relative;">
+                    <form>
+                        <ul>
+                            <li class="trip_type gap">
+                            <!--<strong>航程类型</strong>-->
+                            <label><input type="radio" data-role="ctype" data-group="trip_type" data-index="c1" name="flight_type" value="one_way" checked/><span>单程</span></label>
+                            <label><input type="radio" data-role="ctype" data-group="trip_type" data-index="c2" name="flight_type" value="round_trip"/><span>往返</span></label>
+                            <label><input type="radio" data-role="ctype" data-group="trip_type" data-index="c3" name="flight_type" value="muti_trip" /><span>多程(含缺口)</span></label>
+                            <span style="display:none;" data-role="ctype-item" data-group="trip_type" data-index="c3"> 超过6段航程,请联系机票专家组。 <b class="tel">400-720-6666</b></span>
+                            </li>
+                            <li class="one_way round_trip clearfix">
+                            <div class="clearfix" data-role="ctype-item" data-index="c1 c2" data-group="trip_type">
+                                <div class="col col1" style="width:45%">
+                                    <label><i class="hitext"> * </i><span class="text">出发城市</span><input class="city_ac" type="text" name="" placeholder="上海" /></label>
+                                    <label><i class="hitext"> * </i><span class="text">到达城市</span><input class="city_ac" type="text" name="" placeholder="北京"/></label>
+
+                                    <div class="xchange" style="top:48px;left:243px;">
+                                        <b></b>
+                                        <a href="javascript:void(0);">换</a>
+                                        <i></i>
+                                    </div>
+                                </div>
+                                <div class="col col2" style="width:45%">
+                                    <label><i class="hitext"> * </i><span class="text">出发日期</span><input value="2013-09-11" type="text" name="" class="normal_txt datepicker" /></label>
+                                    <label style="display:none;" data-role="ctype-item" data-index="c2" data-group="trip_type" id="return_date"><i class="hitext"> * </i><span class="text">返程日期</span><input type="text" name="" class="normal_txt datepicker" /></label>
+                                </div>
+                            </div>
+                            <div class="btn_area" id="white_search">
+                                <a class="adaptiveButton brightRed_btn">
+                                    <span class="left"></span>
+                                    <span class="center center_1">搜&nbsp;索</span>
+                                    <span class="right"></span>
+                                </a>
+                            </div>
+                            <div class="muti_trip" data-role="ctype-item" data-index="c3" style="display:none;" data-group="trip_type">
+                                <script type="text/x-kendo-template" id="ac-add-line-template">
+<tr>
+                                        <td><i class="hitext"> * </i>第<span class="hitext index_num">1</span>程</td>
+                                        <td><i class="hitext"> * </i>出发城市</td>
+                                        <td><input type="text" style="width:105px;" value="" class="city_ac"/></td>
+                                        <td><i class="hitext"> * </i>到达城市</td>
+                                        <td><input type="text" style="width:105px;" value="" class="city_ac"/></td>
+                                        <td><i class="hitext"> * </i>出发日期</td>
+                                        <td><input type="text" value="" class="normal_txt datepicker"/></td>
+                                        <td>
+                                            <div class="op">
+                                                <a href="javascript:void(0)" class="ac-remove-line">删除</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </script>
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td><i class="hitext"> * </i>第<span class="hitext index_num">1</span>程</td>
+                                        <td><i class="hitext"> * </i>出发城市</td>
+                                        <td><input type="text" value="" style="width:105px" class="city_ac"/></td>
+                                        <td><i class="hitext"> * </i>到达城市</td>
+                                        <td><input type="text" value="" style="width:105px" class="city_ac"/></td>
+                                        <td><i class="hitext"> * </i>出发日期</td>
+                                        <td><input type="text" value="" class="normal_txt datepicker"/></td>
+                                        <td>
+                                            <div class="op">
+                                                <a href="javascript:void(0)" class="ac-remove-line">删除</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div style="text-align:right;margin-top:10px;padding-right:43px;">
+                                    <a href="javascript:;" class="muti_add ac-add-line">添加航程</a>
+                                    </div>
+                            </div>
+
+                            <hr>
+                            <div class="clearfix">
+                                <div class="col col1" style="width:45%">
+                                    <label><span class="text">舱位等级</span><select data-role="dropdownlist" style="width:152px;" class="normal_txt">
+                                            <option selected="" value="经济舱">经济舱</option>
+                                            <option value="超级经济舱">超级经济舱</option>
+                                            <option value="商务舱">商务舱</option>
+                                            <option value="头等舱">头等舱</option>
+                                        </select>
+                                    </label>
+                                    <label><span class="text">航空公司</span><select style="width:152px;" data-role="combobox" data-filter="contains" data-suggest="true" id="sel_airlines" class="sel_airlines">
+                        <option selected="selected" value="">全部</option>
+                        <option value="3u">3U （川航）</option>
+                        <option value="8L">8L （祥鹏）</option>
+                        <option value="BK">BK （奥凯）</option>
+                        <option value="CA">CA （国航）</option>
+                        <option value="CN">CN （大新华）</option>
+                        <option value="CZ">CZ （南航）</option>
+                        <option value="EU">EU （成都）</option>
+                        <option value="FM">FM （上航）</option>
+                        <option value="G5">G5 （华夏）</option>
+                        <option value="GS">GS （天津）</option>
+                        <option value="HO">HO （吉祥）</option>
+                        <option value="HU">HU （海航）</option>
+                        <option value="JD">JD （首都）</option>
+                        <option value="JR">JR （幸福）</option>
+                        <option value="KN">KN （中联）</option>
+                        <option value="KY">KY （昆明）</option>
+                        <option value="MF">MF （厦航）</option>
+                        <option value="MU">MU （东航）</option>
+                        <option value="NS">NS （河北）</option>
+                        <option value="OZ">OZ （韩亚华空）</option>
+                        <option value="PN">PN （西部）</option>
+                        <option value="SC">SC （山航）</option>
+                        <option value="TV">TV （西藏）</option>
+                        <option value="VD">VD （河南）</option>
+                        <option value="ZH">ZH （深航）</option>
+                    </select>
+                                        
+                                        </label>
+
+                                </div>
+                                <div class="col col2" style="width:45%">
+                                    <label><span class="text">乘客类型</span><select data-role="dropdownlist" style="width:100px;" class="normal_txt">
+                                            <option selected="" value="成人">成人</option>
+                                            <option value="儿童">儿童</option>
+                                            <option value="婴儿">婴儿</option>
+                                            <option value="不限">不限</option>
+                                        </select>
+                                    </label>
+                                    <label style=" width:260px;"><span class="text">航程类型</span>
+                                          <label class="sail_type"><input type="radio" checked="" name="type" />全部</label>
+                                          <label class="sail_type"><input type="radio" name="type"/>直飞</label>
+                                          <label class="sail_type"><input type="radio" name="type"/>中转</label>
+                                    </label>
+                                    <!--<label><input type="checkbox" name="" style="vertical-align:middle;" /> 仅查看直飞</label>-->
+                                </div>
+                            </div>
+                            </li>
+                        </ul>
+                    </form>
+                </section>
+            </div>
+
+            <aside class="pull-right" style="width:29.8%;"> 
+                <div>
+                    <h3 class="title"><strong>国际机票询价</strong></h3>
+                    <!--<ul class="two_col clearfix "> 
+                        <li>
+                        <a href="#"><img src="../static/images/store/inlandgroup.png" alt="团队申请" title="团队申请"/>
+                        <div class="applyfor">团队申请</div></a>
+                        </li>
+                        <li>
+                        <a href="#"><img src="../static/images/store/k-place.png" alt="K位申请" title="K位申请"/>
+                            <div class="applyfor">K位申请</div></a>
+                        </li>
+                        <li>
+                        <a href="#"><img src="../static/images/store/leg.png" alt="复杂航段询价" title="复杂航段询价"/>
+                            <div class="applyfor">复杂航段询价</div></a>
+                        </li>
+                    </ul>-->
+                    <!--<li>
+                        <a href="#"><img src="../static/images/store/charteredAirplane.png" alt="包机询价" title="包机询价"/>
+                            <div class="applyfor">包机询价</div></a>
+                        </li>-->
+                    <!--<div style="margin-top:70px; text-align:center;"><img src="../static/images/store/enquiryImg.png"/></div>-->
+					<div class="ticketEnquiryBlock">
+						<ul>
+							<li>
+								<a href="#"><img src="../static/images/store/icon_teamApply.png" title="团队申请"/>
+								<span >团队申请</span></a>
+								
+							</li>
+							<li style="margin-right:0;">
+								<a href="#"><img src="../static/images/store/icon_teamEnquiry.png" title="复杂航段询价"/>
+								<span>复杂航段询价</span></a>
+							</li>
+						</ul>
+					</div>
+                </div>
+            </aside>
+        </div>
+<script type="text/x-kendo-template" id="city_popup">
+<div id="gn-tabstrip" class="tcy_tabstrip">
+<span class="tcy_title">
+    热门城市/国家（支持中文名/拼音/英文名/三字码）
+</span>
+<ul>
+<li id="hot_city" class="k-state-active">热门</li>
+# for (var i=0; i<data.group.length; i++ ) { #
+<li>#= data.group[i] #</li>
+# } #
+</ul>
+<div id="hot_city_tab">
+<ul class="tcy_list clearfix">
+
+# for(var j=0;j<hotcitylist.length;j++){ #
+# var citylist_item = hotcitylist[j] #
+<li class="item" title="#= citylist_item.code #" data-code="#= citylist_item.code #">#= citylist_item.name #</li>
+# } #
+</ul>
+</div>
+
+# for(var i=0;i<data.citylist.length;i++){ #
+# var citylist_item = data.citylist[i] #
+<div class="city_tab">
+<ul class="tcy_list clearfix">
+  # for(var k=0;k<data.group[i].length;k++){ #
+    <li class="tcy_list_sep">#= data.group[i].split('')[k] #</li>
+    # for(var j=0;j<citylist_item.value.length;j++){ #
+        # var citylist_value_item = citylist_item.value[j]; #
+        # if(citylist_value_item.py.slice(0,1) == data.group[i].split('')[k]) {#
+            <li class="item" title="#= citylist_value_item.code #" data-code="#= citylist_value_item.code #">#= citylist_value_item.name #</li>
+        # } #
+    # } #
+  # } #
+</ul>
+</div>
+
+# } #
+</div>
+</script>
+
+
+<script type="text/javascript">
+function createSwfUpload(index,allowSize, allowFile){
+    var upload = window.swfu = new SWFUpload({
+	// Backend Settings
+	upload_url: "/php/upload.php",
+	post_params: {"name" : "testname"},
+	// File Upload Settings
+	//file_types : "*.*;",
+	file_size_limit : allowSize ,
+	file_types : allowFile ,
+	file_types_description : "Choose Files",
+	file_upload_limit : "0",
+	file_queue_limit : "0",
+	// Event Handler Settings (all my handlers are in the Handler.js file)
+	file_dialog_start_handler : fileDialogStart,
+	file_queued_handler : fileQueued,
+	file_queue_error_handler : fileQueueError,
+	file_dialog_complete_handler : fileDialogComplete,
+	upload_start_handler : uploadStart,
+	upload_progress_handler : uploadProgress,
+	upload_error_handler : uploadError,
+	upload_success_handler : uploadSuccess,
+	upload_complete_handler : uploadComplete,
+	// Button Settingsimg/fee
+   // button_image_url : "/static/images/button_3_3_5.png",
+	button_text : '<span class="text">上传</span>',
+	button_text_style : ".text{text-align:center;font-family:Simsun}",
+	button_text_top_padding: 5,
+
+	button_placeholder_id : "UploaderPlaceholder_" + index,
+	button_width: 55,
+	button_height: 26,
+	button_window_mode:"TRANSPARENT",
+	button_cursor: SWFUpload.CURSOR.HAND,
+	// Flash Settings
+	flash_url : "/static/flash/swfupload.swf",
+	custom_settings : {
+		progressTarget : "UploaderProgress_" + index,
+		cancelButtonId : "UploaderCancelBtn_" + index,
+		callback : function(file,serverData){
+            var tmp = $.parseJSON(serverData);
+		}
+	},
+
+	// Debug Settings
+	debug: false
+    });
+
+    return upload;
+}
+
+var uploads = [];
+
+$(function(){
+    $.role_ctype();
+        $(".Uploader").each(function(index){	
+            uploads.push(createSwfUpload(index + 1,$(this).attr("allowSize"),$(this).attr("allowFile")));
+        });
+
+        $('body').on('click','.fl-complete .progressCancel',function(){
+            $(this).closest('.progressWrapper').remove();
+        });
+
+});
+            </script>
+
+
+        <!-- 国际机票白屏 end -->
+
+    </section>
+    <footer class="main-footer">
+        <center>
+            <a href="#">隐私问题</a>
+            <i class="bar">|</i>
+            <a href="#">常见问题</a>
+            <i class="bar">|</i>
+            <a href="#">关于我们</a>
+            <i class="bar">|</i>
+            <a href="#">媒体中心</a>
+            <i class="bar">|</i>
+            <a href="#">联系我们</a>
+        </center>
+        <center class="copyright">
+            Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+        </center>
+    </footer>
+</div>
+</body>
+</html>

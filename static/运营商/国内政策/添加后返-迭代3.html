@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>政策 国内政策 添加后返</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../static/css/common.css" rel="stylesheet" />
+	<link href="../../static/css/kendo.common.css" rel="stylesheet" />
+	<link href="../../static/css/kendo.gray.css" rel="stylesheet" />
+	<link href="../../static/css/b2b.css" rel="stylesheet" />
+    <link href="/static/css/kendo.reset.css" rel="stylesheet" />
+    <link href="../../static/css/ordinary.css" rel="stylesheet"  type="text/css"/>
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/public.js"></script>
+    
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<!-- @CLB@ -->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body>
+    <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">&nbsp;</a>
+                <span>&nbsp;</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent"> <!--mainContent开始-->
+        
+          <div class="tjxg_top">
+               <h2>返回</h2>
+               <p>添加后返</p>
+               <div class="lkfb">
+                   <label><input type="checkbox"/> 立刻发布</label>
+               </div>
+               <div class="tyxj_a">
+                 <a href="#" class="tyxj_a_1">关&nbsp;闭</a>
+                 <a href="#" class="tyxj_a_1">清&nbsp;除</a>
+                 <a href="#" class="tyxj_a_2">保&nbsp;存</a>
+                 <a href="#" class="tyxj_a_2">保存并继续</a>
+               </div>
+          </div>
+       <div class="middlecontent"> <!--middlecontent开始-->
+         <div class="mudong clearfix">
+            <p class="mudong_p"><em><small>* &nbsp;</small>航空公司：</em>  <select><option>MU东航</option></select></p>
+         </div>
+         <div style="clear:both;"></div>
+         <div class="danwang clearfix">
+             <p class="danwang_p"> <span class="hclx_1"><small>* &nbsp;</small>航程类型：</span> <label><input type="checkbox"/> 单程</label>
+                                                                         <label><input type="checkbox"/> 往返</label>
+             </p>
+             <p class="danwang_p"> <span class="hclx_1"><small>* &nbsp;</small>乘客类型：</span> <label><input type="checkbox"/> 成人</label>
+                                                                         <label><input type="checkbox"/> 儿童</label>
+             </p>       
+         </div>
+         <div style="clear:both;"></div>
+         <div class="zclx_dx clearfix">
+             <p class="dx_1"><small>* &nbsp;</small>政策类型：</p>
+             <div><label><input type="checkbox" value="普通政策" checked="checked" > 普通</label></div>
+             <div><label><input type="checkbox" value="全国政策" > 全国</label></div>
+             <div><label><input type="checkbox" value="特殊高返" > 特舱</label></div>
+             <div><label><input type="checkbox" value="往返打包" > 特价申请</label></div>
+             <div><label><input type="checkbox" value="特舱政策" > 往返打包</label></div>
+             <div><label><input type="checkbox" value="团队政策" > 特殊高返</label></div>
+             <div><label><input type="checkbox" value="特价申请" > 团队政策</label></div>
+         </div>
+         <div style="clear:both;"></div>
+         <div class="freight_rate"> <b><small>* &nbsp;</small>预期后返：</b> <input type="text" /><em>%</em></div>
+         
+         <!--<div class="office">
+            <p class="office_p"> <span>政策标签：</span> <select><option>东航1</option> <option>东航2</option></select> <a href="#">添加</a></p>
+             <div class="office_bottom">
+                <p><span>东航2</span> <label>x</label> </p>
+                <p><span>东航3</span> <label>x</label> </p>
+             </div>
+         </div>-->
+         
+         <div class="cfjc clearfix">
+             <p class="pzlx_cp_p1 clearfix"> <span class="leixing_1"><small>* &nbsp;</small>出发机场：</span> 
+                               <label><input type="radio" name="radio_2"/> 所有</label>
+                               <label><input type="radio" checked="checked" name="radio_2"/> 包含</label>
+                               <label><input type="radio" name="radio_2"/> 排除</label>
+             </p>
+             <div>
+             <p class="cfjc_textarea"> <textarea>请输入文字...</textarea></p>
+             <p class="prompt_2"><i></i>提示：可输入多个机场三字码，用半角/分隔。如PEK/SHA/PVG。</p>
+             </div>
+         </div>
+         <div class="cfjc clearfix">
+             <p class="pzlx_cp_p1 clearfix"> <span class="leixing_1"><small>* &nbsp;</small>到达机场：</span> 
+                               <label><input type="radio" name="radio_3"/> 所有</label>
+                               <label><input type="radio" checked="checked" name="radio_3"/> 包含</label>
+                               <label><input type="radio" name="radio_3"/> 排除</label>
+             </p>
+             <p class="cfjc_textarea"> <textarea>全国所有机场...</textarea></p>
+         </div>
+          <div class="remove clearfix">
+             <b><small>* &nbsp;</small>排除航段：</b>
+             <p><input type="text" />&nbsp; - &nbsp;<input type="text" /> &nbsp;<a href="#">添加</a></p>
+             <p style="padding-left:85px;"><input type="text" />&nbsp; - &nbsp;<input type="text" /> &nbsp;<a href="#">删除</a></p>
+         </div>
+         
+         <div class="cfjc_content clearfix">
+          <div class="cfjc_2">
+             <p class="pzlx_cp_p1"> <span class="leixing_1" style="width:110px;"><small>* &nbsp;</small>去程航班限制：</span> 
+                               <label><input type="radio" checked="checked" name="radio_4"/> 所有</label>
+                               <label><input type="radio" name="radio_4"/> 包含</label>
+                               <label><input type="radio" name="radio_4"/> 排除</label>
+             </p>
+             <p class="cfjc_textarea"> <textarea>&nbsp;</textarea></p>
+         </div>
+         <!--<p class="prompt_4"><i></i>提示：输入航班号时，无需输入航空公司代码，如CA1234，请输入1234，可输入多个航班号，用半角/分隔，支持号段，如：2701-2999。“所有”表示本政策适用于所有航班号，“包含”表示本政策适用于左侧输入航班号，“排除”表示适用于除左侧输入的航班号之外的其他所有航班号。</p>-->
+         </div>
+         
+         <div class="cfjc_content clearfix">
+          <div class="cfjc_2">
+             <p class="pzlx_cp_p1"> <span class="leixing_1" style="width:110px;"><small>* &nbsp;</small>回程航班限制：</span> 
+                               <label><input type="radio" checked="checked" name="radio_4_1"/> 所有</label>
+                               <label><input type="radio" name="radio_4"/> 包含</label>
+                               <label><input type="radio" name="radio_4"/> 排除</label>
+             </p>
+             <p class="cfjc_textarea"> <textarea>&nbsp;</textarea></p>
+         </div>
+         <!--<p class="prompt_4"><i></i>提示：输入航班号时，无需输入航空公司代码，如CA1234，请输入1234，可输入多个航班号，用半角/分隔，支持号段，如：2701-2999。“所有”表示本政策适用于所有航班号，“包含”表示本政策适用于左侧输入航班号，“排除”表示适用于除左侧输入的航班号之外的其他所有航班号。</p>-->
+         </div>
+         
+         <div class="colourkuai clearfix">
+            <p class="cangwei"><span class="cangwei_span"><small>* &nbsp;</small>适用舱位：</span> <span class="juse">&nbsp;</span> 
+                               <span class="xuan_1">全选</span> <span class="huise_1">&nbsp;</span> <span class="xuan_1">反选</span>
+            </p>
+            <div><em>头等</em> 
+                 <ul>
+                    <li> F &nbsp; [200] </li>
+                 </ul>
+            </div>
+            <div><em>公务</em> 
+                 <ul>
+                    <li class="colourkuai_li"> Y &nbsp; [100] </li>
+                    <li> A &nbsp; [180] </li>
+                 </ul>
+            </div>
+            <div><em>经济</em> 
+                 <ul>
+                    <li> Y &nbsp; [100] </li>
+                    <li> P &nbsp; [10] </li>
+                    <li> P &nbsp; [10] </li>
+                    <li> B &nbsp; [90] </li>
+                    <li> M &nbsp; [85] </li>
+                    <li class="colourkuai_li"> E &nbsp; [80] </li>
+                    <li> H &nbsp; [75] </li>
+                    <li> K &nbsp; [70] </li>
+                    <li> L &nbsp; [65] </li>
+                    <li> N &nbsp; [60] </li>
+                    <li> R &nbsp; [55] </li>
+                    <li class="colourkuai_li"> S &nbsp; [50] </li>
+                    <li> V &nbsp; [45] </li>
+                 </ul>
+            </div>
+            <div><em>特价</em> 
+                 <ul>
+                    <li> T &nbsp; [40] </li>
+                    <li> N &nbsp; [10] </li>
+                    <li> X &nbsp; [10] </li>
+                    <li> G &nbsp; [10] </li>
+                    <li class="colourkuai_li"> I &nbsp; [10] </li>
+                    <li> Q &nbsp; [10] </li>
+                 </ul>
+            </div>
+         </div>
+         
+         <div class="cjrq_tj clearfix">
+              <div class="cjrq_top">
+              <p class="cjrq_tj_p_0"> <span class="cjrq_span"><small>* &nbsp;</small>乘机日期：</span> <input class="cjrq_input_1 datePicker" type="text" value="2013-06-01" /> <span class="cjrq_zhi">至</span> <input class="cjrq_input_2 datePicker" type="text" value="2013-06-01" />  <a href="#" class="cjrq_a">添加</a>
+              </p>
+              <!--<p class="prompt_5"><i></i>提示：在此时间范围内起飞的航班才适用本政策。</p>-->
+              </div>              
+              <div class="date_span">
+                  <span> 2013-06-01至2013-08-31 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>x</i> </span>
+                  <span> 2013-06-01至2013-08-31 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>x</i> </span>
+              </div>
+         </div>
+         <div style="clear:both;"></div>
+         
+        
+         <div class="tishi_bottom">
+            <span>&nbsp;</span>
+            <p>提示：点击“保存”完成发布（或提交审核），点击“保存并继续”完成发布（或提交审核），保留在当前页面，页面内容不清除，点击清除恢复空白页面。</p>
+         </div>
+         
+      </div> <!--middlecontent结束-->
+      </div><!--mainContent结束-->
+
+    </div>
+		
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+</body>
+</html>

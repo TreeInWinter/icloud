@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>运营商 信息发布 采购商运营位-公告 添加公告-弹层</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+        <link rel="stylesheet" href="../../static/css/kendo.gray.css" />
+
+
+    <link href="../../static/css/common.css" rel="stylesheet" type="text/css" />
+    
+    <link href="../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/kendo.reset.css" rel="stylesheet" />
+    <link href="../../static/css/information_publish.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    
+    <style type="text/css">
+      body{ background:#fff; color:#333;}
+    </style>
+    <!--[if lt IE 8]>
+	<link rel="stylesheet" href="/static/css/ie.css" />
+	<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script>
+	<![endif]-->
+
+    
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+
+
+<body>
+
+<div class="thickness">
+    
+    <table class="uploading">
+         <colgroup>
+              <col width="90px;"/>
+         </colgroup>
+         <tr>
+             <td>公告标题：</td>
+             <td><input type="text" style="width:330px;" /></td>
+         </tr>
+         <tr>
+             <td>投放对象：</td>
+             <td>
+                 <select style="width:160px; margin-right:10px;">
+                      <option>采购商</option>
+                 </select>
+                 <select style="width:160px;">
+                      <option>采购商</option>
+                 </select>
+             </td>
+         </tr>
+         <tr>
+             <td>发布日期：</td>
+             <td>
+                 <input type="text" class="cjrq_input_1" style="width:157px;" />
+                 <span> - </span>
+                 <input type="text" class="cjrq_input_2" style="width:157px;" />
+             </td>
+         </tr>
+         <tr class="announce">
+             <td style="vertical-align:top; text-align:right;">公告内容：</td>
+             <td>
+                 <textarea id="editor"></textarea>
+             </td>
+         </tr>
+         <tr>
+             <td>附件：</td>
+             <td style="vertical-align:top;">
+                 <input type="file" id="upload" name="file"/>
+                 <label class="pull-left">未选中文件...</label>
+             </td>
+         </tr>
+    </table>    
+    
+   <div style=" clear:both;"></div>
+   
+    <div class="btn_size">
+      <a href="javascript:;" class="button_important adaptiveButton medium">
+            <span class="left"></span>
+            <span class="center" style="padding:0 30px;">确 定</span>
+            <span class="right"></span>
+      </a>
+      <a href="javascript:;" class="button_unimportant adaptiveButton medium">
+            <span class="left"></span>
+            <span class="center" style="padding:0 30px; color:#666666;">取 消</span>
+            <span class="right"></span>
+      </a> 
+    </div>
+<script>
+
+    $(function(){
+
+        $("#upload").kendoUpload({
+            multiple:false,
+            showFileList:false,
+            localization:{ 
+                select: '请选择文件' 
+            } ,
+            async: {
+                saveUrl: "Home/Save",
+                removeUrl: "Home/Remove",
+                autoUpload: true
+            }
+        });
+
+
+
+
+
+    });
+    </script>
+
+ 
+</div>
+
+</body>
+</html>

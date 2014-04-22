@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>组织架构 组织架构和员工管理</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/zhuzhijiagou.css" rel="stylesheet" type="text/css" />
+    <script src="../../static/js/jquery.min.js" type="text/javascript"></script>
+    <script src="../../static/js/kendo.web.js" type="text/javascript"></script>
+    
+    <!--<link href="/static/css/common.css" rel="stylesheet" />
+    <link href="/static/css/b2b.css" rel="stylesheet" />
+    <link href="/static/css/kendo.common.css" rel="stylesheet" />
+    <link href="/static/css/kendo.gray.css" rel="stylesheet" />
+    <link href="/static/css/kendo.reset.css" rel="stylesheet" />
+    <link href="/static/css/zhuzhijiagou.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="/static/js/kendo.web.js"></script>-->
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<!-- @CLB@ -->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body>
+    <div id="extHeader">
+        <div>
+        </div>
+    </div>
+    <div id="container">
+        <div class="header">
+            <h1>
+            </h1>
+            <div>
+                <span>你好,${name}</span> <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+                <a href="javascript:void(0);">&nbsp;</a> <span>&nbsp;</span>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <div id="sub_menu_bar">
+        </div>
+        <div id="mainContent">
+            <!-- start zhuzhijiagou -->
+            <div class="zhuzhijiagou">
+                <div class="yuangongguanli">
+                    <h2>
+                        组织架构和员工管理</h2>
+                    <div class="tianjia-btn">
+                        <a class="tianjia-btn-a" href="#" onClick="add_department();">添加部门</a> <a class="tianjia-btn-a" href="#">添加员工</a>
+                    </div>
+                </div>
+                <table cellpadding="0" cellspacing="0" class="chaxunneirong">
+                    <tr>
+                        <td class="yuangongxingming">
+                            员工姓名
+                        </td>
+                        <td class="xingming">
+                            <input type="text" value="请输入姓名" />
+                        </td>
+                        <td class="zhuangtai">
+                            员工状态
+                        </td>
+                        <td class="select-zt">
+                            <select>
+                                <option>全部</option>
+                            </select>
+                        </td>
+                        <td class="yuangongxingming">
+                            员工级别
+                        </td>
+                        <td class="jibie">
+                            <select>
+                                <option>全部</option>
+                            </select>
+                        </td>
+                        <td class="yonghuming">
+                            用户名
+                        </td>
+                        <td class="shuruyonghuming">
+                            <input type="text" value="请输入用户名" />
+                        </td>
+                        <td class="chaxunbutton">
+                            <a class="chaxunbutton-a" href="#">查 询</a>
+                        </td>
+                    </tr>
+                </table>
+                <div class="buyechengchengxu">
+                    <!--<div class="buyecheng-left">
+                        <ul class="buyechengleftul">
+                            <li>
+                                <img src="../../static/images/zankai_bg.png" />&nbsp;<span>不夜城集团</span>
+                                <ul class="buyechengleftul-ul">
+                                    <li class="buyechengleftul-ul-li">
+                                        <img src="../../static/images/zankai_bg.png" />&nbsp;<span>不夜城国旅</span>
+                                        <ul class="guolu">
+                                            <li class="guoneijipiao">
+                                                <img src="../../static/images/zankai_bg.png" />&nbsp;<span>国内机票部</span>
+                                                <ul class="piaobu">
+                                                    <li class="piaobu-li">
+                                                        <img src="../../static/images/zankai_bg.png" />&nbsp;<span>退票部</span>
+                                                        <ul class="tuipiao">
+                                                            <li class="tuipiao-li" style="color: White;">退票部一组</li>
+                                                            <li>退票部二组</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <img src="../../static/images/zedie_bg.png" />&nbsp;出票部</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <img src="../../static/images/zedie_bg.png" />&nbsp;<span style="color: #ff7200; text-decoration: underline; "">国内机票部</span></li>
+                                            <li>
+                                                <img src="../../static/images/zedie_bg.png" />&nbsp;<span>酒店部</span></li>
+                                            <li>
+                                                <img src="../../static/images/zedie_bg.png" />&nbsp;<span>财务部</span></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <img src="../../static/images/zedie_bg.png" />&nbsp;<span>北京爱特博</span></li>
+                                    <li>&nbsp;<span>广州长荣</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="one-lev1">
+                            <img src="../../static/images/zankai_bg.png" />&nbsp;<span>不夜城国旅</span></div>
+                        <div class="one-lev2">
+                            <img src="../../static/images/zedie_bg.png" />&nbsp;<span>北京爱特博</span></div>
+                        <div class="one-lev3">
+                            <img src="../../static/images/zedie_bg.png" />&nbsp;<span>广州长荣</span></div>
+                        <div class="current-bg">
+                            <span>退票部一组</span></div>
+                    </div>-->
+                    <div class="buyecheng-left" id="departTree">
+                        <ul id="treeView">
+                            <li>不夜城集团
+                                <ul>
+                                    <li>不夜城国旅
+                                        <ul>
+                                            <li>国内机票部
+                                                <ul>
+                                                    <li>退票部退票部退票部退票部退票部退票部
+                                                        <ul>
+                                                            <li>退票部一组</li>
+                                                            <li>退票部二组</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>出票部</li>
+                                                </ul>
+                                            </li>
+                                            <li>国际机票部</li>
+                                            <li>酒店部</li>
+                                            <li>财务部</li>
+                                        </ul>
+                                    </li>
+                                    <li>北京爱特博</li>
+                                    <li>广州长荣</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tuipiaoright">
+                        <div class="guaqi">
+                            <span>挂起</span></div>
+                        <div class="tuipiaotop">
+                            <h3>退票部一组</h3>
+                            <div class="bianji">
+                                <a class="bianji-a" href="#">编辑当前部门</a> <a class="bianji-a1" href="#">删除当前部门</a> <span>| </span><a class="bianji-a2" href="#">批量删除员工</a> <span>| </span><a class="bianji-a3" href="#">批量员工调动</a>
+                            </div>
+                        </div> 
+                        
+                        <table cellpadding="0" cellspacing="0" class="tuipiaobuyizu">
+                            <tr>
+                                <td class="tpbz-td1 tpbz">
+                                    <input type="checkbox" value="全选" />
+                                </td>
+                                <td class="tpbz-td2 tpbz">
+                                    姓名
+                                </td>
+                                <td class="tpbz-td3 tpbz">
+                                    部门
+                                </td>
+                                <td class="tpbz-td4 tpbz">
+                                    级别
+                                </td>
+                                <td class="tpbz-td5 tpbz">
+                                    状态
+                                </td>
+                                <td class="tpbz-td6 tpbz">
+                                    用户名
+                                </td>
+                                <td class="tpbz-td7 tpbz">
+                                    角色
+                                </td>
+                                <td class="tpbz-td8">
+                                    操作
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" value="单选" checked="checked" />
+                                </td>
+                                <td>
+                                    李晓明
+                                </td>
+                                <td>
+                                    退票部一组
+                                </td>
+                                <td>
+                                    主管
+                                </td>
+                                <td>
+                                    挂起
+                                </td>
+                                <td>
+                                    xiaoming.li
+                                </td>
+                                <td>
+                                    退票主管
+                                </td>
+                                <td class="tpbz-center">
+                                    <a href="#" class="shuozhu"></a><a href="#" class="bi"></a><a href="#" class="shanchu"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" value="单选" />
+                                </td>
+                                <td>
+                                    四字人名
+                                </td>
+                                <td>
+                                    退票部一组
+                                </td>
+                                <td>
+                                    普通员工
+                                </td>
+                                <td>
+                                    正常
+                                </td>
+                                <td>
+                                    xiaoming.li
+                                </td>
+                                <td>
+                                    退票员/审核员/改签员
+                                </td>
+                                <td class="tpbz-center">
+                                    <a href="#" class="shuozhu"></a><a href="#" class="bi"></a><a href="#" class="shanchu"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tpbz-yellow">
+                                    <input type="checkbox" value="单选" />
+                                </td>
+                                <td class="tpbz-yellow">
+                                    四字人名
+                                </td>
+                                <td class="tpbz-yellow">
+                                    退票部一组
+                                </td>
+                                <td class="tpbz-yellow">
+                                    普通员工
+                                </td>
+                                <td class="tpbz-yellow">
+                                    挂起
+                                </td>
+                                <td class="tpbz-yellow">
+                                    xiaoming.li
+                                </td>
+                                <td class="tpbz-yellow">
+                                    初级退票员
+                                </td>
+                                <td class="tpbz-yellow tpbz-center">
+                                    <a href="#" class="kaishuo"></a><a href="#" class="bi"></a><a href="#" class="shanchu"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" value="单选" />
+                                </td>
+                                <td>
+                                    四字人名
+                                </td>
+                                <td>
+                                    退票部一组
+                                </td>
+                                <td>
+                                    普通员工
+                                </td>
+                                <td>
+                                    正常
+                                </td>
+                                <td>
+                                    xiaoming.li
+                                </td>
+                                <td>
+                                    初级退票员
+                                </td>
+                                <td class="tpbz-center">
+                                    <a href="#" class="shuozhu"></a><a href="#" class="bi"></a><a href="#" class="shanchu"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" value="单选" />
+                                </td>
+                                <td>
+                                    四字人名
+                                </td>
+                                <td>
+                                    退票部一组
+                                </td>
+                                <td>
+                                    普通员工
+                                </td>
+                                <td>
+                                    正常
+                                </td>
+                                <td>
+                                    xiaoming.li
+                                </td>
+                                <td>
+                                    初级退票员
+                                </td>
+                                <td class="tpbz-center">
+                                    <a href="#" class="guaqi_1" id="guaqi"></a><a href="#" class="bi"></a><a href="#" class="shanchu"></a>
+                                </td>
+                            </tr>
+                        </table>
+                         <div class="yema">
+                             <a href="#" class="ye_left_a">&nbsp;</a>
+                             <ul class="yemaul">
+                               <li>1</li>
+                               <li>2</li>
+                               <li><a href="#" class="yemaul_a_bg">3</a></li>
+                               <li>4</li>
+                               <li>5</li>
+                               <li>…</li>
+                               <li>50</li>           
+                             </ul>
+                             <a href="#" class="ye_right_a">&nbsp;</a>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of zhuzhijiagou -->
+    </div>
+    <div id="add_department">
+    </div>
+    <div id="add_employe">
+    </div>
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;| <a href="javascript:void(0);">微博</a>&nbsp;| <a href="javascript:void(0);">服务条款</a>&nbsp;| <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>
+                客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+
+    <script type="application/javascript">
+        $(function() {
+            $("#treeView").kendoTreeView();
+        })
+        var add_department = function(id) {
+            id = 0;
+            if (!$("#add_department").data("kendoWindow")) {
+                $("#add_department").kendoWindow({
+                    width: "100%",
+                    minHeight: "100%",
+                    title: "操作提示",
+                    actions: ["Refresh", "Close"],
+                    content: encodeURI("添加部门.html") + "?orderID=" + id + "&timestamp=" + (new Date()).toString(),
+                    visible: false,
+                    modal: true
+                }).data("kendoWindow").open().center();
+            } else {
+                $("#add_department").data("kendoWindow").open().center();
+            }
+        };
+	
+    </script>
+
+</body>
+</html>

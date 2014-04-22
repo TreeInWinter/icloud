@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html" charset="utf-8">
+    <title>酒店 酒店维护 库存和房</title>
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/b2b.css">
+    <link rel="stylesheet" href="/static/css/kendo.common.css">
+    <link rel="stylesheet" href="/static/css/kendo.gray.css">
+    <link href="/static/css/kendo.reset.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/hotel.css">
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="/static/js/scrollFix.js"></script>
+    <script type="text/javascript" src="/static/js/hotel.js"></script>
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<!-- @CLB@ -->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="actions block">
+            <div class="col col-l" style="padding-left:10px;">
+                <a class="item highlight" href="#">酒店维护报表</a>
+            </div>
+        </div>
+        <div class="panel" style="padding:20px 0">
+            <div class="hmr_searchContainer">
+                <table>
+                    <colgroup>
+                        <col width="70">
+                        <col width="190">
+                        <col width="70">
+                        <col width="190">
+                        <col width="70">
+                        <col width="190">
+                        <col width="70">
+                    </colgroup>
+                    <tr>
+                        <td>大区</td>
+                        <td><select data-role="dropdownlist" style="width:140px;"></select></td>
+                        <td>省/直辖市</td>
+                        <td><select data-role="dropdownlist" style="width:140px;"></select></td>
+                        <td>城市</td>
+                        <td><select data-role="dropdownlist" style="width:140px;"></select></td>
+                        <td>签约经理</td>
+                        <td><select data-role="dropdownlist" style="width:140px;"></select></td>
+                    </tr>
+                    <tr>
+                        <td>开始时间</td>
+                        <td><input class="datepicker" type="text"/></td>
+                        <td>结束时间</td>
+                        <td><input class="datepicker orange" type="text" name="" id=""/></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="hmr_reportSearchButtonsContainer">
+                <ul>
+                    <li>
+                        <p></p>
+                        <a href="javascript:;" class="button_secondary adaptiveButton medium">
+                            <span class="left"></span>
+                            <span class="center">自签酒店数量明细</span>
+                            <span class="right"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <p><label><input type="checkbox" name="" id=""/>只看不可预定</label></p>
+                        <a href="javascript:;" class="button_secondary adaptiveButton medium">
+                            <span class="left"></span>
+                            <span class="center">可预定报表</span>
+                            <span class="right"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <p><label><input type="checkbox" name="" id=""/>只看无底价</label></p>
+                        <a href="javascript:;" class="button_secondary adaptiveButton medium">
+                            <span class="left"></span>
+                            <span class="center">底价报表</span>
+                            <span class="right"></span>
+                        </a>
+                    </li>
+                    <li class="noBorder">
+                        <p><label><input type="checkbox" name="" id=""/>只看无库存</label></p>
+                        <a href="javascript:;" class="button_secondary adaptiveButton medium">
+                            <span class="left"></span>
+                            <span class="center">库存报表</span>
+                            <span class="right"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hmr_report_zqjdslmx">
+                <div class="hmr_report_ButtonAndTitleBar clearfix">
+                    <span class="hmr_report_title">自签酒店数量明细</span>
+                    <span class="hmr_report_button"><button class="btns btn-ac-blue">导出到Excel</button></span>
+                </div>
+                <table class="tgrid hmr_tbl_report">
+                    <thead>
+                        <tr>
+                            <td>大区</td>
+                            <td>省/直辖市</td>
+                            <td>城市</td>
+                            <td>行政区</td>
+                            <td>酒店名称</td>
+                            <td>签约经理</td>
+                            <td>状态</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>上海</td>
+                            <td>上海</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>刘伟</td>
+                            <td>上线</td>
+                        </tr>
+                        <tr>
+                            <td>上海</td>
+                            <td>上海</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>刘伟</td>
+                            <td>上线</td>
+                        </tr>
+                        <tr>
+                            <td>上海</td>
+                            <td>上海</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>刘伟</td>
+                            <td>上线</td>
+                        </tr>
+                        <tr>
+                            <td>上海</td>
+                            <td>上海</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>刘伟</td>
+                            <td>上线</td>
+                        </tr>
+                        <tr>
+                            <td>上海</td>
+                            <td>上海</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>刘伟</td>
+                            <td>上线</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="grid-table-pagination">
+                    <span class="grid-table-count">
+                        共 <em>132</em> 条记录
+                    </span>
+                    <span>
+                        <a href="#" class="prev">&nbsp;</a>
+                    </span>
+                    <span class="links">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#" class="current">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="javascript:;">...</a>
+                        <a href="#">50</a>
+                    </span>
+                    <span>
+                        <a href="#" class="next">&nbsp;</a>
+                    </span>
+                </div>
+            </div>
+            <div class="hmr_report_kydbb">
+                <div class="hmr_report_ButtonAndTitleBar clearfix">
+                    <span class="hmr_report_title">可预定报表</span>
+                    <span class="hmr_report_button"><button class="btns btn-ac-blue">导出到Excel</button></span>
+                </div>
+                <table class="tgrid hmr_tbl_report">
+                    <thead>
+                        <tr>
+                            <td>大区</td>
+                            <td>省/直辖市</td>
+                            <td>城市</td>
+                            <td>行政区</td>
+                            <td>酒店名称</td>
+                            <td>签约经理</td>
+                            <td>状态</td>
+                            <td>合同有效期</td>
+                            <td>mm-dd</td>
+                            <td>mm-dd</td>
+                            <td>mm-dd</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>上海</td>
+                            <td>上海</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>刘伟</td>
+                            <td>上线</td>
+                            <td>2013/1/1-2013/12/31</td>
+                            <td>可预订</td>
+                            <td>可预订</td>
+                            <td>可预订</td>
+                        </tr>
+                        <tr>
+                            <td>上海</td>
+                            <td>上海</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>刘伟</td>
+                            <td>上线</td>
+                            <td>2013/1/1-2013/12/31</td>
+                            <td>可预订</td>
+                            <td>可预订</td>
+                            <td>可预订</td>
+                        </tr>
+                        <tr>
+                            <td>上海</td>
+                            <td>上海</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>刘伟</td>
+                            <td>上线</td>
+                            <td>2013/1/1-2013/12/31</td>
+                            <td>可预订</td>
+                            <td>可预订</td>
+                            <td>可预订</td>
+                        </tr>
+                        <tr>
+                            <td>上海</td>
+                            <td>上海</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>刘伟</td>
+                            <td>上线</td>
+                            <td>2013/1/1-2013/12/31</td>
+                            <td>可预订</td>
+                            <td>可预订</td>
+                            <td>可预订</td>
+                        </tr>
+                        <tr>
+                            <td>上海</td>
+                            <td>上海</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>刘伟</td>
+                            <td>上线</td>
+                            <td>2013/1/1-2013/12/31</td>
+                            <td>可预订</td>
+                            <td>可预订</td>
+                            <td>可预订</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="grid-table-pagination">
+                    <span class="grid-table-count">
+                        共 <em>132</em> 条记录
+                    </span>
+                    <span>
+                        <a href="#" class="prev">&nbsp;</a>
+                    </span>
+                    <span class="links">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#" class="current">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="javascript:;">...</a>
+                        <a href="#">50</a>
+                    </span>
+                    <span>
+                        <a href="#" class="next">&nbsp;</a>
+                    </span>
+                </div>
+            </div>
+            <div class="hmr_report_djbb">
+                <div class="hmr_report_ButtonAndTitleBar clearfix">
+                    <span class="hmr_report_title">底价报表</span>
+                    <span class="hmr_report_button"><button class="btns btn-ac-blue">导出到Excel</button></span>
+                </div>
+                <table class="tgrid hmr_tbl_report">
+                    <thead>
+                        <tr>
+                            <td>大区</td>
+                            <td>省/直辖市</td>
+                            <td>城市</td>
+                            <td>行政区</td>
+                            <td>酒店名称</td>
+                            <td>签约经理</td>
+                            <td>房型</td>
+                            <td>价格名称</td>
+                            <td>mm-dd</td>
+                            <td>mm-dd</td>
+                            <td>mm-dd</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>上海</td>
+                            <td>上海</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>刘伟</td>
+                            <td>标准间</td>
+                            <td>含双早</td>
+                            <td>100</td>
+                            <td>-</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>上海</td>
+                            <td>上海</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>刘伟</td>
+                            <td>标准间</td>
+                            <td>含双早</td>
+                            <td>100</td>
+                            <td>-</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>上海</td>
+                            <td>上海</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>刘伟</td>
+                            <td>标准间</td>
+                            <td>含双早</td>
+                            <td>100</td>
+                            <td>-</td>
+                            <td>100</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="grid-table-pagination">
+                    <span class="grid-table-count">
+                        共 <em>132</em> 条记录
+                    </span>
+                    <span>
+                        <a href="#" class="prev">&nbsp;</a>
+                    </span>
+                    <span class="links">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#" class="current">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="javascript:;">...</a>
+                        <a href="#">50</a>
+                    </span>
+                    <span>
+                        <a href="#" class="next">&nbsp;</a>
+                    </span>
+                </div>
+            </div>
+            <div class="hmr_report_djbb">
+                <div class="hmr_report_ButtonAndTitleBar clearfix">
+                    <span class="hmr_report_title">库存报表</span>
+                    <span class="hmr_report_button"><button class="btns btn-ac-blue">导出到Excel</button></span>
+                </div>
+                <table class="tgrid hmr_tbl_report">
+                    <thead>
+                        <tr>
+                            <td>大区</td>
+                            <td>省/直辖市</td>
+                            <td>城市</td>
+                            <td>行政区</td>
+                            <td>酒店名称</td>
+                            <td>签约经理</td>
+                            <td>房型</td>
+                            <td>保留房</td>
+                            <td>cutoff day</td>
+                            <td style="padding:0;">
+                                <div>2013-01-13</div>
+                                <ul class="dateStatus clearfix">
+                                    <li>已售</li>
+                                    <li>售完</li>
+                                    <li class="lastRightLine">房态</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>上海</td>
+                            <td>上海</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>刘伟</td>
+                            <td>标准间</td>
+                            <td>3</td>
+                            <td>100</td>
+                            <td style="padding:0;">
+                                <ul class="statusContent clearfix">
+                                    <li>-</li>
+                                    <li>-</li>
+                                    <li class="lastRightLine">100</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>上海</td>
+                            <td>上海</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>刘伟</td>
+                            <td>标准间</td>
+                            <td>3</td>
+                            <td>100</td>
+                            <td style="padding:0;">
+                                <ul class="statusContent clearfix">
+                                    <li>-</li>
+                                    <li>-</li>
+                                    <li class="lastRightLine">100</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>上海</td>
+                            <td>上海</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>上海市</td>
+                            <td>刘伟</td>
+                            <td>标准间</td>
+                            <td>3</td>
+                            <td>100</td>
+                            <td style="padding:0;">
+                                <ul class="statusContent clearfix">
+                                    <li>-</li>
+                                    <li>-</li>
+                                    <li class="lastRightLine">100</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="grid-table-pagination">
+                    <span class="grid-table-count">
+                        共 <em>132</em> 条记录
+                    </span>
+                    <span>
+                        <a href="#" class="prev">&nbsp;</a>
+                    </span>
+                    <span class="links">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#" class="current">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="javascript:;">...</a>
+                        <a href="#">50</a>
+                    </span>
+                    <span>
+                        <a href="#" class="next">&nbsp;</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        $(function(){
+            kendo.init($("body"));
+        })
+    </script>
+</body>
+</html>

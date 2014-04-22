@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>政策 国际政策 散客K位政策</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="../../static/css/common.css" rel="stylesheet" />
+	<link href="../../static/css/kendo.common.css" rel="stylesheet" />
+	<link href="../../static/css/kendo.gray.css" rel="stylesheet" />
+	<link href="../../static/css/b2b.css" rel="stylesheet" />
+<link href="/static/css/kendo.reset.css" rel="stylesheet" />
+    <link href="../../static/css/guojitianjiaxiugai.css" rel="stylesheet"  type="text/css"/>
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+
+  
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<!-- @CLB@ -->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body>
+    <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">&nbsp;</a>
+                <span>&nbsp;</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent"> <!--mainContent开始-->
+        
+          <div class="tjxg_top">
+               <h2>返回</h2>
+               <p>添加政策</p>
+               <div class="lkfb">
+                   <label><input type="checkbox"/> 立刻发布</label>
+               </div>
+               <div class="tyxj_a">
+                 <a href="#" class="tyxj_a_1">关&nbsp;闭</a>
+                 <a href="#" class="tyxj_a_1">清&nbsp;除</a>                 
+                 <a href="#" class="tyxj_a_2">保&nbsp;存</a>
+                 <a href="#" class="tyxj_a_2">保存并继续</a>
+               </div>
+          </div>
+       <div class="middlecontent"> <!--middlecontent开始-->
+         <div class="mudong clearfix">
+            <p class="mudong_p_1"><strong>协议名称：</strong> <input type="text"/></p>
+         </div>
+         <div class="dijia clearfix"> 
+           <b>政策类型：</b>  
+           <label><input type="radio" value="单程" name="1_1" /> 普通政策</label>
+           <label><input type="radio" value="往返" name="1_1"  /> 团队政策</label>
+           <label><input type="radio" value="单程及往返" checked="checked" name="1_1"  /> 散客K位政策</label>
+         </div>
+         <div class="cjrq_tj clearfix">
+              <p class="clearfix"> <span class="cjrq_span">政策有效期：</span> <input class="cjrq_input_1" type="text" value="2013-06-01" /> <span class="cjrq_zhi">至</span> <input class="cjrq_input_2" type="text" value="2013-06-01" />  <a href="#" class="cjrq_a">添加</a>
+              </p>
+              <div class="date_span">
+                  <span> 2013-06-01至2013-08-31 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>x</i> </span>
+                  <span> 2013-06-01至2013-08-31 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>x</i> </span>
+              </div>
+         </div>
+         <div style="clear:both;"></div>
+         <div class="kpyxq clearfix">
+              <p> <span class="cjrq_span">开票有效期：</span> <input class="cjrq_input_1" type="text" value="2013-06-01" /> <span class="cjrq_zhi">至</span> <input class="cprq_jz" type="text" value="2013-06-01" /> 
+              </p>
+         </div>
+         <div class="tongzhi clearfix">
+             <b>通知时间：</b>
+             <input type="text" value="5-10分钟" />
+             <span>天</span>
+         </div>
+         <div class="pnr clearfix">
+            <b>PNR：</b>
+            <label><input type="radio" checked="checked"  name="2"/> <i>不限</i></label>
+            <label><input type="radio"  name="2" /> <span>换编码出票</span></label>
+            <label><input type="radio"  name="2" /> <em>大编码出票（无需换编码）</em></label>
+            <label><input type="radio"  name="2" /> <em>大编码出票（需换编码）</em></label>
+         </div>
+         <p class="sf_p_1">&nbsp;</p>
+         <p class="mudong_p clearfix"><strong>航空公司：</strong>  <select><option>MU东航</option></select></p>
+         <p class="shiyong clearfix"><strong>适用航线：</strong>  <select><option>欧洲线</option></select></p>
+         <p class="sf_p_1">&nbsp;</p>
+         
+         <div class="guize clearfix">
+             <p>政策规则：</p>
+             <div><span>附 加 费：</span> <input type="text" value="10"/></div>
+             <div><span>是否显示价格：</span> <select><option>是</option></select></div>
+         </div>
+         <p class="sf_p_1">&nbsp;</p>
+         <div class="shenqing">
+            <p>申请说明备注</p>
+            <textarea>&nbsp;</textarea>
+         </div>
+         
+         <div class="tishi_bottom">
+            <span>&nbsp;</span>
+            <p>提示：点击“保存”完成发布（或提交审核），点击“保存并继续”完成发布（或提交审核），保留在当前页面，页面内容不清除，点击清除恢复空白页面。</p>
+         </div>
+         
+      </div> <!--middlecontent结束-->
+      </div><!--mainContent结束-->
+
+    </div>
+		
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<style type="text/css">
+#orderDetail {text-align:left;}	
+#orderDetail .box {padding:5px;margin-bottom:5px;}
+#orderDetail .stepOk {border-bottom:5px solid #008000;}
+#orderDetail .stepDoing {border-bottom:5px dotted #008000;}
+#orderDetail .box h2 {background-color:#F0713A; padding:3px; color:#FFFFFF;}
+#orderDetail .orderStatus ul {width:900px;}
+#orderDetail .orderStatus ul li {float:left;width:30px;display:inline-block;margin-right:5px;}
+#orderDetail .flightInfo .k-textbox {width:80px;}
+#orderDetail table {border-collapse:collapse;}
+#orderDetail tr th,#orderDetail tr td {padding:5px;text-align:left;border:1px solid #666666;text-align:left;}
+#orderDetail .orderFooter {position:absolute;right:0;bottom:0;}
+</style>
+<div>
+	<div>提示：按ESC键退出</div>
+	<div class="orderStatus box">
+		<h2>订单编号:<em>0101001305131058687</em></h2>
+		<ul>
+			<li class="stepOk">创建</li>
+			<li class="stepOk">申请</li>
+			<li class="stepOk">支付</li>
+			<li class="stepOk">出票</li>
+			<li class="stepOk">审核</li>
+			<li class="stepDoing">派送</li>
+			<li>退废</li>
+			<li>完成</li>
+			<li>取消</li>
+			<li>收款</li>
+			<li>复合</li>
+		</ul>
+		<div class="clear"></div>
+	</div>
+	
+	<div class="basicInfo box">
+		<h2>单号信息</h2>
+		<ul>
+			<li><label>原订单号<input type="text" name="original_orderId" value="" class="k-textbox"/></label><label>关联单号<input type="text" name="" value="" class="k-textbox"/></label></li>
+		</ul>
+		<div class="clear"></div>
+	</div>
+	
+	<div class="flightInfo box">
+		<h2>航班信息</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>PNR</th>
+					<th>PNR(大编码)</th>
+					<th>新小编码</th>
+					<th>新大编码</th>
+					<th>出票地</th>
+					<th>离港机场</th>
+					<th>到港机场</th>
+					<th>航班号</th>
+					<th>舱位</th>
+					<th>机型</th>
+					<th>离港时间</th>
+					<th>到港时间</th>
+					<th>订座情况</th>
+					<th>预订OFFICE</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>HR03RV</td>
+					<td><input type="text" name="" value="MB5MJG"  class="k-textbox"/></td>
+					<td><input type="text" name="" value=""  class="k-textbox"/></td>
+					<td><input type="text" name="" value=""  class="k-textbox"/></td>
+					<td>不夜城BSP</td>
+					<td>WUH 武汉</td>
+					<td>PVG 上海浦东</td>
+					<td>B</td>
+					<td>MU 571</td>
+					<td>波音737</td>
+					<td>2013-05-31 7:50</td>
+					<td>2013-05-31 9:25</td>
+					<td>HK</td>
+					<td>SHA255</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<div class="priceInfo box">
+		<h2>报价信息</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>报价类型</th>
+					<th>人数</th>
+					<th>应收票款</th>
+					<th>票款</th>
+					<th>税款</th>
+					<th>机建</th>
+					<th>燃油</th>
+					<th>附加费</th>
+					<th>客户返点</th>
+					<th>客户返款</th>
+					<th>航司返点</th>
+					<th>航司后返</th>
+					<th>航司奖励</th>
+					<th>预期当期结算价</th>
+					<th>政策编号</th>
+					<th>政策备注</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>ADT</td>
+					<td>1</td>
+					<td>670</td>
+					<td>770</td>
+					<td>110</td>
+					<td>50</td>
+					<td>60</td>
+					<td>0.00</td>
+					<td>13.0</td>
+					<td>0.00</td>
+					<td>13.5</td>
+					<td>776.05</td>
+					<td>0.00</td>
+					<td>0.00</td>
+					<td>500003399</td>
+					<td>本地政策【500003399】（不管任何原因）签转到其他航空公司、跨月签转以及有政策航班改到无政策航班，需收回代理费</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<div class="ticketInfo box">
+		<h2>客票信息</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>PNR</th>
+					<th>姓名</th>
+					<th>证件号码</th>
+					<th>旅客类型</th>
+					<th>票号</th>
+					<th>票序号</th>
+					<th>行程单号</th>
+					<th>联系电话</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>HR03RV</td>
+					<td>王大强</td>
+					<td>32132132131</td>
+					<td>ADT</td>
+					<td>1223332132345</td>
+					<td>C1</td>
+					<td></td>
+					<td>13451070339</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<div class="insureInfo box">
+		<h2>保险产品</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>保险产品名称</th>
+					<th>保险单价</th>
+					<th>份数</th>
+					<th>服务费</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>泰康电子保险 </td>
+					<td>40.00</td>
+					<td>1</td>
+					<td>0.00</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<div class="addressInfo box">
+		<h2>配送地址</h2>
+		<table>
+			<tr>
+				<td>联系人</td>
+				<td><input type="text" name="" value="" class="k-textbox"/></td>
+				<td>手机号</td>
+				<td><input type="text" name="" value="" class="k-textbox"/></td>
+				<td>派送日期</td>
+				<td><input type="text" name="" value="" class="Datepicker"/></td>
+			</tr>
+			<tr>
+				<td>发票抬头</td>
+				<td colspan="5"><input type="text" name="" value="" class="k-textbox" style="width:500px;"/></td>
+			</tr>
+			<tr>
+				<td>金额</td>
+				<td colspan="5"><input type="number" name="" value="" /></td>
+			</tr>
+			<tr>
+				<td>派送地址</td>
+				<td colspan="5"><input type="text" name="" value="" class="k-textbox" style="width:500px;"/></td>
+			</tr>
+			
+		</table>
+	</div>
+	
+	<div class="orderSummery box">
+		<h2>小结:</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>应收合计</th>
+					<th>票款合计</th>
+					<th>税款合计（机建/ 燃油）</th>
+					<th>保险合计</th>
+					<th>附加费</th>
+					<th>客户返佣</th>
+					<th>客户后返</th>
+					<th>支付手续费</th>
+					<th>利润</th>
+					<th>服务费</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input type="number" name="" value=""/></td>
+					<td><input type="number" name="" value="" /></td>
+					<td>110.00(50/60)</td>
+					<td>40.00</td>
+					<td>0.00</td>
+					<td>0.00</td>
+					<td>0.00</td>
+					<td>0.00</td>
+					<td>0.00</td>
+					<td>0.00</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<div>
+		<input type="button" class="button_main_m" name="print" value="打印" />
+		<input type="button" class="button_main_m" name="save" value="保存" />
+		<input type="button" class="button_main_m" id="btnPay" onclick="GotoPayment();" value="支付" name="btnPay"/>
+		<input type="button" class="button_main_m" disabled="disabled" value="价格计算" name="btnCrePriceCalculate"/>
+		<input type="button" class="button_main_m" disabled="disabled" value="提取转换" name="btnTQZH"/>
+		<input type="button" class="button_main_m" value="申请出票" name="btnRequestTicket"/>
+		<input type="button" class="button_main_m" value="申请价格" name="btnRequestPrice"/>
+		<input type="button" class="button_main_m" value="取消订单" name="btnCreBSDELOrder" onclick="return confirm('您是否要删除此订单？');">
+	</div>
+
+		
+	</div>
+	
+	<div class="orderFooter">
+		<table>
+			<tr>
+				<td>创建人</td>
+				<td>huolitest</td>
+				<td>创建时间</td>
+				<td>2013/5/13 10:58:48</td>
+			</tr>
+			<tr>
+				<td>审核人</td>
+				<td>java01</td>
+				<td>审核时间</td>
+				<td>2013/5/13 11:15:30</td>
+			</tr>
+			<tr>
+				<td>收款人</td>
+				<td>AUTO</td>
+				<td>收款时间</td>
+				<td>2013/5/13 11:15:30 </td>
+			</tr>
+		</table>
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	$("#orderDetail input[type=number]").kendoNumericTextBox({format: "#.00"});
+	$("#orderDetail .Datepicker").kendoDatePicker({format: "yyyy-MM-dd",culture:"zh-CN"});
+});
+	
+</script>

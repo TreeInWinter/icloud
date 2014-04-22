@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>签证 美签-护照已到</title>
+        <meta charset="utf-8" />
+        <link href="/static/css/common.css" rel="stylesheet" />
+        <link href="/static/css/b2b.css" rel="stylesheet" />
+        <link href="/static/css/kendo.common.css" rel="stylesheet" />
+        <link href="/static/css/kendo.gray.css" rel="stylesheet" />
+        <link href="/static/css/kendo.reset.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/static/css/global.css" />
+        <link href="/static/css/visa.css" rel="stylesheet">
+        
+        <script src="/static/js/purchaseorder.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/static/js/kendo.web.js"></script>
+        <script type="text/javascript" src="/static/js/plugins/jquery.fixedBar.js"></script>
+        <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+        <script type="text/javascript" src="../../static/js/global.js"></script>
+        <script type="text/javascript" src="../../static/js/finance.js"></script>
+        
+        <script type="text/javascript">
+            $(function(){
+                    $('.actions').fixedBar();
+                    var lensf = function (){
+                    $.each($('.instr'),function(){
+                        var that = $(this);
+                        if(that.find('.highlight-fl').size()>0){
+                        var ele = that.find('.highlight');
+                        var len = ele.size();
+                        var wid = ele.width()*len + -40;
+                        that.find('.line').prepend('<div style="background-color:#00ae42;height:2px;width:'+wid+'px" />')
+                        }
+                        });
+                    }
+                    lensf();
+                    });
+        </script>
+            
+        <!--[if lt IE 8]> 
+        <link rel="stylesheet" href="/static/css/ie.css" /> 
+        <script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+        <![endif]-->
+        <script type="text/javascript" src="/static/js/sync.js"></script>
+                    <!-- @CLB@ -->
+</head>
+<body>  
+<div id="extHeader">
+    <div></div>
+</div>
+
+                <div id="container">
+                    <div class="header">
+                        <h1></h1>
+                        <div>
+                            <span>你好,${name}</span>
+                            <a href="javascript:void(0);">退出</a>
+                        </div>
+                        <ul id="top_menu">
+                            <li><a href="javascript:void(0);">国内机票</a></li>
+                            <li><a href="javascript:void(0);">国际机票</a></li>
+                            <li><a href="javascript:void(0);">酒店</a></li>
+                            <li><a href="javascript:void(0);">票证中心</a></li>
+                            <li><a href="javascript:void(0);">财务管理</a></li>
+                            <li><a href="javascript:void(0);">客户管理</a></li>
+                            <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+                        </ul>
+                        <ol class="sub_menu">
+                            <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                            <li><a href="javascript:void(0);">公司信息</a></li>
+                            <li><a href="javascript:void(0);">组织架构</a></li>
+                            <li><a href="javascript:void(0);">角色维护</a></li>
+                            <li><a href="javascript:void(0);">基础数据</a></li>
+                        </ol>
+                        <div id="message">
+                            <a href="javascript:void(0);">消息</a>
+                            <span>New</span>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div id="sub_menu_bar"></div>
+                    <div id="mainContent">
+                        
+                        <div class="actions block">
+                            <div class="col col-l sep-r">
+                                <button class="btns btn-return">返回</button>
+                            </div>
+                            <div class="col col-l titleFont">
+                                 <b>签证详情</b>
+                            </div>
+                            <div class="col col-r sep-l">
+                                <a href="美签-护照已取走.html" class="button_important adaptiveButton small">
+                                    <span class="left"></span>
+                                    <span class="center">收到客人护照</span>
+                                    <span class="right"></span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="block block0 clearfix">
+                            <div class="col col-l">
+                                <div class="row">
+                                    <span class="text1"><b>签证产品：</b><i class="changeFont">美国个人旅游签证</i></span>
+                                </div>
+                                <div class="row">
+                                    <span>签证类型：<em>B1/B2</em></span>&nbsp;&nbsp;<span>最后更新时间：2013/10/16</span>&nbsp;&nbsp;<span><a href="#" style="color:#0066cc;">所有操作记录</a></span>
+                                </div>
+                            </div>
+                            <div class="col col-r">
+                                <ul class="flat-list">
+                                    <li>
+                                        <div class="instr clearfix">
+                                            <span class="highlight first">材料到齐/已齐</span>
+                                            <span class="highlight">送签</span>
+                                            <span class="highlight">出签</span>
+                                            <span class="highlight-fl">护照已到</span>
+                                            <span class="last">护照已取走</span>
+                                            <em class="line">&nbsp;</em>
+                                        </div> 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 订单信息 -->  
+                        <div class="block block2 block-module">
+                            <div class="block-title">
+                                <span class="block-title-orange">游客信息</span>
+                            </div> 
+                            <div class="row">
+                                <div id="flight_info_grid">
+                                    <table class="grid-table">
+                                        <tr class="thead">
+                                            <td>中文姓名 </td>
+                                            <td>性别</td>
+                                            <td>出生地</td>
+                                            <td>出生日期</td>
+                                            <td>护照号码</td>
+                                            <td>护照有效期</td>
+                                            <td>护照签发地</td>
+                                            <td>送签城市</td>
+                                            <td>手机号码</td>
+                                            <td>身份证号码</td>
+                                            <td>计划出行日期</td>
+                                            <td>单/团签</td>
+                                        </tr>
+                                        <tr>
+                                            <td>张大国</td>
+                                            <td>F</td>
+                                            <td>上海</td>
+                                            <td>11/Aug/76</td>
+                                            <td>G23364650</td>
+                                            <td>31/Dec/14</td>
+                                            <td>上海</td>
+                                            <td>上海</td>
+                                            <td>13601123456</td>
+                                            <td>420325188808151538</td>
+                                            <td>2014/5/28</td>
+                                            <td>单签</td>
+                                        </tr>
+                                    </table> 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="block block3 block-module">
+                            <div class="visa_subBlock" style="border-bottom:0;">
+                                <div class="block-title">送签信息</div>
+                                <div class="content">
+                                    <em class="important">*</em>送签结果：
+                                    <span class="passport_successed">出 签</span>
+                                    <!--<span class="passport_absence">缺 席</span>
+                                    <span class="passport_refused">拒 签</span>-->
+                                    <span class="passport_note">备注：我是备注</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="block block4 block-module">
+                            <div class="block-title"><span class="block-title-blue">材料信息</span></div> 
+                            <!-- <label id="save_as_frequent"> -->
+                                <!--      <input type="checkbox">自动保存到长旅客  -->
+                                <!-- </label> -->
+                            <div class="row">
+                                <div id="passenger_info_grid">
+                                    <table class="grid-table">
+                                        <colgroup>
+                                             <col width="150px" />
+                                             <col width="480px" />
+                                             <col width="170px" />
+                                             <col width="130px" />
+                                        </colgroup>
+                                        <tr class="thead">
+                                            <th>材料名称</th>
+                                            <th>材料要求</th>
+                                            <th style="text-align:center;">是否通过</th>
+                                        </tr> 
+                                        <tr>
+                                            <td><em class="redFont">*</em>护照：原件  复印件</td>
+                                            <td>1、护照在归国后至少还有半年以上有效期，护照末页需本人中文签名（不要用铅笔签名）；护照至少留有连续2页的空白签证页，不含备注页。<br/>
+                                                2、如有旧护照，则一并提供原件。
+                                            </td>
+                                            <td> 
+                                                <div class="whetherThrough">
+                                                    <a href="javascript:void(0);" class="passHint"></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><em class="redFont">*</em>签证表格</td>
+                                            <td>签证表格需全部填写完整</td>
+                                            <td> 
+                                                <div class="whetherThrough">
+                                                    <a href="javascript:void(0);" class="passHint"></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><em class="redFont">*</em>照片</td>
+                                            <td>1、纸质照片：半年内拍摄的5.0cmx5.0cm白底彩照2张（每张照片后务必以铅笔注明客人的姓名）。<br/>
+                                                2、电子照片（每张照片必须正确命名，如因命名错误导致的后续问题，责任由客人承担）。
+                                            </td>
+                                            <td> 
+                                                <div class="whetherThrough">
+                                                    <a href="javascript:void(0);" class="passHint"></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><em class="redFont">*</em>身份证复印件</td>
+                                            <td>身份证正反面复印件</td>
+                                            <td> 
+                                                <div class="whetherThrough">
+                                                    <a href="javascript:void(0);" class="noPass"></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><em class="redFont">*</em>签证费用</td>
+                                            <td>签证费用1200元</td>
+                                            <td> 
+                                                <div class="whetherThrough">
+                                                    <a href="javascript:void(0);" class="noPass"></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div> <!--内容结束-->
+                </div>
+
+                <div id="extFooter">
+                    <div>
+                        <p>
+                        <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                        <a href="javascript:void(0);">微博</a>&nbsp;|
+                        <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                        <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+                        </p>
+                        <p>客户服务热线:400-720-6666</p>
+                    </div>
+                </div>
+                
+        </body>
+     </html>

@@ -1,0 +1,201 @@
+/* 表格样式 */
+.k-grid-header .k-header{
+    background-color:#e4e4e4;
+    border-color:#f6f6f6;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+.k-grid-header{
+	background-color:#e4e4e4;
+}
+
+.k-grid-header .k-header {
+    border-width: 0 0 1px 1px;
+}
+
+.k-grid table{
+    border-collapse:collapse;
+}
+.k-grid td{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-width:0 0 1px 1px;
+}
+div.k-grid-header{
+	padding-right:0;
+}
+.k-grid-scrollY div.k-grid-header{
+	padding-right:17px;
+}
+div.k-grid-header .k-grid-header-wrap{
+}
+.k-grid-content{
+	overflow:visible;
+	overflow-y:visible;
+	overflow-x:auto;
+}
+.k-ie9 .k-grid-content:hover {
+    height:100%;
+}
+
+.k-grid a{
+    color:#06c;
+}
+.k-grid tbody tr:hover td{
+    background-color:#ffffdb; 
+}
+
+.k-grid .oper {color:#0066CC; padding:3px;}
+.k-grid .oper:hover {text-decoration:underline;}
+
+div.k-grid-header,thead.k-grid-header .k-header{
+    border-bottom:2px solid  #fea86d;
+}
+
+div.k-pager-wrap {
+    height:32px;
+    padding: 10px 20px 0 20px;
+}
+
+.k-grid-pager b{
+    color:#FF6B00;
+}
+.k-grid-pager {
+    border:0;
+    line-height:30px; 
+    color:#676767;padding-bottom:0px;
+    text-align: right;
+    position: relative;
+    overflow: visible;
+    background: #fff
+}
+
+.k-pager-wrap .k-link {
+    border:none;
+    border-radius: 0px; 
+    line-height: 30px;
+    border-bottom: 2px solid white;
+}
+
+.k-pager-wrap-zzz .k-i-seek-w {display:none;}
+.k-pager-wrap-zzz .k-i-seek-e {display:none;}
+
+.k-pager-wrap-zzz .k-i-arrow-w {background: url(../images/fanye.png) no-repeat 0 0;width:7px;}
+.k-pager-wrap-zzz .k-i-arrow-e {background: url(../images/fanye.png) no-repeat -14px 0;width:7px;}
+.k-pager-wrap-zzz .k-i-arrow-w:hover {background-position: -7px 0;}
+.k-pager-wrap-zzz .k-i-arrow-e:hover {background-position: -21px 0 !important ;}
+
+/* .k-link:not(.k-state-disabled):hover > .k-i-arrow-w,.k-link:not(.k-state-disabled):hover > .k-i-arrow-e{background-position:50% 50%} */
+.k-pager-wrap-zzz .k-link .k-icon {line-height:30px;height:30px;}
+.k-grid .k-pager-numbers{float:none}
+.k-pager-numbers li {text-align:center;margin:0 2px;}
+.k-pager-numbers .k-link{line-height:30px;padding:0 11px;}
+.k-pager-numbers li span{ color:#ff6c00; font-weight:bold;line-height:30px;}
+
+.k-grid-content tr.k-state-selected {background-color:#fff;}
+
+.k-pager-numbers .k-state-selected {
+    border:1px solid #e7e7e7; background:#f7f7f7; border-bottom:2px solid #ff6c00; color:#575757; font-weight:bold;
+    border-radius: 0px; 
+    line-height: 30px;
+    padding: 0px 10px;
+}
+.k-pager-numbers .k-link:hover {padding:0 10px;line-height:30px;border:1px solid #e7e7e7; background:#f7f7f7; border-bottom:2px solid #ff6c00; color:#575757; font-weight:bold;}
+
+.k-pager-wrap-zzz{float:right}
+
+.k-loading,
+.k-state-hover .k-loading {
+  background-image: url('Default/loading.gif');
+  background-position: 50% 50%;
+}
+.k-loading-image {
+  background-image: url('Default/loading-image.gif');
+}
+.k-loading-color {
+  background-color: #ffffff;
+}
+
+/***************/
+.k-upload-button{
+    background: url("../images/button/button_3_3.png") repeat scroll 0 0 transparent !important;
+    color: #454545;
+    display: inline-block;
+    height: 26px;
+    text-align: center;
+    width: 71px;
+    border:none;
+}
+.k-upload{
+    display:inline-block;
+    *display:inline;
+}
+.k-dropzone{
+    padding:0;
+}
+
+.k-widget .k-input{
+    text-indent:2px;
+    box-shadow:none;
+}
+
+.k-widget .k-input{
+    height:20px;
+    line-height:inherit;
+    line-height:20px;
+    padding:0;
+}
+.k-dropdown .k-input {
+    padding:0 0 0 3px;
+}
+
+.k-widget .k-select{
+    height:15px;
+    min-height:0;
+    line-height:inherit;
+}
+.k-tabstrip{
+    background-color:#fff;
+    border:none;
+}
+
+.k-list .k-state-focused{
+    background-color:#ffede3;
+}
+.k-dropzone em{
+    display:none;
+}
+
+.k-window-title {position:static;padding-left:10px;}
+.k-window-titlebar {
+	font-weight:bold;
+    cursor:move;
+	padding:10px 0px;
+	
+}
+.k-window-titlebar .k-window-actions {padding-top:8px;}
+.k-content-frame {width:98%;height:98%;}
+
+.k-tooltip {text-align:left;background-color:#ffffff;color:#000000;}
+.k-tooltip-content {padding:10px;}
+
+.k-alt {background-color:transparent;}
+
+/* validate */
+.k-tooltip-validation { 
+    border:1px solid transparent;
+    background-color:#ff6600;
+    color:#ffffff;
+    z-index:auto;
+}
+.k-tooltip-validation .k-icon{
+    display:none;
+}
+
+.k-numerictextbox .k-link {padding:0 3px;}
+
+.k-invalid {border:1px solid #ff6600 !important;}
+span.k-tooltip-validation {padding:2px 3px 3px ;}
+
+div.k-treeview {padding:5px 0 0 5px;}
+.k-state-selected {background:#fff;}

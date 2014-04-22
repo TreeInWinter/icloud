@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html" charset="utf-8">
+    <title>酒店 酒店维护 供应商信息</title>
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/b2b.css">
+    <link rel="stylesheet" href="/static/css/kendo.common.css">
+    <link rel="stylesheet" href="/static/css/kendo.gray.css">
+    <link href="/static/css/kendo.reset.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/hotel.css">
+    <style type="text/css">
+        .subhead{color:#000000}
+        .tblInfo{color:#666666}
+        .tblContact{border:1px solid #CFCFCF;border-width:1px 1px 0 1px}
+        .tblContact li{border-bottom:1px solid #cfcfcf;position:relative}
+        .contactDefalutFlag{background:#FF7702;padding:1px;position:absolute;top:0;left:0;color:#ffffff}
+    </style>
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<!-- @CLB@ -->
+</head>
+<body>
+<div class="main">
+    <div class="actions block">
+        <div class="col col-l sep-r">
+            <button class="btns btn-return">返回</button>
+        </div>
+        <div class="col col-l" style="padding-left:10px;">
+            <a class="item" href="#">酒店信息</a>
+            <a class="item highlight" href="#">供应商信息</a>
+            <a class="item" href="#">房型</a>
+            <a href="#" class="item">价格计划</a>
+        </div>
+        <div class="col col-r sep-l">
+            <a class="button_4_3" href="#" style="color:#ffffff;margin-top:4px;">提交</a>
+            <a class="button_4_3" href="#" style="color:#ffffff;margin-top:4px">关闭</a>
+        </div>
+    </div>
+    <div class="panel" style="height:21px">
+        <div class="panelTitle">签约信息</div>
+        <div style="float:left;">
+            <span class="head" style="margin-left:75px">城市：<span style="color:#1C64A7">上海</span></span>
+            <span class="head" style="margin-left:75px">酒店名称：<span style="color:#1C64A7">----</span></span>
+            <span class="head" style="margin-left:75px"><span class="important">*</span>签约经理</span>
+            <select>
+                <option value="签约经理列表">签约经理列表</option>
+                <option value="李小路" selected="">李小路</option>
+            </select>
+            <span class="head" style="margin-left:75px">状态：<span style="color:#1C64A7">草稿</span></span>
+        </div>
+        <div style="float:right;margin-right:17px">
+            <a class="button_3_3" href="javascipt:;">保存</a>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panelTitle">
+            合同信息
+        </div>
+        <div style="float:left">
+            <a class="button_3_3 popwin" href="javascipt:;" data='{"url":"编辑合同.html","width":700,"height":360,"title":"编辑合同"}'>编辑</a>
+        </div>
+        <table class="tblInfo">
+            <tr>
+                <td style="width:83px"><span class="head">合同有效期</span></td>
+                <td colspan="2">2013-01-01 至 2013-12-30</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <span class="remind">已设置提醒 提前2周/当天</span>
+                </td>
+                <td>
+                    <span class="mail">wei.liu@travelzen.com | qwe@travelzen.com</span>
+                </td>
+            </tr>
+            <tr>
+                <td><span class="head">供应商类型</span></td>
+                <td>
+                    酒店业主-宝华国际酒店
+                </td>
+                <td>
+                    <span class="head">供应商实体</span>
+                    中国大陆
+                </td>
+            </tr>
+            <tr>
+                <td><span class="head">收款账户</span></td>
+                <td colspan="2">
+                    <span class="subhead">账户名：</span>刘伟<span style="color:#cccccc;padding:0 10px">|</span>
+                    <span class="subhead">开户银行：</span>刘伟<span style="color:#cccccc;padding:0 10px">|</span>
+                    <span class="subhead">账号：</span>刘伟
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="panel">
+        <div class="panelTitle">
+            联系人
+        </div>
+        <div style="float:left">
+            <a class="button_3_3 popwin" href="javascipt:;" data='{"url":"添加联系人.html","width":800,"height":360,"title":"添加联系人"}'>添加</a>
+        </div>
+        <div class="tblContact clearfix">
+            <ul>
+                <li>
+                    <table class="tblInfo">
+                        <tr>
+                            <td style="width:20px;vertical-align:middle;border-right:1px solid #ccc;text-align:center" rowspan="2">1</td>
+                            <td rowspan="2" style="vertical-align: middle;text-align:center;"><span class="subhead">刘伟</span></td>
+                            <td><span class="subhead">手机：</span><input type="text" value="188210888666" class="disabled" readonly="readonly"></td>
+                            <td><span class="subhead">传真：</span><input type="text" value="021-23456789-1234" class="disabled" readonly="readonly"></td>
+                            <td><span class="subhead">座机：</span><input type="text" value="021-23456789-1234" class="disabled" readonly="readonly"></td>
+                            <td><span class="subhead">邮箱：</span><input type="text" value="liuwei@vip.qq.com" class="disabled" readonly="readonly"></td>
+                            <td></td>
+                            <td style="width:110px;text-align:center">
+                                <a href="#" class="editbutton edit">编辑</a>
+                                <a href="javascript:;" class="editbutton save" style="display:none">保存</a>
+                                <a href="javascript:;" class="editbutton cancel" style="display:none;margin-left:10px">取消</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <span class="subhead">传真接收时间：</span>
+                                <label><input type="checkbox" class="disabled">一/</label>
+                                <label><input type="checkbox" class="disabled">二/</label>
+                                <label><input type="checkbox" class="disabled">三/</label>
+                                <label><input type="checkbox" class="disabled">四/</label>
+                                <label><input type="checkbox" class="disabled">五/</label>
+                                <label><input type="checkbox" class="disabled">六/</label>
+                                <label><input type="checkbox" class="disabled">日</label>
+                                <input type="text" value="8:00" class="disabled" readonly="readonly" style="width:40px">-
+                                <input type="text" value="18:00" class="disabled" readonly="readonly" style="width:40px">
+                            </td>
+                            <td><span class="subhead">备注：</span><input type="text" value="酒店销售部联系人" class="disabled" readonly="readonly"></td>
+                            <td></td>
+                            <td style="text-align:center"><a href="#" class="editbutton delete">删除</a></td>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+                    <table class="tblInfo">
+                        <tr>
+                            <td style="width:20px;vertical-align:middle;border-right:1px solid #ccc;text-align:center" rowspan="2">2</td>
+                            <td rowspan="2" style="vertical-align: middle;text-align:center;"><span class="subhead">刘伟</span></td>
+                            <td><span class="subhead">手机：</span><input type="text" value="188210888666" class="disabled" readonly="readonly"></td>
+                            <td><span class="subhead">传真：</span><input type="text" value="021-23456789-1234" class="disabled" readonly="readonly"></td>
+                            <td><span class="subhead">座机：</span><input type="text" value="021-23456789-1234" class="disabled" readonly="readonly"></td>
+                            <td><span class="subhead">邮箱：</span><input type="text" value="liuwei@vip.qq.com" class="disabled" readonly="readonly"></td>
+                            <td></td>
+                            <td style="width:110px;text-align:center">
+                                <a href="#" class="editbutton edit">编辑</a>
+                                <a href="javascript:;" class="editbutton save" style="display:none">保存</a>
+                                <a href="javascript:;" class="editbutton cancel" style="display:none;margin-left:10px">取消</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <span class="subhead">传真接收时间：</span>
+                                <label><input type="checkbox" class="disabled">一/</label>
+                                <label><input type="checkbox" class="disabled">二/</label>
+                                <label><input type="checkbox" class="disabled">三/</label>
+                                <label><input type="checkbox" class="disabled">四/</label>
+                                <label><input type="checkbox" class="disabled">五/</label>
+                                <label><input type="checkbox" class="disabled">六/</label>
+                                <label><input type="checkbox" class="disabled">日</label>
+                                <input type="text" value="8:00" class="disabled" readonly="readonly" style="width:40px">-
+                                <input type="text" value="18:00" class="disabled" readonly="readonly" style="width:40px">
+                            </td>
+                            <td><span class="subhead">备注：</span><input type="text" value="酒店销售部联系人" class="disabled" readonly="readonly"></td>
+                            <td></td>
+                            <td style="text-align:center"><a href="#" class="editbutton delete">删除</a></td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panelTitle" style="border: 0">
+            操作日志
+        </div>
+        <div class="panelContent clearfix">
+            <table class="operation_records">
+                <thead>
+                <tr>
+                    <td style="width:130px">日期</td>
+                    <td style="width:100px">操作人员</td>
+                    <td style="width:300px">操作项目</td>
+                    <td style="width:300px">操作内容</td>
+                    <td style="width:100px">操作类型</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>20130606 14:55</td>
+                    <td>liuwei</td>
+                    <td>增加行政商务套房</td>
+                    <td>增加行政商务套房</td>
+                    <td>新增</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div id="window"></div>
+
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/kendo.web.js"></script>
+<script type="text/javascript" src="/static/js/scrollFix.js"></script>
+<script type="text/javascript" src="/static/js/hotel.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        $("body").delegate(".editbutton","click",function(){
+            var li=$(this).closest("li");
+            if($(this).hasClass("edit"))
+            {
+                li.data("oldData",li.html());
+                $(":input",li).removeClass("disabled").prop("readonly",false);
+                $(":checkbox",li).closest("label").show();
+            }
+            if($(this).hasClass("save"))
+            {
+                $(":input",li).addClass("disabled").prop("readonly",true);
+                $(":checkbox",li).not(":checked").closest("label").hide();
+            }
+            if($(this).hasClass("cancel"))
+            {
+                li.html(li.data("oldData"));
+            }
+            if($(this).hasClass("delete"))
+            {
+                li.remove();
+            }
+            $(this).hide().siblings(".editbutton").toggle();
+        })
+    })
+</script>
+</body>
+</html>
+

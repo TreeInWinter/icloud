@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 B2G 员工管理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/b2g.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.b2g.css" />
+
+    <link rel="stylesheet" href="../../static/css/b2g_management.css" media="all" />
+
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/b2g/common.js"></script>
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+    <!--[if lte IE 9]>
+    <script src="/static/js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="main-wrapper">
+<div class="top-line"></div>
+<header class="main-header">
+    <div class="header-content">
+        <a class="logo" href="/">天地行 B2G</a>
+        <nav class="main-nav">
+            <ul class="clearfix">
+                <li class="first active"><a herf="#">行程预订</a></li>
+                <li><a herf="#">行程管理</a></li>
+                <li><a herf="#">数据服务</a></li>
+                <li><a herf="#">创业维护</a></li>
+                <li><a herf="#">系统设置</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="header-bar clearfix">
+    <div class="header-bar-content block-client">
+            <div class="block-clientBar">
+                <span>客户</span>
+                <select id="" style="width:160px;margin-left:5px;" data-role="dropdownlist" name="">
+                    <option value="">不夜城</option>
+                </select>
+                <span class="barBtns">
+                    <a href="javascript:void(0);" class="btn-color1 btn-color" >企业组织</a>&nbsp;<a href="javascript:void(0);" class="btn-color1 btn-color">企业成本中心</a>&nbsp;<a href="javascript:void(0);" class="btn-color2 btn-color">差旅政策</a>&nbsp;<a href="javascript:void(0);" class="btn-color1 btn-color">其他设置</a>
+                </span>
+            </div>
+        </div>
+</div>
+
+<section class="main-body clearfix">
+    <div class="main-body-content">
+        <div class="block block2" style="margin-bottom: 7px">
+            <div class="block-header clearfix">
+                <div class="block-header1">差旅政策基础信息设置</div>
+            </div>
+            <div class="block-body tab-body clearfix">
+                <div class="block-content">
+                    <div class="block-content-panel">
+                        <p class="block-content-panel-title">预设差旅目的：</p>
+                        <ul id="ul_ptp" class="basicInfoSetup_items">
+                            <li>商务会议<i class="bis_del"></i><i class="bis_edit"></i></li>
+                            <li>客户服务<i class="bis_del"></i><i class="bis_edit"></i></li>
+                        </ul>
+                        <span class="bis_add"><i></i>新 增</span>
+                    </div>
+                    <div class="block-content-panel">
+                        <p class="block-content-panel-title">机票政策：</p>
+                        <p>NoShow扫描设置：起飞后<input type="text" style="width:70px;height:30px"/>天 扫描</p>
+                        <p><label><input type="checkbox" name="" id=""/>违背差旅政策需要填写原因</label></p>
+                        <ul id="ul_tp" class="basicInfoSetup_items">
+                            <li>航班不合适<i class="bis_del"></i><i class="bis_edit"></i></li>
+                            <li>时间不合适<i class="bis_del"></i><i class="bis_edit"></i></li>
+                        </ul>
+                        <span class="bis_add"><i></i>新 增</span>
+                    </div>
+                    <div class="block-content-panel" style="border:0;padding:0;margin:0">
+                        <p class="block-content-panel-title">酒店政策：</p>
+                        <p><label><input type="checkbox" name="" id=""/>违背差旅政策需要填写原因</label></p>
+                        <ul id="ul_tp" class="basicInfoSetup_items">
+                            <li>入住时间不合适<i class="bis_del"></i><i class="bis_edit"></i></li>
+                            <li>房型不合适<i class="bis_del"></i><i class="bis_edit"></i></li>
+                        </ul>
+                        <span class="bis_add"><i></i>新 增</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="policyLeftMenu">
+            <ul>
+                <li>默认政策<i class="policyLeftMenu_currentArrow"></i></li>
+                <li>级别一<i class="policyLeftMenu_currentArrow"></i><i class="policyLeftMenu_clearButton">清 空</i><i class="policyLeftMenu_clearedFlag">无数据</i></li>
+                <li class="current">级别二<i class="policyLeftMenu_currentArrow"></i><i class="policyLeftMenu_clearButton">清 空</i><i class="policyLeftMenu_clearedFlag">无数据</i></li>
+                <li>级别三<i class="policyLeftMenu_currentArrow"></i><i class="policyLeftMenu_clearButton">清 空</i><i class="policyLeftMenu_clearedFlag">无数据</i></li>
+
+                <li class="li_policyNewButton"><i class="ico_plusGreen"></i>新增</li>
+            </ul>
+        </div>
+        <div class="policyRightPanel">
+            <div class="policyLevel2">
+                <div class="policyTypeHead">
+                    <ul class="ul_policyType">
+                        <li class="current"><i class="ico_plane"></i>机 票</li>
+                        <li><i class="ico_Inn"></i>酒 店</li>
+                    </ul>
+                    <div class="policyTypeLiBG"></div>
+                </div>
+                <div class="PolicyContainer">
+                    <ul class="ul_policyContent_ticket">
+                        <li>
+                            <div class="policyContentTitle"><b>国内</b> 机票价格/时限</div>
+                            <table>
+                                <tr>
+                                    <td style="width:30px"></td>
+                                    <td><label><input type="radio" name="domestic_ticket" id=""/>不限价格</label></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><label><input type="radio" name="domestic_ticket" id=""/>最低价格</label></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td style="text-indent: 18px">起飞前后时距 <input type="text" name="" id=""  style="width:70px;height:30px"/> 小时</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td style="text-indent: 18px">价格浮动范围 <input type="text" name="" id="" style="width:70px;height:30px"/> 元 / <input type="text" name="" id="" style="width:70px;height:30px"/> %</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><label><input type="radio" name="domestic_ticket" id=""/>协议价</label></td>
+                                </tr>
+                                <tr>
+                                    <td style="border-top: 1px dashed #d3d3d3"></td>
+                                    <td style="border-top: 1px dashed #d3d3d3;text-indent: 18px">提前预定天数 <input type="text" name="" id="" style="width:70px;height:30px"/> 天 </td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li>
+                            <div class="policyContentTitle"><b>国内</b> 舱位设置</div>
+                            <div class="limitReservationSwitchContainer">限制预订 <i class="switchButton"></i><span class="switchButtonOff"><i class="ico_infoWithYellowCircle" style="height: 20px"></i>开启限制预订，此类用户将只能预订勾选的舱位</span></div>
+                            <table class="tbl_classSetup">
+                                <tr>
+                                    <td><label><input type="checkbox" name="" id=""/>全选 （不限舱位）</label></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><label><input type="checkbox" name="" id=""/>经济舱</label></td>
+                                    <td><label><input type="checkbox" name="" id=""/>包含低于全价经济舱（Y舱）价格的舱位</label></td>
+                                </tr>
+                                <tr>
+                                    <td><label><input type="checkbox" name="" id=""/>公务舱</label></td>
+                                    <td><label><input type="checkbox" name="" id=""/>包含低于全价公务舱（C舱）价格的舱位</label></td>
+                                </tr>
+                                <tr>
+                                    <td><label><input type="checkbox" name="" id=""/>头等舱</label></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li style="height: 269px">
+                            <div class="policyContentTitle"><b>国际</b> 机票价格/时限</div>
+                            <table>
+                                <tr>
+                                    <td style="width:30px"></td>
+                                    <td><label><input type="radio" name="internation_ticket" id=""/>不限价格</label></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><label><input type="radio" name="internation_ticket" id=""/>最低价格</label></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td style="text-indent: 18px">起飞前后时距 <input type="text" name="" id=""  style="width:70px;height:30px"/> 小时</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td style="text-indent: 18px">价格浮动范围 <input type="text" name="" id="" style="width:70px;height:30px"/> 元 / <input type="text" name="" id="" style="width:70px;height:30px"/> %</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><label><input type="radio" name="internation_ticket" id=""/>协议价</label></td>
+                                </tr>
+                                <tr>
+                                    <td style="border-top: 1px dashed #d3d3d3"></td>
+                                    <td style="border-top: 1px dashed #d3d3d3;text-indent: 18px">提前预定天数 <input type="text" name="" id="" style="width:70px;height:30px"/> 天</td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li style="height: 269px">
+                            <div class="policyContentTitle"><b>国际</b> 舱位设置</div>
+                            <div class="limitReservationSwitchContainer">限制预订 <i class="switchButton"></i><span class="switchButtonOff"><i class="ico_infoWithYellowCircle" style="height: 20px"></i>开启限制预订，此类用户将只能预订勾选的舱位</span></div>
+                            <table class="tbl_classSetup">
+                                <tr>
+                                    <td><label><input type="checkbox" name="" id=""/>全选 （不限舱位）</label></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><label><input type="checkbox" name="" id=""/>经济舱</label></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><label><input type="checkbox" name="" id=""/>公务舱</label></td>
+                                    <td>升舱时限 <input type="text" name="" id="" style="width:50px;height:30px"/> 小时</td>
+                                </tr>
+                                <tr>
+                                    <td><label><input type="checkbox" name="" id=""/>头等舱</label></td>
+                                    <td>升舱时限 <input type="text" name="" id="" style="width:50px;height:30px"/> 小时</td>
+                                </tr>
+                            </table>
+                        </li>
+                    </ul>
+                    <div class="clearfix policySaveButtonContainer">
+                        <button type="button" class="commonBtn lightRedBtn btnfontStyle btn_policyItemSave" style="margin-right:12px">保 存</button>
+                    </div>
+                </div>
+                <div class="PolicyContainer">
+                    <ul class="ul_policyContent_hotel">
+                        <li>
+                            <div class="policyContentTitle"><b>国内</b> 酒店价格标准设置</div>
+                            <table class="tbl_policyHotel">
+                                <tr>
+                                    <td><span class="policyHotel_orangeNum">1.</span>一级城市低于 <input type="text" name="" id="" style="width:70px;height:30px"/> 元</td>
+                                    <td><span class="policyHotel_orangeNum">2.</span>二级城市低于 <input type="text" name="" id="" style="width:70px;height:30px"/> 元</td>
+                                    <td><span class="policyHotel_orangeNum">3.</span>三级城市低于 <input type="text" name="" id="" style="width:70px;height:30px"/> 元</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="policyHotel_orangeNum">4.</span>四级城市低于 <input type="text" name="" id="" style="width:70px;height:30px"/> 元</td>
+                                    <td><span class="policyHotel_orangeNum">5.</span>五级城市低于 <input type="text" name="" id="" style="width:70px;height:30px"/> 元</td>
+                                    <td><span class="policyHotel_orangeNum">6.</span>六级城市低于 <input type="text" name="" id="" style="width:70px;height:30px"/> 元</td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li style="height:270px">
+                            <div class="policyContentTitle"><b>国际</b> 酒店价格标准设置</div>
+                            <table class="tbl_policyHotel">
+                                <tr>
+                                    <td>低于 <input type="text" name="" id="" style="width:70px;height:30px"/> 元</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </li>
+                    </ul>
+                    <div class="clearfix policySaveButtonContainer">
+                        <button type="button" class="commonBtn lightRedBtn btnfontStyle btn_policyItemSave" style="margin-right:12px">保 存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="main-footer">
+    <p class="copyright">Copyright &copy; 2013 天地行 All Rights Reserved.     沪ICP备08101503号</p>
+</footer>
+</div>
+
+<script type="text/html" id="bis_newItemTemplate">
+    <input type="text" name="" id="" value="#: oriTxt #" oriTxt="#: oriTxt #"/><i class="bis_save"></i><i class="bis_cancel"></i>
+</script>
+
+<script type="text/html" id="bis_itemTemplate">
+    #: oriTxt #<i class="bis_del"></i><i class="bis_edit"></i>
+</script>
+
+<div id="policyLeftMenuItemClearPromptTemplate">
+    <div style="font-size:16px;text-align: center">
+        <i class="icon icon3" style="margin-left: 0"></i>您确定要清空级别三吗？
+    </div>
+    <div style="text-align: center;margin:30px 0 20px">
+        <span type="button" id="btn_saveTourUsers" onclick="clearPolicyData()" class="commonBtn lightRedBtn btn_popWinClose" style="margin-right:5px">确 定</span>
+        <span type="button" class="commonBtn grayBtn close btn_popWinClose">取 消</span>
+    </div>
+</div>
+
+<div id="policyItemSavePromptTemplate">
+    <div style="font-size:16px;text-align: center">
+        <i class="icon icon3" style="margin-left: 0"></i>您修改了数据，是否保存？
+    </div>
+    <div style="text-align: center;margin:30px 0 20px">
+        <span type="button" id="btn_saveTourUsers" onclick="savePolicyData()" class="commonBtn lightRedBtn btn_popWinClose" style="margin-right:5px">保 存</span>
+        <span type="button" class="commonBtn grayBtn close btn_popWinClose">取 消</span>
+    </div>
+</div>
+
+<script type="text/html" id="policyLeftMenuItemTemplate">
+    <li>#: name #<i class="policyLeftMenu_currentArrow"></i><i class="policyLeftMenu_clearButton">清 空</i><i class="policyLeftMenu_clearedFlag">已清空</i></li>
+</script>
+
+<script type="text/javascript">
+    $(function(){
+        var policyLevel_txt=["一","二","三","四","五","六","七"];
+        $(".bis_add").click(function(){
+            var t=kendo.template($("#bis_newItemTemplate").html());
+            $(this).siblings(".basicInfoSetup_items").append("<li class='editing'>"+ t({oriTxt:""})+"</li>");
+            $(this).css("visibility","hidden");
+        })
+        $("body").delegate(".bis_edit","click",function(){
+            var v=$(this).closest("li").text();
+            var t=kendo.template($("#bis_newItemTemplate").html());
+            $(this).closest("li").addClass("editing").html(t({oriTxt:v}));
+        })
+        $("body").delegate(".bis_cancel","click",function(){
+            var ipt=$(this).siblings(":text");
+            var li=$(this).closest("li");
+            var t=kendo.template($("#bis_itemTemplate").html());
+            li.closest(".basicInfoSetup_items").siblings(".bis_add").css("visibility","visible");
+            if(ipt.attr("oriTxt"))
+            {
+                li.html(t({oriTxt:ipt.attr("oriTxt")})).removeClass("editing");
+            }
+            else
+            {
+                li.remove();
+            }
+        })
+        $("body").delegate(".bis_save","click",function(){
+            var ipt=$(this).siblings(":text");
+            var li=$(this).closest("li");
+            if($.trim(ipt.val()).length == 0){
+                return false;
+                //li.remove();
+            }
+            var t=kendo.template($("#bis_itemTemplate").html());
+            li.html(t({oriTxt:ipt.val()})).removeClass("editing");
+            li.closest(".basicInfoSetup_items").siblings(".bis_add").css("visibility","visible");
+        })
+        $("body").delegate(".bis_del","click",function(){
+            var li=$(this).closest("li");
+            li.remove();
+        })
+        $("body").delegate(".ul_policyType li","click",function(){
+            $(this).addClass("current").siblings().removeClass("current");
+            $(this).closest("ul").siblings(".policyTypeLiBG").animate({left:$(this).position().left+1},"fast");
+            var pc=$(this).closest(".policyTypeHead").siblings(".PolicyContainer");
+            pc.eq($(this).index()).show().siblings(".PolicyContainer").hide();
+        })
+        $("body").delegate("i.switchButton","click",function(){
+            $(this).toggleClass("on");
+            $(this).next("span").toggleClass("switchButtonOn");
+        })
+        $("body").delegate(".policyLeftMenu li:not('.li_policyNewButton')","click",function(){
+            $(this).addClass("current").siblings().removeClass("current");
+            var classStr="policyLevel"+$(this).index();
+            var oriClassStr=$(".policyRightPanel>div").attr("class");
+            $(".policyRightPanel>div").attr("class",oriClassStr.replace(/policyLevel\d/,classStr));
+        })
+        $(".ul_policyType li:first").trigger("click");
+
+        new PopWindow('.policyLeftMenu_clearButton',{
+            title:'提示',
+            width:'500',
+            isPropagationStopped:true
+        },"#policyLeftMenuItemClearPromptTemplate").init();
+
+        new PopWindow('.btn_policyItemSave',{
+            title:'提示',
+            width:'500',
+            isPropagationStopped:true
+        },"#policyItemSavePromptTemplate").init();
+
+        $(".li_policyNewButton").click(function(){
+            var policyLeftMenuItemNum=$(".policyLeftMenu li").length-2;
+            var t=kendo.template($("#policyLeftMenuItemTemplate").html());
+            $(".policyLeftMenu li:last").before(t({name:"级别"+policyLevel_txt[policyLeftMenuItemNum]}));
+            if(policyLeftMenuItemNum==6)
+            {
+                $(this).hide();
+            }
+        })
+
+        $("body").delegate(".btn_popWinClose","click",function(){
+            $(this).closest(".k-window").find(".k-i-close").trigger("click");
+            return false;
+        })
+    })
+
+    function clearPolicyData(){
+        $(".PolicyContainer :text").each(function(){
+            $(this).val("");
+        })
+        $(".PolicyContainer :radio,.PolicyContainer :checkbox").each(function(){
+            $(this).prop("checked",false);
+        })
+        $(".policyLeftMenu li.current").addClass("cleared");
+    }
+
+    function savePolicyData(){
+        $(".policyLeftMenu li.current").removeClass("cleared");
+
+    }
+</script>
+</body>
+</html>
+

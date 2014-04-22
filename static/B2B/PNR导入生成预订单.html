@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>PNR导入生成预订单</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<link href="/static/css/phase1/b2b_common.css" rel="stylesheet" />
+	<!-- Common Kendo UI Web CSS -->
+	<link href="/static/css/kendo.common.css" rel="stylesheet" />
+	<link href="/static/css/kendo.default.css" rel="stylesheet" />
+	
+    </head>
+    <body>
+	
+	<div id="container">
+		<div class="top_header">
+			<h1></h1>
+			<div class="profile">
+				<span>欢迎 <a href="javascript:void(0);">吕小名</a></span>
+				<span><a href="登陆.html">退出</a></span>
+			</div>
+	    </div>
+		<div class="clear"></div>
+	    <ul id="menu">
+			<li class="k-state-selected">
+				<a href="国内机票搜索页.html">国内机票</a>
+				
+			</li>
+			<li>
+				<a href="javascript:void(0);">国际机票</a>
+			</li>
+			<li>
+				<a href="javascript:void(0);">酒店</a>
+				<ul>
+					<li><a href="国内酒店搜索页.html">国内酒店</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);">PNR操作</a>
+				<ul>
+					<li><a href="PNR导入生成预订单.html">PNR导入生成预订单</a></li>
+					<li><a href="黑屏指令粘贴生成预订单.html">黑屏指令粘贴生成预订单</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);">订单管理</a>
+				<ul>
+					<li><a href="订单列表.html">订单列表</a></li>
+					<li><a href="手工录入订单.html">手工录入订单</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);">客户管理</a>
+				<ul>
+					<li>供应商</li>
+					<li><a href="采购商.html">采购商</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);">系统管理</a>
+				<ul>
+					<li>政策管理</li>
+					<li><a href="用户管理.html">用户管理</a></li>
+					<li><a href="角色管理.html">角色管理</a></li>
+				</ul>
+			</li>
+		</ul>
+		
+
+		<div class="breadcrum"> &gt;&gt; <a href="PNR导入生成预订单.html">PNR导入生成预订单</a> </div>
+		<div class="tabstrip">
+			<ul>
+				<li class="k-state-active">
+					PNR导入
+				</li>
+				<li>
+					PNR授权
+				</li>
+			</ul>
+			<div>
+				<form name="pnrImport" action="" method="get">
+					<table>
+						<tr>
+							<td><span class="redImportant">*</span>客户名称：</td>
+							<td ><input type="text" name="customerName" value="" class="k-textbox"/></td>
+
+							<td><span class="redImportant">*</span>OFFICE号:</td>
+							<td><input  name="office" type="text" class="k-textbox" value="自动完成"></td>
+						</tr>
+
+						<tr>
+							<td><span class="redImportant">*</span>PNR：</td>
+							<td><input  name="pnr" type="text" class="k-textbox"></td>
+
+
+							<td><span class="redImportant">*</span>联系人：</td>
+							<td><input  name="contact" type="text" class="k-textbox"></td>
+						</tr>
+
+						<tr>
+							<td><span class="redImportant">*</span>建单营业点：</td>
+							<td><input  name="orderOffice" type="text" class="k-textbox"  value="自动完成"></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><div style="text-align:center;margin:20px 0"><input type="submit" class="button_main_m" name="import_submit" value="导入"/></div></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<div>
+				<form name="pnrAuth" action="" method="get">
+					<table>
+						<tr>
+							<td><span class="redImportant">*</span>OFFICE号:</td>
+							<td><input  name="office"  type="text" class="k-textbox"  value="自动完成"></td>
+						</tr>
+						<tr>
+							<td><span class="redImportant">*</span>建单营业点：</td>
+							<td><input  name="orderOffice" type="text" class="k-textbox"  value="请输入名称"></td>
+						</tr>
+
+						<tr>
+							<td><span class="redImportant">*</span>PNR：</td>
+							<td><input  name="pnr"  type="text" class="k-textbox"></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<div style="text-align:center;margin:20px 0"><input type="submit" class="button_main_m" name="auth_submit" value="授权"/></div>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			
+		</div>
+		
+	</div>
+	<!-- jQuery JavaScript -->
+	<script src="/static/js/jquery.min.js"></script>
+	<!-- Kendo UI Web combined JavaScript -->
+	<script src="/static/js/kendo.web.min.js"></script>
+	<script src="/static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+	<script src="/static/js/phase1/common.js"></script>
+	<script src="/static/js/phase1/pnr.js"></script>
+	
+    </body>
+</html>

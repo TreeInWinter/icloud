@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Javascript 日志</title>
+    
+
+    <link rel="stylesheet" type="text/css" href="/static/css/common.css" media="all" /> 
+
+    <script type="text/javascript" src="log.js"></script>
+    <style type="text/css">
+        
+        * {margin:0;padding:0;}
+        .sample {font-size:16px;border:1px solid white; width:70%; box-shadow:5px 5px; #E4E4E4; background-color:black;color:#FDBA29;padding:15px;}
+
+    </style>
+</head>
+<body>
+    <h1>日志操作</h1>
+    <div class="sample">
+        <pre>
+        <code>
+            var n1 = 15;
+            var n2 = 3.5; 
+            var n3 = "This is a test string";
+            var n4 = [10,3.0,{name:"this is name",age:20}];
+            var n5 = {name:"名称",age:20};
+
+            syslog.debug(n1); 
+            syslog.info(n2); 
+            syslog.warning(n3); 
+            syslog.error(n4); 
+
+            //不限制参数个数
+            syslog.debug(n1,n2,n3,n4); 
+
+            //字符川 debug DEBUG  不区分大小写, 建议都使用大写
+            syslog.log("DEBUG",n1);
+            syslog.log("debug",n1);
+
+            syslog.log("INFO",n3,n4);
+            syslog.log("WARNING",n6,n7);
+
+            
+            //调试小技巧,定义自己的日志关键字包裹
+            syslog.debug("==机票搜索页查询按钮==" ,n1,n2,n3,n4, "--机票搜索页查询按钮结束--"); 
+            //或者是
+            syslog.debug("==机票搜索页查询按钮=="); 
+            syslog.debug(n1,n2,n3,n4); 
+            syslog.debug("--机票搜索页查询按钮结束--"); 
+
+            //记录 异常 
+            //调用一个存在的函数
+            try {
+                not_defined_function();
+            }catch(error){
+                syslog.error(error);
+            }
+        </code>
+        </pre>
+    
+    </div>
+    <script type="text/javascript">
+            var n1 = 15;
+            var n2 = 3.5; 
+            var n3 = "This is a test string";
+            var n4 = [10,3.0,{name:"this is name",age:20}];
+            var n5 = {name:"名称",age:20};
+
+            var n6 = 'Hi N6';
+            var n7 = 'Hi N7';
+
+            syslog.debug(n1); 
+            syslog.info(n2); 
+            syslog.warning(n3); 
+            syslog.error(n4); 
+            
+            //不限制参数个数
+            syslog.debug(n1,n2,n3,n4); 
+
+            //调试小技巧,定义自己的日志关键字包裹
+            syslog.debug("==机票搜索页查询按钮==" ,n1,n2,n3,n4, "--机票搜索页查询按钮结束--"); 
+            //或者是
+            syslog.debug("==机票搜索页查询按钮=="); 
+            syslog.debug(n1,n2,n3,n4); 
+            syslog.debug("--机票搜索页查询按钮结束--"); 
+
+            //字符川 debug DEBUG  不区分大小写, 建议都使用大写
+            syslog.log("DEBUG",n1);
+            syslog.log("debug",n1);
+
+            syslog.log("INFO",n3,n4);
+            syslog.log("WARNING",n6,n7);
+
+            //记录 异常 
+            //调用一个存在的函数
+            try {
+                not_defined_function();
+            }catch(error){
+                syslog.error(error);
+            }
+    </script>
+
+</body>
+</html>

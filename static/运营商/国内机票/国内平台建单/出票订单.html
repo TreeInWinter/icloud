@@ -1,0 +1,566 @@
+<!DOCTYPE html><html><head>
+        <title>机票 国内机票 出票订单</title>
+        <meta charset="utf-8" />
+<link href="/static/css/kendo.common.css" rel="stylesheet" />
+<link href="/static/css/kendo.gray.css" rel="stylesheet" />
+<link href="/static/css/common.css" rel="stylesheet" />
+<link href="/static/css/b2b.css" rel="stylesheet" />
+<link href="/static/css/kendo.reset.css" rel="stylesheet" />
+<link href="/static/css/order.css" rel="stylesheet">
+
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/kendo.web.js"></script>
+<script type="text/javascript" src="/static/js/plugins/jquery.fixedBar.js"></script>
+<script type="text/javascript" src="/static/js/global.js"></script>
+<script type="text/javascript" src="/static/js/flight.js"></script>
+
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+<!-- @CLB@ --></head><body>  <div id="extHeader">
+        <div></div>
+    </div>
+
+    <div id="container">
+        <div class="header">
+            <h1></h1>
+            <div>
+                <span>你好,${name}</span>
+                <a href="javascript:void(0);">退出</a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="javascript:void(0);">国内机票</a></li>
+                <li><a href="javascript:void(0);">国际机票</a></li>
+                <li><a href="javascript:void(0);">酒店</a></li>
+                <li><a href="javascript:void(0);">票证中心</a></li>
+                <li><a href="javascript:void(0);">财务管理</a></li>
+                <li><a href="javascript:void(0);">客户管理</a></li>
+                <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+            </ul>
+            <ol class="sub_menu">
+                <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+                <li><a href="javascript:void(0);">公司信息</a></li>
+                <li><a href="javascript:void(0);">组织架构</a></li>
+                <li><a href="javascript:void(0);">角色维护</a></li>
+                <li><a href="javascript:void(0);">基础数据</a></li>
+            </ol>
+            <div id="message">
+            	<a href="javascript:void(0);">消息</a>
+                <span>New</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="sub_menu_bar"></div>
+        <div id="mainContent">
+<div class="actions block">
+    <div class="col col-l sep-r">
+        <button class="btns btn-return">返回</button>
+    </div>
+    <div class="col col-r sep-l">
+        <button class="btns btn-blue ac-refuse">退回</button>
+        <button class="btns btn-blue">完成出票</button>
+    </div>
+</div>
+
+<div class="block block0 clearfix">
+    <div class="col col-l">
+        <div class="row">
+            <span class="text1">订单号：<strong>12311321983921</strong></span>&nbsp;
+            <span class="text2"> - 订单类型：国内机票 </span>
+        </div>
+        <div class="row">
+            <span>最后更新：<em>航班号更改为CZ3609</em></span>&nbsp;&nbsp;<span>更新时间：<em>2013-06-15 11:23 </em></span>&nbsp;&nbsp;<span><a href="#">【更多操作日志】</a></span>
+        </div>
+    </div>
+    <div class="col col-r">
+        <ul class="flat-list">
+            <li>
+            <div class="instr clearfix">
+                <span class="">创建</span>
+                <span class="">审核</span>
+                <span class="">支付</span>
+                <span class="highlight-fl">出票</span>
+                <span>派送</span>
+                <span>完成</span>
+                <span>取消</span>
+            </div> 
+            </li>
+            <li>
+            <div class="instr clearfix">
+                <span>收款</span>
+                <span>结算</span>
+            </div>
+            </li>
+            <li class="count"><span>附属订单</span><strong>3</strong>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- 订单信息 -->
+<div class="block block1 block-module">
+    <div class="block-title">订单信息</div>
+    <ul class="flat-list">
+        <li>
+        <label class="vertical-head">客户名称</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">结算方式</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">可用余额</label>
+        <span><strong style="color:#FF6608;">222.00</strong>元</span>
+        </li>
+        <li>
+        <label class="vertical-head">操作员</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">联系人</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">联系电话</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">手机号码</label>
+        <span>xxx</span>
+        </li>
+        <li>&nbsp;</li>
+        <li>
+        <label class="vertical-head">三方协议编号</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">客户订单编号</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">外部订单号</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">关联订单号</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">建单营业点</label>
+        <span>xxx</span>
+        </li>
+        <li>
+        <label class="vertical-head">出票营业点</label>
+        <span>xxx</span>
+        </li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li class="col-wide">
+        <label class="vertical-head">客户备注</label>
+        <textarea name=""></textarea>
+        </li>
+        <li class="col-wide">
+        <label style="vertical-align:top" class="vertical-head">内部备注</label>
+        <textarea name=""></textarea>
+        </li>
+    </ul>
+</div>
+
+
+<div class="block block2 block-module">
+    <div class="block-title">
+        <span class="block-title-orange">航班信息</span>
+        <span class="block-module-action">
+            <button class="btns btn-ac-blue">刷新</button> 
+        </span>
+    </div> 
+    <div class="row">
+        <div id="flight_info_grid">
+            <table class="grid-table">
+                <tr class="thead">
+                    <td>PNR</td><td>大编码</td><td>新PNR</td><td>新大编码</td><td>离港机场</td><td>到港机场</td><td>航班号</td><td>舱位</td><td>机型</td><td>离港时间</td><td>到港时间</td><td>订座</td><td>预定OFFICE</td>
+                </tr>
+                <tr>
+                    <td>JZ4W50</td>
+                    <td>MJWM9N</td>
+                    <td> <input type="text" style="width:80px" /></td>
+                    <td> <input type="text" style="width:80px" /></td>
+                    <td>PEKT3</td>
+                    <td> PVG T2 </td>
+                    <td> CZ3609 </td>
+                    <td> W </td>
+                    <td> 777 </td>
+                    <td> 2013-06-22 20:35 </td>
+                    <td> 2013-06-22 23:25 </td>
+                    <td> HK </td>
+                    <td> SHA255 </td>
+                </tr>
+                <tr>
+                    <td>JZ4W50</td>
+                    <td>MJWM9N</td>
+                    <td> <input type="text" style="width:80px" /></td>
+                    <td> <input type="text" style="width:80px" /></td>
+                    <td>PEKT3</td>
+                    <td> PVG T2 </td>
+                    <td> CZ3609 </td>
+                    <td> W </td>
+                    <td> 777 </td>
+                    <td> 2013-06-22 20:35 </td>
+                    <td> 2013-06-22 23:25 </td>
+                    <td> HK </td>
+                    <td> SHA255 </td>
+                </tr>
+            </table> 
+        </div>
+    </div>
+</div>
+
+<div class="block block3 block-module">
+    <div class="block-title"><span class="block-title-blue">报价信息</span>
+        <span class="block-module-action">
+            <button class="btns btn-ac-blue">运价重置</button> 
+        </span>
+    </div>
+    <div>
+        <div class="row">
+            <table class="grid-table">
+                <tr class="thead">
+                    <td>旅客类型</td><td>人数</td><td>运价基础</td><td>应收票款</td><td>票款</td><td>税款</td><td>返点</td><td>返款</td><td>附加费</td><td>政策编号</td>
+                </tr>
+                <tr>
+                    <td> ADT </td>
+                    <td> 2 </td>
+                    <td> RTY+RTY </td>
+                    <td> 1997.6 </td>
+                    <td> 2060 </td>
+                    <td> 320 </td>
+                    <td> 5% </td>
+                    <td> 10 </td>
+                    <td> 0.00 </td>
+                    <td> 111 </td>
+                </tr>
+            </table> 
+        </div>
+        <div class="row row2">
+            <h3>退改签规定</h3>
+            【<span>更改条件</span>】同等舱位免费更改。<br>
+            【<span>退票条件</span>】起飞前2小时（含）以外办理退票按订座舱位公布运价收取40％的退票费，2小时以内及起飞后退票按订座舱位公布运价收取50％的退票费。退票费低于50元时按50元收取。<br>
+            【<span>签转条件</span>】不得签转。<br><br>
+            <h3>政策说明</h3>
+            【<span>退改签补充规则</span>】（不管任何原因）签转到其他航空公司、跨月签转以及有政策航班改到无政策航班，需收回代理费。
+        </div>
+    </div>
+</div>
+
+<div class="block block7 block-module">
+    <div class="block-title"><span class="block-title-orange">客票信息</span>
+        <span class="block-module-action">
+            <button class="ac-btn1 btns btn-ac-blue">添加客票</button> 
+            <button class="ac-btn2 btns btn-ac-blue">复制客票</button> 
+            <button class="ac-btn3 btns btn-ac-blue">删除所选</button> 
+            <button class="ac-btn4 btns btn-ac-blue">删除未选</button> 
+            <button class="ac-btn5 btns btn-ac-blue">提取行程单</button> 
+        </span>
+    </div> 
+    <!-- <label id="save_as_frequent"> -->
+    <!--      <input type="checkbox">自动保存到长旅客  -->
+    <!-- </label> -->
+    <div class="row">
+    <div id="passenger_info_grid">
+        <table class="grid-table">
+            <colgroup>
+                <col width="24">
+                <col width="70">
+                <col width="80">
+                <col width="150">
+                <col width="70">
+                <col width="110">
+                <col width="60">
+            </colgroup>
+            
+            <thead>
+            <tr class="thead">
+                <td><input id="" class="checkall" type="checkbox" name=""></td>
+                <td>PNR</td>
+              <td>姓名</td>
+        <td>证件号码</td>
+        <td>旅客类型</td>
+        <td>票号</td>
+        <td>票序号</td>
+        <td>大客户(三方)编码</td>
+        <td>行程单号</td>
+        <td>联系电话</td>
+            </tr> 
+            </thead>
+            <tbody></tbody>
+        </table>
+        <script type="text/x-kendo-template" id="ac-kp-row-template">
+            <tr>
+                <td><input id="" data-bind="value:c1" class="checkitem" type="checkbox" name="c1"></td>
+                <td><input id="" data-bind="value:c2" type="text" name="c2"></td>
+                <td><input id="" data-bind="value:c3" type="text" name="c3"></td>
+                <td><input id="" data-bind="value:c4" type="text" name="c4"></td>
+                <td><select data-role="dropdownlist" style="width:60px;" data-bind="value:c5" name="c5">
+                    <option value="成人">成人</option>
+                    <option value="儿童">儿童</option>
+                    <option value="婴儿">婴儿</option>
+                </select></td>
+                <td><input id="" data-bind="value:c6" type="text" name="c6"></td>
+                <td><input id="" data-bind="value:c7" type="text" name="c7"></td>
+                <td><input id="" data-bind="value:c8" type="text" name="c8"></td>
+                <td><input id="" data-bind="value:c9" type="text" name="c9"></td>
+                <td><input id="" data-bind="value:c10" type="text" name="c10"></td>
+          </tr>
+        </script>
+
+        <script>
+
+$(function(){
+
+    function kp_module(settings){
+        //var template = kendo.template($(settings.template).html());
+        var wrap = $(settings.container);
+
+        var model = kendo.observable({
+            data:settings.data
+        });
+
+        function init(){
+            //var content = kendo.render(template, settings.data);
+            //wrap.html(content); 
+            wrap.attr('data-bind','source:data');
+            wrap.attr('data-template',settings.template);
+            kendo.bind(wrap,model);
+            kendo.init(wrap);
+        }
+
+        init();
+
+        return {
+            data:model.data,
+            appendRow:function(d){
+                this.data.push(d);
+                return this;
+            },
+            copyRow:function(){
+                var data = $.map(this.data.toJSON(),function(ele,index){
+                    if($(settings.container).find('tr:eq('+(index)+') input:checked').length) return ele;
+                });
+
+                this.data.push.apply(this.data,data);
+                return this;
+            },
+            removeSelected:function(){
+                var data = this.data;
+                $.each($(settings.container).find('input:checked').closest('tr'),function(){
+                    data.splice($(this).index(),1);
+                });
+                return this;
+            },
+            removeUnSelected:function(){
+                var data = this.data;
+                $.each($(settings.container).find('input:checkbox:not(:checked)').closest('tr'),function(index,ele){
+                    data.splice($(this).index(),1);
+                });
+                return this;
+            }
+        }
+    };
+
+    var kp_data = [{
+        c1:"checked",
+        c2:"HFJDD2",
+        c3:"周芳",
+        c4:"310000000000000000",
+        c5:"成人",
+        c6:"7812117773347",
+        c7:"12314",
+        c8:"12314",
+        c9:"12314",
+        c10:"13800138000"
+    },{
+        c1:"checked",
+        c2:"HFJDD2",
+        c3:"周林",
+        c4:"310000000000000000",
+        c5:"儿童",
+        c6:"7812117773347",
+        c7:"12314",
+        c8:"12314",
+        c9:"12314",
+        c10:"13800138000"
+    }];
+
+
+    var kp = kp_module({
+        data:kp_data,
+        template: 'ac-kp-row-template',
+        container:'#passenger_info_grid tbody'
+    });
+
+
+    $('.ac-btn1').on('click',function(){
+        kp.appendRow({
+            c1:"", 
+            c2:"", 
+            c3:"", 
+            c4:"", 
+            c5:"", 
+            c6:"", 
+            c7:"", 
+            c8:"", 
+            c9:"", 
+            c10:"" 
+        });
+        $('#passenger_info_grid .checkall').cbFamily('#passenger_info_grid .checkitem');
+    });
+
+    $('.ac-btn2').on('click',function(){
+        kp.copyRow();
+        $('#passenger_info_grid .checkall').cbFamily('#passenger_info_grid .checkitem');
+    });
+
+    $('.ac-btn3').on('click',function(){
+        kp.removeSelected();
+    });
+
+    $('.ac-btn4').on('click',function(){
+        kp.removeUnSelected();
+    });
+
+
+})
+
+        </script>
+    </div>
+    </div>
+</div>
+
+<div class="block block5 block-calc">
+    <div id="order_calc">
+        <ul class="flat-list">
+            <li class="first">
+            <label>
+                <span>应收合计</span> 
+                <input value="2580.00" class="input-b"> 
+            </label>
+            </li> 
+            <li>
+            <label>
+                <span>票款合计</span>
+                <input value="320.00">
+            </label>
+            </li>
+            <li>
+            <label>
+                <span>税款合计(机建/燃油)</span>
+                <input>
+            </label>
+            </li>
+            <li>
+            <label>
+                <span>附加费</span>
+                <input>
+            </label>
+            </li>
+            <li>
+            <label>
+                <span>客户返佣</span>
+                <input>
+            </label>
+            </li>
+            <li>
+            <label>
+                <span>服务费</span>
+                <input>
+            </label>
+            </li>
+        </ul> 
+    </div>
+</div>
+
+<div class="block block6 block-module">
+    <div class="block-title">配送信息</div>
+</div>
+
+<script type="text/x-kendo-template" id="ac-refuse-template">
+            <table class="cv-table cv-fixed">
+            <colgroup>
+              <col width="80">
+              <col width="330">
+            </colgroup>
+            
+                <tr>
+                    <th>退回原因：</th>
+                    <td>
+                        <div class="row">
+                        <label><input id="" data-role="ctype" data-group="d1" data-index="1" type="radio" checked name="xx"> 拒绝出票</label>
+                        </div>
+                        <div class="row">
+                        <label><input id="" data-role="ctype" data-group="d1" data-index="2" type="radio" name="xx"> 暂不能出票</label>
+                        </div>
+                        <div class="row" data-role="ctype-item" data-group="d1" data-index="2" style="display:none;">
+                        <s>
+                        <select data-role="dropdownlist" id="change_sel" style="width:80px;" name="">
+                        <option value="1">选项1</option>
+                        <option value="2">选项2</option>
+                        <option value="-1">其他</option>
+                        </select>
+                        </s>
+                        <s id="change_input" style="display:none;"><input style="width:240px;" id="" type="text" name=""></s>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                  <th>备注：</th>
+                  <td>
+                        <textarea id="" name=""></textarea>
+                  </td>
+                </tr>
+            </table>
+            <div class="row" style="text-align:right;">
+                <button class="btns button_1_2">提 交</button> 
+                <button class="btns button_2_2">取 消</button> 
+            </div>
+        </script>
+
+<script>
+$(function(){
+    $.role_ctype();
+
+    $('body').on('change','#change_sel',function(e){
+        if($(this).val()=="-1"){
+            $('#change_input').show();
+        }else{
+            $('#change_input').hide();
+        }
+    });
+
+    new PopWindow('.ac-refuse',{
+        title:'退回',
+        width:470,
+        template: '#ac-refuse-template'
+    }).init();
+}); 
+        </script>
+
+
+        </div>
+
+    </div>
+		
+    <div id="extFooter">
+        <div>
+            <p>
+                <a href="javascript:void(0);">关于我们</a>&nbsp;|
+                <a href="javascript:void(0);">微博</a>&nbsp;|
+                <a href="javascript:void(0);">服务条款</a>&nbsp;|
+                <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+            </p>
+            <p>客户服务热线:400-720-6666</p>
+        </div>
+    </div>
+</body></html>

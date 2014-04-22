@@ -1,0 +1,1334 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.hoverCont{ z-index:2; background:#eaeaea;}
+.orderBtn{ background:#d8f5f9; border:1px solid #6fccd9; padding:15px 20px;}
+.orderBtn button{ margin-right:5px; font-size:15px;}
+.orderBtn .lightRedBtn{ padding:8px 10px;}
+.lightBlueButton{ background:#77ddeb; padding:8px 10px; font-size:14px; font-weight:bold; color:#fff;}
+.lightBlueButton:hover{ background:#8ce8f4; text-decoration:none; color:#fff;}
+.k-ie7 .orderBtn .lightRedBtn,.k-ie7 .orderBtn .lightBlueButton{ padding:5px 0;}
+.queryList{ padding:10px 20px; background:#fff; border:1px solid #d2d2d2; margin:8px 0;}
+.queryList input[type=text]{ width:160px;}
+.orangeBtn{ padding:6px 20px; font-size:16px;}
+.k-ie7 .queryList .orangeBtn{ padding:4px 10px;}
+.queryList th{ color:#333333; font-weight:bold; font-size:14px;}
+.orderInfoTitle{ border:1px solid #d2d2d2; width:100%; background:#f4f4f4;}
+.k-ie7 .orderInfoTitle{ width:auto;}
+.k-ie7 .orderInfoTitle th{ padding:12px 8px 12px 9px;}
+.orderInfoTitle th{ padding:12px 10px; text-align:center; font-size:15px; color:#333333; font-weight:bold;}
+.numInfoTitle{ padding:12px 20px; background:#ffe7db; color:#666666; font-size:14px;}
+.infoListCont{ border:1px solid #d2d2d2;}
+.orderInfoList{ padding:1px; border-bottom:1px solid #d2d2d2; margin-bottom:8px; background:#fff;}
+.journeyOrderList{ margin:2px 0; width:100%;}
+.journeyOrderList td{ text-align:center; padding:7px; border-right:1px dotted #c8c8c8;}
+.journeyOrderList td div{ line-height:20px;}
+.numberInfo{ margin-left:10px; z-index:0;}
+.numberInfo li{ margin:0 0 5px 25px; width:470px; background:#f8f8f8; border:1px solid #e2e2e2; padding:10px 5px 10px 10px; text-align:left; vertical-align:middle; display:inline-block; position:relative;}
+.numberInfo li b{ font-size:15px; color:#333333; min-width:240px; display:inline-block; vertical-align:middle;}
+/*.numberInfo .shippingSpace{ position:absolute; top:32%; right:2%;}*/
+.numberInfo .shippingSpace { 
+   text-align:right;
+   vertical-align:middle;
+}
+.flightWidth { 
+   width:160px;
+   min-width:102px; 
+   display:inline-block; 
+   vertical-align:middle;
+   -o-text-overflow:ellipsis;
+   text-overflow:ellipsis;
+   overflow:hidden;
+   white-space:nowrap;
+}
+.numberInfo .shinppingInfo {
+	position:absolute;
+	top:28%;
+	right:1%;
+}
+.numberInfo i{ vertical-align:middle;}
+.numberInfo .bottomDashed{ border-bottom:1px dashed #e2e2e2; margin-bottom:0;}
+.numberInfo .topLine{ border-top:0; margin-top:0;}
+.journeyOrderList .goAndBack{ color:#bfbfbf; font-size:14px; float:left; margin:-5px 10px 0 0; height:30px;}
+.journeyOrderList .goAndBack em{ display:inline-block; vertical-align:middle; width:16px; height:7px; margin-top:-15px;}
+.journeyOrderList .goArrow{ background:url(../images/b2g/smallImg.png) no-repeat -125px -21px;}
+.journeyOrderList .backArrow{ background:url(../images/b2g/smallImg.png) no-repeat -146px -21px;}
+.journeyOrderList .fixWidth{ width:63px; display:inline-block; text-align:center;}
+.journeyOrderList .transfer{ border:1px solid #e1e1e1; font-weight:500; font-size:12px; padding:1px 5px; cursor:pointer;}
+.transferList td{ color:#666666; line-height:25px;}
+.transferList th{ padding-left:5px; color:#333333;}
+.priceFont{ font-size:16px; color:#666666;}
+.orderStates{ font-size:15px; color:#fa7e2e;}
+.journeyOrderList a{ color:#3764bd; margin-right:10px; font-size:14px;}
+.journeyOrderList a:hover{ color:#fa5a51; text-decoration:underline;}
+.journeyOrderList .orderLastA{ margin-right:0;}
+.flightImg,.hotelImg{ display:inline-block; width:22px; height:22px; position:absolute; left:-6%; top:22%;}
+.flightImg{ background:url(../images/b2g/smallImg.png) no-repeat -135px -38px;}
+.hotelImg{ background:url(../images/b2g/smallImg.png) no-repeat -176px -62px;}
+.payBtn,.placeOrderBtn,.greenSmallBtn{ margin:10px 0;}
+.payBtn .lightRedBtn,.greenSmallBtn .lightBlueBtn{ padding:5px 20px;}
+.k-ie7 .payBtn .lightRedBtn,.k-ie7 .greenSmallBtn .lightBlueBtn{ padding:3px 10px;}
+.journeyOrderList .grayFont{ color:#999999;}
+.journeyOrderList .orangeFont{ color:#fa7e2e;}
+.journeyOrderList .greenFont{ color:#00a424;}
+.journeyOrderList .lightBlueFont{ color:#03b1df;}
+.placeOrderBtn .lightBlueBtn{ padding:5px 10px;}
+.k-ie7 .placeOrderBtn .lightBlueBtn{ padding:3px 5px;}
+.halfGray{ color:#666666;}
+.journeyOrderList .minWidth div{ text-align:left; margin-left:7px;}
+.journeyOrderList .minWidth div em{ min-width:50px; display:inline-block;}
+.journeyOrderList .face,.journeyOrderList .disobey { 
+    display:inline-block; 
+	vertical-align:middle; 
+	margin-left:2px; 
+	width:16px; 
+	height:16px;
+}
+.journeyOrderList .face { 
+    background:url(../images/b2g/icon_smallTips.png) no-repeat 0 0;
+}
+.journeyOrderList .disobey { 
+    background:url(../images/b2g/icon_smallTips.png) no-repeat 0 -17px;
+}
+.journeyOrderList .checkIcon{ display:inline-block; vertical-align:middle; margin-right:5px; width:14px; height:10px; background:url(../images/store/smallPic.png) no-repeat -31px -38px;}
+.row{
+    margin-bottom:10px;
+}
+.row-icontext{
+    text-align:center;
+    font-size:16px;
+    margin-top:8px;
+    margin-bottom:25px;
+}
+.icon{
+    display:inline-block;
+    zoom:1;
+}
+.icon3{
+    vertical-align:middle;
+    background:url(../images/b2g/sprite.png) no-repeat 0 -229px;
+    width:41px;
+    height:41px;
+    margin-right:5px;
+    margin-left:-30px;
+}
+.row-btns{
+    text-align:center;
+}
+.row-btns .btns{
+    margin-right:5px;
+}
+.block-order {
+	margin:5px auto 0 auto;
+}
+.block-orderBar {
+    color:#ccc;
+    font-size:14px;
+}
+.btn-color {
+    display:inline-block;
+    text-align:center;
+    line-height:34px;
+    vertical-align:middle;
+    font-size:16px;
+	padding:0 10px;
+	min-width:100px;
+}
+.btn-color1 {
+    background-color:#3c5c7f;
+    color:#fff !important;
+}
+.btn-color1:hover{
+    text-decoration:none;
+    background-color:#426488;
+}
+.btn-color2 {
+    background-color:#01adde;
+    color:#fff !important;
+}
+.btn-color2:hover{
+    text-decoration:none;
+    background-color:#02b7ea;
+}
+
+.btns{
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    background-repeat: no-repeat;
+}
+.btn-s2{
+    display:inline-block;
+    width:120px;
+    text-align:center;
+    line-height:40px;
+    vertical-align:middle;
+    font-size:16px;
+}
+.btn-c1{
+    background-color:#f73b31;
+    color:#fff !important;
+    font-weight:bold;
+    font-size:14px;
+    text-decoration:none;
+}
+.btn-c1:hover{
+    text-decoration:none;
+    background-color:#fb5b53;
+}
+.btn-c2{
+    background-color:#77ddeb;
+    color:#fff !important;
+    font-weight:bold;
+    font-size:14px;
+}
+.btn-c2:hover{
+    text-decoration:none;
+    background-color:#8ce8f4;
+}
+.btn-c3{
+    background-color:#fb7e2e;
+    color:#fff !important;
+    font-weight:bold;
+    font-size:16px;
+    padding:5px 20px;
+}
+.btn-c5{
+    background-color:#b2b2bc;
+    color:#fff !important;
+    font-size:14px;
+    font-weight:bold;
+}
+.btn-c5:hover{
+	text-decoration:none;
+	background:#bcbcbc;
+}
+
+
+
+/*费用分摊 cost allocation*/
+.case_info {
+	clear:both;
+	margin-bottom:8px;
+}
+.case_info_cost {
+	float:left;
+	width:717px;
+}
+
+.case_infoTit {
+	border:1px solid #d2d2d2;
+	background:#f4f4f4;
+	height:48px;
+	line-height:48px;
+	padding-left:20px;
+}
+.case_infoTit h3 {
+    font-size:16px;
+	color:#333;
+}
+.case_infoCon {
+	background:#fff;
+	border-right:1px solid #c9c9c9;
+	border-bottom:1px solid #c9c9c9;
+	border-left:1px solid #c9c9c9;
+	height:240px;
+	padding:10px 0
+}
+.case_infoCon th {
+	border-bottom:1px dashed #ccc;
+	color:#333;
+	font-weight:bold;
+	font-size:14px;
+	padding:0 0 10px 0;
+}
+.case_infoCon td {
+	padding-top:8px;
+}
+.case_infoCon .tdTit {
+	
+}
+
+.case_infoCon td .infoMore{
+	background:url(../images/b2g/sprite.png) no-repeat 0 -190px; 
+	width:32px;
+	height:32px;
+	display:inline-block;
+	vertical-align:middle;
+	cursor:pointer;
+}
+.case_infoCon td .infoMore:hover{
+	background:url(../images/b2g/sprite.png) no-repeat -36px -190px; 
+}
+.case_info select{ 
+    height:30px; 
+	color:#333; 
+	border:1px solid #c7c7c7;
+    vertical-align:middle;
+}
+.case_info input[type=text]{ 
+    height:28px; 
+	line-height:28px; 
+	padding:0 7px; 
+	border:1px solid #c7c7c7;
+}
+
+
+.editInfo-add{
+	cursor:pointer;	
+	margin-left:36px;
+	display:inline-block;
+	width:50px;
+	padding:3px 5px
+}
+.editInfo-add:hover{
+	background:#e9fced;
+}
+.editInfo-add em{
+	display:none
+}
+.editInfo-add:hover em{
+	display:inline;
+	color:#333;
+}
+.editInfo-add i{
+	background:url(../images/b2g/sprite.png) no-repeat 0 -150px;
+	width:16px;
+	height:16px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-right:5px;
+}
+.editInfo-add:hover i{
+	background:#e9fced url(../images/b2g/sprite.png) no-repeat 0 -150px;
+	cursor:pointer;
+	height:16px;
+	width:16px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-right:5px;
+}
+.editInfo-del{
+	cursor:pointer;
+	margin-left:33px;
+	width:50px;
+	padding:3px 5px;
+}
+.editInfo-del:hover{
+	background:#fef2f2;
+}
+.editInfo-del em {
+	display:none;
+}
+.editInfo-del:hover em {
+	display:inline;
+	color:#333;
+}
+.editInfo-del i{
+	background:url(../images/b2g/sprite.png) no-repeat -54px -150px;
+	width:16px;
+	height:16px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-right:5px;
+}
+.editInfo-del:hover i{
+	background:#fef2f2 url(../images/b2g/sprite.png) no-repeat -72px -150px;
+	cursor:pointer;
+	height:16px;
+	width:16px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-right:5px;
+}
+.case_info_aim {
+	width:474px;
+	float:right
+}
+.case_info .remarkFont {
+	font-weight:bold;
+	font-size:14px;
+	color:#333;
+	margin:20px 0 10px 0
+}
+.case_info textarea{ 
+	padding:0 7px; 
+	border:1px solid #c7c7c7;
+}
+#destinationContainer,.destinationContainer{
+	padding:10px;
+	width:391px;
+	position: absolute;
+	top:30px;
+	left:0;
+	border:1px solid #bbb;
+	border-top: 0;
+	background-color: #ffffff;
+	display: none;
+	z-index: 1
+}
+.destinationContainer{
+    width: 245px;
+}
+.k-ie7 #destinationContainer,.k-ie7 .destinationContainer {
+   top:31px;
+   left:3px;
+}
+
+
+
+/*核对内容*/
+
+.checkJourney {
+	border:1px solid #d2d2d2;
+	/* padding:1px; */
+	clear:both;
+	float: left;
+	width: 1198px;
+	margin:8px 0;
+	color:#666;
+}
+.color_white {
+    background:#fff;
+}
+.color_gray {
+    background:#f9f9f9;
+}
+.journeyTit {
+	margin: 1px;
+	background:#ffe7db;
+	height:50px;
+	line-height:50px;
+	color:#333;
+	font-size:16px;
+	padding-left:25px;
+}
+.journeyTit .reason {
+	margin-left:20px
+}
+.airticket_info {
+	clear:both;
+	padding:20px 0 15px 0;
+	overflow:hidden;
+	border-bottom:1px dashed #ccc;
+}
+.airticket-place {
+	float:left;
+	color:#333;
+	text-align:center;
+	width:316px;
+}
+.airticket-place span{
+	color:#666;
+	display:block;
+	margin-bottom:5px;
+}
+.airticket-place span strong{
+	font-weight:bold;
+	font-size:15px;
+	color:#333;
+}
+.airticket-place em{
+	margin:0 2px;
+}
+.airplane-info {
+	float:left;
+	display:inline-block;
+	width:365px;
+}
+.planeLogo {
+	float:left;
+	display:inline-block;
+	padding:5px 10px 0 0;
+}
+
+
+
+.airplane-info span {
+	display:block;
+	margin-bottom:5px
+}
+.airplane-info i {
+	margin:0 8px 0 0;
+}
+.logo_MU, .logo_mu {
+	background: url(../images/airline_logo.png) no-repeat 0 -422px;
+	width: 28px;
+	height: 28px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.airLogo {
+	display:inline-block;
+	vertical-align:middle;
+	background:url(../images/b2g/logo.png) no-repeat 0 -30px;
+	width:32px;
+	height:32px;
+	cursor:pointer;
+}
+.airplane-info em {
+	margin-right:8px
+}
+.airplane-info .flightTime {
+	padding:0 0 0 38px
+}
+.airplane-price {
+	float:left;
+	display:inline-block;
+	width:180px;
+}
+.airplane-price span{
+	display:block;
+	margin-bottom:15px;
+}
+.airplane-price .red-price{
+	color:#f94037;
+	font-size:18px;
+}
+.airplane-number {
+	float:left;
+	display:inline-block;
+	width:100px;
+}
+.airplane-number .number{
+	font-size:30px;
+	margin:0 3px;
+}
+.ticket-state {
+	float:left;
+	display:inline-block;
+	width:110px;
+}
+.ticket-state i {
+	
+}
+.ticket-state .haveTicket {
+	background:url(../images/b2g/smallImg.png) no-repeat 0 -178px;
+	display:inline-block;
+	width:13px;
+	height:13px;
+	vertical-align:middle;
+	margin-right:8px;
+}
+.ticket-state .noTicket {
+	background:url(../images/b2g/smallImg.png) no-repeat -16px -178px;
+	vertical-align:middle;
+	margin-right:8px;
+	display:inline-block;
+	width:13px;
+	height:13px;
+}
+.commonBtn-journey { 
+     border:0; 
+	 font-size:16px; 
+	 padding:5px 20px; 
+	 vertical-align:middle; 
+	 cursor:pointer;
+}
+.k-ie7 .commonBtn-journey { 
+     padding:7px 20px;
+}
+.btn-fontsize {
+	 font-size:16px; 
+}
+.BlueBtn {
+	background:#a6f5ef; 
+	border:1px dashed #4fd2c4;
+    color:#188e81;
+	border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+	font-size:16px;
+	padding:5px 20px;
+}
+.GrayBtn {
+	background:#e6e6e6; 
+	border:1px dashed #bfbfbf;
+	color:#7e7e7e;
+	border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+	font-size:16px;
+	padding:5px 20px;
+}
+.airticket-operate {
+	float:left;
+	display:inline-block;
+	width:100px;
+	padding:10px 0 0 0;
+}
+/*乘机人信息*/
+.guest-info {
+	clear:both;
+}
+.guest-infoLeft {
+	float:left;
+	display:inline-block;
+	padding:10px 20px 10px 20px;
+	min-width:134px;
+	max-width:134px;
+	min-height:60px;
+	max-height:68px;
+}
+.k-ie7 .guest-infoLeft {
+	min-width:130px;
+	max-width:130px;
+}
+.guest-infoRight {
+	float:left;
+}
+.guestUlRow ul{
+	clear:both;
+	padding:0;
+	margin:0;
+}
+.guestUlRow li {
+	border-left:1px dashed #ccc;
+	border-bottom:1px dashed #ccc;
+	padding:10px 20px 10px 20px;
+	float:left;
+	word-wrap:break-word;
+	min-width:105px;
+	max-width:105px;
+	min-height:60px;
+	max-height:68px;
+	position:relative;
+}
+.k-ie7 .guestUlRow li {
+	min-width:106px;
+	max-width:106px;
+}
+.guestUlRow li:hover {
+	background:#dcf7fb;
+	cursor:pointer
+}
+.guestUlRow .end {
+	border-right:1px dashed #ccc;
+}
+.guest-info span {
+	display:block;
+}
+.guestUlRow .remarkBack {
+	background:#f94f46;
+	color:#fff;
+	border-radius:3px 3px 0 0;
+    -moz-border-radius:3px 3px 0 0;
+    -webkit-border-radius:3px 3px 0 0;
+	padding:0 22px;
+	min-width:100px;
+	position:absolute;
+	top:-17px;
+	left:1px;
+	text-align:center
+}
+.guestUl-last li{
+	border-bottom:none;
+}
+
+.non-policy{
+    color:#fff;
+	background:#f94f46;
+	font-size:12px;
+    vertical-align:middle;
+    margin:0 0 3px 5px;
+    padding:2px;
+    border:1px solid #f94f46;
+	border-bottom:none;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+}
+
+/*往返*/
+.goBack{ 
+    float:left;
+	margin:5px 0 0 40px; 
+	color:#bfbfbf; 
+	font-size:14px; 
+}
+.goBack em{ display:inline-block; vertical-align:middle; width:16px; height:7px;}
+.goArrow{ background:url(../images/b2g/smallImg.png) no-repeat -125px -21px;}
+.backArrow{ background:url(../images/b2g/smallImg.png) no-repeat -146px -21px;}
+
+/*免费赠送*/
+.free-send {
+    color:#00b49d;
+	font-size:12px;
+    vertical-align:middle;
+    margin:0 0 3px 5px;
+    padding:2px;
+    border:1px solid #00b49d;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+}
+
+.airticket_infoLeft {
+	float:left;	
+}
+.airticket_infoRight {
+	float:left;
+	padding:70px 0 0 0
+	
+}
+.transfTime, .transfTime2 { 
+    background:#f9f9f9; 
+	padding:2px 3px; 
+	border:1px solid #dddddd;
+	margin:0 3px;
+	color:#333;
+	cursor:pointer;
+}
+/*酒店信息*/
+.journey_hotel-info {
+	border:1px solid #d2d2d2;
+	background:#fff;
+	padding:1px;
+	clear:both;
+	overflow:hidden;
+	margin-bottom:8px;
+	color:#666;
+}
+.hotel-detail {
+	clear:both;
+	overflow:hidden;
+	padding:20px
+}
+.hotel-detail .hotelPic {
+	float:left;
+	display:inline-block;
+	width:120px;
+}
+.hotelPicBox {
+	background:#ccc;
+	width:100px;
+	height:70px;
+	position:relative;
+}
+.hotelPicBox img {
+	border:1px solid #fff;
+	position:absolute;
+	top:-3px;
+	left:-3px;
+}
+.hotel-detail .hoteTextTit {
+	float:left;
+	display:inline-block;
+	width:300px;
+}
+.hotel-detail .hoteTextTit h4{
+	font-size:20px;
+	color:#222;
+	margin-bottom:10px;
+}
+.hotel-detail .hoteText {
+	float:left;
+	display:inline-block;
+	width:425px;
+	padding:5px 0 0 0
+
+}
+.hotel-detail .hoteText span {
+	display:block;
+	margin-bottom:10px
+}
+.hotel-detail .room-number {
+	float:left;
+	display:inline-block;
+}
+.room-number .number{
+	font-size:30px;
+	margin:0 3px;
+}
+.room-detail-item {
+	border-top:1px dashed #ccc;
+	padding:8px 0 8px 20px;
+	overflow:hidden;
+	clear:both;
+}
+.mark-room {
+	text-align:center
+}
+.mark-room .haveroom {
+	background:#a6f5ef;
+	border:1px dashed #4fd2c4;
+	color:#188e81;
+	font-size:16px;
+	border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+	padding:3px 10px;
+	width:70px;
+}
+.mark-room .haveroom i {
+	background:url(../images/b2g/smallImg.png) no-repeat -35px -178px;
+	width:11px;
+	height:15px;
+	vertical-align:middle;
+	display:inline-block;
+	margin-right:5px;
+}
+.mark-room .noroom {
+	background:#e6e6e6;
+	border:1px dashed #bebebe;
+	color:#7e7e7e;
+	font-size:16px;
+	border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+	padding:3px 10px;
+	width:70px;	
+}
+.mark-room .noroom i {
+	background:url(../images/b2g/smallImg.png) no-repeat -51px -178px;
+	width:11px;
+	height:15px;
+	vertical-align:middle;
+	display:inline-block;
+	margin-right:5px;
+}
+.room-detail-item .tdFirst {
+	color:#333;
+	font-size:14px;
+}
+.room-detail-item .red-price {
+	color:#f94037;
+	font-size:20px;
+}
+.room-detail-item span {
+	display:block;
+	margin-bottom:3px;
+}
+.room-detail-item em{
+    padding-left: 5px;
+}
+.room-detail-item em.inconformity{
+    background: #FFE7E5;
+    color:#353535;
+}
+.room-detail-item .inconformity i{
+    display: inline;
+    background: #F94F45;
+    color:#ffffff;
+    padding:0 5px;
+    margin-left: 5px;
+}
+.room-detail-item span i{
+    display: none;
+}
+/*个人信息*/
+.personalBox {
+	min-width:250px;
+	max-width:300px;
+	overflow:hidden;
+	color:#333;
+}
+.personalBox-left {
+	float:left;
+	margin-right:10px
+}
+.personalBox-left p {
+	padding-bottom:5px
+}
+.personalBox-right {
+	float:right;
+}
+.picarea span {
+	background:transparent
+}
+.picarea .boyPic {
+	background:url(../images/b2g/customerPic.png) no-repeat 0 0;
+	width:62px;
+	height:62px;
+	display:inline-block;
+	vertical-align:middle;
+}
+.picarea .girlPic {
+	background:url(../images/b2g/customerPic.png) no-repeat 0 -66px;
+	width:62px;
+	height:62px;
+	display:inline-block;
+	vertical-align:middle;
+}
+.ac-floatlayer{
+    font-size:12px;
+	border:1px solid #5ba5ed;
+	padding:10px 20px 5px 20px;
+	background:#fffbe8;
+}
+.k-ie6 .ac-floatlayer,
+.k-ie7 .ac-floatlayer,
+.k-ie8 .ac-floatlayer{
+    background-color:#fffbe8;
+}
+/*固定底部层*/
+.totalPrice {
+	filter:progid:DXImageTransform.Microsoft.Gradient(startColorstr=#CC454545,endColorstr=#CC454545);
+    background:rgba(69,69,69,0.9);
+    padding:10px 0;
+    margin:0 auto;
+	min-height:60px;
+	width:100%;
+	position:absolute;
+}
+.totalPriceBar {
+	width:1100px;
+	font-size:14px;
+	margin:0 auto;
+	overflow:hidden
+}
+.totalPriceLeft {
+	float:left;
+	color:#fff;	
+}
+.totalPriceLeft span{
+	display:block;
+	margin-bottom:5px;
+}
+.totalPriceLeft .redFont{
+	color:#f94037
+}
+.totalPriceLeft .redPrice{
+	color:#f94037;
+	font-size:24px;
+	font-weight:bold;
+}
+.totalPriceRight {
+	float:right;
+	padding-top:15px;
+}
+.bottonFont {
+	font-size:16px;
+}
+.fontBtn {
+	color:#333
+}
+.abolishBtn {
+	background:#e8e8e8;
+	color:#333;
+}
+.abolishBtn:hover {
+	background:#fff;
+}
+.closeIcon {
+	cursor:pointer;
+	font-size:16px;
+	color:#fff;
+	font-weight:bold;
+	text-decoration:underline;
+}
+
+
+/*部门组织架构树*/
+.orgchartDiv p{
+	padding:5px 0 5px 60px;
+}
+.orgchartDiv label{
+	font-weight:bold;
+	color:#333;
+	font-size:14px;
+}
+/*订单详情*/
+.orderBrief td {
+	border-bottom:1px dashed #ccc;
+	padding:12px 0;
+	font-size:14px;
+	color:#333;
+}
+.orderBrief .tdNoborder {
+	border-bottom:none;
+}
+.orderBrief .tdFirst {
+	padding:5px 0 5px 30px;
+}
+.orderBrief .pricefont {
+	font-size:18px;
+}
+.orderBrief .timefont {
+	color:#666;
+}
+.orderBrief .orgfont {
+	color:#fa7e2e;
+	font-size:16px;
+	font-weight:bold;
+}
+.orderBrief .font16 {
+	font-size:16px;
+}
+.orderBrief .grayfont {
+	color:#a6a3a3
+}
+.tipsItem {
+	
+}
+.tipsBar {
+	border:1px solid #ddd2a0;
+	clear:both;
+	overflow:hidden;
+	color:#ff6500;
+	background:#fffbe8;
+	font-size:14px;
+	padding:15px 20px;
+	position:relative;
+}
+.tipsBar em{
+	position:absolute;
+	right:20px;
+	top:20px;
+	color:#999;
+	font-size:12px;
+	text-decoration:underline;
+	display:none;
+	cursor:pointer;
+}
+.tipsBar:hover em{
+	display:inline;
+}
+.suborderTit {
+	background:#f4f4f4;
+	height:50px;
+	line-height:50px;
+	color:#333;
+	font-size:16px;
+	padding:0 25px;
+	border-bottom:1px solid #d2d2d2;
+}
+.suborderTit .wait, .waitApprove {
+	color:#666;
+	font-size:14px;
+	float:right;
+}
+.waitApprove b {
+	color:#333;
+	cursor:pointer;
+	margin:0 4px;
+}
+.suborderTit .waitApprove b:hover {
+	color:#3764bd;
+	cursor:pointer;
+}
+.waitApprove strong {
+	color:#333;
+	margin:0 4px;
+}
+.suborderTit .wait b{
+	margin:0 5px;
+}
+.suborderTit .phoneIcon {
+	background:url(../images/b2g/smallImg.png) no-repeat -117px -176px;
+	width:22px;
+	height:21px;
+	display:inline-block;
+	vertical-align:middle;
+	margin:0 5px 0 35px;
+}
+.suborderTit .phoneNumber {
+	font-size:14px;
+}
+/*订单跟踪*/
+.orderTracking {
+	padding:20px 25px;
+	height:30px;
+	border-bottom:1px solid #d2d2d2;
+	overflow:hidden;
+	position:relative;
+}
+.trackingFlow {
+	float:left;
+}
+.trackingFlow li{
+	float:left;
+	position:relative;
+}
+.trackingFlow li span {
+	display:block;
+	position:absolute;
+	top:22px;
+	left:-3px;
+	width:100px;
+	color:#999;
+	font-size:14px;
+}
+.trackingFlow .liFirst {
+	display:block;
+	position:absolute;
+	top:25px;
+	left:-10px;
+	width:100px;
+	color:#999;
+}
+.trackingFlow li .font-abnormal {
+	color:#f94f46;
+}
+.trackingFlow li .font-normal {
+	color:#11a838;
+}
+.trackingFlow li .font-unhappen {
+	color:#999999;
+}
+.returnReason {
+	border:1px solid #ed885b;
+	background:#fffbe8;
+	font-size:14px;
+	padding:5px 10px;
+	color:#666;
+	float:left;
+	max-width:593px;
+	margin-left:25px;
+	margin-top:-10px;
+}
+.returnReason b {
+	color:#333;
+}
+.trackingFlow .flow-unhappen {
+	background:url(../images/b2g/smallImg.png) no-repeat -67px -177px;
+	width:22px;
+	height:22px;
+	display:inline-block;
+	vertical-align:middle;
+}
+.trackingFlow .flow-normal {
+	background:url(../images/b2g/smallImg.png) no-repeat -160px -177px;
+	width:22px;
+	height:22px;
+	display:inline-block;
+	vertical-align:middle;
+}
+.trackingFlow .flow-abnormal {
+	background:url(../images/b2g/smallImg.png) no-repeat -92px -177px;
+	width:22px;
+	height:22px;
+	display:inline-block;
+	vertical-align:middle;
+}
+.trackingFlow .bgborder {
+	height:6px;
+	background:#e7e7e7;
+	width:124px;
+	display:inline-block;
+	vertical-align:middle;
+	margin:7px 0 0 0;
+}
+.trackingFlow .all-border, .trackingFlow .half-border {
+	background:#b9f0c8;
+	width:124px;
+	height:6px;
+	display:inline-block;
+	position:absolute;
+	top:0;
+}
+.trackingFlow .half-border {
+	width:62px;
+}
+.trackingBtn {
+	float:right;
+	cursor:pointer;
+}
+.trackingMark {
+	position:absolute;
+	right:25px;
+	bottom:24px;
+}
+.colorMark {
+	font-size:16px;
+	font-weight:bold;
+	padding:10px 20px;
+	min-width:100px;
+}
+.orangeMark {
+	background:#fff3f2;
+	border:1px solid #ffc8c5;
+	color:#e34e46;
+}
+.greenMark {
+	background:#dffde7;
+	border:1px solid #62e47f;
+	color:#11a838;
+}
+.blueMark {
+	background:#e8fbff;
+	border:1px solid #74e1f0;
+	color:#03b1df;
+}
+.orangeMark .qxicon{
+	background:url(../images/b2g/icon_sprite.png) no-repeat 0 0;
+	width:18px;
+	height:18px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-right:8px;
+	margin-top:-2px;
+}
+.blueMark .tgicon{
+	background:url(../images/b2g/icon_sprite.png) no-repeat -20px -19px;
+	width:18px;
+	height:18px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-right:8px;
+	margin-top:-2px;
+}
+.trackingBtn-unfold i{
+	background:url(../images/b2g/smallImg.png) no-repeat -21px 0;
+	width:11px;
+	height:11px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-left:5px;
+}
+.trackingBtn-fold i{
+	background:url(../images/b2g/smallImg.png) no-repeat -37px 0;
+	width:11px;
+	height:11px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-left:5px;	
+}
+.trackingBtn em {
+	color:#3764bd;
+	font-size:14px;
+	text-decoration:underline
+}
+
+.flowDetail {
+	border:1px solid #5ba5ed;
+	background:#fffbe8;
+	padding:20px 30px;
+}
+.flowDetail th {
+	padding:0 0 10px 0;
+}
+.flowDetail td {
+	padding:0 0 8px 0;
+}
+.flowDetail th {
+	font-size:14px;
+	color:#333;
+}
+
+.redFont{ color:#ff0000;}
+.remarkTitle{ color:#333333; font-size:14px; font-weight:bold;}
+.remContent{ margin:10px 0 20px;}
+.remContent textarea{ width:400px; height:60px; padding:5px; margin-right:10px; color:#666666; overflow:auto; font-size:12px;}
+
+
+.moreAirCon td { 
+    padding:3px; 
+	color:#333333;
+}
+.moreAirCon td code { 
+   display:inline-block; 
+   width:16px; 
+   height:16px; 
+   vertical-align:middle; 
+   background:url(../images/pic_flightslogo.png) no-repeat 0 -720px;
+}
+
+.lineWeight .k-tooltip-content{ min-height:20px !important;}
+
+.airticket-place .transfer { 
+   border:1px solid #e1e1e1; 
+   font-weight:500; 
+   font-size:12px; 
+   padding:1px 5px; 
+   cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+
+/*客票信息*/
+.uc-ticket{
+	text-indent: 17px;
+	width: 100px;
+	display: inline-block;
+	color: #666;
+	margin-left: 30px;
+	position:relative;
+	cursor:pointer;
+}
+.uc-ticket .icon{
+	vertical-align: middle;
+	height: 6px;
+	width: 11px;
+	background: url(../images/b2g/select_gray.png) no-repeat;
+}
+.ticket-active  .icon{
+	background-position: 0 -26px;
+}
+.ticket-active .uc-ticket-detail{
+	display:block;
+}
+.uc-ticket-detail{
+	line-height: 24px;
+	font-size: 12px;
+	display: none;
+	z-index: 2;
+	top: 40px;
+	text-indent: 0;
+	cursor: auto;
+	background-color: #fffbe8;
+	position:absolute;
+	border: 1px solid #66aaed;
+}
+.uc-ticket-item{
+	/* width: 696px; */
+	/* white-space: nowrap; */
+	border-bottom: 1px dotted #c8c8c8;
+}
+.uc-ticket-item:nth-last-child(1){
+	border-bottom: 0;
+}
+
+.uc-ticket-item s{
+    width: 125px;
+    white-space: nowrap;
+    /* padding: 5px 10px; */
+    /* border-right: 1px dotted #c8c8c8; */
+    display: inline-block;
+    color: #666;
+}
+.uc-ticket-item u{
+    white-space: nowrap;
+    /* padding: 5px 10px; */
+    color: #999;
+	margin-right:10px;
+}
+.uc-ticket-item em{
+    color: #333;
+}
+.uc-ticket-detail i{
+	position:absolute;
+	display:block;
+	left:50%;
+	top:-7px;
+	height:8px;
+	width:100px;
+	margin-left:-50px;
+    background:url(../images/b2g/arrow3.png) center 0 no-repeat;
+}
+.uc-ticket-item u:nth-child(3n+1){
+	/* border-left:1px dotted #d8d8d8; */
+	/* margin-left: 145px; */
+}
+.uc-ticket-item td{
+	border-right: 1px dotted #c8c8c8;
+	padding:5px 10px;
+}
+.uc-ticket-item td:nth-last-child(1){
+	border-right:0;
+}
+.uc-ticket-item div{
+	white-space:nowrap;
+}
+.uc-ticket b{
+	font-weight:normal;
+}

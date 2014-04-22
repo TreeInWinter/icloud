@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+ <link rel="stylesheet" href="/static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="/static/css/store_reset.css" />
+    <link rel="stylesheet" href="/static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="/static/css/kendo.store.css" />
+    <link rel="stylesheet" href="/static/css/toolkit.css" />
+        <link rel="stylesheet" href="/static/css/tmp/querytab.css">
+
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="/static/js/global.js"></script>
+
+<script src="http://static.travelzensh.com/js/jquery-ui-1.10.3.custom.js?v=1335173"></script>
+
+<!--[if IE]>
+<script src="../static/js/html5.js"></script>
+<![endif]-->
+
+    </head>
+    <body>
+        <section class="querytab querytab-hotel">
+            <div class="querytab-wrapper col clearfix">
+            <aside class="querytab-controller">
+            <ul>
+                <li><b data-role="ctype" data-index="1" data-group="qtab" class="current">国内酒店</b></li>
+                <li><b data-role="ctype" data-index="2" data-group="qtab">国际酒店</b></li>
+            </ul>
+            </aside>
+            <div class="querytab-content col">
+                <div class="querytab-hotel-content" data-role="ctype-item" data-index="1" data-group="qtab">
+                    <h3>国内 预付酒店</h3>
+                    <span class="text1" style="" data-role="ctype-item" data-group="trip_type" data-index="c2"> 团队单请咨询：<b class="tel">400-720-6666</b></span>
+                        <ul>
+                            <li>
+                                <table class="default_search">
+                                     <colgroup>
+                                         <col class="col1">
+                                         <col class="col2">
+                                         <col class="col3">
+                                         <col class="col4">
+                                    </colgroup>
+                                    <tr>
+                                        <th>出发城市</th>
+                                        <td><input class="city_ac" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>入住日期</th>
+                                        <td><input class="startDate" type="text"></td>
+                                        <th>离店日期</th>
+                                        <td><input class="endDate" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>预定间数</th>
+                                        <td>
+                                            <select data-role="dropdownlist" style="width:152px;">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                </select>
+                                        </td>
+                                    </tr>
+                                    </table>
+                            </li>
+                            <li>
+                            <h4 class="underline-title"><span><i class="icon icon-arrows"></i>高级搜索</span></h4>
+                            <table class="hotel_advanced_search">
+                                <colgroup>
+                                    <col class="col1">
+                                    <col class="col2">
+                                    <col class="col3">
+                                    <col class="col4">
+                                    </colgroup>
+                                <tr>
+                                    <th>关键字</th>
+                                    <td>
+                                        <input type="text" placeholder="酒店名称，商圈，地标">
+                                    </td>
+                                    <th>酒店星级</th>
+                                    <td>
+                                        <select style="width:152px;" data-role="dropdownlist">
+                                            <option>全部</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                            </li>
+                        </ul>
+
+                            <div class="btn_area">
+                                <button type="button" class="btn btn-c1 btn-s1">搜  索</button>
+                            </div>
+                </div>
+
+            </div>
+            </div>
+        </section>
+
+<script type="text/x-kendo-template" id="city_popup">
+<div id="gn-tabstrip" class="tcy_tabstrip">
+<span class="tcy_title">
+    热门城市/国家（支持中文名/拼音/英文名/三字码）
+</span>
+<ul>
+<li id="hot_city" class="k-state-active">热门</li>
+# for (var i=0; i<data.group.length; i++ ) { #
+<li>#= data.group[i] #</li>
+# } #
+</ul>
+<div id="hot_city_tab">
+<ul class="tcy_list clearfix">
+
+# for(var j=0;j<hotcitylist.length;j++){ #
+# var citylist_item = hotcitylist[j] #
+<li class="item" title="#= citylist_item.code #" data-code="#= citylist_item.code #">#= citylist_item.name #</li>
+# } #
+</ul>
+</div>
+
+# for(var i=0;i<data.citylist.length;i++){ #
+# var citylist_item = data.citylist[i] #
+<div class="city_tab">
+<ul class="tcy_list clearfix">
+  # for(var k=0;k<data.group[i].length;k++){ #
+    <li class="tcy_list_sep">#= data.group[i].split('')[k] #</li>
+    # for(var j=0;j<citylist_item.value.length;j++){ #
+        # var citylist_value_item = citylist_item.value[j]; #
+        # if(citylist_value_item.py.slice(0,1) == data.group[i].split('')[k]) {#
+            <li class="item" title="#= citylist_value_item.code #" data-code="#= citylist_value_item.code #">#= citylist_value_item.name #</li>
+        # } #
+    # } #
+  # } #
+</ul>
+</div>
+
+# } #
+</div>
+</script>
+<script>
+    $(function(){
+        $.role_ctype();
+        kendo.init('body');
+        $('.startDate').datepicker({
+            minDate :new Date(),
+            numberOfMonths:[1,2],
+            showDay:true,
+            onSelect:function(dateText,inst){
+                console.log(inst.selectedDay);
+                var date = new Date(inst.selectedYear,inst.selectedMonth,parseInt(inst.selectedDay)+1);
+                $(".endDate").datepicker( "option", "minDate", date);
+                $(".endDate").datepicker( "setDate", dateText);
+            }
+        });
+        $('.endDate').datepicker({
+            minDate:tomorrow(),
+            numberOfMonths:[1,2],
+            showDay:true
+        });
+
+        function tomorrow(){
+            var today = new Date();
+            return today.setDate(today.getDate()+1);
+        }
+        $('.startDate').datepicker('setDate',new Date());
+        $('.endDate').datepicker('setDate',tomorrow());
+
+
+    function createCityAc(ele){
+        CityAutocomplete({
+            template: "#city_popup",
+            input: ele,
+            width: 200,
+            // autocomplete:{
+            //     dataSource:{
+            //         transport:{
+            //             read:{
+
+            //             }
+            //         }
+            //     },
+            //     placeholder:'三字吗/城市'
+            // },
+            // 以@分割热门非热门，以;分割条目，以|分割三字码拼音和中文
+            url:'/static/js/data.txt',
+            group: ["热门","GHJ", "ABCDEF", "KLMN", "PQSTW", "XYZ"]
+        });
+    }
+
+    createCityAc(".city_ac");
+
+    })
+    </script>
+
+
+    </body>
+</html>

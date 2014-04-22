@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 用户中心 保险创建订单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+     
+    <link href="../../static/css/coin-slider-styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_flight.css" media="screen" />
+    
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+	<link rel="stylesheet" href="../../static/css/kendo.store.css" />
+    <link rel="stylesheet" href="../../static/css/store_insurance.css"/>
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+	<script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>    
+
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    
+    <script type="text/javascript" src="../../static/js/store/store.js"></script>
+</head>
+<body>
+
+<div class="main-wrapper">
+<header class="main-header">
+    <a class="logo" href="/"><h1>天地行</h1></a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first active"><a herf="#">首页</a></li>
+            <li><a herf="#">国内机票</a></li>
+            <li><a herf="#">国际机票</a></li>
+            <li><a herf="#">酒店</a></li>
+        </ul> 
+    </nav>
+    <nav class="main-links">
+        <ul class="clearfix">
+            <li class="first"><a href="#">订单管理</a></li>
+            <li><a href="#">分销管理</a></li>
+            <li><a href="#">电子钱包</a></li>
+            <li><a href="#">统计报表</a></li>
+            <li><a href="#">客服服务</a></li>
+            <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+            <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+</header>
+<section class="main-body clearfix">    
+        
+    <div class="order">  <!--order start-->
+         <div class="orTitle clearfix">
+              <a href="javascript:void(0);"> <em>&nbsp;</em> 返回</a>
+              <ul class="upProcess">
+                  <li class="currentFlow">
+                      <i class="hightlight">1</i> <b>创建订单</b> <em>&nbsp;</em>
+                  </li>
+                  <li>
+                      <i class="normal">2</i> <b>支付</b> <em>&nbsp;</em>
+                  </li>
+                  <li>
+                      <i>3</i> <b>投保</b> <em>&nbsp;</em>
+                  </li>
+              </ul>
+         </div>
+         <div class="order_trace clearfix" style="padding: 0 10px">
+             <div class="chief clearfix"> <h3 class="chiefTit">航班信息</h3> </div>
+             <table cellpadding="0" cellspacing="0" class="route">
+                 <colgroup>
+                     <col width="160px"/>
+                     <col width="150px"/>
+                     <col width="100px"/>
+                     <col width="80px"/>
+                     <col width="110px"/>
+                     <col width="90px"/>
+                     <col width="100px"/>
+                     <col width="80px"/>
+                 </colgroup>
+                 <thead>
+                 <tr>
+                     <th>保险产品名称</th>
+                     <th>保险公司名称</th>
+                     <th>险种类型</th>
+                     <th>保险期限</th>
+                     <th>最高保额</th>
+                     <th>适用范围</th>
+                     <th>保险编号</th>
+                     <th>面价</th>
+                     <th>保险费用</th>
+                 </tr>
+                 </thead>
+                 <tbody>
+                 <tr>
+                     <td><i class="insuranceICO_taikang">泰康电子保险</i></td>
+                     <td>泰康保险</td>
+                     <td>航空意外险</td>
+                     <td>7天</td>
+                     <td>￥200,000</td>
+                     <td>国内机票</td>
+                     <td>10101242</td>
+                     <td>￥20.00</td>
+                     <td class="orangeMoney">￥4.00</td>
+                 </tr>
+                 </tbody>
+             </table>
+
+         </div>       
+    </div>
+    
+    <div class="departure">
+        <div class="chief clearfix"> <h3 class="chiefTit">保险生效日期</h3></div>
+        <div class="effectiveDateOfInsuranceContainer">
+            <input class="datepicker" type="text" name="" id=""/>
+            <span style="padding-left: 10px">0时起 至 24时止</span>
+        </div>        
+     </div>
+
+    <div class="departure">
+        <div class="chief clearfix"> <h3 class="chiefTit">投保人信息</h3> <span class="toolTip_info">什么是投保人？</span></div>
+        <div class="applicantInfo">
+            <table class="tbl_comm">
+                <tr>
+                    <td><i class="important">*</i>姓名：</td>
+                    <td><input type="text" name="" id="applicantName"/></td>
+                    <td><i class="important">*</i>性别：</td>
+                    <td><select name="" id="applicantGender" data-role="dropdownlist"><option>男</option><option>女</option></select></td>
+                </tr>
+                <tr>
+                    <td><i class="important">*</i>证件类型：</td>
+                    <td><select name="" id="applicantIDType" data-role="dropdownlist"><option>身份证</option></select></td>
+                    <td><i class="important">*</i>证件号码：</td>
+                    <td><input type="text" name="" id="applicantIDNum"/></td>
+                </tr>
+                <tr>
+                    <td><i class="important">*</i>出生日期：</td>
+                    <td><input type="text" name="" id="applicantBirthday" class="datepicker"/></td>
+                    <td><i class="important">*</i>手机号码：</td>
+                    <td><input type="text" name="" id="applicantCellphoneNum"/></td>
+                </tr>
+            </table>
+        </div>
+     </div>
+
+    <div class="departure">
+        <div class="chief clearfix"> <h3 class="chiefTit">被保险人信息</h3> <span class="toolTip_info">什么是被保险人？</span></div>
+        <div class="insurantInfo">
+            <label style="height: 40px;display: inline-block;line-height: 40px"><input type="checkbox" name="" id="copyapplicantInfo"/>同投保人</label>
+            <a href="javascript:;" class="btn_addApplicantInfo">新增</a>
+            <table class="tbl_comm">
+                <tr>
+                    <td><i class="important">*</i>姓名：</td>
+                    <td><input type="text" name="insurantName" id=""/></td>
+                    <td><i class="important">*</i>性别：</td>
+                    <td><select name="insurantGender" id="" data-role="dropdownlist"><option>男</option><option>女</option></select></td>
+                </tr>
+                <tr>
+                    <td><i class="important">*</i>证件类型：</td>
+                    <td><select name="insurantIDType" id="" data-role="dropdownlist"><option>身份证</option></select></td>
+                    <td><i class="important">*</i>证件号码：</td>
+                    <td><input type="text" name="insurantIDNum" id=""/></td>
+                </tr>
+                <tr>
+                    <td><i class="important">*</i>出生日期：</td>
+                    <td><input type="text" name="insurantBirthday" id="" class="datepicker"/></td>
+                    <td><i class="important">*</i>手机号码：</td>
+                    <td><input type="text" name="insurantCellphoneNum" id=""/></td>
+                </tr>
+                <tr>
+                    <td><i class="important">*</i>保险数量：</td>
+                    <td><select name="" id="" data-role="dropdownlist"><option>1</option></select></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+     </div>
+
+    <div class="departure">
+        <div class="beneficiaryContainer">
+            <strong style="font-weight: bold">受益人：</strong><span>法定</span>
+        </div>
+    </div>
+
+    <div class="departure" id="ac">
+        <div class="chief clearfix"> <h3 class="chiefTit">结算信息</h3></div>
+        <div class="acTotal" style="margin:10px 0">
+            保险数量2份 &nbsp; x &nbsp; 保险费用 ￥4/份 &nbsp; = &nbsp; <em>合计费用</em> <strong class="orangeMoney">￥566</strong>
+            <a class="adaptiveButton brightRed_btn ac_intiback">
+                <span class="left"></span>
+                <span class="center" style="padding:0 15px;">提交订单</span>
+                <span class="right"></span>
+            </a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <script type="text/html" id="insurantInfoTemplate">
+        <div class="newInsurantInfoContainer">
+            <a href="javascript:;" class="btn_delApplicantInfo">删除</a>
+            <table class="tbl_comm">
+                <tr>
+                    <td><i class="important">*</i>姓名：</td>
+                    <td><input type="text" name="" id=""/></td>
+                    <td><i class="important">*</i>性别：</td>
+                    <td><select name="" id="" data-role="dropdownlist"><option>男</option><option>女</option></select></td>
+                </tr>
+                <tr>
+                    <td><i class="important">*</i>证件类型：</td>
+                    <td><select name="" id="" data-role="dropdownlist"><option>身份证</option></select></td>
+                    <td><i class="important">*</i>证件号码：</td>
+                    <td><input type="text" name="" id=""/></td>
+                </tr>
+                <tr>
+                    <td><i class="important">*</i>出生日期：</td>
+                    <td><input type="text" name="" id="" class="datepicker"/></td>
+                    <td><i class="important">*</i>手机号码：</td>
+                    <td><input type="text" name="" id=""/></td>
+                </tr>
+                <tr>
+                    <td><i class="important">*</i>保险数量：</td>
+                    <td><select name="" id="" data-role="dropdownlist"><option>1</option></select></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </script>
+
+
+
+</section>
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+
+</body>
+</html>
+
+
+ <script type="text/javascript">
+	$(function(){
+        $("body").delegate(".btn_addApplicantInfo","click",function(){
+            $(".insurantInfo").append($("#insurantInfoTemplate").html());
+            kendo.init($("body"));
+        })
+        $("body").delegate(".btn_delApplicantInfo","click",function(){
+            $(this).closest(".newInsurantInfoContainer").remove();
+        });
+        $(".toolTip_info").kendoTooltip({
+            content:'<div class="message_ct gn-tip-div" style="display: block">'+
+                '<div class="arrow arrow_north"></div>'+
+                '<div class="message_text">'+
+                '这是一段文字这是一段文字这是一段文字这是一段文字'+
+                '</div>'+
+                '</div>',
+            offsetY:-10
+        })
+        $("#copyapplicantInfo").change(function(){
+            if($(this).prop("checked"))
+            {
+                $(".insurantInfo input[name=insurantName]:first").val($("#applicantName").val());
+                $(".insurantInfo select[name=insurantGender]:first").data("kendoDropDownList").select($("#applicantGender").data("kendoDropDownList").select());
+                $(".insurantInfo select[name=insurantIDType]:first").data("kendoDropDownList").select($("#applicantIDType").data("kendoDropDownList").select());
+                $(".insurantInfo input[name=insurantIDNum]:first").val($("#applicantIDNum").val());
+                $(".insurantInfo input[name=insurantBirthday]:first").val($("#applicantBirthday").val());
+                $(".insurantInfo input[name=insurantCellphoneNum]:first").val($("#applicantCellphoneNum").val());
+            }
+        })
+        $('#ac').fixedBar({
+            inverse:true
+        });
+    });
+ </script>

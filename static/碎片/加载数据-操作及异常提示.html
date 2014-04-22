@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>天地行</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="../static/css/kendo.common.css" rel="stylesheet" />
+	<link href="../static/css/kendo.gray.css" rel="stylesheet" />
+    <link href="../static/css/common.css" rel="stylesheet">
+    <link href="../static/css/b2b.css" rel="stylesheet">
+    <link href="../static/css/kendo.reset.css" rel="stylesheet" />
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../static/js/global.js"></script>
+    
+    <style type="text/css">
+      body{position:relative; background:#fff;}  
+      
+      button,input[type=button] {width:100px;height:30px;}
+
+      .common_loading {text-align:center;}
+      .store_loading {margin:0 auto;position:relative;background:url(/static/css/Uniform/loading.gif) no-repeat 5px 50% #fff;width:300px;height:80px;padding:10px;border:2px solid #e1e1e1;}
+      .store_loading .loading_text {line-height:80px;}
+
+      .example {margin:20px 0;}
+      .grayIcon .loading_icon{
+          background-image:url(/static/images/loading/loading.gif);
+      }
+    </style>
+    
+    
+</head>
+
+
+<body>
+
+   <br/>
+   <br/>
+   <div class="loading"><p>数据加载中，请稍候…</p></div>
+
+   <br/>
+   <br/>
+  <div class="pass">操作完成,已提交成功</div> 
+
+   <br/>
+   <br/>
+  <div class="warn">
+       <p>没有查询到符合条件的酒店，请检查查询条件，重新查询！</p>
+  </div>
+   <br/>
+   <br/>
+
+
+  <div class="error">
+       <p>出错啦，亲，请重新提交！或者操作失败一类的提示！</p>
+  </div>
+   <br/>
+   <br/>
+  
+  <div class="unrecognize">
+       <p>系统无法识别！</p>
+  </div>
+
+  <div style="color:red;font-size:30px;margin:10px;"> 以上提示条 如果不需要边框 添加 class="noborder"  例如 &lt;div class="warn noborder"&gt;</div>
+  
+   <br/>
+   <br/>
+
+  <div class="example">
+      <div class="status_button">
+          <button id="pass" type="button">成功提示</button>
+          <button id="warn" type="button">无结果提示</button>
+          <button id="error" type="button">出错提示</button>
+          <button id="unrecognize" type="button">无法识别提示</button>
+      </div>
+  </div>
+  </div>
+
+  <hr/>
+  <div class="example">
+      <h1>Ajax 请求 自动产生遮罩</h1>
+
+      <div class="ajax">
+          <h2>运营商</h2>
+          <div>
+              <input type="button" name="button1" value="发送ajax请求"/>
+          </div>
+          <h2>采购商</h2>
+          <div>
+              <input type="button" name="button2" value="发送ajax请求2"/>
+          </div>
+      </div>
+  </div>
+
+  <div class="example">
+      <div>
+          <input type="button" name="new_message" value="有新消息" id="new_message"/>
+      </div>
+  </div>
+   
+  <div id="container">
+      <div id="mainContent"> <!--mainContent start-->
+
+
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+          <p>页面内容</p>
+
+      </div>
+  </div>
+
+  <script type="text/x-kendo-template" id="message_template">
+      <div class="#=statusClass#">
+          <p>#=message#</p>
+      </div>
+  </script>
+
+  <script type="text/x-kendo-template" id="store_loading_template">
+      <div class="common_loading">
+          <div class="store_loading">
+              <span class="loading_text">数据加载中，请稍候…</span>
+              <span class="loading_close">×</span>
+          </div>
+      </div>
+  </script>
+
+
+  <script type="text/x-kendo-template" id="new_message_template">
+      <div class="new_message">
+          <a href="javascript:void(0);">
+              <em></em>
+              <b>新消息：</b>
+              <span>您好，订单 [ <i>#=order_id#</i> ] #=message1# [ #=message2# ]，请尽快处理，如有需要请拨打10106266</span>
+          </a>
+          <a href="javascript:void(0);" class="know" >知道了</a>
+      </div>
+  </script>
+
+  <script>
+
+      function popMessage(data){
+          var id = "message_" + (new Date()).getTime();
+          var message = kendo.template($("#new_message_template").html());
+          var html = message(data);
+
+          var margin_left = ($(window).width() - 980)/2;
+          var messageObj = $('<div class="message_wrap" id="' + id + '" style="display:none;"></div>').html(html).css({"margin-left":margin_left});   
+          messageObj.find(".know").click(function(e){
+              $(this).closest(".message_wrap").fadeOut("slow",function(){
+                  $(this).remove();
+              });
+          });
+
+          var i_message = $(".message_wrap").size();
+          if( i_message < 3){
+            var offset = $(".message_wrap:last").offset();
+            messageObj.css({bottom:-20 }).appendTo('body');
+
+            messageObj.animate({
+                bottom:20 + 40 * i_message,
+                duration:100
+            }).show();
+
+            setTimeout(function(){
+                messageObj.fadeOut(function(){
+                    $(this).remove();
+                });
+            },10000);
+          }else{
+            return ;
+          }
+
+
+      }
+
+      $(function(){
+          
+          $("#new_message").click(function(){
+                popMessage({order_id:"1123432211111",message1:"出票退回",message2:"身份证不正确"});
+          });
+
+          $(".status_button button").each(function(){
+              $(this).click(function(){
+                  var id = $(this).prop("id");
+                  var messageTpl = kendo.template($("#message_template").html());
+                  var message = '';
+                  
+                  switch(id){
+                      case 'pass':
+                        message = '操作完成,已提交成功';
+                        break;
+                      case 'warn':
+                        message = '没有查询到符合条件的酒店，请检查查询条件，重新查询！';
+                        break;
+                      case 'error':
+                        message = '出错啦，亲，请重新提交！或者操作失败一类的提示！';
+                        break;
+                      case 'unrecognize':
+                        message = '系统无法识别！';
+                        break;
+                      default:
+                        break;
+                  }
+
+                  var data = {statusClass:id,message:message};
+                  messageTpl(data);
+
+                  $.prompt({content:messageTpl(data)}).center().open(); 
+              });
+          });
+
+          $(".ajax input[name=button1]").click(function(){
+              $.loadingbar({debug:true,autoHide:false,wrapperClass:'grayIcon'});
+              $.ajax({ url: encodeURI("城市选择-国内.html")});
+          });
+          $(".ajax input[name=button2]").click(function(){
+              $.loadingbar({debug:true,template:"#store_loading_template",templateData:{message:"努力加载中..."}});
+              $.ajax({ url: encodeURI("城市选择-国内.html")});
+          });
+
+
+          //$.prompt({content:$("#create_failed_template").html()}).center().open(); 
+      });
+  </script>
+</body>
+</html>

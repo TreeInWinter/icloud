@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 用户中心 国内订单列表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+     
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_ucenter.css" media="screen" />
+
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.store.css" />
+    
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>    
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>    
+
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+    
+    <script type="text/javascript" src="../../static/js/store/store.js"></script>
+
+    <style type="text/css">
+    </style>
+
+</head>
+<body>
+
+<div class="main-wrapper">
+<header class="main-header">
+    <a class="logo" href="/"><h1>天地行</h1></a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first active"><a herf="#">首页</a></li>
+            <li><a herf="#">国内机票</a></li>
+            <li><a herf="#">国际机票</a></li>
+            <li><a herf="#">酒店</a></li>
+        </ul> 
+    </nav>
+    <nav class="main-links">
+        <ul class="clearfix">
+            <li class="first"><a href="#">订单管理</a></li>
+            <li><a href="#">分销管理</a></li>
+            <li><a href="#">电子钱包</a></li>
+            <li><a href="#">统计报表</a></li>
+            <li><a href="#">客服服务</a></li>
+            <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+            <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+</header>
+<section class="main-body clearfix">
+    <aside class="us-nav">
+        <nav>
+            <h3>用户中心</h3>
+            <div class="us-bind"><a href="#">手机已绑定</a>&#12288;<a class="text1" href="#"><i class="ucnav_03"></i>邮箱未绑定</a></div>
+            <dl>
+                <dt><i class="ucnav_07"></i>订单管理</dt>
+                <dd><a href="#">当日所有订单</a></dd>
+                <dd><a href="#">国内机票订单</a></dd>
+                <dd><a href="#">国际机票订单</a></dd>
+                <dd><a href="#">酒店订单</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="ucnav_10"></i>询价单管理</dt>
+                <dd><a href="#">国内机票询价单</a></dd>
+                <dd><a href="#">国际机票询价单</a></dd>
+                <dd><a href="#">酒店询价单</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_12"></i>电子钱包</dt>
+                <dd><a href="#">账户信息</a></dd>
+                <dd><a href="#">账户充值</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_15"></i>票据管理</dt>
+                <dd><a href="#">行程单</a></dd>
+                <dd><a href="#">发票</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_17"></i>统计报表</dt>
+                <dd><a href="#">财务报表</a></dd>
+                <dd><a href="#">机票业务</a></dd>
+                <dd><a href="#">酒店业务</a></dd>
+                <dd><a href="#">分销业务</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_19"></i>分销商管理</dt>
+                <dd><a href="#">分销商管理</a></dd>
+            </dl>
+
+            <dl>
+                <dt><i class="ucnav_22"></i>账户资料</dt>
+                <dd><a class="current" href="#">信息维护</a></dd>
+                <dd><a href="#">消息设置</a></dd>
+            </dl>
+
+            <dl>
+              <dt><i class="ucnav_26"></i>我的工具</dt>
+              <dd><a class="ic-j" href="#"><i class="ucnav_29"></i>常旅客管理</a></dd>
+                <dd><a class="ic-j" href="#"><i class="ucnav_32"></i>短消息</a></dd>
+            </dl>
+        </nav>
+    </aside>
+    <main class="us-content">
+        <h1 class="us-title">信息维护</h1>
+        <div class="us-body">
+            <aside>
+                <ul class="tab_change clearfix">
+                    <li class="currentState"><em><a href="javascript:void(0);">角色管理</a></em></li>
+                    <li><em><a href="javascript:void(0);">员工管理</a></em></li>
+                </ul>
+            </aside>
+            <div class="tabPanel">
+                <a class="adaptiveButton brightRed_btn medium" id="btn_addRole" style="float:right;">
+                    <span class="left"></span>
+                    <span class="center center_1">添加角色</span>
+                    <span class="right"></span>
+                </a>
+                <section class="us-result" style="clear:both;padding:10px 0">
+                    <table style="width:100%">
+                    <thead>
+                        <tr>
+                            <th width="100">角色名称</th>
+                            <th width="80">状态</th>
+                            <th>说明</th>
+                            <th width="60">用户数</th>
+                            <th width="130">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>主账号</td>
+                            <td>正常</td>
+                            <td></td>
+                            <td>1</td>
+                            <td><a class="text1 btn_checkRole" href="#" style="margin-right:5px">查看</a></td>
+                        </tr>
+                        <tr class="currentList">
+                            <td>管理员</td>
+                            <td>注销</td>
+                            <td></td>
+                            <td>3</td>
+                            <td><a class="text1" href="#" style="margin-right:5px">编辑</a><a class="text1" href="#" style="margin-right:5px">挂起</a><a href="javascript:void(0)" class="text1 logout-remind">注销</a></td>
+                        </tr>
+                        <tr>
+                            <td>管理员</td>
+                            <td>注销</td>
+                            <td></td>
+                            <td>3</td>
+                            <td><a class="text1" href="#" style="margin-right:5px">编辑</a><a class="text1" href="#" style="margin-right:5px">挂起</a><a href="javascript:void(0)" class="text1 logout-remind">注销</a></td>
+                        </tr>
+                        <tr>
+                            <td>管理员</td>
+                            <td>注销</td>
+                            <td></td>
+                            <td>3</td>
+                            <td><a class="text1" href="#" style="margin-right:5px">编辑</a><a class="text1" href="#" style="margin-right:5px">挂起</a><a href="javascript:void(0)" class="text1 logout-remind">注销</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </section>
+            </div>
+            <div class="tabPanel" style="display:none">
+                <div>
+                    用户名：<input type="text" />
+                    姓名：<input type="text" />
+                    状态：<select><option>全部</option></select>
+                    <a href="#" class="search_a">搜索</a>
+                    <a class="adaptiveButton brightRed_btn medium" id="btn_addStaff" style="float:right;">
+                        <span class="left"></span>
+                        <span class="center center_1">添加员工账号</span>
+                        <span class="right"></span>
+                    </a>
+                </div>
+                <section class="us-result" style="padding:10px 0">
+                    <table style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>用户名</th>
+                                <th>角色</th>
+                                <th>姓名</th>
+                                <th>邮箱地址</th>
+                                <th>手机号码</th>
+                                <th>办公电话</th>
+                                <th>QQ</th>
+                                <th>最近访问</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>B001</td>
+                                <td>营业员</td>
+                                <td>无双</td>
+                                <td>12345@qq.com</td>
+                                <td>13918784758</td>
+                                <td>021-123456748-8888</td>
+                                <td>197594759</td>
+                                <td>09-01 10:08</td>
+                                <td>正常</td>
+                                <td>
+                                    <span class="hyper-link"><u>操作</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">编辑</a>
+                                        <a href="#">挂起</a>
+                                        <a href="javascript:void(0)" class="logout">注销</a>
+                                        <a href="javascript:void(0)" class="reset_password">重置密码</a>
+                                    </div>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="currentList">
+                                <td>B001</td>
+                                <td>营业员</td>
+                                <td>无双</td>
+                                <td>12345@qq.com</td>
+                                <td>13918784758</td>
+                                <td>021-123456748-8888</td>
+                                <td>197594759</td>
+                                <td>09-01 10:08</td>
+                                <td>正常</td>
+                                <td>
+                                    <span class="hyper-link"><u>操作</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">编辑</a>
+                                        <a href="#">挂起</a>
+                                        <a href="javascript:void(0)" class="logout">注销</a>
+                                        <a href="javascript:void(0)" class="reset_password">重置密码</a>
+                                    </div>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>B001</td>
+                                <td>营业员</td>
+                                <td>无双</td>
+                                <td>12345@qq.com</td>
+                                <td>13918784758</td>
+                                <td>021-123456748-8888</td>
+                                <td>197594759</td>
+                                <td>09-01 10:08</td>
+                                <td>正常</td>
+                                <td>
+                                    <span class="hyper-link"><u>操作</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">编辑</a>
+                                        <a href="#">挂起</a>
+                                        <a href="javascript:void(0)" class="logout">注销</a>
+                                        <a href="javascript:void(0)" class="reset_password">重置密码</a>
+                                    </div>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>B001</td>
+                                <td>营业员</td>
+                                <td>无双</td>
+                                <td>12345@qq.com</td>
+                                <td>13918784758</td>
+                                <td>021-123456748-8888</td>
+                                <td>197594759</td>
+                                <td>09-01 10:08</td>
+                                <td>正常</td>
+                                <td>
+                                    <span class="hyper-link"><u>操作</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">编辑</a>
+                                        <a href="#">挂起</a>
+                                        <a href="javascript:void(0)" class="logout">注销</a>
+                                        <a href="javascript:void(0)" class="reset_password">重置密码</a>
+                                    </div>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+            <div class="tabPanel" style="display:none">
+                <h1 class="us-title">
+                    员工信息
+                    <span style="float:right;margin-top:-8px">
+                        <a class="adaptiveButton medium brightRed_btn btn_edit">
+                            <span class="left"></span>
+                            <span class="center center_1">编辑</span>
+                            <span class="right"></span>
+                        </a>
+                        <a class="adaptiveButton medium brightRed_btn btn_save" style="display:none">
+                            <span class="left"></span>
+                            <span class="center center_1">保存</span>
+                            <span class="right"></span>
+                        </a>
+                    </span>
+                </h1>
+                <table id="tbl_mainBusinessContactInfo">
+                    <colgroup>
+                        <col width="75">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <td class="td_head">用户名：</td>
+                        <td>燕小六</td>
+                    </tr>
+                    <tr>
+                        <td class="td_head">姓名：</td>
+                        <td>燕小六</td>
+                    </tr>
+                    <tr>
+                        <td class="td_head">电子邮箱：</td>
+                        <td><input value="234567@163.com" type="text" name="" id="" class="editable disabled" readonly/></td>
+                    </tr>
+                    <tr>
+                        <td class="td_head">登录密码：</td>
+                        <td>******** <a href="javascript:;" class="btn_modifyPassword">修改密码</a></td>
+                    </tr>
+                    <tr>
+                        <td class="td_head">手机号码：</td>
+                        <td><input value="13912345678" type="text" name="" id="" class="editable disabled" readonly/></td>
+                    </tr>
+                    <tr>
+                        <td class="td_head">办公电话：</td>
+                        <td><input type="text" name="" id="" placeholder="区号"/>-<input value="021-543217890" type="text" name="" id="" class="editable disabled" readonly/></td>
+                    </tr>
+                    <tr>
+                        <td class="td_head">QQ：</td>
+                        <td><input value="13912345678" type="text" name="" id="" class="editable disabled" readonly/></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</section>
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+
+<script type="text/html" id="addRoleTemplate">
+    <div id="addRoleContainer">
+    <table>
+        <colgroup><col style="width:70px"></colgroup>
+        <tr>
+            <td class="col-r"><i class="important">*</i>角色名称：</td>
+            <td><input type="text" name="" id=""/></td>
+        </tr>
+        <tr>
+            <td class="col-r" style="vertical-align:top">备注：</td>
+            <td><textarea name="" id="" cols="50" rows="3"></textarea></td>
+        </tr>
+        <tr>
+            <td style="vertical-align:top"><i class="important">*</i>角色权限</td>
+            <td>
+                <ul class="role">
+                    <li>
+                        <label><input type="checkbox" name="" id="" checked="checked" disabled="disabled"/><b>查询预订</b></label>
+                        <div>
+                            <label><input type="checkbox" name="" id="" checked="checked" disabled="disabled"/>国内机票</label>
+                            <label><input type="checkbox" name="" id="" checked="checked" disabled="disabled"/>国际机票</label>
+                            <label><input type="checkbox" name="" id="" checked="checked" disabled="disabled"/>酒店</label>
+                        </div>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" name="" id="" checked="checked" disabled="disabled"/><b>订单管理</b></label>
+                        <div>
+                            <label><input type="checkbox" name="" id="" checked="checked" disabled="disabled"/>国内机票订单</label>
+                            <label><input type="checkbox" name="" id="" checked="checked" disabled="disabled"/>国际机票订单</label>
+                            <label><input type="checkbox" name="" id="" checked="checked" disabled="disabled"/>酒店订单</label>
+                        </div>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" name="" id=""/><b>电子钱包</b></label>
+                        <div>
+                            <label><input type="checkbox" name="" id=""/>电子钱包</label>
+                            <label><input type="checkbox" name="" id=""/>修改支付密码</label>
+                        </div>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" name="" id=""/><b>统计报表</b></label>
+                        <div>
+                            <label><input type="checkbox" name="" id=""/>机票业务报表</label>
+                            <label><input type="checkbox" name="" id=""/>酒店业务报表</label>
+                        </div>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" name="" id=""/><b>系统设置</b></label>
+                        <div>
+                            <label><input type="checkbox" name="" id=""/>信息维护</label>
+                            <label><input type="checkbox" name="" id=""/>组织架构</label>
+                        </div>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" name="" id="" checked="checked" disabled="disabled"/><b>我的工具</b></label>
+                        <div>
+                            <label><input type="checkbox" name="" id="" checked="checked" disabled="disabled"/>常旅客管理</label>
+                            <label><input type="checkbox" name="" id="" checked="checked" disabled="disabled"/>退废票规定</label>
+                            <label><input type="checkbox" name="" id="" checked="checked" disabled="disabled"/>升舱规定</label>
+                        </div>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <div class="col-c">
+        <a class="adaptiveButton mediumOrange_btn" id="btn_paying">
+            <span class="left"></span>
+            <span class="center center_1">保 存</span>
+            <span class="right"></span>
+        </a>
+        <a href="javascript:;" class="popup-close" style="margin-left:20px">取消</a>
+    </div>
+</div>
+</script>
+
+<script type="text/html" id="checkRoleTemplate">
+    <div id="addRoleContainer">
+        <table>
+            <colgroup><col style="width:70px"></colgroup>
+            <tr>
+                <td class="col-r"><i class="important">*</i>角色名称：</td>
+                <td>管理员</td>
+            </tr>
+            <tr>
+                <td class="col-r" style="vertical-align:top">备注：</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top"><i class="important">*</i>角色权限</td>
+                <td>
+                    <ul class="role">
+                        <li>
+                            <label><input type="checkbox" name="" id="" checked="checked" disabled="disabled"/><b>查询预订</b></label>
+                            <div>
+                                <label><input type="checkbox" name="" id="" checked="checked" disabled="disabled"/>国内机票</label>
+                                <label><input type="checkbox" name="" id="" checked="checked" disabled="disabled"/>国际机票</label>
+                                <label><input type="checkbox" name="" id="" checked="checked" disabled="disabled"/>酒店</label>
+                            </div>
+                        </li>
+                        <li>
+                            <label><input type="checkbox" name="" id="" checked="checked" disabled="disabled"/><b>订单管理</b></label>
+                            <div>
+                                <label><input type="checkbox" name="" id="" checked="checked" disabled="disabled"/>国内机票订单</label>
+                                <label><input type="checkbox" name="" id="" checked="checked" disabled="disabled"/>国际机票订单</label>
+                                <label><input type="checkbox" name="" id="" checked="checked" disabled="disabled"/>酒店订单</label>
+                            </div>
+                        </li>
+                        <li>
+                            <label><input type="checkbox" name="" id="" disabled="disabled"/><b>电子钱包</b></label>
+                            <div>
+                                <label><input type="checkbox" name="" id="" disabled="disabled"/>电子钱包</label>
+                                <label><input type="checkbox" name="" id="" disabled="disabled"/>修改支付密码</label>
+                            </div>
+                        </li>
+                        <li>
+                            <label><input type="checkbox" name="" id="" disabled="disabled"/><b>统计报表</b></label>
+                            <div>
+                                <label><input type="checkbox" name="" id="" disabled="disabled"/>机票业务报表</label>
+                                <label><input type="checkbox" name="" id="" disabled="disabled"/>酒店业务报表</label>
+                            </div>
+                        </li>
+                        <li>
+                            <label><input type="checkbox" name="" id="" disabled="disabled"/><b>系统设置</b></label>
+                            <div>
+                                <label><input type="checkbox" name="" id="" disabled="disabled"/>信息维护</label>
+                                <label><input type="checkbox" name="" id="" disabled="disabled"/>组织架构</label>
+                            </div>
+                        </li>
+                        <li>
+                            <label><input type="checkbox" name="" id="" checked="checked" disabled="disabled"/><b>我的工具</b></label>
+                            <div>
+                                <label><input type="checkbox" name="" id="" checked="checked" disabled="disabled"/>常旅客管理</label>
+                                <label><input type="checkbox" name="" id="" checked="checked" disabled="disabled"/>退废票规定</label>
+                                <label><input type="checkbox" name="" id="" checked="checked" disabled="disabled"/>升舱规定</label>
+                            </div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <div class="col-c">
+            <a class="adaptiveButton mediumOrange_btn" id="btn_paying">
+                <span class="left"></span>
+                <span class="center center_1">关 闭</span>
+                <span class="right"></span>
+            </a>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="addStaffTemplate">
+    <table class="addstaff">
+        <colgroup><col style="width:95px"><col><col style="width:95px"></colgroup>
+    <tr>
+        <td class="col-r"><i class="important">*</i>用户名：</td>
+        <td><input type="text" name="" id=""/></td>
+        <td class="col-r">电子邮箱：</td>
+        <td><input type="text" name="" id=""/></td>
+    </tr>
+    <tr>
+        <td class="col-r"><i class="important">*</i>姓名：</td>
+        <td><input type="text" name="" id=""/></td>
+        <td class="col-r">手机号码：</td>
+        <td><input type="text" name="" id=""/></td>
+    </tr>
+    <tr>
+        <td class="col-r"><i class="important">*</i>登录密码：</td>
+        <td><input type="text" name="" id=""/></td>
+        <td class="col-r">办公电话：</td>
+        <td><input type="text" name="" id="" style="width:40px"/>-<input type="text" name="" id="" style="width:100px"/></td>
+    </tr>
+    <tr>
+        <td class="col-r"><i class="important">*</i>确认新密码：</td>
+        <td><input type="text" name="" id=""/></td>
+        <td class="col-r">QQ：</td>
+        <td><input type="text" name="" id=""/></td>
+    </tr>
+    <tr>
+        <td class="col-r">角色选择：</td>
+        <td>
+            <label><input type="checkbox" name="" id=""/>营业员</label>
+            <label><input type="checkbox" name="" id=""/>财务</label>
+            <label><input type="checkbox" name="" id=""/>管理员</label>
+        </td>
+    </tr>
+    <tr>
+        <td class="col-r">备注：</td>
+        <td colspan="3">
+            <textarea name="" id="" style="width:100%" rows="3"></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="3">
+            <a class="adaptiveButton mediumOrange_btn" id="btn_paying">
+                <span class="left"></span>
+                <span class="center center_1">保存再添加</span>
+                <span class="right"></span>
+            </a>
+            <a class="adaptiveButton mediumOrange_btn" id="btn_paying">
+                <span class="left"></span>
+                <span class="center center_1">保 存</span>
+                <span class="right"></span>
+            </a>
+            <a href="javascript:;" class="popup-close" style="margin-left:20px">取消</a>
+        </td>
+    </tr>
+</table>
+</script>
+
+<script type="text/x-kendo-template" id="reset-password-template">
+    <table class="paymentCode">
+         <colgroup>
+              <col width="90px"/>
+              <col width="170px"/>
+              <col width="75px"/>
+         </colgroup>
+         <tr>
+             <td>原密码：</td>
+             <td><input type="text" /></td>
+             <td></td>
+         </tr>
+         <tr>
+             <td>新密码：</td>
+             <td><input type="text" /></td>
+             <td></td>
+         </tr>
+         <tr>
+             <td>新密码确认：</td>
+             <td><input type="text" /></td>
+             <td> </td>
+         </tr>
+         <tr>
+             <td> </td>
+             <td>
+                 <a class="adaptiveButton mediumOrange_btn" id="reset_password_confirm">
+                      <span class="left"></span>
+                      <span class="center" style="padding:0 10px;">确 定</span>
+                      <span class="right"></span>
+                 </a>
+                 <a href="javascript:void(0);" class="callOff">取消</a>
+             </td>
+             <td> </td>
+         </tr>
+    </table>
+</script>
+
+
+
+<script type="text/x-kendo-template" id="reset-password-success-template">
+<div class="win">
+    <h3><i>&nbsp;</i>重置成功！</h3>    
+</div>
+</script>
+
+<script type="text/x-kendo-template" id="reset-password-failed-template">
+<div class="fail">
+    <h3><i>&nbsp;</i>重置密码失败！</h3>
+</div>
+</script>
+
+<script type="text/x-kendo-template" id="logout-remind-template">
+
+    <div class="logoutCon clearfix">  
+	    <i>&nbsp;</i><span>还有员工正在使用该角色权限，请去员工管理解除角色权限。</span>
+    </div>
+	<div class="logoutbox">
+		         <a class="adaptiveButton mediumOrange_btn" id="close_role_unreg" >
+                      <span class="left"></span>
+                      <span class="center" style="padding:0 20px;">关 闭</span>
+                      <span class="right"></span>
+                 </a>
+	</div>
+
+</script>
+
+<script type="text/x-kendo-template" id="logout-warn-template">
+
+    <div class="logoutCon clearfix">  
+	    <i>&nbsp;</i><span>注销后，平台将不再保留该用户的任何信息。确定注销？</span>
+    </div>
+	<div class="logoutbox">
+		         <a class="adaptiveButton mediumOrange_btn" id="btn_logout_confirm">
+                      <span class="left"></span>
+                      <span class="center" style="padding:0 20px;">确 定</span>
+                      <span class="right"></span>
+                 </a>
+                 <a href="javascript:void(0);" class="callOff">取消</a>
+	</div>
+
+</script>
+
+<script type="text/x-kendo-template" id="logout-success-template">
+<div class="win" style=" margin:15px 0 0 ;">
+    <h3><i>&nbsp;</i>用户B001注销成功！</h3>
+</div>
+</script>
+
+
+<script type="text/javascript">
+	var role_unreg_win = null;
+	
+    $(function(){
+        $(".btn_edit").click(function(){
+            $("#tbl_mainBusinessContactInfo :text").removeClass("disabled").prop("readonly",false);
+            $(this).hide();
+            $(".btn_save").show();
+        });
+        $(".btn_save").click(function(){
+            $("#tbl_mainBusinessContactInfo :text").addClass("disabled").prop("readonly",true);
+            $(this).hide();
+            $(".btn_edit").show();
+        });
+        $(".tab_change li").each(function(index){
+            $(this).click(function(){
+                $(".tabPanel").hide();
+                $(".tabPanel:eq(" + index + ")").show();
+                $(".tab_change li").removeClass("currentState");
+                $(this).addClass("currentState");
+            });
+
+        });
+		
+		
+
+        new PopWindow('.reset_password',{
+			template:'#reset-password-template',
+			title:'重置密码',
+			width:'420'
+		}).init();
+
+        new PopWindow('#reset_password_confirm',{
+			template:'#reset-password-success-template',
+			title:'重置成功',
+			width:'420'
+		}).init();
+		
+		role_unreg_win = new PopWindow('.logout-remind',{
+            template:'#logout-remind-template',
+            title:'注销',
+            width:'420'
+        }).init();
+		
+		new PopWindow('.logout',{
+            template:'#logout-warn-template',
+            title:'注销',
+            width:'420'
+        }).init();
+		
+		new PopWindow('#btn_logout_confirm',{
+            template:'#logout-success-template',
+            title:'注销',
+            width:'420'
+        }).init();
+
+        /*
+        new PopWindow('#reset_password_confirm',{
+			template:'#reset-password-failed-template',
+			title:'重置失败',
+			width:'420'
+		}).init();
+        */
+		$("body").delegate("#close_role_unreg","click",function(){
+			role_unreg_win.close();
+			
+		});
+
+        new PopWindow('#btn_addRole',{
+            template:'#addRoleTemplate',
+            title:'添加角色',
+            width:'560'
+        }).init();
+        new PopWindow('#btn_addStaff',{
+            template:'#addStaffTemplate',
+            title:'添加员工账号',
+            width:'560'
+        }).init();
+        new PopWindow('.btn_checkRole',{
+            template:'#checkRoleTemplate',
+            title:'查看角色',
+            width:'560'
+        }).init();
+    })
+</script>
+</body>
+</html>
+

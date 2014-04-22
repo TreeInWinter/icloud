@@ -1,0 +1,267 @@
+.warn911{
+    background-color:#fee5e5;
+    border:1px solid #f33;
+    color:#f33;
+    padding:3px;
+    margin-left:10px;
+}
+.block1{
+    padding:10px;
+}
+.k-ie7 input{
+    line-height:18px;
+}
+.block1 .col-l{
+    float:left;
+    width:850px;
+}
+.block1 .flat-list li{
+    width:200px;
+    margin-bottom:10px;
+}
+
+.block1 .vertical-head{
+    width:53px;
+}
+.block2 .block-header{
+    border-bottom:1px solid #C6C6C6;
+    padding:5px 15px;
+    line-height:30px;
+    background-color:#F6F6F6;
+}
+.block2 .flat-list li{
+    margin-right:10px;
+}
+.block .grid-table{
+    width:100%;
+}
+.block2 .text1{
+    color:#FF6B00;
+    font-weight:bold;
+}
+.block2 .k-grid td{
+    line-height:1em;
+}
+.block2 .text2{
+    color:#0CAF0C;
+}
+.block2 .align-r{
+    text-align:right;
+}
+.block2 .align-l{
+    text-align:left;
+}
+.block2 .align-c{
+    text-align:center;
+}
+.grid-row-ac .btns{
+    color:#0065CB;
+    margin:0 5px;
+}
+.grid-table .highlight{
+    background-color:#FFFFDB;
+}
+.block-redirect{
+    padding:40px;
+    text-align:center;
+    font-size:14px;
+}
+.block-redirect a{
+    color:#0065CB;
+}
+.block-redirect .row{
+    margin-bottom:20px;
+}
+.block-redirect-header{
+   margin-bottom:40px; 
+}
+.block-redirect-header u{
+    padding:20px;
+    line-height:30px;
+    font-size:16px;
+    border-bottom:1px dotted #ccc;
+}
+.block-redirect-header s{
+   color: #EF4F2F;
+}
+.block-redirect .icon{
+    display:inline-block;
+    height:30px;
+    width:34px;
+}
+.icon-yes{
+    background:url(../images/true.png) no-repeat 50% 50%;
+}
+.icon-no{
+    background:url(../images/cross.png) no-repeat 50% 50%;
+}
+.icon-ban{
+    background:url(../images/chujianr.png) no-repeat 50% 50%;
+}
+.k-grid .grid-table td{
+    border-right:0;
+}
+.block2 .k-grid{
+    border:0;
+}
+.qx_right{
+	height:40px;
+}
+.qx_right button{
+	float:right; line-height:26px; margin-top:7px;
+}
+.four_bg,.four_bg th{ background:#ffffdb;}
+.hui_bg,.hui_bg hr{ background:#f0f0f0;}
+.tgrid thead th{ font-weight:500; height:30px;}
+.tgrid td,.tgrid th{ text-align:left; padding-left:5px;}
+.tgrid td:first-child,.tgrid th:first-child{ padding-left:10px;}
+.tgrid tbody tr:hover{ background:#ffffdb;}
+
+.row .flat-list li b{ font-size:16px;}
+
+
+.fixedMenu .currentPitchOn{ border-bottom:3px solid #ff7702; margin-bottom:-3px; background:#fff; color:#000000;}
+.refer{ background:#fff; padding:10px; margin-bottom:10px; border-bottom:2px solid #bfc2c4; border-left:1px solid #dfe3e5; border-right:1px solid #dfe3e5; color:#333333;}
+.refer_list td input{ width:115px; line-height:20px; height:20px; padding-left:3px;}
+.refer_list td select{ width:120px; height:22px; color:#333333;}
+.refer_list td{ line-height:30px;}
+.tabHead{ background:#f6f6f6; border-left:1px solid #dfe3e5; border-right:1px solid #dfe3e5;}
+.tgrid tbody tr:hover td{ background:#ffffdb;}
+.tgrid{ background:#fff;}
+.tgrid th{ text-align:left; padding-left:5px; height:30px;} 
+.tgrid tbody a{ color:#0066cc}
+.tgrid tbody a:hover{ color:#0066cc;text-decoration:underline;}
+.tgrid tbody td{ text-align:left; height:30px; padding:3px 3px 3px 5px;}
+.tgrid thead th{ font-weight:500;}
+.tgrid tbody td em{ color:#ff7702; font-weight:bold;}
+.succeedPromp h3,.autoPromp h3{ font-size:14px; color:#666666; line-height:36px; background:#fff; border:1px solid #04ac00; width:210px; padding:10px;}
+.succeedPromp h3 em,.autoPromp h3 em{ width:36px; height:36px; display:inline-block; background:url(../images/store/succeed.png) no-repeat; vertical-align:middle; margin-right:15px;}
+.autoPromp h3  i{ color:#ff7702;}
+
+.fixedMenu h3{ font-size:14px; margin-right:15px; float:left;}
+.uploading{ padding:15px 10px; background:#fff; margin-bottom:10px; border-bottom:2px solid #bfc2c4; border-left:1px solid #dfe3e5; border-right:1px solid #dfe3e5; color:#454545;}
+.uploading em{ margin-right:15px;}
+.uploadedSuccess{ color:#ff0000; font-weight:500; margin-left:5px;}
+.AreUploading a{ color:#fff;}
+.AreUploading i{ width:16px; height:16px; display:inline-block; background:url(../images/loading/smallLoading.gif) no-repeat center center; vertical-align:middle; margin-left:5px;}
+.record{ padding:15px; background:#f6f6f6;}
+.nextStep_tab{ margin-top:7px; color:#454545;}
+.nextStep_tab td{ line-height:30px;}
+.nextStep_tab td select{ width:130px; line-height:22px; height:22px; color:#444444;}
+.nextStep_tab td:first-child{ font-weight:bold;}
+.nextStep_btn{ font-size:14px; font-weight:bold;}
+.nextStep_btn .callOff,.dispose_btn .callOff,.conFigAtType_btn .callOff{ color:#505050;}
+.ticketType{ color:#454545;}
+.ticketType b{ margin-right:10px;}
+.ticketType label{ margin-right:25px;}
+.ticketType label input{ vertical-align:middle;}
+.uploadingWindow{ margin-bottom:10px; color:#454545;}
+.uploadingWindow h4{ font-size:12px; color:#454545; margin-top:5px;}
+.uploadingWindow table td{ line-height:30px;}
+.uploadingWindow table td input{ padding-left:3px; height:22px; line-height:22px; color:#454545;}
+.uploadingWindow .upWin_input{ width:240px; background:#ff6600; color:#fff;}
+.tgrid tbody td input{ width:50px; height:22px; line-height:22px; background:#fff; padding-left:3px;}
+.tgrid .checkboxWidth input{ width:auto;}
+.tgrid .line_left{ border-left:1px solid #dfe3e5;}
+.tgrid .line_right{ border-right:1px solid #dfe3e5;}
+.orange-beige{ background:#fff1e8;}
+.dispose_btn{ font-size:14px; font-weight:bold; text-align:right; padding-top:10px;}
+.disposeWindow td{ line-height:30px; color:#454545;}
+.disposeWindow td:first-child{ font-weight:bold;}
+.disposeWindow td select{ height:22px; line-height:22px; width:130px;}
+.disposeWindow textarea{ width:330px; height:75px; margin-top:5px;}
+.refer_list .referDisabled{background:#eaeaea; color:#9f9f9f;}
+.tgrid .blue{ color:#0066cc; font-weight:500;}
+.tgrid td a{ margin-left:15px;}
+.tgrid td a:first-child{ margin-left:0;}
+.businessTypeDiv{ padding-bottom:15px; border-bottom:1px solid #d3d3d3; margin-bottom:15px;}
+.businessType td{ line-height:30px;}
+.businessType td:first-child{ font-weight:bold;}
+.modifyAllocation td,.newConfiguration{ line-height:30px; color:#454545;}
+.conFigAtType_btn{ font-size:14px; font-weight:bold; text-align:right; padding-top:20px;}
+.operateType td input{ width:127px; height:22px; line-height:22px;}
+.operateType td select,.businessType td select{ width:130px; height:23px; line-height:23px;}
+.fontOrange{ color:#ff7702;}
+
+
+.row-query{
+    padding-bottom:10px;
+    border-bottom:1px solid #ddd;
+    margin-bottom:20px !important;
+}
+.row-query th{
+    font-weight:normal;
+    text-align:left;
+}
+.row-query td,.row-query th{
+    padding-bottom:8px;
+}
+.row-result{
+    margin-bottom:20px !important;
+}
+.row-result th{
+    background-color:#f5f5f5;
+    border:1px solid #ddd;
+    padding:5px;
+    text-align:left;
+    font-weight:normal;
+}
+.row-result td{
+    padding:10px 5px;
+    border:1px solid #ddd;
+}
+.row-header{
+    padding:3px 5px;
+}
+.grid-action a{
+    margin-right:10px;
+}
+
+.fixedMenu a{ font-size:12px;}
+.currentA{ padding:0px 10px; background:#fff; color:#333 !important; border-bottom:3px solid #ff7702;}
+.chuZhangInfo{ width:auto; color:#454545;}
+.chuZhangInfo td{ line-height:35px;}
+.chuZhangInfo th{ text-align:right; padding-right:7px;}
+.orangeFont{ color:#ff6600;}
+.fontStyle{ text-align:right;}
+.fontStyle a{ font-size:14px; font-weight:bold;}
+.grayButton{ color:#505050;}
+
+.hangDiv{ color:#333333;}
+.hangTittle{ margin-bottom:10px;}
+.hangTittle td{ line-height:30px;}
+.hangTittle td i{ color:#ff6600;}
+.hangTittle th{text-align:left;}
+.hangContent{ border-collapse:collapse;}
+.hangContent td{ line-height:22px; overflow:hidden; padding:7px 3px; border:1px solid #d5d5d5;}
+.hangContent th{ padding:10px 3px; background:#f5f5f5; border:1px solid #d5d5d5; font-weight:500; text-align:left;}
+.hangContent td a{ color:#0066cc;}
+.hangContent td a:hover{ text-decoration:underline;}
+.hangBtn{ width:880px; margin-top:20px;}
+
+.grid-table-pagination .prev,.grid-table-pagination .next{ vertical-align:middle;}
+
+.disposeWin td{ line-height:35px;}
+.disposeWin td select{ width:110px; height:25px; line-height:25px; color:#636363;}
+.disposeWin th{ font-weight:500; text-align:right; padding-right:10px;}
+.cancelbut{ text-decoration:underline; color:#0000ff; margin-left:30px; font-size:14px; vertical-align:middle;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

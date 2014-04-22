@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta content="text/html" charset="utf-8">
+    <link rel="stylesheet" href="../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../static/css/store_hotel.css" media="screen" />
+    <link rel="stylesheet" href="../static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="../static/css/kendo.store.css" />
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/js/jcarousellite_1.0.1.pack.js"></script>
+    <script type="text/javascript" src="../static/js/kendo.web.js"></script>
+</head>
+<body>
+<span id="product">toolTip</span>
+<script type="text/javascript">
+    $(function(){
+        $("#product").kendoTooltip({
+            show:function(){
+                console.log(this);
+                $("#product").data("kendoTooltip").content.html("<img src='../static/images/loading/loading.gif'>");
+                $.ajax({
+                    url:"http://proto.b2b.com/php/delay.php",
+                    dataType:"html",
+                    error:function(data){
+                        $("#product").data("kendoTooltip").content.html(data.statusText);
+                    },
+                    success:function(data){$("#product").data("kendoTooltip").content.html(data);}
+                })
+            }
+        })
+    })
+</script>
+</body>
+</html>

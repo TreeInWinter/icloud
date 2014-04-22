@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>天地行</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="/static/js/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/static/css/swfupload.css" media="all" />
+        <script type="text/javascript" src="/static/js/swfup/swfupload.js"></script>
+        <script type="text/javascript" src="/static/js/swfup/swfupload.queue.js"></script>
+        <script type="text/javascript" src="/static/js/swfup/fileprogress.js"></script>
+        <script type="text/javascript" src="/static/js/swfup/handlers.js"></script>
+
+
+    </head>
+    <body>
+        <ul class="upload">
+            <li>
+            <label class="field-label">File Type:</label>
+            <div class="field-box">
+                <select name="file_type" id="file_type">
+                    <option value="">Please Select</option>
+                    <option value="1,Movie" selected>Movie</option><option value="2,Document" >Document</option><option value="3,Picture" >Picture</option>                </select>
+            </div>
+            </li>
+
+            <!-- when choose type movie -->
+            <li id="uploadImageFile"><label class="field-label">Image File:</label>
+            <div class="field-box">
+                <input type="hidden" name="Uploader_Value_1" id="Uploader_Value_1" value=""/>
+                <input type="text" name="Uploader_Show_Value_1" id="Uploader_Show_Value_1" value="" readonly="readonly"/>
+                <span id="UploaderPlaceholder_1"></span>
+                <span class="Uploader" allowSize="512KB" allowFile="*.jpg;*.jpeg;*.png;" >Please Choose Files</span>
+            </div>
+            </li>
+            <li>
+            <label class="field-label"></label>
+            <div class="field-box">
+                <div id="UploaderProgress_1"></div>
+                <div id="UploaderFeedBack_1"></div>
+            </div>
+            </li>
+            <li id="uploadMovieFile">
+            <label class="field-label">Video File:</label>
+            <div class="field-box">
+                <input type="hidden" name="Uploader_Value_2" id="Uploader_Value_2" value="" />
+                <input type="text" name="Uploader_Show_Value_2" id="Uploader_Show_Value_2" value="" readonly="readonly"/>
+                <span id="UploaderPlaceholder_2"></span>
+                <span class="Uploader" allowSize="50MB" allowFile="*.flv;*.mp4;*.avi;" style="">Please Choose Files</span>
+            </div>
+            </li>
+            <li>
+            <label class="field-label">&nbsp;</label>
+            <div class="field-box">
+                <div id="UploaderProgress_2"></div>
+                <div id="UploaderFeedBack_2"></div>
+            </div>
+            </li>
+            <li id="uploadDocFile"> 
+            <label class="field-label">Document File:</label>
+            <div class="field-box">
+                <div id="Uploader_Show_Value_3" style="width:258px;height:60px;overflow:auto;border:1px solid #878383;">
+                </div>
+                <span id="UploaderPlaceholder_3"></span>
+                <span class="Uploader" allowSize="10MB" allowFile="*.doc;*.docx;*.pdf;" style="" >Please Choose Files</span>
+            </div>
+            </li>
+            <li>
+            <label class="field-label">&nbsp;</label>
+            <div class="field-box">
+                <div id="UploaderProgress_3"></div>
+                <div id="UploaderFeedBack_3"></div>
+            </div>
+            </li>
+            <li id="uploadMultiImage" style="">
+            <label class="field-label">Image File:</label>
+            <div class="field-box">
+                <div id="Uploader_Show_Value_4" style="width:258px;height:60px;overflow:auto;border:1px solid #878383;">
+                </div>
+                <span id="UploaderPlaceholder_4"></span>
+                <span class="Uploader" allowSize="512KB" allowFile="*.jpg;*.jpeg;*.png;" style="" >Please Choose Files</span>
+            </div>
+            </li>
+            <li>
+            <label class="field-label">&nbsp;</label>
+            <div class="field-box">
+                <div id="UploaderProgress_4"></div>
+                <div id="UploaderFeedBack_4"></div>
+            </div>
+            </li>
+
+        </ul>
+    <script type="text/javascript">
+
+function createSwfUpload(index,allowSize, allowFile){
+    var upload = new SWFUpload({
+	// Backend Settings
+	upload_url: "http://www.mediasite.com/index.php/Upload/upload",
+	post_params: {"name" : "testname"},
+	// File Upload Settings
+	file_size_limit : "50MB",
+	//file_types : "*.*;",
+	//file_size_limit : allowSize ,
+	file_types : allowFile ,
+	file_types_description : "Choose Files",
+	file_upload_limit : "0",
+	file_queue_limit : "0",
+	// Event Handler Settings (all my handlers are in the Handler.js file)
+	file_dialog_start_handler : fileDialogStart,
+	file_queued_handler : fileQueued,
+	file_queue_error_handler : fileQueueError,
+	file_dialog_complete_handler : fileDialogComplete,
+	upload_start_handler : uploadStart,
+	upload_progress_handler : uploadProgress,
+	upload_error_handler : uploadError,
+	upload_success_handler : uploadSuccess,
+	upload_complete_handler : uploadComplete,
+	// Button Settingsimg/fee
+	button_image_url : "/static/images/XPButtonUploadText_61x22.png",
+	button_placeholder_id : "UploaderPlaceholder_" + index,
+	button_width: 62,
+	button_height: 26,
+    /*
+	button_text : '<span class="redText">上传文件</span>',
+	button_text_style : ".redText {text-align:center;}",
+	button_text_left_padding: 12,
+	button_text_top_padding: 3,
+    */
+	button_window_mode:"TRANSPARENT",
+	button_cursor: SWFUpload.CURSOR.HAND,
+	// Flash Settings
+	flash_url : "/static/flash/swfupload.swf",
+	custom_settings : {
+		progressTarget : "UploaderProgress_" + index,
+		cancelButtonId : "UploaderCancelBtn_" + index,
+		callback : function(file,serverData){
+            var tmp = $.parseJSON(serverData);
+		}
+	},
+
+	// Debug Settings
+	debug: false
+    });
+
+    return upload;
+}
+
+var uploads = [];
+$(function(){
+        $(".Uploader").each(function(index){	
+            uploads.push(createSwfUpload(index + 1,$(this).attr("allowSize"),$(this).attr("allowFile")));
+        });
+
+});
+
+    </script>
+    </body>
+</html>

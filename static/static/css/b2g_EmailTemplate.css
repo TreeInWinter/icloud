@@ -1,0 +1,163 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ background:#fff;}
+.main-wrapper .top-line,.main-header, .header-bar-content{ width:780px; margin:0 auto;}
+.main-header .header-content{ width:780px;}
+.main-body-content{ width:778px; min-height:auto; margin:0 auto; background:#f4f4f4; border:1px solid #d5d5d5;}
+.mainContent{ padding:10px 15px; color:#333333;}
+.orderInfo{ width:100%;}
+.orderInfo td{ line-height:20px; padding:3px; font-size:14px;}
+.orderInfo td:first-child{ text-align:left;}
+.orderInfo td h4{ font-size:14px; font-weight:bold; display:inline;}
+.statusContent{ margin:20px 0 10px 0;}
+.statusContent .guestTitle{ font-size:15px; font-weight:bold; margin:7px 0;}
+.statusContent .statusShow a{ color:#ff6600;}
+.statusContent .statusBtn{ margin:20px 0 10px 0; text-align:center;}
+.statusContent .statusBtn button{ margin-right:20px; font-size:16px; font-weight:bold;}
+.commonModel{ margin:15px 0; font-size:14px;}
+.commonModel .titleName{ font-size:14px; font-weight:bold; margin:7px 0; color:#333333;}
+.commonModel .tabList{ border:1px solid #d2d2d2; padding:1px; background:#fff; width:100%; margin:7px 0;}
+.commonModel .tabList td,.commonModel .tabList th{ padding:8px 5px; line-height:20px;}
+.commonModel .tabList th{ background:#ffe7db;}
+.commonModel .tabList td{ border-top:1px solid #f1f1f1;}
+.commonModel .changeFontSize td{ font-size:12px;}
+.commonModel .tabList td:first-child,.commonModel .tabList th:first-child{ padding-left:10px;}
+.commonModel .tabList .orangeFont{ color:#ff6600; font-size:16px; font-weight:bold;}
+.commonModel .tabList .topTh{ padding-bottom:0;}
+.commonModel .tabList .topTh p{ width:720px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+.commonModel .tabList .grayFont{ color:#888888; font-size:12px; margin:10px 0;}
+.commonModel .tabList .rightBorder{ border-right:1px solid #f1f1f1;}
+.emailFoot{ border-top:1px dashed #b3b2b2; padding:10px 30px;}
+.emailFoot .clickLink{ line-height:25px; padding:15px 0;}
+.emailFoot .clickLink .clickFont{ font-size:16px; color:#333333;}
+.emailFoot .clickLink div a,.footCont a{ color:#0066ff; font-size:14px;}
+.emailFoot p{ line-height:20px;}
+.footCont{ text-align:center; font-size:14px; color:#333333; margin:15px 0;}
+.commonModel .conditionList td{ padding:5px; font-size:12px; line-height:20px;}
+.commonModel .tabList .notWeight th{ font-weight:500; font-size:12px;}
+.commonModel .stipulateList{ margin:10px 20px; font-family:宋体; font-size:12px;}
+.commonModel .stipulateList li{ list-style-type:square; line-height:23px;}
+.commonModel .hintContent{ margin:10px 0; line-height:23px; font-size:12px;}
+.tabList .goAndBack{ color:#bfbfbf; font-size:14px; float:left; margin:-5px 5px 0 0; height:30px;}
+.tabList .goAndBack em{ display:inline-block; vertical-align:middle; width:16px; height:7px; margin-top:-15px;}
+.k-ie7 .tabList .goAndBack em{ margin-top:-10px;}
+.tabList .goArrow{ background:url(../images/b2g/cart.png) no-repeat 0 -33px;}
+.tabList .backArrow{ background:url(../images/b2g/cart.png) no-repeat 0 -49px;}
+.tabList .goAndBack i {vertical-align: middle;}
+.commonModel .ListNoBorder td{ border-top:0;}
+.commonModel .topSolid td{ border-top:1px solid #f1f1f1;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

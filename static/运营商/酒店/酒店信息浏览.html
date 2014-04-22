@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html" charset="utf-8">
+    <title>酒店 酒店维护 酒店信息浏览</title>
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/b2b.css">
+    <link rel="stylesheet" href="/static/css/kendo.common.css">
+    <link rel="stylesheet" href="/static/css/kendo.gray.css">
+    <link href="/static/css/kendo.reset.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/hotel.css">
+    <style type="text/css">
+        .hotelLocation li{float:left;margin:5px 20px 5px 0;}
+        .hotelPics{padding:10px}
+        .hotelPics img{width:160px;height:118px;margin-right:10px}
+        .servicePrice{margin-left:83px}
+        .servicePrice li,.services li{width:110px;float:left;margin:5px 10px 5px 0}
+        .services li{margin:0 10px 0 0}
+        .map{position:absolute;top:53px;right:17px}
+        table td{vertical-align:top}
+    </style>
+    <!--[if lte IE 6]>
+    <style type="text/css">
+        span.k-i-close{bakcground-position:-32px -16px;text-indent:0}
+        div.k-header{height:25px;line-height:20px;margin-top:-14px}
+        div.k-overlay{position:absolute;}
+    </style>
+    <![endif]-->
+<!--[if lt IE 8]> 
+<link rel="stylesheet" href="/static/css/ie.css" /> 
+<script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script> 
+<![endif]-->
+<!-- @CLB@ -->
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="actions block">
+            <div class="col col-l sep-r">
+                <button class="btns btn-return">返回</button>
+            </div>
+            <div class="col col-l" style="padding-left:10px;">
+                <a class="item highlight" href="#">酒店信息</a>
+                <a class="item" href="#">供应商信息</a>
+                <a class="item" href="#">房型</a>
+                <a href="#" class="item">价格计划</a>
+            </div>
+            <div class="col col-r sep-l">
+                <a class="button_4_3" href="#" style="color:#ffffff;margin-top:4px;">提交</a>
+                <a class="button_4_3" href="#" style="color:#ffffff;margin-top:4px">关闭</a>
+            </div>
+        </div>
+
+        <div class="panel" style="height:21px">
+            <div class="panelTitle">签约信息</div>
+            <div style="float:left;">
+                <span class="head" style="margin-left:75px">城市：<span style="color:#1C64A7">上海</span></span>
+                <span class="head" style="margin-left:75px">酒店名称：<span style="color:#1C64A7">----</span></span>
+                <span class="head" style="margin-left:75px"><span class="important">*</span>签约经理</span>
+                <select>
+                    <option value="签约经理列表">签约经理列表</option>
+                    <option value="李小路" selected="">李小路</option>
+                </select>
+                <span class="head" style="margin-left:75px">状态：<span style="color:#1C64A7">草稿</span></span>
+            </div>
+            <div style="float:right;margin-right:17px">
+                <a class="button_3_3" href="javascipt:;">保存</a>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panelTitle">
+                基本信息
+            </div>
+            <div style="float:left">
+                <a class="button_3_3 popwin" href="javascipt:;" data='{"url":"新增酒店_基本信息.html","width":760,"height":560,"title":"基本信息"}'>编辑</a>
+            </div>
+            <div class="map">
+                <img src="20130621160413.png" alt="">
+            </div>
+            <div class="panelContent clearfix">
+                <table class="tableMain" style="width:545px">
+                    <tr>
+                        <td class="head" style="width:83px">酒店名称</td>
+                        <td style="width:177px">
+                            宝华国际酒店
+                            <span>查询排序</span>5
+                        </td>
+                        <td class="head" style="width:75px">酒店星级</td>
+                        <td style="width:205px">4星级</td>
+                    </tr>
+                    <tr>
+                        <td class="head">连锁/品牌</td>
+                        <td>
+                            宝华国际
+                        </td>
+                        <td class="head">酒店类型</td>
+                        <td>商务酒店</td>
+                    </tr>
+                    <tr>
+                        <td class="head">查询排序</td>
+                        <td colspan="3">5 <span class="placeholder">*数值越大排名越靠前</span></td>
+                    </tr>
+                    <tr>
+                        <td class="head">酒店位置</td>
+                        <td colspan="3">
+                            <ul class="hotelLocation">
+                                <li>国家：中国</li>
+                                <li>区：华东区</li>
+                                <li>省/直辖市：上海</li>
+                                <li>县：上海</li>
+                                <li>行政区：闸北区</li>
+                                <li>商业区：灵石公园</li>
+                                <li>地址：广中西路555号</li>
+                                <li>经度：36.78921</li>
+                                <li>纬度：123.34678</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                <tr>
+                    <td style="width:83px"><span class="head">酒店电话</span></td>
+                    <td>
+                        021-12345678
+                        <span class="head" style="margin:0 30px 0 50px ">网站地址</span>http://www.baohuaguoji.com
+                    </td>
+                    <td rowspan="4"></td>
+                </tr>
+                <tr>
+                    <td><span class="head">电子邮箱</span></td>
+                    <td><span>hotel_bh@baohua.com</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="placeholder">——&nbsp;&nbsp;酒店电话，网站地址，电子邮箱网站不展示&nbsp;&nbsp;——</td>
+                </tr>
+                <tr>
+                    <td><span class="head">开业时间</span></td>
+                    <td>
+                        2013--06-08
+                        <span class="head" style="margin:0 30px 0 50px ">装修年限</span>1年
+                        <span class="head" style="margin:0 30px 0 50px ">楼层数</span>30层
+                        <span class="head" style="margin:0 30px 0 50px ">房间数</span>226间
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="head">结算货币</span></td>
+                    <td><span>人民币</span></td>
+                </tr>
+                <tr>
+                    <td><span class="head">酒店介绍</span></td>
+                    <td colspan="2">
+                        2003年开业  2009年装修  226间房  电话021-51159888 传真021-51159865
+
+                        上海宝华大酒店是由中国宝安集团股份有限公司投资兴建的酒店，酒店座落于上海浦东新区陆家嘴金融贸易区世纪大道与东方路交汇处，毗邻延安路、大连路、复兴路、人民路、新建路五条隧道，5分钟内可以步行至2、4、6、9号线世纪大道地铁站。
+                    </td>
+                </tr>
+
+            </table>
+            </div>
+        </div>
+
+        <div class="hotelPics panel">
+            <div class="panelTitle">
+                酒店照片
+            </div>
+            <div style="float:left">
+                <a class="button_3_3 popwin" href="javascipt:;" data='{"url":"新增酒店_酒店照片.html","width":700,"height":460,"title":"酒店照片"}'>编辑</a>
+            </div>
+            <div class="panelContent clearfix">
+                <img src="15145042443.png" alt="">
+                <img src="15145042443.png" alt="">
+                <img src="15145042443.png" alt="">
+                <img src="15145042443.png" alt="">
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panelTitle">
+                酒店规定
+            </div>
+            <div style="float:left">
+                <a class="button_3_3 popwin" href="javascipt:;" data='{"url":"新增酒店_酒店规定.html","width":700,"height":460,"title":"酒店规定"}'>编辑</a>
+            </div>
+            <div class="panelContent clearfix">
+                <table>
+                    <tr>
+                        <td style="width:83px"><span class="head">宾客类型</span></td>
+                        <td>中宾</td>
+                    </tr>
+                    <tr>
+                        <td><span class="head">儿童标准</span></td>
+                        <td>12岁以下</td>
+                    </tr>
+                    <tr>
+                        <td><span class="head">入住证件</span></td>
+                        <td>酒店入住时需要携带有效身份证件</td>
+                    </tr>
+                    <tr>
+                        <td><span class="head">宠物</span></td>
+                        <td>不可带宠物</td>
+                    </tr>
+                    <tr>
+                        <td><span class="head">入住时间</span></td>
+                        <td>
+                            14:00以后
+                            <span class="head" style="margin:0 10px 0 80px">退房时间</span>12:00以前
+                            <span class="head" style="margin:0 10px 0 80px">保留时间</span>23:00以前
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="head">变更/取消</span></td>
+                        <td>
+                            预订成功，不能变更和取消；否则酒店将扣除全部房费。<br/>
+                            入住前1天12点之前更改或取消，不收取任何费用；入住前1天的12点之后变更或取消，酒店将扣除首晚房费。<br/>
+                            未入住且切事前未申请取消，将不会获得退款；<br/>
+                            已入住提前退房，请电话或邮件与客服联系，客服将尽快与酒店确认并为您办理。<br/>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panelTitle">
+                服务费用
+            </div>
+            <div style="float:left">
+                <a class="button_3_3 popwin" href="javascipt:;" data='{"url":"新增酒店_服务费用.html","width":700,"height":260,"title":"服务费用"}'>编辑</a>
+            </div>
+            <div class="panelContent clearfix">
+                <ul class="servicePrice">
+                    <li>自助早餐   50</li>
+                    <li>中式早餐   50</li>
+                    <li>欧陆早餐   50</li>
+                    <li>儿童早餐   50</li>
+                    <li>晚餐早餐   50</li>
+                    <li>加床A  100</li>
+                    <li>加床B  200</li>
+                    <li>加床含早A  300</li>
+                    <li>加床含早B  400</li>
+                    <li>宽带  40</li>
+                    <li>货币单位  人民币</li>
+                    <li>房型升级  500</li>
+                </ul>
+                <div class="servicePrice procurement" style="clear:both;border-top: 1px solid #ccc;padding: 10px 0;margin-top: 10px;">
+                    <label class="txt_l3">可以本站代购 </label><span class="txt_l6">*勾选后，以上已选服务可以在预订时一同购买。</span>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="services clearfix panel">
+            <div class="panelTitle">
+                服务设施
+            </div>
+            <div style="float:left">
+                <a class="button_3_3 popwin" href="javascipt:;" data='{"url":"新增酒店_服务设施.html","width":700,"height":460,"title":"服务设施"}'>编辑</a>
+            </div>
+            <div class="panelContent clearfix">
+                <table>
+                <tr>
+                    <td style="width:73px"><span class="head">酒店服务</span></td>
+                    <td>
+                        <ul>
+                            <li>有线宽带</li>
+                            <li>无线宽带</li>
+                            <li>免费市话</li>
+                            <li>免费停车场</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="head">酒店餐饮</span></td>
+                    <td>
+                        <ul>
+                            <li>中餐厅</li>
+                            <li>西餐厅</li>
+                            <li>日式餐厅</li>
+                            <li>东南亚餐厅</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="head">商务设施</span></td>
+                    <td>
+                        <ul>
+                            <li>商务中心</li>
+                            <li>会议室</li>
+                            <li>多功能会议室</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="head">娱乐设施</span></td>
+                    <td>
+                        <ul>
+                            <li>室外网球场</li>
+                            <li>桌球室</li>
+                            <li>篮球场</li>
+                        </ul>
+                    </td>
+                </tr>
+
+            </table>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="clearfix panel">
+            <div class="panelTitle">
+                备注
+            </div>
+            <div style="float:left">
+                <a class="button_3_3 popwin" href="javascipt:;" data='{"url":"新增酒店_备注信息.html","width":700,"height":460,"title":"备注"}'>编辑</a>
+            </div>
+            <div class="panelContent clearfix">
+                <table>
+                    <tr>
+                        <td><span class="head">内部备注</span></td>
+                        <td>备注内容备注内容备注内容备注内容备注内容备注内容备注内容备注内容备注内容备注内容</td>
+                    </tr>
+                    <tr>
+                        <td><span class="head">外部备注</span></td>
+                        <td>备注内容备注内容备注内容备注内容备注内容备注内容备注内容备注内容备注内容备注内容</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panelTitle" style="border: 0">
+                操作日志
+            </div>
+            <div class="panelContent clearfix">
+                <table class="operation_records">
+                    <thead>
+                    <tr>
+                        <td style="width:130px">日期</td>
+                        <td style="width:100px">操作人员</td>
+                        <td style="width:300px">操作项目</td>
+                        <td style="width:300px">操作内容</td>
+                        <td style="width:100px">操作类型</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>20130606 14:55</td>
+                        <td>liuwei</td>
+                        <td>增加行政商务套房</td>
+                        <td>增加行政商务套房</td>
+                        <td>新增</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+<div id="window"></div>
+
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/kendo.web.js"></script>
+<script type="text/javascript" src="/static/js/scrollFix.js"></script>
+<script type="text/javascript" src="/static/js/hotel.js"></script>
+</body>
+</html>
+

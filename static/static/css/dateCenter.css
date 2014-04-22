@@ -1,0 +1,102 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ font-size:12px; font-family:Arial, Helvetica, sans-serif,微软雅黑; color:#4c4c4c;}
+.leftMenu{ background:#2c3946; width:200px; float:left; margin-left:20px;}
+.menuChange{ background:#2c3946;}
+.menuChange li{ float:left; color:#526373; cursor:pointer;}
+.firstLevel{ border-bottom:1px solid #222e3a;}
+.firstLevel em:hover{ background:#324355;}
+.firstLevel em{ width:180px; display:inline-block; padding:10px 0 10px 20px; font-size:16px; font-weight:bold;}
+.menuChange .secondLevel,.menuChange .currentMenu{ background:#232f3a;}
+.secondLevel li{ padding:10px 0 10px 40px; font-size:14px; font-weight:500; width:100%; width:160px;}
+.menuChange .secondLevel li:hover{ background:#2e3c49;}
+.secondLevel .currentStatus,.secondLevel .currentStatus:hover{ color:#fff; background:#4b739b;}
+
+.topContent{ float:right; margin:15px 30px 15px 0;}
+.classify{ margin-right:30px; font-size:14px; font-weight:bold; float:left;}
+.classify li{ float:left; width:110px; height:40px; line-height:40px; text-align:center; background:url(../images/datacenter/dateCenterBtnz.png) no-repeat; cursor:pointer; color:#e7f0f8;}
+.classify .firstModel{ background-position:left top;}
+.classify .currentModel{background-image:url(../images/datacenter/dateCenterBtnzz.png)}
+.classify .secondModel{ background-position:50% 0%; border-left:1px solid #4e5e6d; border-right:1px solid #4e5e6d;}
+.classify .thirdModel{ background-position:right top;}
+.searchImg{ background:url(../images/datacenter/spirit.png) no-repeat 0 0; width:40px; height:40px; vertical-align:middle; display:inline-block; margin-left:10px; cursor:pointer;}
+.searchImg:hover{ background-position:-45px 0;}
+.dateSearch{ float:left;}
+.dateSearch input{ vertical-align:middle; background:url(../images/datacenter/spirit.png) no-repeat 0 -155px; width:141px; height:41px; border:0; text-align:center;}
+.interval{ font-size:14px; color:#a7a9ac; font-weight:bold;}
+.rightCont{ background:#fff; margin:0 0 0 220px;}
+.graphTb{ min-height:410px;}
+.graphTitle{ padding:10px 50px; font-size:16px; font-weight:bold; border-bottom:2px solid #eaeaea;}
+.listTitle{ padding:10px 50px; border-top:1px solid #e3e3e3; border-bottom:1px solid #e3e3e3; margin-top:15px; position:relative;}
+.listTitle h2{ font-size:16px; font-weight:bold; color:#222222;}
+.download{ vertical-align:middle; background:url(../images/datacenter/spirit.png) no-repeat -93px 0; width:60px; height:25px; display:inline-block; position:absolute; right:3%; top:22%; cursor:pointer;}
+.download:hover{ background-position:-160px 0;}
+.tabListCont{ width:100%; color:#65656; border-collapse:collapse; text-align:center; font-size:14px;}
+.tabListCont thead th{ text-align:center; background:#f3f3f3;}
+.tabListCont td,.tabListCont th{ line-height:40px; height:40px; border:1px solid #e9eae9;}
+.tabListCont tbody tr:hover{ background:#f7f7f7;}
+#example{ background:#f9f9f9; padding:15px 50px 5px 65px;}
+.pageDiv{ float:right;}
+.pageRurn{ margin:15px;}
+.pageRurn li{ float:left; margin-left:10px;}
+.pageRurn li a{ border:1px solid #9ab0c5; border-radius:13px; -moz-border-radius:13px; -webkit-border-radius:13px; min-height:25px; min-width:25px; line-height:25px; text-align:center; display:block;}
+.pageRurn li a:hover{ text-decoration:none; color:#fff; background:#738faa;}
+.pageRurn .disableFont a,.pageRurn .disableFont a:hover{ color:#bacbdb; cursor:default; background:none;}
+
+.pageRurn .currentPage a,.pageRurn .currentPage a:hover{ color:#fff; background:#5d7082;}
+.pageRurn .upAndDown{ min-width:55px;}
+.pageRurn .omit a,.pageRurn .omit a:hover{ background:none; border:0;}
+.floatWindowTop{ background:url(../images/datacenter/spirit.png) no-repeat 0 -44px; width:200px; height:18px;}
+.floatWindowCont{ background:#0e1215; width:200px; color:#e4e4e4; font-size:14px;}
+.floatWindowCont li{ padding:10px 10px 10px 15px; cursor:pointer;}
+.floatWindowCont li:hover{ background:#30373c;}
+/*.floatWindowCont li label input{ margin-right:5px; background:url(../images/datacenter/spirit.png) no-repeat -256px 0; width:20px; height:20px; display:inline-block; vertical-align:middle;}*/
+.floatWindowBtn{ background:url(../images/datacenter/spirit.png) no-repeat 0 -66px; width:200px; height:40px; line-height:40px; text-align:center; color:#0b151f; font-size:16px; cursor:pointer;} 
+.floatWindowBtn:hover{ background-position:0 -111px; color:#e4e4e4;}
+
+.wrap .exit{ background:url(../images/datacenter/spirit.png) no-repeat 0 -200px; width:161px; height:82px; display:inline-block; float:right; margin:10px 30px 10px 0;}
+.wrap .exit:hover{ background-position:0 -287px;}
+.main-header{background:#0b151f; height:auto;}
+.main-footer{
+    color:#fff;
+    height:60px;
+    line-height:60px;
+    text-align:center;
+    font-family:Arial;
+    font-size:12px;
+	background:#0b151f;
+}
+.logo{
+   display:block; 
+   width:181px;
+   height:56px;
+   background:url(../images/datacenter/dc_08.png) no-repeat;
+   float:left;
+   margin:20px 0 10px 30px;
+}
+.logo h1{
+    display:none;
+}
+
+.detaContCheckbox {
+    cursor:pointer;
+    width:21px;
+    height:21px;
+    display:block;
+    float:left;
+    position:relative;
+    top:0;
+    background:url(../images/datacenter/spirit.png) no-repeat -256px 0;
+}
+.detailsCont .checked{ background-position: -231px 0;}
+.detailsCont label {
+    cursor:pointer;
+    color:#d7d7d7;
+    font-size:14px;
+    padding:0 5px;
+}
+
+
+
+

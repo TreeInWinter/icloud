@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>票据管理 行程单抽调-确认</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/css/kendo.common.css" rel="stylesheet" />
+    <link href="../../static/ss/kendo.gray.css" rel="stylesheet" />
+    <link href="../../static/css/b2b.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/kendo.reset.css" rel="stylesheet" />
+    <link href="../../static/css/tianjiabumentishi.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    
+    <style type="text/css">
+      body{ background:#fff; color:#333;}
+    </style>
+    
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head>
+
+
+<body>
+<div class="affirm" style="margin-left:5px;">
+ 
+    <table cellpadding="0" cellspacing="0" class="distribute_tab" width="98%">
+        <tr>
+            <td class="font_weight">申请单号：</td>
+            <td style="width:245px;">110113080116550001</td>
+            <td class="font_weight">申请时间：</td>
+            <td>2013-08-02 12:00:00</td>
+        </tr>
+        <tr>
+            <td>是否通过：</td>
+            <td>申请中</td>
+            <td class="font_weight">抽调客户：</td>
+            <td>华敏票务</td>
+        </tr>
+        <tr>
+            <td>申请人：</td>
+            <td>张三</td>
+            <td class="font_weight">抽调原因：</td>
+            <td rowspan="2">
+               <textarea class="affirm_textarea">申请100张行程单</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>申请张数：</td>
+            <td> <em>100</em> 张</td>
+        </tr>
+        <tr>
+            <td style="width:83px;">所属营业点：</td>
+            <td>上海不夜城</td>
+        </tr>
+    </table>
+    
+    <p></p>
+   
+   <div class="all_tab"> <!--table div start-->
+       <div class="tab_left">  <!--tab_left start-->
+           <h4>请选择行程单：</h4>
+           <table class="tgrid" style="width:99%;">
+                          <thead>
+                              <tr>
+                                  <th class="line_left" style="width:35px;">选择</th>
+                                  <th>行程单号</th>
+                                  <th>申请人</th>
+                                  <th>分布时间</th>                                  
+                                  <th class="line_right">使用状态</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td><input type="checkbox" checked="" /></td>
+                                  <td>4476975100</td>
+                                  <td>张苏纳</td>
+                                  <td>2013/08/01</td>
+                                  <td>未使用</td>
+                              </tr>
+                              <tr class="hui_bg">
+                                  <td><input type="checkbox" /></td>
+                                  <td>4476975100</td>
+                                  <td>张苏纳</td>
+                                  <td>2013/08/01</td>
+                                  <td>未使用</td>
+                              </tr>
+                              <tr>
+                                  <td><input type="checkbox" /></td>
+                                  <td>4476975100</td>
+                                  <td>张苏纳</td>
+                                  <td>2013/08/01</td>
+                                  <td>未使用</td>
+                              </tr>
+                              <tr class="hui_bg">
+                                  <td><input type="checkbox" /></td>
+                                  <td>4476975100</td>
+                                  <td>张苏纳</td>
+                                  <td>2013/08/01</td>
+                                  <td>未使用</td>
+                              </tr>
+                              <tr>
+                                  <td><input type="checkbox" /></td>
+                                  <td>4476975100</td>
+                                  <td>张苏纳</td>
+                                  <td>2013/08/01</td>
+                                  <td>未使用</td>
+                              </tr>
+                      </tbody>
+                  </table>
+                  <div class="tab_page">
+                        <span class="grid-table-count">
+                            共 <em>132</em> 条记录
+                        </span>
+                        <span>
+                            <a href="#" class="prev">&nbsp;</a>
+                        </span>
+                        <span class="page_na">
+                            <a href="#">1</a>
+                            <a href="#">2</a>
+                            <a href="#" class="page_na_a">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="javascript:;">...</a>
+                            <a href="#">50</a>
+                        </span>
+                        <span>
+                            <a href="#" class="next">&nbsp;</a>
+                        </span>
+                   </div>                  
+              </div>  <!--tab_left end-->
+              
+              <table cellpadding="0" cellspacing="0" class="tab_center">
+                 <tr>
+                    <td>
+                       <a href="javascript:;" class="button_secondary adaptiveButton small">
+                            <span class="left"></span>
+                            <span class="center">添加 >></span>
+                            <span class="right"></span>
+                       </a>
+                    </td>
+                 </tr>
+                 <tr>
+                    <td>
+                       <a href="javascript:;" class="button_secondary adaptiveButton small">
+                            <span class="left"></span>
+                            <span class="center"><< 取消</span>
+                            <span class="right"></span>
+                       </a>
+                    </td>
+                 </tr>
+                 <tr>
+                    <td>
+                       <a href="javascript:;" class="button_unimportant adaptiveButton small">
+                            <span class="left"></span>
+                            <span class="center" style="padding:0 0;">清空收回单号</span>
+                            <span class="right"></span>
+                       </a>
+                    </td>
+                 </tr>
+              </table>
+              
+              
+              <div class="tab_right">  <!--tab_right start-->
+                 <h4>已选择行程单：</h4>
+                 <table class="tgrid" style="width:99%;">
+                                <thead>
+                                    <tr>
+                                        <th class="line_left" style="width:35px;">选择</th>
+                                        <th>行程单号</th>
+                                        <th>申请人</th>
+                                        <th>分布时间</th>                                  
+                                        <th class="line_right">使用状态</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" checked="" /></td>
+                                        <td>4476975100</td>
+                                        <td>张苏纳</td>
+                                        <td>2013/08/01</td>
+                                        <td>未使用</td>
+                                    </tr>
+                                    <tr class="hui_bg">
+                                        <td><input type="checkbox" /></td>
+                                        <td>4476975100</td>
+                                        <td>张苏纳</td>
+                                        <td>2013/08/01</td>
+                                        <td>未使用</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" /></td>
+                                        <td>4476975100</td>
+                                        <td>张苏纳</td>
+                                        <td>2013/08/01</td>
+                                        <td>未使用</td>
+                                    </tr>
+                                    <tr class="hui_bg">
+                                        <td><input type="checkbox" /></td>
+                                        <td>4476975100</td>
+                                        <td>张苏纳</td>
+                                        <td>2013/08/01</td>
+                                        <td>未使用</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" /></td>
+                                        <td>4476975100</td>
+                                        <td>张苏纳</td>
+                                        <td>2013/08/01</td>
+                                        <td>未使用</td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                        <div class="tab_page">
+                              <span class="grid-table-count">
+                                  共 <em>132</em> 条记录
+                              </span>
+                              <span>
+                                  <a href="#" class="prev">&nbsp;</a>
+                              </span>
+                              <span class="page_na">
+                                  <a href="#">1</a>
+                                  <a href="#">2</a>
+                                  <a href="#" class="page_na_a">3</a>
+                                  <a href="#">4</a>
+                                  <a href="#">5</a>
+                                  <a href="javascript:;">...</a>
+                                  <a href="#">50</a>
+                              </span>
+                              <span>
+                                  <a href="#" class="next">&nbsp;</a>
+                              </span>
+                        </div>                  
+               </div>  <!--tab_right end-->
+               <div style="clear:left;"></div>
+          </div> <!--table div end-->
+           
+         <div style="clear:both;"></div>
+         
+         <div class="journey">
+            <b>行程单号：</b>
+            <input type="text" value="4476975100" />
+            <em>至</em>
+            <em>4476975199</em>
+            <span>共 <i>100</i> 张</span>
+         </div>
+    
+         <div class="benzhu">
+            <b>备 注：</b>
+            <textarea style="width:608px;">输入文本...</textarea>
+         </div>
+    
+   <div style=" clear:both;"></div>
+   
+    <div class="biaoqian_button" style="margin-right:5px;">
+      <a class="tianjiaqueding_btn" href="#">确&nbsp;定 </a>
+      <a class="tianjiaquxiao_btn" href="#"> 取&nbsp;消</a>    
+    </div>
+
+ 
+</div>
+
+</body>
+</html>

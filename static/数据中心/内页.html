@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>真旅网数据中心 内页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../static/css/date.css" media="all" />
+    <link rel="stylesheet" href="../static/css/dateCenter.css"/>
+    <link href="/static/css/kendo.common.min.css" rel="stylesheet" />
+    <link href="/static/css/kendo.dataviz.default.css" rel="stylesheet" />
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/jquery-ui-1.10.3.custom.js"></script>
+    <script src="/static/js/kendo.web.min.js"></script>
+    <script src="/static/js/global.js"></script>
+    <script src="/static/js/kendo.dataviz.min.js"></script>    
+    <script src="/static/js/datacenter/common.js"></script>
+    
+    <!--[if lte IE 9]>
+    <script src="../static/js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="main-wrapper">
+    <header class="main-header">
+        <div class="wrap clearfix">
+            <a class="logo" href="/"><h1>真率数据中心</h1></a>
+            <a class="exit" href="javascript:void(0);"></a>
+        </div>
+    </header>
+    <section class="main-body clearfix">
+
+        <div class="topContent">
+             <div class="clearfix">
+                 <ul class="classify clearfix">
+                     <li class="firstModel currentModel">版本</li>
+                     <li class="secondModel">渠道</li>
+                     <li class="thirdModel">用户群</li>
+                 </ul>
+                 <div class="dateSearch">
+                     <input type="text" placeholder="YY-MM-DD" class="datepicker"/>
+                     <em class="interval">—</em>
+                     <input type="text" placeholder="YY-MM-DD" class="datepicker"/>
+                     <em class="searchImg"></em>
+                 </div>
+             </div>
+        </div>
+        
+        <div class="mainContent clearfix"> <!--mainContent 开始-->
+                
+                <div class="leftMenu">  <!--leftMenu 开始-->
+                         <ul class="menuChange">
+                             <li class="firstLevel"><em>热门航段</em>
+                                  <ul class="secondLevel" style="display:none;">
+                                      <li class="currentStatus">我是二级菜单</li>
+                                      <li>我真的是二级菜单</li>
+                                      <li>说是二级菜单信不</li>
+                                      <li>我是二级菜单</li>
+                                  </ul>
+                             </li>
+                             <li class="firstLevel"><em>航段热门</em>
+                                  <ul class="secondLevel" style="display:none;">
+                                      <li>我真的是二级菜单</li>
+                                      <li>说是二级菜单信不</li>
+                                      <li>我是二级菜单</li>
+                                  </ul>
+                             </li>
+                             <li class="firstLevel"><em>热门航段</em>
+                                  <ul class="secondLevel" style="display:none;">
+                                      <li>说是二级菜单信不</li>
+                                      <li>我是二级菜单</li>
+                                  </ul>
+                             </li>
+                             <li class="firstLevel"><em>航段热门</em>
+                                  <ul class="secondLevel" style="display:none;">
+                                      <li>我是二级菜单</li>
+                                      <li>我真的是二级菜单</li>
+                                  </ul>
+                             </li>
+                             <li class="firstLevel"><em>热门航段</em>
+                                  <ul class="secondLevel" style="display:none;">
+                                      <li>我真的是二级菜单</li>
+                                      <li>说是二级菜单信不</li>
+                                      <li>我是二级菜单</li>
+                                  </ul>
+                             </li>
+                             <li class="firstLevel"><em>航段热门</em>
+                                  <ul class="secondLevel" style="display:none;">
+                                      <li>我是二级菜单</li>
+                                      <li>我真的是二级菜单</li>
+                                      <li>说是二级菜单信不</li>
+                                  </ul>
+                             </li>
+                             <li class="firstLevel"><em>热门航段</em>
+                                  <ul class="secondLevel" style="display:none;">
+                                      <li>说是二级菜单信不</li>
+                                      <li>我是二级菜单</li>
+                                  </ul>
+                             </li>
+                         </ul>
+                </div> <!--leftMenu 结束-->
+                
+                <div class="rightCont">  <!--rightCont 开始-->
+                     <div class="graphTb">
+                            <h2 class="graphTitle">图形表格</h2>
+                            <div id="example" class="k-content">
+                                <div class="chart-wrapper">
+                                    <div id="chart" style="background: center no-repeat url('../../content/shared/styles/world-map.png');"></div>
+                                </div>
+                                <script>
+                                
+                                    function createChart() {
+                                        $("#chart").kendoChart({
+                                            /*title: {
+                                                text: "Gross domestic product growth /GDP annual %/"
+                                            },*/
+                                            legend: {
+                                                position: "bottom"
+                                            },
+                                            chartArea: {
+                                                background: ""
+                                            },
+                                            seriesDefaults: {
+                                                type: "line",
+                                                style: "smooth"
+                                            },
+                                            series: [{
+                                                name: "India",
+                                                data: [3.907, 7.943, 7.848, 9.284, 9.263, 9.801, 3.890, 8.238, 9.552, 6.855]
+                                            },{
+                                                name: "World",
+                                                data: [1.988, 2.733, 3.994, 3.464, 4.001, 3.939, 1.333, -2.245, 4.339, 2.727]
+                                            },{
+                                                name: "Russian Federation",
+                                                data: [4.743, 7.295, 7.175, 6.376, 8.153, 8.535, 5.247, -7.832, 4.3, 4.3]
+                                            },{
+                                                name: "Haiti",
+                                                data: [-0.253, 0.362, -3.519, 1.799, 2.252, 3.343, 0.843, 2.877, -5.416, 5.590]
+                                            }],
+                                            valueAxis: {
+                                                labels: {
+                                                    format: "{0}%"
+                                                },
+                                                line: {
+                                                    visible: false
+                                                },
+                                                axisCrossingValue: -10
+                                            },
+                                            categoryAxis: {
+                                                categories: [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011],
+                                                majorGridLines: {
+                                                    visible: false
+                                                }
+                                            },
+                                            tooltip: {
+                                                visible: true,
+                                                format: "{0}%",
+                                                template: "#= series.name #: #= value #"
+                                            }
+                                        });
+                                    }
+                            
+                                    $(document).ready(createChart);
+                                    $(document).bind("kendo:skinChange", createChart);
+                                </script>   
+                            </div>
+                     </div>
+                     <div class="listCont">
+                         <div class="listTitle"> 
+                             <h2>列表</h2>
+                             <em class="download"></em>
+                         </div>
+                         <table class="tabListCont">
+                              <colgroup>
+                                   <col width="14%"/>
+                                   <col width="18%"/>
+                                   <col width="18%"/>
+                                   <col width="40%"/>
+                              </colgroup>  
+                              <thead>
+                                  <tr>
+                                      <th>日期</th>
+                                      <th>新增用户</th>
+                                      <th>新增用户占比</th>
+                                      <th>表头4</th>
+                                  </tr>  
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>2013-18-51</td>
+                                      <td>王大锤</td>
+                                      <td>1300%</td>
+                                      <td>蚊子蚊子蚊子全是文字蚊子蚊子蚊子全是文字</td>
+                                  </tr>  
+                                  <tr>
+                                      <td>2013-18-51</td>
+                                      <td>王大锤</td>
+                                      <td>1300%</td>
+                                      <td>蚊子蚊子蚊子全是文字蚊子蚊子蚊子全是文字</td>
+                                  </tr>  
+                                  <tr>
+                                      <td>2013-18-51</td>
+                                      <td>王大锤</td>
+                                      <td>1300%</td>
+                                      <td>蚊子蚊子蚊子全是文字蚊子蚊子蚊子全是文字</td>
+                                  </tr>  
+                                  <tr>
+                                      <td>2013-18-51</td>
+                                      <td>王大锤</td>
+                                      <td>1300%</td>
+                                      <td>蚊子蚊子蚊子全是文字蚊子蚊子蚊子全是文字</td>
+                                  </tr>  
+                                  <tr>
+                                      <td>2013-18-51</td>
+                                      <td>王大锤</td>
+                                      <td>1300%</td>
+                                      <td>蚊子蚊子蚊子全是文字蚊子蚊子蚊子全是文字</td>
+                                  </tr>  
+                                  <tr>
+                                      <td>2013-18-51</td>
+                                      <td>王大锤</td>
+                                      <td>1300%</td>
+                                      <td>蚊子蚊子蚊子全是文字蚊子蚊子蚊子全是文字</td>
+                                  </tr>  
+                                  <tr>
+                                      <td>2013-18-51</td>
+                                      <td>王大锤</td>
+                                      <td>1300%</td>
+                                      <td>蚊子蚊子蚊子全是文字蚊子蚊子蚊子全是文字</td>
+                                  </tr>  
+                             </tbody>   
+                         </table>
+                          <div class="pageDiv">
+                                 <ul class="pageRurn clearfix">
+                                     <li class="upAndDown disableFont"><a href="javascript:void(0);">上一页</a></li>
+                                     <li class="currentPage"><a href="javascript:void(0);">1</a></li>
+                                     <li><a href="javascript:void(0);">2</a></li>
+                                     <li><a href="javascript:void(0);">3</a></li>
+                                     <li><a href="javascript:void(0);">4</a></li>
+                                     <li><a href="javascript:void(0);">5</a></li>
+                                     <li class="omit"><a href="javascript:void(0);">...</a></li>
+                                     <li><a href="javascript:void(0);">100</a></li>
+                                     <li class="upAndDown"><a href="javascript:void(0);">下一页</a></li>
+                                 </ul>
+                          </div>
+                          <div class="clearfix"></div>
+                     </div>
+                                
+                </div>  <!--rightCont 结束-->
+        
+        </div> <!--mainContent 结束-->
+    </section>
+        <footer class="main-footer">
+            <center class="copyright">
+                Copyright &copy; 2013 天地行 All Rights Reserved.      沪ICP备08101503号
+            </center>
+        </footer>
+  </div>
+  
+  
+  <div id="classifyTemplate"  style="display:none;">
+  <div class="floatWindow">
+        <div class="floatWindowTop"></div>
+        <ul class="floatWindowCont">
+            <li>
+                <div class="detailsCont">
+                    <span class="detaContCheckbox checked"></span>
+                    <label for="dateCont">版本1</label>
+                    <input type="checkbox" style="display:none;" id="reason" value="for_private" name="reason">
+                </div>
+            </li>
+            <li>
+                <div class="detailsCont">
+                    <span class="detaContCheckbox"></span>
+                    <label for="dateCont">版本2</label>
+                    <input type="checkbox" style="display:none;" id="reason" value="for_private" name="reason">
+                </div>
+            </li>
+            <li>
+                <div class="detailsCont">
+                    <span class="detaContCheckbox"></span>
+                    <label for="dateCont">版本3</label>
+                    <input type="checkbox" style="display:none;" id="reason" value="for_private" name="reason">
+                </div>
+            </li>
+            <li>
+                <div class="detailsCont">
+                    <span class="detaContCheckbox"></span>
+                    <label for="dateCont">版本4</label>
+                    <input type="checkbox" style="display:none;" id="reason" value="for_private" name="reason">
+                </div>
+            </li>
+        </ul>
+        <div class="floatWindowBtn">确 定</div>
+    </div>
+    </div>
+    <script>
+	
+		$(function(){
+		
+			var layer = FloatLayer({
+                trigger: $('.classify'),
+				type:"click.menu",
+                offsetY:38,
+				offsetX:-45,
+                template:'#classifyTemplate'
+			});
+			
+			
+			$('.classify li').bind("click.switch",function(){									
+				$(this).closest("ul").find("li").removeClass("currentModel");
+				$(this).addClass("currentModel");
+			});
+			
+		
+			
+            $(".firstLevel em").bind("click",function(event) {
+			   $(this).parent().toggleClass("currentMenu");
+			   $(this).closest("li").find("ul").slideToggle();
+            });
+			
+			$(".secondLevel li").bind("click",function(){
+				$(this).closest("ul").find("li").removeClass("currentStatus");
+				$(this).addClass("currentStatus");
+			});
+			
+			/*$(".menuChange li").bind("click",function(){
+				$(this).closest("ul").find("li").removeClass("currentMenu");
+				$(this).addClass("currentMenu");
+			});*/
+			
+         });
+     </script>
+   
+    
+</body>
+</html>

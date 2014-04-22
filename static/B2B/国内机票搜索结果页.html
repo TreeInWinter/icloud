@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>国内机票搜索结果页</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<link href="/static/css/phase1/b2b_common.css" rel="stylesheet" />
+	<link href="/static/css/phase1/flight.css" rel="stylesheet" />
+
+	
+	<!-- Common Kendo UI Web CSS -->
+	<link href="/static/css/kendo.common.css" rel="stylesheet" />
+	<link href="/static/css/kendo.default.css" rel="stylesheet" />
+	
+    </head>
+    <body>
+	
+	<div id="container">
+		<div class="top_header">
+			<h1></h1>
+			<div class="profile">
+				<span>欢迎 <a href="javascript:void(0);">吕小名</a></span>
+				<span><a href="登陆.html">退出</a></span>
+
+			</div>
+		
+	    </div>
+		<div class="clear"></div>
+	    <ul id="menu">
+			<li class="k-state-selected">
+				<a href="国内机票搜索页.html">国内机票</a>
+				
+			</li>
+			<li>
+				<a href="javascript:void(0);">国际机票</a>
+			</li>
+			<li>
+				<a href="javascript:void(0);">酒店</a>
+				<ul>
+					<li><a href="国内酒店搜索页.html">国内酒店</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);">PNR操作</a>
+				<ul>
+					<li><a href="PNR导入生成预订单.html">PNR导入生成预订单</a></li>
+					<li><a href="黑屏指令粘贴生成预订单.html">黑屏指令粘贴生成预订单</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);">订单管理</a>
+				<ul>
+					<li><a href="订单列表.html">订单列表</a></li>
+					<li><a href="手工录入订单.html">手工录入订单</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);">客户管理</a>
+				<ul>
+					<li>供应商</li>
+					<li><a href="采购商.html">采购商</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0);">系统管理</a>
+				<ul>
+					<li>政策管理</li>
+					<li><a href="用户管理.html">用户管理</a></li>
+					<li><a href="角色管理.html">角色管理</a></li>
+				</ul>
+			</li>
+		</ul>
+		<div class="breadcrum"> &gt;&gt; <a href="国内机票搜索页.html">国内机票</a> </div>
+		
+		<div class="tabstrip">
+			<ul>
+				<li class="k-state-active">
+					国内机票
+				</li>
+			</ul>
+			<div>
+				<form name="flightSearch" action="国内机票搜索结果页.html" method="get">
+					<table>
+						<tr>
+							<td><span class="redImportant">*</span>行程类型：</td>
+							<td>
+								<select name="TripType" id="TripType">
+									<option value="OneWay">单程</option>
+									<option value="RoundTrip" selected>往返</option>
+								</select>
+							</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><span class="redImportant">*</span>出发城市：</td>
+							<td><input id="departureCity" name="departureCity" class="m" type="text"></td>
+							<td><span class="redImportant">*</span>目的城市：</td>
+							<td><input id="arrivedCity" name="arrivedCity" class="m" type="text"></td>
+
+						</tr>
+						<tr>
+							<td><span class="redImportant">*</span>出发日期：</td>
+							<td><input class="l Datepicker" name="departureDate" type="text"></td>
+							
+							<td class="returnDate"><span class="redImportant">*</span>返程日期：</td>
+							<td class="returnDate"><input class="l Datepicker" name="returnDate"  type="text"></td>
+						</tr>
+						<tr>
+							<td><span class="redImportant">*</span>成人数量：</td>
+							<td><input  name="adultNo" id="adultNumeric" type="number" value="1" min="1" max="100" ></td>
+							<td><span class="redImportant">*</span>儿童数量：</td>
+							<td><input  name="childNo" id="childNumeric" type="number" value="0" type="text" min="0" max="50" ></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<div style="text-align:center;margin:20px 0"><input type="submit" class="button_main_m" name="submit" value="查询"/></div>
+							</td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		
+		<div class="searchresult_thead">
+			<table width="100%" height="20px;">
+				<thead>
+					<tr>
+						<th style="vertical-align: middle;width: 57px;">时间</th>
+						<th style="vertical-align: middle;width: 136px;">机场</th>
+						<th style="text-indent: 46px; vertical-align: middle;width: 305px;">航空公司</th>
+						<th style="vertical-align: middle;width: 43px;">舱等</th>
+						<th style="vertical-align: middle;width: 102px;">价格(不含税)</th>
+						<th style="vertical-align: middle;width: 132px;"></th>
+						<th style="vertical-align: middle">备注</th>	
+					</tr>	
+				</thead>
+				
+			</table>
+		</div>
+		<div id="flightList">
+			<div class="flight_item" data="2013-05-17 12:00:00|2013-05-17 14:20:00|M|Y|CZ|3908|SHA|PEK|77A|H|510.0|45" fid="U0hBUEVLMTMwNTE3MTIwMDEzMDUxNzE0MjBDWjM5MDgzRQ==">
+				<table width="100%">
+					<tbody>
+						<tr>
+							<td class="flightInfo" style="width: 380px;">
+								<div>
+									<table class="no_border">
+										<tbody>
+											<tr>
+												<td class="airlineInfo" style="width: 210px;">	
+													<table class="no_border">
+														<tbody>
+															<tr>
+																<td><span class="text_show" style="padding-right: 10px;">12:00</span></td>						    
+																<td style="vertical-align: middle"><div>上海虹桥国际机场 (SHA)</div></td>						
+															</tr>						
+															<tr>
+																<td><div>14:20</div></td>
+																<td style="vertical-align: middle"><div>北京首都国际机场 (PEK)</div></td>
+															</tr>
+															<tr>
+																<td><div style="display:none" class="daydiff flight_time">+1天</div></td>	
+																<td><div class="txt_darklight flight_time"><span>直飞</span><span style="padding: 0px 7px;">|</span>2小时&nbsp;20分</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+												<td class="aircraftInfo">
+													<table class="no_border">
+														<tbody>
+															<tr>
+																<td style="padding-left: 5px;">
+																	<img src="http://www.travelzen.com/imageserver/images/airlines/air_CZ.gif"/>	
+																</td>
+																<td style="width: 138px;">
+																	<div class="airline_txt" style="float:left">南航</div>
+																	<div class="airline_txt">CZ 3908</div>	
+																	<div></div>	
+																	<div></div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</td>
+							<td class="bookingInfo" style="width: 365px;">
+								<div>
+									<table>
+										<tbody class="bookinglist">
+											<tr>
+												<td class="flight_info flight_row">
+													<span style="display:none" class="top_class txt_xs">高端</span>
+													<div style="margin-top: 2px;">经济舱</div>
+												</td>
+												<td class="flight_row" style="width:98px;">
+													<div class="biglight">
+														<span class="base_price">CNY&nbsp;<strong>510</strong></span>
+													</div>
+													<div>
+														<span class="text_low">4.5折&nbsp;&nbsp;</span>
+														<span class="base_txtdiv">退改签</span>
+														<span class="termLoad" style="display:none;"><img src="/images/loading/loader_S.gif" style="border:0px;"></span>
+													</div>
+												</td>
+												<td class="txt_red flight_info flight_row">
+													<div></div>
+												</td>
+												<td align="left" class="bookingBtn flight_row" style="padding-right: 5px;width:71px;">
+													<div class="btn_orange" style="margin-right: 0px;">
+														<div class="left"></div>
+														<div class="middle">选择</div>
+														<div class="right"></div>
+													</div>
+													<div align="center" class="img_load" style="display:none;">
+														<img src="/images/loading/loader_S.gif" style="border:0px;"></div>
+														<div style="margin-top: 5px; margin-right: 3px">
+															<a class="show_flight">更多舱位</a><input type="hidden" name="loadComp" value="0">
+															<div align="center" class="img_load_show_flight" style="display:none;"><img src="/images/loading/loader_S.gif" style="border:0px;"></div>
+															<div style="display: block;" class="downup arrow_up_top"></div>
+														</div>
+												</td>
+												<td class="flight_info flight_row">
+													<div class="icon_remark_red txt_xs">座位紧张</div>
+													<div class="icon_remark_white txt_xs">购票限制</div>	
+												</td>
+											</tr>
+											
+											<tr>
+												<td class="flight_info flight_row">
+													<span style="display:none" class="top_class txt_xs">高端</span>
+													<div style="margin-top: 2px;">经济舱</div>
+												</td>
+												<td style="width:98px;" class="flight_row">
+													<div class="biglight">	    
+														<span class="base_price">CNY&nbsp;<strong>620</strong></span>	
+													</div>	
+													<div>	    
+														<span class="text_low">5.5折&nbsp;&nbsp;</span>	    
+														<span class="base_txtdiv">退改签</span>
+														<span style="display:none" class="termLoad"><img src="/images/loading/loader_S.gif" style="border:0px;"></span>	
+													</div>    
+												</td>    
+												<td class="txt_red flight_info flight_row"><div></div></td>    
+												<td align="left" class="bookingBtn flight_row" style="padding-right: 5px;width:71px;">
+													<div class="btn_orange" style="margin-right: 0px;">		
+																   <div class="left"></div>		
+																   <div class="middle">选择</div>		
+																   <div class="right"></div>	
+													</div>	
+													<div align="center" class="img_load" style="display:none;">
+														<img src="/images/loading/loader_S.gif" style="border:0px;"></div>   
+												</td>    
+												<td class="flight_info flight_row">	
+													<div style="display:none" class="icon_remark_red txt_xs">座位紧张</div>	
+													<div style="display:none" class="icon_remark_white txt_xs">购票限制</div>    
+												</td>
+											</tr>
+											
+											<tr>
+												<td class="flight_info flight_row">
+													<span style="display:none" class="top_class txt_xs">高端</span>
+													<div style="margin-top: 2px;">经济舱</div>
+												</td>
+												<td style="width:98px;" class="flight_row">
+													<div class="biglight">	    
+														<span class="base_price">CNY&nbsp;<strong>700</strong></span>	
+													</div>	
+													<div>	    
+														<span class="text_low">6.5折&nbsp;&nbsp;</span>	    
+														<span class="base_txtdiv">退改签</span>
+														<span style="display:none" class="termLoad"><img src="/images/loading/loader_S.gif" style="border:0px;"></span>	
+													</div>    
+												</td>    
+												<td class="txt_red flight_info flight_row"><div></div></td>    
+												<td align="left" class="bookingBtn flight_row" style="padding-right: 5px;width:71px;">
+													<div class="btn_orange" style="margin-right: 0px;">		
+																   <div class="left"></div>		
+																   <div class="middle">选择</div>		
+																   <div class="right"></div>	
+													</div>	
+													<div align="center" class="img_load" style="display:none;">
+														<img src="/images/loading/loader_S.gif" style="border:0px;"></div>   
+												</td>    
+												<td class="flight_info flight_row">	
+													<div style="display:none" class="icon_remark_red txt_xs">座位紧张</div>	
+													<div style="display:none" class="icon_remark_white txt_xs">购票限制</div>    
+												</td>
+											</tr>
+										
+											
+											<tr>
+												<td class="flight_info">
+													<span style="" class="top_class txt_xs">高端</span>
+													<div style="margin-top: 2px;">经济舱</div></td>
+												<td style="width:98px;" class="">
+													<div class="biglight">
+														<span class="base_price">CNY&nbsp;<strong>1,130</strong></span>
+													</div>
+													<div>
+														<span class="text_low">全价&nbsp;&nbsp;</span>
+														<span style="display:none;" class="base_txtdiv">退改签</span><input type="hidden" value="" name="termTxt">
+														<span class="termLoad"><img src="/images/loading/loader_S.gif" style="border:0px;"></span>
+													</div>
+												</td>
+												<td class="txt_red flight_info"><div></div></td>
+												<td align="left" class="bookingBtn" style="padding-right: 5px;width:71px;">
+													<div class="btn_orange" style="margin-right: 0px;">
+														<div class="left"></div>
+														<div class="middle">选择</div>
+														<div class="right"></div>
+														
+													</div>
+													<div align="center" class="img_load" style="display:none;"><img src="/images/loading/loader_S.gif" style="border:0px;"></div>
+												</td>
+												<td class="flight_info">
+													<div style="display:none" class="icon_remark_red txt_xs">座位紧张</div>
+													<div style="" class="icon_remark_white txt_xs">购票限制</div>
+												</td>
+											</tr>
+											
+											
+										</tbody>
+									</table>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<div class="flight_item" data="2013-05-17 12:00:00|2013-05-17 14:20:00|M|Y|CZ|3908|SHA|PEK|77A|H|510.0|45" fid="U0hBUEVLMTMwNTE3MTIwMDEzMDUxNzE0MjBDWjM5MDgzRQ==">
+				<table width="100%">
+					<tbody>
+						<tr>
+							<td class="flightInfo" style="width: 380px;">
+								<div>
+									<table class="no_border">
+										<tbody>
+											<tr>
+												<td class="airlineInfo" style="width: 210px;">	
+													<table class="no_border">
+														<tbody>
+															<tr>
+																<td><span class="text_show" style="padding-right: 10px;">12:00</span></td>						    
+																<td style="vertical-align: middle"><div>上海虹桥国际机场 (SHA)</div></td>						
+															</tr>						
+															<tr>
+																<td><div>14:20</div></td>
+																<td style="vertical-align: middle"><div>北京首都国际机场 (PEK)</div></td>
+															</tr>
+															<tr>
+																<td><div class="daydiff flight_time">+1天</div></td>	
+																<td><div class="txt_darklight flight_time"><span>直飞</span><span style="padding: 0px 7px;">|</span>2小时&nbsp;20分</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+												<td class="aircraftInfo">
+													<table class="no_border">
+														<tbody>
+															<tr>
+																<td style="padding-left: 5px;">
+																	<img src="http://www.travelzen.com/imageserver/images/airlines/air_HO.gif"/>	
+																</td>
+																<td style="width: 138px;">
+																	<div class="airline_txt" style="float:left">南航</div>
+																	<div class="airline_txt">CZ 3908</div>	
+																	<div>空客330</div>							
+																	<div>由(FM)承运</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</td>
+							<td class="bookingInfo" style="width: 365px;">
+								<div>
+									<table>
+										<tbody class="bookinglist">
+											<tr class="f1">
+												<td class="flight_info flight_row">
+													<span style="display:none" class="top_class txt_xs">高端</span>
+													<div style="margin-top: 2px;">经济舱</div>
+												</td>
+												<td class="flight_row" style="width:98px;">
+													<div class="biglight">
+														<span class="base_price">CNY&nbsp;<strong>510</strong></span>
+													</div>
+													<div>
+														<span class="text_low">4.5折&nbsp;&nbsp;</span>
+														<span class="base_txtdiv">退改签</span><input type="hidden" value="" name="termTxt">
+														<span style="display:none" class="termLoad"><img src="/images/loading/loader_S.gif" style="border:0px;"></span>
+													</div>
+												</td>
+												<td class="txt_red flight_info flight_row">
+													<div></div>
+												</td>
+												<td align="left" class="bookingBtn flight_row" style="padding-right: 5px;width:71px;">
+													<div class="btn_orange" style="margin-right: 0px;">
+														<div class="left"></div>
+														<div class="middle">选择</div>
+														<div class="right"></div>
+													</div>
+													<div align="center" class="img_load" style="display:none;">
+														<img src="/images/loading/loader_S.gif" style="border:0px;"></div>
+														<div style="margin-top: 5px; margin-right: 3px">
+															<a class="show_flight">更多舱位</a><input type="hidden" name="loadComp" value="0">
+															<div align="center" class="img_load_show_flight" style="display:none;"><img src="/images/loading/loader_S.gif" style="border:0px;"></div>
+															<div style="display: block;" class="downup arrow_down_top"></div>
+														</div>
+												</td>
+												<td class="flight_info flight_row">
+													<div class="icon_remark_red txt_xs">座位紧张</div>
+													<div class="icon_remark_white txt_xs">购票限制</div>	
+												</td>
+											</tr>
+											<tr class="f2">
+												<td class="flight_info">
+													<span style="" class="top_class txt_xs">高端</span>
+													<div style="margin-top: 2px;">经济舱</div></td>
+												<td style="width:98px;" class="">
+													<div class="biglight">
+														<span class="base_price">CNY&nbsp;<strong>1,130</strong></span>
+													</div>
+													<div>
+														<span class="text_low">全价&nbsp;&nbsp;</span>
+														<span class="base_txtdiv">退改签</span><input type="hidden" value="" name="termTxt">
+														<span style="display:none" class="termLoad"><img src="/images/loading/loader_S.gif" style="border:0px;"></span>
+													</div>
+												</td>
+												<td class="txt_red flight_info"><div></div></td>
+												<td align="left" class="bookingBtn" style="padding-right: 5px;width:71px;">
+													<!--
+													<div class="btn_orange" style="margin-right: 0px;">
+														<div class="left"></div>
+														<div class="middle">选择</div>
+														<div class="right"></div>
+														
+													</div>-->
+													<div align="center" class="img_load"><img src="/images/loading/loader_S.gif" style="border:0px;"></div>
+												</td>
+												<td class="flight_info">
+													<div style="display:none" class="icon_remark_red txt_xs">座位紧张</div>
+													<div style="" class="icon_remark_white txt_xs">购票限制</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<div class="flight_item" data="2013-05-17 12:00:00|2013-05-17 14:20:00|M|Y|CZ|3908|SHA|PEK|77A|H|510.0|45" fid="U0hBUEVLMTMwNTE3MTIwMDEzMDUxNzE0MjBDWjM5MDgzRQ==">
+				<table width="100%">
+					<tbody>
+						<tr>
+							<td class="flightInfo" style="width: 380px;">
+								<div>
+									<table class="no_border">
+										<tbody>
+											<tr>
+												<td class="airlineInfo" style="width: 210px;">	
+													<table class="no_border">
+														<tbody>
+															<tr>
+																<td><span class="text_show" style="padding-right: 10px;">12:00</span></td>						    
+																<td style="vertical-align: middle"><div>上海虹桥国际机场 (SHA)</div></td>						
+															</tr>						
+															<tr>
+																<td><div>14:20</div></td>
+																<td style="vertical-align: middle"><div>北京首都国际机场 (PEK)</div></td>
+															</tr>
+															<tr>
+																<td><div style="display:none" class="daydiff flight_time">+1天</div></td>	
+																<td><div class="txt_darklight flight_time"><span>直飞</span><span style="padding: 0px 7px;">|</span>2小时&nbsp;20分</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+												<td class="aircraftInfo">
+													<table class="no_border">
+														<tbody>
+															<tr>
+																<td style="padding-left: 5px;">
+																	<img src="http://www.travelzen.com/imageserver/images/airlines/air_MU.gif"/>	
+																</td>
+																<td style="width: 138px;">
+																	<div class="airline_txt" style="float:left">东航</div>
+																	<div class="airline_txt">CZ 3908</div>	
+																	<div></div>							
+																	<div></div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</td>
+							<td class="bookingInfo" style="width: 365px;">
+								<div>
+									<table>
+										<tbody class="bookinglist">
+											<tr class="f1">
+												<td class="flight_info flight_row">
+													<span style="display:none" class="top_class txt_xs">高端</span>
+													<div style="margin-top: 2px;">经济舱</div>
+												</td>
+												<td class="flight_row" style="width:98px;">
+													<div class="biglight">
+														<span class="base_price">CNY&nbsp;<strong>510</strong></span>
+													</div>
+													<div>
+														<span class="text_low">4.5折&nbsp;&nbsp;</span>
+														<span class="base_txtdiv">退改签</span><input type="hidden" value="" name="termTxt">
+														<span style="display:none" class="termLoad"><img src="/images/loading/loader_S.gif" style="border:0px;"></span>
+													</div>
+												</td>
+												<td class="txt_red flight_info flight_row">
+													<div></div>
+												</td>
+												<td align="left" class="bookingBtn flight_row" style="padding-right: 5px;width:71px;">
+													<form class="fr-item-form"><input type="hidden" value="U0hBUEVLMTMwNTE3MTIwMDEzMDUxNzE0MjBDWjM5MDgzRQ==" class="fr-id">
+														<input type="hidden" value="0-CZ-Y-V-U0hBUEVL-Q05ZJDUxMC4wMA==" class="fr-bid">
+														<input type="hidden" value="OW;SHA-BJS;O;2013-05-17;FSC" class="fr-rid">
+														<input type="hidden" value="FSC" class="fr-src">	<input type="hidden" value="0" name="isFullPrice">
+													</form>
+													<div class="btn_orange" style="margin-right: 0px;">
+														<div class="left"></div>
+														<div class="middle">选择</div>
+														<div class="right"></div>
+													</div>
+													<div align="center" class="img_load" style="display:none;">
+														<img src="/images/loading/loader_S.gif" style="border:0px;"></div>
+														<div style="margin-top: 5px; margin-right: 3px">
+															<a class="show_flight">更多舱位</a><input type="hidden" name="loadComp" value="0">
+															<div align="center" class="img_load_show_flight" style="display:none;"><img src="/images/loading/loader_S.gif" style="border:0px;"></div>
+															<div style="display: block;" class="downup arrow_down_top"></div>
+														</div>
+												</td>
+												<td class="flight_info flight_row">
+													<div style="display:none" class="icon_remark_red txt_xs">座位紧张</div>
+													<div style="display:none" class="icon_remark_white txt_xs">购票限制</div>	
+												</td>
+											</tr>
+											<tr class="f2">
+												<td class="flight_info">
+													<span style="" class="top_class txt_xs">高端</span>
+													<div style="margin-top: 2px;">经济舱</div></td>
+												<td style="width:98px;" class="">
+													<div class="biglight">
+														<span class="base_price">CNY&nbsp;<strong>1,130</strong></span>
+													</div>
+													<div>
+														<span class="text_low">全价&nbsp;&nbsp;</span>
+														<span class="base_txtdiv">退改签</span><input type="hidden" value="" name="termTxt">
+														<span style="display:none" class="termLoad"><img src="/images/loading/loader_S.gif" style="border:0px;"></span>
+													</div>
+												</td>
+												<td class="txt_red flight_info"><div></div></td>
+												<td align="left" class="bookingBtn" style="padding-right: 5px;width:71px;">
+													<div class="btn_orange" style="margin-right: 0px;">
+														<div class="left"></div>
+														<div class="middle">选择</div>
+														<div class="right"></div>
+														
+													</div>
+													<div align="center" class="img_load" style="display:none;"><img src="/images/loading/loader_S.gif" style="border:0px;"></div>
+												</td>
+												<td class="flight_info">
+													<div style="display:none" class="icon_remark_red txt_xs">座位紧张</div>
+													<div style="" class="icon_remark_white txt_xs">购票限制</div>
+												</td>
+											</tr>
+											
+											
+											
+										</tbody>
+									</table>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+
+		</div>
+	</div>
+	
+	<!-- jQuery JavaScript -->
+	<script src="/static/js/jquery.min.js"></script>
+	<!-- Kendo UI Web combined JavaScript -->
+	<script src="/static/js/kendo.web.min.js"></script>
+	<script src="/static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+	<script src="/static/js/phase1/cityList.js"></script>
+	<script src="/static/js/phase1/common.js"></script>
+	<script src="/static/js/phase1/flight.js"></script>
+	
+    </body>
+</html>

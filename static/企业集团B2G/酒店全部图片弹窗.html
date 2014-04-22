@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 B2G 酒店全部图片弹窗</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../static/css/b2g.css" rel="stylesheet" type="text/css"/>
+    <link href="../static/css/b2g_hotel.css" rel="stylesheet" type="text/css"/>   
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/js/jquery.cycle.all.js"></script>
+</head>
+
+<body>
+
+    <div class="allImg clearfix">
+       <div class="bigImg">
+               <a href="javascript:void(0);" class="leftArrow" id="prev">
+              		<div></div>
+              </a>
+              <div id="slideshow" class="pics">
+                    <img src="../static/images/banner/smallimg1.jpg" alt="a"/>
+                    <img src="../static/images/banner/smallimg2.jpg" alt="课桌型会议室"/>
+                    <img src="../static/images/banner/smallimg3.jpg" alt="1"/>
+                    <img src="../static/images/banner/smallimg4.jpg" alt="2"/>
+                    <img src="../static/images/banner/smallimg5.jpg" alt="3"/>
+                    <img src="../static/images/banner/smallimg1.jpg" alt="4"/>
+                    <img src="../static/images/banner/smallimg1.jpg" alt="a"/>
+                    <img src="../static/images/banner/smallimg2.jpg" alt="课桌型会议室"/>
+                    <img src="../static/images/banner/smallimg3.jpg" alt="1"/>
+                    <img src="../static/images/banner/smallimg4.jpg" alt="2"/>
+                    <img src="../static/images/banner/smallimg5.jpg" alt="3"/>
+                    <img src="../static/images/banner/smallimg1.jpg" alt="4"/>
+                    <img src="../static/images/banner/smallimg1.jpg" alt="a"/>
+                    <img src="../static/images/banner/smallimg2.jpg" alt="课桌型会议室"/>
+                    <img src="../static/images/banner/smallimg3.jpg" alt="1"/> 
+              </div>
+              <a href="javascript:void(0);"  class="rightArrow" id="next"> 
+                  <div> </div>
+              </a> 
+              <span id="scrollText"></span>
+         </div>
+         
+         <div class="smallImg">
+              <h3>上海宝华国际酒店</h3>
+              <div class="rankContent"><em></em>[ 五星/豪华 ]</div>
+              <div class="minutelyAddress">
+                   <div style="min-height:37px;">
+                        <em>地址：</em>
+                        <i>上海市虹口区西江湾路718号江湾路718号江湾路718号江湾路718号....</i>
+                   </div>
+                   <div class="imgTitle"><em>全部酒店图片</em></div>
+              </div>
+        </div>
+             
+        <div class="riseBook">
+             <em>￥</em>
+             <b>6200</b>
+             <i>起</i>
+             <button type="button" class="commonBtn lightRedBtn">立即预订<strong></strong></button>
+        </div>
+        
+    </div>
+    
+<!--弹窗结束-->
+
+<script>
+$(function() {
+		   
+    $('#slideshow').before('<ul id="nav">').cycle({
+        fx:     'scrollHorz',
+        speed:  'fast',
+        timeout: 0,
+		prev : "#prev",
+		next: "#next",
+        pager:  '#nav',
+        pagerAnchorBuilder: function(idx, slide) {
+            return '<li><a href="#"><img src="' + slide.src + '" width="80" height="60" /></a></li>';
+        },
+		after:function(){
+			$("#scrollText").html(this.alt);	
+		}
+    });
+});
+</script>
+
+
+</body>
+</html>

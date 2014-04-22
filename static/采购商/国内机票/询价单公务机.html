@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 国内机票 询价单——团队</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+
+    <link href="../../static/css/coin-slider-styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_flight.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.store.css" />
+
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/store/store.js"></script>
+
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+    <script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+    <script src="../../static/js/store/intel_flight_index.js"></script>
+</head>
+<body>
+
+<div class="main-wrapper">
+<header class="main-header">
+    <a class="logo" href="/"><h1>天地行</h1></a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first active"><a herf="#">首页</a></li>
+            <li><a herf="#">国内机票</a></li>
+            <li><a herf="#">国际机票</a></li>
+            <li><a herf="#">酒店</a></li>
+        </ul> 
+    </nav>
+    <nav class="main-links">
+        <ul class="clearfix">
+            <li class="first"><a href="#">订单管理</a></li>
+            <li><a href="#">分销管理</a></li>
+            <li><a href="#">电子钱包</a></li>
+            <li><a href="#">统计报表</a></li>
+            <li><a href="#">客服服务</a></li>
+            <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+            <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+</header>
+<section class="main-body clearfix">
+  
+  <div class="k_place">  <!-- k_place start -->
+      <h2>国内机票团队询价</h2>
+      <div class="businessDesc">
+          <div class="mes_h3"> <h3>业务介绍</h3> </div>
+          <div class="businessDesc_content">
+              &nbsp;&nbsp;&nbsp;&nbsp;公务机是在行政事务和商务活动中用作交通工具的飞行，亦称行政机或商务飞机。公务机一般为9吨以下的小型飞机，可乘4—10人。<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;在一般人的概念中，公务机就是私人小飞机，但这样理解并不全面，在国外的确有许多私人拥有飞机，但那多是单引擎活塞式螺旋桨小飞机，并不属于公务机的范畴内。通常意义上公务机是指4座以上，采用喷气式或涡浆式为动力的飞机。<br/>
+              <div style="height:28px;line-height:26px">&nbsp;&nbsp;&nbsp;&nbsp;<i class="phone"></i>客服电话：<span style="font:bold 16px 'Arial';color:#F1634B">021-56379337</span> 姚小姐<br/></div>
+              &nbsp;&nbsp;&nbsp;&nbsp;公务机的乘机地点根据当地承运航空公司确定的为准，非民航机场登机。如需申请公务机业务，请至少提前2个工作日与我公司联系。
+          </div>
+      </div>
+      <div class="apply_message">
+<script type="text/x-kendo-template" id="city_popup">
+<div id="gn-tabstrip" class="tcy_tabstrip">
+<span class="tcy_title">
+    热门城市/国家（支持中文名/拼音/英文名/三字码）
+</span>
+<ul>
+<li id="hot_city" class="k-state-active">热门</li>
+# for (var i=0; i<data.group.length; i++ ) { #
+<li>#= data.group[i] #</li>
+# } #
+</ul>
+<div id="hot_city_tab">
+<ul class="tcy_list clearfix">
+
+# for(var j=0;j<hotcitylist.length;j++){ #
+# var citylist_item = hotcitylist[j] #
+<li class="item" title="#= citylist_item.code #" data-code="#= citylist_item.code #">#= citylist_item.name #</li>
+# } #
+</ul>
+</div>
+
+# for(var i=0;i<data.citylist.length;i++){ #
+# var citylist_item = data.citylist[i] #
+<div class="city_tab">
+<ul class="tcy_list clearfix">
+  # for(var k=0;k<data.group[i].length;k++){ #
+    <li class="tcy_list_sep">#= data.group[i].split('')[k] #</li>
+    # for(var j=0;j<citylist_item.value.length;j++){ #
+        # var citylist_value_item = citylist_item.value[j]; #
+        # if(citylist_value_item.py.slice(0,1) == data.group[i].split('')[k]) {#
+            <li class="item" title="#= citylist_value_item.code #" data-code="#= citylist_value_item.code #">#= citylist_value_item.name #</li>
+        # } #
+    # } #
+  # } #
+</ul>
+</div>
+
+# } #
+</div>
+</script>
+<script type="text/x-kendo-template" id="ac-add-line-template">
+<tr>
+                                        <td><i class="hitext"> * </i>第<span class="hitext index_num">1</span>程</td>
+                                        <td><i class="hitext"> * </i>出发城市</td>
+                                        <td><input type="text" style="width:105px;" value="" class="city_ac"/></td>
+                                        <td><i class="hitext"> * </i>到达城市</td>
+                                        <td><input type="text" style="width:105px;" value="" class="city_ac"/></td>
+                                        <td><i class="hitext"> * </i>出发日期</td>
+                                        <td><input type="text" value="" class="normal_txt datepicker"/></td>
+                                        <td>
+                                            <div class="op">
+                                                <a href="javascript:void(0)" class="ac-remove-line">删除</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </script>
+           <div class="mes_h3"> <h3>航程信息</h3> </div>
+          <div class="message_content ">
+                <table class="muti_trip" width="700">
+                                    <tbody>
+                                    <tr>
+                                        <td><i class="hitext"> * </i>第<span class="hitext index_num">1</span>程</td>
+                                        <td><i class="hitext"> * </i>出发城市</td>
+                                        <td><input type="text" value="" style="width:105px" class="city_ac"/></td>
+                                        <td><i class="hitext"> * </i>到达城市</td>
+                                        <td><input type="text" value="" style="width:105px" class="city_ac"/></td>
+                                        <td><i class="hitext"> * </i>出发日期</td>
+                                        <td><input type="text" value="" class="normal_txt datepicker"/></td>
+                                        <td>
+                                            <div class="op">
+                                                <a href="javascript:void(0)" class="ac-remove-line">删除</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan=8 style="text-align:right">
+                                    <a href="javascript:;" class="muti_add ac-add-line">添加航程</a>
+                                    
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                                <p>
+                                <span style="vertical-align:top;padding-left:50px;">备注：</span>
+                                <textarea name="" id="" style="width:600px;height:100px"></textarea>
+                                </p>
+          </div>
+      </div>
+      
+      <div class="contacts">
+           <div class="mes_h3"> <h3>联系人信息</h3> </div>
+          <div class="contacts_content">
+           <table cellpadding="0" cellspacing="0" class="mes_tab">
+               <colgroup>
+                   <col width="110px"/>
+               </colgroup>
+               <tr>
+                   <td class="td_head"><em class="important"> * </em>联系人姓名：</td>
+                   <td><input style="width:160px;" type="text" /></td>
+               </tr>
+               <tr>
+                   <td class="td_head"><em class="important"> * </em>联系人手机：</td>
+                   <td><input style="width:160px;" type="text" /></td>               
+               </tr>
+               <tr>
+                   <td> </td>
+                   <td>
+                       <a class="adaptiveButton brightRed_btn">
+                          <span class="left"></span>
+                          <span class="center center_1">提交询价单</span>
+                          <span class="right"></span>
+                       </a>
+                   </td>
+               </tr>
+           </table>
+          </div>
+      </div>
+          
+  </div>  <!-- k_place end -->
+  
+</section>
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+
+</body>
+</html>

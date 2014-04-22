@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 B2G 集团客户</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="../../static/css/b2g.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/kendo.common.css" />
+    <link rel="stylesheet" href="../../static/css/kendo.b2g.css" />
+    <link rel="stylesheet" href="../../static/css/b2g_management.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/b2g_systemSet.css" media="all" />
+
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+    <script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    <script type="text/javascript" src="../../static/js/b2g/common.js"></script>
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+    <!--[if lte IE 9]>
+    <script src="/static/js/html5.js"></script>
+    <![endif]-->
+   
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="top-line"></div>
+    <header class="main-header">
+        <div class="header-content">
+            <a class="logo" href="/">天地行 B2G</a>
+            <nav class="main-nav">
+                <ul class="clearfix">
+                    <li class="first active"><a herf="#">行程预订</a></li>
+                    <li><a herf="#">行程管理</a></li>
+                    <li><a herf="#">数据服务</a></li>
+                    <li><a herf="#">创业维护</a></li>
+                    <li><a herf="#">系统设置</a></li>
+                </ul> 
+            </nav>
+        </div>
+    </header>
+    <div class="header-bar clearfix">
+        <div class="header-bar-content block-client">
+            <div class="block-clientBar" style="padding:0">
+                 <select id="" style="width:160px" data-role="dropdownlist" name="">
+                    <option value="">集团客户</option>
+                    <option value="">真旅</option>
+                </select>
+                <select id="" style="width:160px" data-role="dropdownlist" name="">
+                    <option value="">全部</option>
+                    <option value="">合得国际</option>
+                    <option value="">永恩投资（集团）有限公司</option>
+                    <option value="">苏宁易购</option>
+                    <option value="">新疆龙泽</option>
+                </select>
+                <span>
+                    <a href="javascript:void(0);" class="btn-color2 btn-color">角色管理</a>
+                </span>
+            </div>
+        </div>
+    </div>
+    <section class="main-body clearfix">
+        <div class="main-body-content">
+            <!--<div class="roleManagement">
+                <select id="" style="width:160px" data-role="dropdownlist" name="">
+                    <option value="">集团客户</option>
+                    <option value="">真旅</option>
+                </select>
+                <select id="" style="width:160px" data-role="dropdownlist" name="">
+                    <option value="">全部</option>
+                    <option value="">合得国际</option>
+                    <option value="">永恩投资（集团）有限公司</option>
+                    <option value="">苏宁易购</option>
+                    <option value="">新疆龙泽</option>
+                </select>
+                <span>
+                    <a class="btns btn-c1 btn-s1" href="">角色管理</a>
+                </span>
+            </div>-->
+            <div class="groupUse">
+                    <div class="groupQuery">
+                        <table>
+                            <colgroup>
+                                <col width="80">
+                                <col width="150">
+                                <col width="800">
+                                <col width="90">
+                            </colgroup>
+                            
+                            <tr>
+                                <th>角色名称：</th>
+                                <td><input type="text" /></td>
+                                <td>
+                                    <button class="btns btn-c3">查 询</button>
+                                </td>
+                                <td>
+                                    <a href="#">
+                                        <i class="icon icon2"></i>
+                                        新增角色
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="groupList">
+                         <table class="groupTbList">  
+                             <colgroup>
+                                  <col width="10px"/>
+                                  <col width="200px"/>
+                                  <col width="230px"/>
+                                  <col width="140px"/>
+                                  <col width="420px"/>
+                                  <col width="150px"/>
+                             </colgroup>                           
+                             <thead>
+                                 <tr>
+                                     <th>&nbsp;</th>
+                                     <th>角色名称</th>
+                                     <th>适用范围</th>
+                                     <th>用户量</th>
+                                     <th>描述</th>
+                                     <th style="text-align:center;">操作</th>
+                                 </tr>
+                             </thead>
+                             <tbody>
+                                 <tr>
+                                     <td>&nbsp;</td>
+                                     <td>管理员</td>
+                                     <td>所有集团客户</td>
+                                     <td>454541</td>
+                                     <td><em class="grayfont">描述描述描述描述描述描述描……</em></td>
+                                     <td>
+                                         <span><a href="" class="text2">复制</a></span>
+                                         <span><a href="" class="text2">编辑</a></span>
+                                         <span><a href="" class="text2">删除</a></span>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td>&nbsp;</td>
+                                     <td>差旅秘书</td>
+                                     <td>所有集团客户</td>
+                                     <td>454541</td>
+                                     <td><em class="grayfont">描述描述描述描述描述描述描述描述描述描……</em></td>
+                                     <td>
+                                         <span><a href="" class="text2">复制</a></span>
+                                         <span><a href="" class="text2">编辑</a></span>
+                                         <span><a href="" class="text2">删除</a></span>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td>&nbsp;</td>
+                                     <td>审批人</td>
+                                     <td>所有集团客户</td>
+                                     <td>454541</td>
+                                     <td><em class="grayfont">描述描述描述描述描述描述描述描述描述描……</em></td>
+                                     <td>
+                                         <span><a href="" class="text2">复制</a></span>
+                                         <span><a href="" class="text2">编辑</a></span>
+                                         <span><a href="" class="text2">删除</a></span>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td>&nbsp;</td>
+                                     <td>苏宁普通员工</td>
+                                     <td>苏宁易购</td>
+                                     <td>454541</td>
+                                     <td><em class="grayfont">描述描述描述描述描述描述描述描述描述描……</em></td>
+                                     <td>
+                                         <span><a href="" class="text2">复制</a></span>
+                                         <span><a href="" class="text2">编辑</a></span>
+                                         <span><a href="" class="text2">删除</a></span>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td>&nbsp;</td>
+                                     <td>审批人</td>
+                                     <td>所有集团客户</td>
+                                     <td>454541</td>
+                                     <td><em class="grayfont">描述描述描述描述描述描述描述描述描述描……</em></td>
+                                     <td>
+                                         <span><a href="" class="text2">复制</a></span>
+                                         <span><a href="" class="text2">编辑</a></span>
+                                         <span><a href="" class="text2">删除</a></span>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td>&nbsp;</td>
+                                     <td>审批人</td>
+                                     <td>所有集团客户</td>
+                                     <td>454541</td>
+                                     <td><em class="grayfont">描述描述描述描述描述描述描述描述描述描……</em></td>
+                                     <td>
+                                         <span><a href="" class="text2">复制</a></span>
+                                         <span><a href="" class="text2">编辑</a></span>
+                                         <span><a href="" class="text2">删除</a></span>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td>&nbsp;</td>
+                                     <td>管理员</td>
+                                     <td>所有集团客户</td>
+                                     <td>454541</td>
+                                     <td><em class="grayfont">描述描述描述描述描述描述描述描述描述描……</em></td>
+                                     <td>
+                                         <span><a href="" class="text2">复制</a></span>
+                                         <span><a href="" class="text2">编辑</a></span>
+                                         <span><a href="" class="text2">删除</a></span>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td>&nbsp;</td>
+                                     <td>差旅秘书</td>
+                                     <td>所有集团客户</td>
+                                     <td>454541</td>
+                                     <td><em class="grayfont">描述描述描述描述描述描述描述描述描述描……</em></td>
+                                     <td>
+                                         <span><a href="" class="text2">复制</a></span>
+                                         <span><a href="" class="text2">编辑</a></span>
+                                         <span><a href="" class="text2">删除</a></span>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td>&nbsp;</td>
+                                     <td>审批人</td>
+                                     <td>所有集团客户</td>
+                                     <td>454541</td>
+                                     <td><em class="grayfont">描述描述描述描述描述描述描述描述描述描……</em></td>
+                                     <td>
+                                         <span><a href="" class="text2">复制</a></span>
+                                         <span><a href="" class="text2">编辑</a></span>
+                                         <span><a href="" class="text2">删除</a></span>
+                                     </td>
+                                 </tr>                                 
+                                 <tr>
+                                     <td>&nbsp;</td>
+                                     <td>苏宁普通员工</td>
+                                     <td>苏宁易购</td>
+                                     <td>454541</td>
+                                     <td><em class="grayfont">描述描述描述描述描描述描述描述述描述描……</em></td>
+                                     <td>
+                                         <span><a href="" class="text2">复制</a></span>
+                                         <span><a href="" class="text2">编辑</a></span>
+                                         <span><a href="" class="text2">删除</a></span>
+                                     </td>
+                                 </tr>
+                             </tbody>
+                         </table>
+                    </div> 
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <p class="copyright">Copyright &copy; 2013 天地行 All Rights Reserved.     沪ICP备08101503号</p>
+    </footer>
+</div>
+
+
+</body>
+</html>
+

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>客户管理 供应商-审核供应商</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+<link rel="stylesheet" href="/static/css/kendo.common.min.css" />
+<link rel="stylesheet" href="/static/css/kendo.gray.css" />
+<link rel="stylesheet" href="/static/css/kendo.reset.css" />
+<link rel="stylesheet" href="/static/css/common.css" />
+<link rel="stylesheet" href="/static/css/b2b.css" />
+<link rel="stylesheet" href="/static/css/khgl.css" />
+
+<script type="text/javascript" src="/static/js/vendor/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/plugins/jquery.fixedBar.js"></script>
+<script type="text/javascript" src="/static/js/kendo.web.js"></script>
+<script type="text/javascript" src="/static/js/cultures/kendo.culture.zh-CN.min.js"></script>
+<script type="text/javascript" src="/static/js/global.js"></script>
+<script type="text/javascript" src="/static/js/khgl.js"></script>
+<!--[if lt IE 8]>
+    <link rel="stylesheet" href="/static/css/ie.css" />
+    <script type="text/javascript" src="/static/js/vendor/IE7.min.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="/static/js/sync.js"></script>
+</head><body>  <div id="extHeader">
+    <div></div>
+</div>
+
+<div id="container">
+    <div class="header">
+        <h1></h1>
+        <div>
+            <span>你好,${name}</span>
+            <a href="javascript:void(0);">退出</a>
+        </div>
+        <ul id="top_menu">
+            <li><a href="javascript:void(0);">国内机票</a></li>
+            <li><a href="javascript:void(0);">国际机票</a></li>
+            <li><a href="javascript:void(0);">酒店</a></li>
+            <li><a href="javascript:void(0);">票证中心</a></li>
+            <li><a href="javascript:void(0);">财务管理</a></li>
+            <li><a href="javascript:void(0);">客户管理</a></li>
+            <li class="current"><a href="javascript:void(0);">系统设置</a></li>
+        </ul>
+        <ol class="sub_menu">
+            <li class="current"><a href="javascript:void(0);">公告信息</a></li>
+            <li><a href="javascript:void(0);">公司信息</a></li>
+            <li><a href="javascript:void(0);">组织架构</a></li>
+            <li><a href="javascript:void(0);">角色维护</a></li>
+            <li><a href="javascript:void(0);">基础数据</a></li>
+        </ol>
+        <div id="message">
+            <a href="javascript:void(0);">消息</a>
+            <span>New</span>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="sub_menu_bar"></div>
+    <div id="mainContent">
+        <div class="actions block">
+    <div class="col col-l sep-r">
+        <button class="btns btn-return">返回</button>
+    </div>
+    <div class="col col-l" style="padding-left:10px;">
+        <a class="item highlight" href="#">审核供应商</a>
+    </div>
+    <div class="col col-r sep-l">
+        <button class="btns btn-blue">取  消</button>
+        <button class="btns btn-blue">保  存</button>
+        <button class="btns btn-blue ac-refuse">审核拒绝</button>
+        <button class="btns btn-blue ac-reject">审核驳回</button>
+        <button class="btns btn-blue">审核通过</button>
+    </div>
+</div>
+<div class="block">
+    <div class="block-warning">
+        审核驳回原因：说明文说明文说明文字说明文字说明文字说明文字字字说明文字 
+    </div>
+    <div class="block-field"> 
+        <div class="block-title">
+            <span>公司信息</span> 
+        </div>
+        <ul class="flat-list">
+            <li style="width:260px;">
+            <label class="vertical-head">公司全称</label> 
+            <input style="width:197px">
+            </li> 
+            <li style="width:180px;">
+            <label class="vertical-head">公司简称</label> 
+            <input style="width:98px;">
+            </li>
+            <li style="width:160px;">
+            <label class="vertical-head">法人姓名</label> 
+            <input style="width:80px;">
+            </li>
+            <li>
+            <label class="vertical-head">法人证件</label> 
+            <input data-role="dropdownlist" data-source="['身份证']" style="width:100px">
+            <input style="width:140px;">
+            </li>
+            <li style="width:443px;">
+            <label class="vertical-head">公司地址</label> 
+            <input data-role="dropdownlist" data-source="['省']" style="width:60px">
+            <input data-role="dropdownlist" data-source="['市']" style="width:60px">
+            <input data-role="dropdownlist" data-source="['区']" style="width:60px">
+            <input style="width:172px">
+            </li> 
+            <li>
+            <label class="vertical-head">邮政编码</label> 
+            <input style="width:80px;">
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="block-field">
+        <div class="block-title">
+            <span>联系方式</span> 
+        </div>
+        <div class="clearfix">
+            <div class="col" style="width:460px;float:left;">
+                <strong>负责人信息：</strong>
+                <ul class="flat-list">
+                    <li style="width:150px;">
+                    <label class="vertical-head" style="width:50px;">姓名</label> 
+                    <input style="width:90px;">
+                    </li> 
+                    <li style="width:150px;">
+                    <label class="vertical-head" style="width:50px;">联系电话</label> 
+                    <input style="width:90px;">
+                    </li> 
+                    <li style="width:150px;">
+                    <label class="vertical-head" style="width:50px;">手机</label> 
+                    <input style="width:90px;">
+                    </li>
+                    <li style="width:150px;">
+                    <label class="vertical-head" style="width:50px;">电子邮箱</label> 
+                    <input style="width:90px;">
+                    </li> 
+                    <li style="width:150px;">
+                    <label class="vertical-head" style="width:50px;">QQ</label> 
+                    <input style="width:90px;">
+                    </li> 
+                    <li style="width:150px;">
+                    <label class="vertical-head" style="width:50px;">传真</label> 
+                    <input style="width:90px;">
+                    </li> 
+                </ul>
+            </div>
+            <div class="col" style="width:460px;float:left;">
+                <strong>业务联系人信息：</strong>
+                <ul class="flat-list">
+                    <li style="width:150px;">
+                    <label class="vertical-head" style="width:50px;">姓名</label> 
+                    <input style="width:90px;">
+                    </li> 
+                    <li style="width:150px;">
+                    <label class="vertical-head" style="width:50px;">联系电话</label> 
+                    <input style="width:90px;">
+                    </li> 
+                    <li style="width:150px;">
+                    <label class="vertical-head" style="width:50px;">手机</label> 
+                    <input style="width:90px;">
+                    </li>
+                    <li style="width:150px;">
+                    <label class="vertical-head" style="width:50px;">电子邮箱</label> 
+                    <input style="width:90px;">
+                    </li> 
+                    <li style="width:150px;">
+                    <label class="vertical-head" style="width:50px;">QQ</label> 
+                    <input style="width:90px;">
+                    </li> 
+                    <li style="width:150px;">
+                    <label class="vertical-head" style="width:50px;">传真</label> 
+                    <input style="width:90px;">
+                    </li> 
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="block-field">
+        <div class="block-title">
+            <span>资质证书</span> 
+        </div>
+        <ul class="flat-list">
+            <li style="padding-right:20px;">
+            <label class="vertical-head"><s>*</s>营业执照扫描件</label> 
+            <input style="width:100px;">
+            <input type="file">
+            <div class="row">
+                <img src="/images/agphoto.png" width="290" alt="" />
+            </div>
+            </li>
+            <li style="padding-right:20px;">
+            <label class="vertical-head"><s>*</s>税务登记证扫描件</label> 
+            <input style="width:100px;">
+            <input type="file">
+            <div class="row">
+                <img src="/images/agphoto.png" width="290" alt="" />
+            </div>
+            </li>
+            <li>
+            <label class="vertical-head"><s>*</s>一般纳税人证书</label> 
+            <input style="width:100px;">
+            <input type="file">
+            <div class="row">
+                <img src="/images/agphoto.png" width="290" alt="" />
+            </div>
+            </li>
+        </ul>
+    </div>
+    <div class="block-field">
+        <div class="block-title">
+            <span>创建账号</span> 
+        </div>
+        <ul class="flat-list">
+            <li style="width:220px;">
+            <label class="vertical-head">用户名</label> 
+            <input style="width:120px;">
+            </li>
+            <li>
+            <label class="vertical-head">电子邮件</label> 
+            <input style="width:120px;">
+            </li>
+        </ul>
+    </div>
+    <div class="block-field">
+        <div class="block-title">
+            <span>内部设置</span> 
+        </div>
+        <ul class="flat-list">
+            <li style="width:220px;">
+            <label class="vertical-head">供应类型</label> 
+            <input data-role="dropdownlist" style="width:100px;" data-source="['全部']">
+            </li>
+            <li style="width:220px;">
+            <label class="vertical-head">客户状态</label> 
+            <span>&nbsp;&nbsp;正常</span>
+            </li>
+            <li>
+            <label class="vertical-head">结帐方式</label> 
+            <span> <input type="radio" checked>现结 </span>
+            &nbsp;&nbsp;
+            <span> <input type="radio" checked>月结 </span>
+            &nbsp;&nbsp;
+            <span> <input type="radio" checked>周结 </span>
+            &nbsp;&nbsp;
+            <span> <input type="radio" checked>其他 <input style="width:100px;"> </span>
+            </li>
+            <li>
+            <label class="vertical-head">备注</label> 
+            <input style="width:400px;">
+            </li>
+        </ul>
+    </div>
+    <div class="block-field">
+        <div class="block-title">
+            <span>合作协议</span> 
+            <span class="block-module-action">
+                <button class="btns btn-ac-blue ac-add-agreement">添加新协议</button> 
+            </span>
+        </div>
+        <ul class="flat-list">
+            <li style="padding-right:40px;">
+            <label class="vertical-head">有效期</label> 
+            <input style="width:120px;" data-role="datepicker"> 至
+            <input style="width:120px;" data-role="datepicker">
+            </li> 
+            <li>
+            <label class="vertical-head">附件</label> 
+            <input style="width:100;">
+            <input type="file">
+            </li>
+        </ul>
+    </div>
+
+</div>
+<script type="text/x-kendo-template" id="ac-add-agreement-template">
+<ul class="flat-list">
+                    <li style="padding-right:40px;">
+                    <label class="vertical-head">有效期</label> 
+                    <input style="width:120px;" data-role="datepicker"> 至
+                    <input style="width:120px;" data-role="datepicker">
+                    </li> 
+                    <li>
+                    <label class="vertical-head">附件</label> 
+                    <input style="width:100;">
+                <input type="file">
+                    <button class="btns btn-ac-blue ac-remove-agreement">删除</button>
+                    </li>
+                </ul>
+</script>
+
+<script type="text/x-kendo-template" id="ac-reject-template">
+<div class="row">
+    <span style="font-size:14px;">填写原因：</span>
+</div>
+<div class="row">
+    <textarea style="width:405px;height:60px;"></textarea>
+</div>
+        <div class="row" style="text-align:right;">
+            <button class="btns button_1_2 ac-submit">提 交</button> 
+            <button class="btns button_2_2">取 消</button> 
+        </div>
+
+</script>
+<script type="text/x-kendo-template" id="ac-refuse-template">
+<div class="row">
+    <span style="font-size:14px;">填写原因：</span>
+</div>
+<div class="row">
+    <textarea style="width:405px;height:60px;"></textarea>
+</div>
+        <div class="row" style="text-align:right;">
+            <button class="btns button_1_2 ac-submit">提 交</button> 
+            <button class="btns button_2_2">取 消</button> 
+        </div>
+
+
+</script>
+<script type="text/javascript">
+new PopWindow('.ac-reject',{
+    width:470,
+    title:'审核驳回',
+    template:'#ac-reject-template'
+}).init();
+
+new PopWindow('.ac-refuse',{
+    width:470,
+    title:'审核拒绝',
+    template:'#ac-refuse-template'
+}).init();
+</script>
+            </div>
+</div>
+
+<div id="extFooter">
+    <div>
+        <p>
+        <a href="javascript:void(0);">关于我们</a>&nbsp;|
+        <a href="javascript:void(0);">微博</a>&nbsp;|
+        <a href="javascript:void(0);">服务条款</a>&nbsp;|
+        <a href="javascript:void(0);">隐私政策</a>&nbsp;|
+        </p>
+        <p>客户服务热线:400-720-6666</p>
+    </div>
+</div>
+</body>
+</html>

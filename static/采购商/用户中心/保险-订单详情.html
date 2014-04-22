@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天地行 采购商 用户中心 保险-订单详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     
+    <link rel="stylesheet" href="../../static/css/smoothness/jquery-ui-1.10.3.custom.css" />
+     
+    <link href="../../static/css/coin-slider-styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../static/css/store_reset.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/store.css" media="screen" />
+    <link rel="stylesheet" href="../../static/css/store_flight.css" media="screen" />    
+    <link rel="stylesheet" href="../../static/css/kendo.common.min.css" />
+	<link rel="stylesheet" href="../../static/css/kendo.store.css" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/js/kendo.web.js"></script>
+	<script type="text/javascript" src="../../static/js/cultures/kendo.culture.zh-CN.min.js"></script>    
+
+    <!--[if IE]>
+    <script src="../../static/js/html5.js"></script>
+    <![endif]-->
+    <script src="../../static/js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="../../static/js/i18n/jquery.ui.datepicker-zh-CN.js"></script>
+    <script type="text/javascript" src="../../static/js/global.js"></script>
+    
+    <script type="text/javascript" src="../../static/js/store/store.js"></script>
+</head>
+<body>
+
+<div class="main-wrapper">
+<header class="main-header">
+    <a class="logo" href="/"><h1>天地行</h1></a>
+    <nav class="main-nav">
+        <ul class="clearfix">
+            <li class="first active"><a herf="#">首页</a></li>
+            <li><a herf="#">国内机票</a></li>
+            <li><a herf="#">国际机票</a></li>
+            <li><a herf="#">酒店</a></li>
+        </ul> 
+    </nav>
+    <nav class="main-links">
+        <ul class="clearfix">
+            <li class="first"><a href="#">订单管理</a></li>
+            <li><a href="#">分销管理</a></li>
+            <li><a href="#">电子钱包</a></li>
+            <li><a href="#">统计报表</a></li>
+            <li><a href="#">客服服务</a></li>
+            <li><span class="hyper-link"><u>lfdak</u>
+                                    <i class="arrow-down"></i>
+                                    <div class="hyper-text">
+                                        <a href="#">提交审核</a>
+                                        <a href="#">申请出票</a>
+                                        <a href="#">提交审核</a>
+                                        <a href="#">提交审核</a>
+                                    </div>
+                                    </span></li>
+            <li><a class="link-message" href="#"><i class="icon-message"></i>消息<i class="message-count">5</i></a></li>
+            </ul>
+        </nav>
+        <span class="phone">客服电话：400-720-6666</span>
+</header>
+<section class="main-body clearfix">    
+        
+    <div class="order">  <!--order start-->
+         <div class="orTitle clearfix">
+              <a href="javascript:void(0);"> <em>&nbsp;</em> 返回</a>
+              <ul class="upProcess">
+                  <li>
+                      <i class="normal">1</i> <b>创建订单</b> <em>&nbsp;</em>
+                  </li>
+                  <li>
+                      <i class="normal">2</i> <b>支 付</b> <em>&nbsp;</em>
+                  </li>
+                  <li>
+                      <i class="unable">3</i> <b class="untanned">投 保</b> <em>&nbsp;</em>
+                  </li>
+                  <li class="currentFlow">
+                      <i class="hightlight">4</i> <b>投保成功</b>
+                  </li>
+              </ul>
+         </div>
+         <div class="order_trace clearfix">
+                 <div class="trace">订单跟踪：</div>
+                 <table cellpadding="0" cellspacing="0" class="trace_list">
+                     <colgroup>
+                          <col width="265px"/>
+                          <col width="200px"/>
+                          <col width="330px"/>
+                     </colgroup>
+                     <tr>
+                         <th>处理时间</th>
+                         <th>操作员</th>
+                         <th>处理信息</th>
+                         <th><a href="javascript:void(0);" class="toggle_trigger" toggle='{"target":".trace_list .more","filter":"","toggleText":["查看全部","收起"]}'>收起</a></th>
+                     </tr>
+                     <tr class="more examine">
+                         <td>2013-11-16 07:20:15</td>
+                         <td>客服</td>
+                         <td>投保成功，保单号：280101110847</td>
+                         <td> </td>
+                     </tr>
+                     <tr class="more">
+                         <td>2013-11-15 16:00:21</td>
+                         <td>客服</td>
+                         <td>投保</td>
+                         <td> </td>
+                     </tr>
+                 </table>  
+         </div>       
+    </div>  <!--order end-->
+    
+    <table class="endorseOrder">
+           <colgroup>
+                 <col width="255"/>
+                 <col width="270"/>
+                 <col width="450"/>
+           </colgroup>
+           <tr>
+               <th><span class="orderNO"><b>订单号：</b><strong>31023242354364564</strong></span></th>
+               <th><span id="child_order_trigger" class="relevanceOr">关联订单<i>(0)</i> <em>&nbsp;</em></span></th>
+               <th></th>
+               <th></th>
+           </tr>
+           <tr>
+               <td>下单时间：2013-12-18 15:08:37</td>
+               <td>支付方式：天地行账户可用余额</td>
+               <td>状态：<b class="endorsing">投保成功</b></td>
+           </tr>
+    </table>   
+    
+    <div class="departure">
+        <div class="chief"> <h3>产品信息</h3></div>
+        <table cellpadding="0" cellspacing="0" class="route">
+             <colgroup>
+                 <col width="120px"/>
+                 <col width="120px"/>
+                 <col width="115px"/>
+                 <col width="110px"/>
+                 <col width="140px"/>
+                 <col width="105px"/>
+                 <col width="120px"/>
+                 <col width="120px"/>
+             </colgroup>        
+            <thead>
+                <tr>
+                    <th>产品名称</th>
+                    <th>险种编号</th>
+                    <th>保险险种</th>
+                    <th>保险期限</th>
+                    <th>最高保额（元）</th>
+                    <th>面价</th>
+                    <th>保险费用</th>
+                    <th>适用范围</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>寿康电子保险</td>
+                    <td>10101242</td>
+                    <td>航空意外险</td>
+                    <td>7天</td>
+                    <td>￥400,000</td>
+                    <td>￥20.00</td>
+                    <td><b class="orangeChar">￥4.00</b></td>
+                    <td>国内机票</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="chief"> <h3>投保人信息</h3></div>
+        <table cellpadding="0" cellspacing="0" class="route">
+             <colgroup>
+                 <col width="140px"/>
+                 <col width="165px"/>
+                 <col width="185px"/>
+                 <col width="130px"/>
+                 <col width="170px"/>
+                 <col width="150px"/>
+             </colgroup>        
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>证件类型</th>
+                    <th>证件号码</th>
+                    <th>性别</th>
+                    <th>出生日期</th>
+                    <th>手机号码</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>xx</td>
+                    <td>身份证</td>
+                    <td>331081199106046012</td>
+                    <td>男</td>
+                    <td>1991-06-04</td>
+                    <td>13593234233</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="chief"> <h3>被保险人信息</h3></div>
+        <table cellpadding="0" cellspacing="0" class="route routex">
+             <colgroup>
+                 <col width="90px"/>
+                 <col width="100px"/>
+                 <col width="145px"/>
+                 <col width="60px"/>
+                 <col width="115px"/>
+                 <col width="110px"/>
+                 <col width="110px"/>
+                 <col width="115px"/>
+                 <col width="110px"/>
+             </colgroup>        
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>证件类型</th>
+                    <th>证件号码</th>
+                    <th>性别</th>
+                    <th>出生日期</th>
+                    <th>手机号码</th>
+                    <th>生效日期</th>
+                    <th>保单号</th> 
+                    <th>操作状态</th>                   
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>xx</td>
+                    <td>身份证</td>
+                    <td>331081199106046012</td>
+                    <td>男</td>
+                    <td>1991-06-04</td>
+                    <td>13593234233</td>
+                    <td>2013-12-25</td>
+                    <td>280101110841</td>
+                    <td>投保成功</td>
+                </tr>
+                <tr class="disabled">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>2013-12-25</td>
+                    <td>280101110841</td>
+                    <td>投保失败</td>
+                </tr>
+            </tbody>
+        </table>
+         
+         <div class="shouInfo"><b>受益人信息：</b><em>法定</em></div>
+                
+     </div>
+     
+     <div class="accountInfo" id="ac">
+         <div class="accountTit clearfix">
+              <h3>结算信息</h3>
+              <div class="acTotal">
+                  保险数量 &nbsp; <b>1份</b> &nbsp; X &nbsp; 保险费用 &nbsp; <b>￥4.00</b>元/份 &nbsp; =  &nbsp; <em>应收合计</em> <strong>￥4.00</strong>
+                  <a class="adaptiveButton brightRed_btn" style="margin-left:15px;">
+                        <span class="left"></span>
+                        <span class="center center_1">退 保</span>
+                        <span class="right"></span>
+                 </a>
+              </div>
+         </div>
+    </div>
+    
+  
+      <div class="reOrder" style="display:none;" id="child_order">
+           <div class="reTi clearfix">
+               <span class="reNO"><b>订单号：</b><strong>31023242354364564</strong></span>
+               <label class="re_order">关联订单 <i>(3)</i> <em></em></label>
+           </div>
+           <div class="rawOrd clearfix">
+               <span class="rawNum">原订单 <a href="javascript:void(0);">1234567890</a></span>
+               <em class="ordNum">2580</em>
+           </div>
+           <ul class="orderSta">
+               <li>
+                   <i class="signOrd"> <em></em> </i>
+                   <div class="dateSta">
+                        <span>20130705 11:23 </span> <em class="sta">审核中</em>
+                   </div>
+                   <div class="staList">
+                           <table>
+                                 <colgroup>
+                                       <col width="290px"/>
+                                       <col width="55px"/>
+                                 </colgroup>
+                                 <tr>
+                                     <td>退票单 <a href="javascript:void(0);">030312103112260001</a> &nbsp; 操作人：王二</td>
+                                     <td rowspan="3" class="weight">-1299</td>
+                                 </tr>
+                                 <tr>
+                                     <td>于春东 PEK-PVG/PVG-PEK 退票</td>
+                                 </tr>
+                                 <tr>
+                                     <td>方永军 PEK-PVG/PVG-PEK 退票....</td>
+                                 </tr>
+                           </table>
+                     </div>
+               </li>
+               <li>
+                   <i class="signOrd"> <em></em> </i>
+                   <div class="dateSta">
+                        <span>20130705 11:23 </span> <em class="sta">已审核</em>
+                   </div>
+                   <div class="staList currentSta">
+                           <table>
+                                 <colgroup>
+                                       <col width="290px"/>
+                                       <col width="55px"/>
+                                 </colgroup>
+                                 <tr>
+                                     <td>退票单 <a href="javascript:void(0);">030312103112260001</a> &nbsp; 操作人：王二</td>
+                                     <td rowspan="3" class="weight">0</td>
+                                 </tr>
+                                 <tr>
+                                     <td>于春东 PEK-PVG/PVG-PEK 退票</td>
+                                 </tr>
+                                 <tr>
+                                     <td>方永军 PEK-PVG/PVG-PEK 退票....</td>
+                                 </tr>
+                           </table>
+                     </div>
+               </li>
+               <li>
+                   <i class="signOrd"></i>
+                   <div class="dateSta">
+                        <span>20130705 11:23 </span> <em class="sta">审核中</em>
+                   </div>
+                   <div class="staList">
+                           <table>
+                                 <colgroup>
+                                       <col width="290px"/>
+                                       <col width="55px"/>
+                                 </colgroup>
+                                 <tr>
+                                     <td>退票单 <a href="javascript:void(0);">030312103112260001</a> &nbsp; 操作人：王二</td>
+                                     <td rowspan="3" class="weight">-1299</td>
+                                 </tr>
+                                 <tr>
+                                     <td>于春东 PEK-PVG/PVG-PEK 退票</td>
+                                 </tr>
+                                 <tr>
+                                     <td>方永军 PEK-PVG/PVG-PEK 退票....</td>
+                                 </tr>
+                           </table>
+                     </div>
+               </li>
+           </ul>
+      </div>  
+     
+</section>
+<footer class="main-footer">
+    <center>
+        <a href="#">隐私问题</a>
+        <i class="bar">|</i>
+        <a href="#">常见问题</a>
+        <i class="bar">|</i>
+        <a href="#">关于我们</a>
+        <i class="bar">|</i>
+        <a href="#">媒体中心</a>
+        <i class="bar">|</i>
+        <a href="#">联系我们</a>
+    </center>
+    <center class="copyright">
+        Copyright &copy; 2012 天地行 All Rights Reserved.     沪ICP备08101503号 
+    </center>
+</footer>
+</div>
+
+</body>
+</html>
+
+
+ <script type="text/javascript">
+	$(function(){
+        $("body").click(function(e){
+            $("#child_order").hide();
+        });
+        $("#child_order_trigger").click(function(e){
+			var pos = $(this).closest("table.endorseOrder").offset();
+			$("#child_order").css({left:pos.left,top:pos.top}).toggle();
+            e.stopPropagation();
+        });
+		$("#child_order").click(function(e){
+			e.stopPropagation();					 
+		});
+        $('#ac').fixedBar({
+            inverse:true
+        });
+	});
+ </script>
