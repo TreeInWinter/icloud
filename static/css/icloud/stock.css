@@ -1,5 +1,60 @@
-.main-body p{
+.main-body p {
     height: 100px;
 }
+/** 左边menu */
 
+.leftMenu {
+    z-index: 4;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    width: 150px;
+    border: 1px solid #bbb;
+}
+.leftMenu li {
+    z-index: 2;
+    position: relative;
+    display: block;
+    height: 31px;
+    line-height: 31px;
+    overflow: hidden;
+    margin: 1px 10px 0;
+    vertical-align: bottom;
+    border-bottom: 1px solid #dedede;
+}
+.leftMenu .first {
+    background: none;
+}
+.leftMenu a {
+    width: 94px;
+    display: block;
+    font-size: 15px;
+    color: #3c3c3c;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    font-weight: 700;
+}
+.leftMenu a:hover {
+    text-decoration: none;
+    background-color: #f5f5f5;
+    color: #e52c48;
+    font-weight: bold;
+}
+.leftMenu .active a {
+    background-color: #f5f5f5;
+    position: relative;
+    z-index: 1;
+    font-weight: bold;
+    color: #e52c48;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #e52c48;
+}
+/** 主页内容内容*/
 
+.mainPageContent {
+    background: #fff;
+    margin: 0 0 0 220px;
+}
