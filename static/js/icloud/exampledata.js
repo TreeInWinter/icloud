@@ -67,15 +67,16 @@ function fillToCharts() {
         }
     ]
     };
-    
+
     var example = document.getElementById("echartExample");
-    
+
+    var example2 = document.getElementById("echartExample2");
     var myBarEchart = echarts.init(example);
     myBarEchart.setOption(option);
+    var myBarEchart2 = echarts.init(example2);
+    myBarEchart2.setOption(option);
 }
 
-$(function(){
-    alert("nihao");
+$(function () {
     fillToCharts();
-    
 });

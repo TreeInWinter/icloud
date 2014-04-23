@@ -1,15 +1,23 @@
 .main-body p {
     height: 100px;
 }
+/** 主页内容内容*/
+
+.mainPageContent {
+    height: 100%;
+    width: 800px;
+    background: #fff;
+    margin: 0 0 0 220px;
+}
 /** 左边menu */
 
 .leftMenu {
+    float: left;
     z-index: 4;
-    position: absolute;
     top: 0;
-    left: -1px;
     width: 150px;
     border: 1px solid #bbb;
+    height: 100%;
 }
 .leftMenu li {
     z-index: 2;
@@ -51,10 +59,4 @@
     border-bottom-width: 2px;
     border-bottom-style: solid;
     border-bottom-color: #e52c48;
-}
-/** 主页内容内容*/
-
-.mainPageContent {
-    background: #fff;
-    margin: 0 0 0 220px;
 }

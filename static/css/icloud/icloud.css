@@ -1,262 +1,250 @@
-body{
-    background:#fff;
-    font-size:12px;
+body {
+    background: #fff;
+    font-size: 12px;
 }
-
-.main-wrapper{
-    position:absolute;
-    width:100%;
+.main-wrapper {
+    position: absolute;
+    width: 100%;
     max-height: 28px;
 }
-
 /** header */
-.main-header{
-    position:fixed;
+
+.main-header {
+    position: fixed;
     z-index: 10000;
-    width:100%;
-    margin:0 auto;
+    width: 100%;
+    margin: 0 auto;
     height: 75px;
     border-bottom: 1px solid #eee;
-    -webkit-box-shadow: rgba(0,0,0,.1) 0 1px 5px;
+    -webkit-box-shadow: rgba(0, 0, 0, .1) 0 1px 5px;
     z-index: 10000;
     background: #4880ea;
 }
-
-.header-wrapper{
-    position:absolute;
-    width:100%;
+.header-wrapper {
+    position: absolute;
+    width: 100%;
     height: 28px;
     background: #f5f5f5 no-repeat;
 }
 .main-menu {
-    position:relative;
-    margin:0 auto;
+    position: relative;
+    margin: 0 auto;
     width: 1024px;
 }
-
 /** main link  */
-.main-links{
-    z-index:999;
-    position:absolute; 
-    right:0;
+
+.main-links {
+    z-index: 999;
+    position: absolute;
+    right: 0;
     top: 2px;
 }
-.main-links li{
-    position:relative;
-    float:left;
-    background:url(../../images/icloud/style/i4.png) 0 50% no-repeat;
-    padding:7px 10px;
-	margin-right:2px;
-    z-index:2;
+.main-links li {
+    position: relative;
+    float: left;
+    background: url(../../images/icloud/style/i4.png) 0 50% no-repeat;
+    padding: 7px 10px;
+    margin-right: 2px;
+    z-index: 2;
 }
-.main-links .first{
-    background:none;
+.main-links .first {
+    background: none;
 }
-.main-links a{
-    color:#6d6d6d;
+.main-links a {
+    color: #6d6d6d;
 }
-
-.main-links a:hover{
-    text-decoration:none;
-    color:#e52c48;
+.main-links a:hover {
+    text-decoration: none;
+    color: #e52c48;
 }
-
 /** logo **/
-.logo{
-    top: 30px;
-    position:absolute;
-    width:110px;
-    height:46px;
-    display:block;
-    background:url(../../images/icloud/landing_logo.png) no-repeat;
-}
-.logo h1{
-    display:none;
-}
 
+.logo {
+    top: 30px;
+    position: absolute;
+    width: 110px;
+    height: 46px;
+    display: block;
+    background: url(../../images/icloud/landing_logo.png) no-repeat;
+}
+.logo h1 {
+    display: none;
+}
 /** main-nav */
-.main-nav{
+
+.main-nav {
     height: 40px;
     line-height: 40px;
-    position:absolute;
+    position: absolute;
     top: 30px;
-    left:155px;
+    left: 155px;
 }
-
-.main-nav li{
+.main-nav li {
     width: 90px;
-    float:left;
-    margin-right:5px;
+    float: left;
+    margin-right: 5px;
 }
-.main-nav .first{
-    background:none;
+.main-nav .first {
+    background: none;
 }
-
-.main-nav a{
-    width:94px;
-    display:block;
-    font-size:15px;
-    color:#fff;
-    cursor:pointer;
-    text-align:center;
-    position:relative;
-    z-index:1;
+.main-nav a {
+    width: 94px;
+    display: block;
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    z-index: 1;
     font-weight: 700;
 }
-.main-nav a:hover{
-    text-decoration:none;
-    background-color:#f5f5f5;
+.main-nav a:hover {
+    text-decoration: none;
+    background-color: #f5f5f5;
     color: #e52c48;
     font-weight: bold;
 }
-
-.main-nav .active a{
-    background-color:#f5f5f5;
-    position:relative;
-    z-index:1;
+.main-nav .active a {
+    background-color: #f5f5f5;
+    position: relative;
+    z-index: 1;
     font-weight: bold;
     color: #e52c48;
     border-bottom-width: 2px;
     border-bottom-style: solid;
     border-bottom-color: #e52c48;
 }
-
 /** main body */
-.main-body{
-    top:76px;
-    width:1024px;
-    margin:10px auto;
-    min-height:400px;
-    position:relative;
+
+.main-body {
+    top: 76px;
+    width: 1024px;
+    margin: 10px auto;
+    height: auto;
+    position: relative;
 }
 
 /* main footer */
-.main-footer{
-    color:#969696;
-    background-color:#f5f5f5;
-    height:80px;
-    border-top:1px solid #CACACA;
-}
-.main-footer center{
-    margin-top:10px;
-}
 
-.main-footer a{
-    color:inherit;
+.main-footer {
+    clear:both;
+    color: #969696;
+    background-color: #f5f5f5;
+    height: 80px;
+    border-top: 1px solid #CACACA;
+    margin-top: 85px;
 }
-
-.main-footer a:hover{
-    text-decoration:none;
-    color:#e52c48;
+.main-footer center {
+    margin-top: 10px;
 }
-
-.main-footer .bar{
-    margin:0 5px;
+.main-footer a {
+    color: inherit;
 }
-
+.main-footer a:hover {
+    text-decoration: none;
+    color: #e52c48;
+}
+.main-footer .bar {
+    margin: 0 5px;
+}
 /* 用户登录进去的空间  */
-.arrow-down{
-    position:absolute;
+
+.arrow-down {
+    position: absolute;
     top: 4px;
     right: 5px;
-    width:7px;
-    height:4px;
-    background:url(../../images/icloud/style/i3.png) no-repeat; 
+    width: 7px;
+    height: 4px;
+    background: url(../../images/icloud/style/i3.png) no-repeat;
 }
 /** hyper-link */
-.hyper-link{
-    line-height:14px;
-    display:inline-block;
-    *display:inline;
-    *zoom:1;
-    padding-right:20px;
-    position:relative; 
-}
 
-.hyper-link:hover .hyper-text{
-    display:block;
+.hyper-link {
+    line-height: 14px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    padding-right: 20px;
+    position: relative;
 }
-
-.hyper-link:hover .arrow-down{
-    z-index:4;
-    background-position:0 -4px;
+.hyper-link:hover .hyper-text {
+    display: block;
 }
-.hyper-link:hover u{
-    position:relative;
-    z-index:4;
-    color:#6d6d6d;
+.hyper-link:hover .arrow-down {
+    z-index: 4;
+    background-position: 0 -4px;
 }
-.hyper-text{
-    padding-top:25px;
-    color:#6d6d6d;
-    top:-8px;
-    left:-15px;
-    position:absolute;
-    display:none;
-    border:1px solid #ccc;
-    border-top:2px solid #78d3fa;
-    background-color:#fff;
+.hyper-link:hover u {
+    position: relative;
+    z-index: 4;
+    color: #6d6d6d;
+}
+.hyper-text {
+    padding-top: 25px;
+    color: #6d6d6d;
+    top: -8px;
+    left: -15px;
+    position: absolute;
+    display: none;
+    border: 1px solid #ccc;
+    border-top: 2px solid #78d3fa;
+    background-color: #fff;
     box-shadow: 0 2px 3px 0px #ccc;
-    white-space:nowrap;
-    z-index:3;
+    white-space: nowrap;
+    z-index: 3;
 }
-.hyper-link u{
-    color:#6d6d6d;
+.hyper-link u {
+    color: #6d6d6d;
 }
-.hyper-text a{
-    display:block;
-    padding:8px 15px;
+.hyper-text a {
+    display: block;
+    padding: 8px 15px;
 }
-.hyper-text a:hover{
-    text-decoration:none;
-    background-color:#F2F2F2;
-    color:#e52c48;
+.hyper-text a:hover {
+    text-decoration: none;
+    background-color: #F2F2F2;
+    color: #e52c48;
 }
-
 /** back to top **/
-.backToTop{
-	position:fixed;
-	right: 0;
-	bottom: 60px;
-	background-image: url(../../images/icloud/style/backtotop.png) !important;
-	background-position: center 8px !important;
-	background-repeat: no-repeat;
-	color: #777;
-	width: 80px;
-	text-align: center;
-	padding-bottom: 5px;
-	padding-top: 25px;
-	font-size: 14px;
-	cursor: pointer;
-	height: auto;
-}
 
-.backToTop:hover{
-	background-color:#c6c6c6;
-	color: #777;
-	text-decoration: none;
+.backToTop {
+    position: fixed;
+    right: 0;
+    bottom: 60px;
+    background-image: url(../../images/icloud/style/backtotop.png) !important;
+    background-position: center 8px !important;
+    background-repeat: no-repeat;
+    color: #777;
+    width: 80px;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    height: auto;
 }
-
+.backToTop:hover {
+    background-color: #c6c6c6;
+    color: #777;
+    text-decoration: none;
+}
 /** util */
-s,u{
-    text-decoration:none;
+
+s,
+u {
+    text-decoration: none;
 }
-
-.hidetext{
-    white-space:nowrap;
-    text-indent:100%;
-    *text-indent:0;
-    *line-height:100em;
-    overflow:hidden;
+.hidetext {
+    white-space: nowrap;
+    text-indent: 100%;
+    *text-indent: 0;
+    *line-height: 100em;
+    overflow: hidden;
 }
-
-
-
-hr{
-    margin:20px 0;
-    border-bottom:1px solid #ddd;
+hr {
+    margin: 20px 0;
+    border-bottom: 1px solid #ddd;
 }
-
-input{
-    color:#666;
+input {
+    color: #666;
 }
