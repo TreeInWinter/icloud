@@ -8,6 +8,7 @@
     width: 800px;
     background: #fff;
     margin: 0 0 0 220px;
+    z-index: 2000;
 }
 /** 左边menu */
 
@@ -15,48 +16,127 @@
     float: left;
     z-index: 4;
     top: 0;
-    width: 150px;
-    border: 1px solid #bbb;
+    width: 151px;
+/*    border: 1px solid #bbb;*/
     height: 100%;
 }
-.leftMenu li {
-    z-index: 2;
+
+/**select **/
+
+#sidebar-menu {
+    /*目前要求宽度是238px,高度是332px，左边框+width正好238，以后需要可以修改*/
+    border-left: 1px solid #F93;
+    width: 150px;
+    /* height : 332px; */
+    margin: 0;
+    padding: 0;
+    background: #FFF7F0;
+    z-index: 14;
+}
+#sidebar-menu > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#sidebar-menu > ul > li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #FDEADB;
     position: relative;
-    display: block;
-    height: 31px;
-    line-height: 31px;
-    overflow: hidden;
-    margin: 1px 10px 0;
-    vertical-align: bottom;
-    border-bottom: 1px solid #dedede;
 }
-.leftMenu .first {
-    background: none;
+#sidebar-menu > ul > li.selected {
+    background: #FFF;
+    border-top: 1px solid #F93;
+    border-bottom: 1px solid #F93;
 }
-.leftMenu a {
-    width: 94px;
-    display: block;
-    font-size: 15px;
-    color: #3c3c3c;
-    cursor: pointer;
-    text-align: center;
+#sidebar-menu > ul > li.first {
+    border-top: 1px solid #F93;
+}
+#sidebar-menu > ul > li.last {
+    border-bottom: 1px solid #F93;
+}
+#sidebar-menu .menu-item {
+    background: #FFF7F0 no-repeat left center;
+    height: 32px;
+    /**控制菜单中每行的宽度，下面还有两处需要修改**/
+    border-right: 1px solid #F93;
     position: relative;
-    z-index: 1;
-    font-weight: 700;
 }
-.leftMenu a:hover {
+#sidebar-menu > ul > li.selected .menu-item {
+    border-right: 1px solid #FFF;
+    background: #FFF no-repeat left center;
+}
+#sidebar-menu .menu-item span {
+    font-size: 13px;
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 35px;
+    padding-top: 2px;
+    display: inline-block;
+}
+#sidebar-menu .menu-panel {
+    padding: 10px 20px;
+    display: none;
+    border: 1px solid #F93;
+    width: 600px;
+    position: absolute;
+    left: 150px;
+    top: -1px;
+    z-index: 10;
+    min-height: 50px;
+    background: #fff;
+    box-shadow: 1px 1px 4px #888888;
+}
+#sidebar-menu div.menu-panel.selected {
+    display: block;
+}
+/*Panel 里面的链接列表*/
+
+#sidebar-menu div.menu-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#sidebar-menu div.menu-panel ul li {
+    list-style: none;
+    padding: 5px 0px;
+    margin: 0;
+}
+#sidebar-menu div.menu-panel>ul>li>h2 {
+    margin: 0;
+    padding: 0;
+    padding-top: 2px;
+    font-size: 13px;
+    color: red;
+    float: left;
+    width: 60px;
+}
+#sidebar-menu div.menu-panel>ul>li>div.link-list {
+    float: left;
+    padding-left: 10px;
+    width: 450px;
+}
+#sidebar-menu div.menu-panel div.link-wrapper {
+    display: inline-block;
+    padding: 3px 0px;
+}
+#sidebar-menu div.menu-panel div.link-wrapper span {
+    font-size: 13px;
+    color: #888;
+    padding-right: 4px;
+}
+#sidebar-menu div.menu-panel div.link-list a {
+    font-size: 13px;
+    color: #888;
     text-decoration: none;
-    background-color: #f5f5f5;
-    color: #e52c48;
-    font-weight: bold;
 }
-.leftMenu .active a {
-    background-color: #f5f5f5;
-    position: relative;
-    z-index: 1;
-    font-weight: bold;
-    color: #e52c48;
-    border-bottom-width: 2px;
-    border-bottom-style: solid;
-    border-bottom-color: #e52c48;
+#sidebar-menu div.menu-panel div.link-list a:hover {
+    text-decoration: underline;
+}
+#sidebar-menu div.clear {
+    clear: both;
+    height: 0;
+    line-height: 0;
 }
