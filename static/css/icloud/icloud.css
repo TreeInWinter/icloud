@@ -121,6 +121,7 @@ body {
     width: 1024px;
     margin: 10px auto;
     height: auto;
+    min-height: 350px;
     position: relative;
 }
 .clear {
@@ -229,6 +230,32 @@ body {
     background-color: #c6c6c6;
     color: #777;
     text-decoration: none;
+}
+/** 公司介绍 */
+
+.au-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #505050;
+    border-bottom: 1px solid #E1E1E1;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    min-height: 17px;
+}
+.au-title span {
+    float: left;
+    height: 26px;
+    padding-right: 10px;
+    border-bottom: 2px solid #f1634c;
+}
+.au-block {
+    color: #5b5b5b;
+    padding-top: 20px;
+}
+.au-block p {
+    line-height: 30px;
+    text-indent: 2em;
 }
 /** util */
 
