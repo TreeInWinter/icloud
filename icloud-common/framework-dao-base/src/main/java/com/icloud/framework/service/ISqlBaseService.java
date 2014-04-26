@@ -1,8 +1,8 @@
-package com.icloud.service;
+package com.icloud.framework.service;
 
 import java.util.List;
 
-public interface IBaseService<T> {
+public interface ISqlBaseService<T> {
 	public T getById(Integer id);
 
 	public void update(T t);

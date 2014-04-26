@@ -7,13 +7,13 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import com.icloud.framework.dao.hibernate.IHibernateBaseDao;
-import com.icloud.service.impl.BaseService;
+import com.icloud.framework.service.impl.SqlBaseService;
 import com.icloud.stock.dao.IStockDao;
 import com.icloud.stock.model.Stock;
 import com.icloud.stock.service.IStockService;
 
 @Service("stockService")
-public class StockServiceImpl extends BaseService<Stock> implements
+public class StockServiceImpl extends SqlBaseService<Stock> implements
 		IStockService {
 
 	@Resource(name = "stockDao")

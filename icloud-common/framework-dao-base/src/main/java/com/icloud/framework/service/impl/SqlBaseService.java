@@ -1,13 +1,13 @@
-package com.icloud.service.impl;
+package com.icloud.framework.service.impl;
 
 import java.util.List;
 
 import javax.annotation.PostConstruct;
 
 import com.icloud.framework.dao.hibernate.IHibernateBaseDao;
-import com.icloud.service.IBaseService;
+import com.icloud.framework.service.ISqlBaseService;
 
-public abstract class BaseService<T> implements IBaseService<T> {
+public abstract class SqlBaseService<T> implements ISqlBaseService<T> {
 
 	private IHibernateBaseDao<T> baseDao;
 
