@@ -246,7 +246,7 @@ tr {
 }
 .odd_stock_up:hover,
 .even_stock_up:hover {
-    background: #f7d382;
+    background: #FFF7F0 no-repeat left center;
 }
 /** 翻页 **/
 
