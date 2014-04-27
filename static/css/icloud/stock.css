@@ -21,7 +21,7 @@
 
 #sidebar-menu {
     /*目前要求宽度是238px,高度是332px，左边框+width正好238，以后需要可以修改*/
-    border-left: 1px solid #F93;
+    border-left: 1px solid #e9e9e9;
     width: 150px;
     /* height : 332px; */
     margin: 0;
@@ -38,25 +38,25 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    border-bottom: 1px solid #FDEADB;
+    border-bottom: 1px solid #e9e9e9;
     position: relative;
 }
 #sidebar-menu > ul > li.selected {
     background: #FFF;
-    border-top: 1px solid #F93;
-    border-bottom: 1px solid #F93;
+    border-top: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
 }
 #sidebar-menu > ul > li.first {
-    border-top: 1px solid #F93;
+    border-top: 1px solid #e9e9e9;
 }
 #sidebar-menu > ul > li.last {
-    border-bottom: 1px solid #F93;
+    border-bottom: 1px solid #e9e9e9;
 }
 #sidebar-menu .menu-item {
-    background: #FFF7F0 no-repeat left center;
+    background: #f6f6f6 no-repeat left center;
     height: 32px;
     /**控制菜单中每行的宽度，下面还有两处需要修改**/
-    border-right: 1px solid #F93;
+    border-right: 1px solid #e9e9e9;
     position: relative;
 }
 #sidebar-menu > ul > li.selected .menu-item {
@@ -64,18 +64,19 @@
     background: #FFF no-repeat left center;
 }
 #sidebar-menu .menu-item span {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: bold;
     height: 32px;
     line-height: 32px;
     padding-left: 35px;
     padding-top: 2px;
     display: inline-block;
+    color: #636363;
 }
 #sidebar-menu .menu-panel {
     padding: 10px 20px;
     display: none;
-    border: 1px solid #F93;
+    border: 1px solid #e9e9e9;
     width: 600px;
     position: absolute;
     left: 150px;

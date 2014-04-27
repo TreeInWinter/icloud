@@ -18,7 +18,7 @@ body {
     border-bottom: 1px solid #eee;
     -webkit-box-shadow: rgba(0, 0, 0, .1) 0 1px 5px;
     z-index: 10000;
-    background: #4880ea;
+    background: #e04628;
 }
 .header-wrapper {
     position: absolute;
@@ -74,7 +74,7 @@ body {
 
 .main-nav {
     height: 40px;
-    line-height: 40px;
+    line-height: 45px;
     position: absolute;
     top: 30px;
     left: 155px;
@@ -100,19 +100,16 @@ body {
 }
 .main-nav a:hover {
     text-decoration: none;
-    background-color: #f5f5f5;
-    color: #e52c48;
+    background-color: #c53418;
+    color: #fff;
     font-weight: bold;
 }
 .main-nav .active a {
-    background-color: #f5f5f5;
+    background-color: #c53418;
     position: relative;
     z-index: 1;
     font-weight: bold;
-    color: #e52c48;
-    border-bottom-width: 2px;
-    border-bottom-style: solid;
-    border-bottom-color: #e52c48;
+    color: #fff;
 }
 /** main body */
 
