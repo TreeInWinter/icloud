@@ -242,7 +242,11 @@ tr {
     background: #fff;
 }
 .even_stock_up {
-    background: #b8ecf2;
+    background: #f5f5f5 no-repeat;
+}
+.odd_stock_up:hover,
+.even_stock_up:hover {
+    background: #f7d382;
 }
 /** 翻页 **/
 
