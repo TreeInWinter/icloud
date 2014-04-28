@@ -13,8 +13,6 @@
 
 	<!-- init annotated beans -->
 	<context:component-scan base-package="com.icloud.front.common.security" />
-
-	<sc:http pattern="/" security="none" />
 	<sc:http pattern="/index.jsp" security="none" />
 	<sc:http pattern="/resources/**" security="none" />
 	<!-- <sc:custom-filter ref="redisSessionFilter" before="FIRST"/> -->

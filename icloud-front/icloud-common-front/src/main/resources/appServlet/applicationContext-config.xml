@@ -5,7 +5,6 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-	<context:component-scan base-package="com.travelzen.springmvc.action" />
 	<!-- 启用注解驱动 -->
 	<mvc:annotation-driven conversion-service="conversionService">
 		<!-- 字符串转换器 -->
@@ -18,9 +17,9 @@
 		<!-- 集合参数解析器 -->
 		<mvc:argument-resolvers>
 			<bean
-				class="com.travelzen.framework.web.method.annotation.RequestArrayResolver" />
+				class="com.icloud.framework.web.method.annotation.RequestArrayResolver" />
 			<bean
-				class="com.travelzen.framework.web.method.annotation.RequestMapResolver" />
+				class="com.icloud.framework.web.method.annotation.RequestMapResolver" />
 		</mvc:argument-resolvers>
 	</mvc:annotation-driven>
 	<!-- 配置自定义转换服务器 -->
@@ -28,7 +27,7 @@
 		class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
 		<property name="formatters">
 			<bean
-				class="com.travelzen.framework.web.format.annotation.DateFormatAnnotationFormatterFactory" />
+				class="com.icloud.framework.web.format.annotation.DateFormatAnnotationFormatterFactory" />
 		</property>
 	</bean>
 	<!-- 配置静态文件路径 -->
@@ -93,7 +92,7 @@
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
 	<!-- 异常处理器 -->
 	<!-- 勿去，否则会有bug。可在页面源码查看异常堆栈 -->
-	<!-- <bean id="exceptionResolver" class="com.travelzen.tops.front.common.CustomizedHandlerExceptionResolver"
+	<!-- <bean id="exceptionResolver" class="com.icloud.tops.front.common.CustomizedHandlerExceptionResolver"
 		/> -->
 	<!-- 验证器 -->
 	<bean id="validator"

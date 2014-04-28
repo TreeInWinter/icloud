@@ -1,4 +1,4 @@
-<#macro htmlBase title jsFiles=[] cssFiles=[] localCssFiles=[] emedObjects=[]  ssl=false isMain=false>
+<#macro htmlBase title jsFiles=[] cssFiles=[] emedObjects=[]>
 <#assign staticHost=host>
 <#escape x as x?html>
 <!DOCTYPE html>
@@ -8,40 +8,21 @@
 	<title>${title}</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<#-- css -->
-	<link rel="stylesheet" href="${staticHost}/css/smoothness/jquery-ui-1.10.3.custom.css?v=${getStaticResourceVersion()}" />
+	<link rel="stylesheet" href="${basepath}/resources/css/icloud/icloud_reset.css?v=${getStaticResourceVersion()}" />
+	<link rel="stylesheet" href="${basepath}/resources/css/icloud/icloud.css?v=${getStaticResourceVersion()}" />
 
 	<#list cssFiles as css>
-		<link rel="stylesheet" href="${staticHost}/${css}?v=${getStaticResourceVersion()}" />
+		<link rel="stylesheet" href="${basepath}/resources/css/${css}?v=${getStaticResourceVersion()}" />
 	</#list>
-
-	<#list localCssFiles as localCss>
-		<link rel="stylesheet" href="${basepath}/resources/css/${localCss}?v=${getStaticResourceVersion()}" />
-	</#list>
-
 	<#-- js -->
-	<script type="text/javascript" src="${staticHost}/js/jquery.min.js?v=${getStaticResourceVersion()}"></script>
-	<script type="text/javascript" src="${staticHost}/js/jquery-ui-1.10.3.custom.js?v=${getStaticResourceVersion()}"></script>
-
+	<script type="text/javascript" src="${basepath}/resources/js/common/jquery.min.js?v=${getStaticResourceVersion()}"></script>
+	<script type="text/javascript" src="${basepath}/resources/js/icloud/icloud.js?v=${getStaticResourceVersion()}"></script>
 	<!--[if IE]>
-	<script src="${staticHost}/js/html5.js?v=${getStaticResourceVersion()}"></script>
-	<script src="${staticHost}/js/vendor/IE7.min.js?v=${getStaticResourceVersion()}"></script>
+	<script src="${staticHost}/resources/js/common/html5.js?v=${getStaticResourceVersion()}"></script>
 	<![endif]-->
 
-
-	<#-- global js vars -->
-	<script type="text/javascript">
-		var basepath = '${basepath}';
-		var host = '${staticHost}';
-		var sessionId='${(session.id)!}';
-	</script>
-
 	<#list jsFiles as js>
-		<#if js?starts_with('js')>
-			<script src="${staticHost}/${js}?v=${getStaticResourceVersion()}"></script>
-		<#else>
-			<script src="${basepath}/resources/javascripts/${js}?v=${getStaticResourceVersion()}"></script>
-		</#if>
+		<script src="${basepath}/resources/js/${js}?v=${getStaticResourceVersion()}"></script>
 	</#list>
 
 	<#if emedObjects??>
@@ -49,6 +30,13 @@
 		<#noescape>${emed}</#noescape>
 	</#list>
 	</#if>
+
+	<#-- global js vars -->
+	<script type="text/javascript">
+		var basepath = '${basepath}';
+		var host = '${staticHost}';
+		var sessionId='${(session.id)!}';
+	</script>
 
 </head>
 <body>

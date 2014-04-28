@@ -1,0 +1,296 @@
+/** 主页内容内容*/
+
+.mainPageContent {
+    height: 100%;
+    width: 850px;
+    background: #fff;
+    margin: 0 0 0 170px;
+    z-index: 2000;
+}
+/** 左边menu */
+
+.leftMenu {
+    float: left;
+    z-index: 4;
+    top: 0;
+    width: 151px;
+    /*    border: 1px solid #bbb;*/
+    height: 100%;
+}
+/**select **/
+
+#sidebar-menu {
+    /*目前要求宽度是238px,高度是332px，左边框+width正好238，以后需要可以修改*/
+    border-left: 1px solid #e9e9e9;
+    width: 150px;
+    /* height : 332px; */
+    margin: 0;
+    padding: 0;
+    background: #FFF7F0;
+    z-index: 14;
+}
+#sidebar-menu > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#sidebar-menu > ul > li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #e9e9e9;
+    position: relative;
+}
+#sidebar-menu > ul > li.selected {
+    background: #FFF;
+    border-top: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+}
+#sidebar-menu > ul > li.first {
+    border-top: 1px solid #e9e9e9;
+}
+#sidebar-menu > ul > li.last {
+    border-bottom: 1px solid #e9e9e9;
+}
+#sidebar-menu .menu-item {
+    background: #f6f6f6 no-repeat left center;
+    height: 32px;
+    /**控制菜单中每行的宽度，下面还有两处需要修改**/
+    border-right: 1px solid #e9e9e9;
+    position: relative;
+}
+#sidebar-menu > ul > li.selected .menu-item {
+    border-right: 1px solid #FFF;
+    background: #FFF no-repeat left center;
+}
+#sidebar-menu .menu-item span {
+    font-size: 14px;
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 35px;
+    padding-top: 2px;
+    display: inline-block;
+    color: #636363;
+}
+#sidebar-menu .menu-panel {
+    padding: 10px 20px;
+    display: none;
+    border: 1px solid #e9e9e9;
+    width: 600px;
+    position: absolute;
+    left: 150px;
+    top: -1px;
+    z-index: 10;
+    min-height: 50px;
+    background: #fff;
+    box-shadow: 1px 1px 4px #888888;
+}
+#sidebar-menu div.menu-panel.selected {
+    display: block;
+}
+/*Panel 里面的链接列表*/
+
+#sidebar-menu div.menu-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#sidebar-menu div.menu-panel ul li {
+    list-style: none;
+    padding: 5px 0px;
+    margin: 0;
+}
+#sidebar-menu div.menu-panel>ul>li>h2 {
+    margin: 0;
+    padding: 0;
+    padding-top: 2px;
+    font-size: 13px;
+    color: red;
+    float: left;
+    width: 60px;
+}
+#sidebar-menu div.menu-panel>ul>li>div.link-list {
+    float: left;
+    padding-left: 10px;
+    width: 450px;
+}
+#sidebar-menu div.menu-panel div.link-wrapper {
+    display: inline-block;
+    padding: 3px 0px;
+}
+#sidebar-menu div.menu-panel div.link-wrapper span {
+    font-size: 13px;
+    color: #888;
+    padding-right: 4px;
+}
+#sidebar-menu div.menu-panel div.link-list a {
+    font-size: 13px;
+    color: #888;
+    text-decoration: none;
+}
+#sidebar-menu div.menu-panel div.link-list a:hover {
+    text-decoration: underline;
+}
+#sidebar-menu div.clear {
+    clear: both;
+    height: 0;
+    line-height: 0;
+}
+/** 页面内容 **/
+
+/**  股票列表头 */
+
+.stockList-header {
+    line-height: 30px;
+    background: #f6f6f6;
+    border: 1px solid #efefef;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    overflow: hidden;
+    zoom: 1;
+    font-size: 14px;
+}
+.stockList-header a {
+    color: #636363;
+    font-weight: bold;
+}
+.stockList-header a:hover {
+    text-decoration: none;
+    background-color: #F2F2F2;
+    color: #e52c48;
+}
+/** 股票列表页 */
+
+.stockList {
+    position: relative;
+}
+.stockList-filter {
+    overflow: hidden;
+    zoom: 1;
+    padding: 5px;
+    padding-top: 0px;
+}
+.stockList-content {
+    border: 4px solid #f4f4f4;
+}
+.new-portfolio {
+    color: black;
+}
+table.portfolio {
+    padding: 5px;
+    font-size: 14px;
+    width: 100%;
+    border: none;
+}
+.new-portfolio thead th {
+    color: #0055a2;
+    background: none;
+    border: none;
+    padding-left: 10px;
+}
+.new-portfolio thead th.sortable {
+    cursor: pointer;
+}
+.new-portfolio table.portfolio th s {
+    height: 12px;
+    width: 0;
+}
+.new-portfolio table.portfolio tr {
+    vertical-align: middle;
+    line-height: 30px;
+}
+.new-portfolio table.portfolio td {
+    vertical-align: middle;
+    text-align: center;
+}
+.new-portfolio a {
+    color:
+}
+.new-portfolio a:hover {
+    text-decoration: none;
+    color: #e52c48;
+}
+.new-portfolio .stock-color {
+    color: #338833;
+}
+.new-portfolio .nocolor {
+    color: #444;
+}
+/** 表格公共 **/
+
+table {
+    border-collapse: collapse;
+    max-width: 100%;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+    line-height: 30px;
+    font-weight: bold;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.odd_stock_up {
+    background: #fff;
+}
+.even_stock_up {
+    background: #f5f5f5 no-repeat;
+}
+.odd_stock_up:hover,
+.even_stock_up:hover {
+    background: #FFF7F0 no-repeat left center;
+}
+/** 翻页 **/
+
+.pageList {
+    display: block;
+}
+.pager-wrapper {
+    overflow: hidden;
+    zoom: 1;
+    padding: 20px 0;
+}
+.pageList ul.pager {
+    float: right;
+}
+.pageList ul.pager li {
+    float: left;
+    margin: 0 0 0 8px;
+    padding: 0;
+    font-size: 15px;
+    line-height: 22px;
+    border: none;
+    position: relative;
+    text-align: center;
+}
+.pageList ul.pager li a {
+    display: inline-block;
+    width: 22px;
+    height: 30px;
+    color: #646464;
+    padding: 4px 10px;
+}
+.pageList ul.pager li.last a,
+.pageList ul.pager li.next a {
+    display: inline-block;
+    background: #e4e4e4;
+    width: 40px;
+    height: 30px;
+    padding: 0;
+    font-size: 12px;
+    padding: 4px 10px;
+}
+.pageList ul.pager li a:hover,
+.pageList ul.pager li.active a {
+    text-decoration: none;
+    color: #0055A2;
+    background-color: #f8f8f8;
+}
