@@ -1,6 +1,6 @@
 package com.icloud.stock.model;
 
-// Generated 2014-4-17 23:54:09 by Hibernate Tools 3.4.0.CR1
+// Generated 2014-4-28 18:31:13 by Hibernate Tools 3.4.0.CR1
 
 import java.util.Date;
 

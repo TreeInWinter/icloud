@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-4-28 18:31:13 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.icloud.stock.model.Session" table="session" catalog="icloud">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="sessionId" type="string">
+            <column name="session_id" length="100" />
+        </property>
+        <property name="createTime" type="timestamp">
+            <column name="create_time" length="19" />
+        </property>
+        <property name="sessionAccessType" type="java.lang.Integer">
+            <column name="session_access_type" />
+        </property>
+        <property name="sessionAccessDescription" type="string">
+            <column name="session_access_description" length="100" />
+        </property>
+        <property name="sessionIp" type="string">
+            <column name="session_ip" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

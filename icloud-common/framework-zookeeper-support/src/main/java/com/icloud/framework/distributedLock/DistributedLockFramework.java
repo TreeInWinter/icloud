@@ -300,7 +300,7 @@ public class DistributedLockFramework {
 		}
 	}
 
-	private DistributedLockFramework() {
+	private DistributedLockFramework() throws Exception {
 		resource_preffix = PropertiesUtil.getProperty("properties/distributed-lock.properties", "rersource_preffix");
 		lock_resource_preffix = PropertiesUtil.getProperty("properties/distributed-lock.properties", "lock_preffix");
 		String connectionString = PropertiesUtil.getProperty("properties/distributed-lock.properties", "connectionString");
