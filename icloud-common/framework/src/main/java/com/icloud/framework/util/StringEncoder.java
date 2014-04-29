@@ -1,4 +1,4 @@
-package com.icloud.front.common.utils;
+package com.icloud.framework.util;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

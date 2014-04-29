@@ -1,6 +1,5 @@
 dependencies {
     compile project(':icloud-common:framework')
-	compile project(':icloud-common:framework-redis')
     compile project(':icloud-common:framework-logger')
 
 	compile libraries.freemarker
