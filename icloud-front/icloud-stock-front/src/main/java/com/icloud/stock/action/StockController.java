@@ -28,4 +28,5 @@ public class StockController {
 		return "你好1111 " + id;
 	}
 
+
 }
