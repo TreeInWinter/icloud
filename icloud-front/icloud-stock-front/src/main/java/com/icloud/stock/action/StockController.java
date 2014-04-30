@@ -2,6 +2,7 @@ package com.icloud.stock.action;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -18,6 +19,13 @@ public class StockController {
 		// model.addObject("dateListMap", lvDateWeekMap);
 		// model.setViewName();
 		return model;
+	}
+
+	@RequestMapping("/getStockMenu")
+	@ResponseBody
+	public String getStockMenu(String id) {
+		System.out.println(id);
+		return "你好1111 " + id;
 	}
 
 }

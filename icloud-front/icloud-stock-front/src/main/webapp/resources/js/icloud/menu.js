@@ -1,21 +1,45 @@
-function menuloading(){
-     $("#sidebar-menu > ul > li").hover(function () {
-        $(this).addClass("selected");
-        $(".menu-panel", this).addClass("selected");
-        var bgImg = $(".menu-item", this).css("background-image");
-        bgImg = bgImg.replace(".", "-hover.");
-        $(".menu-item", this).css("background-image", bgImg);
-    }, function () {
-        $(this).removeClass("selected");
-        $(".menu-panel", this).removeClass("selected");
-        var bgImg = $(".menu-item", this).css("background-image");
-        bgImg = bgImg.replace("-hover.", ".");
-        $(".menu-item", this).css("background-image", bgImg);
-    });
+function menuloading() {
+	$("#sidebar-menu > ul > li").hover(
+			function() {
+				$(this).addClass("selected");
+				$(".menu-panel", this).addClass("selected");
+				if ($("input[name=menu-id]", this).length > 0) { // 如果存在,
+					// 则进行删除哦
+					var val = $("input[name=menu-id]", this).val();
+					$("input[name=menu-id]", this).remove();
+					/**
+					 * 进行删除,并进行贴上加载按钮
+					 */
+					$(".menu-panel", this).append(
+							"<div class=\"loading\"><p>数据加载中,请稍候…</p></div>");
+					var show = $(".menu-panel", this);
+					/**
+					 * 进行访问
+					 */
+					$.ajax({
+						url : basepath + '/stock/getStockMenu',
+						type : 'post',
+						dataType : 'html',
+						data : {
+							"id" : val
+						},
+						complete : function() {
+						},
+						success : function(json) {
+							show.html("");
+							show.append(json);
+						}
+					});
+				} else {
+
+				}
+
+			}, function() {
+				$(this).removeClass("selected");
+				$(".menu-panel", this).removeClass("selected");
+			});
 }
-//$(function () {
-//   
-//});
-$(document).ready(function () {
-    menuloading();
+
+$(document).ready(function() {
+	menuloading();
 });

@@ -11,4 +11,10 @@ public class ICloudUtils {
 			return true;
 		return false;
 	}
+
+	public static boolean isNotNull(String str) {
+		if (str == null || str.trim().length() == 0)
+			return false;
+		return true;
+	}
 }

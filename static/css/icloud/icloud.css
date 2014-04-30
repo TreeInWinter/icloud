@@ -274,3 +274,18 @@ hr {
 input {
     color: #666;
 }
+/** 加载模块 **/
+.loading {
+    color: #666666;
+    background: url(../../images/icloud/style/loading.gif) no-repeat 5px 50%;
+}
+.loading,
+.pass,
+.warn,
+.error,
+.unrecognize {
+    padding: 20px 20px 20px 50px;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #ffffff;
+}

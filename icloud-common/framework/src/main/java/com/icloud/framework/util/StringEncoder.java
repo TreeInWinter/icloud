@@ -5,7 +5,7 @@ import java.security.NoSuchAlgorithmException;
 
 public class StringEncoder {
     private static MessageDigest msgDigest;
-    private static final String SALT = "aj#e;PWro>*iWtT_u";
+    private static final String SALT = "!AXFSS%AXDGAFA!##$@#$";
 
     private static byte[] encodeSHA256(byte[] target) {
         try {
