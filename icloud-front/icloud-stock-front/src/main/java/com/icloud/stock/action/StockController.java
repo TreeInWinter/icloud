@@ -21,12 +21,17 @@ public class StockController {
 		return model;
 	}
 
+	@RequestMapping("/stockListMenu")
+	public ModelAndView stockListMenu() {
+		ModelAndView model = new ModelAndView("stock/stockList");
+		return model;
+	}
+
 	@RequestMapping("/getStockMenu")
 	@ResponseBody
 	public String getStockMenu(String id) {
 		System.out.println(id);
 		return "你好1111 " + id;
 	}
-
 
 }
