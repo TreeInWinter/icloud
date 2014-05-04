@@ -1,8 +1,8 @@
 <footer class="main-footer">
     <center>
-        <a href="#">关于必有</a>
+        <a href="${basepath}/icloud/about-us">关于必有</a>
         <i class="bar">|</i>
-        <a href="#">联系方式</a>
+        <a href="${basepath}/icloud/contract-us">联系方式</a>
         <i class="bar">|</i>
         <a href="#">问题反馈</a>
     </center>
