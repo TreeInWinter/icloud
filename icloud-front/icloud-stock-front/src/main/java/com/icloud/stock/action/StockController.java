@@ -1,13 +1,19 @@
 package com.icloud.stock.action;
 
+import org.slf4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.icloud.framework.logger.ri.RequestIdentityLogger;
+
 @Controller
 @RequestMapping("/stock")
 public class StockController {
+	private static final Logger logger = RequestIdentityLogger
+			.getLogger(StockController.class);
+
 	@RequestMapping("/stockMenu")
 	// @ResponseBody
 	// @RequestParam(required=true) String hotelId
@@ -30,7 +36,7 @@ public class StockController {
 	@RequestMapping("/getStockMenu")
 	@ResponseBody
 	public String getStockMenu(String id) {
-		System.out.println(id);
+		logger.info(id);
 		return "你好1111 " + id;
 	}
 
