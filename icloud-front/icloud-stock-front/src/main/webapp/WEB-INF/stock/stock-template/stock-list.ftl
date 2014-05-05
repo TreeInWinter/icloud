@@ -1,8 +1,8 @@
 <#macro sList current>
 <div class="mainPageContent">
     <div class="stockList-header">
-        <a href="#">上海</a>>
-        <a href="科技">科技</a>>
+        <a href="#">上海</a>&nbsp;>&nbsp;
+        <a href="科技">科技</a>&nbsp;>&nbsp;
         <span>舜网</span>
     </div>
     <div class="stockList">

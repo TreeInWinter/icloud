@@ -12,8 +12,8 @@
        </nav>
        <nav class="main-links">
           <ul class="clearfix">
-            <li class="first"><a href="#">订单管理</a></li>
-            <li><a href="#">分销管理</a></li>
+            <li class="first"><a href="#">注册</a></li>
+            <li><a href="#">登录</a></li>
             <li><span class="hyper-link">
                 <u>崔江宁</u>
                 <i class="arrow-down"></i>

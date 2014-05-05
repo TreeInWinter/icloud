@@ -1,12 +1,8 @@
-package com.icloud.stock.data;
+package com.icloud.stock.importer.meta;
 
 import java.util.Date;
 
-import net.sf.ehcache.hibernate.management.impl.BeanUtils;
-
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
+import com.icloud.stock.ctx.BeansUtil;
 import com.icloud.stock.model.Stock;
 import com.icloud.stock.model.constant.StockConstants.StockLocation;
 import com.icloud.stock.service.IStockService;
@@ -18,13 +14,11 @@ import com.icloud.framework.file.TextFile;
  *
  */
 public class StockInfoImporter {
-	private ApplicationContext app;
+
 	private IStockService stockService;
 
 	public StockInfoImporter() {
-		app = new ClassPathXmlApplicationContext(
-				"spring/applicationContext-stock.xml");
-		stockService = (IStockService) app.getBean("stockService");
+		stockService = BeansUtil.getStockService();
 	}
 
 	public void importSHAFile() {

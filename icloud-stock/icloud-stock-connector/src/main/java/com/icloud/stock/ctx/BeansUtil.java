@@ -1,4 +1,4 @@
-package com.icloud.stock.data.service;
+package com.icloud.stock.ctx;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

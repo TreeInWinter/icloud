@@ -22,8 +22,15 @@ public abstract class StockHandler<T> implements BaseHandler<T> {
 	protected String url;
 	protected Map<String, String> params;
 
+	private boolean isGet = false;
+
 	protected StockHandler() {
 		init();
+	}
+
+	protected StockHandler(boolean isGet) {
+		this();
+		this.isGet = isGet;
 	}
 
 	protected void init() {
@@ -43,6 +50,14 @@ public abstract class StockHandler<T> implements BaseHandler<T> {
 		this.params = params;
 	}
 
+	public StockHandler(String url, Map<String, String> params, boolean isGet)
+			throws NoSuchFieldException, SecurityException,
+			NoSuchMethodException {
+		this(isGet);
+		this.url = url;
+		this.params = params;
+	}
+
 	public StockHandler(String url) {
 		this();
 		this.url = url;
@@ -56,8 +71,12 @@ public abstract class StockHandler<T> implements BaseHandler<T> {
 		stopwatch.start("调用http接口");
 		Map<String, String> params = new HashMap<String, String>();
 		TZHttpClient client = new TZHttpClient(url, params);
-		// client.sendGetRequest();
-		String str = client.sendPostRequest();
+		String str = null;
+		if (this.isGet) {
+			str = client.sendGetRequest();
+		} else {
+			str = client.sendPostRequest();
+		}
 		stopwatch.stop();
 		stopwatch.start("解析数据");
 		Parser<T> parser = (Parser<T>) factory.getParser(domainClass);

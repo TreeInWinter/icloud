@@ -14,6 +14,6 @@ dependencies {
   compile project(':icloud-stock:icloud-stock-config')
   compile libraries.commons_lang
   compile libraries.xstream
-
+  compile libraries.webdriver
   compile libraries.httpclient
 }

@@ -3,8 +3,8 @@
         <a href="${basepath}/icloud/about-us">关于必有</a>
         <i class="bar">|</i>
         <a href="${basepath}/icloud/contract-us">联系方式</a>
-        <i class="bar">|</i>
-        <a href="#">问题反馈</a>
+       <!-- <i class="bar">|</i>
+        <a href="#">问题反馈</a>-->
     </center>
     <center>
         Copyright &copy; 2014 必有网 All Rights Reserved. Designed by Okry.

@@ -62,8 +62,8 @@ public class TZHttpClient {
 	 */
 	public String sendGetRequest() {
 		StringBuffer lvFinalUrl = new StringBuffer(this.url);
-		lvFinalUrl.append("?");
 		if (null != this.params) {
+			lvFinalUrl.append("?");
 			for (Entry<String, String> entry : this.params.entrySet()) {
 				lvFinalUrl.append("&");
 				lvFinalUrl.append(entry.getKey());
@@ -80,6 +80,7 @@ public class TZHttpClient {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		System.out.println(lvResponseString);
 		return lvResponseString;
 	}
 
