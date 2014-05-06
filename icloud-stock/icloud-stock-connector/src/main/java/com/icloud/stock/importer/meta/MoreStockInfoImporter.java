@@ -37,9 +37,6 @@ public class MoreStockInfoImporter {
 		for (String str : content) {
 			Stock stock = getStockInfo(str);
 			set.add(stock.getStockCode());
-//			stockService.save(stock);
-//			System.out.println("save stock: " + stock.getStockCode() + "  "
-//					+ stock.getStockName());
 		}
 		System.out.println("size : " + set.size());
 	}
