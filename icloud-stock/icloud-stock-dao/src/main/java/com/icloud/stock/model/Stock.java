@@ -1,6 +1,6 @@
 package com.icloud.stock.model;
 
-// Generated 2014-5-6 20:29:52 by Hibernate Tools 3.4.0.CR1
+// Generated 2014-5-6 20:46:25 by Hibernate Tools 3.4.0.CR1
 
 import java.util.Date;
 import java.util.HashSet;
@@ -17,10 +17,7 @@ public class Stock implements java.io.Serializable {
 	private Date createTime;
 	private Date updateTime;
 	private String stockLocation;
-	private String stockTypeXueqiu;
 	private String descrition;
-	private String stockTypeZhengjian;
-	private String stockTypeBase;
 	private String stockAllCode;
 	private Set categoryStocks = new HashSet(0);
 
@@ -32,18 +29,14 @@ public class Stock implements java.io.Serializable {
 	}
 
 	public Stock(String stockName, String stockCode, Date createTime,
-			Date updateTime, String stockLocation, String stockTypeXueqiu,
-			String descrition, String stockTypeZhengjian, String stockTypeBase,
+			Date updateTime, String stockLocation, String descrition,
 			String stockAllCode, Set categoryStocks) {
 		this.stockName = stockName;
 		this.stockCode = stockCode;
 		this.createTime = createTime;
 		this.updateTime = updateTime;
 		this.stockLocation = stockLocation;
-		this.stockTypeXueqiu = stockTypeXueqiu;
 		this.descrition = descrition;
-		this.stockTypeZhengjian = stockTypeZhengjian;
-		this.stockTypeBase = stockTypeBase;
 		this.stockAllCode = stockAllCode;
 		this.categoryStocks = categoryStocks;
 	}
@@ -96,36 +89,12 @@ public class Stock implements java.io.Serializable {
 		this.stockLocation = stockLocation;
 	}
 
-	public String getStockTypeXueqiu() {
-		return this.stockTypeXueqiu;
-	}
-
-	public void setStockTypeXueqiu(String stockTypeXueqiu) {
-		this.stockTypeXueqiu = stockTypeXueqiu;
-	}
-
 	public String getDescrition() {
 		return this.descrition;
 	}
 
 	public void setDescrition(String descrition) {
 		this.descrition = descrition;
-	}
-
-	public String getStockTypeZhengjian() {
-		return this.stockTypeZhengjian;
-	}
-
-	public void setStockTypeZhengjian(String stockTypeZhengjian) {
-		this.stockTypeZhengjian = stockTypeZhengjian;
-	}
-
-	public String getStockTypeBase() {
-		return this.stockTypeBase;
-	}
-
-	public void setStockTypeBase(String stockTypeBase) {
-		this.stockTypeBase = stockTypeBase;
 	}
 
 	public String getStockAllCode() {
