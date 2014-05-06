@@ -2,14 +2,21 @@ package com.icloud.stock.importer.meta;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import com.icloud.framework.file.TextFile;
 import com.icloud.stock.ctx.BeansUtil;
+import com.icloud.stock.model.Category;
+import com.icloud.stock.model.CategoryStock;
 import com.icloud.stock.model.Stock;
+import com.icloud.stock.model.constant.StockConstants.BaseCategory;
 import com.icloud.stock.model.constant.StockConstants.StockLocation;
+import com.icloud.stock.service.ICategoryService;
+import com.icloud.stock.service.ICategoryStockService;
 import com.icloud.stock.service.IStockService;
 
 /**
@@ -20,9 +27,13 @@ import com.icloud.stock.service.IStockService;
 public class MoreStockInfoImporter {
 
 	private IStockService stockService;
+	private ICategoryService categoryService;
+	private ICategoryStockService categoryStockService;
 
 	public MoreStockInfoImporter() {
 		stockService = BeansUtil.getStockService();
+		categoryService = BeansUtil.getCategoryService();
+		categoryStockService = BeansUtil.getCategoryStockService();
 	}
 
 	public void importMetaInfo() {
@@ -32,13 +43,41 @@ public class MoreStockInfoImporter {
 
 	public void importFile(String filePath) {
 		List<String> content = getContent(filePath);
-		System.out.println(content.size());
-		Set<String> set = new HashSet<String>();
+		/**
+		 * 类别
+		 */
+		Map<String, Category> categoryMap = new HashMap<String, Category>();
 		for (String str : content) {
-			Stock stock = getStockInfo(str);
-			set.add(stock.getStockCode());
+			Category category = getCategory(str, BaseCategory.BASE);
+			if (categoryMap.get(category.getCategoryName()) == null) {
+				List<Category> tmpList = categoryService.findByProperies(
+						"categoryName", category.getCategoryName());
+				System.out.println(tmpList);
+				if (tmpList == null || tmpList.size() == 0) {
+					categoryService.save(category);
+					categoryMap.put(category.getCategoryName(), category);
+				} else {
+					categoryMap.put(category.getCategoryName(), tmpList.get(0));
+				}
+			}
 		}
-		System.out.println("size : " + set.size());
+
+		Map<String, Stock> stockMap = new HashMap<String, Stock>();
+		for (String str : content) 	{
+			Stock stock = getStockInfo(str);
+			if (stockMap.get(stock.getStockCode()) == null) {
+				stockService.save(stock);
+				stockMap.put(stock.getStockCode(), stock);
+			}
+			stock = stockMap.get(stock.getStockCode());
+			// 找一下类别
+			Category category = getCategory(str, BaseCategory.BASE);
+			category = categoryMap.get(category.getCategoryName());
+			CategoryStock cs = new CategoryStock();
+			cs.setCategory(category);
+			cs.setStock(stock);
+			categoryStockService.save(cs);
+		}
 	}
 
 	public List<String> getContent(String filePath) {
@@ -50,17 +89,23 @@ public class MoreStockInfoImporter {
 		return list;
 	}
 
+	public Category getCategory(String pair, BaseCategory base) {
+		String[] tokens = pair.trim().split(" ");
+		Category category = new Category();
+		category.setCategoryCategoryType(base.getType());
+		category.setCategoryName(tokens[2]);
+		category.setCategoryRank(1.0d);
+		return category;
+	}
+
 	public Stock getStockInfo(String pair) {
 		String[] tokens = null;
 		tokens = pair.trim().split(" ");
-
 		Stock stock = new Stock();
 		stock.setCreateTime(new Date());
 		stock.setUpdateTime(new Date());
-
 		stock.setStockAllCode(tokens[0]);
 		stock.setStockName(tokens[1]);
-		stock.setStockTypeBase(tokens[2]);
 		stock.setStockLocation(getLocation(tokens[0]));
 		stock.setStockCode(getCode(tokens[0]));
 		return stock;

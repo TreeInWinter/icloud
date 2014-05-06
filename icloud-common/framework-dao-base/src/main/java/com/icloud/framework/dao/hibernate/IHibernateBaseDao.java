@@ -20,4 +20,6 @@ public interface IHibernateBaseDao<T> {
 	public long count();
 
 	public void deteleteAll();
+
+	public List<T> findByProperty(String paramName, Object value);
 }

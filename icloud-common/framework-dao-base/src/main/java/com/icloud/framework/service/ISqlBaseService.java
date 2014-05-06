@@ -18,4 +18,6 @@ public interface ISqlBaseService<T> {
 	public long count();
 
 	public void deteleteAll();
+
+	public List<T> findByProperies(String property, Object value);
 }

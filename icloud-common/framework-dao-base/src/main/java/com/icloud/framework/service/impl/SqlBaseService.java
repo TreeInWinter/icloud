@@ -66,4 +66,8 @@ public abstract class SqlBaseService<T> implements ISqlBaseService<T> {
 		this.baseDao.deteleteAll();
 	}
 
+	@Override
+	public List<T> findByProperies(String property, Object value) {
+		return this.baseDao.findByProperty(property, value);
+	}
 }

@@ -87,4 +87,10 @@ public class HibernateBaseDaoImpl<T> extends HibernateDaoSupport implements
 
 	}
 
+	@Override
+	public List<T> findByProperty(String paramName, Object value) {
+		return getHibernateTemplate().find(
+				"from " + domainClass.getName() + " as model where model."
+						+ paramName + "=?", value);
+	}
 }

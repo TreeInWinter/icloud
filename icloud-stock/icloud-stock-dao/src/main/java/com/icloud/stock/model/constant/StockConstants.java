@@ -15,4 +15,18 @@ public final class StockConstants {
 		}
 	}
 
+	public enum BaseCategory {
+		BASE("base");
+
+		private String type;
+
+		private BaseCategory(String type) {
+			this.type = type;
+		}
+
+		public String getType() {
+			return type;
+		}
+	}
+
 }
