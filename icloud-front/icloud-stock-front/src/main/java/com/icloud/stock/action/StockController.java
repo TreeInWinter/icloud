@@ -3,14 +3,16 @@ package com.icloud.stock.action;
 import org.slf4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.icloud.framework.logger.ri.RequestIdentityLogger;
+import com.icloud.front.business.ICloudCommonBussiness;
+import com.icloud.stock.bussiness.BaseAction;
+import com.icloud.stock.model.constant.StockConstants.BaseCategory;
 
 @Controller
 @RequestMapping("/stock")
-public class StockController {
+public class StockController extends BaseAction {
 	private static final Logger logger = RequestIdentityLogger
 			.getLogger(StockController.class);
 
@@ -18,12 +20,8 @@ public class StockController {
 	// @ResponseBody
 	// @RequestParam(required=true) String hotelId
 	public ModelAndView stockMenu() {
-		ModelAndView model = new ModelAndView("stock/stockMenu");
-		// model.addObject("roomCatList", lvRoomCats);
-		// model.addObject("bookingClassMap", lvBookingClassMap);
-		// model.addObject("breakfastComp",BreakfastEnum.values());
-		// model.addObject("dateListMap", lvDateWeekMap);
-		// model.setViewName();
+		ModelAndView model = new ModelAndView("stock/mainPage");
+		model.addObject("mainMenus", ICloudCommonBussiness.getBaseMenu());
 		return model;
 	}
 
@@ -34,10 +32,19 @@ public class StockController {
 	}
 
 	@RequestMapping("/getStockMenu")
-	@ResponseBody
-	public String getStockMenu(String id) {
-		logger.info(id);
-		return "你好1111 " + id;
-	}
+	// @ResponseBody
+	public ModelAndView getStockMenu(String id) {
+		ModelAndView model = new ModelAndView("stock/menus");
+		if (id == null)
+			id = BaseCategory.BASE.getType();
+		id = id.trim();
+		if (BaseCategory.XUEQIU.getType().equals(id)) {
 
+		} else if (BaseCategory.ZHENGJIANHUI.getType().equals(id)) {
+
+		} else {
+
+		}
+		return model;
+	}
 }

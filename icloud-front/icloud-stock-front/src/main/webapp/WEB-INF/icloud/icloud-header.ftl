@@ -2,12 +2,10 @@
 <header class="main-header">
     <div class="header-wrapper"/>
     <div class="main-menu">
-       <a class="logo" href="/"><h1>必有网</h1></a>
+       <a class="logo" href="${basepath}/index"><h1>必有网</h1></a>
        <nav class="main-nav">
          <ul class="clearfix">
-            <li <#if current=="上海股票">class="first active"</#if>><a herf="#">上海股票</a></li>
-            <li <#if current=="深圳股票">class="first active"</#if>><a herf="#">深圳股票</a></li>
-            <li <#if current=="历史记录">class="first active"</#if>><a herf="#">历史记录</a></li>
+         	<li <#if current=="行情">class="first active"</#if>><a href="${basepath}/stock/stockMenu">行情</a></li>
             </ul>
        </nav>
        <nav class="main-links">
