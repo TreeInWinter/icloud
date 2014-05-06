@@ -18,6 +18,7 @@ import com.icloud.framework.core.common.ReturnCode;
 import com.icloud.framework.core.exception.BizException;
 import com.icloud.framework.core.util.StringUtil;
 import com.icloud.framework.dict.DataDict;
+import com.icloud.framework.util.LogFileReader;
 import com.netflix.curator.framework.CuratorFramework;
 import com.netflix.curator.framework.CuratorFrameworkFactory;
 import com.netflix.curator.framework.recipes.cache.PathChildrenCache;
@@ -29,7 +30,6 @@ import com.netflix.curator.framework.state.ConnectionState;
 import com.netflix.curator.framework.state.ConnectionStateListener;
 import com.netflix.curator.retry.ExponentialBackoffRetry;
 import com.netflix.curator.retry.RetryNTimes;
-import com.icloud.search.util.LogFileReader;
 
 public class DistributedLockFramework {
 	private static Logger logger = LoggerFactory.getLogger(DistributedLockFramework.class);

@@ -10,19 +10,20 @@ import com.icloud.stock.connector.handler.impl.XueqiuMetaInfoHandler;
 import com.icloud.stock.connector.model.XueqiuMetaInfo;
 import com.icloud.stock.connector.model.XueqiuMetaInfo.Stock;
 
-public class XueQiuHangYeImporter {
+public class XueQiuzhengjianImporter {
 	private LogFileWriter writer;
 
-	public XueQiuHangYeImporter(String filePath) {
+	public XueQiuzhengjianImporter(String filePath) {
 		writer = new LogFileWriter(filePath);
 	}
 
 	public void importHangye() {
-		String filePath = "bin/data/xueqiu行业.txt";
+		String filePath = "bin/data/证监会行业.txt";
 		List<String> list = getAllHangye(filePath);
 		for (String hangye : list) {
 			XueqiuMetaInfo fetchData = fetchData(hangye);
 			save(fetchData, hangye);
+			// break;
 		}
 		close();
 	}
@@ -66,9 +67,9 @@ public class XueQiuHangYeImporter {
 
 	//
 	public static void main(String[] args) throws UnsupportedEncodingException {
-		// XueQiuHangYeImporter importer = new XueQiuHangYeImporter(
-		// "/home/jiangningcui/workspace/mygithub/icloud/icloud-data/xueqiu/hangye.txt");
-		// importer.importHangye();
+		XueQiuzhengjianImporter importer = new XueQiuzhengjianImporter(
+				"/home/jiangningcui/workspace/mygithub/icloud/icloud-data/xueqiu/zhengjianhuihangye.txt");
+		importer.importHangye();
 		// XueqiuMetaInfo fetchData = importer.fetchData("A股指数");
 		// importer.save(fetchData, "A股指数");
 		// importer.close();

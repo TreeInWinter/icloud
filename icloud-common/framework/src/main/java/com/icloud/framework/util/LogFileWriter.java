@@ -1,4 +1,4 @@
-package com.icloud.search.util;
+package com.icloud.framework.util;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;

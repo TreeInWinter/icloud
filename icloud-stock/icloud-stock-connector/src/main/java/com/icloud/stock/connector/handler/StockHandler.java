@@ -6,17 +6,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.util.StopWatch;
 
+import com.icloud.framework.logger.ri.RequestIdentityLogger;
+import com.icloud.framework.net.http.TZHttpClient;
 import com.icloud.stock.connector.parser.Parser;
 import com.icloud.stock.connector.parser.ParserFactory;
 import com.icloud.stock.connector.parser.StockParseFactory;
-import com.icloud.framework.net.http.TZHttpClient;
 
 public abstract class StockHandler<T> implements BaseHandler<T> {
-	protected final static Logger LOGGER = LoggerFactory
+	protected static final Logger LOGGER = RequestIdentityLogger
 			.getLogger(StockHandler.class);
+
 	protected static ParserFactory factory = new StockParseFactory();
 	protected Class<T> domainClass;
 	protected String url;
