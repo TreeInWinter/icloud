@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
                                          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
- <session-factory>
+ <session-factory name="">
   <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
   <property name="hibernate.connection.password">Qaz12345</property>
   <property name="hibernate.connection.url">jdbc:mysql://103.242.109.49:3306/icloud?characterEncoding=UTF-8&amp;</property>
@@ -21,5 +21,7 @@
   <mapping resource="com/icloud/stock/model/User.hbm.xml"/>
   <mapping resource="com/icloud/stock/model/UserAccess.hbm.xml"/>
   <mapping resource="com/icloud/stock/model/Session.hbm.xml"/>
+  <mapping resource="com/icloud/stock/model/CategoryStock.hbm.xml"/>
+  <mapping resource="com/icloud/stock/model/Category.hbm.xml"/>
  </session-factory>
 </hibernate-configuration>

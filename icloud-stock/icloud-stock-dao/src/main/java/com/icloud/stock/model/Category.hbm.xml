@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-5-6 20:23:52 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.icloud.stock.model.Category" table="category" catalog="icloud">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="categoryName" type="string">
+            <column name="category_name" length="200" />
+        </property>
+        <property name="categoryRank" type="java.lang.Double">
+            <column name="category_rank" precision="22" scale="0" />
+        </property>
+        <property name="categoryCategoryType" type="string">
+            <column name="category_category_type" length="100" />
+        </property>
+        <set name="categoryStocks" table="category_stock" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="category_id" />
+            </key>
+            <one-to-many class="com.icloud.stock.model.CategoryStock" />
+        </set>
+    </class>
+</hibernate-mapping>
