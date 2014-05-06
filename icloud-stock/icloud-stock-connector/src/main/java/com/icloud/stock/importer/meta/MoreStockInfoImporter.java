@@ -2,11 +2,14 @@ package com.icloud.stock.importer.meta;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import com.icloud.framework.file.TextFile;
 import com.icloud.stock.ctx.BeansUtil;
 import com.icloud.stock.model.Stock;
+import com.icloud.stock.model.constant.StockConstants.StockLocation;
 import com.icloud.stock.service.IStockService;
 
 /**
@@ -29,12 +32,16 @@ public class MoreStockInfoImporter {
 
 	public void importFile(String filePath) {
 		List<String> content = getContent(filePath);
+		System.out.println(content.size());
+		Set<String> set = new HashSet<String>();
 		for (String str : content) {
 			Stock stock = getStockInfo(str);
-			// stockService.save(stock);
-			// System.out.println("save stock: " + stock.getStockCode() + "  "
-			// + stock.getStockName());
+			set.add(stock.getStockCode());
+//			stockService.save(stock);
+//			System.out.println("save stock: " + stock.getStockCode() + "  "
+//					+ stock.getStockName());
 		}
+		System.out.println("size : " + set.size());
 	}
 
 	public List<String> getContent(String filePath) {
@@ -53,11 +60,27 @@ public class MoreStockInfoImporter {
 		Stock stock = new Stock();
 		stock.setCreateTime(new Date());
 		stock.setUpdateTime(new Date());
-		stock.setStockCode(tokens[1]);
-		stock.setStockLocation(stock_loation);
-		stock.setStockName(tokens[0]);
 
+		stock.setStockAllCode(tokens[0]);
+		stock.setStockName(tokens[1]);
+		stock.setStockTypeBase(tokens[2]);
+		stock.setStockLocation(getLocation(tokens[0]));
+		stock.setStockCode(getCode(tokens[0]));
 		return stock;
+	}
+
+	public static String getLocation(String code) {
+		code = code.toLowerCase();
+		if (code.startsWith("sz")) {
+			return StockLocation.SZX.getLocation();
+		}
+		return StockLocation.SHA.getLocation();
+	}
+
+	public static String getCode(String code) {
+		code = code.toLowerCase();
+		code = code.replace("sz", "").replace("sh", "");
+		return code;
 	}
 
 	public static void main(String[] args) {
