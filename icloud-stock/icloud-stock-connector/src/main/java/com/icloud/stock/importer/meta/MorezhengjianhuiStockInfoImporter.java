@@ -24,21 +24,21 @@ import com.icloud.stock.service.IStockService;
  * @author jiangningcui
  *
  */
-public class MoreStockInfoImporter {
+public class MorezhengjianhuiStockInfoImporter {
 
 	private IStockService stockService;
 	private ICategoryService categoryService;
 	private ICategoryStockService categoryStockService;
 
-	public MoreStockInfoImporter() {
+	public MorezhengjianhuiStockInfoImporter() {
 		stockService = BeansUtil.getStockService();
 		categoryService = BeansUtil.getCategoryService();
 		categoryStockService = BeansUtil.getCategoryStockService();
 	}
 
-	public void importMetaInfo() {
-		String filePath = "/home/jiangningcui/workspace/mygithub/icloud/icloud-data/xueqiu/processed/jichufenlei.txt";
-		importFile(filePath, BaseCategory.BASE);
+	public void importzhengjianhuiInfo() {
+		String filePath = "/home/jiangningcui/workspace/mygithub/icloud/icloud-data/xueqiu/processed/zhengjianhuihangye.txt";
+		importFile(filePath, BaseCategory.ZHENGJIANHUI);
 	}
 
 	public void importFile(String filePath, BaseCategory baseCategory) {
@@ -48,25 +48,24 @@ public class MoreStockInfoImporter {
 		 */
 		Map<String, Category> categoryMap = new HashMap<String, Category>();
 		for (String str : content) {
-			Category category = getCategory(str, baseCategory);
+			Category category = getzhegnjianhuiCategory(str, baseCategory);
 			if (categoryMap.get(category.getCategoryName()) == null) {
-				List<Category> tmpList = categoryService.findByProperies(
-						"categoryName", category.getCategoryName());
-				System.out.println(tmpList.get(0).getCategoryName());
-				if (tmpList == null || tmpList.size() == 0) {
+				Category tmpValue = categoryService.getCategory(
+						category.getCategoryName(), baseCategory.getType());
+				if (tmpValue == null) {
 					categoryService.save(category);
 					categoryMap.put(category.getCategoryName(), category);
 				} else {
-					categoryMap.put(category.getCategoryName(), tmpList.get(0));
+					categoryMap.put(category.getCategoryName(), tmpValue);
 				}
 			}
 		}
 		System.out.println("---------------------");
-		// Map<String, Stock> stockMap = new HashMap<String, Stock>();
+
 		int count = content.size();
 		int i = 0;
 		for (String str : content) {
-			Stock stock = getStockInfo(str);
+			Stock stock = getzhegnjianhuiStockInfo(str);
 			List<Stock> tmpList = stockService.findByProperies("stockCode",
 					stock.getStockCode());
 			if (tmpList == null || tmpList.size() == 0) {
@@ -74,23 +73,22 @@ public class MoreStockInfoImporter {
 				System.out.println(stock.getStockCode());
 			} else {
 				stock = tmpList.get(0);
-				if (tmpList.size() != 1) {
-					System.out.println(stock.getStockCode());
-				}
 			}
-
+			// if (tmpList.size() != 1) {
+			// System.out.println(stock.getStockCode());
+			// }
 			i++;
 			if (i % 100 == 0) {
 				System.out.println(i + "  " + count);
 			}
-
 			// 找一下类别
-			Category category = getCategory(str, baseCategory);
+			Category category = getzhegnjianhuiCategory(str, baseCategory);
 			category = categoryMap.get(category.getCategoryName());
 			CategoryStock cs = new CategoryStock();
 			cs.setCategory(category);
 			cs.setStock(stock);
 			categoryStockService.save(cs);
+			System.out.println(stock.getStockCode());
 		}
 		System.out.println("------------------end");
 	}
@@ -104,25 +102,27 @@ public class MoreStockInfoImporter {
 		return list;
 	}
 
-	public Category getCategory(String pair, BaseCategory base) {
+	public Category getzhegnjianhuiCategory(String pair, BaseCategory base) {
+		System.out.println(pair);
 		String[] tokens = pair.trim().split(" ");
 		Category category = new Category();
 		category.setCategoryCategoryType(base.getType());
-		category.setCategoryName(tokens[2]);
+		category.setCategoryName(tokens[0]);
 		category.setCategoryRank(1.0d);
 		return category;
 	}
 
-	public Stock getStockInfo(String pair) {
+	public Stock getzhegnjianhuiStockInfo(String pair) {
 		String[] tokens = null;
 		tokens = pair.trim().split(" ");
 		Stock stock = new Stock();
 		stock.setCreateTime(new Date());
 		stock.setUpdateTime(new Date());
-		stock.setStockAllCode(tokens[0]);
-		stock.setStockName(tokens[1]);
-		stock.setStockLocation(getLocation(tokens[0]));
-		stock.setStockCode(getCode(tokens[0]));
+
+		stock.setStockAllCode(tokens[3]);
+		stock.setStockName(tokens[2]);
+		stock.setStockLocation(getLocation(tokens[3]));
+		stock.setStockCode(getCode(tokens[3]));
 		return stock;
 	}
 
@@ -141,9 +141,7 @@ public class MoreStockInfoImporter {
 	}
 
 	public static void main(String[] args) {
-		MoreStockInfoImporter importer = new MoreStockInfoImporter();
-		importer.importMetaInfo();
-		// importer.importXueqiuInfo();
-
+		MorezhengjianhuiStockInfoImporter importer = new MorezhengjianhuiStockInfoImporter();
+		importer.importzhengjianhuiInfo();
 	}
 }

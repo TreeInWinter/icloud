@@ -16,7 +16,7 @@ public final class StockConstants {
 	}
 
 	public enum BaseCategory {
-		BASE("base");
+		BASE("base"), XUEQIU("xueqiu"), ZHENGJIANHUI("zhengjianhui");
 
 		private String type;
 

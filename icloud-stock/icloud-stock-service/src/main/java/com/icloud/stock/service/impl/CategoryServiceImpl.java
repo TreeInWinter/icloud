@@ -23,4 +23,10 @@ public class CategoryServiceImpl extends SqlBaseService<Category> implements
 		return categoryDao;
 	}
 
+	@Override
+	public Category getCategory(String categoryName, String type) {
+		// TODO Auto-generated method stub
+		return categoryDao.getCategory(categoryName, type);
+	}
+
 }
