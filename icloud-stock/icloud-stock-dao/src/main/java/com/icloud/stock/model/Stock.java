@@ -1,6 +1,6 @@
 package com.icloud.stock.model;
 
-// Generated 2014-5-6 19:20:05 by Hibernate Tools 3.4.0.CR1
+// Generated 2014-5-6 19:49:18 by Hibernate Tools 3.4.0.CR1
 
 import java.util.Date;
 
@@ -19,6 +19,7 @@ public class Stock implements java.io.Serializable {
 	private String descrition;
 	private String stockTypeZhengjian;
 	private String stockTypeBase;
+	private String stockAllCode;
 
 	public Stock() {
 	}
@@ -29,7 +30,8 @@ public class Stock implements java.io.Serializable {
 
 	public Stock(String stockName, String stockCode, Date createTime,
 			Date updateTime, String stockLocation, String stockTypeXueqiu,
-			String descrition, String stockTypeZhengjian, String stockTypeBase) {
+			String descrition, String stockTypeZhengjian, String stockTypeBase,
+			String stockAllCode) {
 		this.stockName = stockName;
 		this.stockCode = stockCode;
 		this.createTime = createTime;
@@ -39,6 +41,7 @@ public class Stock implements java.io.Serializable {
 		this.descrition = descrition;
 		this.stockTypeZhengjian = stockTypeZhengjian;
 		this.stockTypeBase = stockTypeBase;
+		this.stockAllCode = stockAllCode;
 	}
 
 	public Integer getId() {
@@ -119,6 +122,14 @@ public class Stock implements java.io.Serializable {
 
 	public void setStockTypeBase(String stockTypeBase) {
 		this.stockTypeBase = stockTypeBase;
+	}
+
+	public String getStockAllCode() {
+		return this.stockAllCode;
+	}
+
+	public void setStockAllCode(String stockAllCode) {
+		this.stockAllCode = stockAllCode;
 	}
 
 }
