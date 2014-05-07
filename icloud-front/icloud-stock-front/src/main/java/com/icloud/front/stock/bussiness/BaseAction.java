@@ -1,4 +1,4 @@
-package com.icloud.stock.bussiness;
+package com.icloud.front.stock.bussiness;
 
 import javax.annotation.Resource;
 

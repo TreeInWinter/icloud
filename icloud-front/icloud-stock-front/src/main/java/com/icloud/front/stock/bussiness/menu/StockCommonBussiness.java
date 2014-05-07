@@ -1,11 +1,15 @@
-package com.icloud.stock.bussiness.menu;
+package com.icloud.front.stock.bussiness.menu;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.icloud.stock.bussiness.BaseAction;
+import org.springframework.stereotype.Service;
+
+import com.icloud.front.stock.bussiness.BaseAction;
+import com.icloud.front.stock.pojo.BaseStockMenu;
 import com.icloud.stock.model.constant.StockConstants.BaseCategory;
 
+@Service("stockCommonBussiness")
 public class StockCommonBussiness extends BaseAction {
 	public static List<BaseStockMenu> getBaseMenu() {
 		String url = "/stock";

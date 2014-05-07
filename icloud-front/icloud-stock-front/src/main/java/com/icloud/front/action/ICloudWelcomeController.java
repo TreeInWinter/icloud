@@ -1,4 +1,4 @@
-package com.icloud.facade.action;
+package com.icloud.front.action;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

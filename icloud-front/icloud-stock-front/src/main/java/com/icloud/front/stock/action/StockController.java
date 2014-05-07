@@ -1,4 +1,4 @@
-package com.icloud.stock.action;
+package com.icloud.front.stock.action;
 
 import org.slf4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -6,13 +6,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.icloud.framework.logger.ri.RequestIdentityLogger;
-import com.icloud.front.business.ICloudCommonBussiness;
-import com.icloud.stock.bussiness.BaseAction;
+import com.icloud.front.stock.baseaction.BaseStockController;
 import com.icloud.stock.model.constant.StockConstants.BaseCategory;
 
 @Controller
 @RequestMapping("/stock")
-public class StockController extends BaseAction {
+public class StockController extends BaseStockController {
 	private static final Logger logger = RequestIdentityLogger
 			.getLogger(StockController.class);
 
@@ -21,7 +20,7 @@ public class StockController extends BaseAction {
 	// @RequestParam(required=true) String hotelId
 	public ModelAndView stockMenu() {
 		ModelAndView model = new ModelAndView("stock/mainPage");
-		model.addObject("mainMenus", ICloudCommonBussiness.getBaseMenu());
+		model.addObject("mainMenus", stockCommonBussiness.getBaseMenu());
 		return model;
 	}
 

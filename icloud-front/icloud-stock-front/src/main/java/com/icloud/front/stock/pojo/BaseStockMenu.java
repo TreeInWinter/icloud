@@ -1,4 +1,4 @@
-package com.icloud.front.pojo;
+package com.icloud.front.stock.pojo;
 
 public class BaseStockMenu {
 	private String code;

@@ -1,5 +1,4 @@
 <#import "/icloud/icloud-main-container.ftl" as imc/>
-<#import "/stock/stock-template/stock-menu.ftl" as sm/>
 <@imc.mainContainer current = "上海股票" jsFiles=[""] cssFiles=[""]>
  <h1 class="au-title">
    <span>联系我们</span>
