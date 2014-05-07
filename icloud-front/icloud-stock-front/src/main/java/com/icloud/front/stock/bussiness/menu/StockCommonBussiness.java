@@ -41,7 +41,6 @@ public class StockCommonBussiness extends BaseAction {
 		// System.out.println(category.getCategoryCategoryType() + "  "
 		// + category.getCategoryName() + "  " + category.getId());
 		// }
-
 		return buildStockMenuBean(categorys);
 	}
 

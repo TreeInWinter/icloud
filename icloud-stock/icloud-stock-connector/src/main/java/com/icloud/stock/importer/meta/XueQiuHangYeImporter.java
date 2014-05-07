@@ -43,16 +43,24 @@ public class XueQiuHangYeImporter {
 
 	private XueqiuMetaInfo fetchData(String typeName) {
 		// TODO Auto-generated method stub
+
+		XueqiuMetaInfoHandler handler;
 		try {
-			XueqiuMetaInfoHandler handler = new XueqiuMetaInfoHandler(typeName);
+			handler = new XueqiuMetaInfoHandler(typeName);
 			XueqiuMetaInfo metaInfo = handler.getHttpData();
 			return metaInfo;
-		} catch (NoSuchFieldException | SecurityException
-				| NoSuchMethodException e) {
+		} catch (NoSuchFieldException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NoSuchMethodException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;
+
 	}
 
 	public List<String> getAllHangye(String filePath) {
