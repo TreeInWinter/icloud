@@ -1,44 +1,20 @@
 <ul>
+ <#if (menuList)??>
+   <#list menuList as stockMenuBean>
     <li>
-        <h2>高考图书</h2>
-        <div class="link-list">
+        <h2>${(stockMenuBean.name)!''}</h2>
+        <#if (stockMenuBean.menus)??>
+         <div class="link-list">
+        <#list stockMenuBean.menus as menu>
             <div class="link-wrapper">
                 <span>|</span>
-                <a href="#">物理习题</a>
+                <a href="${(menu.code)!''}">${(menu.name)!''}</a>
             </div>
-            <div class="link-wrapper">
-                <span>|</span>
-                <a href="#">生物</a>
-            </div>
-            <div class="link-wrapper">
-                <span>|</span>
-                <a href="#">高考复习题</a>
-            </div>
-            <div class="link-wrapper">
-                <span>|</span>
-                <a href="#">语文作文大全</a>
-            </div>
-            <div class="link-wrapper">
-                <span>|</span>
-                <a href="#">政治时事</a>
-            </div>
-            <div class="link-wrapper">
-                <span>|</span>
-                <a href="#">历年高考真题解析与答案</a>
-            </div>
-            <div class="link-wrapper">
-                <span>|</span>
-                <a href="#">考试题</a>
-            </div>
-            <div class="link-wrapper">
-                <span>|</span>
-                <a href="#">化学实验测试</a>
-            </div>
-            <div class="link-wrapper">
-                <span>|</span>
-                <a href="#">生物测试</a>
-            </div>
-        </div>
+        </#list>
+         </div>
+		</#if>
         <div class="clear"></div>
     </li>
+ </#list>
+ </#if>
 </ul>

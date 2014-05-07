@@ -1,5 +1,7 @@
 package com.icloud.stock.service.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -27,6 +29,12 @@ public class CategoryServiceImpl extends SqlBaseService<Category> implements
 	public Category getCategory(String categoryName, String type) {
 		// TODO Auto-generated method stub
 		return categoryDao.getCategory(categoryName, type);
+	}
+
+	@Override
+	public List<Category> getCategoryByType(String type) {
+		// TODO Auto-generated method stub
+		return categoryDao.findByProperty("categoryCategoryType", type);
 	}
 
 }

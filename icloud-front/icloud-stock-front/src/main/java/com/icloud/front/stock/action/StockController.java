@@ -1,5 +1,7 @@
 package com.icloud.front.stock.action;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,6 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.icloud.framework.logger.ri.RequestIdentityLogger;
 import com.icloud.front.stock.baseaction.BaseStockController;
+import com.icloud.front.stock.pojo.StockMenuBean;
 import com.icloud.stock.model.constant.StockConstants.BaseCategory;
 
 @Controller
@@ -31,19 +34,13 @@ public class StockController extends BaseStockController {
 	}
 
 	@RequestMapping("/getStockMenu")
-	// @ResponseBody
 	public ModelAndView getStockMenu(String id) {
 		ModelAndView model = new ModelAndView("stock/menus");
 		if (id == null)
 			id = BaseCategory.BASE.getType();
-		id = id.trim();
-		if (BaseCategory.XUEQIU.getType().equals(id)) {
-
-		} else if (BaseCategory.ZHENGJIANHUI.getType().equals(id)) {
-
-		} else {
-
-		}
+		List<StockMenuBean> menuList = stockCommonBussiness
+				.getStockMenuBean(id);
+		model.addObject("menuList", menuList);
 		return model;
 	}
 }

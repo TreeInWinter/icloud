@@ -8,10 +8,10 @@ import com.icloud.stock.service.IStockService;
 
 public class BaseAction {
 	@Resource(name = "stockService")
-	private IStockService stockService;
+	protected IStockService stockService;
 	@Resource(name = "categoryService")
-	private ICategoryService categoryService;
+	protected ICategoryService categoryService;
 	@Resource(name = "categoryStockService")
-	private ICategoryStockService categoryStockService;
+	protected ICategoryStockService categoryStockService;
 
 }
