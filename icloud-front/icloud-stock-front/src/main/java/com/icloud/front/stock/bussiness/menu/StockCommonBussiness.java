@@ -68,10 +68,8 @@ public class StockCommonBussiness extends BaseAction {
 		});
 
 		List<StockMenuBean> list = new ArrayList<StockMenuBean>();
-
 		StockMenuBean bean = new StockMenuBean();
 		char firstChar = 0;
-
 		char lastChar = 0;
 		for (Category category : categorys) {
 			char currentChar = PinyinAutoCompletetor
@@ -98,7 +96,6 @@ public class StockCommonBussiness extends BaseAction {
 			bean.setName(getMenuName(firstChar, lastChar));
 			list.add(bean);
 		}
-		// System.out.println("size  : " + categorys.size());
 		return list;
 	}
 
