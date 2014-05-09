@@ -11,7 +11,8 @@ jar {
 dependencies {
 	compile project(':icloud-stock:icloud-stock-dao')
     compile project(':icloud-stock:icloud-stock-config')
-	compile libraries.xstream
+    compile project(':icloud-common:framework-search')
 
+	compile libraries.xstream
 	compile libraries.httpclient
 }

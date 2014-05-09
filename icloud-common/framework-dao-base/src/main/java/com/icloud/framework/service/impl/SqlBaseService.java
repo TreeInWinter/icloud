@@ -9,7 +9,7 @@ import com.icloud.framework.service.ISqlBaseService;
 
 public abstract class SqlBaseService<T> implements ISqlBaseService<T> {
 
-	private IHibernateBaseDao<T> baseDao;
+	protected IHibernateBaseDao<T> baseDao;
 
 	protected abstract IHibernateBaseDao<T> getDao();
 
@@ -70,4 +70,22 @@ public abstract class SqlBaseService<T> implements ISqlBaseService<T> {
 	public List<T> findByProperies(String property, Object value) {
 		return this.baseDao.findByProperty(property, value);
 	}
+
+	@Override
+	public long countByProperties(String property, Object value) {
+		// TODO Auto-generated method stub
+		return this.baseDao.countByProperty(property, value);
+	}
+
+	@Override
+	public List<T> findByProperties(String property, Object value, int start,
+			int limit) {
+		return this.baseDao.findByProperty(property, value, start, limit);
+	}
+
+	@Override
+	public List<T> findAll(int start, int limit) {
+		return this.baseDao.findAll(start, limit);
+	}
+
 }

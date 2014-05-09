@@ -62,12 +62,14 @@ public class HibernateBaseDaoImpl<T> extends HibernateDaoSupport implements
 	@Override
 	public long count() {
 		// TODO Auto-generated method stub
-		List list = getHibernateTemplate().find(
-				"select count(*) from " + domainClass.getName() + " x");
+		String hql = "select count(*) from " + domainClass.getName() + " x";
+		return count(hql);
+	}
 
+	public long count(String hql) {
+		List list = getHibernateTemplate().find(hql);
 		Long count = (Long) list.get(0);
 		return count.longValue();
-
 	}
 
 	@Override
@@ -92,5 +94,31 @@ public class HibernateBaseDaoImpl<T> extends HibernateDaoSupport implements
 		return getHibernateTemplate().find(
 				"from " + domainClass.getName() + " as model where model."
 						+ paramName + "=?", value);
+	}
+
+	public long countByProperty(String paramname, Object value) {
+		String hql = "from " + domainClass.getName() + " as model where model."
+				+ paramname + "=" + value;
+		return count(hql);
+	}
+
+	public List<T> findByProperty(String hql, int start, int limit) {
+		List<T> list = this.getSession().createQuery(hql).setFirstResult(start)
+				.setMaxResults(limit).list();
+		return list;
+	}
+
+	@Override
+	public List<T> findByProperty(String paramName, Object value, int start,
+			int limit) {
+		String queryString = "from " + domainClass.getName()
+				+ " as model where model." + paramName + "=" + value;
+		return findByProperty(queryString, start, limit);
+	}
+
+	@Override
+	public List<T> findAll(int start, int limit) {
+		String queryString = "from " + domainClass.getName() + " as model";
+		return findByProperty(queryString, start, limit);
 	}
 }

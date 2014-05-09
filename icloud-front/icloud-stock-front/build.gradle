@@ -12,5 +12,5 @@ dependencies {
 	compile project(':icloud-stock:icloud-stock-service')
     compile project(':icloud-stock:icloud-stock-config')
     compile project(':icloud-front:icloud-common-front')
-    compile project(':icloud-common:framework-search')
+
 }

@@ -19,7 +19,18 @@ public interface IHibernateBaseDao<T> {
 
 	public long count();
 
+	public long count(String hql);
+
 	public void deteleteAll();
 
+	public long countByProperty(String paramname, Object value);
+
 	public List<T> findByProperty(String paramName, Object value);
+
+	public List<T> findByProperty(String paramName, Object value, int start,
+			int limit);
+
+	public List<T> findAll(int start, int limit);
+
+	public List<T> findByProperty(String hql, int start, int limit);
 }

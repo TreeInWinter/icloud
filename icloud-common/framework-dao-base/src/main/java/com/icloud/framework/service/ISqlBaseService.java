@@ -20,4 +20,12 @@ public interface ISqlBaseService<T> {
 	public void deteleteAll();
 
 	public List<T> findByProperies(String property, Object value);
+
+	public long countByProperties(String property, Object value);
+
+	public List<T> findByProperties(String property, Object value, int start,
+			int limit);
+
+	public List<T> findAll(int start, int limit);
+
 }
