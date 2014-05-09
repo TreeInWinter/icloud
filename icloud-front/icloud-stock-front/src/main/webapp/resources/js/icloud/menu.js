@@ -25,9 +25,9 @@ function menuloading() {
 						},
 						complete : function() {
 						},
-						success : function(json) {
+						success : function(result) {
 							show.html("");
-							show.append(json);
+							show.append(result);
 						}
 					});
 				} else {

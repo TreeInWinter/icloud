@@ -732,28 +732,13 @@
     <script>
 
         $(function(){
-            $('body').on('click','.more-cabin',function(){
-                $(this).closest('tr').siblings('.more_cabin_item').toggle(); 
-            });
-            $.role_ctoggle();
-
             $('.adaptiveButton.brightRed_btn').on('click',function(){
                 $.get('//fafds.com/fdafd.html');
+//                $.get('http://www.baidu.com');
             });
             $.loadingbar({
                 showClose: false,
                 text:'正在为您查询，请稍候…',
-            });
-
-            $("#trip_type").change(function(){
-                if($(this).val() == "one_way"){
-                    $("#return_label label").addClass("muted");
-                    $("#return_date").prop("disabled",true);
-                }else{
-                    $("#return_label label").removeClass("muted");
-                    $("#return_date").prop("disabled",false);
-
-                }
             });
         });
 

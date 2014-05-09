@@ -50,4 +50,21 @@ public class StockListBussiness extends BaseAction {
 		return getStockListByType(-1, pageNo, limit);
 	}
 
+	public Pagination<Stock> getStockList(String cateId, String pageNo,
+			int limit) {
+		int id = -1;
+		try {
+			id = Integer.parseInt(cateId);
+		} catch (Exception e) {
+			id = -1;
+		}
+		int pn = 0;
+		try {
+			pn = Integer.parseInt(pageNo);
+		} catch (Exception e) {
+			pn = 0;
+		}
+		return getStockListByType(id, pn, limit);
+	}
+
 }
