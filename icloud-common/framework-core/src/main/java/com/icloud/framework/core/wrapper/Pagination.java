@@ -3,6 +3,7 @@ package com.icloud.framework.core.wrapper;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -11,7 +12,7 @@ public class Pagination<T> implements Serializable {
 	private static final long serialVersionUID = 8692496180734037486L;
 
 	/** 总页数 */
-	private long totalPageCount;
+	private int totalPageCount;
 
 	/** 当前页码 */
 	private int pageNo;
@@ -29,7 +30,7 @@ public class Pagination<T> implements Serializable {
 
 	public Pagination() {
 		this.pageSize = 10;
-		this.pageNo = 1;
+		this.pageNo = 0;
 		this.totalPageCount = 1;
 	}
 
@@ -50,7 +51,7 @@ public class Pagination<T> implements Serializable {
 	public void setTotalItemCount(Long itemCount) {
 		if (itemCount != null) {
 			this.totalItemCount = itemCount;
-			this.totalPageCount = (itemCount + pageSize - 1) / pageSize;
+			this.totalPageCount = (int) ((itemCount + pageSize - 1) / pageSize);
 			this.totalPageCount = totalPageCount <= 0 ? 1 : totalPageCount;
 		}
 	}
@@ -59,11 +60,11 @@ public class Pagination<T> implements Serializable {
 		return pageSize * (pageNo - 1);
 	}
 
-	public long getTotalPageCount() {
+	public int getTotalPageCount() {
 		return totalPageCount;
 	}
 
-	public void setTotalPageCount(Long totalPageCount) {
+	public void setTotalPageCount(Integer totalPageCount) {
 		if (totalPageCount != null) {
 			this.totalPageCount = totalPageCount < 1 ? 1 : totalPageCount;
 		}
@@ -146,8 +147,8 @@ public class Pagination<T> implements Serializable {
 			this.pageSize = 10;
 		if (this.totalItemCount < 0)
 			this.totalItemCount = 0;
-		this.totalPageCount = (totalItemCount % pageSize > 0) ? totalItemCount
-				/ pageSize + 1 : totalItemCount / pageSize;
+		this.totalPageCount = (int) ((totalItemCount % pageSize > 0) ? totalItemCount
+				/ pageSize + 1 : totalItemCount / pageSize);
 	}
 
 }

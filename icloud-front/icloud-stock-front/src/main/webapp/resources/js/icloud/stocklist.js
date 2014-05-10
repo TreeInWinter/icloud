@@ -1,4 +1,6 @@
 function stockListloading(cateId, pageNo) {
+	$(".menu-panel").removeClass("selected");
+	$("#sidebar-menu > ul > li").removeClass("selected");
 	setLoader();
 	/**
 	 * 进行访问
@@ -30,5 +32,5 @@ function hideLoader() {
 }
 
 $(document).ready(function() {
-	stockListloading(885, 0);
+	stockListloading(-1, 0);
 });

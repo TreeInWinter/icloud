@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.icloud.framework.core.wrapper.PageView;
 import com.icloud.framework.core.wrapper.Pagination;
 import com.icloud.framework.logger.ri.RequestIdentityLogger;
 import com.icloud.front.stock.baseaction.BaseStockController;
@@ -35,11 +36,15 @@ public class StockController extends BaseStockController {
 	public ModelAndView stockListMenu(
 			@RequestParam(required = true) String cateId, String pageNo) {
 		ModelAndView model = new ModelAndView("stock/stock-list-view");
-		BaseStockMenu baseStockMenu = this.stockCommonBussiness.getBaseStockMenu(cateId);
+		BaseStockMenu baseStockMenu = this.stockCommonBussiness
+				.getBaseStockMenu(cateId);
 		Pagination<Stock> pagination = this.stockListBussiness.getStockList(
-				cateId, pageNo, 40);
+				cateId, pageNo, 30);
+		PageView pageView = PageView.convertPage(pagination);
 		model.addObject("pagination", pagination);
+		model.addObject("pageView", pageView);
 		model.addObject("baseStockMenu", baseStockMenu);
+		model.addObject("cateId", cateId);
 		return model;
 	}
 

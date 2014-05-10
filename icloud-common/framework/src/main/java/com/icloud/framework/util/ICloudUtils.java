@@ -29,7 +29,7 @@ public class ICloudUtils {
 	}
 
 	public static boolean isNotNull(Object object) {
-		return object == null ? true : false;
+		return object == null ? false : true;
 	}
 
 }

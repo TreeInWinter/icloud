@@ -48,7 +48,7 @@ public class StockCommonBussiness extends BaseAction {
 
 	/**
 	 * 每个东西超过7之后,并且后面的首字母相同,便进行合并
-	 * 
+	 *
 	 * @param categorys
 	 * @return
 	 */

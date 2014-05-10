@@ -10,6 +10,7 @@ import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 import com.icloud.framework.dao.hibernate.IHibernateBaseDao;
 import com.icloud.framework.hibernate.util.GenericsUtils;
+import com.icloud.framework.util.ICloudUtils;
 
 public class HibernateBaseDaoImpl<T> extends HibernateDaoSupport implements
 		IHibernateBaseDao<T> {
@@ -26,7 +27,13 @@ public class HibernateBaseDaoImpl<T> extends HibernateDaoSupport implements
 
 	@Override
 	public T getById(Integer id) {
-		return (T) getHibernateTemplate().load(domainClass, id);
+		// return (T) getHibernateTemplate().load(domainClass, id);
+		List<T> list = (getHibernateTemplate().find(
+				"from " + domainClass.getName()
+						+ " as model where model.id = ? ", id));
+		if (ICloudUtils.isEmpty(list))
+			return null;
+		return list.get(0);
 	}
 
 	@Override

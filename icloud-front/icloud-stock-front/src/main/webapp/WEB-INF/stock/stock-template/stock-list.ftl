@@ -4,6 +4,7 @@
     <span>${(baseStockMenu.fatherName)!''}</span>&nbsp;>&nbsp;
     <span>${(baseStockMenu.name)!''}</span>
 </div>
+<#assign cateId="${(cateId)}"/>
 <div class="stockList">
     <div class="stockList-content new-portfolio" style="display: block;">
         <table cellspacing="0" cellpadding="0" class="portfolio">
@@ -44,34 +45,15 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="even_stock_up" code="SZ002387">
+            <#if (pagination.data)??>
+              <#list pagination.data as stock>
+              	<#assign a="stock_index"/>
+                <tr class="<#if stock_index%2==0>even_stock_up<#else>odd_stock_up</#if>" code="${(stock.stockCode)!''}">
                     <td>
-                        <a target="_blank" href="/S/SZ002387">SZ002387</a>
+                        <a target="_blank" href="${(stock.stockCode)!''}">${(stock.stockName)!''}</a>
                     </td>
                     <td>
-                        <a target="_blank" href="/S/SZ002387">黑牛食品</a>
-                    </td>
-                    <td class="stock-color">11.50</td>
-                    <td class="stock-color">+0.55</td>
-                    <td class="stock-color">+5.02%</td>
-                    <td class="stock-color">10.76 - 11.65</td>
-                    <td class="stock-color">6.63 - 11.64</td>
-                    <td class="nocolor">35.99亿</td>
-                    <td class="stock-color">247.01</td>
-                    <td class="nocolor">1317.03万</td>
-                    <td class="nocolor">1.49亿</td>
-                    <td>
-                        <a href="#" class="followStock" target="_blank" data-stockid="SZ002387" data-stockname="黑牛食品" data-stockcurrent="11.5">
-                            <span></span>关注
-                        </a>
-                    </td>
-                </tr>
-                <tr class="odd_stock_up" code="SZ000590">
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">SZ002387</a>
-                    </td>
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">黑牛食品</a>
+                        <a target="_blank" href="/S/SZ002387">${(stock.stockAllCode)!''}</a>
                     </td>
                     <td class="stock-color">11.50</td>
                     <td class="stock-color">+0.55</td>
@@ -83,353 +65,58 @@
                     <td class="nocolor">1317.03万</td>
                     <td class="nocolor">1.49亿</td>
                     <td>
-                        <a href="#" class="followStock" target="_blank" data-stockid="SZ002387" data-stockname="黑牛食品" data-stockcurrent="11.5">
+                        <a href="#" class="followStock" target="_blank" data-stockid="${(stock.stockCode)!''}" data-stockname="${(stock.stockName)!''}" data-stockcurrent="11.5">
                             <span></span>关注
                         </a>
                     </td>
                 </tr>
-                <tr class="odd_stock_up" code="SZ000590">
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">SZ002387</a>
-                    </td>
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">黑牛食品</a>
-                    </td>
-                    <td class="stock-color">11.50</td>
-                    <td class="stock-color">+0.55</td>
-                    <td class="stock-color">+5.02%</td>
-                    <td class="stock-color">10.76 - 11.65</td>
-                    <td class="stock-color">6.63 - 11.64</td>
-                    <td class="nocolor">35.99亿</td>
-                    <td class="stock-color">247.01</td>
-                    <td class="nocolor">1317.03万</td>
-                    <td class="nocolor">1.49亿</td>
-                    <td>
-                        <a href="#" class="followStock" target="_blank" data-stockid="SZ002387" data-stockname="黑牛食品" data-stockcurrent="11.5">
-                            <span></span>关注
-                        </a>
-                    </td>
-                </tr>
-                <tr class="even_stock_up" code="SZ000590">
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">SZ002387</a>
-                    </td>
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">黑牛食品</a>
-                    </td>
-                    <td class="stock-color">11.50</td>
-                    <td class="stock-color">+0.55</td>
-                    <td class="stock-color">+5.02%</td>
-                    <td class="stock-color">10.76 - 11.65</td>
-                    <td class="stock-color">6.63 - 11.64</td>
-                    <td class="nocolor">35.99亿</td>
-                    <td class="stock-color">247.01</td>
-                    <td class="nocolor">1317.03万</td>
-                    <td class="nocolor">1.49亿</td>
-                    <td>
-                        <a href="#" class="followStock" target="_blank" data-stockid="SZ002387" data-stockname="黑牛食品" data-stockcurrent="11.5">
-                            <span></span>关注
-                        </a>
-                    </td>
-                </tr>
-                <tr class="odd_stock_up" code="SZ000590">
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">SZ002387</a>
-                    </td>
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">黑牛食品</a>
-                    </td>
-                    <td class="stock-color">11.50</td>
-                    <td class="stock-color">+0.55</td>
-                    <td class="stock-color">+5.02%</td>
-                    <td class="stock-color">10.76 - 11.65</td>
-                    <td class="stock-color">6.63 - 11.64</td>
-                    <td class="nocolor">35.99亿</td>
-                    <td class="stock-color">247.01</td>
-                    <td class="nocolor">1317.03万</td>
-                    <td class="nocolor">1.49亿</td>
-                    <td>
-                        <a href="#" class="followStock" target="_blank" data-stockid="SZ002387" data-stockname="黑牛食品" data-stockcurrent="11.5">
-                            <span></span>关注
-                        </a>
-                    </td>
-                </tr>
-                <tr class="odd_stock_up" code="SZ000590">
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">SZ002387</a>
-                    </td>
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">黑牛食品</a>
-                    </td>
-                    <td class="stock-color">11.50</td>
-                    <td class="stock-color">+0.55</td>
-                    <td class="stock-color">+5.02%</td>
-                    <td class="stock-color">10.76 - 11.65</td>
-                    <td class="stock-color">6.63 - 11.64</td>
-                    <td class="nocolor">35.99亿</td>
-                    <td class="stock-color">247.01</td>
-                    <td class="nocolor">1317.03万</td>
-                    <td class="nocolor">1.49亿</td>
-                    <td>
-                        <a href="#" class="followStock" target="_blank" data-stockid="SZ002387" data-stockname="黑牛食品" data-stockcurrent="11.5">
-                            <span></span>关注
-                        </a>
-                    </td>
-                </tr>
-                <tr class="odd_stock_up" code="SZ000590">
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">SZ002387</a>
-                    </td>
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">黑牛食品</a>
-                    </td>
-                    <td class="stock-color">11.50</td>
-                    <td class="stock-color">+0.55</td>
-                    <td class="stock-color">+5.02%</td>
-                    <td class="stock-color">10.76 - 11.65</td>
-                    <td class="stock-color">6.63 - 11.64</td>
-                    <td class="nocolor">35.99亿</td>
-                    <td class="stock-color">247.01</td>
-                    <td class="nocolor">1317.03万</td>
-                    <td class="nocolor">1.49亿</td>
-                    <td>
-                        <a href="#" class="followStock" target="_blank" data-stockid="SZ002387" data-stockname="黑牛食品" data-stockcurrent="11.5">
-                            <span></span>关注
-                        </a>
-                    </td>
-                </tr>
-                <tr class="odd_stock_up" code="SZ000590">
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">SZ002387</a>
-                    </td>
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">黑牛食品</a>
-                    </td>
-                    <td class="stock-color">11.50</td>
-                    <td class="stock-color">+0.55</td>
-                    <td class="stock-color">+5.02%</td>
-                    <td class="stock-color">10.76 - 11.65</td>
-                    <td class="stock-color">6.63 - 11.64</td>
-                    <td class="nocolor">35.99亿</td>
-                    <td class="stock-color">247.01</td>
-                    <td class="nocolor">1317.03万</td>
-                    <td class="nocolor">1.49亿</td>
-                    <td>
-                        <a href="#" class="followStock" target="_blank" data-stockid="SZ002387" data-stockname="黑牛食品" data-stockcurrent="11.5">
-                            <span></span>关注
-                        </a>
-                    </td>
-                </tr>
-                <tr class="odd_stock_up" code="SZ000590">
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">SZ002387</a>
-                    </td>
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">黑牛食品</a>
-                    </td>
-                    <td class="stock-color">11.50</td>
-                    <td class="stock-color">+0.55</td>
-                    <td class="stock-color">+5.02%</td>
-                    <td class="stock-color">10.76 - 11.65</td>
-                    <td class="stock-color">6.63 - 11.64</td>
-                    <td class="nocolor">35.99亿</td>
-                    <td class="stock-color">247.01</td>
-                    <td class="nocolor">1317.03万</td>
-                    <td class="nocolor">1.49亿</td>
-                    <td>
-                        <a href="#" class="followStock" target="_blank" data-stockid="SZ002387" data-stockname="黑牛食品" data-stockcurrent="11.5">
-                            <span></span>关注
-                        </a>
-                    </td>
-                </tr>
-                <tr class="odd_stock_up" code="SZ000590">
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">SZ002387</a>
-                    </td>
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">黑牛食品</a>
-                    </td>
-                    <td class="stock-color">11.50</td>
-                    <td class="stock-color">+0.55</td>
-                    <td class="stock-color">+5.02%</td>
-                    <td class="stock-color">10.76 - 11.65</td>
-                    <td class="stock-color">6.63 - 11.64</td>
-                    <td class="nocolor">35.99亿</td>
-                    <td class="stock-color">247.01</td>
-                    <td class="nocolor">1317.03万</td>
-                    <td class="nocolor">1.49亿</td>
-                    <td>
-                        <a href="#" class="followStock" target="_blank" data-stockid="SZ002387" data-stockname="黑牛食品" data-stockcurrent="11.5">
-                            <span></span>关注
-                        </a>
-                    </td>
-                </tr>
-                <tr class="odd_stock_up" code="SZ000590">
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">SZ002387</a>
-                    </td>
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">黑牛食品</a>
-                    </td>
-                    <td class="stock-color">11.50</td>
-                    <td class="stock-color">+0.55</td>
-                    <td class="stock-color">+5.02%</td>
-                    <td class="stock-color">10.76 - 11.65</td>
-                    <td class="stock-color">6.63 - 11.64</td>
-                    <td class="nocolor">35.99亿</td>
-                    <td class="stock-color">247.01</td>
-                    <td class="nocolor">1317.03万</td>
-                    <td class="nocolor">1.49亿</td>
-                    <td>
-                        <a href="#" class="followStock" target="_blank" data-stockid="SZ002387" data-stockname="黑牛食品" data-stockcurrent="11.5">
-                            <span></span>关注
-                        </a>
-                    </td>
-                </tr>
-                <tr class="odd_stock_up" code="SZ000590">
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">SZ002387</a>
-                    </td>
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">黑牛食品</a>
-                    </td>
-                    <td class="stock-color">11.50</td>
-                    <td class="stock-color">+0.55</td>
-                    <td class="stock-color">+5.02%</td>
-                    <td class="stock-color">10.76 - 11.65</td>
-                    <td class="stock-color">6.63 - 11.64</td>
-                    <td class="nocolor">35.99亿</td>
-                    <td class="stock-color">247.01</td>
-                    <td class="nocolor">1317.03万</td>
-                    <td class="nocolor">1.49亿</td>
-                    <td>
-                        <a href="#" class="followStock" target="_blank" data-stockid="SZ002387" data-stockname="黑牛食品" data-stockcurrent="11.5">
-                            <span></span>关注
-                        </a>
-                    </td>
-                </tr>
-                <tr class="odd_stock_up" code="SZ000590">
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">SZ002387</a>
-                    </td>
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">黑牛食品</a>
-                    </td>
-                    <td class="stock-color">11.50</td>
-                    <td class="stock-color">+0.55</td>
-                    <td class="stock-color">+5.02%</td>
-                    <td class="stock-color">10.76 - 11.65</td>
-                    <td class="stock-color">6.63 - 11.64</td>
-                    <td class="nocolor">35.99亿</td>
-                    <td class="stock-color">247.01</td>
-                    <td class="nocolor">1317.03万</td>
-                    <td class="nocolor">1.49亿</td>
-                    <td>
-                        <a href="#" class="followStock" target="_blank" data-stockid="SZ002387" data-stockname="黑牛食品" data-stockcurrent="11.5">
-                            <span></span>关注
-                        </a>
-                    </td>
-                </tr>
-                <tr class="odd_stock_up" code="SZ000590">
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">SZ002387</a>
-                    </td>
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">黑牛食品</a>
-                    </td>
-                    <td class="stock-color">11.50</td>
-                    <td class="stock-color">+0.55</td>
-                    <td class="stock-color">+5.02%</td>
-                    <td class="stock-color">10.76 - 11.65</td>
-                    <td class="stock-color">6.63 - 11.64</td>
-                    <td class="nocolor">35.99亿</td>
-                    <td class="stock-color">247.01</td>
-                    <td class="nocolor">1317.03万</td>
-                    <td class="nocolor">1.49亿</td>
-                    <td>
-                        <a href="#" class="followStock" target="_blank" data-stockid="SZ002387" data-stockname="黑牛食品" data-stockcurrent="11.5">
-                            <span></span>关注
-                        </a>
-                    </td>
-                </tr>
-                <tr class="odd_stock_up" code="SZ000590">
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">SZ002387</a>
-                    </td>
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">黑牛食品</a>
-                    </td>
-                    <td class="stock-color">11.50</td>
-                    <td class="stock-color">+0.55</td>
-                    <td class="stock-color">+5.02%</td>
-                    <td class="stock-color">10.76 - 11.65</td>
-                    <td class="stock-color">6.63 - 11.64</td>
-                    <td class="nocolor">35.99亿</td>
-                    <td class="stock-color">247.01</td>
-                    <td class="nocolor">1317.03万</td>
-                    <td class="nocolor">1.49亿</td>
-                    <td>
-                        <a href="#" class="followStock" target="_blank" data-stockid="SZ002387" data-stockname="黑牛食品" data-stockcurrent="11.5">
-                            <span></span>关注
-                        </a>
-                    </td>
-                </tr>
-                <tr class="odd_stock_up" code="SZ000590">
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">SZ002387</a>
-                    </td>
-                    <td>
-                        <a target="_blank" href="/S/SZ002387">黑牛食品</a>
-                    </td>
-                    <td class="stock-color">11.50</td>
-                    <td class="stock-color">+0.55</td>
-                    <td class="stock-color">+5.02%</td>
-                    <td class="stock-color">10.76 - 11.65</td>
-                    <td class="stock-color">6.63 - 11.64</td>
-                    <td class="nocolor">35.99亿</td>
-                    <td class="stock-color">247.01</td>
-                    <td class="nocolor">1317.03万</td>
-                    <td class="nocolor">1.49亿</td>
-                    <td>
-                        <a href="#" class="followStock" target="_blank" data-stockid="SZ002387" data-stockname="黑牛食品" data-stockcurrent="11.5">
-                            <span></span>关注
-                        </a>
-                    </td>
-                </tr>
+			</#list>
+			</#if>
             </tbody>
         </table>
     </div>
+    <#if (pageView)??>
     <div class="pageList">
         <div class="pager-wrapper">
             <ul class="pager">
-                <li class="last">
-                    <a data-page="1" href="?page=1">上一页</a>
-                </li>
-                <li>
-                    <a data-page="1" href="?page=1">1</a>
-                </li>
-                <li class="active">
-                    <a data-page="2" href="?page=2">2</a>
-                </li>
-                <li>
-                    <a data-page="3" href="?page=3">3</a>
-                </li>
-                <li>
-                    <a data-page="4" href="?page=4">4</a>
-                </li>
-                <li>
-                    <a data-page="5" href="?page=5">5</a>
-                </li>
-                <li>...</li>
-                <li></li>
-                <li>
-                    <a data-page="233" href="?page=233">233</a>
-                </li>
-                <li class="next">
-                    <a data-page="3" href="?page=3">下一页</a>
-                </li>
+            	<#if (pageView.prePage)??>
+                  <li class="last">
+                    <a onclick="stockListloading(${cateId},${(pageView.prePage.pageNo)})" href="#">上一页</a>
+                  </li>
+                </#if>
+                <#if (pageView.firstPage)??>
+                	<li>
+                        <a onclick="stockListloading(${cateId},${(pageView.firstPage.pageNo)})" href="#">${(pageView.firstPage.pageNo+1)}</a>
+                    </li>
+                    <li>...</li>
+                </#if>
+                <#if (pageView.pageList)??>
+                	<#list pageView.pageList as pageItem>
+                	    <#if pageItem.hasUrl=false>
+                		 <li class="active">
+                    		<a href="#">${(pageItem.pageNo+1)}</a>
+                		 </li>
+                		 <#else>
+                		   <li>
+                              <a onclick="stockListloading('${cateId}','${(pageItem.pageNo)}')" href="#">${(pageItem.pageNo+1)}</a>
+                           </li>
+                		 </#if>
+                	</#list>
+                </#if>
+                <#if (pageView.lastPage)??>
+                    <li>...</li>
+                	<li>
+                        <a onclick="stockListloading(${cateId},${(pageView.lastPage.pageNo)})" href="#">${(pageView.lastPage.pageNo+1)}</a>
+                    </li>
+                </#if>
+                <#if (pageView.nextPage)??>
+                   <li class="next">
+                      <a onclick="stockListloading(${(cateId)},${(pageView.nextPage.pageNo)})" href="#">下一页</a>
+                   </li>
+                </#if>
             </ul>
         </div>
     </div>
+    </#if>
 </div>
 </#macro>

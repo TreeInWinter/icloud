@@ -42,13 +42,13 @@ public final class StockConstants {
 				type = BASE.getType();
 			}
 
-			if (BASE.getName().equalsIgnoreCase(type)) {
+			if (BASE.getType().equalsIgnoreCase(type)) {
 				return BASE;
 			}
-			if (XUEQIU.getName().equalsIgnoreCase(type)) {
+			if (XUEQIU.getType().equalsIgnoreCase(type)) {
 				return XUEQIU;
 			}
-			if (ZHENGJIANHUI.getName().equalsIgnoreCase(type)) {
+			if (ZHENGJIANHUI.getType().equalsIgnoreCase(type)) {
 				return ZHENGJIANHUI;
 			}
 			return BASE;

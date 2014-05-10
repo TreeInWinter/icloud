@@ -8,7 +8,7 @@
         <#list stockMenuBean.menus as menu>
             <div class="link-wrapper">
                 <span>|</span>
-                <a href="${(menu.code)!''}">${(menu.name)!''}</a>
+                <a onclick="stockListloading(${(menu.code)!''},0)" href="#">${(menu.name)!''}</a>
             </div>
         </#list>
          </div>
