@@ -15,11 +15,19 @@ import com.icloud.stock.http.HtmlUnit;
 public class XueqiuMetaInfoHandler extends StockHandler<XueqiuMetaInfo> {
 
 	private String typeName;
+	private String code;
 
 	public XueqiuMetaInfoHandler(String typeName) throws NoSuchFieldException,
 			SecurityException, NoSuchMethodException {
+		this(typeName, "B08");
+	}
+
+	public XueqiuMetaInfoHandler(String typeName, String code)
+			throws NoSuchFieldException, SecurityException,
+			NoSuchMethodException {
 		super(null, null, true);
 		this.typeName = typeName;
+		this.code = code;
 	}
 
 	@Override
@@ -28,14 +36,12 @@ public class XueqiuMetaInfoHandler extends StockHandler<XueqiuMetaInfo> {
 
 	}
 
-	public  String getHangyeUrl(String hangye, int page, int size) {
-		String url = "http://xueqiu.com/industry/quote_order.json?page="
-				+ page
-				+ "&size="
-				+ size
-				+ "&order=desc&orderBy=percent&level2code=G59&exchange=CN&plate="
+	public String getHangyeUrl(String hangye, int page, int size) {
+		String url = "http://xueqiu.com/industry/quote_order.json?page=" + page
+				+ "&size=" + size + "&order=desc&orderBy=percent&level2code="
+				+ code + "&exchange=CN&plate="
 				+ HttpUtils.encodingGB2312(hangye)
-				+ "&access_token=CSr4RehgUt3wohdtqUTp9E&_=1399368774171";
+				+ "&access_token=KLXqxlg6wbC9U2XdWJ0Yin";
 		return url;
 	}
 
@@ -76,7 +82,7 @@ public class XueqiuMetaInfoHandler extends StockHandler<XueqiuMetaInfo> {
 					url = getHangyeUrl(typeName, i, 60);
 					try {
 						XueqiuMetaInfo tmpResult = parser.parse(
-								unit.asText(url), null); // 获得结果
+								unit.getContentAsString(url), null); // 获得结果
 						result.getData().addAll(tmpResult.getData());
 					} catch (FailingHttpStatusCodeException e) {
 						// TODO Auto-generated catch block

@@ -21,9 +21,11 @@ public class XueQiuzhengjianImporter {
 		String filePath = "bin/data/证监会行业.txt";
 		List<String> list = getAllHangye(filePath);
 		for (String hangye : list) {
-			XueqiuMetaInfo fetchData = fetchData(hangye);
+			System.out.println(hangye);
+			String[] params = hangye.split(" ");
+			XueqiuMetaInfo fetchData = fetchData(params[0].trim(),
+					params[1].trim());
 			save(fetchData, hangye);
-			// break;
 		}
 		close();
 	}
@@ -42,10 +44,10 @@ public class XueQiuzhengjianImporter {
 		this.writer.close();
 	}
 
-	private XueqiuMetaInfo fetchData(String typeName) {
+	private XueqiuMetaInfo fetchData(String typeName, String code) {
 		XueqiuMetaInfoHandler handler;
 		try {
-			handler = new XueqiuMetaInfoHandler(typeName);
+			handler = new XueqiuMetaInfoHandler(typeName, code);
 			XueqiuMetaInfo metaInfo = handler.getHttpData();
 			return metaInfo;
 		} catch (NoSuchFieldException e) {

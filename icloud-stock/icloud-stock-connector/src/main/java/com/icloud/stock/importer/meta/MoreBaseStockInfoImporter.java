@@ -24,17 +24,7 @@ import com.icloud.stock.service.IStockService;
  * @author jiangningcui
  *
  */
-public class MoreBaseStockInfoImporter {
-
-	private IStockService stockService;
-	private ICategoryService categoryService;
-	private ICategoryStockService categoryStockService;
-
-	public MoreBaseStockInfoImporter() {
-		stockService = BeansUtil.getStockService();
-		categoryService = BeansUtil.getCategoryService();
-		categoryStockService = BeansUtil.getCategoryStockService();
-	}
+public class MoreBaseStockInfoImporter extends BaseServiceImporter {
 
 	public void importXueqiuInfo() {
 		String filePath = "/home/jiangningcui/workspace/mygithub/icloud/icloud-data/xueqiu/processed/hangye.txt";

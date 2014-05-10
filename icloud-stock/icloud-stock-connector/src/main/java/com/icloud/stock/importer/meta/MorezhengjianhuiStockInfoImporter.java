@@ -24,17 +24,7 @@ import com.icloud.stock.service.IStockService;
  * @author jiangningcui
  *
  */
-public class MorezhengjianhuiStockInfoImporter {
-
-	private IStockService stockService;
-	private ICategoryService categoryService;
-	private ICategoryStockService categoryStockService;
-
-	public MorezhengjianhuiStockInfoImporter() {
-		stockService = BeansUtil.getStockService();
-		categoryService = BeansUtil.getCategoryService();
-		categoryStockService = BeansUtil.getCategoryStockService();
-	}
+public class MorezhengjianhuiStockInfoImporter extends BaseServiceImporter {
 
 	public void importzhengjianhuiInfo() {
 		String filePath = "/home/jiangningcui/workspace/mygithub/icloud/icloud-data/xueqiu/processed/zhengjianhuihangye.txt";
@@ -71,12 +61,10 @@ public class MorezhengjianhuiStockInfoImporter {
 			if (tmpList == null || tmpList.size() == 0) {
 				stockService.save(stock);
 				System.out.println(stock.getStockCode());
+				System.out.println("no match : " + stock.getStockCode() + " " + stock.getStockName());
 			} else {
 				stock = tmpList.get(0);
 			}
-			// if (tmpList.size() != 1) {
-			// System.out.println(stock.getStockCode());
-			// }
 			i++;
 			if (i % 100 == 0) {
 				System.out.println(i + "  " + count);
@@ -103,7 +91,6 @@ public class MorezhengjianhuiStockInfoImporter {
 	}
 
 	public Category getzhegnjianhuiCategory(String pair, BaseCategory base) {
-		System.out.println(pair);
 		String[] tokens = pair.trim().split(" ");
 		Category category = new Category();
 		category.setCategoryCategoryType(base.getType());
@@ -119,10 +106,11 @@ public class MorezhengjianhuiStockInfoImporter {
 		stock.setCreateTime(new Date());
 		stock.setUpdateTime(new Date());
 
-		stock.setStockAllCode(tokens[3]);
-		stock.setStockName(tokens[2]);
-		stock.setStockLocation(getLocation(tokens[3]));
-		stock.setStockCode(getCode(tokens[3]));
+		stock.setStockAllCode(tokens[4]);
+		stock.setStockName(tokens[3]);
+		stock.setStockLocation(getLocation(tokens[4]));
+		stock.setStockCode(getCode(tokens[4]));
+//		System.out.println(stock.getStockName() +  " " + stock.getStockCode());
 		return stock;
 	}
 

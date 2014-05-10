@@ -21,7 +21,6 @@ public class CategoryStockServiceImpl extends SqlBaseService<CategoryStock>
 
 	@Override
 	protected IHibernateBaseDao<CategoryStock> getDao() {
-		// TODO Auto-generated method stub
 		return categoryStockDao;
 	}
 
