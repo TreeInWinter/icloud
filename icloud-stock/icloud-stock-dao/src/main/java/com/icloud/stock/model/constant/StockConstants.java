@@ -1,5 +1,7 @@
 package com.icloud.stock.model.constant;
 
+import com.icloud.framework.util.ICloudUtils;
+
 public final class StockConstants {
 	public enum StockLocation {
 		SHA("sha"), //
@@ -16,17 +18,42 @@ public final class StockConstants {
 	}
 
 	public enum BaseCategory {
-		BASE("base"), XUEQIU("xueqiu"), ZHENGJIANHUI("zhengjianhui");
+		BASE("base", "基础分类"), XUEQIU("xueqiu", "必有分类"), ZHENGJIANHUI(
+				"zhengjianhui", "精细分类");
 
 		private String type;
+		private String name;
 
-		private BaseCategory(String type) {
+		private BaseCategory(String type, String name) {
 			this.type = type;
+			this.name = name;
 		}
 
 		public String getType() {
 			return type;
 		}
+
+		public String getName() {
+			return this.name;
+		}
+
+		public static BaseCategory getBaseCategory(String type) {
+			if (!ICloudUtils.isNotNull(type)) {
+				type = BASE.getType();
+			}
+
+			if (BASE.getName().equalsIgnoreCase(type)) {
+				return BASE;
+			}
+			if (XUEQIU.getName().equalsIgnoreCase(type)) {
+				return XUEQIU;
+			}
+			if (ZHENGJIANHUI.getName().equalsIgnoreCase(type)) {
+				return ZHENGJIANHUI;
+			}
+			return BASE;
+		}
+
 	}
 
 }

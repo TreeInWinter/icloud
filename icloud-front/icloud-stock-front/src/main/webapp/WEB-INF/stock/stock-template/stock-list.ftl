@@ -1,8 +1,8 @@
 <#macro sList current>
 <div class="stockList-header">
-    <a href="#">上海</a>&nbsp;>&nbsp;
-    <a href="科技">科技</a>&nbsp;>&nbsp;
-    <span>舜网</span>
+	<a href="${basepath}/stock/stockMenu">行情</a>&nbsp;>&nbsp;
+    <span>${(baseStockMenu.fatherName)!''}</span>&nbsp;>&nbsp;
+    <span>${(baseStockMenu.name)!''}</span>
 </div>
 <div class="stockList">
     <div class="stockList-content new-portfolio" style="display: block;">

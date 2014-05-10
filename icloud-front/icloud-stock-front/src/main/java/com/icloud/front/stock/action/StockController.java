@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.icloud.framework.core.wrapper.Pagination;
 import com.icloud.framework.logger.ri.RequestIdentityLogger;
 import com.icloud.front.stock.baseaction.BaseStockController;
+import com.icloud.front.stock.pojo.BaseStockMenu;
 import com.icloud.front.stock.pojo.StockMenuBean;
 import com.icloud.stock.model.Stock;
 import com.icloud.stock.model.constant.StockConstants.BaseCategory;
@@ -34,9 +35,11 @@ public class StockController extends BaseStockController {
 	public ModelAndView stockListMenu(
 			@RequestParam(required = true) String cateId, String pageNo) {
 		ModelAndView model = new ModelAndView("stock/stock-list-view");
+		BaseStockMenu baseStockMenu = this.stockCommonBussiness.getBaseStockMenu(cateId);
 		Pagination<Stock> pagination = this.stockListBussiness.getStockList(
 				cateId, pageNo, 40);
 		model.addObject("pagination", pagination);
+		model.addObject("baseStockMenu", baseStockMenu);
 		return model;
 	}
 

@@ -17,4 +17,19 @@ public class ICloudUtils {
 			return false;
 		return true;
 	}
+
+	public static int parseInt(String str) {
+		int id = -1;
+		try {
+			id = Integer.parseInt(str);
+		} catch (Exception e) {
+			id = -1;
+		}
+		return id;
+	}
+
+	public static boolean isNotNull(Object object) {
+		return object == null ? true : false;
+	}
+
 }

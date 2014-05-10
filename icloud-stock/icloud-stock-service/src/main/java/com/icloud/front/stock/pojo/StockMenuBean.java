@@ -29,11 +29,11 @@ public class StockMenuBean {
 		this.menus = menus;
 	}
 
-	public boolean addCategory(Category category) {
+	public boolean addCategory(Category category, String fatherName) {
 		if (category == null)
 			return false;
 		BaseStockMenu menu = new BaseStockMenu(category.getId() + "", "/",
-				category.getCategoryName());
+				category.getCategoryName(), fatherName);
 		this.menus.add(menu);
 		return true;
 	}
