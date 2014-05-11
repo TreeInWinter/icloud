@@ -1,5 +1,6 @@
 package com.icloud.framework.core.util;
 
+import java.io.File;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.Collection;
@@ -9,17 +10,17 @@ import java.util.regex.Pattern;
 
 /**
  * 最常用的uti方法, 零散， 暂时不归类
- * 
+ *
  * @author liang.wang
- * 
+ *
  */
 public class TZUtil {
 	/**
 	 * 出错的详细信息转化为字符串
-	 * 
+	 *
 	 * @param e
 	 * @return 错误调用栈详情
-	 * 
+	 *
 	 */
 	public static String stringifyException(Throwable e) {
 		StringWriter stm = new StringWriter();
@@ -31,7 +32,7 @@ public class TZUtil {
 
 	/**
 	 * 验证正则表达式
-	 * 
+	 *
 	 * @param value
 	 * @param expression
 	 * @return
@@ -42,8 +43,8 @@ public class TZUtil {
 		return matcher.find();
 	}
 
-	public static boolean isEmpty(String str) {
-		return str == null || str.isEmpty();
+	public static boolean isEmpty(Object file) {
+		return file == null;
 	}
 
 	public static boolean isEmpty(Collection<?> coll) {
